@@ -1,7 +1,7 @@
-# Knowledge sharing sessions CSS talk
+# Wizeline MDX-deck slides template
 
 Slides created with (mdx deck)[https://github.com/jxnblk/mdx-deck] & (Code Surfer)[https://github.com/pomber/code-surfer]
 
-To develop first instll dependencies `yarn`, and then `yarn dev`.
+To develop first install dependencies `yarn`, and then `yarn dev`.
 
-To build for deploying `yarn build`.
+To build `yarn build`.

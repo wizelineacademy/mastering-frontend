@@ -1,0 +1,99 @@
+export { default as theme } from './wizeline-theme'
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Notes } from 'mdx-deck'
+
+import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "./wizeline-theme/slides"
+import {WLayout1, WLayout2} from './wizeline-theme/layouts'
+
+import Counter from './components/Counter'
+
+
+<WSlideMain
+  subtitle="Welcome, this is the main slide component of the"
+  title="Wizeline MDX-deck Template"
+/>
+---
+<WSlide2
+  title="This component"
+  title2="can be used as a..."
+  content1="Table of contents:"
+  content2="You'll see different slides"
+  content3="layouts"
+  content4="and even code"
+/>
+---
+<WSlide3
+  title="This could be an important title"
+/>
+---
+<WSlide4
+  title="This was"
+  title2="created by"
+  content1="Eder Díaz"
+  content2="October 6, 2018"
+/>
+---
+<WSlide5
+  title="But you can"
+  title2="contribute to it"
+  content1="Send a PR to this repo"
+  content2="or ask me for changes"
+/>
+---
+export default WLayout1
+
+### Apart from the different slides components
+## There are two layouts
+
+#### This one has the logo in the middle
+
+---
+export default WLayout2
+
+#### And this one has it in the top left corner
+
+---
+export default WLayout1
+
+# Presenter mode
+### You can have notes that can only be seen in "presenter mode"
+#### (alt + P)
+<Notes>
+This note can only be seen by you, not your audience
+</Notes>
+---
+export default WLayout1
+
+# Pro tip
+### Open two browser windows, one with the "presenter mode"
+### and the other in "normal mode",
+### then use meets/hangouts/zoom to only present
+### the normal one while you look at the other window
+##### both will sync when you change the slide
+<Notes>
+and you can use this as a cheat sheet
+</Notes>
+---
+export default WLayout1
+
+# This is a React component
+
+<Counter/>
+---
+export default WLayout1
+
+<CodeSurfer
+  title="You can also view code"
+  code={require("!raw-loader!./snippets/property-values.css")}
+  lang="css"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { lines: [6], notes: 'You can zoom in'},
+    { lines: [3, 11, 18], notes: 'select many lines'},
+    { range: [9,15], notes: 'or even a range of lines' },
+    { tokens: { 17: [1, 6] }, notes: 'also specific tokens' }
+  ]}
+/>
+---
+<WSlideThankyou/>

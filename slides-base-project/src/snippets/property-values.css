@@ -1,0 +1,36 @@
+div {
+    background-color: red;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    background: url("http://domain.com/image.jpg");
+}
+
+.my-element {
+    background-color: #FF0000;
+    width: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+#my-element {
+    background-color: rgba(255,0,0,1);
+    width: calc(100% - 10px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+} 
+
+.div1 {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+}
+
+.div2 {
+    padding: 10px 15px 20px 25px;
+}
+
+.div3 {
+    padding: 10px;
+}

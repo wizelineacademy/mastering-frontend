@@ -12,7 +12,7 @@ const Title = styled.h1([], {
   color: "white",
   textAlign: "right",
   right: "83px",
-  top: "106px"
+  top: "116px"
 });
 
 const Subtitle = styled.h1([], {

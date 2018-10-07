@@ -6,7 +6,7 @@ import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "./
 import {WLayout1, WLayout2} from './wizeline-theme/layouts'
 
 import Counter from './components/Counter'
-
+import Codepen from './components/Codepen'
 
 <WSlideMain
   subtitle="Welcome, this is the main slide component of the"
@@ -79,8 +79,13 @@ export default WLayout1
 # This is a React component
 
 <Counter/>
+<Notes>
+  Sadly any interactive component like this one
+  won't change it's state in both windows,
+  any demo should be worked on the "normal mode" window.
+</Notes>
 ---
-export default WLayout1
+export default WLayout2
 
 <CodeSurfer
   title="You can also view code"
@@ -95,5 +100,13 @@ export default WLayout1
     { tokens: { 17: [1, 6] }, notes: 'also specific tokens' }
   ]}
 />
+---
+<Codepen url="https://codepen.io/ederdiaz/pen/NBPWZp"/>
+<Notes>
+  This is a working codepen,
+  be careful when clicking the sides as you might change the slide accidentally.
+  Also it won't change it's state in both windows,
+  any demo should be worked on the "normal mode" window.
+</Notes>
 ---
 <WSlideThankyou/>

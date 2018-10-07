@@ -4,8 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "mdx-deck ./src/deck.mdx",
-    "build": "mdx-deck build --no-html ./src/deck.mdx"
+    "dev": "mdx-deck ./src/example-deck.mdx",
+    "dev-001": "mdx-deck ./001_semantic-html/slides.mdx",
+    "build": "mdx-deck build --no-html ./src/example-deck.mdx",
+    "build-001": "mdx-deck build --no-html ./001_semantic-html/slides.mdx"
   },
   "devDependencies": {
     "mdx-deck": "^1.7.4",

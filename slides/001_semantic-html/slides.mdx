@@ -4,6 +4,7 @@ import { Notes } from 'mdx-deck'
 
 import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
 import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
+import { Split } from 'mdx-deck/layouts'
 
 import Counter from '../src/components/Counter'
 import Codepen from '../src/components/Codepen'
@@ -23,23 +24,147 @@ import Codepen from '../src/components/Codepen'
 />
 ---
 <WSlide3
-  title="This could be an important title"
+  title="What is Semantic HTML?"
 />
 ---
+export default WLayout1
+
+# How many HTML tags exist?
+---
+export default WLayout2
+
+<CodeSurfer
+  title="How many do you recognize?"
+  code={require("!raw-loader!./snippets/tags.html")}
+  lang="html"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { range: [3, 10] },
+    { lines: [13] },
+    { lines: [14] },
+    { range: [15, 17] },
+    { range: [18, 22] },
+    { range: [25, 27] },
+    { range: [29, 34] },
+    { lines: [32], notes: `this one doesn't exists, probably you where thinking of <aside>` }
+  ]}
+/>
+<Notes>
+  Raise your hand if you knew less than 20%... more than half... all of these tags!
+
+  Well... one of those doesn't exist.
+</Notes>
+---
+
+![ruby](./images/ruby-tag.png)
+
+<Notes>
+  Fun fact for the people that thought it was the ruby tag.
+
+  It actually is used mostly in japanese, it attaches an anottation to indicate 
+  the pronunciation or meaning of the corresponding characters.
+</Notes>
+---
+export default WLayout1
+
+# There are a lot of HTML tags
+
+<Notes>
+  And when I mean a lot, I mean it
+</Notes>
+---
+
+![html-tags](./images/html-elements.png)
+
+---
+<WSlide3
+  title="Where should I use them?"
+/>
+---
+export default WLayout1
+
+# Short answer
+---
+export default WLayout1
+
+## When it gives us a better context on the data that it contains
+---
+export default WLayout1
+
+<CodeSurfer
+  title="Looks good, right?"
+  code={require("!raw-loader!./snippets/non-semantic-footer.html")}
+  lang="html"
+/>
+---
+export default WLayout1
+
+<CodeSurfer
+  title="Much better!"
+  code={require("!raw-loader!./snippets/semantic-footer.html")}
+  lang="html"
+/>
+---
+export default WLayout1
+
+## My site looks like 
+## it is NOT semantic
+# How can I make sure my site becomes semantic?
+---
+export default WLayout1
+
+# Auditing your page
+### Read your HTML code like you where
+### reading a menu of a restaurant or a coffee shop 
+
+---
+export default Split
+
+![](./images/menu.jpg)
+
+### Hierarchy
+### Well defined sections
+
+---
+export default Split
+
+![](./images/menu-beer.jpg)
+
+### It can be more complex
+### Even different styled elements 
+### are in their semantic section
+
+---
+export default WLayout1
+
+### This is how it feels when you read a 
+### non semantic HTML code
+---
+export default Split
+
+![](./images/worst-menu.jpg)
+
+### No Hierarchy
+### Confusing sections
+---
+# Common pitfalls
+
+- The elements are too generic
+- Using semantic tags for styling purposes
+- Site structure differs from planned
+---
+
 <WSlide4
-  title="This was"
-  title2="created by"
-  content1="Eder Díaz"
-  content2="October 6, 2018"
+  title="Practice time"
+/>
+
+---
+<WSlide3
+  title="Accesibility & tooling"
 />
 ---
-<WSlide5
-  title="But you can"
-  title2="contribute to it"
-  content1="Send a PR to this repo"
-  content2="or ask me for changes"
-/>
----
+
 export default WLayout1
 
 ### Apart from the different slides components
@@ -85,7 +210,7 @@ export default WLayout1
   any demo should be worked on the "normal mode" window.
 </Notes>
 ---
-export default WLayout2
+export default WLayout1
 
 <CodeSurfer
   title="You can also view code"

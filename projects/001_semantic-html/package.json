@@ -1,0 +1,14 @@
+{
+  "name": "001_semantic-html",
+  "version": "1.0.0",
+  "description": "Example page to learn semantic html",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Eder Díaz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

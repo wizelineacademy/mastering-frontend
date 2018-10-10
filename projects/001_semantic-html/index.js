@@ -4,7 +4,15 @@ var path = require("path");
 
 // viewed at http://localhost:8088
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname + "/page.html"));
+  res.sendFile(path.join(__dirname + "/index.html"));
+});
+
+app.get("/ok", function(req, res) {
+  res.sendFile(path.join(__dirname + "/pages/page_ok.html"));
+});
+
+app.get("/bad", function(req, res) {
+  res.sendFile(path.join(__dirname + "/pages/page_bad.html"));
 });
 
 const assets = ["style.css", "logo-square.svg", "logo.svg"];

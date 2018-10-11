@@ -11,7 +11,7 @@ import Codepen from '../src/components/Codepen'
 
 <WSlideMain
   subtitle=""
-  title="Semantic HTML and Accessibility "
+  title="Semantic HTML"
 />
 ---
 <WSlide2
@@ -19,8 +19,8 @@ import Codepen from '../src/components/Codepen'
   title2=""
   content1="What is Semantic HTML?"
   content2="Where and how should I use it?"
-  content3="Accesibility"
-  content4="Tooling"
+  content3="Common tags"
+  content4="Accessibility & Tooling"
 />
 ---
 <WSlide3
@@ -29,7 +29,14 @@ import Codepen from '../src/components/Codepen'
 ---
 export default WLayout1
 
-# How many HTML tags exist?
+# Semantic HTML
+### is HTML that introduces meaning to the web page rather than just presentation
+
+---
+export default WLayout1
+
+# Let's make a
+## quick excercise
 ---
 export default WLayout2
 
@@ -88,7 +95,8 @@ export default WLayout1
 ---
 export default WLayout1
 
-## When it gives us a better context on the data that it contains
+## When it gives us a better context
+## on the data that it contains
 ---
 export default WLayout1
 
@@ -105,6 +113,60 @@ export default WLayout1
   code={require("!raw-loader!./snippets/semantic-footer.html")}
   lang="html"
 />
+---
+<WSlide3
+  title="Most used tags"
+/>
+---
+export default WLayout1
+
+`div`
+#### A semantically meaningless element used to group
+#### elements toghether for styling purposes
+---
+export default WLayout1
+
+`aside`
+#### Represents a portion of a document whose content
+#### is only indirectly related to the document's main content
+---
+export default WLayout1
+
+`article`
+#### represents a self-contained composition in a document, page, application, or site,
+#### which is intended to be independently distributable or reusable
+---
+export default WLayout1
+
+`section`
+#### represents a self-contained composition in a document, page, application, or site,
+#### which is intended to be independently distributable or reusable
+---
+export default WLayout1
+
+`header`
+#### represents introductory content, typically a group
+#### of introductory or navigational aids
+---
+export default WLayout1
+
+`footer`
+### contains information about the author of the section,
+### copyright data or links to related documents
+---
+
+export default WLayout1
+
+`nav`
+#### represents a section of a page whose purpose is to provide navigation links,
+#### either within the current document or to other documents
+---
+export default WLayout1
+
+## More info at:
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+</a>
 ---
 export default WLayout1
 
@@ -148,17 +210,22 @@ export default Split
 ### No Hierarchy
 ### Confusing sections
 ---
+
+![](./images/layout.jpg)
+
+---
+
 # Common pitfalls
+### when auditing a page
 
 - The elements are too generic
 - Using semantic tags for styling purposes
 - Site structure differs from planned
----
 
+---
 <WSlide4
   title="Practice time"
 />
-
 ---
 <WSlide3
   title="Accesibility & tooling"

@@ -2,7 +2,6 @@ var express = require("express");
 var app = express();
 var path = require("path");
 
-// viewed at http://localhost:8088
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
@@ -23,5 +22,5 @@ assets.forEach(asset => {
   });
 });
 
-app.listen(8088);
-console.log("page.html is being served at http://localhost:8088");
+app.listen(3000);
+console.log("page.html is being served at http://localhost:3000");

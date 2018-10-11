@@ -62,7 +62,7 @@ export default WLayout2
 <Notes>
   Fun fact for the people that thought it was the ruby tag.
 
-  It actually is used mostly in japanese, it attaches an anottation to indicate 
+  It actually is used mostly in japanese, it attaches an anottation to indicate
   the pronunciation or meaning of the corresponding characters.
 </Notes>
 ---
@@ -108,7 +108,7 @@ export default WLayout1
 ---
 export default WLayout1
 
-## My site looks like 
+## My site looks like
 ## it is NOT semantic
 # How can I make sure my site becomes semantic?
 ---
@@ -116,7 +116,7 @@ export default WLayout1
 
 # Auditing your page
 ### Read your HTML code like you where
-### reading a menu of a restaurant or a coffee shop 
+### reading a menu of a restaurant or a coffee shop
 
 ---
 export default Split
@@ -132,13 +132,13 @@ export default Split
 ![](./images/menu-beer.jpg)
 
 ### It can be more complex
-### Even different styled elements 
+### Even different styled elements
 ### are in their semantic section
 
 ---
 export default WLayout1
 
-### This is how it feels when you read a 
+### This is how it feels when you read a
 ### non semantic HTML code
 ---
 export default Split
@@ -165,73 +165,17 @@ export default Split
 />
 ---
 
-export default WLayout1
+<p>
+  <a href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn" target="_blank">
+    ChromeVox
+  </a>
+</p>
 
-### Apart from the different slides components
-## There are two layouts
+<p>
+  <a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo" target="_blank">
+    HTML5 outliner
+  </a>
+</p>
 
-#### This one has the logo in the middle
-
----
-export default WLayout2
-
-#### And this one has it in the top left corner
-
----
-export default WLayout1
-
-# Presenter mode
-### You can have notes that can only be seen in "presenter mode"
-#### (alt + P)
-<Notes>
-This note can only be seen by you, not your audience
-</Notes>
----
-export default WLayout1
-
-# Pro tip
-### Open two browser windows, one with the "presenter mode"
-### and the other in "normal mode",
-### then use meets/hangouts/zoom to only present
-### the normal one while you look at the other window
-##### both will sync when you change the slide
-<Notes>
-and you can use this as a cheat sheet
-</Notes>
----
-export default WLayout1
-
-# This is a React component
-
-<Counter/>
-<Notes>
-  Sadly any interactive component like this one
-  won't change it's state in both windows,
-  any demo should be worked on the "normal mode" window.
-</Notes>
----
-export default WLayout1
-
-<CodeSurfer
-  title="You can also view code"
-  code={require("!raw-loader!../src/snippets/property-values.css")}
-  lang="css"
-  showNumbers={false}
-  dark={false}
-  steps={[
-    { lines: [6], notes: 'You can zoom in'},
-    { lines: [3, 11, 18], notes: 'select many lines'},
-    { range: [9,15], notes: 'or even a range of lines' },
-    { tokens: { 17: [1, 6] }, notes: 'also specific tokens' }
-  ]}
-/>
----
-<Codepen url="https://codepen.io/ederdiaz/pen/NBPWZp"/>
-<Notes>
-  This is a working codepen,
-  be careful when clicking the sides as you might change the slide accidentally.
-  Also it won't change it's state in both windows,
-  any demo should be worked on the "normal mode" window.
-</Notes>
 ---
 <WSlideThankyou/>

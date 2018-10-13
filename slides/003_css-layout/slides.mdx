@@ -1,0 +1,259 @@
+export { default as theme } from '../src/wizeline-theme'
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Notes } from 'mdx-deck'
+
+import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
+import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
+
+import Counter from '../src/components/Counter'
+import Codepen from '../src/components/Codepen'
+
+
+<WSlideMain
+  subtitle=""
+  title="Layout with CSS"
+/>
+
+---
+
+<WSlide2
+  title="Content"
+  content1="Positioning (position and float)"
+  content2="Stacking Context"
+  content3="Flexbox"
+  content4="CSS Grid"
+/>
+
+---
+
+export default WLayout1
+
+# Positioning
+
+The `position` attribute.
+
+---
+
+<CodeSurfer
+  title="Static"
+  code={require("!raw-loader!./snippets/static.css")}
+  lang="css"
+  showNumbers={false}
+  dark={false}
+/>
+
+<Notes>
+  The default from browsers
+</Notes>
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/YJZVwy" />
+
+---
+
+<CodeSurfer
+  title="Relative"
+  code={require("!raw-loader!./snippets/relative.css")}
+  lang="css"
+  showNumbers={false}
+  dark={false}
+/>
+
+<Notes>
+  Starts just as static if we use it alone.
+  But if we use positioning properties, the magic happens.
+</Notes>
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/YJZVwy" />
+
+---
+
+Will react to the following properties:
+
+* `top`
+* `bottom`
+* `left`
+* `right`
+* `z-index`
+
+---
+
+<CodeSurfer
+  title="Absolute"
+  code={require("!raw-loader!./snippets/absolute.css")}
+  lang="css"
+  showNumbers={false}
+  dark={false}
+/>
+
+<Notes>
+  The element will not remain in the natural flow of the page.
+  It will position itself according to the closest positioned ancestor
+</Notes>
+
+---
+
+The element will position itself according to the closest positioned ancestor
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/YJZVwy" />
+
+---
+
+<CodeSurfer
+  title="Fixed"
+  code={require("!raw-loader!./snippets/fixed.css")}
+  lang="css"
+  showNumbers={false}
+  dark={false}
+/>
+
+<Notes>
+  The element will not remain in the natural flow of the page.
+  It will position itself according to the viewport.
+</Notes>
+
+---
+
+The element will position itself according to the viewport
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/YJZVwy" />
+
+---
+
+# Floats
+
+<Notes>
+  Floated elements remain a part of the flow of the web page.
+  This is distinctly different than page elements that use absolute positioning.
+  Absolutely positioned page elements are removed from the flow of the webpage.
+</Notes>
+
+---
+
+Floats let us stack things horizontally instead of vertically
+
+---
+
+![image](./images/float_layout.png)
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/GYmMpp" />
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/oaZwJq" />
+
+<Notes>
+  Explain what happens with floats, that they dont affect the height of their parent.
+</Notes>
+
+---
+
+“Clearing” a float is when we tell a block to ignore any floats that appear before it.
+
+<Notes>
+  “Clearing” a float is when we tell a block to ignore any floats that appear before it.
+  Instead of flowing around the floated box, a cleared element always appears after any floats.
+  It’s like forcing a box back into the default vertical flow of the page.
+</Notes>
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/oaZwJq" />
+
+---
+
+# Float exercise to make columns
+
+---
+
+# Stacking Context
+
+(Or, `z-index` gotcha!)
+
+<Notes>
+  Explain that it not only happens with `z-indez` but also with
+  other properties, but it's commonly found of when using z-index.
+</Notes>
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/ZqKopB" />
+
+<Notes>
+  To begin with, boxes will be stacked following the normal flow of the page.
+  That means, the order they were used in the HTML.
+
+  Each stacking context is self-contained: after the element's contents are stacked,
+  the whole element is considered in the stacking order of the parent stacking context.
+</Notes>
+
+---
+
+Stacking Context are created when an element:
+* Is the root element of a document (the `<html>` element)
+* Is positioned and a `z-index` value other than `auto`
+* Has an opacity value less than 1
+* ..... (Check MDN reference for a complete list)
+
+---
+
+# Explain how to use z-index properly and good practices
+
+---
+
+# Flexbox
+
+<Notes>
+  Flexbox is (aside from optional wrapping) a single-direction layout concept
+</Notes>
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/mzmLGZ" />
+
+---
+
+# Flexbox Properties
+
+* `justify-content`: Positions items on the main-axis (horizontal or row by default)
+* `align-items`: Positions items on the cross-axis (vertical or column by default)
+* `flex-direction`: Swaps the main and cross axes (row by default)
+
+---
+
+# Flexbox Properties
+
+* `flex-grow`: Prioritizes what elements to grow
+* `flex-shrink`: Should the element shrink or not?
+* `flex-basis`: Initial size or width
+
+---
+
+# Exercise Time!!
+
+<Notes>
+  Note: in case both flex-basis (other than auto)
+  and width (or height in case of flex-direction: column)
+  are set for an element, flex-basis has priority.
+</Notes>
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/full/jewwWp/" />
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/bmRROQ" />
+
+---
+
+<WSlideThankyou />

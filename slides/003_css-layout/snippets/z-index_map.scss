@@ -1,0 +1,20 @@
+// z-index-map.scss
+
+$zindex: (
+  modal     : 9000,
+  overlay   : 8000,
+  dropdown  : 7000,
+  header    : 6000,
+  footer    : 5000
+);
+
+@function z-map($layer) {
+  @return map-get($zindex, $layer);
+}
+
+
+// some-component.scss
+
+.header {
+  z-index: z-map(header);
+}

@@ -1,0 +1,11 @@
+.navigation {
+  z-index: 10000;
+}
+
+.notifications {
+  z-index: 20000;
+}
+
+.modal {
+  z-index: 30000;
+}

@@ -127,6 +127,18 @@ The element will position itself according to the viewport
 
 ---
 
+# Exercise Time!!
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/full/OBOzXx/" />
+
+---
+
+<Codepen url="https://codepen.io/TheMightyPenguin/pen/PyOEmO" />
+
+---
+
 # Floats
 
 <Notes>
@@ -171,13 +183,7 @@ Floats let us stack things horizontally instead of vertically
 
 ---
 
-# Float exercise to make columns
-
----
-
 # Stacking Context
-
-(Or, `z-index` gotcha!)
 
 <Notes>
   Explain that it not only happens with `z-indez` but also with
@@ -206,7 +212,52 @@ Stacking Context are created when an element:
 
 ---
 
-# Explain how to use z-index properly and good practices
+<CodeSurfer
+  title="Managing z-index"
+  code={require("!raw-loader!./snippets/zindex.css")}
+  lang="css"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { range: [1, 3] },
+    { range: [1, 7] },
+    { range: [1, 9999] },
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Bootstrap"
+  code={require("!raw-loader!./snippets/zindex-bootstrap.scss")}
+  lang="scss"
+  showNumbers={false}
+  dark={false}
+/>
+
+---
+
+<CodeSurfer
+  title="z-index Map"
+  code={require("!raw-loader!./snippets/z-index_map.scss")}
+  lang="scss"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { range: [1, 13] },
+    { range: [16, 21] }
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Naming Convetions for z-index"
+  code={require("!raw-loader!./snippets/layers.css")}
+  lang="css"
+  showNumbers={false}
+  dark={false}
+/>
 
 ---
 

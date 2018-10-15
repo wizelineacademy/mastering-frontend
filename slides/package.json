@@ -9,7 +9,7 @@
     "dev-003": "mdx-deck ./003_css-layout/slides.mdx",
     "build": "mdx-deck build --no-html ./src/example-deck.mdx",
     "build-001": "mdx-deck build --no-html ./001_semantic-html/slides.mdx",
-    "build-003": "mdx-deck ./003_css-layout/slides.mdx"
+    "build-003": "mdx-deck build --no-html ./003_css-layout/slides.mdx"
   },
   "devDependencies": {
     "mdx-deck": "^1.7.4",

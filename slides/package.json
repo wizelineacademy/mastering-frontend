@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "mdx-deck ./src/example-deck.mdx",
     "dev-001": "mdx-deck ./001_semantic-html/slides.mdx",
+    "dev-002": "mdx-deck ./002_*/slides.mdx",
     "dev-003": "mdx-deck ./003_css-layout/slides.mdx",
     "build": "mdx-deck build --no-html ./src/example-deck.mdx",
     "build-001": "mdx-deck build --no-html ./001_semantic-html/slides.mdx",
+    "build-002": "mdx-deck build --no-html ./002_*/slides.mdx",
     "build-003": "mdx-deck build --no-html ./003_css-layout/slides.mdx"
   },
   "devDependencies": {

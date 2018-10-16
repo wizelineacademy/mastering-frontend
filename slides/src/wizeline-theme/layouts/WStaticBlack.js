@@ -33,6 +33,13 @@ const ContentContainer = styled.div`
   p {
     font-weight: normal;
   }
+  img {
+    width: auto;
+    height: 550px;    
+  }
+  blockquote {
+    font-size: 0.8em;
+  }
   > div > div {
     margin-left: -100px;
     margin-top: 300px;

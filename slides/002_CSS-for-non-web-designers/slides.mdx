@@ -146,7 +146,7 @@ export default WAnimateListBlack
 />
 
 * Element type `button`
-* Id `#save-changes`
+* ID `#save-changes`
 * CSS class `.main`
 * Attribute `[type=primary]`
 * Pseudo-elements `::before`
@@ -157,7 +157,7 @@ export default WAnimateListBlack
 Selectors define a set of elements to which to apply the styling.
 In CSS there are a lot of different ways to select elements.
 For example, if we had this element, to select it we could use
->> its type `button`, >> its id `save-changes-btn`, >> its class `main-button.
+>> its type `button`, >> its ID `save-changes-btn`, >> its class `main-button.
 There are also other selectors for pseudo elements, >> like the before. This is not an element in the HTML, but acts like one.
 And finally there are also the pseudo-classes >> like the `hover`, `last-child`, etc.
 These selectors can be combined to modify the set of selected elements.
@@ -320,7 +320,9 @@ export default WStaticBlack
 
 <Notes>
 You can also think of the HTML as a tree. This is how each of the previous
-combinators and pseudo-classes are selected.
+combinators and pseudo-classes are selected. Here is easier to notice that there
+are no lookahead selectors. This means that you cannot select a parent node via its children,
+nor you cannot select an element via its next sibling. _show in the tree_
 </Notes>
 ---
 
@@ -334,3 +336,203 @@ _Leave presenters mode_
 
 <WFullPage title="Questions?" />
 
+---
+
+<WSlideMain
+  subtitle=""
+  title="CSS Fundamentals"
+  subtitle="Part 2"
+/>
+
+---
+
+export default WStaticBlack
+
+## Selectors Recap
+
+* Element type `button`
+* Id `#save-changes`
+* CSS class `.main`
+* Attribute `[type=primary]`
+* Pseudo-elements `::before`
+* Pseudo-classes `:hover`
+
+CSS cheatsheet: [https://devhints.io/css](https://devhints.io/css)
+
+<Notes>
+During this session we will create styles for a night-mode for GitHub.
+_open https://github.com/wizelineacademy/mastering-frontend_
+</Notes>
+---
+
+<WSection title="Cascading and" title2="Inheritance" />
+
+---
+
+export default WStaticBlack
+
+## The Cascade
+
+> Whether you write custom CSS or use a framework, pick original selectors every time or build a component-based system, use CSS as intended or inject it all inline via CSS-in-JS — … in every case, you are relying on the cascade. Which is a very good thing.
+
+> Without the cascading nature of CSS, you’d have to declare every single property in every single element. And when new CSS shipped, you’d have to go back old websites and add the new properties to every element. Now THAT would be stupid. We count on the cascade. Understand it.
+
+> -- [Jen Simmons, Designer Advocate at Mozilla](https://twitter.com/jensimmons/status/1039166001013825536)
+
+<Notes>
+I would like to start with this quote by Jen Simmons.
+She is a Designer Advocate at Mozilla and creates a lot of CSS related content, especially of the new CSS features.
+_read the quote_
+An incomplete understanding of the cascade can get you into trouble _very_ quickly.
+Understanding it will help you write maintainable CSS, with less `!important`s.
+</Notes>
+
+---
+
+export default WAnimateListBlack
+
+## The Cascade
+
+* Determines which styles to apply to an element.
+* Which style “wins” and gets applied.
+
+<Notes>
+The cascade is the mechanism that controls which rules are applied to an element.
+Is close to the OOP concept of inheritance.
+</Notes>
+
+---
+
+export default WStaticBlack
+
+## OOP Inheritance
+
+![inheritance](./images/inheritance.svg)
+
+<Notes>
+This is an example of inheritance. If the parent declares a property, the children can inherit it or override it.
+The problem comes with whats is known as the Diamond Problem.
+</Notes>
+
+---
+
+export default WStaticBlack
+
+## The Diamond Problem
+
+![deadly diamond of death](./images/diamond.svg)
+
+<Notes>
+This originates when a child has two or more parents that share an ancestor.
+Which of the implementations of `cookingMethod` will `cronut` have?
+Java solves this problem by disabling multiple inheritance.
+</Notes>
+
+---
+
+export default WAnimateListBlack
+
+## Cascade Tiebreakers
+
+To decide which style to apply, the cascade uses these three attributes:
+
+1. Importance
+2. Specificity
+3. Source order
+
+<Notes>
+CSS uses three attributes to break the tie:
+_importance_: >> If the rule uses the `!important` declaration.
+_specificity_: >> How specific the selectors of the rule are.
+and _order_: >> The order of declaration.
+</Notes>
+
+---
+
+<WFullPage title="Questions?" />
+
+---
+
+export default WAnimateListBlack
+
+## Importance and Order
+
+* Declarations followed by the `!important` declaration.
+*    ```
+    color: red !important;
+    ```
+* The order of stylesheets, rules, and declarations.
+*    ```
+    color: red;
+    color: black;
+    ```
+* What will happen here?
+    ```
+    color: red !important;
+    color: black;
+    ```
+
+<Notes>
+_Show examples for importance and order_.
+</Notes>
+
+---
+
+export default WAnimateListBlack
+
+## Specificity
+
+* 1000 Inline styles
+*    ```
+    <div style="color: red;">
+    ```
+* _100 IDs
+*    ```
+    #id
+    ```
+* __10 class, attribute, or pseudo-class
+*    ```
+    .class [attr] :first-of-type
+    ```
+* ___1 element or pseudo-element
+*    ```
+    div ::before
+    ```
+
+<Notes>
+> A class selector beats any number of element selectors
+> The latest rule wins
+> The universal selector has a specificity of 0, 0, 0, 0
+> !important adds 5th and the highest level of specificity.
+_Show examples for specificity with CSSDig_.
+TODO: add React component?
+TODO: add a slide with Specificity best practices?
+</Notes>
+
+---
+
+<WFullPage title="Questions?" />
+
+---
+
+export default WAnimateListBlack
+
+## CSS Inheritance
+
+If no value is assigned for a property, get the value of the parent.
+
+* Not all properties are inherited, `border`.
+* Use the `inherit` keyword to override other rules.
+* For non-inherited properties, use `initial` to reset them.
+
+<Notes>
+> In CSS, inheritance controls what happens when no value is specified for a property on an element.
+</Notes>
+
+---
+
+<WFullPage title="Questions?" />
+
+---
+
+<WSlideThankyou/>

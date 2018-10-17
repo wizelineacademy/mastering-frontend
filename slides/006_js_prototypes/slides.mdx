@@ -508,12 +508,8 @@ export default WLayout1
 
 ## What happens when a class is declared?
 - A function with that name is created.
-
 - All the properties assignments through `this.<prop>` on the constructor are put into the function's body.
-
 - All the methods declared in the class are assigned as methods to the function's `prototype` property.
-
-
 
 <Notes>
   - Show the example on file classes, case 1.
@@ -521,4 +517,83 @@ export default WLayout1
 
 ---
 
+export default WLayout1
+
+## Can we have static methods?
+### Yes, but they are assigned as properties to the function object, rather than to its `prototype`.
+
+<Notes>
+  Show them file classes, case 2.
+
+  This way you can simulate a call to the class' static methods, but in reality you're just accessing an object's property.
+</Notes>
+
+---
+
+export default WLayout1
+
+## Classes extending other classes.
+### Let's take a look at the internal mechanism for this.
+
+<Notes>
+  Show classes file, case 3.
+</Notes>
+
+---
+
+![class-extension](./images/class-extension.jpg)
+
+<Notes>
+  To understand this, we need to make a clear distinction between `prototype` and `[[Prototype]]`
+
+  Explain that what actually happens is that, when a class extends another class, its underlying function's `property` object, whih is an object and thus has `[[Prototype]]`, points its `[[Prototype]]` to another function's `prototype`
+</Notes>
+
+---
+
+<WSlide3
+  title="Recap"
+/>
+
+---
+
+export default WLayout1
+
+- Everything, except primitives, is a ready-to-use object.
+- Functions are objects too and can be assigned properties and methods.
+
+---
+
+export default WLayout1
+
+- All objects have a `[[Prototype]]` hidden property that points to another object.
+- This property allows for Behavior Delegation.
+
+---
+
+export default WLayout1
+
+- Functions can be used as object constructors.
+- The resulting object has its `[[Prototype]]` property pointing to a public `prototype` property that all functions have (note that these 2 props are different).
+
+---
+
+export default WLayout1
+
+- The fact that functions are objects too allows to mimic the behavior of classes by playing with their `prototype` public property.
+- Classes are just syntactic sugar.
+
+---
+
+export default WLayout1
+
+- Functions' `prototype` property also allows to mimic the behavior of classes extending other classes.
+
+---
+
+<WSlide3
+  title="Q&A"
+/>
+
+---
 <WSlideThankyou/>

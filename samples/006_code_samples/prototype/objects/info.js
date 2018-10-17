@@ -67,7 +67,11 @@ const classes = [
   },
   {
     header: `FILE: classes, CASE: 2`,
-    dek: `If a class is actually a function, can it be called?`
+    dek: `How do static methods work? They are just properties assigned to the resulting function's object as properties, rather than to the function's prototype.`
+  },
+  {
+    header: `FILE: classes, CASE: 3`,
+    dek: `Classes extending other classes. What actually happens is that functions' [[Prototype]] hidden property is pointing to other functions 'prototype' public property.`
   }
 ]
 

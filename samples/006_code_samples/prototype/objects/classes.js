@@ -92,14 +92,77 @@ function classAndFunctionConstructor () {
  * their equivalent on functions.
 */
 function classStaticMethods () {
-  class Animal () {
-    static eat () {
-      return `I'm an animal that eats!`
+  class AnimalClass {
+    static drinkWater () {
+      return `Yay! Fresh water!`
     }
   }
+
+  function AnimalFunction () {
+    // nothing here
+  }
+
+  AnimalFunction.drinkWater = function () {
+    return `Yay! Fresh water!`
+  }
+
+  const classDrinkingWater = AnimalClass.drinkWater()
+  const functionDrinkingWater = AnimalFunction.drinkWater()
+
+  // log results
+  const logger = new Logger()
+  logger.statements = [
+    `Result from static method: ${classDrinkingWater}`,
+    `Result from function prop: ${functionDrinkingWater}`
+  ]
+  logger.log('classes', 2)
+}
+
+/**
+ * CASE 3: Class extending other class
+ * What happens here is that the underlying function's
+ * prototype object's [[Prototype]] is pointing to
+ * some other function's prototype object.
+*/
+function classExtendingClass () {
+  class Animal {
+    constructor () {
+      this.name = 'Generic Animal'
+    }
+
+    eat () {
+      return `I'm ${this.name} and I'm eating. Yummy!`
+    }
+  }
+
+  class Rabbit extends Animal {
+    constructor (name) {
+      super()
+      this.name = name
+    }
+
+    jump () {
+      return `I'm ${this.name} and I'm jumping!`
+    }
+  }
+
+  const bugs = new Rabbit('Bugs Bunny')
+
+  const bugsEating = bugs.eat()
+  const bugsJumping = bugs.jump()
+
+  // log results
+  const logger = new Logger()
+  logger.statements = [
+    `Bugs Bunny eating says: ${bugsEating}`,
+    `Bugs Bunny jumping says: ${bugsJumping}`
+  ]
+  logger.log('classes', 3)
 }
 
 module.exports = [
   classesDemo,
-  classAndFunctionConstructor
+  classAndFunctionConstructor,
+  classStaticMethods,
+  classExtendingClass
 ]

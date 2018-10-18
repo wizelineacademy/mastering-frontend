@@ -7,10 +7,12 @@
     "dev": "mdx-deck ./src/example-deck.mdx",
     "dev-001": "mdx-deck ./001_semantic-html/slides.mdx",
     "dev-003": "mdx-deck ./003_css-layout/slides.mdx",
+    "dev-005": "mdx-deck ./005_js-closures/slides.mdx",
     "dev-006": "mdx-deck ./006_js_prototypes/slides.mdx",
     "build": "mdx-deck build --no-html ./src/example-deck.mdx",
     "build-001": "mdx-deck build --no-html ./001_semantic-html/slides.mdx",
     "build-003": "mdx-deck build --no-html ./003_css-layout/slides.mdx",
+    "build-005": "mdx-deck build --no-html ./005_js-closures/slides.mdx",
     "build-006": "mdx-deck build --no-html ./006_js_prototypes/slides.mdx"
   },
   "devDependencies": {

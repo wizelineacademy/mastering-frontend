@@ -1,0 +1,276 @@
+export { default as theme } from '../src/wizeline-theme'
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Notes } from 'mdx-deck'
+
+import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
+import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
+import { Split } from 'mdx-deck/layouts'
+
+import Counter from '../src/components/Counter'
+import Codepen from '../src/components/Codepen'
+
+<WSlideMain
+  subtitle=""
+  title="JS Closures"
+/>
+---
+<WSlide2
+  title="Content"
+  title2=""
+  content1="Higher-order functions"
+  content2="Closures"
+  content3="Arrow functions and this"
+  content4="State management"
+/>
+---
+<WSlide3
+  title="Higher-order functions"
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="sum"
+  code={require("!raw-loader!./snippets/00_sum.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {lines: [4]},
+    {range: [1, 3]},
+    {tokens: {1: [2], 2: [2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}},
+    {tokens: {2: [2]}},
+    {tokens: {2: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}},
+    {range: [1, 4]}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="apply"
+  code={require("!raw-loader!./snippets/01_apply.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {lines: [4]},
+    {lines: [1, 2]},
+    {tokens: {1: [7]}},
+    {range: [1, 4]}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="incMaker"
+  code={require("!raw-loader!./snippets/02_inc_maker.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {lines: [5, 6]},
+    {range: [1, 3]},
+    {lines: [2, 3]},
+    {range: [1, 6]}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="partial"
+  code={require("!raw-loader!./snippets/03_partial.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {lines: [5, 6]},
+    {lines: [8, 9]},
+    {range: [1, 3]},
+    {tokens: {1: [7]}, lines: [2, 3]},
+    {range: [1, 9]}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="exercise: flip"
+  code={require("!raw-loader!./snippets/04_flip.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {range: [1, 6]},
+    {range: [10, 12]},
+    {lines: [8]},
+    {range: [1, 12]}
+  ]}
+/>
+---
+<WSlide3
+  title="Closure"
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="complement"
+  code={require("!raw-loader!./snippets/05_complement.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {range: [5, 11]},
+    {range: [13, 19]},
+    {range: [1, 3]},
+    {tokens: {1: [5], 3: [4]}},
+    {range: [1, 19]}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="comp(ose)"
+  code={require("!raw-loader!./snippets/06_comp.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {range: [5, 7]},
+    {range: [1, 3]},
+    {tokens: {1: [8], 3: [0]}},
+    {range: [1, 7]}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="exercise: juxt"
+  code={require("!raw-loader!./snippets/08_juxt.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {lines: [2, 3]},
+    {range: [2, 4]},
+    {lines: [5, 7]},
+    {range: [1, 7]}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="memoize"
+  code={require("!raw-loader!./snippets/09_memoize.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {range: [17, 20]},
+    {range: [17, 23]},
+    {range: [25, 28]},
+    {range: [1, 15]},
+    {lines: [2]},
+    {lines: [2, 5]},
+    {lines: [2, 5, 8]},
+    {lines: [2, 5], range: [11, 13]},
+    {range: [1, 15]},
+    {range: [25, 28]},
+    {range: [1, 28]}
+  ]}
+/>
+---
+<WSlide3
+  title="Arrow functions and this"
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="bucket v1"
+  code={require("!raw-loader!./snippets/10_bucket1.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {lines: [14, 15]},
+    {range: [1, 12]},
+    {lines: [7, 9], tokens: {8: [4]}}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="bucket v2"
+  code={require("!raw-loader!./snippets/11_bucket2.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {lines: [11, 12]},
+    {range: [1, 9]},
+    {lines: [7]}
+  ]}
+/>
+---
+<WSlide3
+  title="Gotcha: avoid using this"
+/>
+---
+<WSlide3
+  title="State management"
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="make bucket"
+  code={require("!raw-loader!./snippets/12_make_bucket.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {range: [16, 18]},
+    {range: [1, 14]},
+    {lines: [2, 13]},
+    {lines: [4, 5]},
+    {lines: [7, 8]},
+    {lines: [10, 11]},
+    {range: [20, 22]},
+    {range: [1, 22]}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="make account"
+  code={require("!raw-loader!./snippets/13_make_account.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {range: [10, 15]},
+    {range: [1, 8]},
+    {range: [1, 15]}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="exercise: make account"
+  code={require("!raw-loader!./snippets/14_make_account_1.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+  ]}
+/>

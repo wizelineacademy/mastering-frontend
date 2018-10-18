@@ -4,9 +4,9 @@ var path = require("path");
 module.exports = {
   entry: "./scripts/main.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     filename: "bundle.js",
-    publicPath: "/dist"
+    publicPath: "/docs"
   },
   plugins: [
     new MiniCssExtractPlugin({

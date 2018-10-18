@@ -1,6 +1,6 @@
 export { default as theme } from '../src/wizeline-theme'
 import { CodeSurfer } from "mdx-deck-code-surfer"
-import { Notes } from 'mdx-deck'
+import { Notes, Appear } from 'mdx-deck'
 
 import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
 import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
@@ -305,6 +305,127 @@ Stacking Context are created when an element:
 
 <Codepen url="https://codepen.io/TheMightyPenguin/pen/bmRROQ" />
 
+---
+
+### 1 dimensional flow
+![](./images/flow.png)
+<Notes>
+  We've been talking about HTML and CSS for 3 sessions now,
+  an we understand how it "flows".
+  Technically is like an array that starts filling the space
+  in our page, right?
+</Notes>
+---
+
+![](./images/what-if.png)
+<Notes>
+  Well it is time to wake up!
+</Notes>
+
+---
+![](./images/red-pill.jpg)
+<Notes>
+  It's time to take the red pill and get to know...
+</Notes>
+---
+
+# CSS grid
+
+<Appear>
+  <h2>a 2-dimensional layout system</h2>
+</Appear>
+<Notes>
+  You might be thinking: this sound like something from the future
+  Can we use it now?
+</Notes>
+---
+## Support
+
+![](./images/grid-support.png)
+<Notes>
+  Yes, al modern browsers support it. And even internet explorer 11
+  has support for most of the specification. It is in a different color
+  because, as you might know, it stopped getting updates.
+  So basically it is stuck with an old implementation.
+  As usual IE is lagging behind, am I right?
+</Notes>
+---
+![](./images/historical-support.png)
+<Notes>
+  Wrong, actually IE was the first browser to start it's implementation.
+  MS was the one pushing for its standarization and adoption.
+</Notes>
+---
+# Terminology
+<Notes>
+  Before we continue we need to sync with some terminology
+</Notes>
+---
+# line
+![](./images/grid-line.png)
+<Notes>
+  Lines are the kind of imaginary lines dividing the grid, either horizontally or vertically
+</Notes>
+---
+# track
+![](./images/grid-track.png)
+<Notes>
+  A track isis the space between two lines, it can be either a row or column
+</Notes>
+---
+# cell
+![](./images/grid-cell.png)
+<Notes>
+  The cell is pretty self explanatory, a single unit in the grid
+</Notes>
+---
+# area
+![](./images/grid-area.png)
+<Notes>
+  The space between 4 lines, basically a rectangle that contains more than one cell
+</Notes>
+---
+# How can I get started with CSS grid?
+
+---
+### Three simple things
+<Appear>
+  <p><code>display: grid;</code></p>
+  <p><code>grid-template-columns: 12px 12px 12px;</code></p>
+  <p><code>grid-template-rows: 12px 12px 12px;</code></p>
+</Appear>
+---
+<Codepen url="https://codepen.io/ederdiaz/pen/PyRjRv" />
+
+---
+## Quick recap
+```
+.parent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 100px auto;
+  grid-gap: 1px 9px;
+}
+```
+---
+## Quick recap
+```
+.child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1 / span 2;
+  grid-area: header;
+}
+```
+---
+<a href="http://grid.malven.co/" target="_blank">
+  <h2>Cheat sheet</h2>
+</a>
+
+<Notes>
+  If you forget something or want to know the rest of the properties
+  you can check this cheatsheet
+</Notes>
 ---
 
 <WSlideThankyou />

@@ -1,1 +1,0 @@
-'hello'.toUpperCase() // returns 'HELLO'

@@ -26,16 +26,17 @@ const ContentContainer = styled.div`
 
   * {
     margin: 0;
-    text-align: left;
   }
-  h2 { 
+  h2 {
     margin-bottom: 1em;
+    text-align: left;
   }
   h4 {
     font-style: italic;
   }
-  h4, p {
+  h4, ul, ol, li, p {
     font-weight: normal;
+    text-align: left;
   }
   h2 + div {
     height 200px !important;

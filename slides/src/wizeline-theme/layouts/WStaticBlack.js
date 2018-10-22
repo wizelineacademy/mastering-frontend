@@ -25,20 +25,23 @@ const ContentContainer = styled.div`
 
   * {
     margin: 0;
-    text-align: left;
   }
-  h2 { 
+  h2 {
     margin-bottom: 1em;
+    text-align: left;
   }
   p {
     font-weight: normal;
   }
   img {
     width: auto;
-    height: 550px;    
+    height: 530px;    
   }
   blockquote {
+    border-left: 10px solid grey;
+    font-family: Roboto, sans-serif;
     font-size: 0.8em;
+    padding-left: 20px;
   }
   > div > div {
     margin-left: -100px;

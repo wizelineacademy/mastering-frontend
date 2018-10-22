@@ -17,6 +17,6 @@ const bucket = makeBucket()
 bucket.addAll([1, 2, 3])
 bucket.getPieces() // [1, 2, 3]
 
-const bucket.getPieces()
-bucket.pieces = []
+const pieces = bucket.getPieces()
+pieces = []
 bucket.getPieces() // [1, 2, 3]

@@ -23,9 +23,11 @@ import Codepen from '../src/components/Codepen'
   content4="State management"
 />
 ---
-<WSlide3
-  title="Higher-order functions"
-/>
+export default WLayout1
+
+# Higher-order functions
+
+Functions that can either take a function as an argument or return a function
 ---
 export default WLayout2
 
@@ -36,14 +38,21 @@ export default WLayout2
   showNumbers={false}
   dark={false}
   steps={[
-    {lines: [4]},
+    {lines: [8]},
     {range: [1, 3]},
-    {tokens: {1: [2], 2: [2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}},
-    {tokens: {2: [2]}},
-    {tokens: {2: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}},
-    {range: [1, 4]}
+    {tokens: {1: [2], 2: [4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]}},
+    {tokens: {2: [4]}},
+    {tokens: {2: [6, 7, 8, 9, 10, 11, 12, 13, 14, 15]}},
+    {range: [1, 6]},
+    {range: [1, 8]}
   ]}
 />
+
+<Notes>
+  if you don't know how reduce works...
+  how many functions do we have?
+  which of them is the higher-order function?
+</Notes>
 ---
 export default WLayout2
 
@@ -54,12 +63,16 @@ export default WLayout2
   showNumbers={false}
   dark={false}
   steps={[
-    {lines: [4]},
+    {lines: [4, 5]},
     {lines: [1, 2]},
     {tokens: {1: [7]}},
-    {range: [1, 4]}
+    {range: [1, 5]}
   ]}
 />
+
+<Notes>
+  why apply is a hof?
+</Notes>
 ---
 export default WLayout2
 
@@ -76,6 +89,10 @@ export default WLayout2
     {range: [1, 6]}
   ]}
 />
+
+<Notes>
+  why is it a hof?
+</Notes>
 ---
 export default WLayout2
 
@@ -93,6 +110,10 @@ export default WLayout2
     {range: [1, 9]}
   ]}
 />
+
+<Notes>
+  how many people know what partial does?
+</Notes>
 ---
 export default WLayout2
 
@@ -110,9 +131,11 @@ export default WLayout2
   ]}
 />
 ---
-<WSlide3
-  title="Closure"
-/>
+export default WLayout1
+
+# Closures
+
+Returned functions that can access all the variables that were in scope when the function was created
 ---
 export default WLayout2
 
@@ -181,27 +204,43 @@ export default WLayout2
     {lines: [2, 5, 8]},
     {lines: [2, 5], range: [11, 13]},
     {range: [1, 15]},
-    {range: [25, 28]},
     {range: [1, 28]}
   ]}
 />
 ---
-<WSlide3
-  title="Arrow functions and this"
-/>
+export default WLayout1
+
+# Arrow functions and *this*
+
+A function that has a shorter syntax than a function expression and does not have its own *this*
 ---
 export default WLayout2
 
 <CodeSurfer
   title="bucket v1"
-  code={require("!raw-loader!./snippets/10_bucket1.js")}
+  code={require("!raw-loader!./snippets/10_bucket0.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {range: [1, 12]},
+    {lines: [13, 14]}
+  ]}
+/>
+---
+export default WLayout2
+
+<CodeSurfer
+  title="bucket v1 corrected"
+  code={require("!raw-loader!./snippets/11_bucket1.js")}
   lang="javascript"
   showNumbers={false}
   dark={false}
   steps={[
     {lines: [14, 15]},
     {range: [1, 12]},
-    {lines: [7, 9], tokens: {8: [4]}}
+    {lines: [7, 9], tokens: {8: [4]}},
+    {range: [1, 15]}
   ]}
 />
 ---
@@ -209,30 +248,29 @@ export default WLayout2
 
 <CodeSurfer
   title="bucket v2"
-  code={require("!raw-loader!./snippets/11_bucket2.js")}
+  code={require("!raw-loader!./snippets/12_bucket2.js")}
   lang="javascript"
   showNumbers={false}
   dark={false}
   steps={[
     {lines: [11, 12]},
     {range: [1, 9]},
-    {lines: [7]}
+    {lines: [7]},
+    {range: [1, 12]}
   ]}
 />
 ---
-<WSlide3
-  title="Gotcha: avoid using this"
-/>
----
-<WSlide3
-  title="State management"
-/>
+export default WLayout1
+
+# State management
+
+Using closures to create buckets
 ---
 export default WLayout2
 
 <CodeSurfer
   title="make bucket"
-  code={require("!raw-loader!./snippets/12_make_bucket.js")}
+  code={require("!raw-loader!./snippets/13_make_bucket.js")}
   lang="javascript"
   showNumbers={false}
   dark={false}
@@ -248,11 +286,17 @@ export default WLayout2
   ]}
 />
 ---
+export default WLayout1
+
+# Gotcha
+
+Avoid using *this*
+---
 export default WLayout2
 
 <CodeSurfer
   title="make account"
-  code={require("!raw-loader!./snippets/13_make_account.js")}
+  code={require("!raw-loader!./snippets/14_make_account.js")}
   lang="javascript"
   showNumbers={false}
   dark={false}
@@ -267,10 +311,12 @@ export default WLayout2
 
 <CodeSurfer
   title="exercise: make account"
-  code={require("!raw-loader!./snippets/14_make_account_1.js")}
+  code={require("!raw-loader!./snippets/15_make_account_1.js")}
   lang="javascript"
   showNumbers={false}
   dark={false}
   steps={[
   ]}
 />
+---
+<WSlideThankyou />

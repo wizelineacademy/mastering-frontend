@@ -16,17 +16,6 @@ The purpose of this session is to familiarize yourself with the fundamentals of 
 
 ---
 
-<WFullPage title="Introduction" />
-
-<Notes>
-I'm Isabel, I joined Wize three years ago, the same number of years I have developed frontend.
-I remember that when I first interviewed for Wize Services,️ I had no idea of what frontend really was.
-Of course, this being a startup, my first project was frontend, and also all the following.
-But, I started to really respect and love frontend development, so I hope I can help you with your journey.
-</Notes>
-
----
-
 <WAgenda
   title="Agenda"
   subtitle="CSS Fundamentals"
@@ -262,6 +251,10 @@ This selector will apply to all elements not `h2`s.
 </Notes>
 ---
 
+<WFullPage title="Questions?" />
+
+---
+
 export default WStaticBlack
 
 ## Combinators and Pseudo-classes
@@ -351,7 +344,7 @@ export default WStaticBlack
 ## Selectors Recap
 
 * Element type `button`
-* Id `#save-changes`
+* ID `#save-changes`
 * CSS class `.main`
 * Attribute `[type=primary]`
 * Pseudo-elements `::before`
@@ -373,11 +366,12 @@ export default WStaticBlack
 
 ## The Cascade
 
-> Whether you write custom CSS or use a framework, pick original selectors every time or build a component-based system, use CSS as intended or inject it all inline via CSS-in-JS — … in every case, you are relying on the cascade. Which is a very good thing.
+> Whether you write _custom CSS_ or use a _framework_,
+pick _original selectors_ every time or build a _component-based system_,
+use _CSS_ as intended or inject it all inline via _CSS-in-JS_ —
+… in every case, you are relying on the cascade. [...]
 
-> Without the cascading nature of CSS, you’d have to declare every single property in every single element. And when new CSS shipped, you’d have to go back old websites and add the new properties to every element. Now THAT would be stupid. We count on the cascade. Understand it.
-
-> -- [Jen Simmons, Designer Advocate at Mozilla](https://twitter.com/jensimmons/status/1039166001013825536)
+> — [Jen Simmons, Designer Advocate at Mozilla](https://twitter.com/jensimmons/status/1039166001013825536)
 
 <Notes>
 I would like to start with this quote by Jen Simmons.
@@ -393,8 +387,12 @@ export default WAnimateListBlack
 
 ## The Cascade
 
+
 * Determines which styles to apply to an element.
+
 * Which style “wins” and gets applied.
+
+* Similar to OOP inheritance concept.
 
 <Notes>
 The cascade is the mechanism that controls which rules are applied to an element.
@@ -407,11 +405,11 @@ export default WStaticBlack
 
 ## OOP Inheritance
 
-![inheritance](./images/inheritance.svg)
+![inheritance](./images/inheritance.png)
 
 <Notes>
 This is an example of inheritance. If the parent declares a property, the children can inherit it or override it.
-The problem comes with whats is known as the Diamond Problem.
+The problem comes with multiple inheritance.
 </Notes>
 
 ---
@@ -420,12 +418,13 @@ export default WStaticBlack
 
 ## The Diamond Problem
 
-![deadly diamond of death](./images/diamond.svg)
+![deadly diamond of death](./images/diamond.png)
 
 <Notes>
-This originates when a child has two or more parents that share an ancestor.
+Occurs when a child has two or more parents that share an ancestor.
 Which of the implementations of `cookingMethod` will `cronut` have?
 Java solves this problem by disabling multiple inheritance.
+CSS solves it using three parameters.
 </Notes>
 
 ---
@@ -434,22 +433,20 @@ export default WAnimateListBlack
 
 ## Cascade Tiebreakers
 
-To decide which style to apply, the cascade uses these three attributes:
+To decide which style to apply, the cascade uses:
 
 1. Importance
+
 2. Specificity
+
 3. Source order
 
 <Notes>
 CSS uses three attributes to break the tie:
-_importance_: >> If the rule uses the `!important` declaration.
+_importance_: >> If the rule uses the `!important` keyword.
 _specificity_: >> How specific the selectors of the rule are.
 and _order_: >> The order of declaration.
 </Notes>
-
----
-
-<WFullPage title="Questions?" />
 
 ---
 
@@ -457,11 +454,11 @@ export default WAnimateListBlack
 
 ## Importance and Order
 
-* Declarations followed by the `!important` declaration.
+* Importance: Declarations followed by the `!important` keyword.
 *    ```
     color: red !important;
     ```
-* The order of stylesheets, rules, and declarations.
+* Order: The order of stylesheets, rules, and declarations.
 *    ```
     color: red;
     color: black;
@@ -473,8 +470,14 @@ export default WAnimateListBlack
     ```
 
 <Notes>
+The important declaration breaks the normal flow of the cascade.
+You want your declarations not to depend on the declaration order.
 _Show examples for importance and order_.
 </Notes>
+
+---
+
+<WFullPage title="Questions?" />
 
 ---
 
@@ -482,31 +485,32 @@ export default WAnimateListBlack
 
 ## Specificity
 
-* 1000 Inline styles
-*    ```
+* Each selector has a value of this form `a:b:c:d`
+* `1:0:0:0` Inline styles
+    ```
     <div style="color: red;">
     ```
-* _100 IDs
-*    ```
-    #id
+* `0:1:0:0` IDs
     ```
-* __10 class, attribute, or pseudo-class
-*    ```
+    #root
+    ```
+* `0:0:1:0` Class, attribute, or pseudo-class
+    ```
     .class [attr] :first-of-type
     ```
-* ___1 element or pseudo-element
-*    ```
+* `0:0:0:1` Element or pseudo-element
+    ```
     div ::before
     ```
 
 <Notes>
-> A class selector beats any number of element selectors
-> The latest rule wins
-> The universal selector has a specificity of 0, 0, 0, 0
-> !important adds 5th and the highest level of specificity.
-_Show examples for specificity with CSSDig_.
-TODO: add React component?
-TODO: add a slide with Specificity best practices?
+Specificity is one of the most complex topics in CSS.
+Specificity is defined by a four layered value. The first value comes from
+the inline styles. The next value is the number of IDs the selector has.
+Then we have the number of classes, attributes, or pseudo-classes.
+And finally the number of elements or pseudo-elements.
+There is no way that several classes beat a single id selector.
+To have maintainable CSS, you should try to keep the specificity low.
 </Notes>
 
 ---
@@ -519,19 +523,157 @@ export default WAnimateListBlack
 
 ## CSS Inheritance
 
-If no value is assigned for a property, get the value of the parent.
-
+* What happens when no value is assigned?
+* Some properties inherit the value from its direct parent, `color`.
 * Not all properties are inherited, `border`.
 * Use the `inherit` keyword to override other rules.
 * For non-inherited properties, use `initial` to reset them.
 
 <Notes>
-> In CSS, inheritance controls what happens when no value is specified for a property on an element.
+> "In CSS, inheritance controls what happens when no value is specified for a property on an element."
+Inheritance also helps us keep the CSS DRY.
 </Notes>
 
 ---
 
 <WFullPage title="Questions?" />
+
+---
+
+<WSection title="Box Model" />
+---
+
+export default WStaticBlack
+
+## Box Model
+
+Each HTML element can be represented by a rectangle, or box.
+
+![inheritance](./images/box-model.png)
+
+<Notes>
+Recap, all the previous topics referred to the selector part of a CSS rule.
+Now we will start introducing some properties to make CSS declarations.
+The first properties we will introduce are `width`, `height`, `padding`, `border`, and `margin`.
+These properties define the _box model_.
+Margin affects other content interacting with the box.
+Padding is the inner space.
+</Notes>
+
+---
+
+export default WAnimateListBlack
+
+## Margin and Padding Shorthand
+
+* One value  `□`
+    ```
+    margin: 5px;
+    ```
+* Two values  `+`
+    ```
+    margin: 0 5px;
+    ```
+* Three values  `÷`
+    ```
+    margin: 1px 0 3px;
+    ```
+* Four values  `◇`
+    ```
+    margin: 1px 2px 3px 4px;
+    ```
+
+<Notes>
+1 value assigns to all edges the same value.
+2 values assigns the first value to the top-bottom and the second one to the left-right.
+3 values, the first value is for top, the second for left-right, and the last for bottom.
+4 values lists the values clockwise, top, right, bottom, left.
+From CSS & CSS3 by Robin Nixon.
+</Notes>
+---
+
+export default WAnimateListBlack
+
+## Border Shorthand
+
+* Borders have style, color, and width.
+* Set all at the same time.
+    ```
+    border: 1px solid black;
+    ```
+* Use separated declarations.
+    ```
+    border-width: 1px;
+    border-style: dashed;
+    border-color: pink;
+    ```
+* They use the same shorthands as `margin`.
+    ```
+    border-style: dashed groove double dotted;
+    ```
+
+---
+
+export default WAnimateListBlack
+
+## Display
+
+* Take the whole width.
+    ```
+    display: block;
+    ```
+* Inline element with no height nor width.
+    ```
+    display: inline;
+    ```
+* Inline element with height and width.
+    ```
+    display: inline-block;
+    ```
+* Others.
+    ```
+    display: none;
+    display: flex;
+    ```
+---
+
+<Codepen url="https://codepen.io/ederdiaz/pen/JmjQEN"/>
+
+<Notes>
+_Leave presenters mode_
+Note that the margins are not displayed twice, this is known as "Margin collapsing".
+Margin collapsing only happens vertically. If you have two block elements with
+`margin: 4px 0;`, the vertical space between them would be only 4px.
+</Notes>
+
+---
+
+<WSection title="References" />
+
+---
+
+export default WStaticBlack
+
+## References
+
+* [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
+* [It’s all about CSS](https://docs.google.com/presentation/d/1ACGbX716lTDQFiJ4w1jjL0eBivpe3QzM_0xFHIrpIp4/edit)
+* [What the Heck Is CSS Specificity?](https://designshack.net/articles/css/what-the-heck-is-css-specificity/)
+* [CSS Diner - Where we feast on CSS Selectors!](https://flukeout.github.io/)
+* [How CSS works: Understanding the cascade](https://blog.logrocket.com/how-css-works-understanding-the-cascade-d181cd89a4d8)
+* [BATIFICITY](http://batificity.com/)
+* [CSS Specificity Wars](https://stuffandnonsense.co.uk/archives/images/css-specificity-wars.png)
+* [CSS Dig](https://www.cssdig.com/)
+
+---
+
+export default WStaticBlack
+
+## Other Interesting References
+
+* [Inside a super fast CSS engine: Quantum CSS (aka Stylo)](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/)
+* [Resilient CSS: 7-part Series](https://www.youtube.com/watch?v=u00FY9vADfQ&list=PLbSquHt1VCf1kpv9WRGMCA9_Nn4vCLZ9Y)
+* [Strategies for Keeping CSS Specificity Low](https://css-tricks.com/strategies-keeping-css-specificity-low/)
 
 ---
 

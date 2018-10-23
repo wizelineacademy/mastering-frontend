@@ -5,11 +5,13 @@ import mediaQueries from './mediaQueries.mdx'
 import patterns from './patterns.mdx'
 import units from './units.mdx'
 import cssInTheWild from './cssInTheWild.mdx'
+import thanks from './thanks.mdx'
 
 export default [
   ...intro,
-  ...mediaQueries,
   ...patterns,
+  ...mediaQueries,
   ...units,
   ...cssInTheWild,
+  ...thanks,
 ]

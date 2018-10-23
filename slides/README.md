@@ -20,6 +20,11 @@ To build the slides for deploying use:
 yarn dev-001
 ```
 
+### CSS Fundamentals
+```
+yarn dev-002
+```
+
 ### CSS layout
 ```
 yarn dev-003

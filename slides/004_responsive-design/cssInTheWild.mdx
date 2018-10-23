@@ -145,16 +145,17 @@ import Codepen from '../src/components/Codepen'
 
 <Notes>
   BEM is a complete methodology, but we'll be focusing on the
-  naming convention.
+  naming convention. Why BEM? BEM is one of the most widely used naming
+  conventions.
 </Notes>
 
 ---
 
 ```scss
-.block {}
-.block__element {}
-.block_element--modifier {}
-.block_element {}
+.block-name {}
+.block-name__element-name {}
+.block-name__element-name--modifier-name {}
+.block-name--modifier-name {}
 ```
 
 ---
@@ -166,17 +167,36 @@ import Codepen from '../src/components/Codepen'
 
 ---
 
+```
+const Card = ({ img, text }) => {
+  return (
+    <div className="card">
+      <img className="card__image" src={img} />
+      <p className="card__text">{text}</p>
+    </div>
+  );
+}
+```
+
+<Notes>
+  If you are using React or Vue, then your component is the block.
+  Each tag in your component is an element.
+</Notes>
+
+---
+
+<WSlide3
+  title="Questions ?"
+/>
+
+---
+
 # Quick Intro to SCSS
 * Variables
 * Functions
 * Mixins
 * Nesting
-* Partials
 
 ---
 
 # https://www.sassmeister.com/
-
----
-
-# Lets build a card component with SCSS!

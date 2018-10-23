@@ -52,6 +52,10 @@ const ContentContainer = styled.div`
       position: absolute;
       top: 80px;
     }
+    > table {
+      margin-left: 250px;
+      width: 600px;
+    }
   }
 `;
 

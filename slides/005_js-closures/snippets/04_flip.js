@@ -1,12 +1,12 @@
-const obj = {foo: 42}
+const jayz = {problems: 99}
 
 const get = (obj, prop) =>
   obj[prop]
 
-get(obj, 'foo') // 42
+get(jayz, 'problems') // 99
 
 const flip = null
 
 const get2 = flip(get)
 
-get2('foo', obj) // 42
+get2('problems', jayz) // 99

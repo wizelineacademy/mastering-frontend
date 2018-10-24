@@ -1,4 +1,4 @@
-const Logger = require('./logger')
+const Logger = require('../../utils/logger')
 /**
  * CASE 0: Passing objects thru variables.
  * This function demonstrates the behavior when assigning a variable, which

@@ -1,4 +1,4 @@
-const loggingInfo = require('./info')
+const loggingInfo = require('../prototype/objects/info')
 
 function Logger () {
   this.statements = []

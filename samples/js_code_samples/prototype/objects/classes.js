@@ -1,4 +1,4 @@
-const Logger = require('./logger')
+const Logger = require('../../utils/logger')
 /**
  * CASE 0: Object creation thru classes example.
  * This function demonstrates the way to use classes to build objects

@@ -1,4 +1,4 @@
-const memoize = f => {
+const memoize = fn => {
   const memo = {}
 
   return (...args) => {
@@ -8,7 +8,7 @@ const memoize = f => {
       return elem
     }
 
-    const result = apply(f, args)
+    const result = apply(fn, args)
     memo[args] = result
     return result
   }

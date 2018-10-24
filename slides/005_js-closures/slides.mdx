@@ -165,14 +165,13 @@ export default WLayout2
   showNumbers={false}
   dark={false}
   steps={[
-    {range: [5, 7]},
+    {range: [5, 10]},
     {range: [1, 3]},
     {tokens: {1: [8], 3: [0]}},
-    {range: [1, 7]}
+    {range: [1, 10]}
   ]}
 />
 ---
-export default WLayout2
 
 <CodeSurfer
   title="exercise: juxt"
@@ -187,6 +186,12 @@ export default WLayout2
     {range: [1, 7]}
   ]}
 />
+---
+export default WLayout1
+
+# Pure functions
+
+Functions that, given the same input, will always return the same output and do not have any *observable* side effect.
 ---
 export default WLayout2
 
@@ -209,6 +214,11 @@ export default WLayout2
     {range: [1, 28]}
   ]}
 />
+
+<Notes>
+  is this function pure?
+  where is the closure?
+</Notes>
 ---
 export default WLayout1
 
@@ -219,8 +229,8 @@ A function that has a shorter syntax than a function expression and does not hav
 export default WLayout2
 
 <CodeSurfer
-  title="bucket v1"
-  code={require("!raw-loader!./snippets/10_bucket0.js")}
+  title="pocket v1"
+  code={require("!raw-loader!./snippets/10_pocket0.js")}
   lang="javascript"
   showNumbers={false}
   dark={false}
@@ -233,8 +243,8 @@ export default WLayout2
 export default WLayout2
 
 <CodeSurfer
-  title="bucket v1 corrected"
-  code={require("!raw-loader!./snippets/11_bucket1.js")}
+  title="pocket v1 (fixed)"
+  code={require("!raw-loader!./snippets/11_pocket1.js")}
   lang="javascript"
   showNumbers={false}
   dark={false}
@@ -249,8 +259,8 @@ export default WLayout2
 export default WLayout2
 
 <CodeSurfer
-  title="bucket v2"
-  code={require("!raw-loader!./snippets/12_bucket2.js")}
+  title="pocket v2"
+  code={require("!raw-loader!./snippets/12_pocket2.js")}
   lang="javascript"
   showNumbers={false}
   dark={false}
@@ -266,24 +276,25 @@ export default WLayout1
 
 # State management
 
-Using closures to create buckets
+Using closures to create pockets
 ---
 export default WLayout2
 
 <CodeSurfer
-  title="make bucket"
-  code={require("!raw-loader!./snippets/13_make_bucket.js")}
+  title="make pocket"
+  code={require("!raw-loader!./snippets/13_make_pocket.js")}
   lang="javascript"
   showNumbers={false}
   dark={false}
   steps={[
     {range: [16, 18]},
     {range: [1, 14]},
-    {lines: [2, 13]},
     {lines: [4, 5]},
     {lines: [7, 8]},
     {lines: [10, 11]},
-    {range: [20, 22]},
+    {range: [1, 14]},
+    {lines: [2, 13]},
+    {range: [20, 22], lines: [10, 11]},
     {range: [1, 22]}
   ]}
 />
@@ -320,5 +331,9 @@ export default WLayout2
   steps={[
   ]}
 />
+---
+export default WLayout1
+
+# Kahoot Time!!
 ---
 <WSlideThankyou />

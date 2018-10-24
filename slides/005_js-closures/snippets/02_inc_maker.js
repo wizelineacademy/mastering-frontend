@@ -2,5 +2,5 @@ const incMaker = incBy =>
   n =>
     n + incBy
 
-const inc3 = incMaker(3)
-inc3(7) // 10
+const inc6 = incMaker(6)
+inc6(12) // 18

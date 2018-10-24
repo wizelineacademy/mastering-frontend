@@ -2,6 +2,9 @@ const comp = (...fns) =>
   (...args) =>
     fns.reduceRight((res, fn) => [apply(fn, res)], args)[0]
 
-const sumAndDouble = comp(a => a * 2, (a, b) => a + b)
+const double = a =>
+  2 * a
 
-sumAndDouble(3, 5) // 16
+const sumAndDouble = comp(double, sum)
+
+sumAndDouble(300, 30, 3) // 666

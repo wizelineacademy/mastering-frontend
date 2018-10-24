@@ -1,3 +1,4 @@
+var HTMLWebpackPlugin = require('html-webpack-plugin');
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var path = require("path");
 
@@ -6,11 +7,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "docs"),
     filename: "bundle.js",
-    publicPath: "/docs"
+    // publicPath: "/docs"
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "styles.css"
+    }),
+    new HTMLWebpackPlugin({
+      title: 'Mastering FrontEnd | Wizeline Academy',
+      template: 'index.html'
     })
   ],
   module: {

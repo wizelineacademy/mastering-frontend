@@ -7,13 +7,18 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
+  <!-- The SVG Sprite will be loaded here -->
+  <div id="svg-icons" style="display:none;"></div>
+
   
   <header class="header">
     <nav class="header__main-nav">
 
       <div class="header__main-nav__left">
         <div class="header__main-nav__logo">
-          <!-- Here goes the logo -->
+          <svg>
+            <use href="#logo"></use>
+          </svg>
         </div>
 
         <ul class="header__main-nav__items">
@@ -49,22 +54,30 @@
         <ul class="header__main-nav__social">
           <li class="header__main-nav__social__item header__main-nav__social__item--facebook">
             <a href="#" class="header__main-nav__social__item__link">
-              <!-- Here goes the icon -->
+              <svg>
+                <use href="#facebook"></use>
+              </svg>
             </a>
           </li>
           <li class="header__main-nav__social__item header__main-nav__social__item--telegram">
             <a href="#" class="header__main-nav__social__item__link">
-              <!-- Here goes the icon -->
+              <svg>
+                <use href="#telegram"></use>
+              </svg>
             </a>
           </li>
           <li class="header__main-nav__social__item header__main-nav__social__item--twitter">
             <a href="#" class="header__main-nav__social__item__link">
-              <!-- Here goes the icon -->
+              <svg>
+                <use href="#twitter"></use>
+              </svg>
             </a>
           </li>
           <li class="header__main-nav__social__item header__main-nav__social__item--medium">
             <a href="#" class="header__main-nav__social__item__link">
-              <!-- Here goes the icon -->
+              <svg>
+                <use href="#medium"></use>
+              </svg>
             </a>
           </li>
         </ul><!-- /.header__main-nav__social -->
@@ -86,7 +99,11 @@
       <h1 class="jumbotron__content__title">Plan your life</h1>
       <h2 class="jumbotron__content__heading">Increase your <strong>productivity</strong></h2>
       <p class="jumbotron__content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis explicabo nihil voluptatum itaque eius ratione illo eaque? Porro, dignissimos.</p>
-      <button class="jumbotron__content__btn"><!-- TODO: Missing play button --></button>
+      <button class="jumbotron__content__btn">
+        <svg>
+          <use href="#play-button"></use>
+        </svg>
+      </button>
     </div><!-- /.jumbotron__content -->
   </section><!-- /.jumbotron-->
 

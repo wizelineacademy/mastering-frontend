@@ -1,5 +1,6 @@
 var HTMLWebpackPlugin = require('html-webpack-plugin');
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var SVGSpritePlugin = require("svg-sprite-loader/plugin");
 var path = require("path");
 
 module.exports = {
@@ -15,9 +16,14 @@ module.exports = {
     new HTMLWebpackPlugin({
       title: 'Mastering FrontEnd | Wizeline Academy',
       template: 'index.html'
+    }),
+    new SVGSpritePlugin({
+      plainSprite: true
     })
   ],
   module: {
+
+    // Compile new js to compatible one
     rules: [
       {
         test: /\.js$/,
@@ -25,6 +31,8 @@ module.exports = {
           loader: "babel-loader"
         }
       },
+
+      // scss stylesheets
       {
         test: /\.scss$/,
         use: [
@@ -41,6 +49,16 @@ module.exports = {
             loader: "postcss-loader" // compiles Sass to CSS
           }
         ]
+      },
+
+      // SVGs files to an sprite
+      {
+        test: /.svg\/.*\.svg$/,
+        loader: "svg-sprite-loader",
+        options: {
+          extract: true,
+          spriteFilename: 'icons.svg'
+        }
       }
     ]
   }

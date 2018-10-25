@@ -2,18 +2,18 @@ const complement = fn =>
   (...args) =>
     !apply(fn, args)
 
-const isNegative = num =>
-  num < 0
+const willExplode = milesPerHour =>
+  milesPerHour < 50
 
-const isNatural = complement(isNegative)
+const areWeSafe = complement(willExplode)
 
-isNegative(-4) // true
-isNatural(-4) // false
+willExplode(40) // true
+areWeSafe(40) // false
 
 const equal = (a, b) =>
   a === b
 
 const different = complement(equal)
 
-equal(5, 5)) // true
-different(5, 5) // false
+equal('Max Power', 'Homer Simpson') // false
+different('Max Power', 'Homer Simpson') // true

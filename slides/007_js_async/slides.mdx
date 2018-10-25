@@ -1,0 +1,451 @@
+export { default as theme } from '../src/wizeline-theme'
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Notes } from 'mdx-deck'
+
+import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
+import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
+import { Split } from 'mdx-deck/layouts'
+
+import Counter from '../src/components/Counter'
+import Codepen from '../src/components/Codepen'
+
+<WSlideMain
+  subtitle=""
+  title="JS Async Programming"
+/>
+
+---
+
+<WSlide2
+  title="Content"
+  title2=""
+  content1="Event Loop"
+  content2="Callbacks"
+  content3="Promises"
+  content4="Async/Await"
+/>
+
+---
+
+<WSlide3
+  title="What is the event loop?"
+/>
+
+---
+
+export default WLayout1
+
+# Quick quiz...
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/KGrYax"/>
+
+---
+
+export default WLayout1
+
+# Event Loop.
+### The event loop is the way the JS engine handles the execution of all the statements that need to go into the message queue. Don't worry, I'll explain this later.
+
+---
+
+export default WLayout1
+
+## The runtime is composed by: 
+- The call stack.
+- The Heap
+- The Queue
+- The event loop
+
+---
+
+export default WLayout1
+
+## The Heap: 
+### It's a place in memory where objects are stored.
+
+---
+
+export default WLayout1
+
+## The Call Stack: 
+### It's where all the statements declared in the code are stacked and executed.
+
+---
+
+export default WLayout1
+
+## The Queue: 
+### It's where messages "to be processed" (aka async) go. 
+
+---
+export default WLayout1
+
+## The Event Loop: 
+### Everytime the Call Stack is emptied, the event loop checks the Queue and, if there are any messages pending to be processed, inserts them one by one into the call stack. 
+
+---
+
+![event-loop](./images/event-loop.gif)
+
+---
+
+export default WLayout1
+
+http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7Cgo%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+---
+
+export default WLayout1
+
+## Any ideas why it was designed to be like this?
+
+---
+
+export default WLayout1
+
+# Non-blocking execution in the browser
+
+---
+
+export default WLayout1
+
+## What are those `Web APIs` and how do they work?
+
+---
+
+export default WLayout1
+
+## They are not part of the JS spec. They are a part of the runtime that interacts with the broswer's hosting environment doing OS-level operations. Once done, they return to the JS runtime with a result and queue the callback with the result.
+
+---
+
+export default WLayout1
+
+### `setTimeout()` is not part of the JS specification, but most runtime environments provide it as part of the API.
+
+---
+
+export default WLayout1
+
+### What else did you notice in the `setTimeout` function?
+
+---
+export default WLayout1
+
+### It is a higher order function, and it uses one of the mechanisms in JS to handle async operations.
+
+---
+
+<WSlide3
+  title="Callbacks"
+/>
+
+---
+
+export default WLayout1
+
+## Quiz...
+### How would you define a callback?
+### Are callbacks async on their own?
+### Let's see...
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/BqGEdJ"/>
+
+---
+
+export default WLayout1
+
+### NO. Callbacks is just a way to indicate what to do whenever the real async operation is complete. Callbacks are nothing but a function passed as a parameter thanks to the ability to have higher order functions.
+
+---
+
+export default WLayout1
+
+### Is there a way to make JS block the main (and only) thread? Let's see...
+### (btw, JS is single-threaded.)
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/ZqmZBw"/>
+
+---
+
+export default WLayout1
+
+### JS engine executes your code in chunks, but all chunks are run to completion (unless interrupted).
+### Can we use a callback to solve the previous problem? Let's see...
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/pxQBgZ"/>
+
+---
+
+export default WLayout1
+
+### This varies between runtime environments, but generally, you can block the main thread using functions that take very long to execute. It's up to the environment to decide what to do.
+
+---
+
+export default WLayout1
+
+### What is truly unblocking are the Web APIs. They are designed to interact with the hosting environment of the browser and make sure that they will execute in an efficient way, and always return a result.
+
+---
+
+export default WLayout1
+
+### BE AWARE that it's up to you what to do with the callback. A Callback can block the main thread.
+
+---
+
+<WSlide3
+  title="Callback Hell"
+/>
+
+---
+
+export default WLayout1
+
+### Can someone tell me what the callback hell is?
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/PyxvMM"/>
+
+---
+
+export default WLayout1
+
+### This is called the pyramid of doom. You can create a pyramid-like shape with all those nested callbacks.
+
+---
+
+export default WLayout1
+
+### Is that all there is to the callback hell? It's a big part, but not all of it.
+
+---
+
+![callback-hell-1](./images/callback-hell-1.png)
+
+---
+
+![callback-hell-2](./images/callback-hell-2.png)
+
+---
+
+export default WLayout1
+
+# Trust issues.
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/pxQMEO"/>
+
+---
+
+export default WLayout1
+
+## Quick Recap
+
+- Event loop - how async stuff is queued.
+- Callbacks.
+- Callback Hell.
+
+---
+
+![classes-touche](./images/classes-touche.jpg)
+
+---
+
+export default WLayout1
+
+## Functions as constructors.
+### You can use functions to create objects. Let's take a look at an example
+
+<Notes>
+  File: prototype, case 4
+</Notes>
+
+---
+
+export default WLayout1
+
+## What happens when you create an object using a function?
+- A context is created where `this` is the object to be returned.
+- In the function body you can assign props and/or methods to `this`.
+- At the end, the value of `this` (an object) is returned. Note that no `return` statement is required for this to happen.
+
+<Notes>
+  - A context is created where `this` is the object to be returned.
+  - Ideally, you use the function body to assign properties and methods to `this`.
+  - At the end, the value of `this` (an object) is returned. Note that no `return` statement is required for this to happen.
+</Notes>
+
+---
+
+export default WLayout1
+
+## So, what happens to behavior delegation when you build objects using functions?
+### Let's have a quick 2-parts quiz...
+
+<Notes>
+  Show them quiz part 1 and ask them what the difference is between the 2 scenarios if at the end the result is the same.
+
+  Then, show them quiz part 2 and highlight the behavior where the constructed animal can jump, while the other can't.
+</Notes>
+
+---
+
+![function-prototype](./images/function-prototype.png)
+
+<Notes>
+  - Explain how all functions have a public property called `prototype`.
+  - Objects built with functions as constructors point their internal `[[Prototype]]` prop to the public `prototype` prop of the function, thus delegating behavior to the function as an object, no to the function as a callable.
+</Notes>
+
+---
+
+export default WLayout1
+
+## Why is this public `prototype` property even important?
+- It's the behavior delegation mechanism for functions as constructors.
+- Polyfills.
+- JS classes (we'll get into this).
+
+<Notes>
+  - The behavior delegation mechanism was already explained.
+  - Polyfills are a way to dynamically 'fill' functionality that is not there on parents.
+  - Show them the example of polyfill and come back to this slide.
+  - Explain that polyfills are the mechanism that a lot of transpilers use to compensate for functionality not present on old browsers.
+  - Jump to JS classes.
+</Notes>
+
+---
+
+<WSlide3
+  title="JS classes"
+/>
+
+---
+
+![js-classes-no](./images/js-classes-no.jpg)
+
+---
+
+export default WLayout1
+
+## Classes in JS are just "syntactic sugar".
+
+<Notes>
+  Classes probably were added because the JS team wanted to join the OO trend and keep their devs happy. But they are a good thing, just be aware that they are not like the typical OO languages classes.
+
+  Show them what the syntaxis is with file classes case 0.
+
+  So, if they are not like the typical classes, what are they?
+</Notes>
+
+---
+
+![js-classes-functions](./images/js-classes-functions.jpg)
+
+---
+
+export default WLayout1
+
+## What happens when a class is declared?
+- A function with that name is created.
+- All the properties assignments through `this.<prop>` on the constructor are put into the function's body.
+- All the methods declared in the class are assigned as methods to the function's `prototype` property.
+
+<Notes>
+  - Show the example on file classes, case 1.
+</Notes>
+
+---
+
+export default WLayout1
+
+## Can we have static methods?
+### Yes, but they are assigned as properties to the function object, rather than to its `prototype`.
+
+<Notes>
+  Show them file classes, case 2.
+
+  This way you can simulate a call to the class' static methods, but in reality you're just accessing an object's property.
+</Notes>
+
+---
+
+export default WLayout1
+
+## Classes extending other classes.
+### Let's take a look at the internal mechanism for this.
+
+<Notes>
+  Show classes file, case 3.
+</Notes>
+
+---
+
+![class-extension](./images/class-extension.jpg)
+
+<Notes>
+  To understand this, we need to make a clear distinction between `prototype` and `[[Prototype]]`
+
+  Explain that what actually happens is that, when a class extends another class, its underlying function's `property` object, whih is an object and thus has `[[Prototype]]`, points its `[[Prototype]]` to another function's `prototype`
+</Notes>
+
+---
+
+<WSlide3
+  title="Recap"
+/>
+
+---
+
+export default WLayout1
+
+- Everything, except primitives, is a ready-to-use object.
+- Functions are objects too and can be assigned properties and methods.
+
+---
+
+export default WLayout1
+
+- All objects have a `[[Prototype]]` hidden property that points to another object.
+- This property allows for Behavior Delegation.
+
+---
+
+export default WLayout1
+
+- Functions can be used as object constructors.
+- The resulting object has its `[[Prototype]]` property pointing to a public `prototype` property that all functions have (note that these 2 props are different).
+
+---
+
+export default WLayout1
+
+- The fact that functions are objects too allows to mimic the behavior of classes by playing with their `prototype` public property.
+- Classes are just syntactic sugar.
+
+---
+
+export default WLayout1
+
+- Functions' `prototype` property also allows to mimic the behavior of classes extending other classes.
+
+---
+
+<WSlide3
+  title="Q&A"
+/>
+
+---
+<WSlideThankyou/>

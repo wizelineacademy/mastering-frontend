@@ -2,8 +2,8 @@ const partial = (fn, ...args) =>
   (...moreArgs) =>
     apply(fn, args.concat(moreArgs))
 
-const add20 = partial(sum, 20)
-add20(3) // 23
+const add6 = partial(sum, 6)
+add6(6, 6) // 18
 
-const add30 = partial(sum, 15, 15)
-add30(3, 4) // 37
+const add12 = partial(sum, 6, 6)
+add12(6) // 18

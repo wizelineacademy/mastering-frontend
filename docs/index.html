@@ -8,5 +8,505 @@
 <link href="styles.css" rel="stylesheet"></head>
 <body>
   
+  <header class="header">
+    <nav class="header__main-nav">
+
+      <div class="header__main-nav__left">
+        <div class="header__main-nav__logo">
+          <!-- Here goes the logo -->
+        </div>
+
+        <ul class="header__main-nav__items">
+          <li class="header__main-nav__items__item header__main-nav__items__item--active">
+            <a href="#" class="header__main-nav__items__item__link">
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="header__main-nav__items__item">
+            <a href="#" class="header__main-nav__items__item__link">
+              <span>Blog</span>
+            </a>
+          </li>
+          <li class="header__main-nav__items__item">
+            <a href="#" class="header__main-nav__items__item__link">
+              <span>Features</span>
+            </a>
+          </li>
+          <li class="header__main-nav__items__item">
+            <a href="#" class="header__main-nav__items__item__link">
+              <span>Pricing</span>
+            </a>
+          </li>
+          <li class="header__main-nav__items__item">
+            <a href="#" class="header__main-nav__items__item__link">
+              <span>Documentation</span>
+            </a>
+          </li>
+        </ul><!-- /.header__main-nav__items -->
+      </div><!-- /.header__main-nav__left -->
+
+      <div class="header__main-nav__right">
+        <ul class="header__main-nav__social">
+          <li class="header__main-nav__social__item header__main-nav__social__item--facebook">
+            <a href="#" class="header__main-nav__social__item__link">
+              <!-- Here goes the icon -->
+            </a>
+          </li>
+          <li class="header__main-nav__social__item header__main-nav__social__item--telegram">
+            <a href="#" class="header__main-nav__social__item__link">
+              <!-- Here goes the icon -->
+            </a>
+          </li>
+          <li class="header__main-nav__social__item header__main-nav__social__item--twitter">
+            <a href="#" class="header__main-nav__social__item__link">
+              <!-- Here goes the icon -->
+            </a>
+          </li>
+          <li class="header__main-nav__social__item header__main-nav__social__item--medium">
+            <a href="#" class="header__main-nav__social__item__link">
+              <!-- Here goes the icon -->
+            </a>
+          </li>
+        </ul><!-- /.header__main-nav__social -->
+
+        <a href="#" class="btn btn--light-blue">
+          <span>Get Started</span>
+        </a>
+      </div><!-- /.header__main-nav__right -->
+      
+    </nav><!-- /.header__main-nav -->
+  </header><!-- /.header -->
+
+  <section class="jumbotron">
+    <picture class="jumbotron__background">
+      <img src="img/hero.png" alt="productivity">
+    </picture>
+
+    <div class="jumbotron__content">
+      <h1 class="jumbotron__content__title">Plan your life</h1>
+      <h2 class="jumbotron__content__heading">Increase your <strong>productivity</strong></h2>
+      <p class="jumbotron__content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis explicabo nihil voluptatum itaque eius ratione illo eaque? Porro, dignissimos.</p>
+      <button class="jumbotron__content__btn"><!-- TODO: Missing play button --></button>
+    </div><!-- /.jumbotron__content -->
+  </section><!-- /.jumbotron-->
+
+  <section class="logo-wall">
+    <div class="logo-wall__slides">
+      
+      <div class="logo-wall__slides__slide">
+        <img src="img/bitbucket.png" alt="Bitbucket">
+      </div><!-- /.logo-wall__slides__slide -->
+
+      <div class="logo-wall__slides__slide">
+        <img src="img/apple-watch.png" alt="Apple Watch">
+      </div><!-- /.logo-wall__slides__slide -->
+
+      <div class="logo-wall__slides__slide">
+        <img src="img/facebook.png" alt="Facebook">
+      </div><!-- /.logo-wall__slides__slide -->
+
+      <div class="logo-wall__slides__slide">
+        <img src="img/atlassian.png" alt="Atlassian">
+      </div><!-- /.logo-wall__slides__slide -->
+
+      <div class="logo-wall__slides__slide">
+        <img src="img/audi.png" alt="Audi">
+      </div><!-- /.logo-wall__slides__slide -->
+
+    </div><!-- /.logo-wall__slides -->
+  </section><!-- .logo-wall -->
+
+  <section class="plan-and-manage">
+    <div class="plan-and-manage__inner">
+      
+      <div class="plan-and-manage__content">
+        <h1 class="plan-and-manage__content__title">Desktop and mobile app</h1>
+        <h2 class="plan-and-manage__content__heading"><strong>Plan</strong> and <strong>manage</strong></h2>
+        <p class="plan-and-manage__content__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut optio soluta quae aliquid accusantium quam possimus est autem provident minus?</p>
+        
+        <div class="button-group plan-and-manage__content__buttons">
+          <button class="btn">
+            <span>View video &caret;</span>
+          </button>
+          
+          <a href="#link-to-features" class="btn">
+            <span>See features</span>
+          </a>
+        </div><!-- /.plan-and-manage__content__buttons -->
+      </div><!-- /.plan-and-manage__content -->
+
+      <div class="plan-and-manage__image">
+        <img src="img/plan-manage.png" alt="Plan and Manage">
+      </div><!-- /.plan-and-manage__image -->
+
+    </div><!-- /.plan-and-manage__inner -->
+  </section><!-- .plan-and-manage -->
+
+  <section class="about-us">
+    <div class="about-us__inner">
+      <img src="img/clouds.png" alt="About us" class="about-us__background">
+
+      <div class="about-us__content">
+        <h1 class="about-us__title">About us</h1>
+        <h2 class="about-us__heading">Read about our app</h2>
+
+        <div class="about-us__features">
+
+          <div class="about-us__features__feature">
+            <div class="about-us__features__feature__icon">
+              <img src="" alt="Overview">
+            </div>
+
+            <h4 class="about-us__features__feature__title">Overview</h4>
+            <p class="about-us__features__feature__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, iusto?</p>
+          </div><!-- /.about-us__features__feature -->
+
+          <div class="about-us__features__feature">
+            <div class="about-us__features__feature__icon">
+              <img src="" alt="Files">
+            </div>
+
+            <h4 class="about-us__features__feature__title">Files</h4>
+            <p class="about-us__features__feature__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, culpa.</p>
+          </div><!-- /.about-us__features__feature -->
+
+          <div class="about-us__features__feature">
+            <div class="about-us__features__feature__icon">
+              <img src="" alt="Meeting chats">
+            </div>
+
+            <h4 class="about-us__features__feature__title">Meeting chats</h4>
+            <p class="about-us__features__feature__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, maiores?</p>
+          </div><!-- /.about-us__features__feature -->
+
+          <div class="about-us__features__feature">
+            <div class="about-us__features__feature__icon">
+              <img src="" alt="Overview">
+            </div>
+
+            <h4 class="about-us__features__feature__title">Save events</h4>
+            <p class="about-us__features__feature__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, laboriosam.</p>
+          </div><!-- /.about-us__features__feature -->
+
+        </div><!-- /.about-us__features -->
+
+        <div class="about-us__actions">
+          <a href="#read-more" class="about-us__actions__btn about-us__actions__btn--read-more">
+            <span>Read more</span>
+          </a>
+
+          <span>Or</span>
+
+          <a href="#get-started" class="about-us__actions__btn about-us__actions__btn--get-started">
+            <span>Get started</span>
+          </a>
+        </div><!-- /.about-us__actions -->
+      </div>
+    </div>
+  </section><!-- .about-us -->
+
+  <section class="indicators">
+    
+    <div class="indicators__indicator indicators__indicator--blue-dark">
+      <div class="indicators__indicator__icon">
+        <img src="" alt="Speedometer">
+      </div><!-- /.indicators__indicator__icon -->
+      <div class="indicators__indicator__numbers">
+        <span>89%</span>
+      </div><!-- /.indicators__indicator__numbers -->
+      <p class="indicators__indicator__description">Customers who have increased their productivity</p>
+    </div><!-- /.indicators__indicator -->
+
+    <div class="indicators__indicator indicators__indicator--blue-light">
+      <div class="indicators__indicator__icon">
+        <img src="" alt="Users">
+      </div><!-- /.indicators__indicator__icon -->
+      <div class="indicators__indicator__numbers">
+        <span>3123</span>
+      </div><!-- /.indicators__indicator__numbers -->
+      <p class="indicators__indicator__description">Users who have used our application</p>
+    </div><!-- /.indicators__indicator -->
+
+  </section><!-- .indicators -->
+
+  <section class="our-resources">
+    <div class="our-resources__inner">
+
+      <h1 class="our-resources__title">Our resources</h1>
+      <h2 class="our-resources__heading">Start reading our blog</h2>
+
+      <div class="our-resources__posts">
+        
+        <div class="our-resources__posts__slides">
+          
+          <div class="our-resources__posts__slides__slide">
+            
+            <div class="our-resources__posts__slides__slide__inner">
+              <img class="our-resources__posts__slides__slide__img">
+              <div class="our-resources__posts__slides__slide__content">
+                <h3 class="our-resources__posts__slides__slide__content__title">How to start planning</h3>
+                <p class="our-resources__posts__slides__slide__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...</p>
+              </div><!-- /.our-resources__posts__slides__slide__content -->
+            </div><!-- /.our-resources__posts__slides__slide__inner -->
+
+            <div class="our-resources__posts__slides__slide__actions">
+              <a href="#read-now" class="our-resources__posts__slides__slide__actions__button">Read now</a>
+              <button href="#read-now" class="our-resources__posts__slides__slide__actions__link">Add to your bookmarks</button>
+            </div><!-- /.our-resources__posts__slides__slide__actions -->
+
+          </div><!-- /.our-resources__posts__slides__slide -->
+
+          <div class="our-resources__posts__slides__slide">
+            
+            <div class="our-resources__posts__slides__slide__inner">
+              <img class="our-resources__posts__slides__slide__img">
+              <div class="our-resources__posts__slides__slide__content">
+                <h3 class="our-resources__posts__slides__slide__content__title">How to start planning</h3>
+                <p class="our-resources__posts__slides__slide__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...</p>
+              </div><!-- /.our-resources__posts__slides__slide__content -->
+            </div><!-- /.our-resources__posts__slides__slide__inner -->
+
+            <div class="our-resources__posts__slides__slide__actions">
+              <a href="#read-now" class="our-resources__posts__slides__slide__actions__button">Read now</a>
+              <button href="#read-now" class="our-resources__posts__slides__slide__actions__link">Add to your bookmarks</button>
+            </div><!-- /.our-resources__posts__slides__slide__actions -->
+
+          </div><!-- /.our-resources__posts__slides__slide -->
+
+        </div><!-- /.our-resources__posts__slides -->
+
+        <div class="our-resources__posts__arrows">
+          <div class="our-resources__posts__arrows__arrow our-resources__posts__arrows__arrow--left"></div>
+          <div class="our-resources__posts__arrows__arrow our-resources__posts__arrows__arrow--right"></div>
+        </div><!-- /.our-resources__posts__arrows -->
+
+        <div class="our-resources__posts__dots">
+          <span class="our-resources__posts__dots__dot our-resources__posts__dots__dot--active"></span>
+          <span class="our-resources__posts__dots__dot"></span>
+          <span class="our-resources__posts__dots__dot"></span>
+        </div><!-- /.our-resources__posts__dots -->
+
+      </div><!-- /.our-resources__posts -->
+
+    </div><!-- /.our-resources__inner -->
+  </section><!-- .our-resources -->
+
+  <section class="testimonials">
+    <div class="testimonials__inner">
+
+      <div class="testimonials__content">
+        <h1 class="testimonials__content__title">Testimonials</h1>
+        <h2 class="testimonials__content__heading">Customer's quotes</h2>
+        <p class="testimonials__content__description">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.</p>
+      </div><!-- /.testimonials__content -->
+
+      <div class="testimonials__quotes">
+
+        <div class="testimonials__quotes__slides">
+          
+          <div class="testimonials__quotes__slides__slide">
+            <p class="testimonials__quotes__slides__slide__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+            <img src="" alt="" class="testimonials__quotes__slides__slide__img">
+          </div><!-- /.testimonials__quotes__slides__slide -->
+
+          <div class="testimonials__quotes__slides__slide">
+            <p class="testimonials__quotes__slides__slide__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+            <img src="" alt="" class="testimonials__quotes__slides__slide__img">
+          </div><!-- /.testimonials__quotes__slides__slide -->
+
+          <div class="testimonials__quotes__slides__slide">
+            <p class="testimonials__quotes__slides__slide__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+            <img src="" alt="" class="testimonials__quotes__slides__slide__img">
+          </div><!-- /.testimonials__quotes__slides__slide -->
+
+        </div><!-- /.testimonials__quotes__slides -->
+
+        <div class="testimonials__quotes__dots">
+          <span class="testimonials__quotes__dots__dot testimonials__quotes__dots__dot--active"></span>
+          <span class="testimonials__quotes__dots__dot"></span>
+          <span class="testimonials__quotes__dots__dot"></span>
+          <span class="testimonials__quotes__dots__dot"></span>
+          <span class="testimonials__quotes__dots__dot"></span>
+        </div><!-- /.testimonials__quotes__dots -->
+
+      </div><!-- /.testimonials__quotes -->
+
+    </div><!-- /.testimonials__inner -->
+  </section><!-- .testimonials -->
+
+  <section class="faq">
+    <div class="faq__inner">
+
+        <h1 class="faq__title">Customer help</h1>
+        <h2 class="faq__heading">Frequently asked questions</h2>
+
+        <div class="faq__questions">
+          
+          <div class="faq__question">
+            <input type="radio" name="faq" id="question-1" class="faq__question__trigger">
+            
+            <label for="question-1" class="faq__question__label">
+              <h3 class="faq__question__title">Reque insolens in vel?</h3>
+            </label><!-- /.faq__question__label -->
+            
+            <div class="faq__question__content">
+              <p class="faq__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+              <a href="#go-to-documentation" class="faq__question__content__link">Go to documentation</a>
+            </div><!-- /.faq__question__content -->
+          </div><!-- /.faq__question -->
+
+          <div class="faq__question">
+            <input type="radio" name="faq" id="question-2" class="faq__question__trigger">
+            
+            <label for="question-2" class="faq__question__label">
+              <h3 class="faq__question__title">Vis rebum error graecis ea, id sit postea accusamus?</h3>
+            </label><!-- /.faq__question__label -->
+            
+            <div class="faq__question__content">
+              <p class="faq__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+              <a href="#go-to-documentation" class="faq__question__content__link">Go to documentation</a>
+            </div><!-- /.faq__question__content -->
+          </div><!-- /.faq__question -->
+
+          <div class="faq__question">
+            <input type="radio" name="faq" id="question-3" class="faq__question__trigger">
+            
+            <label for="question-3" class="faq__question__label">
+              <h3 class="faq__question__title">Vis rebum error graecis ea, id sit postea accusamus?</h3>
+            </label><!-- /.faq__question__label -->
+            
+            <div class="faq__question__content">
+              <p class="faq__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+              <a href="#go-to-documentation" class="faq__question__content__link">Go to documentation</a>
+            </div><!-- /.faq__question__content -->
+          </div><!-- /.faq__question -->
+
+          <div class="faq__question">
+            <input type="radio" name="faq" id="question-4" class="faq__question__trigger">
+            
+            <label for="question-4" class="faq__question__label">
+              <h3 class="faq__question__title">Vis rebum error graecis ea, id sit postea accusamus?</h3>
+            </label><!-- /.faq__question__label -->
+            
+            <div class="faq__question__content">
+              <p class="faq__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+              <a href="#go-to-documentation" class="faq__question__content__link">Go to documentation</a>
+            </div><!-- /.faq__question__content -->
+          </div><!-- /.faq__question -->
+
+        </div><!-- /.faq__questions -->
+
+    </div><!-- /.faq__inner -->
+  </section><!-- .faq -->
+
+  <section class="get-started">
+
+    <picture class="get-started__background">
+      <img src="img/clouds.png" alt="Clouds">
+    </picture><!-- /.get-started__background -->
+
+    <div class="get-started__inner">
+
+      <h1 class="get-started__title">Plan your life</h1>
+      <h2 class="get-started__heading">Get <strong>started</strong> now</h2>
+
+      <p class="get-started__description">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
+
+      <div class="get-started__buttons">
+        <a href="#view-pricing" class="get-started__buttons__filled">View pricing</a>
+        <a href="#read-documentation" class="get-started__buttons__transparent">Read documentation</a>
+      </div><!-- /.get-started__buttons -->
+
+    </div><!-- /.get-started__inner -->
+  </section><!-- .get-started -->
+
+  <section class="newsletter">
+    <div class="newsletter__inner">
+
+      <h1 class="newsletter__title">Sign up for newsletter</h1>
+      <p class="newsletter__description">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</p>
+
+      <form method="post" action="" class="newsletter__form">
+        <input type="email" name="email" class="newsletter__form__email">
+        <button type="submit" class="newsletter__form__submit">Save me</button>
+      </form><!--/.newsletter__form -->
+
+    </div><!-- /.newsletter__inner -->
+  </section><!-- .newsletter -->
+
+  <div class="footer">
+    <div class="footer__inner">
+
+      <nav class="footer__nav">
+        <div class="footer__nav__left">
+          <div class="footer__nav__logo">
+            <!-- Here goes the logo -->
+          </div>
+  
+          <ul class="footer__nav__items">
+            <li class="footer__nav__items__item footer__nav__items__item--active">
+              <a href="#" class="footer__nav__items__item__link">
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="footer__nav__items__item">
+              <a href="#" class="footer__nav__items__item__link">
+                <span>Blog</span>
+              </a>
+            </li>
+            <li class="footer__nav__items__item">
+              <a href="#" class="footer__nav__items__item__link">
+                <span>Features</span>
+              </a>
+            </li>
+            <li class="footer__nav__items__item">
+              <a href="#" class="footer__nav__items__item__link">
+                <span>Pricing</span>
+              </a>
+            </li>
+            <li class="footer__nav__items__item">
+              <a href="#" class="footer__nav__items__item__link">
+                <span>Documentation</span>
+              </a>
+            </li>
+          </ul><!-- /.footer__nav__items -->
+        </div><!-- /.footer__nav__left -->
+  
+        <div class="footer__nav__right">
+          <ul class="footer__nav__social">
+            <li class="footer__nav__social__item footer__nav__social__item--facebook">
+              <a href="#" class="footer__nav__social__item__link">
+                <!-- Here goes the icon -->
+              </a>
+            </li>
+            <li class="footer__nav__social__item footer__nav__social__item--telegram">
+              <a href="#" class="footer__nav__social__item__link">
+                <!-- Here goes the icon -->
+              </a>
+            </li>
+            <li class="footer__nav__social__item footer__nav__social__item--twitter">
+              <a href="#" class="footer__nav__social__item__link">
+                <!-- Here goes the icon -->
+              </a>
+            </li>
+            <li class="footer__nav__social__item footer__nav__social__item--medium">
+              <a href="#" class="footer__nav__social__item__link">
+                <!-- Here goes the icon -->
+              </a>
+            </li>
+          </ul><!-- /.footer__nav__social -->
+  
+          <a href="#" class="btn btn--light-blue">
+            <span>Get Started</span>
+          </a>
+      </nav><!-- /.footer__nav -->
+
+      <div class="footer__copyright">
+        <p>Copyright &copy; 2018 By Wizeline Academy</p>
+      </div><!-- /.footer__copyright -->
+
+    </div><!-- /.footer__inner -->
+  </div><!-- /.footer -->
+
 <script type="text/javascript" src="bundle.js"></script></body>
 </html>

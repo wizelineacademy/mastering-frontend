@@ -1,13 +1,22 @@
-// This should be imported by the main.js file
+@charset 'UTF-8';
 
-// test for scss variables
-$primary-color: #2a3fbb;
+// Configuration and helpers
+@import 'abstracts/_variables.scss';
+@import 'abstracts/_media-queries.scss';
+@import 'abstracts/_mixins.scss';
 
-* {
-  padding: 0;
-  margin: 0;
-}
+// Vendors
+@import 'vendor/_normalize.scss';
 
-h1 {
-  color: $primary-color;
-}
+// Base stuff
+@import 'base/_base.scss';
+@import 'base/_typography.scss';
+@import 'base/_animations.scss';
+
+// Layout-related sections
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+
+
+// Components
+@import 'components/_faq.scss';

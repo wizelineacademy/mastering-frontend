@@ -6,8 +6,7 @@ module.exports = {
   entry: "./scripts/main.js",
   output: {
     path: path.resolve(__dirname, "docs"),
-    filename: "bundle.js",
-    // publicPath: "/docs"
+    filename: "bundle.js"
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -23,8 +22,7 @@ module.exports = {
       {
         test: /\.js$/,
         use: {
-          loader: "babel-loader",
-          options: { presets: ["es2015"] }
+          loader: "babel-loader"
         }
       },
       {
@@ -40,7 +38,7 @@ module.exports = {
             loader: "css-loader" // translates CSS into CommonJS
           },
           {
-            loader: "sass-loader" // compiles Sass to CSS
+            loader: "postcss-loader" // compiles Sass to CSS
           }
         ]
       }

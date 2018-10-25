@@ -13,7 +13,9 @@ import Codepen from '../src/components/Codepen'
   subtitle=""
   title="JS Async Programming"
 />
+
 ---
+
 <WSlide2
   title="Content"
   title2=""
@@ -22,21 +24,25 @@ import Codepen from '../src/components/Codepen'
   content3="Promises"
   content4="Async/Await"
 />
+
 ---
+
 <WSlide3
   title="What is the event loop?"
 />
+
 ---
 
 export default WLayout1
 
 # Quick quiz...
 
-<Notes>
-  Show them the file general, case 0,
-  make sure to explain what settimeout does
-</Notes>
 ---
+
+<Codepen url="https://codepen.io/orverduzco/pen/KGrYax"/>
+
+---
+
 export default WLayout1
 
 # Event Loop.
@@ -84,252 +90,172 @@ export default WLayout1
 ![event-loop](./images/event-loop.gif)
 
 ---
+
+export default WLayout1
+
+http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7Cgo%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+---
+
+export default WLayout1
+
+## Any ideas why it was designed to be like this?
+
+---
+
+export default WLayout1
+
+# Non-blocking execution in the browser
+
+---
+
+export default WLayout1
+
+## What are those `Web APIs` and how do they work?
+
+---
+
+export default WLayout1
+
+## They are not part of the JS spec. They are a part of the runtime that interacts with the broswer's hosting environment doing OS-level operations. Once done, they return to the JS runtime with a result and queue the callback with the result.
+
+---
+
+export default WLayout1
+
+### `setTimeout()` is not part of the JS specification, but most runtime environments provide it as part of the API.
+
+---
+
+export default WLayout1
+
+### What else did you notice in the `setTimeout` function?
+
+---
+export default WLayout1
+
+### It is a higher order function, and it uses one of the mechanisms in JS to handle async operations.
+
+---
+
 <WSlide3
-  title="Any idea why this was designed to be like this?"
+  title="Callbacks"
 />
 
 ---
 
 export default WLayout1
 
-# In JS, objects are passed by reference.
+## Quiz...
+### How would you define a callback?
+### Are callbacks async on their own?
+### Let's see...
 
 ---
-![object-passing](./images/object-passing.png)
 
-<Notes>
-  This is a graphical representation of what we just
-  did. You can see that the object itself is stored
-  somewhere in memory, and assigning it to variables
-  will just make those variables point to where that object is stored. Modifying it thru one of the variables will make the rest have the same change.
-</Notes>
+<Codepen url="https://codepen.io/orverduzco/pen/BqGEdJ"/>
+
 ---
 
 export default WLayout1
 
-## So then, how do we copy and create an independent object?
-### With Object.assign()
+### NO. Callbacks is just a way to indicate what to do whenever the real async operation is complete. Callbacks are nothing but a function passed as a parameter thanks to the ability to have higher order functions.
 
+---
 
-<Notes>
-  Show the code to demonstrate Object.assign()
-</Notes>
+export default WLayout1
+
+### Is there a way to make JS block the main (and only) thread? Let's see...
+### (btw, JS is single-threaded.)
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/ZqmZBw"/>
+
+---
+
+export default WLayout1
+
+### JS engine executes your code in chunks, but all chunks are run to completion (unless interrupted).
+### Can we use a callback to solve the previous problem? Let's see...
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/pxQBgZ"/>
+
+---
+
+export default WLayout1
+
+### This varies between runtime environments, but generally, you can block the main thread using functions that take very long to execute. It's up to the environment to decide what to do.
+
+---
+
+export default WLayout1
+
+### What is truly unblocking are the Web APIs. They are designed to interact with the hosting environment of the browser and make sure that they will execute in an efficient way, and always return a result.
+
+---
+
+export default WLayout1
+
+### BE AWARE that it's up to you what to do with the callback. A Callback can block the main thread.
 
 ---
 
 <WSlide3
-  title="Functions in JS"
-/>
-
-<Notes>
-  We won't talk about how to run functions, but we'll demonstrate how functions in JS have object-like behavior too.
-</Notes>
-
----
-
-export default WLayout1
-
-### Functions are "first-class" citizens. They can be passed around as any other object, and they have an internal property that allows them to be called.
-
-<Notes>
-  Show them the code of the function wrapper.
-</Notes>
-
----
-
-export default WLayout1
-
-### So, if functions are objects, can we assign properties to them?
-
-<Notes>
-  Show them the code of the function with props.
-</Notes>
-
----
-export default WLayout1
-
-### YES! Functions in JS can be assigned properties and methods like any other object.
-
-<Notes>
-  Please keep in mind this feature of functions in JS, because it's a key aspect of how the inheritance mechanism in JS works.
-</Notes>
-
----
-
-export default WLayout1
-
-## Some highlights before we move on
-- Objects are passed by reference.
-- We haven't created any "class", yet we have already worked with objects.
-- Functions can behave like objects.
-
-<Notes>
-  These are the 3 key aspects that you need to keep in mind to fully understand how inheritance works.
-</Notes>
-
----
-
-export default WLayout1
-
-### So, if we don't have classes in JS, is it an OO language?
-
-<Notes>
-  Let the audience express their opinions.
-</Notes>
-
----
-
-<WSlide3
-  title="JS OO tweaks"
-/>
-
-<Notes>
-  Throw question. If JS doesn't have classes, how does it handle inheritance?
-</Notes>
-
----
-export default WLayout1
-
-![prototype](./images/prototype.png)
-
-<Notes>
-  We'll now see what prototype is and how it behaves as the mechanism for inheritance.
-</Notes>
-
----
-
-export default WLayout1
-
-`[[ Prototype ]]`
-### It is a hidden property of every object. It points to another object.
-### But before going in depth, a quick quiz...
-
-<Notes>
-  Show them the case 0 of prototype file.
-</Notes>
-
----
-
-![prototype-graphical](./images/prototype-graphical.png)
-
-<Notes>
-  Object.create() creates a new object, and the resulting object is prototype-linked to the base object.
-
-  We have the called 'prototype chain', which is the way to search for props in case an object doesn't have one.
-  
-  If the end of the chain is reached, the prop is considered `undefined`.
-</Notes>
-
----
-
-export default WLayout1
-
-### Time for the mainstream animal -> rabbit -> specific rabbit example!
-
----
-
-export default Split
-
-![mainstream-example](./images/mainstream-example.png)
-
-- An animal can eat, but can't jump.
-- A rabbit can eat like an animal, and jump like a rabbit.
-- A gray rabbit can eat like an animal, and jump like a gray rabbit.
-- A baby gray rabbit can eat like an animal, and jump like a gray rabbit.
-
-<Notes>
-  If the requested prop/method is not found on the current object, it's searched on the prototype chain and the search is considered done at the first occurence of the prop.
-
-  Please note that all of the objects in the chain can be executed.
-</Notes>
-
----
-
-export default WLayout1
-
-`Behavior Delegation`
-#### If an object doesn't have a property or method, it tells its prototype to execute/access it if it does have it.
-
-<Notes>
-  The reason why it's called behavior delegation is because if an object doesn't have a property or method, it asks its prototype, which is an object too, to execute or access it, thus delegating the operation to someone else.
-</Notes>
-
----
-
-export default WLayout1
-
-### Can a child object modify its parent's properties, thus affecting the rest of its siblings?
-
-<Notes>
-  Show them the code for this scenario.
-</Notes>
-
----
-
-export default WLayout1
-
-### If a change to a property that the object doesn't have is required, the engine first creates the prop on the specific object and then modifies it.
-
-<Notes>
-  This is in order to protect other siblings from unexpected changes.
-</Notes>
-
----
-
-<WSlide3
-  title="Typical class inheritance vs behavior delegation."
+  title="Callback Hell"
 />
 
 ---
 
-![typical-inheritance](./images/typical-inheritance.png)
+export default WLayout1
 
-<Notes>
-  Explain how objects are bigger in size because they copy the behavior from the parent classes in all the inheritance chain.
-</Notes>
+### Can someone tell me what the callback hell is?
 
 ---
 
-![behavior-delegation](./images/behavior-delegation.png)
-
-<Notes>
-  Explain how this mechanism is more efficient from memory point of view, because all parent's functionality is not copied over to its children.
-</Notes>
-
----
-
-![thinking-hard](./images/thinking-hard.png)
-
-<Notes>
-  If behavior is delegated rather than inherited, does it mean that we can dynamically choose whom to delegate the behavior to?
-
-  Show them the citizen example
-</Notes>
+<Codepen url="https://codepen.io/orverduzco/pen/PyxvMM"/>
 
 ---
 
 export default WLayout1
 
-### YES! But be aware that this is a slow operation.
-
-<Notes>
-  Explain that it's up to the engine designers to optimize the operation,
-  but, as a rule it's considered a slow operation.
-</Notes>
+### This is called the pyramid of doom. You can create a pyramid-like shape with all those nested callbacks.
 
 ---
 
-![distractedbf](./images/distractedbf.png)
+export default WLayout1
+
+### Is that all there is to the callback hell? It's a big part, but not all of it.
 
 ---
 
-<WSlide3
-  title="Object creation revisited"
-/>
+![callback-hell-1](./images/callback-hell-1.png)
 
-<Notes>
-  This time with inheritance.
-</Notes>
+---
+
+![callback-hell-2](./images/callback-hell-2.png)
+
+---
+
+export default WLayout1
+
+# Trust issues.
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/pxQMEO"/>
+
+---
+
+export default WLayout1
+
+## Quick Recap
+
+- Event loop - how async stuff is queued.
+- Callbacks.
+- Callback Hell.
 
 ---
 

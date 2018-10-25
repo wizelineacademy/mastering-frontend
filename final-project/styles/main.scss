@@ -11,3 +11,87 @@ $primary-color: #2a3fbb;
 h1 {
   color: $primary-color;
 }
+
+@function rem-calc($size) {
+  @return $size / 16px * 1rem;
+}
+
+$nav-text-color: #697CA6;
+$header__logo-size: 26px;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button { border:none; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Quicksand', sans-serif;
+  padding: rem-calc(18px) rem-calc(20px);
+
+  &__logo {
+    width: rem-calc($header__logo-size);
+    height: rem-calc($header__logo-size);
+    margin-top: rem-calc(26px-18px);
+    background-color: #5E81FE;
+    border-radius: 50%;
+  }
+
+  &__nav {
+    margin-top: rem-calc(32px-18px);
+    &--mobile {
+      margin-top: rem-calc(10px);
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__nav-link {
+    font-size: rem-calc(12px);
+    margin: 0 1.25rem;
+    display: inline-block;
+    color: $nav-text-color;
+  }
+
+  &__button {
+    background-color: #D2E1FF;
+    font-family: 'Quicksand', sans-serif;
+    color: #3A79FF;
+    padding: rem-calc(13px);
+  }
+}
+
+.main {
+  border-top: #D8E3FE solid 1px;
+}
+
+// TODO create break-points
+.header__nav--main, .header__nav--social {
+  display: none;
+}
+.header__button{
+  display: none;
+}
+
+@media only screen and (min-width: rem-calc(768px)){
+  .header__nav--main, .header__button, .header__nav--social {
+    display: block;
+  }
+  .header__nav--mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: rem-calc(768px)){
+  .header__nav--main, .header__button, .header__nav--social {
+    display: none;
+  }
+  .header__nav--mobile {
+    display: block;
+  }
+}

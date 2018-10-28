@@ -2,13 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Mastering Frontend</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body>
-  <h1>Hello world!</h1>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__logo"></div>
+        <nav class="header__nav  header__nav--main">
+          <ul class="header__nav-list">
+            <li class="header__nav-link header__nav-link--current-page">Home</li>
+            <li class="header__nav-link">Blog</li>
+            <li class="header__nav-link">Features</li>
+            <li class="header__nav-link">Pricing</li>
+            <li class="header__nav-link">Documentation</li>
+          </ul>
+        </nav>
+
+        <nav class="header__nav header__nav--social">
+          <ul class="header__nav-list">
+            <li class="header__nav-link">
+              <i class="fab fa-facebook-f"></i>
+            </li>
+            <li class="header__nav-link">
+              <i class="fab fa-twitter"></i>
+            </li>
+            <li class="header__nav-link">
+              <i class="fab fa-telegram-plane"></i>
+            </li>
+            <li class="header__nav-link">
+              <i class="fab fa-medium-m"></i>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="header__button">Get Started</button>
+
+        <div class="header__nav--mobile">
+          <i class="fas fa-bars"></i>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section hero"></section>
+        <section class="section customers"></section>
+        <section class="section plan-manage"></section>
+        <section class="section features"></section>
+        <section class="section stats"></section>
+        <section class="section blog"></section>
+        <section class="section quotes"></section>
+        <section class="section faq"></section>
+        <section class="section get-started"></section>
+        <section class="section news-letter"></section>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+
   <script src="./dist/bundle.js"></script>
 </body>
 </html>

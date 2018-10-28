@@ -1,13 +1,195 @@
-// This should be imported by the main.js file
 
-// test for scss variables
-$primary-color: #2a3fbb;
+/* Variables */
+
+$nav-text-color: #697CA6;
+$header__logo-size: 26px;
+$tablet-min-width: 768px;
+$desktop-min-width: 992px;
+
+
+/* Functions */
+
+@function rem-calc($size) {
+  @return $size / 16px * 1rem;
+}
+
+/* Mixins */
+
+@mixin tablet-breakpoint {
+  @media only screen and (min-width: rem-calc($tablet-min-width)) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint {
+  @media only screen and (min-width: rem-calc($desktop-min-width)) {
+    @content;
+  }
+}
+
+/* Global*/
 
 * {
   padding: 0;
   margin: 0;
 }
 
-h1 {
-  color: $primary-color;
+html {
+  font-family: 'Quicksand', sans-serif;
+}
+
+button {
+  border:none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header*/
+
+.header {
+  background-color: #FFF;
+  border-bottom: 1px solid #D8E3FE;
+  display: flex;
+  justify-content: space-between;
+  padding: rem-calc(18px) rem-calc(20px);
+
+  &__logo {
+    width: rem-calc($header__logo-size);
+    height: rem-calc($header__logo-size);
+    margin-top: rem-calc(26px-18px);
+    background-color: #5E81FE;
+    border-radius: 50%;
+  }
+
+  &__nav {
+    margin-top: rem-calc(32px-18px);
+    display: none;
+
+    &--mobile {
+      margin-top: rem-calc(10px);
+
+      @include tablet-breakpoint {
+        display: none;
+      }
+    }
+
+    @include tablet-breakpoint {
+      display: block;
+
+      &--social {
+        display: none;
+      }
+    }
+
+    @include desktop-breakpoint {
+      &--social {
+        display: block;
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__nav-link {
+    font-size: rem-calc(12px);
+    margin: 0 rem-calc(20px);
+    display: inline-block;
+    color: $nav-text-color;
+  }
+
+  &__button {
+    background-color: #D2E1FF;
+    font-family: 'Quicksand', sans-serif;
+    color: #3A79FF;
+    padding: rem-calc(13px);
+    display: none;
+
+    @include tablet-breakpoint {
+      display: block;
+    }
+  }
+}
+
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  border-bottom: 1px solid #D8E3FE;
+}
+
+/* Hero */
+.hero {
+  background-color: #F4F7FF;
+  min-height: 570px;
+}
+
+/* Customers */
+.customers {
+  background-color: #FFF;
+  min-height: 146px;
+}
+
+/* Plan and Manage */
+.plan-manage {
+  background-color: #F5F8FF;
+  min-height: 776px;
+}
+
+/* Features */
+.features {
+  background-color: #FFF;
+  min-height: 885px;
+}
+
+/* Stats */
+.stats {
+  background: linear-gradient(208.93deg, #6888FF 12.77%, #5E80FF 73.11%);
+  min-height: 343px;
+}
+
+/* Blog */
+.blog {
+  background-color: #F5F8FF;
+  min-height: 865px;
+}
+
+/* Quotes */
+.quotes {
+  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+  min-height: 480px;
+}
+
+/* FAQ */
+.faq {
+  background-color: #FFF;
+  min-height: 965px;
+}
+
+/* Get Started */
+.get-started {
+  background: linear-gradient(199.86deg, #6888FF 12.77%, #5E80FF 73.11%);
+  min-height: 447px;
+}
+
+/* News Letter */
+.news-letter {
+  background-color: #FCFDFF;
+  min-height: 332px;
+}
+
+/* Footer */
+.footer {
+  background-color: #FFF;
+  display: flex;
+  min-height: 287px;
 }

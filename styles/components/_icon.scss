@@ -1,0 +1,12 @@
+.icon {
+
+  &--play-video {
+    display: relative;
+  
+    &::after {
+      content: "\25BA";
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

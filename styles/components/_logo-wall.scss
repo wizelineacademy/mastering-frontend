@@ -1,0 +1,53 @@
+.logo-wall {
+
+  &__slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin: 0 auto;
+    max-width: 95.6rem;
+    overflow: hidden;
+
+    @media (--respond-to-tablet) {
+      flex-wrap: wrap;
+    }
+
+    @media (--respond-to-desktop) {
+      
+    }
+
+    @media (--respond-to-big-desktops) {
+      
+    }
+
+    &__slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 100%;
+
+      @media (--respond-to-tablet) {
+        flex: 0 0 calc(100%/3);
+
+        &:nth-child(n+4) {
+          margin-top: 4rem;
+        }
+      }
+
+      @media (--respond-to-desktop) {
+        flex: 1 1 auto;
+
+        &:nth-child(n+4) {
+          margin-top: 0;
+        }
+      }
+
+      img {
+
+      }
+    }
+  }
+
+}

@@ -7,13 +7,18 @@
   <title>Mastering FrontEnd | Wizeline Academy</title>
 <link href="styles.css" rel="stylesheet"></head>
 <body>
+  <!-- The SVG Sprite will be loaded here -->
+  <div id="svg-icons" style="display:none;"></div>
+
   
   <header class="header">
     <nav class="header__main-nav">
 
       <div class="header__main-nav__left">
         <div class="header__main-nav__logo">
-          <!-- Here goes the logo -->
+          <svg>
+            <use href="#logo"></use>
+          </svg>
         </div>
 
         <ul class="header__main-nav__items">
@@ -23,22 +28,22 @@
             </a>
           </li>
           <li class="header__main-nav__items__item">
-            <a href="#" class="header__main-nav__items__item__link">
+            <a href="#blog" class="header__main-nav__items__item__link">
               <span>Blog</span>
             </a>
           </li>
           <li class="header__main-nav__items__item">
-            <a href="#" class="header__main-nav__items__item__link">
+            <a href="#features" class="header__main-nav__items__item__link">
               <span>Features</span>
             </a>
           </li>
           <li class="header__main-nav__items__item">
-            <a href="#" class="header__main-nav__items__item__link">
+            <a href="#pricing" class="header__main-nav__items__item__link">
               <span>Pricing</span>
             </a>
           </li>
           <li class="header__main-nav__items__item">
-            <a href="#" class="header__main-nav__items__item__link">
+            <a href="#documentation" class="header__main-nav__items__item__link">
               <span>Documentation</span>
             </a>
           </li>
@@ -49,22 +54,30 @@
         <ul class="header__main-nav__social">
           <li class="header__main-nav__social__item header__main-nav__social__item--facebook">
             <a href="#" class="header__main-nav__social__item__link">
-              <!-- Here goes the icon -->
+              <svg>
+                <use href="#facebook"></use>
+              </svg>
             </a>
           </li>
           <li class="header__main-nav__social__item header__main-nav__social__item--telegram">
             <a href="#" class="header__main-nav__social__item__link">
-              <!-- Here goes the icon -->
+              <svg>
+                <use href="#telegram"></use>
+              </svg>
             </a>
           </li>
           <li class="header__main-nav__social__item header__main-nav__social__item--twitter">
             <a href="#" class="header__main-nav__social__item__link">
-              <!-- Here goes the icon -->
+              <svg>
+                <use href="#twitter"></use>
+              </svg>
             </a>
           </li>
           <li class="header__main-nav__social__item header__main-nav__social__item--medium">
             <a href="#" class="header__main-nav__social__item__link">
-              <!-- Here goes the icon -->
+              <svg>
+                <use href="#medium"></use>
+              </svg>
             </a>
           </li>
         </ul><!-- /.header__main-nav__social -->
@@ -86,7 +99,11 @@
       <h1 class="jumbotron__content__title">Plan your life</h1>
       <h2 class="jumbotron__content__heading">Increase your <strong>productivity</strong></h2>
       <p class="jumbotron__content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis explicabo nihil voluptatum itaque eius ratione illo eaque? Porro, dignissimos.</p>
-      <button class="jumbotron__content__btn"><!-- TODO: Missing play button --></button>
+      <button class="jumbotron__content__btn">
+        <svg>
+          <use href="#play-button"></use>
+        </svg>
+      </button>
     </div><!-- /.jumbotron__content -->
   </section><!-- /.jumbotron-->
 
@@ -94,23 +111,23 @@
     <div class="logo-wall__slides">
       
       <div class="logo-wall__slides__slide">
-        <img src="img/bitbucket.png" alt="Bitbucket">
+        <img src="img/customers/bitbucket.png" alt="Bitbucket">
       </div><!-- /.logo-wall__slides__slide -->
 
       <div class="logo-wall__slides__slide">
-        <img src="img/apple-watch.png" alt="Apple Watch">
+        <img src="img/customers/apple-watch.png" alt="Apple Watch">
       </div><!-- /.logo-wall__slides__slide -->
 
       <div class="logo-wall__slides__slide">
-        <img src="img/facebook.png" alt="Facebook">
+        <img src="img/customers/facebook.png" alt="Facebook">
       </div><!-- /.logo-wall__slides__slide -->
 
       <div class="logo-wall__slides__slide">
-        <img src="img/atlassian.png" alt="Atlassian">
+        <img src="img/customers/atlassian.png" alt="Atlassian">
       </div><!-- /.logo-wall__slides__slide -->
 
       <div class="logo-wall__slides__slide">
-        <img src="img/audi.png" alt="Audi">
+        <img src="img/customers/audi.png" alt="Audi">
       </div><!-- /.logo-wall__slides__slide -->
 
     </div><!-- /.logo-wall__slides -->

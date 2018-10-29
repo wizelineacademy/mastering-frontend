@@ -12,6 +12,7 @@
 @import 'base/_base.scss';
 @import 'base/_typography.scss';
 @import 'base/_animations.scss';
+@import 'base/_helpers.scss';
 
 // Layout-related sections
 @import 'layout/_header.scss';
@@ -20,3 +21,9 @@
 
 // Components
 @import 'components/_faq.scss';
+@import 'components/_btn.scss';
+@import 'components/_jumbotron.scss';
+@import 'components/_logo-wall.scss';
+@import 'components/_plan-and-manage.scss';
+@import 'components/_icon.scss';
+@import 'components/_button-group.scss';

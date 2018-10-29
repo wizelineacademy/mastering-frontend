@@ -1,18 +1,18 @@
 /**
  * Media Queries
  * 1em = 16px
- * Phone:               0       - 768px     => 0        - 48em
- * Tablet:              768px   - 980px     => 48em     - 61.25em
- * Desktop:             980px   - 1800px    => 61.25em  - 90em
- * Big Desktop:         1440px  - Infinite  => 90    - Infinite
+ * Phone:               0       - 768px     => 0        - 48rem
+ * Tablet:              768px   - 980px     => 48rem    - 61.25rem
+ * Desktop:             980px   - 1800px    => 61.25rem - 90rem
+ * Big Desktop:         1440px  - Infinite  => 90       - Infinite
  */
- @custom-media --respond-to-big-desktop (width >= 90em);
- @custom-media --less-than-big-desktop (width < 90em);
- @custom-media --respond-to-desktop (width >= 61.25em);
- @custom-media --less-than-desktop (width < 61.25em);
- @custom-media --respond-to-tablet (width >= 48em);
- @custom-media --less-than-tablet (width < 48em);
- // @custom-media --respond-to-phone (width < 37.5em); // This one shall not be used since default styles would be mobile per se
+ @custom-media --respond-to-big-desktop (width >= 90rem);
+ @custom-media --less-than-big-desktop (width < 90rem);
+ @custom-media --respond-to-desktop (width >= 61.25rem);
+ @custom-media --less-than-desktop (width < 61.25rem);
+ @custom-media --respond-to-tablet (width >= 48rem);
+ @custom-media --less-than-tablet (width < 48rem);
+ // @custom-media --respond-to-phone (width < 37.5rem); // This one shall not be used since default styles would be mobile per se
  
  @media (--less-than-tablet) {
      .hide-on-phone {

@@ -1,0 +1,11 @@
+.btn {
+  cursor: pointer;
+
+  &--light-blue {
+    background-color: #D2E1FF;
+    color: #3A79FF;
+    border-radius: .2rem;
+    padding: 1.3rem 1.5rem;
+  }
+
+}

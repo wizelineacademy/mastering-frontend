@@ -1,0 +1,148 @@
+.header {
+  --mobile-display: block;
+  --social-display: none;
+  --get-started-display: none;
+  --main-display: none;
+  --main-margin-right: 0;
+  --main-link-color: #697CA6;
+  --main-link-active-color: #5E81FE;
+  
+  @media (--respond-to-tablet) {
+    --mobile-display: none;
+    --social-display: none;
+    --main-display: block;
+    --get-started-display: block;
+  }
+
+  @media (--respond-to-desktop) {
+    --social-display: block;
+    --main-margin-right: auto;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 2rem;
+
+  ul {
+    list-style: none;
+  }
+
+  &__logo {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  &__mobile-btn {
+    display: var(--mobile-display);
+    width: 4.3rem;
+    height: 4.3rem;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &--main {
+      display: var(--main-display);
+      flex-grow: 2;
+      max-width: 50rem;
+      margin-right: var(--main-margin-right);
+    }
+    
+    &--social {
+      display: var(--social-display);
+      flex-grow: 1;
+      max-width: 16.2rem;
+      margin-right: 2rem;
+      margin-left: auto;
+    }
+    
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 0 auto;
+
+      &__item {
+        
+        a {
+          display: inline-block;
+        }
+      }
+    }
+
+    &--main &__list {
+
+      &__item {
+
+        a {
+          color: var(--main-link-color);
+
+          &:hover {
+            color: var(--main-link-active-color);
+          }
+        }
+
+        &--current {
+          a {
+            color: var(--main-link-active-color);
+          }
+        }
+      }
+    }
+
+    &--social &__list {
+
+      a {
+        width: 1.6rem;
+        height: 1.4rem;
+
+        svg {
+          fill: var(--light-gray-color);
+        }
+
+        &--facebook {
+          &:hover {
+            svg {
+              fill: var(--facebook-color);
+            }
+          }
+        }
+
+        &--twitter {
+          &:hover {
+            svg {
+              fill: var(--twitter-color);
+            }
+          }
+        }
+
+        &--telegram {
+          &:hover {
+            svg {
+              fill: var(--telegram-color);
+            }
+          }
+        }
+
+        &--medium {
+          &:hover {
+            svg {
+              fill: var(--medium-color);
+            }
+          }
+        }
+
+      }
+
+    }
+    
+  }
+
+  &__get-started {
+    display: var(--get-started-display);
+  }
+
+}

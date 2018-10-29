@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Roboto:300,400,500,700" rel="stylesheet">
+
 </head>
 <body>
   <!-- The SVG Sprite will be loaded here -->
@@ -12,82 +16,89 @@
 
   
   <header class="header">
-    <nav class="header__main-nav">
 
-      <div class="header__main-nav__left">
-        <div class="header__main-nav__logo">
-          <svg>
-            <use href="#logo"></use>
-          </svg>
-        </div>
+      <input type="checkbox" name="mobile-menu-trigger" id="menu-mobile-trigger" class="hidden">
 
-        <ul class="header__main-nav__items">
-          <li class="header__main-nav__items__item header__main-nav__items__item--active">
-            <a href="#" class="header__main-nav__items__item__link">
+      <a href="#" class="header__logo">
+        <svg>
+          <use href="#logo"></use>
+        </svg>
+      </a>
+
+      <button class="header__mobile-btn">
+        <label for="menu-mobile-trigger">
+          <svg><use href="#menu"></svg>
+        </label>
+      </button>
+
+      <nav class="header__nav header__nav--main">
+        <ul class="header__nav__list">
+          <li class="header__nav__list__item header__nav__list__item--current">
+            <a href="#" class="header__nav__list__item__link">
               <span>Home</span>
             </a>
           </li>
-          <li class="header__main-nav__items__item">
-            <a href="#" class="header__main-nav__items__item__link">
+          <li class="header__nav__list__item">
+            <a href="#blog" class="header__nav__list__item__link">
               <span>Blog</span>
             </a>
           </li>
-          <li class="header__main-nav__items__item">
-            <a href="#" class="header__main-nav__items__item__link">
+          <li class="header__nav__list__item">
+            <a href="#features" class="header__nav__list__item__link">
               <span>Features</span>
             </a>
           </li>
-          <li class="header__main-nav__items__item">
-            <a href="#" class="header__main-nav__items__item__link">
+          <li class="header__nav__list__item">
+            <a href="#pricing" class="header__nav__list__item__link">
               <span>Pricing</span>
             </a>
           </li>
-          <li class="header__main-nav__items__item">
-            <a href="#" class="header__main-nav__items__item__link">
+          <li class="header__nav__list__item">
+            <a href="#documentation" class="header__nav__list__item__link">
               <span>Documentation</span>
             </a>
           </li>
         </ul><!-- /.header__main-nav__items -->
-      </div><!-- /.header__main-nav__left -->
+      </nav><!-- /.header__main-nav__left -->
 
-      <div class="header__main-nav__right">
-        <ul class="header__main-nav__social">
-          <li class="header__main-nav__social__item header__main-nav__social__item--facebook">
-            <a href="#" class="header__main-nav__social__item__link">
+      <nav class="header__nav header__nav--social">
+        <ul class="header__nav__list">
+          <li class="header__nav__list__item header__nav__list__item--facebook">
+            <a href="#facebook" class="header__nav__list__item__link">
               <svg>
                 <use href="#facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="header__main-nav__social__item header__main-nav__social__item--telegram">
-            <a href="#" class="header__main-nav__social__item__link">
+          <li class="header__nav__list__item header__nav__list__item--telegram">
+            <a href="#telegram" class="header__nav__list__item__link">
               <svg>
                 <use href="#telegram"></use>
               </svg>
             </a>
           </li>
-          <li class="header__main-nav__social__item header__main-nav__social__item--twitter">
-            <a href="#" class="header__main-nav__social__item__link">
+          <li class="header__nav__list__item header__nav__list__item--twitter">
+            <a href="#twitter" class="header__nav__list__item__link">
               <svg>
                 <use href="#twitter"></use>
               </svg>
             </a>
           </li>
-          <li class="header__main-nav__social__item header__main-nav__social__item--medium">
-            <a href="#" class="header__main-nav__social__item__link">
+          <li class="header__nav__list__item header__nav__list__item--medium">
+            <a href="#medium" class="header__nav__list__item__link">
               <svg>
                 <use href="#medium"></use>
               </svg>
             </a>
           </li>
-        </ul><!-- /.header__main-nav__social -->
+        </ul><!-- /.header__nav__social -->
 
-        <a href="#" class="btn btn--light-blue">
-          <span>Get Started</span>
-        </a>
-      </div><!-- /.header__main-nav__right -->
+      </nav><!-- /.header__nav__right -->
       
-    </nav><!-- /.header__main-nav -->
+      <a href="#get-started" class="header__get-started btn btn--light-blue">
+        <span>Get started</span>
+      </a>
+      
   </header><!-- /.header -->
 
   <section class="jumbotron">
@@ -98,36 +109,37 @@
     <div class="jumbotron__content">
       <h1 class="jumbotron__content__title">Plan your life</h1>
       <h2 class="jumbotron__content__heading">Increase your <strong>productivity</strong></h2>
-      <p class="jumbotron__content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis explicabo nihil voluptatum itaque eius ratione illo eaque? Porro, dignissimos.</p>
+      <p class="jumbotron__content__description">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
       <button class="jumbotron__content__btn">
         <svg>
           <use href="#play-button"></use>
         </svg>
       </button>
     </div><!-- /.jumbotron__content -->
+
   </section><!-- /.jumbotron-->
 
   <section class="logo-wall">
     <div class="logo-wall__slides">
       
       <div class="logo-wall__slides__slide">
-        <img src="img/bitbucket.png" alt="Bitbucket">
+        <img src="img/customers/bitbucket.png" alt="Bitbucket">
       </div><!-- /.logo-wall__slides__slide -->
 
       <div class="logo-wall__slides__slide">
-        <img src="img/apple-watch.png" alt="Apple Watch">
+        <img src="img/customers/apple-watch.png" alt="Apple Watch">
       </div><!-- /.logo-wall__slides__slide -->
 
       <div class="logo-wall__slides__slide">
-        <img src="img/facebook.png" alt="Facebook">
+        <img src="img/customers/facebook.png" alt="Facebook">
       </div><!-- /.logo-wall__slides__slide -->
 
       <div class="logo-wall__slides__slide">
-        <img src="img/atlassian.png" alt="Atlassian">
+        <img src="img/customers/atlassian.png" alt="Atlassian">
       </div><!-- /.logo-wall__slides__slide -->
 
       <div class="logo-wall__slides__slide">
-        <img src="img/audi.png" alt="Audi">
+        <img src="img/customers/audi.png" alt="Audi">
       </div><!-- /.logo-wall__slides__slide -->
 
     </div><!-- /.logo-wall__slides -->
@@ -140,21 +152,22 @@
         <h1 class="plan-and-manage__content__title">Desktop and mobile app</h1>
         <h2 class="plan-and-manage__content__heading"><strong>Plan</strong> and <strong>manage</strong></h2>
         <p class="plan-and-manage__content__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut optio soluta quae aliquid accusantium quam possimus est autem provident minus?</p>
-        
-        <div class="button-group plan-and-manage__content__buttons">
-          <button class="btn">
-            <span>View video &caret;</span>
-          </button>
-          
-          <a href="#link-to-features" class="btn">
-            <span>See features</span>
-          </a>
-        </div><!-- /.plan-and-manage__content__buttons -->
       </div><!-- /.plan-and-manage__content -->
-
+      
       <div class="plan-and-manage__image">
         <img src="img/plan-manage.png" alt="Plan and Manage">
       </div><!-- /.plan-and-manage__image -->
+
+      <div class="button-group plan-and-manage__buttons">
+        <button class="btn button-group__btn plan-and-manage__buttons__btn">
+          <span>View video </span>
+          <span class="icon icon--play-video"></span>
+        </button>
+        
+        <a href="#link-to-features" class="btn button-group__btn plan-and-manage__buttons__btn">
+          <span>See features</span>
+        </a>
+      </div><!-- /.plan-and-manage__buttons -->
 
     </div><!-- /.plan-and-manage__inner -->
   </section><!-- .plan-and-manage -->

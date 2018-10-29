@@ -57,11 +57,11 @@ button {
   padding: rem-calc(18px) rem-calc(20px);
 
   &__logo {
-    width: rem-calc($header__logo-size);
-    height: rem-calc($header__logo-size);
-    margin-top: rem-calc(26px-18px);
     background-color: #5E81FE;
     border-radius: 50%;
+    height: rem-calc($header__logo-size);
+    margin-top: rem-calc(26px-18px);
+    width: rem-calc($header__logo-size);
   }
 
   &__nav {
@@ -97,18 +97,18 @@ button {
   }
 
   &__nav-link {
+    color: $nav-text-color;
+    display: inline-block;
     font-size: rem-calc(12px);
     margin: 0 rem-calc(20px);
-    display: inline-block;
-    color: $nav-text-color;
   }
 
   &__button {
     background-color: #D2E1FF;
-    font-family: 'Quicksand', sans-serif;
     color: #3A79FF;
-    padding: rem-calc(13px);
     display: none;
+    font-family: 'Quicksand', sans-serif;
+    padding: rem-calc(13px);
 
     @include tablet-breakpoint {
       display: block;
@@ -130,6 +130,10 @@ button {
 /* Hero */
 .hero {
   background-color: #F4F7FF;
+  background-image: url('/assets/images/hero.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 570px;
 }
 
@@ -148,6 +152,10 @@ button {
 /* Features */
 .features {
   background-color: #FFF;
+  background-image: url('/assets/images/clouds.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 885px;
 }
 
@@ -177,7 +185,11 @@ button {
 
 /* Get Started */
 .get-started {
-  background: linear-gradient(199.86deg, #6888FF 12.77%, #5E80FF 73.11%);
+  background-color: linear-gradient(199.86deg, #6888FF 12.77%, #5E80FF 73.11%);
+  background-image: url('/assets/images/blue-clouds.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 447px;
 }
 

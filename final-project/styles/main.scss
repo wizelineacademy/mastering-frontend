@@ -1,20 +1,39 @@
 
-/* Variables */
-
-$tablet-min-width: 768px;
-$desktop-min-width: 992px;
-
-
 /* Functions */
 
 @function rem-calc($size) {
   @return $size / 16px * 1rem;
 }
 
+
+/* Variables */
+
+$tablet-min-width: 768px;
+$landscape-min-width: 1024px;
+$desktop-min-width: 1440px;
+$font-size-2xs: rem-calc(10px);
+$font-size-xs: rem-calc(12px);
+$font-size-sm: rem-calc(14px);
+$font-size-md: rem-calc(16px);
+$font-size-lg: rem-calc(18px);
+$font-size-xl: rem-calc(24px);
+$font-size-2xl: rem-calc(36px);
+$font-size-3xl: rem-calc(48px);
+
+$color-title: #3D4F9F;
+$color-text: #8D96BD;
+$color-play: #5E81FF;
+
 /* Mixins */
 
 @mixin tablet-breakpoint {
   @media only screen and (min-width: rem-calc($tablet-min-width)) {
+    @content;
+  }
+}
+
+@mixin landscape-breakpoint {
+  @media only screen and (min-width: rem-calc($landscape-min-width)) {
     @content;
   }
 }
@@ -49,6 +68,51 @@ button {
 .section {
   display: flex;
   border-bottom: 1px solid #D8E3FE;
+
+  &__title {
+    color: $color-title;
+    font-family: 'Roboto', sans-serif;
+    font-size: $font-size-2xs;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+/* Text */
+.text {
+  color: $color-text;
+  font-family: 'Roboto', sans-serif;
+  line-height: rem-calc(29px);
+  font-size: rem-calc(15px);
+  letter-spacing: 0.03em;
+  padding: rem-calc(12px) 0;
+}
+.text-2xs {
+  font-size: $font-size-2xs;
+}
+.text-xs {
+  font-size: $font-size-xs;
+}
+.text-sm {
+  font-size: $font-size-sm;
+}
+.text-md {
+  font-size: $font-size-md;
+}
+.text-lg {
+  font-size: $font-size-lg;
+}
+.text-xl {
+  font-size: $font-size-xl;
+}
+.text-2xl {
+  font-size: $font-size-2xl;
+}
+.text-3xl {
+  font-size: $font-size-3xl;
 }
 
 @import 'header.scss';

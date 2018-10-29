@@ -2,6 +2,7 @@
 /* Variables */
 
 $nav-text-color: #697CA6;
+$header__logo_color: #5E81FE;
 $header__logo-size: 26px;
 
 /* Header*/
@@ -14,7 +15,7 @@ $header__logo-size: 26px;
   padding: rem-calc(18px) rem-calc(20px);
 
   &__logo {
-    background-color: #5E81FE;
+    background-color: $header__logo_color;
     border-radius: 50%;
     height: rem-calc($header__logo-size);
     margin-top: rem-calc(26px-18px);
@@ -41,7 +42,7 @@ $header__logo-size: 26px;
       }
     }
 
-    @include desktop-breakpoint {
+    @include landscape-breakpoint {
       &--social {
         display: block;
       }

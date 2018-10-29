@@ -1,8 +1,6 @@
 
 /* Variables */
 
-$nav-text-color: #697CA6;
-$header__logo-size: 26px;
 $tablet-min-width: 768px;
 $desktop-min-width: 992px;
 
@@ -42,81 +40,7 @@ button {
   border:none;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Header*/
-
-.header {
-  background-color: #FFF;
-  border-bottom: 1px solid #D8E3FE;
-  display: flex;
-  justify-content: space-between;
-  padding: rem-calc(18px) rem-calc(20px);
-
-  &__logo {
-    background-color: #5E81FE;
-    border-radius: 50%;
-    height: rem-calc($header__logo-size);
-    margin-top: rem-calc(26px-18px);
-    width: rem-calc($header__logo-size);
-  }
-
-  &__nav {
-    margin-top: rem-calc(32px-18px);
-    display: none;
-
-    &--mobile {
-      margin-top: rem-calc(10px);
-
-      @include tablet-breakpoint {
-        display: none;
-      }
-    }
-
-    @include tablet-breakpoint {
-      display: block;
-
-      &--social {
-        display: none;
-      }
-    }
-
-    @include desktop-breakpoint {
-      &--social {
-        display: block;
-      }
-    }
-  }
-
-  &__nav-list {
-    display: flex;
-    list-style: none;
-  }
-
-  &__nav-link {
-    color: $nav-text-color;
-    display: inline-block;
-    font-size: rem-calc(12px);
-    margin: 0 rem-calc(20px);
-  }
-
-  &__button {
-    background-color: #D2E1FF;
-    color: #3A79FF;
-    display: none;
-    font-family: 'Quicksand', sans-serif;
-    padding: rem-calc(13px);
-
-    @include tablet-breakpoint {
-      display: block;
-    }
-  }
-}
-
-/* Main */
+.wrapper,
 .main {
   display: flex;
   flex-direction: column;
@@ -127,81 +51,15 @@ button {
   border-bottom: 1px solid #D8E3FE;
 }
 
-/* Hero */
-.hero {
-  background-color: #F4F7FF;
-  background-image: url('/assets/images/hero.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 570px;
-}
-
-/* Customers */
-.customers {
-  background-color: #FFF;
-  min-height: 146px;
-}
-
-/* Plan and Manage */
-.plan-manage {
-  background-color: #F5F8FF;
-  min-height: 776px;
-}
-
-/* Features */
-.features {
-  background-color: #FFF;
-  background-image: url('/assets/images/clouds.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 885px;
-}
-
-/* Stats */
-.stats {
-  background: linear-gradient(208.93deg, #6888FF 12.77%, #5E80FF 73.11%);
-  min-height: 343px;
-}
-
-/* Blog */
-.blog {
-  background-color: #F5F8FF;
-  min-height: 865px;
-}
-
-/* Quotes */
-.quotes {
-  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
-  min-height: 480px;
-}
-
-/* FAQ */
-.faq {
-  background-color: #FFF;
-  min-height: 965px;
-}
-
-/* Get Started */
-.get-started {
-  background-color: linear-gradient(199.86deg, #6888FF 12.77%, #5E80FF 73.11%);
-  background-image: url('/assets/images/blue-clouds.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 447px;
-}
-
-/* News Letter */
-.news-letter {
-  background-color: #FCFDFF;
-  min-height: 332px;
-}
-
-/* Footer */
-.footer {
-  background-color: #FFF;
-  display: flex;
-  min-height: 287px;
-}
+@import 'header.scss';
+@import 'hero.scss';
+@import 'customers.scss';
+@import 'plan-manage.scss';
+@import 'features.scss';
+@import 'stats.scss';
+@import 'blog.scss';
+@import 'quotes.scss';
+@import 'faq.scss';
+@import 'get-started.scss';
+@import 'news-letter.scss';
+@import 'footer.scss';

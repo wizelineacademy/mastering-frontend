@@ -23,6 +23,9 @@ $font-size-3xl: rem-calc(48px);
 $color-title: #3D4F9F;
 $color-text: #8D96BD;
 $color-play: #5E81FF;
+$color-primary: #4C85FF;
+$color-complementary: #ADB4D2;
+$color-border-complementary: #D1D1E4;
 
 /* Mixins */
 
@@ -114,6 +117,47 @@ button {
 .text-3xl {
   font-size: $font-size-3xl;
 }
+
+/* Butons */
+.button {
+  align-items: center;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Quicksand', sans-serif;
+  font-size: rem-calc(13px);
+  font-weight: 500;
+  justify-content: center;
+  min-height: rem-calc(43px);
+  min-width: rem-calc(130px);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  > .fas {
+    font-size: rem-calc(7px);
+    padding-left: rem-calc(7px);
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
+    color: #FFF;
+  }
+
+  &--complementary {
+    background-color: transparent;
+    border: 1px solid $color-border-complementary;
+    color: $color-complementary;
+
+  }
+}
+
 
 @import 'header.scss';
 @import 'hero.scss';

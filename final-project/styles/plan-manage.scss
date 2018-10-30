@@ -1,5 +1,79 @@
 /* Plan and Manage */
 .plan-manage {
+  align-items: center;
   background-color: #F5F8FF;
+  display: flex;
+  justify-content: center;
   min-height: 776px;
+
+  &__content {
+    align-self: end;
+    margin-bottom: rem-calc(48px);
+    max-width: 413px;
+    grid-area: plan-manage-content;
+  }
+
+  &__title {
+    color: $color-title;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: $font-size-2xl;
+    padding: rem-calc(16px) 0;
+
+    &--bold {
+      font-weight: 500;
+    }
+  }
+
+  &__image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    grid-area: plan-manage-image;
+
+    > img {
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+
+      @include landscape-breakpoint {
+        margin-bottom: rem-calc(-160px);
+        max-height: none;
+        max-width: none;
+        width: 120%;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    grid-area: plan-manage-buttons;
+    justify-content: center;
+    max-height: rem-calc(43px);
+
+    @include tablet-breakpoint {
+      justify-content: flex-start;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto rem-calc(310px) auto;
+    grid-template-areas:
+      "plan-manage-content"
+      "plan-manage-image"
+      "plan-manage-buttons";
+    max-width: rem-calc(1120px);
+    padding: rem-calc(16px);
+
+    @include landscape-breakpoint {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "plan-manage-content plan-manage-image"
+        "plan-manage-buttons plan-manage-image";
+    }
+  }
 }

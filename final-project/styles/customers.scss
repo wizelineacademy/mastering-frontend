@@ -1,5 +1,22 @@
 /* Customers */
+$color-default: #D6DAE5;
+$color-active: #5982E7;
+
 .customers {
+  align-items: center;
   background-color: #FFF;
-  min-height: 146px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: rem-calc(146px);
+
+  &__image {
+    cursor: pointer;
+    height: 30px;
+    margin: rem-calc(38px);
+
+    &:hover {
+      filter: invert(0.5) sepia(0.58) saturate(5) brightness(0.9) hue-rotate(187deg);
+    }
+  }
 }

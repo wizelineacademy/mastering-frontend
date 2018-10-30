@@ -49,9 +49,11 @@
     display: inline-flex;
     font-size: $font-size-xs;
     margin: rem-calc(24px) auto;
+    opacity: 1;
     justify-content: center;
     width: rem-calc(52px);
     height: rem-calc(52px);
+    transition: opacity 0.2s ease;
 
     &:hover {
       opacity: 0.75;

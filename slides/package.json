@@ -12,6 +12,7 @@
     "dev-005": "mdx-deck ./005_js-closures/slides.mdx",
     "dev-006": "mdx-deck ./006_js_prototypes/slides.mdx",
     "dev-007": "mdx-deck ./007_js_async/slides.js",
+    "dev-008": "mdx-deck ./008_fe_debugging/slides.js",
     "dev-009": "mdx-deck ./009_js-dom/slides.js",
     "build": "mdx-deck build --no-html ./src/example-deck.mdx",
     "build-001": "mdx-deck build --no-html ./001_semantic-html/slides.mdx",
@@ -21,6 +22,7 @@
     "build-005": "mdx-deck build --no-html ./005_js-closures/slides.mdx",
     "build-006": "mdx-deck build --no-html ./006_js_prototypes/slides.mdx",
     "build-007": "mdx-deck build --no-html ./007_js_async/slides.js",
+    "build-008": "mdx-deck build --no-html ./008_fe_debugging/slides.js",
     "build-009": "mdx-deck build --no-html ./009_js-dom/slides.js"
   },
   "devDependencies": {

@@ -43,14 +43,16 @@ export default WLayout1
 
 ---
 
+![kheber](./images/kheber.png)
+
+---
+
 export default WLayout1
 
 # Event Loop.
 ### The event loop is the way the JS engine handles the execution of all the statements that need to go into the message queue. Don't worry, I'll explain this later.
 
 ---
-
-export default WLayout1
 
 ## The runtime is composed by:
 - The call stack.
@@ -115,9 +117,9 @@ export default WLayout1
 
 ---
 
-export default WLayout1
-
-## They are not part of the JS spec. They are a part of the runtime that interacts with the broswer's hosting environment doing OS-level operations. Once done, they return to the JS runtime with a result and queue the callback with the result.
+- Not part of the JS spec.
+- They interact with the broswer's hosting environment.
+- Once done, they return to the JS runtime with a result and queue the callback with the result.
 
 ---
 
@@ -159,7 +161,7 @@ export default WLayout1
 
 export default WLayout1
 
-### NO. Callbacks is just a way to indicate what to do whenever the real async operation is complete. Callbacks are nothing but a function passed as a parameter thanks to the ability to have higher order functions.
+### NO. Callbacks are just a way to indicate what to do whenever the real async operation is complete, nothing but a function passed as a parameter thanks to the ability to have higher order functions.
 
 ---
 
@@ -176,7 +178,7 @@ export default WLayout1
 
 export default WLayout1
 
-### JS engine executes your code in chunks, but all chunks are run to completion (unless interrupted).
+### The JS engine executes your code in chunks, but all chunks are run to completion (unless interrupted).
 ### Can we use a callback to solve the previous problem? Let's see...
 
 ---
@@ -200,6 +202,33 @@ export default WLayout1
 export default WLayout1
 
 ### BE AWARE that it's up to you what to do with the callback. A Callback can block the main thread.
+
+---
+
+export default WLayout1
+
+## Exercise time!
+### Update the `img` with your Github's avatar using jQuery's `$.get(endpoint, callback)`
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/VERJqG"/>
+
+---
+
+# Error handling
+
+- Silently ignored
+- As part of the framework
+- Error-first callbacks.
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/PygXrz"/>
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/rqbPQE"/>
 
 ---
 
@@ -227,7 +256,7 @@ export default WLayout1
 
 export default WLayout1
 
-### Is that all there is to the callback hell? It's a big part, but not all of it.
+### Is that all there is to the callback hell?
 
 ---
 
@@ -249,8 +278,6 @@ export default WLayout1
 
 ---
 
-export default WLayout1
-
 ## Quick Recap
 
 - Event loop - how async stuff is queued.
@@ -271,6 +298,226 @@ export default WLayout1
 
 ---
 
+export default WLayout1
+
+### The `Promise` object represents the eventual completion (or failure) of an async operation, and its resulting value. Imagine a scenario where you order a burger.
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/JmVPJd"/>
+
+---
+
+export default WLayout1
+
+### Purchase tracking scenario
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/KGYYjX"/>
+
+---
+
+export default WLayout1
+
+## Error handling with `Promise`s
+
+---
+
+### When something goes wrong, you reject the promise. And to handle that, you either:
+
+- Use the error callback.
+- `catch` the rejection.
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/NOmVPg"/>
+
+Error callback
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/gByJrw"/>
+
+`catch` the rejection
+
+---
+
+![promise](./images/promise.png)
+
+---
+
+# `Promise` flow
+
+- Object is created using `new Promise( <executor> )`.
+- The resulting object's insternal props: `state` and `result`.
+
+---
+
+- The `executor` starts running automatically.
+- When the `executor is done`, the `state` and `result` change accordingly.
+
+---
+
+export default WLayout1
+
+### Are Promises async on their own?
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/dgEbbx"/>
+
+---
+
+export default WLayout1
+
+## Quick quiz...
+
+---
+
+<Codepen url = "https://codepen.io/orverduzco/pen/QZRyzp"/>
+
+---
+
+export default WLayout1
+
+## Once the promise is resolved, it becomes immutable.
+
+---
+
+# Exercise time!
+
+- Order a burger
+- When the burger is ready, eat it.
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/yRWexo"/>
+
+---
+
 <WSlide3
-  title="Q&A"
+  title="Promises hell... or is it?"
 />
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/GYaoVp"/>
+
+---
+
+![promiseschain](./images/promiseschain.jpg)
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/QZRNjM"/>
+
+---
+
+## What happens with promises chaining?
+
+- A call to `promise.then` returns a `Promise` on its own.
+- Even if we returned a plain value that is not a `Promise`, it will still be a `Promise`.
+
+---
+
+## Exercise time! Purchase system again
+
+- Get a television price
+- Charge credit card
+- Get a computer price
+- Charge credit card
+- Get a smartphone price
+- Charge credit card
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/vVwGpK"/>
+
+---
+
+<WSlide3
+  title="Promise API"
+/>
+
+---
+
+- `Promise.resolve`
+- `Promise.reject`
+- `Promise.all`
+- `Promise.race`
+
+---
+
+export default WLayout1
+
+## `Promise.resolve`
+
+### Returns a `Promise` that is resolved with the specified value.
+### Example: `Promise.resolve(3)`
+
+---
+
+## `Promise.reject`
+
+### Returns a `Promise` that is rejected with the specified value.
+### Example: `Promise.reject('error')`
+
+---
+
+## `Promise.all`
+### Takes an array of promises, resolves them all, and returns an array with the resolved values.
+### The order is preserved.
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/ePazvm"/>
+
+---
+
+## `Promise.race`
+### Creates a race between an array or promises and, whichever is resolved first is used for the result.
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/qJGNVr"/>
+
+---
+
+<WSlide3
+  title="async/await"
+/>
+
+---
+
+export default WLayout1
+
+## More syntactic sugar
+### It's a special syntax to handle promises in a more comfortable and readable way.
+### Let's see what it looks like...
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/EdzyRN"/>
+
+---
+
+export default WLayout1
+
+## Error handling with `async/await`
+### Simple: wrap in a `try-catch` statement. Resolved promises will be handled by `try`, and rejected ones by `catch`.
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/aRrZxw"/>
+
+---
+
+export default WLayout1
+
+## Exercise time!
+### Transform the purchase system to `async/await`
+
+---
+
+<Codepen url="https://codepen.io/orverduzco/pen/aRrZey"/>

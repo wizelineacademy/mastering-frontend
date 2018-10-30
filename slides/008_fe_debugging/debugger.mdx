@@ -1,0 +1,45 @@
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Notes, Appear } from 'mdx-deck'
+
+import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
+import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
+
+import Counter from '../src/components/Counter'
+import Codepen from '../src/components/Codepen'
+
+
+<WSlideMain
+  subtitle=""
+  title="Debugger and breakpoints & more"
+/>
+
+---
+# Debugger
+
+'debugger;' is a quick and dirty debugging tool.
+ Once it's in your code, Chrome will automatically stop there when executing. 
+ You can even wrap it in conditionals, so it only runs when you need it.
+---
+
+# Breakpoints
+
+<ul>
+  <Appear>
+    <li>Normal JS</li>
+    <li>DOM Breakpoints</li>
+    <li>XHR/Fetch Breakpoints</li>
+    <li>Event Listeners Breakpoints</li>
+  </Appear>
+</ul>
+<Notes>
+Dom -> when something changes a Dom node/element
+xhr Fetch -> when our code tries to fetch something via xhr request. usefull when debugging API calls
+</Notes>
+---
+
+# example
+
+<Notes>
+lets open the adding example
+</Notes>
+

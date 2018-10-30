@@ -1,0 +1,25 @@
+<html>
+<body>
+
+  <div class="element"></div>
+  
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+  
+  <script>
+  
+    var foo = function( element, undefElement ){		
+      element.get(0).length;
+      undefElement.get(0).length;
+    };
+  
+    $('body').click( function() {
+      debugger; 
+      var element = $('.element');
+      var undefElement = $('.undefined');
+      foo( element, undefElement );
+    });
+  
+  </script>
+  
+</body>
+</html>

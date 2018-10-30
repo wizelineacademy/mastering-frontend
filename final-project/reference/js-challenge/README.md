@@ -4,7 +4,7 @@ The objective of this challenge is to make interactive the blocg section of the 
 
 ## Constrains
 - You should have clean and working code that can be reviewed in a PR without asking to much questions
-- Just use Vanilla JS, this means no jquery, react, vue, etc
+- Just use [Vanilla JS](http://vanilla-js.com/), this means no jquery, react, vue, etc
 
 ## Instructions
 - Set a spinner to be shown when loading content
@@ -20,7 +20,7 @@ The objective of this challenge is to make interactive the blocg section of the 
 ## Extra points
 Do this if you want more challenges
 - Remove the blog section entirely when JS is turned off
-- Animate the carousel
+- Animate the carousel (you can use animation libraries or CSS transitions)
 - Make it work in all devices (touch enabled)
 - Create the interaction for the FAQ section
 - Animate the logos section

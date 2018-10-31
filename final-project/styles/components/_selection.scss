@@ -1,0 +1,22 @@
+.selection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5rem;
+
+    &__item {
+        background-color: $grey-primary;
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &--one {
+            background-color: $secondary-color;   
+        }
+    }
+}

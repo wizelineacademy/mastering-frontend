@@ -1,0 +1,172 @@
+.btn {
+    &:link, &:visited {
+        text-decoration: none;
+    }
+
+    &__one {
+        // width: 14.916rem;
+        // height: 5.2rem;
+        padding: 1.5rem 4.2rem 1.5rem 2.8rem;
+
+        color: $white-primary;
+        background-color: #4C85FF;
+        box-shadow: 0px 5px 1.5rem rgba(188, 199, 255, 0.75);
+        border-radius: 2px;
+
+
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        font-size: 1.7rem;
+        position: relative;
+        
+
+        .polygon-btn {
+            width: 1rem;
+            height: 1.1rem;
+            position: absolute;
+            top: 50%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            margin-left: .2rem;
+            background-color: $white-primary;
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+        }
+    }
+
+    &__two {
+        padding: 1.5rem 2.5rem 1.5rem 2.3rem;
+
+        border: 1px solid #D1D1E4;
+        box-sizing: border-box;
+        border-radius: 2px;
+        color: #ADB4D2;
+        background-color: transparent;
+
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        font-size: 1.7rem;
+    }
+
+    &__three {
+        padding: 1.3rem 1.6rem 1.3rem 1.6rem;
+
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: #D43F3F;
+        background-color: #FFD7D7;
+        border-radius: 2px;
+    }
+
+    &__four {
+        padding: 1.3rem 1.6rem 1.3rem 1.6rem;
+
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        color: #3A79FF;
+        background-color: #D2E1FF;
+        border-radius: 2px;
+    }
+
+    &__five {
+        padding: 1rem 12rem;
+
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 1.3rem;
+        color: #3A79FF;
+        background: #D2E1FF;
+        border-radius: 2px;
+    }
+
+    &__six {
+        padding: 1.3rem 1.7rem;
+
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 1.3rem;
+
+        color: #565F82;
+        
+        background: #FFFFFF;
+        box-shadow: 0px 5px 15px #6480E8;
+        border-radius: 2px;
+    }
+
+    &__seven {
+        padding: 1.3rem .8rem;
+
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 1.3rem;
+
+        color: #C7D3FF;
+        
+        background: transparent;
+        border: 1px solid #A0B4FF;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+
+    &__eight {
+        padding: 2.2rem 9.4rem;
+
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        font-size: 13px;
+        text-align: center;
+
+        color: #FFFFFF;
+
+        background: #4D6CE1;
+        box-shadow: 0px .5rem 1.5rem rgba(116, 104, 255, 0.2);
+        border-radius: 5px;
+    }
+
+    &__nine {
+        padding: 1.2rem 1.6rem;
+
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        font-size: 13px;
+        text-align: center;
+
+        color: #3A79FF;
+
+        background: #D2E1FF;
+        border-radius: 2px;
+    }
+
+    &__ten {
+        padding: 1.2rem 1.5rem;
+        
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 13px;
+        text-align: center;
+
+        color: #7382A3;
+
+        background: #E8ECF4;
+        border-radius: 2px;
+    }
+}

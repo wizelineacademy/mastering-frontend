@@ -1,0 +1,50 @@
+.section-four {
+    height: 88.5rem;
+    background-color: $white-primary;
+
+    &__title {
+        padding-top: 7.4rem;
+        text-align: center;
+    }
+
+    &__btns {
+        text-align: center;
+
+        .or {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.9rem;
+            font-size: 1.1rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: #ADB3CB;
+            letter-spacing: 1px;
+            position: relative;
+            width: calc(16 * 3)px;
+            margin: 0 2rem;
+
+            &::before {
+                content: "";
+                border-bottom: 1px solid #DAE4FE;
+                width: 1.6rem;
+                position: absolute;
+                top: 50%;
+                left: -2rem;
+                clear: both;
+                display: table;
+            }
+
+            &::after {
+                content: "";
+                border-bottom: 1px solid #DAE4FE;
+                width: 1.6rem;
+                position: absolute;
+                top: 50%;
+                left: 2rem;
+                clear: both;
+                display: table;
+            }
+        }
+    }
+}

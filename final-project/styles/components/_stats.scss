@@ -1,0 +1,87 @@
+.stats {
+    &-percentage {
+        background: linear-gradient(208.93deg, #6888FF 12.77%, #5E80FF 73.11%);
+        height: 34.2rem;
+        position: relative;
+
+        &__img {
+            width: 6.5rem;
+            position: absolute;
+            right: 6rem;
+            top: 6.6rem;
+        }
+
+        &__num {
+            font-family: Quicksand;
+            font-style: normal;
+            font-weight: 100;
+            line-height: 8.3rem;
+            font-size: 4.8rem;
+            text-align: right;
+            letter-spacing: 0.03em;
+            color: #FFFFFF;
+            position: absolute;
+            right: 6rem;
+            top: 15.6rem;
+        }
+
+        &__text {
+            position: absolute;
+            right: 6rem;
+            top: 23.1rem;
+            font-family: Quicksand;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 23px;
+            font-size: 18px;
+            text-align: right;
+            letter-spacing: 0.03em;
+            text-align: right;
+            color: #FFFFFF;
+            width: 26rem;
+        }
+    }
+
+    &-num {
+        background: linear-gradient(130.53deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+        height: 34.2rem;
+        position: relative;
+
+        &__img {
+            width: 6.5rem;
+            position: absolute;
+            left: 6rem;
+            top: 6.6rem;
+        }
+
+        &__num {
+            font-family: Quicksand;
+            font-style: normal;
+            font-weight: 100;
+            line-height: 8.3rem;
+            font-size: 4.8rem;
+            text-align: right;
+            letter-spacing: 0.03em;
+            color: #5E80FF;
+            position: absolute;
+            left: 6rem;
+            top: 15.6rem;
+        }
+
+        &__text {
+            position: absolute;
+            left: 6rem;
+            top: 23.1rem;
+            font-family: Quicksand;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 23px;
+            font-size: 18px;
+            text-align: right;
+            letter-spacing: 0.03em;
+            text-align: left;
+            color: #5E80FF;
+            width: 26rem;
+        }
+    }
+}

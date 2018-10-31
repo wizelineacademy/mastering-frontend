@@ -1,13 +1,28 @@
-// This should be imported by the main.js file
+@import './base/base';
 
-// test for scss variables
-$primary-color: #2a3fbb;
+@import './components/header';
+@import './components/play-btn';
+@import './components/customers';
+@import './components/selection';
+@import './components/buttons';
+@import './components/features';
+@import './components/stats';
+@import './components/blog';
+@import './components/footer';
+@import './components/logo';
+@import './components/copy-right';
+@import './components/faq';
 
-* {
-  padding: 0;
-  margin: 0;
-}
+@import './typography/header';
 
-h1 {
-  color: $primary-color;
-}
+@import './layouts/section-one';
+@import './layouts/section-two';
+@import './layouts/section-three';
+@import './layouts/section-four';
+@import './layouts/section-five';
+@import './layouts/section-six';
+@import './layouts/section-seven';
+@import './layouts/section-eight';
+@import './layouts/section-nine';
+
+@import './utilities/margin'

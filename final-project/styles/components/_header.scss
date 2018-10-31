@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    align-items: center;
+    justify-content: space-between;
+    height: 8rem;
+    background-color: $white-primary;
+    padding: 0 2rem;
+
+    &__nav {
+        font-size: 3rem;
+    }
+}

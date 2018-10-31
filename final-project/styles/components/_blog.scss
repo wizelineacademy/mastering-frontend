@@ -1,0 +1,19 @@
+.blog {
+
+    &__btn {
+        width: 26.1rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &__img {
+        height: 22rem;
+        box-shadow: 0px 1.5rem 10rem #E5EBF8;
+        border-radius: .5rem;
+    }
+
+    &__selection {
+        margin-top: 3rem;
+    }
+}

@@ -1,0 +1,13 @@
+.section-two {
+    height: 22.6rem;
+    width: 100%;
+    background-color: $white-primary;
+    position: relative;
+
+    &__customers {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

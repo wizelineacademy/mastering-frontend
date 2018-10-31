@@ -1,0 +1,31 @@
+.section-three {
+    height: 80rem;
+    width: 100%;
+    background-color: $secondary-color-2;
+    position: relative;
+
+    &__text {
+        margin-left: 1.7rem;
+        padding-top: 5rem;
+    }
+
+    &__plan {
+        margin-top: 4.5rem;
+        position: absolute;
+        left: 45%;
+        transform: translateX(-50%);
+
+
+        &--img {
+            width: 36.6rem;
+            box-shadow: 0px 100px 150px #F2F6FF;
+        }
+    }
+
+    &__btns {
+        margin-left: 3.3rem;
+        margin-bottom: 3.3rem;
+        position: absolute;
+        bottom: 3rem;
+    }
+}

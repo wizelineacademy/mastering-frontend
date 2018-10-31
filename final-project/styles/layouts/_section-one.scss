@@ -1,0 +1,12 @@
+.section-one {
+    height: 57rem;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-image: url('/reference/assets/hero.png');
+
+    &__header {
+        padding-top: 10rem; 
+        text-align: center;
+    }
+}

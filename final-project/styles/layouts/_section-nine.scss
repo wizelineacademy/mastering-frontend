@@ -1,0 +1,30 @@
+.section-nine {
+    background-color: #FCFDFF;
+    height: 30rem;
+    padding: 5rem 1rem 7rem;
+    border-bottom: 1px solid #D8E3FE;
+
+    &__form {
+        margin-top: 4.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+
+        &-email {
+            background: #EFEFF7;
+            border-radius: 5px;
+            padding: 2.3rem 2.1rem;
+            border: none;
+            margin-bottom: 2.4rem;
+
+            &::-webkit-input-placeholder {
+                font-family: Quicksand;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                font-size: 1.3rem;
+                color: #7A85AD;
+            }
+        }
+    }
+}

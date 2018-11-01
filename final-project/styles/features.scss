@@ -49,10 +49,18 @@ $color-list-text: #ADB3CB;
       align-items: center;
       display: flex;
       flex-direction: column;
-      margin: rem-calc(20px);
+      margin: rem-calc(20px) 0;
       min-height: rem-calc(254px);
       text-align: center;
-      width: rem-calc(140px);
+      width: 50%;
+
+      @include tablet-breakpoint {
+        width: rem-calc(140px);
+      }
+
+      @include landscape-breakpoint {
+        margin: rem-calc(20px);
+      }
 
       &--separator {
         border-bottom: 1px solid #DAE4FE;
@@ -90,6 +98,7 @@ $color-list-text: #ADB3CB;
       font-size: rem-calc(11px);
       font-weight: 600;
       line-height: rem-calc(19px);
+      max-width: rem-calc(140px);
     }
   }
 

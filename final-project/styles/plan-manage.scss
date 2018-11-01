@@ -15,7 +15,7 @@
 
   &__title {
     color: $color-title;
-    font-family: 'Quicksand', sans-serif;
+    font-family: $font-primary;
     font-weight: 300;
     font-size: $font-size-2xl;
     padding: rem-calc(16px) 0;

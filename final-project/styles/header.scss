@@ -65,7 +65,7 @@ $header__logo-size: 26px;
     background-color: #D2E1FF;
     color: #3A79FF;
     display: none;
-    font-family: 'Quicksand', sans-serif;
+    font-family: $font-primary;
     padding: rem-calc(13px);
 
     @include tablet-breakpoint {

@@ -11,6 +11,7 @@
 $tablet-min-width: 768px;
 $landscape-min-width: 1024px;
 $desktop-min-width: 1440px;
+
 $font-size-2xs: rem-calc(10px);
 $font-size-xs: rem-calc(12px);
 $font-size-sm: rem-calc(14px);
@@ -20,12 +21,22 @@ $font-size-xl: rem-calc(24px);
 $font-size-2xl: rem-calc(36px);
 $font-size-3xl: rem-calc(48px);
 
+$font-primary: 'Quicksand', sans-serif;
+$font-secondary: 'Roboto', sans-serif;
+$font-complementary: 'Open Sans', sans-serif;
+
 $color-title: #3D4F9F;
 $color-text: #8D96BD;
 $color-play: #5E81FF;
 $color-primary: #4C85FF;
+$color-primary-light: #D2E1FF;
+$color-primary-dark: #3A79FF;
 $color-complementary: #ADB4D2;
 $color-border-complementary: #D1D1E4;
+$color-secondary-light: #FFD7D7;
+$color-secondary-dark: #D43F3F;
+$color-section: #D8E3FE;
+$color-separator: #DAE4FE;
 
 /* Mixins */
 
@@ -55,7 +66,7 @@ $color-border-complementary: #D1D1E4;
 }
 
 html {
-  font-family: 'Quicksand', sans-serif;
+  font-family: $font-primary;
 }
 
 button {
@@ -70,11 +81,12 @@ button {
 
 .section {
   display: flex;
-  border-bottom: 1px solid #D8E3FE;
+  border-top: 0;
+  border-bottom: 1px solid $color-section;
 
   &__title {
     color: $color-title;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-secondary;
     font-size: $font-size-2xs;
     font-style: normal;
     font-weight: 500;
@@ -87,35 +99,11 @@ button {
 /* Text */
 .text {
   color: $color-text;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-secondary;
   line-height: rem-calc(29px);
   font-size: rem-calc(15px);
   letter-spacing: 0.03em;
   padding: rem-calc(12px) 0;
-}
-.text-2xs {
-  font-size: $font-size-2xs;
-}
-.text-xs {
-  font-size: $font-size-xs;
-}
-.text-sm {
-  font-size: $font-size-sm;
-}
-.text-md {
-  font-size: $font-size-md;
-}
-.text-lg {
-  font-size: $font-size-lg;
-}
-.text-xl {
-  font-size: $font-size-xl;
-}
-.text-2xl {
-  font-size: $font-size-2xl;
-}
-.text-3xl {
-  font-size: $font-size-3xl;
 }
 
 /* Butons */
@@ -125,7 +113,7 @@ button {
   box-sizing: border-box;
   cursor: pointer;
   display: inline-flex;
-  font-family: 'Quicksand', sans-serif;
+  font-family: $font-primary;
   font-size: rem-calc(13px);
   font-weight: 500;
   justify-content: center;
@@ -154,7 +142,28 @@ button {
     background-color: transparent;
     border: 1px solid $color-border-complementary;
     color: $color-complementary;
+  }
 
+  &--primary-light {
+    background-color: $color-primary-light;
+    border: 1px solid transparent;
+    color: $color-primary-dark;
+  }
+
+  &--secondary-light {
+    background-color: $color-secondary-light;
+    border: 1px solid transparent;
+    color: $color-secondary-dark;
+  }
+}
+
+.separator {
+  background-color: $color-separator;
+  border: 0;
+  height: 1px;
+
+  &--sm {
+    width: rem-calc(15px);
   }
 }
 

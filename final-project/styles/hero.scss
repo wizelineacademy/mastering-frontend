@@ -21,7 +21,7 @@
 
   &__title {
     color: $color-title;
-    font-family: 'Quicksand', sans-serif;
+    font-family: $font-primary;
     font-weight: 300;
     font-size: $font-size-3xl;
     padding: rem-calc(16px) rem-calc(64px);

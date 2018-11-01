@@ -6,4 +6,45 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 447px;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: rem-calc(72px);
+    text-align: center;
+    width: 100%;
+
+    @include landscape-breakpoint {
+      padding-top: rem-calc(91px);
+    }
+  }
+
+  .section__title {
+    color: $color-white;
+  }
+
+  &__title {
+    color: $color-white;
+    font-family: $font-primary;
+    font-weight: 300;
+    font-size: $font-size-3xl;
+    padding: rem-calc(16px) rem-calc(28px);
+
+    &--bold {
+      font-weight: 500;
+    }
+  }
+
+  .text {
+    color: $color-white;
+    max-width: rem-calc(712px);
+    padding: rem-calc(16px);
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: rem-calc(28px);
+    max-height: rem-calc(43px);
+  }
 }

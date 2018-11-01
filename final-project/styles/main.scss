@@ -31,12 +31,18 @@ $color-play: #5E81FF;
 $color-primary: #4C85FF;
 $color-primary-light: #D2E1FF;
 $color-primary-dark: #3A79FF;
+$color-primary-inverse: #565F82;
 $color-complementary: #ADB4D2;
+$color-complementary-inverse: #C7D3FF;
 $color-border-complementary: #D1D1E4;
+$color-border-complementary-inverse: #A0B4FF;
 $color-secondary-light: #FFD7D7;
 $color-secondary-dark: #D43F3F;
 $color-section: #D8E3FE;
 $color-separator: #DAE4FE;
+$color-shadow: rgba(188, 199, 255, 0.75);
+$color-shadow-inverse: #6480E8;
+$color-white: #FFF;
 
 /* Mixins */
 
@@ -102,8 +108,10 @@ button {
   font-family: $font-secondary;
   line-height: rem-calc(29px);
   font-size: rem-calc(15px);
+  font-weight: 400;
   letter-spacing: 0.03em;
   padding: rem-calc(12px) 0;
+  letter-spacing: 0.03em;
 }
 
 /* Butons */
@@ -119,6 +127,7 @@ button {
   justify-content: center;
   min-height: rem-calc(43px);
   min-width: rem-calc(130px);
+  padding: 0 rem-calc(12px);
   opacity: 1;
   transition: opacity 0.3s ease;
 
@@ -134,14 +143,27 @@ button {
   &--primary {
     background-color: $color-primary;
     border: 1px solid transparent;
-    box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
-    color: #FFF;
+    box-shadow: 0px 5px 15px $color-shadow;
+    color: $color-white;
+  }
+
+  &--primary-inverse {
+    background-color: $color-white;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 15px $color-shadow-inverse;
+    color: $color-primary-inverse;
   }
 
   &--complementary {
     background-color: transparent;
     border: 1px solid $color-border-complementary;
     color: $color-complementary;
+  }
+
+  &--complementary-inverse {
+    background-color: transparent;
+    border: 1px solid $color-border-complementary-inverse;
+    color: $color-complementary-inverse;
   }
 
   &--primary-light {

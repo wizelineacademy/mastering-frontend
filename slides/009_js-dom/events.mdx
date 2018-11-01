@@ -26,7 +26,52 @@ import Codepen from '../src/components/Codepen'
 ## Let's replace `onclick`
 
 ---
-### Event bubbling
+## Recap
+- element.addEventListener('event', callback)
+- element.removeEventListener('event', callback)
+---
+
+# Excercise
+<Codepen url="https://codepen.io/ederdiaz/pen/GwKKZL" />
+
+## Events and styles
+
+---
+
+## Event propagation
+<Appear>
+  <h3>Bubbling</h3>
+  <h3>Capturing</h3>
+</Appear>
+
+---
+
+![](./images/bubbles.png)
+
+---
+
+<Codepen url="https://codepen.io/ederdiaz/pen/rQBBov" />
+
+---
+
+# Event Delegation
+<Appear>
+  <h3>Let the parent decide!</h3>
+</Appear>
+
+---
+
+<Codepen url="https://codepen.io/ederdiaz/pen/dQbyNP"/>
+
+---
+
+### In summary
+<Appear>
+  <h3>Use events instead of properties like <code>onclick</code></h3>
+  <h3>Use event delegation when dealing with dynamic elements</h3>
+  <h3>Be careful with propagation!</h3>
+</Appear>
+
 ---
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">Events list</a>

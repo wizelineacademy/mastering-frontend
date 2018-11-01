@@ -1,0 +1,49 @@
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Notes, Appear } from 'mdx-deck'
+
+import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
+import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
+
+import Counter from '../src/components/Counter'
+import Codepen from '../src/components/Codepen'
+
+
+<WSlide3
+  title="Good Practices"
+/>
+<Notes>
+  So probably you have notices that here in Wizeline
+  we are really into
+</Notes>
+---
+
+![](./images/diversity.jpg)
+<Notes>
+  Diversity!
+
+</Notes>
+
+---
+![](./images/diversity2.png)
+<Notes>
+  We support each other, and even though we don't agree with
+  some ideologies we are tolerant.
+  But there's something that we should really not tolerate
+</Notes>
+---
+![](./images/zero-tolerance.jpg)
+<Notes>
+  And that's this
+</Notes>
+---
+<CodeSurfer
+  title=":eyesbleed:"
+  code={require("!raw-loader!./snippets/ugly-code.txt")}
+  lang="js"
+  showNumbers={false}
+  dark={false}
+/>
+
+<Notes>
+  Ugly code! How many things are wrong here?
+</Notes>

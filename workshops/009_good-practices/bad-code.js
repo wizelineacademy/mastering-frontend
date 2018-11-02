@@ -19,7 +19,7 @@ locations.forEach(l => {
 Scenario 2
 ***********************************/
 
-setTimeout(reminder, 10800);
+setTimeout(reminder, 3 * 60 * 60 * 1000);
 
 /***********************************
 Scenario 3

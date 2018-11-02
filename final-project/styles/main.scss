@@ -4,10 +4,113 @@
 $primary-color: #2a3fbb;
 
 * {
-  padding: 0;
-  margin: 0;
+padding: 0;
+margin: 0;
 }
 
 h1 {
   color: $primary-color;
+}
+@function rem-calc($size) {
+  @return $size / 16px * 1rem;
+}
+
+$nav-text-color: #697CA6;
+$header__logo-size: 26px;
+
+@mixin tablet-breakpoint {
+  @media only screen and (min-width: rem-calc(768px)) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint {
+  @media only screen and (min-width: rem-calc(992px)) {
+    @content;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button { border:none; } 
+
+  .header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Quicksand', sans-serif;
+  padding: rem-calc(18px) rem-calc(20px);
+
+  &__logo {
+    width: rem-calc($header__logo-size);
+    height: rem-calc($header__logo-size);
+    margin-top: rem-calc(26px-18px);
+    background-color: #5E81FE;
+    border-radius: 50%;
+  }
+
+  &__nav {
+    margin-top: rem-calc(32px-18px);
+    display: none;
+    
+    &--mobile {
+      margin-top: rem-calc(10px);
+      
+      @include tablet-breakpoint {
+        display: none;
+      }
+    }
+    
+    @include tablet-breakpoint {
+      display: block;
+      
+      &--social {
+        display: none;
+      }
+    }
+    
+    @include desktop-breakpoint {
+      &--social {
+        display: block;
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__nav-link {
+    font-size: rem-calc(12px);
+    margin: 0 rem-calc(20px);
+    display: inline-block;
+    color: $nav-text-color;
+  }
+
+  &__button {
+    background-color: #D2E1FF;
+    font-family: 'Quicksand', sans-serif;
+    color: #3A79FF;
+    padding: rem-calc(13px);
+    display: none;
+    
+    @include tablet-breakpoint {
+      display: block;
+    }
+  }
+}
+
+.main {
+  border-top: #D8E3FE solid 1px;
+  max-width: 320px;
+  margin:0 auto;
+  @include tablet-breakpoint {
+    max-width: 768px;
+  }
+  @include desktop-breakpoint {
+    max-width: 1024px;
+  }
 }

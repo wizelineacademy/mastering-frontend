@@ -27,6 +27,8 @@ $font-complementary: 'Open Sans', sans-serif;
 
 $color-title: #3D4F9F;
 $color-text: #8D96BD;
+$color-input-background: #EFEFF7;
+$color-input-text: #7A85AD;
 $color-play: #5E81FF;
 $color-primary: #4C85FF;
 $color-primary-light: #D2E1FF;
@@ -176,6 +178,23 @@ button {
     background-color: $color-secondary-light;
     border: 1px solid transparent;
     color: $color-secondary-dark;
+  }
+}
+
+/* Inputs */
+.input-field {
+  background-color: $color-input-background;
+  border: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: $color-input-text;
+  font-family: $font-primary;
+  font-size: rem-calc(13px);
+  font-weight: 600;
+  padding: rem-calc(21px);
+
+  &::placeholder {
+    color: $color-input-text;
   }
 }
 

@@ -2,7 +2,7 @@
 .stats {
   display: flex;
   flex-wrap: wrap;
-  min-height: 343px;
+  min-height: rem-calc(343px);
 
   &-productivity__container {
     align-items: flex-end;

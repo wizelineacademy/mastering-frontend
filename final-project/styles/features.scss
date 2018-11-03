@@ -10,7 +10,7 @@ $color-list-text: #ADB3CB;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 885px;
+  min-height: rem-calc(885px);
 
   &__container {
     align-items: center;

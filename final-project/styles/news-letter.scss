@@ -1,7 +1,7 @@
 /* News Letter */
 .news-letter {
   background-color: #FCFDFF;
-  min-height: 332px;
+  min-height: rem-calc(332px);
 
   &__container {
     align-items: center;

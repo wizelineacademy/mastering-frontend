@@ -4,7 +4,7 @@
   background-color: #F5F8FF;
   display: flex;
   justify-content: center;
-  min-height: 776px;
+  min-height: rem-calc(776px);
 
   &__content {
     align-self: end;

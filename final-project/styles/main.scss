@@ -1,23 +1,29 @@
 // This should be imported by the main.js file
 
 // test for scss variables
+$nav-text-color: #697CA6;
+$darkslateblue: #3D4F9F;
 $primary-color: #2a3fbb;
+$royalblue: #3A79FF;
+$cornflowerblue: #5E81FE;
+$darkgrey: #8D96BD;
+$lavender: #D2E1FF;
+$light-lavender: #D8E3FE;
+$ghostwhite: #F5F8FF;
 
 * {
   padding: 0;
   margin: 0;
 }
 
-h1 {
-  color: $primary-color;
-}
-
 @function rem-calc($size) {
   @return $size / 16px * 1rem;
 }
 
-$nav-text-color: #697CA6;
+
 $header__logo-size: 26px;
+$quicksand: 'Quicksand', sans-serif;
+$roboto: 'Roboto', sans-serif;
 
 * {
   padding: 0;
@@ -26,17 +32,31 @@ $header__logo-size: 26px;
 
 button { border:none; }
 
+section{
+  font-family: $roboto;
+}
+
+h1, h2, h3{
+  font-family: $quicksand;
+  font-weight: 300;
+  font-size: 14px;
+  color: $darkslateblue;
+}
+p{
+  color: $darkgrey;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
-  font-family: 'Quicksand', sans-serif;
+  font-family: $quicksand;
   padding: rem-calc(18px) rem-calc(20px);
 
   &__logo {
     width: rem-calc($header__logo-size);
     height: rem-calc($header__logo-size);
     margin-top: rem-calc(26px-18px);
-    background-color: #5E81FE;
+    background-color: $cornflowerblue;
     border-radius: 50%;
   }
 
@@ -60,33 +80,83 @@ button { border:none; }
   }
 
   &__button {
-    background-color: #D2E1FF;
-    font-family: 'Quicksand', sans-serif;
-    color: #3A79FF;
+    background-color: $lavender;
+    font-family: $quicksand;
+    color: $royalblue;
     padding: rem-calc(13px);
   }
 }
 
 .main {
-  border-top: #D8E3FE solid 1px;
+  border-top: $light-lavender solid 1px;
+}
+.bold{
+  font-weight: 700;
+}
+.subtext{
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: $darkslateblue;
 }
 
-// TODO create break-points
-.header__nav--main, .header__nav--social {
-  display: none;
+.header__nav--main, .header__button, .header__nav--social {
+  display: block;
 }
-.header__button{
+.header__nav--mobile {
   display: none;
 }
 
-@media only screen and (min-width: rem-calc(768px)){
-  .header__nav--main, .header__button, .header__nav--social {
+
+
+.showcase{
+  text-align: center;
+  &__video{
+    background-image: url("../reference/assets/hero.png");
+    background-position: center center;
+    min-height: 570px;
+  }
+  &__subtext{
+    padding-top: 92px;
     display: block;
   }
-  .header__nav--mobile {
-    display: none;
+  &__title{
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 36px;
+    color: $darkslateblue;
+    margin-top: 16px;
+  }
+  &__description{
+    margin-top: 28px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 29px;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    width: 502px;
+    margin: 28px auto;
+  }
+  &__clients{
+    display: flex;
+    padding: 29px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    & .client{
+      margin: 29px;
+      transition: filter .3s linear;
+      height: fit-content;
+      &:hover{
+        filter: saturate(65) hue-rotate(55deg);
+      }
+    }
   }
 }
+
+
 @media only screen and (max-width: rem-calc(768px)){
   .header__nav--main, .header__button, .header__nav--social {
     display: none;

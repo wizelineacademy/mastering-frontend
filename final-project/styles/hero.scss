@@ -29,6 +29,13 @@
       display: none;
     }
   }
+  @include md {
+    &__content {
+      p {
+        display: block;
+      }
+    }
+  }
   @include xl {
     &__content {
       margin: 90px 0px 0px;

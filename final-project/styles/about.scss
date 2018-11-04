@@ -79,6 +79,16 @@
     }
   }
 
+  @include md {
+    align-items: center;
+    &__content {
+      margin-top: 0px;
+      section {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
   @include xl {
     align-items: center;
     &__content {

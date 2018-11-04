@@ -48,6 +48,19 @@
     }
   }
 
+  @include md {
+    &__form {
+      flex-direction: row;
+      input {
+        width: 279px;
+      }
+      a {
+        margin: 0px 0px 0px 15px;
+        width: 184px;
+      }
+    }
+  }
+
   @include xl {
     &__content {
       flex-direction: row;

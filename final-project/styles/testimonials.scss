@@ -87,7 +87,28 @@
             }
         }
     }
+    @include md {
+        display: flex;
+        &__content {
+            flex-direction: column;
+        }
+        &__section {
+            width: 100%;
+            &:first-of-type {
+                justify-content: flex-start;
+                margin-bottom: 20px;
+            }
+        }
+    }
     @include xl {
         display: flex;
+        &__content {
+            flex-direction: row;
+        }
+        &__section {
+            &:first-of-type {
+                justify-content: flex-end;
+            }
+        }
     }
 }

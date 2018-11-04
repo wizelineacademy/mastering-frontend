@@ -18,20 +18,7 @@
     background-color: #5E81FE;
     border-radius: 50%;
   }
-  .menu {
-    display: none;
-    @include md {
-      display: block;
-    }
-
-    @include lg {
-      display: block;
-    }
-
-    @include xl {
-      display: block;
-    }
-  }
+  
   .button {
     display: none;
     @include md {
@@ -44,6 +31,28 @@
   
     @include xl {
       display: flex;
+    }
+  }
+
+  @include md {
+    &__section {
+      &:first-child {
+        width: 80%;
+      }
+      &:last-child {
+        width: 20%;
+      }
+    }
+  }
+
+  @include xl {
+    &__section {
+      &:first-child {
+        width: 50%;
+      }
+      &:last-child {
+        width: 50%;
+      }
     }
   }
 }

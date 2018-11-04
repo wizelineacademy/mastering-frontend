@@ -170,6 +170,22 @@ body {
   }
 }
 
+noscript {
+  box-sizing: border-box;
+  @include flex-container(100%);
+  justify-content: flex-start;
+  height: 80px;
+  padding: 10px;
+  background-color:#fff3cd;
+  color: #856404;
+  position: absolute;
+  top: 0;
+  left: 0;
+  span {
+    margin-left: 10px;
+  }
+}
+
 // Splitted code
 @import './header.scss';
 @import './footer.scss';

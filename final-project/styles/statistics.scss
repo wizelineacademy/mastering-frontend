@@ -37,6 +37,9 @@
       padding: 0px 0px 0px 50px;
     }
   }
+  @include md {
+    flex-direction: row;
+  }
   @include xl {
     flex-direction: row;
     &__section {

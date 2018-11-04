@@ -27,11 +27,32 @@
         @include flex-container(100%);
         flex-direction: column;
     }
+    @include md {
+        &__section {
+            flex-direction: row;
+            &:first-child {
+                width: 80%;
+            }
+            &:last-child {
+                width: 20%;
+            }
+        }
+        section {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
     @include xl {
         height: 287px;
         &__section {
             @include flex-container(50%);
             flex-direction: row;
+            &:first-child {
+                width: 50%;
+            }
+            &:last-child {
+                width: 50%;
+            }
         };
         &__text {
             margin-left: 50px;

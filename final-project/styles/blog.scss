@@ -101,6 +101,24 @@
         }
     }
 
+    @include md {
+        &__slider {
+            &__slide {
+                &__section {
+                    width: 90%;
+                }
+                span {
+                    display: flex;
+                    width: auto !important;
+                }
+                .button {
+                    width: 113px;
+                    float: left;
+                }
+            }
+        }
+    }
+
     @include xl {
         &__slider {
             width: 90%;

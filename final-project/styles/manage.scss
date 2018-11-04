@@ -53,6 +53,25 @@ $titles-margin: 0px 0px 10px;
     margin-left: 1px;
   }
 
+  @include md {
+    &__content {
+      height: 776px;
+      justify-content: center;
+    }
+    &__section {
+      align-items: flex-start;
+      img {
+        width: 463px;
+      }
+      &:nth-child(2) {
+        align-items: flex-end;
+      }
+      &:last-child {
+        justify-content: flex-start;
+      } 
+    }
+  }
+
   @include xl {
     &__content {
       height: 400px;

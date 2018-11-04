@@ -46,6 +46,11 @@ p{
   color: $darkgrey;
 }
 
+.btn{
+  font-family: $quicksand;
+  padding: rem-calc(13px);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -97,9 +102,10 @@ p{
   text-transform: uppercase;
   font-weight: 500;
   line-height: normal;
-  font-size: 10px;
+  font-size: rem-calc(10px);
   letter-spacing: 0.1em;
   color: $darkslateblue;
+  display: block;
 }
 
 .header__nav--main, .header__button, .header__nav--social {
@@ -116,37 +122,36 @@ p{
   &__video{
     background-image: url("../reference/assets/hero.png");
     background-position: center center;
-    min-height: 570px;
+    min-height: rem-calc(570px);
   }
   &__subtext{
     padding-top: 92px;
-    display: block;
   }
   &__title{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    font-size: 36px;
+    font-size: rem-calc(36px);
     color: $darkslateblue;
-    margin-top: 16px;
+    margin-top: rem-calc(16px);
   }
   &__description{
-    margin-top: 28px;
+    margin-top: rem-calc(28px);
     font-style: normal;
     font-weight: normal;
-    line-height: 29px;
-    font-size: 15px;
+    line-height: rem-calc(29px);
+    font-size: rem-calc(15px);
     letter-spacing: 0.03em;
     width: 502px;
-    margin: 28px auto;
+    margin: rem-calc(28px) auto;
   }
   &__clients{
     display: flex;
-    padding: 29px;
+    padding: rem-calc(29px);
     justify-content: space-evenly;
     flex-wrap: wrap;
     & .client{
-      margin: 29px;
+      margin: rem-calc(29px);
       transition: filter .3s linear;
       height: fit-content;
       &:hover{
@@ -155,7 +160,37 @@ p{
     }
   }
 }
-
+.plan_manage{
+  background-color: $ghostwhite;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: rem-calc(776px);
+  &__subtext{
+    padding-top: rem-calc(208px);
+  }
+  &__title{
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 36px;
+    color: $darkslateblue;
+    margin-top: rem-calc(27px);
+  }
+  &__image{
+    margin-top: rem-calc(180px);
+    background-image: url("../reference/assets/plan-manage.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &__text{
+    margin-top: rem-calc(27px);
+  }
+  .subsection {
+    padding: 6%;
+    width: 35%;
+  }
+}
 
 @media only screen and (max-width: rem-calc(768px)){
   .header__nav--main, .header__button, .header__nav--social {

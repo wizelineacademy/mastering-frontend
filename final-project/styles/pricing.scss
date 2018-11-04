@@ -1,0 +1,49 @@
+@mixin button-style {
+  font-family: $quicksand-font;
+  font-size: 13px;
+  float: left;
+  border-radius: 0px;
+}
+
+.pricing {
+  height: 447px;
+  @include bg-image('../assets/blue-clouds-bg.png');
+  &__content {
+    flex-direction: column;
+    h4 {
+      @include title-4;
+      color: #ffffff;
+    }
+    h2 {
+      text-align: center;
+      @include title-1;
+      color: #ffffff;
+    }
+    p {
+      @include text;
+      color: #ffffff;
+    }
+    .buttons {
+      width: 284px;
+      display: block;
+      margin-top: 30px;
+    }
+    #button1 {
+      @include button-style;
+      background-color: #ffffff;
+      border: solid #ffffff 1px;
+      border-right: 0px;
+      color: #565F82;
+      font-weight: 700;
+    }
+    #button2 {
+      @include button-style;
+      width: 155px;
+      background-color: transparent;
+      color: #C7D3FF;
+      border: solid #C7D3FF 1px;
+      border-left: 0px;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@mixin form-inputs {
+  font-family: $quicksand-font;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700; 
+}
+
+.newsletter {
+  height: 332px;
+  &__content {
+    flex-direction: column;
+  }
+  &__text {
+    h4 {
+      font-family: $quicksand-font;
+      font-size: 18px;
+      font-weight: 700;
+      color: #3D4F9F;
+      margin: 0px 0px 10px;
+    }
+    p {
+      @include text;
+      text-align: justify;
+    }
+    margin-bottom: 20px;
+  }
+  &__form {
+    @include flex-container(100%);
+    flex-direction: column;
+    input {
+      width: 100%;
+      height: 59px;
+      background-color: #EFEFF7;
+      border: none;
+      color: #7A85AD;
+      padding: 0px 15px 0px;
+      @include form-inputs;
+      box-sizing: border-box;
+    }
+    a {
+      @include flex-container(100%);
+      height: 59px;
+      background-color: #4D6CE1;
+      @include form-inputs;
+      color: #ffffff;
+      text-decoration: none;
+      margin-top: 30px;
+    }
+  }
+
+  @include md {
+    &__form {
+      flex-direction: row;
+      input {
+        width: 279px;
+      }
+      a {
+        margin: 0px 0px 0px 15px;
+        width: 184px;
+      }
+    }
+  }
+
+  @include lg {
+    &__content {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    &__text {
+      margin-bottom: 0;
+    }
+    &__form {
+      width: auto;
+      flex-direction: row;
+      input {
+        width: 249px;
+      }
+      a {
+        width: 184px;
+        margin: 0px 0px 0px 15px;
+      }
+    }
+  }
+}

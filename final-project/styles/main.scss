@@ -1,13 +1,202 @@
 // This should be imported by the main.js file
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 
-// test for scss variables
-$primary-color: #2a3fbb;
+$quicksand-font: 'Quicksand', sans-serif;
+$roboto-font: 'Roboto', sans-serif;
+$open-sans-font: 'Open Sans', sans-serif;
+$titles-color: #3D4F9F;
+$titles-margin: 0px 0px 10px;
 
-* {
-  padding: 0;
-  margin: 0;
+//breakpoints
+$screen-md-min: 768px; // Tablet portrait
+$screen-lg-min: 992px; // Tablet landscape
+$screen-xl-min: 1200px; // Desktop
+
+
+// Mixins
+@mixin title-1 {
+  font-family: $quicksand-font;
+  font-size: 48px;
+  font-weight: 300;
+  color: $titles-color;
+  margin: $titles-margin; 
+  span {
+    font-weight: 500;
+  }
 }
 
-h1 {
-  color: $primary-color;
+@mixin title-2 {
+  @include title-1;
+  font-size: 36px;
 }
+
+@mixin title-3 {
+  font-family: $quicksand-font;
+  font-size: 24px;
+  font-weight: 500;
+  color: $titles-color;
+  margin: $titles-margin; 
+}
+
+@mixin title-4 {
+  font-family: $roboto-font;
+  font-size: 11px;
+  font-weight: 500;
+  color: $titles-color;
+  margin: $titles-margin;
+}
+
+@mixin text {
+  font-family: $roboto-font;
+  color: #8D96BD;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 2;
+}
+
+// Recurrent layout styles
+@mixin flex-container($width) {
+  width: $width;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Media queries
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin bg-image($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin slider-control-dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0px 5px;
+  background-color: #D1D6E3;
+  &:hover,
+  &--selected {
+    background-color: #5283FF;
+  }
+}
+
+@mixin hover {
+  @media (hover:hover) {
+    @content;
+  }
+}
+
+// Projects Styles
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+#container {
+  min-height:100%;
+  position:relative;
+}
+
+.body {
+  padding-bottom: 370px;
+  @include xl {
+    padding-bottom: 290px;
+  }
+}
+
+.main-container {
+  @include flex-container(100%);
+}
+
+.sub-container {
+  @include flex-container(90%);
+}
+
+.button {
+  @include flex-container(113px);
+  height: 43px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: $quicksand-font;
+  font-size: 13px;
+  font-weight: 700;
+  &--blue {
+    background-color: #D2E1FF;
+    color: #3A79FF;
+  }
+  &--red {
+    background-color: #FFD7D7;
+    color: #D43F3F;
+  }
+}
+
+.pre-loader {
+  @include flex-container(100%);
+  flex-direction: column;
+  margin: 20px 0px;
+  &__icon {
+    color: $titles-color;
+  }
+  &__text {
+    @include title-3();
+  }
+  &--hidden {
+    display: none;
+  }
+}
+
+noscript {
+  box-sizing: border-box;
+  @include flex-container(100%);
+  justify-content: flex-start;
+  height: 80px;
+  padding: 10px;
+  background-color:#fff3cd;
+  color: #856404;
+  position: absolute;
+  top: 0;
+  left: 0;
+  span {
+    margin-left: 10px;
+  }
+}
+
+// Splitted code
+@import './header.scss';
+@import './footer.scss';
+@import './menu.scss';
+@import './hero.scss';
+@import './customers.scss';
+@import './manage.scss';
+@import './about.scss';
+@import './statistics.scss';
+@import './blog.scss';
+@import './testimonials.scss';
+@import './faq.scss';
+@import './pricing.scss';
+@import './newsletter.scss';

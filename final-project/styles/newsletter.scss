@@ -61,7 +61,7 @@
     }
   }
 
-  @include xl {
+  @include lg {
     &__content {
       flex-direction: row;
       justify-content: space-evenly;

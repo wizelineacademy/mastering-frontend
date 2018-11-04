@@ -119,6 +119,53 @@
         }
     }
 
+    @include lg {
+        &__content {
+            width: 100%;
+            h3 {
+                margin-bottom: 30px;
+            }
+        }
+        &__slider {
+            width: 90%;
+            height: 394px;
+            &__slides {
+                box-sizing: border-box;
+                width: 80%;
+                padding: 15px 0px;
+                margin: 20px 0px 20px;
+            }
+            &__slide {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-evenly;
+                &__section {
+                    @include flex-container(45%); 
+                    flex-direction: column;
+                    &:first-child,
+                    &:last-child {
+                        padding: 0px;
+                    }
+                    .buttons {
+                        @include flex-container(100%);
+                        justify-content: flex-start;
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &__arrow {
+                display: flex;
+                width: 10%;
+            }
+        }
+        &__controls {
+            margin-top: 30px;
+        }
+    }
+
     @include xl {
         &__slider {
             width: 90%;

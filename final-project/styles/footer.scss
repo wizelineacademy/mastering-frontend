@@ -42,6 +42,20 @@
             justify-content: flex-start;
         }
     }
+    @include lg {
+        &__section {
+            @include flex-container(50%);
+            &:first-child {
+                width: 50%;
+            }
+            &:last-child {
+                width: 50%;
+            }
+        }
+        section {
+            justify-content: flex-start;
+        }
+    }
     @include xl {
         height: 287px;
         &__section {
@@ -61,13 +75,5 @@
             flex-direction: row;
             justify-content: space-between;
         };
-    }
-    @include lg {
-        &__section {
-            @include flex-container(50%);
-        }
-        section {
-            justify-content: space-evenly
-        }
     }
 }

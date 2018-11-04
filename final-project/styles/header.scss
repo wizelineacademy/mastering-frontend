@@ -45,6 +45,17 @@
     }
   }
 
+  @include lg {
+    &__section {
+      &:first-child {
+        width: 50%;
+      }
+      &:last-child {
+        width: 50%;
+      }
+    }
+  }
+
   @include xl {
     &__section {
       &:first-child {

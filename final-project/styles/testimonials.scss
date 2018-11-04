@@ -100,6 +100,19 @@
             }
         }
     }
+
+    @include lg {
+        display: flex;
+        &__content {
+            flex-direction: row;
+        }
+        &__section {
+            &:first-of-type {
+                justify-content: center;
+            }
+        }
+    }
+
     @include xl {
         display: flex;
         &__content {

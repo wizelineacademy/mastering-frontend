@@ -26,12 +26,12 @@ class Blog {
 
     moveSlider (target) {
         const slides    = document.querySelectorAll('.blog__slider__slide'); // reference to the slides
-        const controls = document.querySelectorAll('#blog_slider_controls li a'); // reference to the dots
+        const controls  = document.querySelectorAll('#blog__slider__controls li a'); // reference to the dots
         
         // Hide the current slide and display the new selected one
         slides[this.currentSlide].classList.add('blog__slider__slide--hidden');
         slides[target].classList.remove('blog__slider__slide--hidden'); 
-
+    
         // Remove the selected class from the current dot and add it to the new selected one
         controls.forEach(el => {
             el.classList.remove('selectted');

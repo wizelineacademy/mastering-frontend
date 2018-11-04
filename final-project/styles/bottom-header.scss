@@ -1,0 +1,21 @@
+@import "./variables";
+
+.bottom-header{
+  height: rem-calc(287px)  !important;
+  position: relative;
+  display: flex;
+
+  &__inner{
+    @include centerer;
+    width: 90%;
+  }
+}
+
+.copyright{
+  font-size: rem-calc(12px);
+  font-family: $font-family__main;
+  color: #AEB8D0;
+  height: fit-content;
+  width: fit-content;
+  transform: translate(rem-calc(255px), rem-calc(200px)); 
+}

@@ -1,0 +1,74 @@
+@import "./variables";
+
+.faq{
+  height: rem-calc(700px);
+  border: $border__style;
+  position: relative;
+
+  &__inner{
+    @include centerer;
+    width: rem-calc(614px);
+    height: fit-content;
+    border: $border__style;
+
+    &-h1{
+      font-size: rem-calc(10px);
+      text-transform: uppercase;
+      font-family: $font-family__secondary;
+      color: $font-color__main;
+      text-align: center;
+    }
+
+    &-h2{
+      font-family: $font-family__main;
+      font-size: rem-calc(24px);
+      font-weight: $font-weight-light;
+      margin-top: rem-calc(20px);
+      margin-bottom: rem-calc(20px);
+      color: $font-color__main;
+      text-align: center;
+    }
+
+    &-ul{
+      list-style: none;
+      color: #8E96B7;
+      font-family: $font-family__main;
+
+      &-li{
+        width: 100%;
+        height: fit-content;
+        border: $border__style;
+        position: relative;
+
+        &__question{
+          padding-left: rem-calc(10px);
+          padding-top: rem-calc(20px);
+          display: flex;
+          border: $border__style;
+          height: rem-calc(40px);
+
+          &__icon{
+            //@include vertical-align;
+            width: rem-calc(17px);
+            height: rem-calc(17px);
+            margin-right: rem-calc(10px);
+          }
+
+          &__title{
+           // @include vertical-align;
+
+          }
+
+        }
+
+        &__anmswer{
+
+        }
+
+      }
+
+    }
+
+
+  }
+}

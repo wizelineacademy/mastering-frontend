@@ -1,14 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="./dist/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Hello world!</h1>
+
+  <header class="header">
+    <div class="header__logo"></div>
+    <nav class="header__nav  header__nav--main">
+      <ul class="header__nav-list">
+        <li class="header__nav-link header__nav-link--current-page">Home</li>
+        <li class="header__nav-link">Blog</li>
+        <li class="header__nav-link">Features</li>
+        <li class="header__nav-link">Pricing</li>
+        <li class="header__nav-link">Documentation</li>
+      </ul>
+    </nav>
+    <nav class="header__nav header__nav--social">
+      <ul class="header__nav-list">
+        <li class="header__nav-link">
+          <i class="fab fa-facebook-f"></i>
+        </li>
+        <li class="header__nav-link">
+          <i class="fab fa-twitter"></i>
+        </li>
+        <li class="header__nav-link">
+          <i class="fab fa-telegram-plane"></i>
+        </li>
+        <li class="header__nav-link">
+          <i class="fab fa-medium-m"></i>
+        </li>
+      </ul>
+    </nav>
+    <button class="header__button">Get Started</button>
+    <div class="header__nav--mobile">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+
+  <main class="main">
+
+    <section class="hero">
+      <div class="hero__inner-content">
+        <h1 class="hero__inner-content-h1">Plan your life</h1>
+        <h2 class="hero__inner-content-h2">Increase your <span class="hero__inner-content-h2__bold">productivity</span></h2>
+        <p class="hero__inner-content-p">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui
+          laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+        </p>
+        <button class="hero__inner-content-button"></button>
+      </div>
+    </section>
+
+    <section class='sponsors'>
+      <ul class='sponsors__list'>
+        <li class='sponsors__list__logo'><img src="./reference/assets/customers/bitbucket.png"></li>
+        <li class='sponsors__list__logo'><img src="./reference/assets/customers/apple-watch.png"></li>
+        <li class='sponsors__list__logo'><img src="./reference/assets/customers/facebook.png"></li>
+        <li class='sponsors__list__logo'><img src="./reference/assets/customers/atlassian.png"></li>
+        <li class='sponsors__list__logo'><img src="./reference/assets/customers/audi.png"></li>
+      </ul>
+    </section>
+
+    <section class="demoapp">
+      <div class="demoapp__text-area">
+        <h1 class="demoapp__text-area-h1">Desktop and mobile app</h1>
+        <h2 class="demoapp__text-area-h2">
+          <span class="demoapp__text-area-h2__bold">Plan</span> and <span class="demoapp__text-area-h2__bold">manage</span>
+        </h2>
+        <p class="demoapp__text-area-p">
+          Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren
+          similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum
+          an expetenda consequat.
+        </p>
+        <button class="demoapp__text-area-button1">View video</button>
+        <button class="demoapp__text-area-button2">See features</button>
+      </div>
+      <div class="demoapp__img-area">
+        <img src='./reference/assets/plan-manage.png' alt='prototype of the service' /></div>
+    </section>
+
+
+    <section class="about-us">
+      <div class="about-us__inner-container">
+        <h1 class="about-us__inner-container_h1">About Us</h1>
+        <h2 class="about-us__inner-container_h2">Read about our app</h2>
+        <ul class="about-us__inner-container_ul">
+
+          <li class="about-us__inner-container_ul__li-1">
+            <div class="about-us__inner-container_ul__li-1__logo"></div>
+            <h3 class="about-us__inner-container_ul__li-1__h3">Overview</h3>
+            <p class="about-us__inner-container_ul__li-1__p">Brute laoreet efficiendi id his, ea illum nonumes luptatum
+              pro.</p>
+          </li>
+
+          <li class="about-us__inner-container_ul__li-2">
+            <div class="about-us__inner-container_ul__li-2__logo"></div>
+            <h3 class="about-us__inner-container_ul__li-2__h3">Files</h3>
+            <p class="about-us__inner-container_ul__li-2__p">No vim nulla vitae intellegat. Ei enim error ius, solet
+              atomorum conceptam ex has.</p>
+          </li>
+
+          <li class="about-us__inner-container_ul__li-3">
+            <div class="about-us__inner-container_ul__li-3__logo"></div>
+            <h3 class="about-us__inner-container_ul__li-3__h3">Meeting chats</h3>
+            <p class="about-us__inner-container_ul__li-3__p">Vim ne tacimates neglegentur. Erat diceret omittam at est.</p>
+          </li>
+
+          <li class="about-us__inner-container_ul__li-4">
+            <div class="about-us__inner-container_ul__li-4__logo"></div>
+            <h3 class="about-us__inner-container_ul__li-4__h3">Save events</h3>
+            <p class="about-us__inner-container_ul__li-4__p">Nisl idque mel ea, nominati voluptatum.
+            </p>
+          </li>
+
+        </ul>
+        <div class="about-us__inner-container_bt">
+          <button class="about-us__inner-container_bt-b1">Read more</button>
+          <p class="about-us__inner-container_bt-p"> - or - </p>
+          <button class="about-us__inner-container_bt-b2">Get Started</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <div class="metrics__productivity">
+        <div class="metrics__productivity__inner">
+          <img src="./reference/assets/icons/speedmeter.png" class='metrics__productivity__inner-icon' />
+          <p class="metrics__productivity__inner-score">89%</p>
+          <p class="metrics__productivity__inner-text">Customers who have increased their productivity</p>
+        </div>
+      </div>
+      <div class="metrics__users">
+        <div class="metrics__users__inner">
+          <img src="./reference/assets/icons/people.png" class="metrics__users__inner-icon" />
+          <p class="metrics__users__inner-score">3123</p>
+          <p class="metrics__users__inner-text">Users who have used our application</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>our resources</h1>
+      <h2>Start reading our blog</h2>
+      <section id='carousel'>
+      </section>
+    </section>
+
+    <section>
+      <h1>Testiomnials</h1>
+      <h2>Customer's quotes</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+      <section id='carousel-2'>
+      </section>
+    </section>
+
+    <section class="faq">
+      <div class="faq__inner">
+        <h1 class="faq__inner-h1">Customers help</h1>
+        <h2 class="faq__inner-h2">Frequently asked questions</h2>
+        <ul class="faq__inner-ul">
+
+          <li class="faq__inner-ul-li">
+            <div class="faq__inner-ul-li__question">
+              <img class='faq__inner-ul-li__question__icon' src="./reference/assets/arrow-down.png"/>
+              <p class='faq__inner-ul-li__question__title'>Reque insolens in vel?</p>
+            </div>
+            <div class="faq__inner-ul-li__answer">
+              <p class="faq__inner-ul-li__answer__text">
+                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+                ius an, in mel diceret persecuti.\
+              </p>
+              <button class="faq__inner-ul-li__answer__button">Go to documentation</button>
+            </div>
+          </li>
+
+          <!--
+          <li>
+            <p class='arrow-icon'></p>
+            <p class='question'>Vis rebum error graecis ea, id sit postea accusamus?</p>
+            <p class='question-answers'>Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+              </p>
+            <button>Go to documentation</button>
+          </li>
+          <li>
+            <p class='arrow-icon'></p>
+            <p class='question'>Lorem repudiandae ne nec?</p>
+            <p class='question-answers'>Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+              </p>
+            <button>Go to documentation</button>
+          </li>
+          <li>
+            <p class='arrow-icon'></p>
+            <p class='question'>Ad dicit numquam vel. Et eos iudico feugait percipitur?</p>
+            <p class='question-answers'>Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+              </p>
+            <button>Go to documentation</button>
+          </li>
+          <li>
+            <p class='arrow-icon'></p>
+            <p class='question'>Sea no dico percipitur. Fierent constituam definitiones id eum?</p>
+            <p class='question-answers'>Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+              </p>
+            <button>Go to documentation</button>
+          </li>
+
+          -->
+
+        </ul>
+      </div>
+    </section>
+
+    <section class='subhero'></section>
+
+    <section class="newsletter">
+      <div class="newsletter__inner">
+        <div class="newsletter__inner__text">
+          <h1 class="newsletter__inner__text-h1">Sign up for newsletter</h1>
+          <p class="newsletter__inner__text-p">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero
+            alterum.</p>
+        </div>
+        <form class="newsletter__inner__form">
+          <input class="newsletter__inner__form-email" type="text" placeholder="Email address">
+          <input class="newsletter__inner__form-submit" type="submit" value="Save me">
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <div class="bottom-header">
+    <header class="header bottom-header__inner">
+      <div class="header__logo"></div>
+      <nav class="header__nav  header__nav--main">
+        <ul class="header__nav-list">
+          <li class="header__nav-link header__nav-link--current-page">Home</li>
+          <li class="header__nav-link">Blog</li>
+          <li class="header__nav-link">Features</li>
+          <li class="header__nav-link">Pricing</li>
+          <li class="header__nav-link">Documentation</li>
+        </ul>
+      </nav>
+      <nav class="header__nav header__nav--social">
+        <ul class="header__nav-list">
+          <li class="header__nav-link">
+            <i class="fab fa-facebook-f"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-twitter"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-telegram-plane"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-medium-m"></i>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__button">Get Started</button>
+      <div class="header__nav--mobile">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+    <p class="copyright">Copyright © 2018 by Random site</p>
+  </div>
+
   <script src="./dist/bundle.js"></script>
 </body>
+
 </html>

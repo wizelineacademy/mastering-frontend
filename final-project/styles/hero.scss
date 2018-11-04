@@ -1,0 +1,54 @@
+@import "./variables";
+
+.hero{
+  height: rem-calc(565px);
+  border: $border__style;
+  position: relative;
+  background-color: lightgrey;
+  background: url("/reference/assets/hero.png") no-repeat center center;
+  background-size: auto;
+
+  &__inner-content{
+    @include centerer;
+    transform: translate(-50%, -75%);
+    height: rem-calc(266px);
+    width: rem-calc(583px);
+    font-family: $font-family__secondary;
+    color: $font-color__main;
+    text-align: center;
+
+    &-h1{
+      font-size: rem-calc(10px);
+      text-transform: uppercase;
+    }
+    
+    &-h2{
+      font-family: $font-family__main;
+      font-size: rem-calc(48px);
+      font-weight: $font-weight-light;
+      margin-top: rem-calc(20px);
+      margin-bottom: rem-calc(20px);
+      &__bold{
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    &-p{
+      color: $font-color__secondary;
+      font-size: rem-calc(15px);
+      margin-left: rem-calc(70px);
+      margin-right: rem-calc(70px);
+      line-height: rem-calc(28px);
+    }
+
+    &-button{
+      height: rem-calc(52px);
+      width: rem-calc(52px);
+      border-radius: 100%;
+      position:absolute;
+      bottom:0;
+      transform: translateX(-50%);
+      background: $font-color__secondary url("/reference/assets/icons/video-play.png") no-repeat center center;
+    }
+  }
+}

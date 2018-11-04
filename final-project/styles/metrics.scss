@@ -1,0 +1,63 @@
+@import './variables';
+
+.metrics{
+  height: rem-calc(343px);
+  display: flex;
+  font-family: $font-family__main;
+
+  &__productivity{
+    width: 50%;
+    background-color: #6888FF;
+    color: white;
+
+    &__inner{
+      @include vertical-align;
+      transform: translate(125%, -50%);
+      width: rem-calc(260px);
+      height: rem-calc(210px);
+      text-align: right;
+
+      &-icon{
+        width: rem-calc(55px);
+        margin-bottom: rem-calc(24px);
+      }
+
+      &-score{
+        font-size: rem-calc(48px);
+      }
+
+      &-text{
+        font-size: rem-calc(18px);
+      }
+    }
+
+  }
+
+  &__users{
+    width: 50%;
+    background-color: #E9EFFF;
+    color: #5E80FF;
+
+    &__inner{
+      @include vertical-align;
+      transform: translate(25%, -50%);
+      width: rem-calc(260px);
+      height: rem-calc(210px);
+
+      &-icon{
+        width: rem-calc(55px);
+        margin-bottom: rem-calc(24px);
+      }
+
+      &-score{
+        font-size: rem-calc(48px);
+      }
+
+      &-text{
+        font-size: rem-calc(18px);
+      }
+
+    }
+
+  }
+}

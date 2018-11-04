@@ -1,0 +1,24 @@
+@import "./variables";
+
+.sponsors{
+  height: rem-calc(145px);
+  border: $border__style;
+  position: relative;
+
+  &__list{
+    @include centerer;
+    display: inline-grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: rem-calc(76px);
+    list-style: none;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    &__logo{
+    width: rem-calc(117px);
+    height: rem-calc(29px);
+    position: relative;
+    }
+  }
+}

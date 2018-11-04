@@ -1,0 +1,84 @@
+@import "./variables";
+
+.demoapp{
+  height: rem-calc(776px);
+  border: $border__style;
+  position: relative;
+  display: flex;
+  padding: rem-calc(48px);
+  grid-gap: rem-calc(55px);
+  background-color: $background-color-demo-container;
+
+  &__text-area{
+    @include vertical-align;
+    color: $font-color__main;
+    font-family: $font-family__secondary;
+    height: fit-content;
+    width: 29%;
+    position:absolute;
+    transform: translate(rem-calc(175px), rem-calc(-175px));
+
+    &-h1{
+      font-size: rem-calc(10px);
+      text-transform: uppercase;
+    }
+
+    &-h2{
+      font-family: $font-family__main;
+      font-size: rem-calc(40px);
+      font-weight: $font-weight-light;
+      margin-top: rem-calc(20px);
+      margin-bottom: rem-calc(20px);
+      &__bold{
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    &-p{
+      color: $font-color__secondary;
+      font-size: rem-calc(15px);
+      line-height: rem-calc(28px);
+      margin-bottom: rem-calc(47px);
+    }
+    
+
+    &-button1{
+      font-family: $font-family__main;
+      font-weight: $font-weight-bold;
+      color: white;
+      border: $border__style;    
+      margin: 0; 
+      width: rem-calc(130px);
+      height: rem-calc(43px);
+      background-color: $background-color-demo-button;
+    }
+
+    &-button2{
+      font-family: $font-family__main;
+      font-weight: $font-weight-bold;
+      color: $font-color-button-off;
+      background-color: transparent;
+      margin: 0;
+      border: $border__style;     
+      width: rem-calc(130px);
+      height: rem-calc(43px);
+    }
+
+  }
+  
+  &__img-area{
+    //@include centerer;
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    align-content: flex-end;
+    img{
+      position: absolute;
+      width: 60%;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+
+}

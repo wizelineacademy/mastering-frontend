@@ -1,0 +1,192 @@
+@import './variables';
+
+.about-us{
+  height: rem-calc(885px);
+  border: $border__style;
+  position: relative;
+
+  &__inner-container{
+    @include centerer;
+    height: rem-calc(573px);
+    width: rem-calc(1201px);
+    margin: 0;
+    padding: 0;
+    background: url("/reference/assets/clouds.png") no-repeat center center;
+    align-content: center;
+    text-align: center;
+    font-family: $font-family__secondary;
+    color: $font-color__main;
+    display: grid;
+    grid-template-columns: auto rem-calc(140px) rem-calc(140px) rem-calc(140px) rem-calc(140px) auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      ". h1 h1 h1 h1 ."
+      ". h2 h2 h2 h2 ."
+      ". ul ul ul ul ."
+      ". . bt bt . .";      
+
+      &_h1{
+        grid-area: h1;
+        font-size: rem-calc(10px);
+        text-transform: uppercase;
+      }
+    
+      &_h2{
+        margin-top: rem-calc(20px);
+        grid-area: h2;
+        font-family: $font-family__main;
+        font-size: rem-calc(24px);
+        font-weight: $font-weight-regular;
+      }
+    
+      &_ul{
+        grid-area: ul;
+        list-style: none;
+        display: grid;
+        grid-template-columns: rem-calc(140px) rem-calc(140px) rem-calc(140px) rem-calc(140px);
+        grid-template-rows: auto;
+        grid-template-areas: "l1 l2 l3 l4";
+
+        &__li-1{
+          grid-area: l1;
+          align-items: center;
+          text-align: center;
+          font-family: $font-family__opensans;
+          &__logo{
+            @include horizontal-align;
+            margin-top: rem-calc(92px);
+            width: rem-calc(69px);
+            height: rem-calc(69px);
+            border-radius: 50% 50%;
+            background: $background-color-icons url("/reference/assets/icons/home.png") no-repeat center center;
+          }
+          &__h3{
+            margin-top: rem-calc(33px);
+            color: $font-color-icons;
+            font-size: rem-calc(14px);
+          }
+          &__p{
+            margin-top: rem-calc(25px);
+            color: $font-color-button-off;
+            font-size: rem-calc(11px);
+            margin-bottom: rem-calc(92px);
+          }
+        }
+
+        &__li-2{
+          grid-area: l2;
+          align-items: center;
+          text-align: center;
+          font-family: $font-family__opensans;
+          &__logo{
+            @include horizontal-align;
+            margin-top: rem-calc(92px);
+            width: rem-calc(69px);
+            height: rem-calc(69px);
+            border-radius: 50% 50%;
+            background: $background-color-icons url("/reference/assets/icons/folder.png") no-repeat center center;
+          }
+          &__h3{
+            margin-top: rem-calc(33px);
+            color: $font-color-icons;
+            font-size: rem-calc(14px);
+          }
+          &__p{
+            margin-top: rem-calc(25px);
+            color: $font-color-button-off;
+            font-size: rem-calc(11px);
+            margin-bottom: rem-calc(92px);
+          }
+        }
+
+        &__li-3{
+          grid-area: l3;
+          align-items: center;
+          text-align: center;
+          font-family: $font-family__opensans;
+          &__logo{
+            @include horizontal-align;
+            margin-top: rem-calc(92px);
+            width: rem-calc(69px);
+            height: rem-calc(69px);
+            border-radius: 50% 50%;
+            background: $background-color-icons url("/reference/assets/icons/chat.png") no-repeat center center;
+          }
+          &__h3{
+            margin-top: rem-calc(33px);
+            color: $font-color-icons;
+            font-size: rem-calc(14px);
+          }
+          &__p{
+            margin-top: rem-calc(25px);
+            color: $font-color-button-off;
+            font-size: rem-calc(11px);
+            margin-bottom: rem-calc(92px);
+          }
+        }
+
+        &__li-4{
+          grid-area: l4;
+          align-items: center;
+          text-align: center;
+          font-family: $font-family__opensans;
+          &__logo{
+            @include horizontal-align;
+            margin-top: rem-calc(92px);
+            width: rem-calc(69px);
+            height: rem-calc(69px);
+            border-radius: 50% 50%;
+            background: $background-color-icons url("/reference/assets/icons/upload.png") no-repeat center center;
+          }
+          &__h3{
+            margin-top: rem-calc(33px);
+            color: $font-color-icons;
+            font-size: rem-calc(14px);
+          }
+          &__p{
+            margin-top: rem-calc(25px);
+            color: $font-color-button-off;
+            font-size: rem-calc(11px);
+            margin-bottom: rem-calc(92px);
+          }
+        }
+      }
+    
+      &_bt{
+        grid-area: bt;
+        display: flex;
+        position: relative;
+        font-weight: $font-weight-bold;
+
+        &-b1{
+          width: rem-calc(113px);
+          height: rem-calc(43px);
+          background-color: #FFD7D7;
+          color: #D43F3F;
+          position: absolute;
+          left: 0;
+        }
+
+        &-p{
+          transform: translate(rem-calc(127px), rem-calc(13px));
+          color: #ADB3CB;
+          font-family: $font-family__opensans;
+          text-transform: uppercase;
+          font-size: rem-calc(10px);
+
+        }
+        &-b2{
+          width: rem-calc(113px);
+          height: rem-calc(43px);
+          background-color: #D2E1FF;
+          color: #3A79FF;
+          position: absolute;
+          right: 0;
+          
+        }
+
+      }
+
+  }
+
+}

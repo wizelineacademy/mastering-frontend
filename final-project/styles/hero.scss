@@ -1,0 +1,43 @@
+.hero {
+  height: 580px;
+  align-items: flex-start;
+  @include bg-image('../assets/hero_bg.png');
+  &__content{
+    height: 266;
+    flex-direction: column;
+    margin: 40px 0px 0px;
+    &__play-video {
+      @include flex-container(55px);
+      height: 55px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #5E81FF;
+      font-size: 10px;
+      margin-top: 30px;
+    }
+    h4 {
+      @include title-4;
+    }
+    h2 {
+      @include title-1;
+      line-height: 2;
+      text-align: center;   
+    }
+    p {
+      @include text;
+      display: none;
+    }
+  }
+  @include xl {
+    &__content {
+      margin: 90px 0px 0px;
+      h2 {
+        line-height: 1;
+      }
+      p{
+        display: block;
+      }
+    }
+  }
+}

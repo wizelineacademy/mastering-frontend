@@ -1,0 +1,19 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  lg: 960px,
+  xl: 1140px
+);
+
+$nav-text-color: #697ca6;
+$header__logo-size: 26px;
+
+$section-title-color: #3D4f9f;
+$section-highlight-color: #3D4f9f;
+$section-description-color: #8D96BD;

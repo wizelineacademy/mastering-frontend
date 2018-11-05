@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Quicksand", sans-serif;
+  padding: rem-calc(18px) rem-calc(20px);
+
+  &__logo {
+    width: rem-calc($header__logo-size);
+    height: rem-calc($header__logo-size);
+    margin-top: rem-calc(26px-18px);
+    background-color: #5e81fe;
+    border-radius: 50%;
+  }
+
+  &__nav {
+    margin-top: rem-calc(32px-18px);
+    font-weight: bold;
+
+    &--main {
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+
+    &--social {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      margin-top: rem-calc(10px);
+      display: block;
+
+      @include media-breakpoint-up(sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__nav-link {
+    font-size: rem-calc(12px);
+    margin: 0 rem-calc(20px);
+    display: flex;
+    align-items: center;
+    color: $nav-text-color;
+  }
+
+  &__button {
+    background-color: #d2e1ff;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    color: #3a79ff;
+    padding: rem-calc(13px);
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+}

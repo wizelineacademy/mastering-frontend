@@ -1,0 +1,35 @@
+.icon {
+  font-style: normal;
+  /*
+    -webkit-mask-size: contain;
+    background-color: red;
+    display: inline-block;
+    content: '';
+  */
+
+  &--facebook {
+    @extend .icon;
+    content: url(/reference/assets/icons/facebook.png);
+  }
+  &--medium {
+    @extend .icon;
+    content: url(/reference/assets/icons/medium.png);
+  }
+  &--telegram {
+    @extend .icon;
+    content: url(/reference/assets/icons/telegram.png);
+  }
+  &--twitter {
+    @extend .icon;
+    content: url(/reference/assets/icons/twitter.png);
+  }
+  &--menu {
+    @extend .icon;
+    content: url(/reference/assets/icons/menu.png);
+  }
+
+  &--play-button {
+    @extend .icon;
+    content: url(/reference/assets/icons/video-play.png);
+  }
+}

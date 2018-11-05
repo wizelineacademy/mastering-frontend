@@ -1,14 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
+
 <body>
-  <h1>Hello world!</h1>
+  <div>
+    <header class="header container">
+      <div class="header__logo"></div>
+      <nav class="header__nav  header__nav--main">
+        <ul class="header__nav-list">
+          <li class="header__nav-link header__nav-link--current-page">Home</li>
+          <li class="header__nav-link">Blog</li>
+          <li class="header__nav-link">Features</li>
+          <li class="header__nav-link">Pricing</li>
+          <li class="header__nav-link">Documentation</li>
+        </ul>
+      </nav>
+
+      <nav class="header__nav header__nav--social">
+        <ul class="header__nav-list">
+          <li class="header__nav-link">
+            <i class="icon--facebook"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="icon--twitter"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="icon--telegram"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="icon--medium"></i>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="header__button">Get Started</button>
+
+      <div class="header__nav--mobile">
+        <i class="icon--menu"></i>
+      </div>
+    </header>
+    <main class="main">
+      <section class="intro">
+        <img class="intro__image" src="reference/assets/hero.png" alt="Card image">
+        <div class="intro__image-overlay">
+          <div class="intro__info">
+            <p class="intro__info__title">
+              PLAN YOUR LIFE
+            </p>
+            <p class="intro__info__highlight">
+              Increase your <span class="intro__info__highlight--emphasis">productivity</span>
+            </p>
+            <p class="intro__info__description">
+              Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
+              atqui laudem an, insolens gubergren similique est cu. Et vel modus
+              congue vituperata.
+            </p>
+          </div>
+          <div class="play-button">
+            <i class="icon--play-button"></i>
+          </div>
+        </div>
+      </section>
+      <section class="customers">
+        <div class="customers__images">
+          <img src="reference/assets/customers/bitbucket.png">
+          <img src="reference/assets/customers/apple-watch.png">
+          <img src="reference/assets/customers/facebook.png">
+          <img src="reference/assets/customers/atlassian.png">
+          <img src="reference/assets/customers/audi.png">
+        </div>
+        <div class="customers__images--mobile">
+          <img src="reference/assets/customers/bitbucket.png">
+          <ol class="carousel-indicators">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
+      </section>
+      <section class="apps">
+        <div class="section-container--d-row">
+          <div class="apps__info">
+            <p class="apps__info__title">
+              DESKTOP AND MOBILE APPS
+            </p>
+            <p class="apps__info__highlight">
+              <span class="apps__info__highlight--emphasis">Plan</span> and <span class="apps__info__highlight--emphasis">manage</span>
+            </p>
+            <p class="apps__info__description">
+              Brute laoreet efficiendi id his, ea illum nonumes luptatum
+              pro. Usu atqui laudem an, insolens gubergren similique
+              est cu. Et vel modus congue vituperata. Solum patrioque
+              no sea. Mea ex malis mollis oporteat. Eum an expetenda
+              consequat.
+            </p>
+          </div>
+          <div class="apps__image">
+            <img src="reference/assets/plan-manage.png">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
   <script src="./dist/bundle.js"></script>
 </body>
+
 </html>

@@ -1,13 +1,35 @@
 // This should be imported by the main.js file
 
-// test for scss variables
-$primary-color: #2a3fbb;
+// @import "~bootstrap/scss/bootstrap";
+
+@import "./utils/variables";
+@import "./utils/sizing";
+@import "./utils/breakpoints";
+@import "./utils/layout";
+@import "./utils/icons";
+
+html {
+  font-family: "Quicksand", sans-serif;
+}
+
+body > div {
+  overflow-x: hidden;
+}
 
 * {
   padding: 0;
   margin: 0;
 }
 
-h1 {
-  color: $primary-color;
+button {
+  border: none;
 }
+
+.main {
+
+}
+
+@import "./header";
+@import "./intro";
+@import "./customers";
+@import "./apps";

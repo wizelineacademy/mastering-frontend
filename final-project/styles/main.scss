@@ -41,6 +41,8 @@ $color-border-complementary: #D1D1E4;
 $color-border-complementary-inverse: #A0B4FF;
 $color-secondary-light: #FFD7D7;
 $color-secondary-dark: #D43F3F;
+$color-normal: #E8ECF4;
+$color-normal-text: #7382A3;
 $color-section: #D8E3FE;
 $color-separator: #DAE4FE;
 $color-shadow: rgba(188, 199, 255, 0.75);
@@ -143,6 +145,12 @@ button {
     padding-left: rem-calc(7px);
   }
 
+  &--normal {
+    background-color: $color-normal;
+    border: 1px solid transparent;
+    color: $color-normal-text;
+  }
+
   &--primary {
     background-color: $color-primary;
     border: 1px solid transparent;
@@ -209,8 +217,9 @@ button {
   }
 }
 
-@import 'header.scss';
 @import 'components/navbar.scss';
+@import 'components/collapsible-list.scss';
+@import 'header.scss';
 @import 'hero.scss';
 @import 'customers.scss';
 @import 'plan-manage.scss';

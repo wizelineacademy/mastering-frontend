@@ -1,7 +1,8 @@
-$blue1-color: #3A79FF;
-$blue2-color: #5E81FE;
-$blue3-color: #697CA6;
-$blue4-color: #D2E1FF;
+$blue1-color: #3D4F9F;
+$blue2-color: #3A79FF;
+$blue3-color: #5E81FE;
+$blue4-color: #697CA6;
+$blue5-color: #D2E1FF;
 $border-color: #D8E3FE;
 
 @function pxToRem($px) {
@@ -26,9 +27,9 @@ html {
 }
 
 * {
-  padding: 0;
+  box-sizing: border-box;
   margin: 0;
-  font-size: inherit;
+  padding: 0;
 }
 
 .top-bar {
@@ -69,24 +70,24 @@ html {
   }
 
   &__link {
-    color: $blue3-color;
+    color: $blue4-color;
     cursor: pointer;
     fill: currentColor;
     font-size: .75rem;
     font-weight: 500;
-    padding: 0 pxToRem(20);
+    padding: pxToRem(20);
     text-shadow: 0 0 5px #E6E6E6;
 
     &:hover {
-      color: $blue2-color;
+      color: $blue3-color;
     }
   }
 
   &__button {
     all: unset;
-    background-color: $blue4-color;
+    background-color: $blue5-color;
     border-radius: 2px;
-    color: $blue1-color;
+    color: $blue2-color;
     cursor: pointer;
     font-size: .8rem;
     font-weight: bold;
@@ -96,5 +97,51 @@ html {
     @include mediaMobile {
       display: none;
     }
+  }
+}
+
+.productivity {
+  align-items: center;
+  background: url("../reference/assets/hero.svg") center / cover;
+  color: $blue1-color;
+  display: flex;
+  flex-direction: column;
+  height: pxToRem(570);
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  &__label {
+    font-size: pxToRem(10);
+    font-weight: 500;
+    margin-bottom: pxToRem(16);
+    margin-top: auto;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: pxToRem(28);
+  }
+
+  &__description {
+    font-size: pxToRem(15);
+    max-width: pxToRem(500);
+
+    @include mediaMobile {
+      display: none;
+    }
+  }
+
+  &__button {
+    all: unset;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 10px 50px rgba(201, 209, 231, 0.6);
+    height: 50px;
+    margin-bottom: pxToRem(212);
+    margin-top: pxToRem(19);
+    width: 50px;
   }
 }

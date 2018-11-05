@@ -27,6 +27,7 @@ $font-complementary: 'Open Sans', sans-serif;
 
 $color-title: #3D4F9F;
 $color-text: #8D96BD;
+$color-link-active: #5E81FE;
 $color-input-background: #EFEFF7;
 $color-input-text: #7A85AD;
 $color-play: #5E81FF;
@@ -208,8 +209,8 @@ button {
   }
 }
 
-
 @import 'header.scss';
+@import 'components/navbar.scss';
 @import 'hero.scss';
 @import 'customers.scss';
 @import 'plan-manage.scss';

@@ -12,38 +12,43 @@
 <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__logo"></div>
-        <nav class="header__nav  header__nav--main">
-          <ul class="header__nav-list">
-            <li class="header__nav-link header__nav-link--current-page">Home</li>
-            <li class="header__nav-link">Blog</li>
-            <li class="header__nav-link">Features</li>
-            <li class="header__nav-link">Pricing</li>
-            <li class="header__nav-link">Documentation</li>
-          </ul>
-        </nav>
-
-        <nav class="header__nav header__nav--social">
-          <ul class="header__nav-list">
-            <li class="header__nav-link">
-              <i class="fab fa-facebook-f"></i>
-            </li>
-            <li class="header__nav-link">
-              <i class="fab fa-twitter"></i>
-            </li>
-            <li class="header__nav-link">
-              <i class="fab fa-telegram-plane"></i>
-            </li>
-            <li class="header__nav-link">
-              <i class="fab fa-medium-m"></i>
-            </li>
-          </ul>
-        </nav>
-
-        <button class="header__button">Get Started</button>
-
-        <div class="header__nav--mobile">
-          <i class="fas fa-bars"></i>
+        <div class="navbar">
+          <div class="navbar__left">
+            <div class="navbar__logo"></div>
+            <nav class="navbar__nav--main">
+              <ul class="navbar__nav-list">
+                <li class="navbar__nav-link navbar__nav-link--current-page">Home</li>
+                <li class="navbar__nav-link">Blog</li>
+                <li class="navbar__nav-link">Features</li>
+                <li class="navbar__nav-link">Pricing</li>
+                <li class="navbar__nav-link">Documentation</li>
+              </ul>
+            </nav>
+          </div>
+          <div class="navbar__right">
+            <nav class="navbar__nav--social">
+              <ul class="navbar__nav-list">
+                <li class="navbar__nav-link">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-twitter"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-telegram-plane"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-medium-m"></i>
+                </li>
+              </ul>
+            </nav>
+            <button class="button button--primary-light">
+              Get started
+            </button>
+            <div class="navbar__nav--mobile">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
         </div>
       </header>
       <main class="main">
@@ -216,7 +221,46 @@
           </div>
         </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="navbar">
+          <div class="navbar__left">
+            <div class="navbar__logo"></div>
+            <nav class="navbar__nav--main">
+              <ul class="navbar__nav-list">
+                <li class="navbar__nav-link navbar__nav-link--current-page">Home</li>
+                <li class="navbar__nav-link">Blog</li>
+                <li class="navbar__nav-link">Features</li>
+                <li class="navbar__nav-link">Pricing</li>
+                <li class="navbar__nav-link">Documentation</li>
+              </ul>
+            </nav>
+          </div>
+          <div class="navbar__right">
+            <nav class="navbar__nav--social">
+              <ul class="navbar__nav-list">
+                <li class="navbar__nav-link">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-twitter"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-telegram-plane"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-medium-m"></i>
+                </li>
+              </ul>
+            </nav>
+            <button class="button button--primary-light">
+              Get started
+            </button>
+          </div>
+        </div>
+        <div class="navbar">
+            <p class="footer__text">Copyright © 2018 by Random site</p>
+        </div>
+      </footer>
     </div>
 
   <script src="./dist/bundle.js"></script>

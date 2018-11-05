@@ -28,11 +28,15 @@
     color: $color-white;
     font-family: $font-primary;
     font-weight: 300;
-    font-size: $font-size-3xl;
+    font-size: $font-size-2xl;
     padding: rem-calc(16px) rem-calc(28px);
 
     &--bold {
       font-weight: 500;
+    }
+
+    @include tablet-breakpoint {
+      font-size: $font-size-3xl;
     }
   }
 

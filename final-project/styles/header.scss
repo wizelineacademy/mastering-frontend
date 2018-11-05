@@ -1,75 +1,51 @@
-
-/* Variables */
-
-$nav-text-color: #697CA6;
-$header__logo_color: #5E81FE;
-$header__logo-size: 26px;
-
 /* Header*/
 
 .header {
+  align-items: center;
   background-color: #FFF;
-  border-bottom: 1px solid #D8E3FE;
   display: flex;
-  justify-content: space-between;
-  padding: rem-calc(18px) rem-calc(20px);
+  flex-direction: column;
+  justify-content: center;
+  min-height: rem-calc(80px);
 
-  &__logo {
-    background-color: $header__logo_color;
-    border-radius: 50%;
-    height: rem-calc($header__logo-size);
-    margin-top: rem-calc(26px-18px);
-    width: rem-calc($header__logo-size);
-  }
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
 
-  &__nav {
-    margin-top: rem-calc(32px-18px);
-    display: none;
+    &__nav--mobile {
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 0.3s ease;
 
-    &--mobile {
-      margin-top: rem-calc(10px);
+      &:hover {
+        opacity: 0.6;
+      }
 
       @include tablet-breakpoint {
         display: none;
       }
     }
 
-    @include tablet-breakpoint {
-      display: block;
-
-      &--social {
-        display: none;
-      }
+    &__left,
+    &__right {
+      flex-direction: row;
+      width: auto;
     }
 
-    @include landscape-breakpoint {
-      &--social {
+    &__nav--main {
+      display: none;
+
+      @include tablet-breakpoint {
         display: block;
       }
     }
-  }
 
-  &__nav-list {
-    display: flex;
-    list-style: none;
-  }
+    .button {
+      display: none;
 
-  &__nav-link {
-    color: $nav-text-color;
-    display: inline-block;
-    font-size: rem-calc(12px);
-    margin: 0 rem-calc(20px);
-  }
-
-  &__button {
-    background-color: #D2E1FF;
-    color: #3A79FF;
-    display: none;
-    font-family: $font-primary;
-    padding: rem-calc(13px);
-
-    @include tablet-breakpoint {
-      display: block;
+      @include tablet-breakpoint {
+        display: inline-flex;
+      }
     }
   }
 }

@@ -3,6 +3,7 @@ $blue2-color: #3A79FF;
 $blue3-color: #5E81FE;
 $blue4-color: #697CA6;
 $blue5-color: #D2E1FF;
+$gray1-color: #D6DAE5;
 $border-color: #D8E3FE;
 
 @function pxToRem($px) {
@@ -33,10 +34,19 @@ html {
 }
 
 .top-bar {
+  background: white;
   border-bottom: 1px solid $border-color;
   height: pxToRem(80);
+  left: 0;
   padding: 0 pxToRem(20);
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 1;
+
+  & + .section{
+    margin-top: pxToRem(80);
+  }
 
   &__inner-container {
     align-items: center;
@@ -100,6 +110,10 @@ html {
   }
 }
 
+.section + .section {
+  border-top: 1px solid $border-color;
+}
+
 .productivity {
   align-items: center;
   background: url("../reference/assets/hero.svg") center / cover;
@@ -139,9 +153,29 @@ html {
     background: white;
     border-radius: 50%;
     box-shadow: 0 10px 50px rgba(201, 209, 231, 0.6);
+    cursor: pointer;
     height: 50px;
     margin-bottom: pxToRem(212);
     margin-top: pxToRem(19);
     width: 50px;
+  }
+}
+
+.customers {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: pxToRem(50) 0;
+
+  svg {
+    cursor: pointer;
+    fill: $gray1-color;
+    height: pxToRem(30);
+    margin: pxToRem(30);
+
+    &:hover {
+      fill: $blue3-color;
+    }
   }
 }

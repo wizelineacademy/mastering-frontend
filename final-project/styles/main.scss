@@ -5,11 +5,16 @@ $nav-text-color: #697CA6;
 $darkslateblue: #3D4F9F;
 $primary-color: #2a3fbb;
 $royalblue: #3A79FF;
+$brightcornflowerblue: #4C85FF;
 $cornflowerblue: #5E81FE;
 $darkgrey: #8D96BD;
+$lightsteelblue: #ADB4D2;
+$lightgray: #D1D1E4;
 $lavender: #D2E1FF;
 $light-lavender: #D8E3FE;
+$aliceblue: #F1F5FF;
 $ghostwhite: #F5F8FF;
+$white: #FFF;
 
 * {
   padding: 0;
@@ -46,9 +51,61 @@ p{
   color: $darkgrey;
 }
 
+.column-1, .column-2, .column-3, .column-4, .column-5, .column-6, .column-7, .column-8, .column-9, .column-10, .column-11, .column-12 {
+  float: left;
+  min-height: 1px;
+}
+.column-12 {
+  width: 100%;
+}
+.column-11 {
+  width: 91.66666667%;
+}
+.column-10 {
+  width: 83.33333333%;
+}
+.column-9 {
+  width: 75%;
+}
+.column-8 {
+  width: 66.66666667%;
+}
+.column-7 {
+  width: 58.33333333%;
+}
+.column-6 {
+  width: 50%;
+}
+.column-5 {
+  width: 41.66666667%;
+}
+.column-4 {
+  width: 33.33333333%;
+}
+.column-3 {
+  width: 25%;
+}
+.column-2 {
+  width: 16.66666667%;
+}
+.column-1 {
+  width: 8.33333333%;
+}
+
 .btn{
   font-family: $quicksand;
   padding: rem-calc(13px);
+  font-size: rem-calc(13px);
+  font-weight: 700;
+  &--primary{
+    background-color: $brightcornflowerblue;
+    color: $white;
+  }
+  &--bordered{
+    border: solid 1px $lightgray;
+    color: $lightsteelblue;
+    background-color: transparent;
+  }
 }
 
 .header {
@@ -166,6 +223,7 @@ p{
   justify-content: space-between;
   flex-wrap: wrap;
   min-height: rem-calc(776px);
+  padding: 10%;
   &__subtext{
     padding-top: rem-calc(208px);
   }
@@ -173,7 +231,7 @@ p{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    font-size: 36px;
+    font-size: rem-calc(36px);
     color: $darkslateblue;
     margin-top: rem-calc(27px);
   }
@@ -186,9 +244,33 @@ p{
   &__text{
     margin-top: rem-calc(27px);
   }
-  .subsection {
-    padding: 6%;
-    width: 35%;
+}
+
+.features{
+  background-image: url("../reference/assets/clouds.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 42px;
+  min-height: 800px;
+  &__subtext{
+    margin-top: rem-calc(129px);
+  }
+  &__title{
+    margin-top: rem-calc(20px);
+    font-size: rem-calc(24px);
+    line-height: rem-calc(30px);
+    color: $darkslateblue;
+  }
+  & .features_item{
+    margin: 0 10%;
+    &__image{
+      border-radius: 50%;
+      background-color: $aliceblue;
+      display: block;
+      width: 69px;
+      height: 69px;
+    }
   }
 }
 

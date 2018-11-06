@@ -1,0 +1,69 @@
+@import "./variables";
+
+.testimonials{
+  height: rem-calc(479px);
+  border: $border__style;
+  background-color: #EAF0FF;
+
+  &__inner{
+    @include vertical-align;
+    height: rem-calc(260px);
+    display: flex;
+
+    &__static{
+      width: rem-calc(310px);
+      font-family: $font-family__secondary;
+      color: $font-color__main;
+      padding-left: 20%;
+      padding-top: 5%;
+
+      &-h1{
+        font-size: rem-calc(10px);
+        text-transform: uppercase;
+      }
+      
+      &-h2{
+        font-family: $font-family__main;
+        font-size: rem-calc(36px);
+        font-weight: $font-weight-bold;
+        margin-top: rem-calc(20px);
+        margin-bottom: rem-calc(20px);
+      }
+
+      &-p{
+        font-size: rem-calc(12px);
+        color: #A4ABC8;
+
+      }
+
+    }
+
+    &__carrousel{
+      margin-left: 10%;
+
+      &__message{
+        height: rem-calc(206px);
+        width: rem-calc(423px);
+        background-color: white;
+      
+
+        &-img{
+          position: absolute;
+          bottom: 9%;
+          left: 67.5%;
+          border-radius: 50%;
+        }
+
+        &-p{
+          color: #676F95;
+          font-family: $font-family__secondary;
+          font-size: rem-calc(15px);
+          padding: 15%;
+          line-height: 1.4;
+        }
+
+      }
+
+    }
+  }
+}

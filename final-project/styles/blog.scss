@@ -1,0 +1,145 @@
+@import "./variables";
+
+.blog{
+  height: rem-calc(700px);
+  background-color: #F5F8FF;
+  display: grid;
+  position: relative;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 25% 50% 25%;
+  grid-template-areas: 
+    ". titles ."
+    "leftArrow carrousel rightArrow"
+    ". dots .";  
+
+    &__titles{
+      grid-area: titles;
+      @include centerer;
+      font-family: $font-family__secondary;
+      color: $font-color__main;
+      text-align: center;
+
+
+      &-h1{
+        font-size: rem-calc(10px);
+        text-transform: uppercase;
+      }
+      
+      &-h2{
+        font-family: $font-family__main;
+        font-size: rem-calc(24px);
+        font-weight: $font-weight-light;
+        margin-top: rem-calc(20px);
+        margin-bottom: rem-calc(20px);
+      }
+    }
+
+    &__left{
+      grid-area: leftArrow;
+
+      &__arrow{
+        @include vertical-align;
+        @include horizontal-align;
+        height: rem-calc(20px);
+        width: rem-calc(30px);
+        background: transparent url("/reference/assets/arrow-blog.png") no-repeat center center;
+        transform: translateX(rem-calc(30px));
+      }
+    }
+
+    &__right{
+      grid-area: rightArrow;
+
+      &__arrow{
+        @include vertical-align;
+        height: rem-calc(20px);
+        width: rem-calc(30px);
+        background: transparent url("/reference/assets/arrow-blog.png") no-repeat center center;
+        transform: translateX(rem-calc(50px)) scaleX(-1) scaleY(-1); 
+      }
+    }
+
+    &__carrousel{
+      grid-area: carrousel;
+      border: $border__style;
+      background-color: white;
+      position: relative;
+
+      &__inner{
+        @include centerer;
+        width: 90%;
+        height: 70%;
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+        grid-template-rows: 33.3% 33.3% 33.3%;
+        grid-template-areas: 
+          "img . title"
+          "img . entry"
+          "img . buttons";  
+
+          &__img{
+            grid-area: img;
+            height: 100%;
+            margin-right: 100px;
+
+          }
+          &__title{
+            grid-area: title;
+            font-family: $font-family__main;
+            color: $font-color__main;
+            font-size: rem-calc(30px);
+            padding-top: rem-calc(20px);
+
+
+          }
+          &__entry{
+            grid-area: entry;
+            font-family: $font-family__secondary;
+            color: $font-color__secondary;
+            font-size: rem-calc(12px);
+            line-height: 1.7;
+        
+
+          }
+          &__buttons{
+            grid-area: buttons;
+            padding-top: rem-calc(20px);
+            font-family: $font-color__main;
+            font-size: rem-calc(13px);
+
+            &-b1{
+              width: rem-calc(113px);
+              height: rem-calc(43px);
+              background-color: #D2E1FF;
+              color: #3A79FF;
+            }
+
+            &-b2{
+              width: rem-calc(210px);
+              height: rem-calc(43px);
+              background-color: transparent;
+              color: #A6B6DA;
+            }
+
+          }
+      }
+    }
+
+    &__dots{
+      grid-area: dots;
+      position: relative;
+
+      &-d{
+        @include horizontal-align;
+        margin-top: rem-calc(50px);
+        height: rem-calc(10px);
+        width: rem-calc(10px);
+        background-color: #D1D6E3;
+        border-radius: 50%;
+        display: inline-block;
+        transform: translateX(rem-calc(-20px));
+        margin-right: rem-calc(10px);
+      }
+    }
+
+}

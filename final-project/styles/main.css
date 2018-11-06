@@ -20,6 +20,7 @@
   width: 55%;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .header-elem-2 {
@@ -31,7 +32,12 @@
 .nav-bar {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-evenly;  
+}
+
+.nav-bar a:hover {
+  font-weight: bold;
+  color: #5381FE;
 }
 
 .social-icons {
@@ -55,7 +61,13 @@
   border-radius: 3%;
   margin-right: 2rem;
   width: 7.1rem;
-  height: 2.7rem; 
+  height: 2.7rem;
+  transition-duration: 0.4s;
+}
+
+.header-elem-2 button:hover {
+  box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24), 0 15px 48px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s;
 }
 
 .logo {
@@ -98,12 +110,44 @@ main.main-content {
   background: white;
 }
 
-img {
-  height: auto;
-}
-
 body {
   margin-top: 5rem;
 }
 
+a {
+  text-decoration: none;
+}
 
+/* Header logos hover functionality */
+
+#fb-logo-hover, #tl-logo-hover, #tw-logo-hover, #md-logo-hover {
+  display: none;
+}
+
+.fb-logos:hover #fb-logo {
+  display: none;
+}
+.fb-logos:hover #fb-logo-hover {
+  display: inline-block;
+}
+
+.tl-logos:hover #tl-logo {
+  display: none;
+}
+.tl-logos:hover #tl-logo-hover {
+  display: inline-block;
+}
+
+.tw-logos:hover #tw-logo {
+  display: none;
+}
+.tw-logos:hover #tw-logo-hover {
+  display: inline-block;
+}
+
+.md-logos:hover #md-logo {
+  display: none;
+}
+.md-logos:hover #md-logo-hover {
+  display: inline-block;
+}

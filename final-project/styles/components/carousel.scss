@@ -1,0 +1,132 @@
+/* Carousell */
+
+$color-dot: #D1D6E3;
+$color-dot-active: #5283FF;
+
+.carousel {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 1154px;
+    position: relative;
+    width: 100%;
+  }
+
+  .button__nav {
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+    opacity: 1;
+    transform: translate(0, -50%);
+    transition: opacity 0.3s ease;
+    position: absolute;
+
+    @include landscape-breakpoint {
+      display: block;
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  .button__nav--left {
+    top: 50%;
+    left: 0;
+  }
+
+  .button__nav--right {
+    top: 50%;
+    right: 0;
+  }
+
+  .cards__viewport {
+    display: block;
+    height: 100%;
+    max-width: rem-calc(300px);
+    min-height: rem-calc(454px);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    @include tablet-breakpoint {
+      max-width: rem-calc(728px);
+    }
+
+    @include landscape-breakpoint {
+      max-width: rem-calc(984px);
+    }
+
+    @include desktop-breakpoint {
+      max-width: rem-calc(1018px);
+    }
+  }
+
+  .cards__container {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    list-style: none;
+    width: 10000px;
+  }
+
+  .slide {
+    box-sizing: border-box;
+    float: left;
+    height: rem-calc(454px);
+    max-width: rem-calc(300px);
+    padding: rem-calc(30px) rem-calc(10px);
+    width: 100%;
+
+    @include tablet-breakpoint {
+      max-width: rem-calc(728px);
+      padding: rem-calc(30px) rem-calc(20px);
+    }
+
+    @include landscape-breakpoint {
+      max-width: rem-calc(984px);
+    }
+
+    @include desktop-breakpoint {
+      padding: rem-calc(30px);
+      max-width: rem-calc(1018px);
+    }
+  }
+
+  .card {
+    background: #FFFFFF;
+    border: 1px solid #D8E3FE;
+    box-sizing: border-box;
+    box-shadow: 0px 15px 50px #EFF4FF;
+    height: 100%;
+    width: 100%;
+  }
+
+  .dots__container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: rem-calc(71px);
+    width: 100%;
+
+    .dot {
+      background-color: $color-dot;
+      border-radius: 50%;
+      height: rem-calc(8px);
+      margin: 0 rem-calc(12px);
+      width: rem-calc(8px);
+
+      &--active {
+        background-color: $color-dot-active;
+      }
+    }
+  }
+}

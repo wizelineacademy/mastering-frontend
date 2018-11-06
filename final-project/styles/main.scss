@@ -1,9 +1,12 @@
 // This should be imported by the main.js file
 
-// test for scss variables
+// Colors
+$black: #000;
+$indianred: #D43F3F;
 $nav-text-color: #697CA6;
 $darkslateblue: #3D4F9F;
 $primary-color: #2a3fbb;
+$brightroyalblue: #4074F8;
 $royalblue: #3A79FF;
 $brightcornflowerblue: #4C85FF;
 $cornflowerblue: #5E81FE;
@@ -14,6 +17,7 @@ $lavender: #D2E1FF;
 $light-lavender: #D8E3FE;
 $aliceblue: #F1F5FF;
 $ghostwhite: #F5F8FF;
+$mistyrose: #FFD7D7;
 $white: #FFF;
 
 * {
@@ -27,6 +31,7 @@ $white: #FFF;
 
 
 $header__logo-size: 26px;
+$opensans: 'Open Sans', sans-serif;
 $quicksand: 'Quicksand', sans-serif;
 $roboto: 'Roboto', sans-serif;
 
@@ -97,9 +102,21 @@ p{
   padding: rem-calc(13px);
   font-size: rem-calc(13px);
   font-weight: 700;
+  cursor: pointer;
+  &:hover{
+    box-shadow: 1px 1px $darkslateblue;
+  }
   &--primary{
     background-color: $brightcornflowerblue;
     color: $white;
+  }
+  &--secondary{
+    background-color: $lavender;
+    color: $royalblue;
+  }
+  &--red{
+    background-color: $mistyrose;
+    color: $indianred;
   }
   &--bordered{
     border: solid 1px $lightgray;
@@ -140,13 +157,6 @@ p{
     display: inline-block;
     color: $nav-text-color;
   }
-
-  &__button {
-    background-color: $lavender;
-    font-family: $quicksand;
-    color: $royalblue;
-    padding: rem-calc(13px);
-  }
 }
 
 .main {
@@ -163,6 +173,14 @@ p{
   letter-spacing: 0.1em;
   color: $darkslateblue;
   display: block;
+}
+
+.horizontal-separator{
+  display: inline-block;
+  height: 1px;
+  line-height: 1px;
+  width: 100%;
+  border-top: solid 1px $lavender;
 }
 
 .header__nav--main, .header__button, .header__nav--social {
@@ -262,14 +280,63 @@ p{
     line-height: rem-calc(30px);
     color: $darkslateblue;
   }
-  & .features_item{
-    margin: 0 10%;
-    &__image{
-      border-radius: 50%;
-      background-color: $aliceblue;
-      display: block;
-      width: 69px;
-      height: 69px;
+  &__features{
+    margin-top: 93px;
+    display: flex;
+    & .features_item{
+      &__separator{
+        width: 28px;
+        float: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      &__image{
+        border-radius: 50%;
+        background-color: $aliceblue;
+        width: 69px;
+        height: 69px;
+        margin: 0 auto;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        .image {
+          display: block;
+          width: fit-content;
+          height: max-content;
+          margin: 0 auto;
+        }
+      }
+      &__title{
+        font-family: $opensans;
+        font-weight: bold;
+        font-size: rem-calc(14px);
+        line-height: rem-calc(25px);
+        margin-top: rem-calc(33px);
+        color: $brightroyalblue;
+      }
+    }
+  }
+  &__call_to_action{
+    display: flex;
+    justify-content: center;
+    margin-top: 92px;
+    .separator{
+      display: flex;
+      justify-content: center;
+      &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 8px;
+      }
+      &__text {
+        text-transform: uppercase;
+        font-family: $opensans;
+        font-size: rem-calc(11px);
+        line-height: rem-calc(19px);
+        color: $lightsteelblue;
+      }
     }
   }
 }

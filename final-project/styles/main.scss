@@ -5,7 +5,6 @@
   @return $size / 16px * 1rem;
 }
 
-
 /* Variables */
 
 $tablet-min-width: 768px;
@@ -28,26 +27,14 @@ $font-complementary: 'Open Sans', sans-serif;
 $color-title: #3D4F9F;
 $color-text: #8D96BD;
 $color-link-active: #5E81FE;
-$color-input-background: #EFEFF7;
-$color-input-text: #7A85AD;
 $color-play: #5E81FF;
-$color-primary: #4C85FF;
-$color-primary-light: #D2E1FF;
-$color-primary-dark: #3A79FF;
-$color-primary-inverse: #565F82;
-$color-complementary: #ADB4D2;
-$color-complementary-inverse: #C7D3FF;
-$color-border-complementary: #D1D1E4;
-$color-border-complementary-inverse: #A0B4FF;
-$color-secondary-light: #FFD7D7;
-$color-secondary-dark: #D43F3F;
-$color-normal: #E8ECF4;
-$color-normal-text: #7382A3;
 $color-section: #D8E3FE;
 $color-separator: #DAE4FE;
 $color-shadow: rgba(188, 199, 255, 0.75);
 $color-shadow-inverse: #6480E8;
 $color-white: #FFF;
+
+$z-index-header: 100;
 
 /* Mixins */
 
@@ -90,6 +77,10 @@ button {
   flex-direction: column;
 }
 
+.main {
+  padding-top: rem-calc(80px);
+}
+
 .section {
   display: flex;
   border-top: 0;
@@ -119,94 +110,6 @@ button {
   letter-spacing: 0.03em;
 }
 
-/* Butons */
-.button {
-  align-items: center;
-  border-radius: 2px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: $font-primary;
-  font-size: rem-calc(13px);
-  font-weight: 500;
-  justify-content: center;
-  min-height: rem-calc(43px);
-  min-width: rem-calc(130px);
-  padding: 0 rem-calc(12px);
-  opacity: 1;
-  transition: opacity 0.3s ease;
-
-  &:hover {
-    opacity: 0.75;
-  }
-
-  > .fas {
-    font-size: rem-calc(7px);
-    padding-left: rem-calc(7px);
-  }
-
-  &--normal {
-    background-color: $color-normal;
-    border: 1px solid transparent;
-    color: $color-normal-text;
-  }
-
-  &--primary {
-    background-color: $color-primary;
-    border: 1px solid transparent;
-    box-shadow: 0px 5px 15px $color-shadow;
-    color: $color-white;
-  }
-
-  &--primary-inverse {
-    background-color: $color-white;
-    border: 1px solid transparent;
-    box-shadow: 0px 5px 15px $color-shadow-inverse;
-    color: $color-primary-inverse;
-  }
-
-  &--complementary {
-    background-color: transparent;
-    border: 1px solid $color-border-complementary;
-    color: $color-complementary;
-  }
-
-  &--complementary-inverse {
-    background-color: transparent;
-    border: 1px solid $color-border-complementary-inverse;
-    color: $color-complementary-inverse;
-  }
-
-  &--primary-light {
-    background-color: $color-primary-light;
-    border: 1px solid transparent;
-    color: $color-primary-dark;
-  }
-
-  &--secondary-light {
-    background-color: $color-secondary-light;
-    border: 1px solid transparent;
-    color: $color-secondary-dark;
-  }
-}
-
-/* Inputs */
-.input-field {
-  background-color: $color-input-background;
-  border: 0;
-  border-radius: 5px;
-  box-sizing: border-box;
-  color: $color-input-text;
-  font-family: $font-primary;
-  font-size: rem-calc(13px);
-  font-weight: 600;
-  padding: rem-calc(21px);
-
-  &::placeholder {
-    color: $color-input-text;
-  }
-}
-
 .separator {
   background-color: $color-separator;
   border: 0;
@@ -217,7 +120,10 @@ button {
   }
 }
 
+@import 'components/button.scss';
+@import 'components/input.scss';
 @import 'components/navbar.scss';
+@import 'components/carousel.scss';
 @import 'components/collapsible-list.scss';
 @import 'header.scss';
 @import 'hero.scss';

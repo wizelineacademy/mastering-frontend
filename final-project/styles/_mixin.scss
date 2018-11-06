@@ -9,7 +9,13 @@
 }
 
 @mixin tablet-breakpoint {
-  @media only screen and (min-width: rem-calc(768px)) {
+  @media only screen and (max-width: rem-calc(768px)) {
+    @content;
+  }
+}
+
+@mixin landscape-breakpoint {
+  @media only screen and (max-width: rem-calc(1024px)) {
     @content;
   }
 }

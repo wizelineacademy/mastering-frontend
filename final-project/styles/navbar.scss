@@ -15,6 +15,12 @@ button { border:none; }
   justify-content: space-between;
   font-family: 'Quicksand', sans-serif;
   padding: rem-calc(18px) rem-calc(20px);
+  margin: 0 rem-calc(100px);
+
+  @include landscape-breakpoint {
+    margin: 0;
+  }
+
   
   &__logo {
     width: rem-calc($header__logo-size);
@@ -26,18 +32,19 @@ button { border:none; }
   
   &__nav {
     margin-top: rem-calc(32px-18px);
-    display: none;
+    display: block;
     
     &--mobile {
       margin-top: rem-calc(10px);
+      display: none;
       
       @include tablet-breakpoint {
-        display: none;
+        display: block;
       }
     }
     
     @include tablet-breakpoint {
-      display: block;
+      display: none;
       
       &--social {
         display: none;
@@ -68,14 +75,10 @@ button { border:none; }
     font-family: 'Quicksand', sans-serif;
     color: #3A79FF;
     padding: rem-calc(13px);
-    display: none;
+    display: block;
     
     @include tablet-breakpoint {
-      display: block;
+      display: none;
     }
   }
-}
-
-.main {
-  border-top: #D8E3FE solid 1px;
 }

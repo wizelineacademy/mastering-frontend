@@ -6,7 +6,12 @@
   position: relative;
   background-color: lightgrey;
   background: url("/reference/assets/hero.png") no-repeat center center;
-  background-size: auto;
+  background-size: 100%;
+
+  @include laptop-view{
+    background-size: auto;
+    //background: url("/reference/assets/clouds.png") no-repeat center center;
+  }
 
   &__inner-content{
     @include centerer;

@@ -20,5 +20,32 @@
     height: rem-calc(29px);
     position: relative;
     }
+
+  
+  }
+
+
+  @include tablet-view{
+    height: rem-calc(226px);
+    position: relative;
+
+    &__list{
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      
+
+      &__logo{
+        padding: rem-calc(40px);
+        left: 10%;
+      }
+
+      :nth-child(4), :nth-child(5){
+        left: 25%;
+      }
+
+
+    }
+
   }
 }

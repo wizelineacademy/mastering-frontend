@@ -1,9 +1,11 @@
 @import "./variables";
 
 .bottom-header{
-  height: rem-calc(287px)  !important;
+  height: rem-calc(287px) !important;
   position: relative;
-  display: flex;
+  //display: flex;
+  bottom: 0;
+  
 
   &__inner{
     @include centerer;
@@ -12,10 +14,21 @@
 }
 
 .copyright{
+  @include centerer;
   font-size: rem-calc(12px);
   font-family: $font-family__main;
   color: #AEB8D0;
   height: fit-content;
   width: fit-content;
-  transform: translate(rem-calc(255px), rem-calc(200px)); 
+  transform: translate(rem-calc(-400px), rem-calc(50px)); 
+
+  @include tablet-view{
+    transform: translate(rem-calc(-200px), rem-calc(50px)); 
+  }
+
+  @include mobile-view{
+    transform: translate(rem-calc(-100px), rem-calc(50px)); 
+
+  }
+  
 }

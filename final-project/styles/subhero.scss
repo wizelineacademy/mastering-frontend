@@ -3,4 +3,10 @@
 .subhero{
   height: rem-calc(447px);
   background: url("/reference/assets/blue-clouds-bg.png") no-repeat center center;
+  background-size: 100%;
+
+  @include laptop-view{
+    background-size: auto;
+  }
+
 }

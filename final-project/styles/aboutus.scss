@@ -189,4 +189,60 @@
 
   }
 
+
+  @include tablet-view{
+    height: rem-calc(800px);
+
+    &__inner-container{
+      width: 100%;
+
+      background: url("/reference/assets/clouds.png") no-repeat center center;
+      background-size: 100%;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "h1 h1 h1 h1"
+        "h2 h2 h2 h2"
+        "ul ul ul ul"
+        ". bt bt .";    
+
+        &_ul{
+          grid-area: ul;
+          list-style: none;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: auto;
+          grid-template-areas: "l1 l2 l3 l4";
+
+          &__li-1__p{
+            padding-left: 15%;
+            padding-right: 15%;
+          }
+          &__li-2__p{
+            padding-left: 15%;
+            padding-right: 15%;
+          }
+          &__li-3__p{
+            padding-left: 15%;
+            padding-right: 15%;
+          }
+          &__li-4__p{
+            padding-left: 15%;
+            padding-right: 15%;
+          }
+
+        }
+
+        &_bt-p{
+          transform: translate(rem-calc(175px), rem-calc(13px));
+        }
+        
+
+
+
+    }
+
+
+  }
+
 }

@@ -60,4 +60,12 @@
     }
 
   }
+
+  @include tablet-view{
+
+    &__productivity__inner{
+      transform: translate(20%, -50%);
+    }
+  }
+
 }

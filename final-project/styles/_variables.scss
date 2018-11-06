@@ -40,6 +40,25 @@ $font-weight-bold: 600;
   }
 }
 
+@mixin laptop-view{
+  @media only screen and (max-width: rem-calc(1440px)){
+    @content;
+  }
+}
+
+@mixin tablet-view{
+  @media only screen and (max-width: rem-calc(768px)){
+    @content;
+  }
+}
+
+@mixin mobile-view{
+  @media only screen and (max-width: rem-calc(375px)){
+    @content;
+  }
+}
+
+
 @mixin centerer {
   position: absolute;
   top: 50%;

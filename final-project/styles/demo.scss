@@ -1,5 +1,6 @@
 @import "./variables";
 
+
 .demoapp{
   height: rem-calc(776px);
   border: $border__style;
@@ -63,22 +64,51 @@
       width: rem-calc(130px);
       height: rem-calc(43px);
     }
-
   }
-  
+
   &__img-area{
-    //@include centerer;
     margin: 0;
     padding: 0;
-    height: 50%;
     align-content: flex-end;
     img{
       position: absolute;
       width: 60%;
+      top: 10%;
       right: 0;
       bottom: 0;
+
+      @include laptop-view{
+        top: 20%;
+      }
     }
   }
 
+  @include tablet-view{
+
+    height: rem-calc(600px);
+      
+    &__text-area{
+      width: 60%;
+      transform: translate(0);
+      top: 10%;
+      position: relative;
+
+      &-button1{
+        transform: translateY(550%);
+      }
+      &-button2{
+        transform: translateY(550%);
+      }
+    }
+
+    &__img-area{
+      img{
+        top: 45%;
+        left: 25%;
+        width: 75%;
+      }
+    }
+
+  }
 
 }

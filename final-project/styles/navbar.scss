@@ -6,6 +6,8 @@
   justify-content: space-between;
   font-family: 'Quicksand', sans-serif;
   padding: rem-calc(18px) rem-calc(20px);
+  width: 90%;
+  @include horizontal-align;
   
   &__logo {
     width: rem-calc($header__logo-size);

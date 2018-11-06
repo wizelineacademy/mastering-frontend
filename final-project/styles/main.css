@@ -1,0 +1,109 @@
+/* This should be imported by the main.js file */
+
+.header {
+  color: #697CA6;
+  font-family: 'Quicksand', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  min-height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid;
+  border-color: #D8E3FE;
+}
+
+.header-elem-1 {
+  width: 55%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-elem-2 {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-icons {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-icons img {
+  display: inline-block;
+  width: auto;
+  height: 1rem;
+}
+
+.header-elem-2 button {
+  color: #3A79FF;
+  background-color: #D2E1FF;
+  font-weight: bold;
+  border: 0;
+  border-radius: 3%;
+  margin-right: 2rem;
+  width: 7.1rem;
+  height: 2.7rem; 
+}
+
+.logo {
+  width: 1.7rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #5E81FE;
+  margin-left: 2rem;
+}
+
+.hero {
+  width: 100%;
+  height: 35.6rem;
+  background-image: url("../reference/assets/hero.png");
+}
+
+.plan-and-manage {
+  width: 100%;
+  height: 48.5rem;
+  background-image: url("../reference/assets/plan-manage.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+main.main-content {
+  top: 5rem;
+  width: 100%;
+}
+
+.customers {
+  min-height: 9.13rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.features {
+  min-height: 55.3rem;
+  background: white;
+}
+
+img {
+  height: auto;
+}
+
+body {
+  margin-top: 5rem;
+}
+
+

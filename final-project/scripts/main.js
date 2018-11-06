@@ -1,4 +1,4 @@
-import "../styles/main.scss";
+import "../styles/main.css";
 
 // testing that `const` and arrow functions transpile correctly
 const before = "Hello -world!";

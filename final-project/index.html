@@ -43,10 +43,61 @@
         <img src="../reference/assets/icons/bars.png"></img>
       </div>
     </header>
-    <main class="main">
-  
+    <main>
+      <div class="hero">
+        <div class="hero__image"></div>
+        <div class="hero__content">
+          <div class="hero__content-header">Plan Your Life</div>
+          <div class="hero__content-title">Increase your <span class="bold">productivity</span></div>
+          <div class="hero__content-description">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+          </div>
+          <img class="hero__content-icon-play" src="../reference/assets/icons/play-button.png"></img>
+        </div>
+      </div>
     </main>
+    <div class="customer">
+      <div class="customer__container">
+        <div class="customer__container-image">
+          <img src="../reference/assets/customers/bitbucket.png"></img>
+        </div>
+        <div class="customer__container-image">
+          <img src="../reference/assets/customers/apple-watch.png"></img>
+        </div>
+        <div class="customer__container-image">
+          <img src="../reference/assets/customers/facebook.png"></img>
+        </div>
+        <div class="customer__container-image">
+          <img src="../reference/assets/customers/atlassian.png"></img>
+        </div>
+        <div class="customer__container-image">
+         <img src="../reference/assets/customers/audi.png"></img>
+        </div>
+      </div>
+
+    </div>
     <script src="./dist/bundle.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script>
+      window.onload = function () {
+        var carousel = new Carourel('.customer__container-image');
+        carousel.init();
+
+        window.addEventListener("resize", onResizeCustomers);
+
+
+
+        function onResizeCustomers() {
+          var wh = window.innerWidth;
+
+          if(wh <= 415 && !carousel.isStarted()){
+            carousel.init();
+          }else if(wh > 415 && carousel.isStarted){
+            carousel.stopInterval();
+          }
+        }
+      }
+    </script>
   </body>
 </html>
 

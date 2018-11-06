@@ -1,21 +1,7 @@
-@function rem-calc($size) {
-  @return $size / 16px * 1rem;
-}
+@import "_mixin.scss";
 
 $nav-text-color: #697CA6;
 $header__logo-size: 26px;
-
-@mixin tablet-breakpoint {
-  @media only screen and (min-width: rem-calc(768px)) {
-    @content;
-  }
-}
-
-@mixin desktop-breakpoint {
-  @media only screen and (min-width: rem-calc(992px)) {
-    @content;
-  }
-}
 
 * {
   padding: 0;

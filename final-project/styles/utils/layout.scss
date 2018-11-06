@@ -28,13 +28,12 @@
   }
 
   @include media-breakpoint-down(xs) {
-    margin: rem-calc(20px);
+    margin: 0;
+    padding: 0 rem-calc(20px);
   }
 
   &--d-row {
     @extend .section-container;
     flex-direction: row;
   }
-
-  //padding-left:
 }

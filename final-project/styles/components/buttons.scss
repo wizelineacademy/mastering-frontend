@@ -1,0 +1,32 @@
+.btn {
+  border-radius: 2px;
+  font-family: Quicksand, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 13px;
+  text-align: center;
+  padding: rem-calc(13px) rem-calc(25px);
+  white-space: nowrap;
+  display: inline-block;
+
+  &--primary {
+  }
+
+  &--primary-raised {
+    @extend .btn;
+    background: #4d6ce1;
+    box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
+
+    color: #ffffff;
+  }
+
+  &--default {
+    @extend .btn;
+    background: transparent;
+    border: 1px solid #d1d1e4;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #adb4d2;
+  }
+}

@@ -36,10 +36,13 @@
   }
 
   &__info {
-    width: rem-calc(380px);
+    $info-width: rem-calc(380px);
+    width: $info-width;
+    min-width: $info-width;
 
     @include media-breakpoint-down(xs) {
       width: 100%;
+      min-width: 100%;
     }
 
     &__title {
@@ -67,10 +70,36 @@
       font-family: "Roboto", sans-serif;
       font-size: rem-calc(15px);
       line-height: rem-calc(29px);
-      //padding: 0 rem-calc(80px);
-      //margin-bottom: rem-calc(20px);
+    }
+  }
+
+  &__button-group {
+    $margin-bottom: rem-calc(27px);
+    margin-top: rem-calc(47px);
+    margin-bottom: $margin-bottom;
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+      margin-top: 0;
+    }
+
+    &--mobile {
+      margin-top: 0;
+      margin-bottom: $margin-bottom;
+
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
 
       @include media-breakpoint-down(xs) {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+
+        [class^="btn--"]{
+          flex: 1;
+        }
       }
     }
   }

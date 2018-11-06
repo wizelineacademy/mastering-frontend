@@ -28,8 +28,33 @@
     content: url(/reference/assets/icons/menu.png);
   }
 
-  &--play-button {
+  &--play {
     @extend .icon;
     content: url(/reference/assets/icons/video-play.png);
+  }
+
+  &--play-inverse {
+    @extend .icon;
+    content: url(/reference/assets/icons/video-play-inverse.png);
+  }
+
+  &--home {
+    @extend .icon;
+    content: url(/reference/assets/icons/home.png);
+  }
+
+  &--folder {
+    @extend .icon;
+    content: url(/reference/assets/icons/folder.png);
+  }
+
+  &--chat {
+    @extend .icon;
+    content: url(/reference/assets/icons/chat.png);
+  }
+
+  &--upload {
+    @extend .icon;
+    content: url(/reference/assets/icons/upload.png);
   }
 }

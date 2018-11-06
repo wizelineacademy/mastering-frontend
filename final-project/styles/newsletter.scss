@@ -63,4 +63,16 @@
       }
     }
   }
+
+  @include tablet-view{
+    &__inner{
+      width: 90%;
+      &__form{
+        &-email{
+          width: rem-calc(150px);
+        }
+
+      }
+    }
+  }
 }

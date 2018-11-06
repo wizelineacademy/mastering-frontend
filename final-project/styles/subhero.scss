@@ -4,6 +4,65 @@
   height: rem-calc(447px);
   background: url("/reference/assets/blue-clouds-bg.png") no-repeat center center;
   background-size: 100%;
+  text-align: center;
+  position: relative;
+
+  &__inner{
+    @include centerer;
+
+    height: rem-calc(300px);
+    width: rem-calc(712px);
+    font-family: $font-family__secondary;
+    color: white;
+
+    &__h1{
+      font-size: rem-calc(10px);
+      text-transform: uppercase;
+    }
+
+    &__h2{
+      font-family: $font-family__main;
+      font-size: rem-calc(48px);
+      font-weight: $font-weight-light;
+      margin-top: rem-calc(20px);
+      margin-bottom: rem-calc(20px);
+      &__bold{
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    &__p{
+      font-size: rem-calc(15px);
+      line-height: rem-calc(28px);
+      padding-top: 5%;
+    }
+
+    &__buttons{
+      padding-top: 5%;
+      height: rem-calc(43px);
+
+      &-b1{
+        font-family: $font-family__secondary;
+        width: rem-calc(130px);
+        height: 100%;
+
+      }
+
+      &-b2{
+        font-family: $font-family__secondary;
+        width: rem-calc(155px);
+        height: 100%;
+        background-color: transparent;
+        border: #A0B4FF 1px solid;
+        color: white;
+
+      }
+
+
+    }
+
+
+  }
 
   @include laptop-view{
     background-size: auto;

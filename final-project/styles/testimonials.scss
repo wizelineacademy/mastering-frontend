@@ -65,4 +65,34 @@
 
     }
   }
+
+  @include tablet-view{
+
+    &__inner{
+      display: block;
+      height: 100%;
+      width: 100%;
+
+      &__static{
+        width: 100%;
+        padding-left: 10%;
+        padding-bottom: 5%;
+      }
+
+      &__carrousel{
+        display: flex;
+        position: relative;
+        left: 13%;
+
+        &__message{
+          &-img{
+            @include horizontal-align;
+            transform: translate(-45%, -60%);
+          }
+
+        }
+      }
+    }
+  }
+
 }

@@ -1,34 +1,16 @@
 @import "./variables";
 
-.bottom-header{
-  height: rem-calc(287px) !important;
-  position: relative;
-  //display: flex;
-  bottom: 0;
-  
 
-  &__inner{
-    @include centerer;
-    width: 90%;
-  }
+.bottom-header {
+  height: rem-calc(200px);
+  position: relative;
+  padding-top: 10%;
 }
 
 .copyright{
-  @include centerer;
-  font-size: rem-calc(12px);
-  font-family: $font-family__main;
+  font-size: rem-calc(14px);
   color: #AEB8D0;
-  height: fit-content;
-  width: fit-content;
-  transform: translate(rem-calc(-400px), rem-calc(50px)); 
-
-  @include tablet-view{
-    transform: translate(rem-calc(-200px), rem-calc(50px)); 
-  }
-
-  @include mobile-view{
-    transform: translate(rem-calc(-100px), rem-calc(50px)); 
-
-  }
-  
+  font-family: $font-family__secondary;
+  line-height: 2;
+  padding-left: 24%;
 }

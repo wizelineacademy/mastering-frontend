@@ -20,19 +20,25 @@ $color-dot-active: #5283FF;
   }
 
   .button__nav {
+    align-items: center;
     background-color: transparent;
+    border-radius: 50%;
     cursor: pointer;
     display: none;
+    height: rem-calc(40px);
+    justify-content: center;
     opacity: 1;
     transform: translate(0, -50%);
     transition: opacity 0.3s ease;
     position: absolute;
+    width: rem-calc(40px);
 
     @include landscape-breakpoint {
-      display: block;
+      display: flex;
     }
 
     &:hover {
+      background-color: #FFF;
       opacity: 0.75;
     }
   }

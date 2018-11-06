@@ -2,4 +2,54 @@
 .quotes {
   background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
   min-height: rem-calc(480px);
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include landscape-breakpoint {
+      flex-direction: row;
+    }
+  }
+
+  &__column {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+
+    @include landscape-breakpoint {
+      justify-content: flex-end;
+      width: 50%;
+    }
+  }
+
+  &__content {
+    margin: rem-calc(26px);
+
+    @include landscape-breakpoint {
+      margin-right: rem-calc(100px);
+      max-width: rem-calc(333px);
+    }
+  }
+
+  &__title {
+    color: $color-title;
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: $font-size-2xl;
+    padding: rem-calc(30px) 0 rem-calc(16px);
+  }
+
+  .testimonials {
+    background: #FFF;
+    border: 1px solid #D8E3FE;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 50px #F3F5FA;
+    height: rem-calc(175px);
+    margin: rem-calc(20px);
+    width: rem-calc(423px);
+  }
 }

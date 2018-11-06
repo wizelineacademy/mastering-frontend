@@ -13,6 +13,7 @@ font-variant:100;
 h1 {
   color: $primary-color;
 }
+
 @function rem-calc($size) {
   @return $size / 16px * 1rem;
 }
@@ -39,7 +40,7 @@ $header__logo-size: 26px;
 
 button { border:none; } 
 
-  .header {
+.header {
   display: flex;
   justify-content: space-between;
   font-family: 'Quicksand', sans-serif;
@@ -126,7 +127,49 @@ button { border:none; }
     max-width: 1206px;
   }
 }
-#hero-banner{
+
+.hero-banner{
   min-height: 570px;
   background-image: url('/reference/assets/hero.png')
+}
+
+.customers{
+  display: flex;
+  justify-content: space-around;
+  &__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__item{
+      display: flex;
+      flex-direction: row;
+      text-indent: -999px;
+      &__bitbucket{
+        width: 117px;
+        height: 29px;
+        background-image: url('/reference/assets/customers/bitbucket.png')
+      }
+      &__apple-watch{
+        width: 117px;
+        height: 25px;
+        background-image: url('/reference/assets/customers/apple-watch.png')
+      }
+      &__facebook{
+        width: 117px;
+        height: 23px;
+        background-image: url('/reference/assets/customers/facebook.png')
+      }
+      &__atlassian{
+        width: 117px;
+        height: 25px;
+        background-image: url('/reference/assets/customers/atlassian.png')
+      }
+      &__audi{
+        width: 117px;
+        height: 29px;
+        background-image: url('/reference/assets/customers/audi.png')
+      }
+     }
+  }
+  
 }

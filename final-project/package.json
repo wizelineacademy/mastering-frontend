@@ -2,8 +2,9 @@
   "name": "webpack-sass",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack -p"
+    "dev": "webpack-dev-server --open --mode development",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -17,7 +18,7 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "webpack": "^4.5.0",
-    "webpack-cli": "^3.1.1",
+    "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.1"
   },
   "license": "ISC",

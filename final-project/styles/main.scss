@@ -1,13 +1,145 @@
 // This should be imported by the main.js file
 
 // test for scss variables
-$primary-color: #2a3fbb;
+// $primary-color: #2a3fbb;
+//
+// * {
+//   padding: 0;
+//   margin: 0;
+// }
+//
+// h1 {
+//   color: $primary-color;
+// }
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+@function rem-calc($size) {
+  @return $size / 16px * 1rem;
+}
+
+$nav-text-color: #697CA6;
+$header__logo-size: 26px;
 
 * {
   padding: 0;
   margin: 0;
 }
 
-h1 {
-  color: $primary-color;
+button { border:none; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Quicksand', sans-serif;
+  padding: rem-calc(18px) rem-calc(20px);
+
+  &__logo {
+    width: rem-calc($header__logo-size);
+    height: rem-calc($header__logo-size);
+    margin-top: rem-calc(26px-18px);
+    background-color: #5E81FE;
+    border-radius: 50%;
+  }
+
+  &__nav {
+    margin-top: rem-calc(32px-18px);
+    &--mobile {
+      margin-top: rem-calc(10px);
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__nav-link {
+    font-size: rem-calc(12px);
+    margin: 0 1.25rem;
+    display: inline-block;
+    color: $nav-text-color;
+  }
+
+  &__button {
+    background-color: #D2E1FF;
+    font-family: 'Quicksand', sans-serif;
+    color: #3A79FF;
+    padding: rem-calc(13px);
+  }
+}
+
+.main {
+  border-top: #D8E3FE solid 1px;
+}
+
+// TODO create break-points
+.header__nav--main, .header__nav--social {
+  display: none;
+}
+.header__button{
+  display: none;
+}
+
+@media only screen and (min-width: rem-calc(768px)){
+  .header__nav--main, .header__button {
+    display: block;
+  }
+  .header__nav--mobile {
+    display: none;
+  }
+}
+.hero-text-area{
+  position: relative;
+  top:-400px;
+}
+.hero-section{
+  text-align: center;
+  height: 570px;
+}
+.hero-text-area h1{
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.plan-text-area h1{
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+h1{
+  color: #3D4F9F;
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  font-weight: lighter;
+}
+h2{
+  color: #3D4F9F;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+p{
+  color: #3D4F9F;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+.customers-section{
+  display: flex;
+  justify-content: space-between;
+  margin: 58px 276px 58px 276px;
+}
+.circle{
+  width: 52px;
+  height: 52px;
+  background-color: #5E81FF;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.play-button{
+  margin: 21px 20px 20px 22px;
+}
+.plan-text-area{
+  width: 413px;
+  height: 352px;
+  margin: 208px 756px 216px 271px;
 }

@@ -192,10 +192,8 @@
 
   @include tablet-view{
     height: rem-calc(800px);
-
     &__inner-container{
       width: 100%;
-
       background: url("/reference/assets/clouds.png") no-repeat center center;
       background-size: 100%;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -230,19 +228,37 @@
             padding-left: 15%;
             padding-right: 15%;
           }
-
         }
-
         &_bt-p{
           transform: translate(rem-calc(175px), rem-calc(13px));
         }
-        
-
-
-
     }
+  }
 
+  @include mobile-view{
+    &__inner-container{
+        width: 90%;
+        background: white;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "h1 h1 h1"
+          "h2 h2 h2"
+          "ul ul ul"
+          "bt bt bt";
 
+          &_ul{
+            grid-template-columns: 2fr 1fr 2fr;
+            grid-template-rows: rem-calc(250px);
+            grid-template-areas: 
+              "l1 . l2"
+              "l3 . l4";
+          }
+          &_bt-p{
+            transform: translate(rem-calc(155px), rem-calc(13px));
+          }
+      }
+    
   }
 
 }

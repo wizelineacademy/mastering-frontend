@@ -178,6 +178,11 @@
 
   @include mobile-view{
     padding-top: 5%;
+
+    &__right__arrow, &__left__arrow{
+      display: none;
+    }
+
     &__carrousel__inner{
       padding-bottom: 5%;
 

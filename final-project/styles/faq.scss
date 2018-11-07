@@ -38,6 +38,7 @@
         height: fit-content;
         position: relative;
         border-bottom: $border__style;
+        cursor: pointer;
 
         &__question{
           padding-left: rem-calc(10px);
@@ -56,7 +57,7 @@
           height: fit-content;
           width: auto;
           font-family: $font-family__main;
-          display: flex;
+          display: none;
 
           &__text{
             width: 55%;
@@ -101,30 +102,5 @@
         }
       }
     }
-  }
-}
-.item1{
-  &__answer{
-    display: none;
-  }
-}
-.item2{
-  &__answer{
-    display: none;
-  }
-}
-.item3{
-  &__answer{
-    display: flex;
-  }
-}
-.item4{
-  &__answer{
-    display: none;
-  }
-}
-.item5{
-  &__answer{
-    display: none;
   }
 }

@@ -11,6 +11,19 @@
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="./scripts/blog.js"></script>
+  <script src="./scripts/faq.js"></script>
+  <script src="./scripts/sponsors.js"></script>
+
+  <script>
+    window.onload = function() {
+      populateBlog();
+      window.setInterval(function(){
+        moveBlogRight();
+      }, 2000);
+    };
+  </script>
+
 </head>
 
 <body>
@@ -48,9 +61,9 @@
     </div>
   </header>
 
-  
+
   <main class="main">
-    
+
     <section class="hero">
       <div class="hero__inner-content">
         <h1 class="hero__inner-content-h1">Plan your life</h1>
@@ -64,11 +77,11 @@
 
     <section class='sponsors'>
       <ul class='sponsors__list'>
-        <li class='sponsors__list__logo'><img src="./reference/assets/customers/bitbucket.png"></li>
-        <li class='sponsors__list__logo'><img src="./reference/assets/customers/apple-watch.png"></li>
-        <li class='sponsors__list__logo'><img src="./reference/assets/customers/facebook.png"></li>
-        <li class='sponsors__list__logo'><img src="./reference/assets/customers/atlassian.png"></li>
-        <li class='sponsors__list__logo'><img src="./reference/assets/customers/audi.png"></li>
+        <li class='sponsors__list__logo' id="sponsor-1"><img class='sponsors__list__logo-img' src="./reference/assets/customers/bitbucket.png"></li>
+        <li class='sponsors__list__logo' id="sponsor-2"><img class='sponsors__list__logo-img' src="./reference/assets/customers/apple-watch.png"></li>
+        <li class='sponsors__list__logo' id="sponsor-3"><img class='sponsors__list__logo-img' src="./reference/assets/customers/facebook.png"></li>
+        <li class='sponsors__list__logo' id="sponsor-4"><img class='sponsors__list__logo-img' src="./reference/assets/customers/atlassian.png"></li>
+        <li class='sponsors__list__logo' id="sponsor-5"><img class='sponsors__list__logo-img' src="./reference/assets/customers/audi.png"></li>
       </ul>
     </section>
 
@@ -150,50 +163,38 @@
       </div>
     </section>
 
+
     <section class="blog">
-      <div class="blog__titles">
-        <h1 class="blog__titles-h1">our resources</h1>
-        <h2 class="blog__titles-h2">Start reading our blog</h2>
-      </div>
-      <div class="blog__left">
-        <p class="blog__left__arrow"></p>
-      </div>
-      <section class='blog__carrousel'>
-        <div class="blog__carrousel__inner">
-          <img class="blog__carrousel__inner__img" src="./reference/assets/placeholder.png">
-          <p class="blog__carrousel__inner__title">How to start planning</p>
-          <p class="blog__carrousel__inner__entry">Quidam vocibus eum ne, erat consectetuer voluptatibus ut
-            nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei
-            ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...</p>
-          <div class="blog__carrousel__inner__buttons">
-            <button class="blog__carrousel__inner__buttons-b1">Read Now</button>
-            <button class="blog__carrousel__inner__buttons-b2">Add to you bookmarks</button>
-          </div>
+        <div class="blog__titles">
+          <h1 class="blog__titles-h1">our resources</h1>
+          <h2 class="blog__titles-h2">Start reading our blog</h2>
         </div>
+        <div class="blog__left">
+          <p class="blog__left__arrow" onclick="moveBlogLeft()"></p>
         </div>
+        <section class='blog__carrousel'>
+          <div class="blog__carrousel__inner" id="blog-carousel"></div>
+        </section>
+        <div class="blog__right">
+          <p class="blog__right__arrow" onclick="moveBlogRight()" ></p>
+        </div>
+        <div class="blog__dots" id="blog-dots"></div>
       </section>
-      <div class="blog__right">
-        <p class="blog__right__arrow"></p>
-      </div>
-      <div class="blog__dots">
-        <p class="blog__dots-d"></p>
-        <p class="blog__dots-d"></p>
-        <p class="blog__dots-d"></p>
-      </div>
-    </section>
 
     <section class="testimonials">
       <div class="testimonials__inner">
         <div class="testimonials__inner__static">
           <h1 class="testimonials__inner__static-h1">Testiomnials</h1>
           <h2 class="testimonials__inner__static-h2">Customer's quotes</h2>
-          <p class="testimonials__inner__static-p">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.</p>
+          <p class="testimonials__inner__static-p">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
+            atqui laudem an.</p>
         </div>
         <section class="testimonials__inner__carrousel">
           <div class="testimonials__inner__carrousel__message">
-            <p class="testimonials__inner__carrousel__message-p">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
-              </p>
-            <img src="./reference/assets/62x62.png" class="testimonials__inner__carrousel__message-img"/>
+            <p class="testimonials__inner__carrousel__message-p">Quidam vocibus eum ne, erat consectetuer voluptatibus
+              ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+            </p>
+            <img src="./reference/assets/62x62.png" class="testimonials__inner__carrousel__message-img" />
           </div>
         </section>
       </div>
@@ -206,11 +207,11 @@
         <ul class="faq__inner-ul">
 
           <li class="faq__inner-ul-li item1">
-            <div class="faq__inner-ul-li__question item1__question">
-              <img class='faq__inner-ul-li__question__icon item1__question__icon' src="./reference/assets/arrow-down.png" />
-              <p class='faq__inner-ul-li__question__title item1__question__title'>Reque insolens in vel?</p>
+            <div class="faq__inner-ul-li__question item1__question" id="faq-item-1" onclick="showAnswer(this)">
+              <img class='faq__inner-ul-li__question__icon item1__question__icon' id="faq-item-1-img" src="./reference/assets/arrow-down.png" />
+              <p class='faq__inner-ul-li__question__title item1__question__title' >Reque insolens in vel?</p>
             </div>
-            <div class="faq__inner-ul-li__answer item1__answer">
+            <div class="faq__inner-ul-li__answer item1__answer" id="faq-item-1-answer">
               <p class="faq__inner-ul-li__answer__text item1__answer__text">
                 Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
                 ius an, in mel diceret persecuti.
@@ -220,12 +221,12 @@
           </li>
 
           <li class="faq__inner-ul-li item2">
-            <div class="faq__inner-ul-li__question item2__question">
-              <img class='faq__inner-ul-li__question__icon item2__question__icon' src="./reference/assets/arrow-down.png" />
+            <div class="faq__inner-ul-li__question item2__question" id="faq-item-2" onclick="showAnswer(this)">
+              <img class='faq__inner-ul-li__question__icon item2__question__icon' id="faq-item-2-img"  src="./reference/assets/arrow-down.png" />
               <p class='faq__inner-ul-li__question__title item2__question__title'>Vis rebum error graecis ea, id sit
                 postea accusamus?</p>
             </div>
-            <div class="faq__inner-ul-li__answer item2__answer">
+            <div class="faq__inner-ul-li__answer item2__answer"  id="faq-item-2-answer">
               <p class="faq__inner-ul-li__answer__text item2__answer__text">
                 Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
                 ius an, in mel diceret persecuti.
@@ -235,11 +236,11 @@
           </li>
 
           <li class="faq__inner-ul-li item3">
-            <div class="faq__inner-ul-li__question item3__question">
-              <img class='faq__inner-ul-li__question__icon item3__question__icon' src="./reference/assets/arrow-down.png" />
+            <div class="faq__inner-ul-li__question item3__question" id="faq-item-3" onclick="showAnswer(this)">
+              <img class='faq__inner-ul-li__question__icon item3__question__icon' id="faq-item-3-img" src="./reference/assets/arrow-down.png" />
               <p class='faq__inner-ul-li__question__title item3__question__title'>Lorem repudiandae ne nec?</p>
             </div>
-            <div class="faq__inner-ul-li__answer item3__answer">
+            <div class="faq__inner-ul-li__answer item3__answer"  id="faq-item-3-answer">
               <p class="faq__inner-ul-li__answer__text item3__answer__text">
                 Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
                 ius an, in mel diceret persecuti.
@@ -249,12 +250,12 @@
           </li>
 
           <li class="faq__inner-ul-li item4">
-            <div class="faq__inner-ul-li__question item4__question">
-              <img class='faq__inner-ul-li__question__icon item4__question__icon' src="./reference/assets/arrow-down.png" />
+            <div class="faq__inner-ul-li__question item4__question" id="faq-item-4" onclick="showAnswer(this)">
+              <img class='faq__inner-ul-li__question__icon item4__question__icon' id="faq-item-4-img" src="./reference/assets/arrow-down.png" />
               <p class='faq__inner-ul-li__question__title item4__question__title'>Ad dicit numquam vel. Et eos iudico
                 feugait percipitur?</p>
             </div>
-            <div class="faq__inner-ul-li__answer item4__answer">
+            <div class="faq__inner-ul-li__answer item4__answer"  id="faq-item-4-answer">
               <p class="faq__inner-ul-li__answer__text item4__answer__text">
                 Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
                 ius an, in mel diceret persecuti.
@@ -264,12 +265,12 @@
           </li>
 
           <li class="faq__inner-ul-li item5">
-            <div class="faq__inner-ul-li__question item5__question">
-              <img class='faq__inner-ul-li__question__icon item5__question__icon' src="./reference/assets/arrow-down.png" />
+            <div class="faq__inner-ul-li__question item5__question" id="faq-item-5" onclick="showAnswer(this)">
+              <img class='faq__inner-ul-li__question__icon item5__question__icon' id="faq-item-5-img" src="./reference/assets/arrow-down.png" />
               <p class='faq__inner-ul-li__question__title item5__question__title'>Sea no dico percipitur. Fierent
                 constituam definitiones id eum?</p>
             </div>
-            <div class="faq__inner-ul-li__answer item5__answer">
+            <div class="faq__inner-ul-li__answer item5__answer"  id="faq-item-5-answer">
               <p class="faq__inner-ul-li__answer__text item5__answer__text">
                 Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
                 ius an, in mel diceret persecuti.
@@ -284,13 +285,14 @@
 
     <section class='subhero'>
       <div class="subhero__inner">
-          <h1 class="subhero__inner__h1">Plan your life</h1>
-          <h2 class="subhero__inner__h2">Get <span class="subhero__inner__h2__bold">started</span> now</h2>
-          <p class="subhero__inner__p">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
-          <div class="subhero__inner__buttons">
-            <button class="subhero__inner__buttons-b1">View pricing</button>
-            <button class="subhero__inner__buttons-b2">Read documentation</button>
-          </div>
+        <h1 class="subhero__inner__h1">Plan your life</h1>
+        <h2 class="subhero__inner__h2">Get <span class="subhero__inner__h2__bold">started</span> now</h2>
+        <p class="subhero__inner__p">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem
+          an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
+        <div class="subhero__inner__buttons">
+          <button class="subhero__inner__buttons-b1">View pricing</button>
+          <button class="subhero__inner__buttons-b2">Read documentation</button>
+        </div>
       </div>
     </section>
 
@@ -311,39 +313,39 @@
   </main>
 
   <div class="bottom-header">
-      <header class="header">
-          <div class="header__logo"></div>
-          <nav class="header__nav  header__nav--main">
-            <ul class="header__nav-list">
-              <li class="header__nav-link header__nav-link--current-page">Home</li>
-              <li class="header__nav-link">Blog</li>
-              <li class="header__nav-link">Features</li>
-              <li class="header__nav-link">Pricing</li>
-              <li class="header__nav-link">Documentation</li>
-            </ul>
-          </nav>
-          <nav class="header__nav header__nav--social">
-            <ul class="header__nav-list">
-              <li class="header__nav-link">
-                <i class="fab fa-facebook-f"></i>
-              </li>
-              <li class="header__nav-link">
-                <i class="fab fa-twitter"></i>
-              </li>
-              <li class="header__nav-link">
-                <i class="fab fa-telegram-plane"></i>
-              </li>
-              <li class="header__nav-link">
-                <i class="fab fa-medium-m"></i>
-              </li>
-            </ul>
-          </nav>
-          <button class="header__button">Get Started</button>
-          <div class="header__nav--mobile">
-            <i class="fas fa-bars"></i>
-          </div>
-        </header>
-        <p class="copyright">Copyright © 2018 by Random site</p>
+    <header class="header">
+      <div class="header__logo"></div>
+      <nav class="header__nav  header__nav--main">
+        <ul class="header__nav-list">
+          <li class="header__nav-link header__nav-link--current-page">Home</li>
+          <li class="header__nav-link">Blog</li>
+          <li class="header__nav-link">Features</li>
+          <li class="header__nav-link">Pricing</li>
+          <li class="header__nav-link">Documentation</li>
+        </ul>
+      </nav>
+      <nav class="header__nav header__nav--social">
+        <ul class="header__nav-list">
+          <li class="header__nav-link">
+            <i class="fab fa-facebook-f"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-twitter"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-telegram-plane"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-medium-m"></i>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__button">Get Started</button>
+      <div class="header__nav--mobile">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+    <p class="copyright">Copyright © 2018 by Random site</p>
   </div>
 
 

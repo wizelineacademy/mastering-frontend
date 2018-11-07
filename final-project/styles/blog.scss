@@ -44,6 +44,7 @@
         width: rem-calc(30px);
         background: transparent url("/reference/assets/arrow-blog.png") no-repeat center center;
         transform: translateX(rem-calc(30px));
+        cursor: pointer;
       }
     }
 
@@ -56,6 +57,7 @@
         width: rem-calc(30px);
         background: transparent url("/reference/assets/arrow-blog.png") no-repeat center center;
         transform: translateX(rem-calc(50px)) scaleX(-1) scaleY(-1); 
+                cursor: pointer;
       }
     }
 
@@ -69,60 +71,65 @@
         @include centerer;
         width: 90%;
         height: 70%;
-        display: grid;
-        grid-template-columns: 45% 10% 45%;
-        grid-template-rows: 33.3% 33.3% 33.3%;
-        grid-template-areas: 
-          "img . title"
-          "img . entry"
-          "img . buttons";  
 
-          &__img{
-            grid-area: img;
-            height: 100%;
-            margin-right: 100px;
+        &__item{
+          width: 100%;
+          height: 100%;
+          display: grid;
+          grid-template-columns: 45% 10% 45%;
+          grid-template-rows: 40% 30% 20%;
+          grid-template-areas: 
+            "img . title"
+            "img . entry"
+            "img . buttons";  
 
-          }
-          &__title{
-            grid-area: title;
-            font-family: $font-family__main;
-            color: $font-color__main;
-            font-size: rem-calc(30px);
-            padding-top: rem-calc(20px);
+            &__img{
+              grid-area: img;
+              height: 100%;
+              margin-right: 100px;
 
-
-          }
-          &__entry{
-            grid-area: entry;
-            font-family: $font-family__secondary;
-            color: $font-color__secondary;
-            font-size: rem-calc(12px);
-            line-height: 1.7;
-        
-
-          }
-          &__buttons{
-            grid-area: buttons;
-            padding-top: rem-calc(20px);
-            font-family: $font-color__main;
-            font-size: rem-calc(13px);
-
-            &-b1{
-              width: rem-calc(113px);
-              height: rem-calc(43px);
-              background-color: #D2E1FF;
-              color: #3A79FF;
             }
+            &__title{
+              grid-area: title;
+              font-family: $font-family__main;
+              color: $font-color__main;
+              font-size: rem-calc(25px);
+              padding-top: rem-calc(20px);
 
-            &-b2{
-              width: rem-calc(210px);
-              height: rem-calc(43px);
-              background-color: transparent;
-              color: #A6B6DA;
             }
+            &__entry{
+              grid-area: entry;
+              font-family: $font-family__secondary;
+              color: $font-color__secondary;
+              font-size: rem-calc(12px);
+              line-height: 1.7;
+            }
+            &__buttons{
+              grid-area: buttons;
+              padding-top: rem-calc(20px);
+              font-family: $font-color__main;
+              font-size: rem-calc(13px);
 
-          }
+              &-b1{
+                width: rem-calc(113px);
+                height: rem-calc(43px);
+                background-color: #D2E1FF;
+                color: #3A79FF;
+                cursor: pointer;
+              }
+
+              &-b2{
+                width: rem-calc(210px);
+                height: rem-calc(43px);
+                background-color: transparent;
+                color: #A6B6DA;
+              }
+
+            }
+        }
       }
+
+
     }
 
     &__dots{
@@ -152,27 +159,38 @@
       ". carrousel ."
       ". dots .";  
 
+    &__right__arrow, &__left__arrow{
+      display: none;
+    }
+
       &__carrousel__inner{
-        grid-template-columns: 100%;
-        grid-template-rows: 60% 10% 20% 10%;
         height: 90%;
-        grid-template-areas: 
-          "img"
-          "title"
-          "entry"
-          "buttons";  
+        width: 90%;
 
-          &__img{
-            width: 100%;
-          }
+        &__item{
+          width: 100%;
+          height: 100%;
+          grid-template-columns: 100%;
+          grid-template-rows: 60% 10% 20% 10%;
+          height: 90%;
+          grid-template-areas: 
+            "img"
+            "title"
+            "entry"
+            "buttons";  
+            &__img{
+              width: 100%;
+            }
+  
+            &__title{
+              padding-bottom: 10%;
+            }
+            &__entry{
+              padding-top: 3%;
+              font-size: rem-calc(14px);
+            }
+        }
 
-          &__title{
-            padding-bottom: 10%;
-          }
-          &__entry{
-            padding-top: 3%;
-            font-size: rem-calc(14px);
-          }
       }
   }
 
@@ -184,22 +202,33 @@
     }
 
     &__carrousel__inner{
-      padding-bottom: 5%;
-
-      &__buttons{
-        &-b1{
-          width: 100%;
-          margin-top: 5%;
-        }
-        &-b2{
-          display: none;
+      &__item{
+        padding-bottom: 5%;
+        &__buttons{
+          &-b1{
+            width: 100%;
+            margin-top: 5%;
+          }
+          &-b2{
+            display: none;
+          }
         }
       }
-
     }
     &__dots-d{
       transform: translateX(rem-calc(-30px));
     }
   }
-  
+}
+
+#blog-item-1{
+  display: grid;
+}
+
+#blog-item-2{
+  display: none;
+}
+
+#blog-item-3{
+  display: none;
 }

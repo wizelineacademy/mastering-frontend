@@ -82,6 +82,64 @@
   width: 100%;
   height: 35.6rem;
   background-image: url("../reference/assets/hero.png");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-text {
+  width: 41%;
+  height: 47%;
+  margin-top: 2%;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hero .hero-text .hero-subtitle {
+  width: 86%;
+}
+
+.hero .hero-text .hero-pre-title {
+  margin-bottom: 0;
+  font-weight: 500; /* medium */
+  font-size: 0.63rem;
+  letter-spacing: 0.093rem;
+  color: #3D4F9F;
+}
+
+.hero .hero-text .hero-title {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300; /* light */
+  font-size: 3rem;
+  color: #3D4F9F;
+}
+
+.hero .hero-text .hero-title span {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+.hero .hero-text .hero-subtitle h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 0.94rem;
+  color: #8D96BD;
+}
+
+.hero .play-button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .plan-and-manage {
@@ -92,22 +150,66 @@
   background-position: right;
 }
 
+.features {
+  width: 100%;
+  height: 48.5rem;
+  background-image: url("../reference/assets/clouds.png");
+  background-repeat: no-repeat;
+}
+
+.stats {
+  width: 100%;
+  height: 21.43rem;
+  background-color: #6888FF;
+}
+
+.blog {
+  width: 100%;
+  height: 54rem;
+  background-color: #F5F8FF;
+}
+
+.quotes {
+  width: 100%;
+  height: 30rem;
+  background-color: #E9EFFF;
+}
+
+.faq {
+  width: 100%;
+  height: 60.31rem;
+  background-color: white;
+}
+
 main.main-content {
   top: 5rem;
   width: 100%;
 }
 
 .customers {
-  min-height: 9.13rem;
+  height: 9.13rem;
   background: white;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.features {
-  min-height: 55.3rem;
-  background: white;
+.get-started {
+  width: 100%;
+  height: 27.5rem;
+  background-color: #E9EFFF;
+}
+
+.newsletter {
+  width: 100%;
+  height: 24.5rem;
+  background-color: white;
+}
+
+.footer {
+  width: 100%;
+  height: 17.9rem;
 }
 
 body {

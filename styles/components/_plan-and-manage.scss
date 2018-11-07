@@ -1,30 +1,117 @@
 .plan-and-manage {
+  --blue-color: #3D4F9F;
+  --inner-background-color: #F5F8FF;
+  --inner-sides-padding: 1.4rem;
+  --inner-top-padding: 4rem;
+  --inner-bottom-padding: 2.7rem;
+  --content-width: auto;
+  --title-font-size: 1rem;
+  --title-color: var(--blue-color);
+  --title-letter-spacing: 1px;
+  --heading-font-size: 3.6rem;
+  --heading-color: var(--blue-color);
+  --heading-margin-top: 1.9rem;
+  --description-font-size: 1.5rem;
+  --description-color: #8D96BD;
+  --description-margin-top: 2.6rem;
+  --description-line-height: 1.63;
+  --description-letter-spacing: 1px;
+  --image-margin-top: 4.5rem;
+  --image-align-self: center;
+  --buttons-margin-top: 8.6rem;
+  --buttons-width: 100%;
+  --buttons-inner-top: 0;
+  --btn-font-size: 1.3rem;
+  --template-areas:
+    'content content'
+    'image image'
+    'buttons buttons';
 
+  @media (--respond-to-tablet) {
+    --inner-sides-padding: 5.9rem;
+    --content-width: 41.3rem;
+    --heading-margin-top: 2.7rem;
+    --description-margin-top: 2.7rem;
+    --buttons-width: 25.9rem;
+    --image-align-self: flex-end;
+    --image-margin-top: 0;
+    --buttons-margin-top: 0;
+    --buttons-inner-top: 6rem;
+    --template-areas:
+      'content content'
+      'buttons image';
+  }
+
+  @media (--respond-to-desktop) {
+    --inner-sides-padding: 6.3rem;
+    --inner-top-padding: 21rem;
+    --inner-bottom-padding: 21rem;
+    --template-areas:
+      'content image'
+      'buttons image'
+      '. image';
+  }
+
+  @media (--respond-to-big-desktop) {
+    --template-areas:
+      'content image'
+      'buttons image'
+      '. image';
+  }
+  
   &__inner {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    background-color: var(--inner-background-color);
+    padding-left: var(--inner-sides-padding);
+    padding-right: var(--inner-sides-padding);
+    padding-top: var(--inner-top-padding);
+    padding-bottom: var(--inner-bottom-padding);
+    grid-template-areas: var(--template-areas);
   }
   
   &__content {
     display: flex;
     flex-direction: column;
+    width: var(--content-width);
+    grid-area: content;
 
     &__title {
+      font-size: var(--title-font-size);
+      color: var(--title-color);
+      letter-spacing: var(--title-letter-spacing);
+      @mixin font roboto, medium;
+      text-transform: uppercase;
 
     }
 
     &__heading {
+      font-size: var(--heading-font-size);
+      color: var(--heading-color);
+      margin-top: var(--heading-margin-top);
+      @mixin font quicksand;
 
+      strong {
+        @mixin font quicksand, medium;
+      }
     }
 
     &__description {
-
+      @mixin font roboto;
+      font-size: var(--description-font-size);
+      color: var(--description-color);
+      margin-top: var(--description-margin-top);
+      color: var(--description-color);
+      line-height: var(--description-line-height);
+      letter-spacing: var(--description-letter-spacing);
     }
 
   }
 
   &__image {
     width: 100%;
+    margin-top: var(--image-margin-top);
+    align-self: var(--image-align-self);
+    grid-area: image;
 
     img {
       width: 100%;
@@ -32,11 +119,42 @@
   }
 
   &__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: var(--buttons-margin-top);
+    width: var(--buttons-width);
+    grid-area: buttons;
+    
+    &__inner {
+      display: flex;
+      position: relative;
+      top: var(--buttons-inner-top);
+      width: 100%;
+    }
 
     &__btn {
+      padding: 1.6rem 0;
+      display: flex;
+      flex: 0 0 50%;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--btn-font-size);
 
-      .icon-play-video {
+      &--video {
+        @mixin font quicksand, bold;
+        background-color: #4C85FF;
+        color: #fff;
+      }
+
+      &--features {
+        @mixin font quicksand, medium;
+        border: 1px solid #D1D1E4;
+        color: #ADB4D2;
+      }
+
+      .icon--play-video {
         display: relative;
+        margin-left: .8rem;
       
         &::after {
           content: "\25BA";

@@ -1,0 +1,22 @@
+@define-mixin font $family: roboto, $type: regular {
+  @if $family == roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  @if $family == quicksand {
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  @if $type == light {
+    font-weight: 300;
+  }
+  @if $type == regular {
+    font-weight: 400;
+  }
+  @if $type == medium {
+    font-weight: 500;
+  }
+  @if $type == bold {
+    font-weight: 700;
+  }
+}

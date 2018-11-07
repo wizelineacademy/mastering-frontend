@@ -80,8 +80,29 @@
       }
     }
   }
-}
 
+  @include mobile-view{
+    &__inner{
+      width: 100%;
+      &-ul-li{
+        padding-top: 0%;
+        padding-bottom: 5%;
+
+        &__answer__text{
+          width: 100%;
+          margin-left: 5%;
+          margin-top: 0%;
+          margin-bottom: 20%;
+        }
+
+        &__answer__button{
+          top:70%;
+          left: 25%;
+        }
+      }
+    }
+  }
+}
 .item1{
   &__answer{
     display: none;

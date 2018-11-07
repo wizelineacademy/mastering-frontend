@@ -84,9 +84,7 @@
   }
 
   @include tablet-view{
-
     height: rem-calc(600px);
-      
     &__text-area{
       width: 60%;
       transform: translate(0);
@@ -100,12 +98,36 @@
         transform: translateY(550%);
       }
     }
-
     &__img-area{
       img{
         top: 45%;
         left: 25%;
         width: 75%;
+      }
+    }
+  }
+
+  @include mobile-view{
+    padding-top: 0;
+    &__text-area{
+      width: 100%;
+      top: 5%;
+      &-h2{
+        font-size: rem-calc(34px);
+      }
+
+      &-button1{
+        transform: translateY(450%);
+      }
+      &-button2{
+        transform: translateY(450%);
+      }
+    }
+    &__img-area{
+      img{
+        left: -5%;
+        top: 52%;
+        width: 100%;
       }
     }
 

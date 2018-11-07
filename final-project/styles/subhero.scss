@@ -45,6 +45,7 @@
         font-family: $font-family__secondary;
         width: rem-calc(130px);
         height: 100%;
+        background-color: white;
 
       }
 
@@ -66,6 +67,13 @@
 
   @include laptop-view{
     background-size: auto;
+  }
+
+  @include mobile-view{
+
+    &__inner{
+      width: 95%;
+    }
   }
 
 }

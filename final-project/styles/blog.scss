@@ -144,9 +144,7 @@
 
 
   @include tablet-view{
-
     height: rem-calc(865px);
-
     grid-template-columns: 5% 90% 5%;
     grid-template-rows: 15% 70% 20%;
     grid-template-areas: 
@@ -175,9 +173,28 @@
             padding-top: 3%;
             font-size: rem-calc(14px);
           }
-        
+      }
+  }
+
+  @include mobile-view{
+    padding-top: 5%;
+    &__carrousel__inner{
+      padding-bottom: 5%;
+
+      &__buttons{
+        &-b1{
+          width: 100%;
+          margin-top: 5%;
+        }
+        &-b2{
+          display: none;
+        }
       }
 
+    }
+    &__dots-d{
+      transform: translateX(rem-calc(-30px));
+    }
   }
   
 }

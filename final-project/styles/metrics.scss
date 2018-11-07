@@ -62,9 +62,27 @@
   }
 
   @include tablet-view{
-
     &__productivity__inner{
       transform: translate(20%, -50%);
+    }
+  }
+
+  @include mobile-view{
+    flex-flow: wrap;
+    height: rem-calc(684px);
+
+    &__productivity{
+      width: 100%;
+      &__inner{
+        transform: translate(35%, -50%);
+      }
+    }
+
+    &__users{
+      width: 100%;
+      &__inner{
+        transform: translate(10%, -40%);
+      }
     }
   }
 

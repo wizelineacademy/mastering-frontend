@@ -10,7 +10,6 @@
 
   @include laptop-view{
     background-size: auto;
-    //background: url("/reference/assets/clouds.png") no-repeat center center;
   }
 
   &__inner-content{
@@ -21,6 +20,10 @@
     font-family: $font-family__secondary;
     color: $font-color__main;
     text-align: center;
+
+    @include mobile-view{
+      width: 100%;
+    }
 
     &-h1{
       font-size: rem-calc(10px);
@@ -44,6 +47,9 @@
       margin-left: rem-calc(70px);
       margin-right: rem-calc(70px);
       line-height: rem-calc(28px);
+      @include mobile-view{
+        display: none;
+      }
     }
 
     &-button{

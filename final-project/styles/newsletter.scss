@@ -71,8 +71,36 @@
         &-email{
           width: rem-calc(150px);
         }
-
       }
     }
+  }
+
+  @include mobile-view{
+    &__inner{
+      width: 90%;
+      display: flex;
+      flex-flow: wrap;
+      height: 80%;
+
+      &__text{
+        width: 100%;
+      }
+
+
+      &__form{
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        &-email{
+          width: 100%;
+          margin: 0;
+          margin-bottom: 5%;
+        }
+        &-submit{
+          width: 100%;
+        }
+      }
+    }
+
   }
 }

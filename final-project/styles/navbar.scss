@@ -1,12 +1,5 @@
 @import "_mixin.scss";
-
-$nav-text-color: #697CA6;
-$header__logo-size: 26px;
-
-* {
-  padding: 0;
-  margin: 0;
-}
+@import "_color.scss";
 
 button { border:none; } 
 
@@ -23,8 +16,8 @@ button { border:none; }
 
   
   &__logo {
-    width: rem-calc($header__logo-size);
-    height: rem-calc($header__logo-size);
+    width: rem-calc(26px);
+    height: rem-calc(26px);
     margin-top: rem-calc(26px-18px);
     background-color: #5E81FE;
     border-radius: 50%;
@@ -50,12 +43,6 @@ button { border:none; }
         display: none;
       }
     }
-    
-    @include desktop-breakpoint {
-      &--social {
-        display: block;
-      }
-    }
   }
   
   &__nav-list {
@@ -67,13 +54,13 @@ button { border:none; }
     font-size: rem-calc(12px);
     margin: 0 rem-calc(20px);
     display: inline-block;
-    color: $nav-text-color;
+    color: $secondary-color;
   }
   
   &__button {
     background-color: #D2E1FF;
     font-family: 'Quicksand', sans-serif;
-    color: #3A79FF;
+    color: $blue-primary;
     padding: rem-calc(13px);
     display: block;
     

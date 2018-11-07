@@ -2,15 +2,9 @@
 @import "navbar.scss";
 @import "hero.scss";
 @import "customers.scss";
-
-// test for scss variables
-$primary-color: #2a3fbb;
+@import "plan.scss";
 
 * {
   padding: 0;
   margin: 0;
-}
-
-h1 {
-  color: $primary-color;
 }

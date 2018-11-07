@@ -1,0 +1,160 @@
+@import "_mixin.scss";
+@import "_color.scss";
+
+.buttons-play {
+  height: rem-calc(43px);
+  width: rem-calc(130px);
+  background-color: $background-btn-primary-color;
+  color: white;
+  display: inline-block;
+}
+
+.buttons-feature {
+  height: rem-calc(43px);
+  width: rem-calc(130px);
+  background-color: transparent;
+  color: $secondary-color;
+  display: inline-block;
+  margin-left: -4px;
+  border: 1px solid;
+}
+
+.plan {
+  height: rem-calc(775px);
+  background-color: $background-primary-color;
+
+  &__content {
+    font-family: 'Roboto', sans-serif;
+    top: 53%;
+    position: relative;
+    transform: translateY(-50%);
+    text-align: right;
+
+    @include landscape-breakpoint {
+      text-align: center;
+    }
+
+    @include tablet-breakpoint {
+      top: 10%;
+      transform: none;
+    }
+    
+
+    &-description {
+      display: inline-block;
+      width: rem-calc(600px);
+      text-align: left;
+      position: relative;
+      top: rem-calc(80px);
+
+      @include desktop-breakpoint {
+        width: rem-calc(400px);
+      }
+
+      @include landscape-breakpoint {
+        vertical-align: middle;
+        width: 35%;
+        top: 0;
+      }
+
+      @include tablet-breakpoint {
+        display: block;
+        width: 60%;
+        margin: 0 20px;
+        float: left;
+      }
+
+      @include mobile-breakpoint {
+        width: 90%;
+      }
+
+      &--subtitle {
+        color: $primary-color;
+        text-transform: uppercase;
+        font-size: rem-calc(10px);
+        font-weight: bold;
+      }
+
+      &--title {
+        color: $primary-color;
+        font-size: rem-calc(36px);
+        margin: rem-calc(30px) 0;
+
+        & .bold {
+          font-weight: bold;
+        }
+      }
+
+      &--description {
+        color: $secondary-color;
+        font-size: rem-calc(15px);
+        display: inline-block;
+        text-align: left;
+        line-height: rem-calc(25px);
+      }
+
+      &--buttons{
+        & .play {
+          @extend .buttons-play;
+        }
+
+        & .feature {
+          @extend .buttons-feature;
+        }
+        margin: rem-calc(15px) 0;
+
+        @include tablet-breakpoint {
+          display: none;
+        }
+      }
+    }
+
+    &-image {
+      display: inline-block;
+      vertical-align: middle;
+      width: rem-calc(800px);
+
+      @include desktop-breakpoint {
+        width: rem-calc(600px);
+      }
+
+      @include landscape-breakpoint {
+        width: rem-calc(400px);
+      }
+
+      @include tablet-breakpoint {
+        display: block;
+        float: right;
+        width: 75%;
+      }
+
+      @include mobile-breakpoint {
+        width: 100%;
+        margin: rem-calc(20px) 0;
+      }
+    }
+
+    &-buttons {
+      display: none;
+      & .play {
+        @extend .buttons-play;
+      }
+
+      & .feature {
+        @extend .buttons-feature;
+      }
+
+      @include tablet-breakpoint {
+        display: block;
+        display: block;
+        clear: both;
+        text-align: left;
+        margin: 0 rem-calc(50px);
+      }
+
+      @include mobile-breakpoint {
+        text-align: center;
+      }
+    }
+  }
+}

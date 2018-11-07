@@ -1,7 +1,5 @@
 @import "_mixin.scss";
-
-$hero__content-title-color: #3D4F9F;
-$hero__content-description-color: #8D96BD;
+@import "_color.scss";
 
 .hero {
   position: relative;
@@ -36,23 +34,24 @@ $hero__content-description-color: #8D96BD;
 
     &-header {
       font-size: rem-calc(10px);
-      color: $hero__content-title-color;
+      color: $primary-color;
       text-transform: uppercase;
     }
 
     &-title {
       font-size: rem-calc(48px);
-      color: $hero__content-title-color;
+      color: $primary-color;
       margin: rem-calc(15px) 0 rem-calc(30px) 0;
       
       & .bold {
         font-weight: bold;
+        font-family: 'Quicksand', sans-serif;
       }
     }
 
     &-description {
       font-size: rem-calc(15px);
-      color: $hero__content-description-color;
+      color: $secondary-color;
       margin: 0 rem-calc(50px);
       line-height: rem-calc(30px);
 

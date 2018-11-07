@@ -171,5 +171,10 @@ button { border:none; }
       }
      }
   }
-  
+}
+.statistics{
+  display: flex;
+  &__part{
+    width: 50%;
+  }
 }

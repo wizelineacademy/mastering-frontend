@@ -19,7 +19,7 @@ button { border:none; }
     width: rem-calc(26px);
     height: rem-calc(26px);
     margin-top: rem-calc(26px-18px);
-    background-color: #5E81FE;
+    background-color: #3A79FF;
     border-radius: 50%;
   }
   
@@ -58,7 +58,7 @@ button { border:none; }
   }
   
   &__button {
-    background-color: #D2E1FF;
+    background-color: $blue-bg-button;
     font-family: 'Quicksand', sans-serif;
     color: $blue-primary;
     padding: rem-calc(13px);

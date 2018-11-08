@@ -3,7 +3,7 @@
 
 .hero {
   position: relative;
-  height: 570px;
+  height: rem-calc(570px);
 
   &__image {
     background-image: url("../reference/assets/hero.png");

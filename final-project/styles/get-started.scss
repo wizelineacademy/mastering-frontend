@@ -1,4 +1,4 @@
-.intro {
+.getstarted {
   display: flex;
   justify-content: center;
   position: relative;
@@ -17,57 +17,60 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: rem-calc(92px);
+    padding-top: rem-calc(72px);
 
-    @include media-breakpoint-down(xs) {
-      padding-top: rem-calc(37px);
+    @include media-breakpoint-up(xl) {
+      display: none;
     }
   }
 
   &__info {
-    max-width: rem-calc(600px);
+    max-width: rem-calc(712px);
+    padding: 0 rem-calc(20px);
 
     &__title {
-      color: $section-title-color;
+      color: white;
       font-family: "Roboto", sans-serif;
       font-size: rem-calc(10px);
       text-align: center;
       font-weight: 500;
       letter-spacing: 0.1em;
-      margin-bottom: rem-calc(16px);
+      margin-bottom: rem-calc(20px);
     }
 
     &__highlight {
-      color: $section-highlight-color;
-      font-size: rem-calc(48px);
-      font-weight: lighter;
+      color: white;
+      font-size: rem-calc(36px);
+      font-weight: 300;
       text-align: center;
-      margin-bottom: rem-calc(28px);
+      margin-bottom: rem-calc(19px);
 
-      @include media-breakpoint-down(xs) {
-        padding: 0 rem-calc(30px);
+      @include media-breakpoint-up(md) {
+        font-size: rem-calc(48px);
       }
 
       &--emphasis {
-        @extend .intro__info__highlight;
+        @extend .getstarted__info__highlight;
         font-weight: 500;
         padding: initial;
       }
     }
 
     &__description {
-      color: $section-description-color;
+      color: white;
       font-family: "Roboto", sans-serif;
       font-size: rem-calc(15px);
       line-height: rem-calc(29px);
       text-align: center;
-      padding: 0 rem-calc(80px);
       margin-bottom: rem-calc(20px);
-
-      @include media-breakpoint-down(xs) {
-        display: none;
-      }
+      letter-spacing: 0.03em;
     }
+  }
+
+  &__button-group {
+    display: flex;
+
+    margin-top: rem-calc(40px);
   }
 }
 

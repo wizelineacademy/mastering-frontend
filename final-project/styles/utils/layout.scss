@@ -8,32 +8,3 @@
     max-width: map-get($container-max-widths, xl);
   }
 }
-
-.section-container {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  margin-left: auto;
-
-  @include media-breakpoint-up(xl) {
-    max-width: map-get($container-max-widths, xl);
-  }
-
-  @include media-breakpoint-down(lg) {
-    margin-left: rem-calc(50px);
-  }
-
-  @include media-breakpoint-down(sm) {
-    flex-wrap: wrap;
-  }
-
-  @include media-breakpoint-down(xs) {
-    margin: 0;
-    padding: 0 rem-calc(20px);
-  }
-
-  &--d-row {
-    @extend .section-container;
-    flex-direction: row;
-  }
-}

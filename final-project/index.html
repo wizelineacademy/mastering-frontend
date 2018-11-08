@@ -51,8 +51,8 @@
     </header>
     <main class="main">
       <section class="intro">
-        <img class="intro__image" src="reference/assets/hero.png" alt="Card image">
-        <div class="intro__image-overlay">
+        <img class="intro__bkg-image" src="reference/assets/hero.png" alt="Card image">
+        <div class="intro__bkg-overlay">
           <div class="intro__info">
             <p class="intro__info__title">
               PLAN YOUR LIFE
@@ -89,7 +89,7 @@
         </div>
       </section>
       <section class="apps">
-        <div class="section-container--d-row">
+        <div class="apps__container">
           <div class="apps__info">
             <p class="apps__info__title">
               DESKTOP AND MOBILE APPS
@@ -187,12 +187,194 @@
               </div>
             </div>
           </div>
-
+          <div class="about__button-group">
+            <a class="btn--secondary">
+              Read more
+            </a>
+            <div class="about__button-group__separator">
+              <span>OR</span>
+            </div>
+            <a class="btn--primary">
+              Get started
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="stats">
+        <div class="stats__item">
+          <img class="stats__item__image" src="reference/assets/icons/speedmeter.png">
+          <p class="stats__item__value">89%</p>
+          <p class="stats__item__text">
+            Customers who have increased their productivity
+          </p>
+        </div>
+        <div class="stats__item">
+          <img class="stats__item__image" src="reference/assets/icons/people.png">
+          <p class="stats__item__value">3123</p>
+          <p class="stats__item__text">
+            Users who have used our application
+          </p>
+        </div>
+      </section>
+      <section class="resources">
+        <p class="resources__title">
+          OUR RESOURCES
+        </p>
+        <p class="resources__highlight">
+          Start reading our blog
+        </p>
+        <div class="resources__carousel">
+          <img src="https://via.placeholder.com/926x394/E7B4F8">
+        </div>
+      </section>
+      <section class="testimonials">
+        <div class="testimonials__container">
+          <div class="testimonials__info">
+            <p class="testimonials__info__title">
+              TESTIMONIALS
+            </p>
+            <p class="testimonials__info__highlight">
+              Customers's quotes
+            </p>
+            <p class="testimonials__info__description">
+              Brute laoreet efficiendi id his, ea illum nonumes
+              luptatum pro. Usu atqui laudem an.
+            </p>
+          </div>
+          <div class="testimonials__image">
+            <img src="reference/assets/testimonials.png">
+          </div>
+        </div>
+      </section>
+      <section class="help">
+        <p class="help__title">
+          CUSTOMER HELP
+        </p>
+        <p class="help__highlight">
+          Frequently asked questions
+        </p>
+        <div class="help__questions">
+          <div class="help__questions__item">
+            <i class="icon--expand"></i>
+            <div class="help__questions__item__question">
+              <span>Reque insolens in vel?</span>
+            </div>
+          </div>
+          <div class="help__questions__item">
+            <i class="icon--expand"></i>
+            <div class="help__questions__item__question">
+              <span>Vis rebum error graecis ea, id sit postea accusamus?</span>
+            </div>
+          </div>
+          <div class="help__questions__item--expanded">
+            <div class="help__questions__item__expand__secttion">
+              <i class="icon--collapse"></i>
+              <div class="help__questions__item__question--answered">
+                <p>Lorem repudiandae ne nec?</p>
+                <p>
+                  Quidam vocibus eum ne, erat
+                  consectetuer voluptatibus ut
+                  nam. Eu usu vidit tractatos, vero
+                  tractatos ius an, in mel diceret
+                  persecuti.
+                </p>
+              </div>
+            </div>
+            <a class="btn--info">Go to documentation</a>
+          </div>
+          <div class="help__questions__item">
+            <i class="icon--expand"></i>
+            <div class="help__questions__item__question">
+              <span>Ad dicit numquam vel. Et eos iudico feugait percipitur?</span>
+            </div>
+          </div>
+          <div class="help__questions__item">
+            <i class="icon--expand"></i>
+            <div class="help__questions__item__question">
+              <span>Sea no dico percipitur. Fierent constituam definitiones id eum?</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="getstarted">
+        <img class="getstarted__bkg-image" src="reference/assets/blue-clouds-bg.png" alt="Card image">
+        <div class="getstarted__bkg-overlay">
+          <div class="getstarted__info">
+            <p class="getstarted__info__title">
+              PLAN YOUR LIFE
+            </p>
+            <p class="getstarted__info__highlight">
+              Get <span class="getstarted__info__highlight--emphasis">started</span> now
+            </p>
+            <p class="getstarted__info__description">
+              Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
+              atqui laudem an, insolens gubergren similique est cu. Et vel modus
+              congue vituperata.
+            </p>
+          </div>
+          <div class="getstarted__button-group">
+            <a class="btn--primary-inverse">
+              View pricing
+            </a>
+            <a class="btn--default-inverse">
+              Read documentation
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="newsletter">
+        <div class="newsletter__container">
+          <div class="newsletter__info">
+            <p class="newsletter__info__highlight">
+              Sign up for newsletter
+            </p>
+            <p class="newsletter__info__description">
+              Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.
+            </p>
+          </div>
+          <form class="newsletter__form">
+            <input class="newsletter__form__email" placeholder="Email address">
+            <button class="newsletter__form__save-btn btn--primary-raised">Save me</button>
+          </form>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer container">
+      <div class="footer__navs">
+        <div class="footer__logo"></div>
+        <nav class="footer__nav  footer__nav--main">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-link footer__nav-link--current-page">Home</li>
+            <li class="footer__nav-link">Blog</li>
+            <li class="footer__nav-link">Features</li>
+            <li class="footer__nav-link">Pricing</li>
+            <li class="footer__nav-link">Documentation</li>
+          </ul>
+        </nav>
 
+        <nav class="footer__nav footer__nav--social">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-link">
+              <i class="icon--facebook"></i>
+            </li>
+            <li class="footer__nav-link">
+              <i class="icon--twitter"></i>
+            </li>
+            <li class="footer__nav-link">
+              <i class="icon--telegram"></i>
+            </li>
+            <li class="footer__nav-link">
+              <i class="icon--medium"></i>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__button">
+          <button class="btn--primary">Get Started</button>
+        </div>
+      </div>
+      <p class="footer__copy-right">
+        Copyright © 2018 by Random site
+      </p>
     </footer>
   </div>
   <script src="./dist/bundle.js"></script>

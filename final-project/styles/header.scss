@@ -52,11 +52,7 @@
   }
 
   &__button {
-    background-color: #d2e1ff;
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    color: #3a79ff;
-    padding: rem-calc(13px);
+    @extend .btn--primary;
 
     @include media-breakpoint-down(xs) {
       display: none;

@@ -1,0 +1,89 @@
+.footer {
+  padding: rem-calc(18px) rem-calc(20px);
+
+  &__navs {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Quicksand", sans-serif;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(sm) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__logo {
+    width: rem-calc($header__logo-size);
+    height: rem-calc($header__logo-size);
+    margin-top: rem-calc(26px-18px);
+    background-color: #5e81fe;
+    border-radius: 50%;
+  }
+
+  &__nav {
+    margin-top: rem-calc(32px-18px);
+    font-weight: bold;
+
+    &--main {
+    }
+
+    &--social {
+      display: none;
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(sm) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__nav-link {
+    font-size: rem-calc(12px);
+    margin: 0 rem-calc(20px);
+    display: flex;
+    align-items: center;
+    color: $nav-text-color;
+    flex: 100%;
+    justify-content: center;
+    padding-bottom: rem-calc(20px);
+
+    @include media-breakpoint-up(sm) {
+      flex: initial;
+      justify-content: initial;
+      padding-bottom: 0;
+    }
+  }
+
+  &__button {
+    flex: 100%;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      flex: initial;
+    }
+  }
+
+  &__copy-right {
+    font-weight: 500;
+    font-size: rem-calc(12px);
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #aeb8d0;
+    margin-top: rem-calc(28px);
+    width: 100%;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+      margin-bottom: rem-calc(93px);
+    }
+  }
+}

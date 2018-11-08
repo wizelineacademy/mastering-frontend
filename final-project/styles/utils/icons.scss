@@ -1,11 +1,5 @@
 .icon {
   font-style: normal;
-  /*
-    -webkit-mask-size: contain;
-    background-color: red;
-    display: inline-block;
-    content: '';
-  */
 
   &--facebook {
     @extend .icon;
@@ -56,5 +50,15 @@
   &--upload {
     @extend .icon;
     content: url(/reference/assets/icons/upload.png);
+  }
+
+  &--collapse {
+    @extend .icon;
+    content: url(/reference/assets/icons/collapse.png);
+  }
+
+  &--expand {
+    @extend .icon;
+    content: url(/reference/assets/icons/expand.png);
   }
 }

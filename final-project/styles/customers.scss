@@ -10,10 +10,8 @@
     img {
       height: 100%;
       margin-top: 55px;
-    }
-
-    :not(:first-child) {
-      margin-left: rem-calc(57px);
+      margin-left: rem-calc(35px);
+      margin-right: rem-calc(35px);
     }
 
     @include media-breakpoint-down(xs) {

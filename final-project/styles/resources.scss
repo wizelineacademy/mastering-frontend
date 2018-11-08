@@ -1,0 +1,43 @@
+.resources {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: #f5f8ff;
+  padding-top: rem-calc(104px);
+
+  @include media-breakpoint-down(sm) {
+    padding-top: rem-calc(56px);
+  }
+
+  &__title {
+    color: $section-title-color;
+    font-family: "Roboto", sans-serif;
+    font-size: rem-calc(10px);
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-bottom: rem-calc(16px);
+  }
+
+  &__highlight {
+    color: $section-highlight-color;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: rem-calc(92px);
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: rem-calc(40px);
+    }
+  }
+
+  &__carousel {
+    padding-bottom: 104px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -2,8 +2,13 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-top: rem-calc(141px);
-  padding-bottom: rem-calc(171px);
+  margin-top: rem-calc(141px);
+  margin-bottom: rem-calc(171px);
+
+  @include media-breakpoint-down(xs) {
+    margin-top: rem-calc(42px);
+    margin-bottom: rem-calc(38px);
+  }
 
   &__bkg-image {
     height: 100%;
@@ -23,10 +28,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: rem-calc(92px);
+    margin-top: rem-calc(55px);
 
     @include media-breakpoint-down(xs) {
-      padding-top: rem-calc(42px);
+      margin-top: 0;
+      position: static;
     }
   }
 
@@ -38,6 +44,8 @@
       font-family: "Roboto", sans-serif;
       font-size: rem-calc(10px);
       text-align: center;
+      font-weight: 500;
+      letter-spacing: 0.1em;
       margin-bottom: rem-calc(20px);
     }
 
@@ -66,6 +74,49 @@
       @include media-breakpoint-down(xs) {
         flex-wrap: wrap;
         margin: 0;
+      }
+    }
+  }
+
+  &__button-group {
+    margin-top: rem-calc(70px);
+    display: flex;
+
+    @include media-breakpoint-down(xs) {
+      padding: 0 rem-calc(15px);
+      width: 100%;
+      flex-wrap: wrap;
+
+      [class^="btn--"] {
+        flex: 1;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &__separator {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      line-height: rem-calc(19px);
+      font-size: rem-calc(12px);
+      text-align: center;
+      display: flex;
+      align-items: center;
+
+      color: #adb3cb;
+
+      &::before,
+      &::after {
+        content: " ";
+        width: 15px;
+        height: 0px;
+        border: 1px solid #dae4fe;
+        margin: 0 rem-calc(16px);
+
+        @include media-breakpoint-down(xs) {
+          margin: 0 rem-calc(6px);
+        }
       }
     }
   }
@@ -124,7 +175,7 @@
 .feature-separator {
   width: rem-calc(28px);
   height: 0px;
-  border: rem-calc(1px) solid #DAE4FE;
+  border: rem-calc(1px) solid #dae4fe;
   margin: 0 rem-calc(20px);
   align-self: center;
 

@@ -1,0 +1,100 @@
+.help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: rem-calc(43px);
+  padding-bottom: rem-calc(68px);
+
+  @include media-breakpoint-up(sm) {
+    padding-top: rem-calc(175px);
+    padding-bottom: rem-calc(175px);
+  }
+
+  &__title {
+    color: $section-title-color;
+    font-family: "Roboto", sans-serif;
+    font-size: rem-calc(10px);
+    padding-bottom: rem-calc(20px);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+
+  &__highlight {
+    color: $section-highlight-color;
+    font-size: rem-calc(24px);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: rem-calc(40px);
+    padding: 0 rem-calc(30px);
+  }
+
+  &__questions {
+
+    &__item {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      line-height: rem-calc(19px);
+      font-size: rem-calc(15px);
+      letter-spacing: 0.03em;
+      color: #8e96b7;
+      padding: rem-calc(28px) rem-calc(20px);
+      border-bottom: 1px solid #d8e3fe;
+
+      [class^="icon--"] {
+        height: fit-content;
+        margin-right: rem-calc(24px);
+      }
+
+      &__question {
+        &--answered {
+          & p:first-child {
+            color: #495274;
+            font-weight: bold;
+          }
+
+          & p:not(:first-child) {
+            padding-left: rem-calc(20px);
+            padding-top: rem-calc(20px);
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            line-height: rem-calc(27px);
+            font-size: rem-calc(14px);
+            color: #8d96bd;
+            margin-bottom: rem-calc(50px);
+
+            @include media-breakpoint-up(sm) {
+              max-width: rem-calc(391px);
+              margin-bottom: rem-calc(10px);
+            }
+          }
+        }
+      }
+
+      &__expand__secttion {
+        display: flex;
+
+        @include media-breakpoint-up(sm) {
+          margin-right: rem-calc(62px);
+        }
+      }
+    }
+
+    &__item--expanded {
+      @extend .help__questions__item;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @include media-breakpoint-up(sm) {
+        flex-wrap: nowrap;
+      }
+
+      [class^="icon--"] {
+        height: fit-content;
+        margin-right: rem-calc(24px);
+        align-self: flex-start;
+      }
+    }
+  }
+}

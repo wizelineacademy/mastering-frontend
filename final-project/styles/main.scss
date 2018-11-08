@@ -22,12 +22,10 @@ body > div {
   margin: 0;
 }
 
-button {
-  border: none;
-}
-
-.main {
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 @import "./header";
@@ -35,3 +33,10 @@ button {
 @import "./customers";
 @import "./apps";
 @import "./about";
+@import "./stats";
+@import "./resources";
+@import "./testimonials";
+@import "./help";
+@import "./get-started";
+@import "./newsletter";
+@import "./footer";

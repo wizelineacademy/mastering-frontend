@@ -1,4 +1,5 @@
 .btn {
+  border: none;
   border-radius: 2px;
   font-family: Quicksand, sans-serif;
   font-style: normal;
@@ -10,17 +11,6 @@
   white-space: nowrap;
   display: inline-block;
 
-  &--primary {
-  }
-
-  &--primary-raised {
-    @extend .btn;
-    background: #4d6ce1;
-    box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
-
-    color: #ffffff;
-  }
-
   &--default {
     @extend .btn;
     background: transparent;
@@ -28,5 +18,55 @@
     box-sizing: border-box;
     border-radius: 2px;
     color: #adb4d2;
+  }
+
+  &--default-inverse {
+    @extend .btn;
+    background: transparent;
+    border: 1px solid #A0B4FF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-weight: 500;
+    color: #C7D3FF;
+  }
+
+  &--primary {
+    @extend .btn;
+    background-color: #d2e1ff;
+    color: #3a79ff;
+  }
+
+  &--primary-inverse {
+    @extend .btn;
+    background: #FFFFFF;
+    color: #565F82;
+  }
+
+  &--primary-raised {
+    @extend .btn;
+    background: #4d6ce1;
+    box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
+    color: #ffffff;
+  }
+
+  &--primary-raised-big {
+    @extend .btn;
+    background: #4d6ce1;
+    box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
+    padding: rem-calc(22px) rem-calc(25px);
+    color: #ffffff;
+  }
+
+  &--secondary {
+    @extend .btn;
+    background-color: #ffd7d7;
+    color: #d43f3f;
+  }
+
+  &--info {
+    @extend .btn;
+    background-color: #E8ECF4;
+    color: #7382A3;
+    font-weight: 500;
   }
 }

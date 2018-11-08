@@ -42,37 +42,51 @@
       <i class="fas fa-bars"></i>
     </div>
   </header>
-  <section class="hero-section">
-    <img src="../reference/assets/hero.png"></img>
-    <section class="hero-text-area">
-      <h2>Plan your life</h1>
-      <h1>Increase your <strong>Productivity</strong></h2>
-      <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
-        Usu atqui laudem an, insolens gubergren similique est cu.
-        Et vel modus congue vituperata.</p>
-      <div class="circle">
-        <img class="play-button" src="../reference/assets/icons/video-play.png"></img>
-      </div>
-    </section>
-  </section>
-  <section class="customers-section">
-      <img src="../reference/assets/customers/bitbucket.png"></img>
-      <img src="../reference/assets/customers/apple-watch.png"></img>
-      <img src="../reference/assets/customers/facebook.png"></img>
-      <img src="../reference/assets/customers/atlassian.png"></img>
-      <img src="../reference/assets/customers/audi.png"></img>
-  </section>
-  <section class"plan-manage-section">
-    <section class="plan-text-area">
-      <h2>DESKTOP AND MOBILE APP</h2>
-      <h1><strong>Plan</strong> and <strong>manage</strong></h1>
-      <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
-        Usu atqui laudem an, insolens gubergren similique est cu.
-        Et vel modus congue vituperata. Solum patrioque no sea.
-        Mea ex malis mollis oporteat. Eum an expetenda consequat.</p>
-    </section>
-    <img src="../reference/assets/plan-manage.png"></img>
-  </section>
+  <div class="wrapper">
+    <div class="hero-section">
+      <img src="../reference/assets/hero.png"></img>
+      <section class="hero-section__text-area">
+        <h2>Plan your life</h1>
+        <h1>Increase your <span class="bold-text">Productivity</span></h2>
+        <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+          Usu atqui laudem an, insolens gubergren similique est cu.
+          Et vel modus congue vituperata.</p>
+        <div class="hero-section__circle">
+          <img class="hero-section__play-button" src="../reference/assets/icons/video-play.png"></img>
+        </div>
+      </section>
+    </div>
+    <div class="customers-section">
+        <img src="../reference/assets/customers/bitbucket.png"></img>
+        <img src="../reference/assets/customers/apple-watch.png"></img>
+        <img src="../reference/assets/customers/facebook.png"></img>
+        <img src="../reference/assets/customers/atlassian.png"></img>
+        <img src="../reference/assets/customers/audi.png"></img>
+    </div>
+    <div class="plan-manage-section">
+      <section class="plan-manage-section__text-area">
+        <h2>DESKTOP AND MOBILE APP</h2>
+        <h1><span class="bold-text">Plan</span> and <span class="bold-text">manage</span></h1>
+        <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+          Usu atqui laudem an, insolens gubergren similique est cu.
+          Et vel modus congue vituperata. Solum patrioque no sea.
+          Mea ex malis mollis oporteat. Eum an expetenda consequat.</p>
+        <button class="plan-manage-section__btn-video">
+          View video
+          <img class="plan-manage-section__play-icon" src="../reference/assets/icons/video-play.png"></img>
+        </button>
+        <button class="plan-manage-section__btn-feats">See features</button>
+      </section>
+      <img src="../reference/assets/plan-manage.png"></img>
+    </div>
+  </div>
   <script src="./dist/bundle.js"></script>
+<!--
+  <div class="wrapper">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+  </div> -->
 </body>
 </html>

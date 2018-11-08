@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mastering FrontEnd | Wizeline Academy</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Roboto:300,400,500,700" rel="stylesheet">
+
 <link href="styles.css" rel="stylesheet"></head>
 <body>
   <!-- The SVG Sprite will be loaded here -->
@@ -12,82 +16,89 @@
 
   
   <header class="header">
-    <nav class="header__main-nav">
 
-      <div class="header__main-nav__left">
-        <div class="header__main-nav__logo">
-          <svg>
-            <use href="#logo"></use>
-          </svg>
-        </div>
+      <input type="checkbox" name="mobile-menu-trigger" id="menu-mobile-trigger" class="hidden">
 
-        <ul class="header__main-nav__items">
-          <li class="header__main-nav__items__item header__main-nav__items__item--active">
-            <a href="#" class="header__main-nav__items__item__link">
+      <a href="#" class="header__logo">
+        <svg>
+          <use href="#logo"></use>
+        </svg>
+      </a>
+
+      <button class="header__mobile-btn">
+        <label for="menu-mobile-trigger">
+          <svg><use href="#menu"></svg>
+        </label>
+      </button>
+
+      <nav class="header__nav header__nav--main">
+        <ul class="header__nav__list">
+          <li class="header__nav__list__item header__nav__list__item--current">
+            <a href="#" class="header__nav__list__item__link">
               <span>Home</span>
             </a>
           </li>
-          <li class="header__main-nav__items__item">
-            <a href="#blog" class="header__main-nav__items__item__link">
+          <li class="header__nav__list__item">
+            <a href="#blog" class="header__nav__list__item__link">
               <span>Blog</span>
             </a>
           </li>
-          <li class="header__main-nav__items__item">
-            <a href="#features" class="header__main-nav__items__item__link">
+          <li class="header__nav__list__item">
+            <a href="#features" class="header__nav__list__item__link">
               <span>Features</span>
             </a>
           </li>
-          <li class="header__main-nav__items__item">
-            <a href="#pricing" class="header__main-nav__items__item__link">
+          <li class="header__nav__list__item">
+            <a href="#pricing" class="header__nav__list__item__link">
               <span>Pricing</span>
             </a>
           </li>
-          <li class="header__main-nav__items__item">
-            <a href="#documentation" class="header__main-nav__items__item__link">
+          <li class="header__nav__list__item">
+            <a href="#documentation" class="header__nav__list__item__link">
               <span>Documentation</span>
             </a>
           </li>
         </ul><!-- /.header__main-nav__items -->
-      </div><!-- /.header__main-nav__left -->
+      </nav><!-- /.header__main-nav__left -->
 
-      <div class="header__main-nav__right">
-        <ul class="header__main-nav__social">
-          <li class="header__main-nav__social__item header__main-nav__social__item--facebook">
-            <a href="#" class="header__main-nav__social__item__link">
+      <nav class="header__nav header__nav--social">
+        <ul class="header__nav__list">
+          <li class="header__nav__list__item header__nav__list__item--facebook">
+            <a href="#facebook" class="header__nav__list__item__link">
               <svg>
                 <use href="#facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="header__main-nav__social__item header__main-nav__social__item--telegram">
-            <a href="#" class="header__main-nav__social__item__link">
+          <li class="header__nav__list__item header__nav__list__item--telegram">
+            <a href="#telegram" class="header__nav__list__item__link">
               <svg>
                 <use href="#telegram"></use>
               </svg>
             </a>
           </li>
-          <li class="header__main-nav__social__item header__main-nav__social__item--twitter">
-            <a href="#" class="header__main-nav__social__item__link">
+          <li class="header__nav__list__item header__nav__list__item--twitter">
+            <a href="#twitter" class="header__nav__list__item__link">
               <svg>
                 <use href="#twitter"></use>
               </svg>
             </a>
           </li>
-          <li class="header__main-nav__social__item header__main-nav__social__item--medium">
-            <a href="#" class="header__main-nav__social__item__link">
+          <li class="header__nav__list__item header__nav__list__item--medium">
+            <a href="#medium" class="header__nav__list__item__link">
               <svg>
                 <use href="#medium"></use>
               </svg>
             </a>
           </li>
-        </ul><!-- /.header__main-nav__social -->
+        </ul><!-- /.header__nav__social -->
 
-        <a href="#" class="btn btn--light-blue">
-          <span>Get Started</span>
-        </a>
-      </div><!-- /.header__main-nav__right -->
+      </nav><!-- /.header__nav__right -->
       
-    </nav><!-- /.header__main-nav -->
+      <a href="#get-started" class="header__get-started btn btn--light-blue">
+        <span>Get started</span>
+      </a>
+      
   </header><!-- /.header -->
 
   <section class="jumbotron">
@@ -98,13 +109,14 @@
     <div class="jumbotron__content">
       <h1 class="jumbotron__content__title">Plan your life</h1>
       <h2 class="jumbotron__content__heading">Increase your <strong>productivity</strong></h2>
-      <p class="jumbotron__content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis explicabo nihil voluptatum itaque eius ratione illo eaque? Porro, dignissimos.</p>
+      <p class="jumbotron__content__description">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
       <button class="jumbotron__content__btn">
         <svg>
           <use href="#play-button"></use>
         </svg>
       </button>
     </div><!-- /.jumbotron__content -->
+
   </section><!-- /.jumbotron-->
 
   <section class="logo-wall">
@@ -139,22 +151,25 @@
       <div class="plan-and-manage__content">
         <h1 class="plan-and-manage__content__title">Desktop and mobile app</h1>
         <h2 class="plan-and-manage__content__heading"><strong>Plan</strong> and <strong>manage</strong></h2>
-        <p class="plan-and-manage__content__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut optio soluta quae aliquid accusantium quam possimus est autem provident minus?</p>
-        
-        <div class="button-group plan-and-manage__content__buttons">
-          <button class="btn">
-            <span>View video &caret;</span>
-          </button>
-          
-          <a href="#link-to-features" class="btn">
-            <span>See features</span>
-          </a>
-        </div><!-- /.plan-and-manage__content__buttons -->
+        <p class="plan-and-manage__content__description">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat.</p>
       </div><!-- /.plan-and-manage__content -->
-
+      
       <div class="plan-and-manage__image">
         <img src="img/plan-manage.png" alt="Plan and Manage">
       </div><!-- /.plan-and-manage__image -->
+
+      <div class="plan-and-manage__buttons">
+        <div class="plan-and-manage__buttons__inner">
+          <button class="btn plan-and-manage__buttons__btn plan-and-manage__buttons__btn--video">
+            <span>View video </span>
+            <span class="icon icon--play-video"></span>
+          </button>
+          
+          <a href="#link-to-features" class="btn plan-and-manage__buttons__btn plan-and-manage__buttons__btn--features">
+            <span>See features</span>
+          </a>
+        </div>
+      </div><!-- /.plan-and-manage__buttons -->
 
     </div><!-- /.plan-and-manage__inner -->
   </section><!-- .plan-and-manage -->
@@ -163,7 +178,6 @@
     <div class="about-us__inner">
       <img src="img/clouds.png" alt="About us" class="about-us__background">
 
-      <div class="about-us__content">
         <h1 class="about-us__title">About us</h1>
         <h2 class="about-us__heading">Read about our app</h2>
 
@@ -171,7 +185,9 @@
 
           <div class="about-us__features__feature">
             <div class="about-us__features__feature__icon">
-              <img src="" alt="Overview">
+              <svg>
+                <use href="#about-overview"></use>
+              </svg>
             </div>
 
             <h4 class="about-us__features__feature__title">Overview</h4>
@@ -180,7 +196,9 @@
 
           <div class="about-us__features__feature">
             <div class="about-us__features__feature__icon">
-              <img src="" alt="Files">
+                <svg>
+                    <use href="#about-files"></use>
+                  </svg>
             </div>
 
             <h4 class="about-us__features__feature__title">Files</h4>
@@ -189,7 +207,9 @@
 
           <div class="about-us__features__feature">
             <div class="about-us__features__feature__icon">
-              <img src="" alt="Meeting chats">
+              <svg>
+                  <use href="#about-chats"></use>
+                </svg>
             </div>
 
             <h4 class="about-us__features__feature__title">Meeting chats</h4>
@@ -198,7 +218,9 @@
 
           <div class="about-us__features__feature">
             <div class="about-us__features__feature__icon">
-              <img src="" alt="Overview">
+              <svg>
+                  <use href="#about-events"></use>
+                </svg>
             </div>
 
             <h4 class="about-us__features__feature__title">Save events</h4>
@@ -212,39 +234,42 @@
             <span>Read more</span>
           </a>
 
-          <span>Or</span>
+          <span class="about-us__actions__or">Or</span>
 
           <a href="#get-started" class="about-us__actions__btn about-us__actions__btn--get-started">
             <span>Get started</span>
           </a>
         </div><!-- /.about-us__actions -->
-      </div>
     </div>
   </section><!-- .about-us -->
 
-  <section class="indicators">
+  <section class="stats">
     
-    <div class="indicators__indicator indicators__indicator--blue-dark">
-      <div class="indicators__indicator__icon">
-        <img src="" alt="Speedometer">
-      </div><!-- /.indicators__indicator__icon -->
-      <div class="indicators__indicator__numbers">
+    <div class="stats__stat stats__stat--blue-dark">
+      <div class="stats__stat__icon">
+        <svg>
+          <use href="#stat-speedometer"></use>
+        </svg>
+      </div><!-- /.stats__stat__icon -->
+      <div class="stats__stat__numbers">
         <span>89%</span>
-      </div><!-- /.indicators__indicator__numbers -->
-      <p class="indicators__indicator__description">Customers who have increased their productivity</p>
-    </div><!-- /.indicators__indicator -->
+      </div><!-- /.stats__stat__numbers -->
+      <p class="stats__stat__description">Customers who have increased their productivity</p>
+    </div><!-- /.stats__stat -->
 
-    <div class="indicators__indicator indicators__indicator--blue-light">
-      <div class="indicators__indicator__icon">
-        <img src="" alt="Users">
-      </div><!-- /.indicators__indicator__icon -->
-      <div class="indicators__indicator__numbers">
+    <div class="stats__stat stats__stat--blue-light">
+      <div class="stats__stat__icon">
+        <svg>
+          <use href="#stat-users"></use>
+        </svg>
+      </div><!-- /.stats__stat__icon -->
+      <div class="stats__stat__numbers">
         <span>3123</span>
-      </div><!-- /.indicators__indicator__numbers -->
-      <p class="indicators__indicator__description">Users who have used our application</p>
-    </div><!-- /.indicators__indicator -->
+      </div><!-- /.stats__stat__numbers -->
+      <p class="stats__stat__description">Users who have used our application</p>
+    </div><!-- /.stats__stat -->
 
-  </section><!-- .indicators -->
+  </section><!-- .stats -->
 
   <section class="our-resources">
     <div class="our-resources__inner">
@@ -419,7 +444,7 @@
   <section class="get-started">
 
     <picture class="get-started__background">
-      <img src="img/clouds.png" alt="Clouds">
+      <img src="img/blue-clouds-bg.png" alt="Blue Clouds">
     </picture><!-- /.get-started__background -->
 
     <div class="get-started__inner">
@@ -430,8 +455,8 @@
       <p class="get-started__description">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
 
       <div class="get-started__buttons">
-        <a href="#view-pricing" class="get-started__buttons__filled">View pricing</a>
-        <a href="#read-documentation" class="get-started__buttons__transparent">Read documentation</a>
+        <a href="#view-pricing" class="get-started__buttons__btn get-started__buttons__btn--pricing">View pricing</a>
+        <a href="#read-documentation" class="get-started__buttons__btn get-started__buttons__btn--documentation">Read documentation</a>
       </div><!-- /.get-started__buttons -->
 
     </div><!-- /.get-started__inner -->
@@ -440,11 +465,13 @@
   <section class="newsletter">
     <div class="newsletter__inner">
 
-      <h1 class="newsletter__title">Sign up for newsletter</h1>
-      <p class="newsletter__description">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</p>
+      <div class="newsletter__texts">
+        <h1 class="newsletter__texts__title">Sign up for newsletter</h1>
+        <p class="newsletter__texts__description">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</p>
+      </div>
 
       <form method="post" action="" class="newsletter__form">
-        <input type="email" name="email" class="newsletter__form__email">
+        <input type="email" name="email" class="newsletter__form__email" placeholder="Email address">
         <button type="submit" class="newsletter__form__submit">Save me</button>
       </form><!--/.newsletter__form -->
 

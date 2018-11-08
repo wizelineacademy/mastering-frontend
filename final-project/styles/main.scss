@@ -10,11 +10,16 @@ $brightroyalblue: #4074F8;
 $royalblue: #3A79FF;
 $brightcornflowerblue: #4C85FF;
 $cornflowerblue: #5E81FE;
+$lavenderblue: #6888FF;
+$lightslategray: #7382A3;
 $darkgrey: #8D96BD;
 $lightsteelblue: #ADB4D2;
 $lightgray: #D1D1E4;
+$lightestgray: #E8ECF4;
 $lavender: #D2E1FF;
 $light-lavender: #D8E3FE;
+$lighter-lavender: #E9EFFF;
+$lightest-lavender: #E0E9FF;
 $aliceblue: #F1F5FF;
 $ghostwhite: #F5F8FF;
 $mistyrose: #FFD7D7;
@@ -118,6 +123,10 @@ p{
     background-color: $mistyrose;
     color: $indianred;
   }
+  &--gray{
+    background-color: $lightestgray;
+    color: $lightslategray;
+  }
   &--bordered{
     border: solid 1px $lightgray;
     color: $lightsteelblue;
@@ -125,7 +134,7 @@ p{
   }
 }
 
-.header {
+.header, .footer {
   display: flex;
   justify-content: space-between;
   font-family: $quicksand;
@@ -157,6 +166,17 @@ p{
     display: inline-block;
     color: $nav-text-color;
   }
+}
+.copyright{
+  width: 100%;
+  display: block;
+  clear: both;
+  font-family: $quicksand;
+  font-size: rem-calc(12px);
+  line-height: rem-calc(15px);
+  text-align: center;
+  letter-spacing: 5%;
+  color: $lightsteelblue;
 }
 
 .main {
@@ -241,7 +261,7 @@ p{
   justify-content: space-between;
   flex-wrap: wrap;
   min-height: rem-calc(776px);
-  padding: 10%;
+  padding: 0 10%;
   &__subtext{
     padding-top: rem-calc(208px);
   }
@@ -336,6 +356,70 @@ p{
         font-size: rem-calc(11px);
         line-height: rem-calc(19px);
         color: $lightsteelblue;
+      }
+    }
+  }
+}
+
+.metrics{
+  font-family: $quicksand;
+  .section{
+    min-height: 342px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 90px;
+    &__image{
+      display: block;
+    }
+    &__number{
+      font-size: rem-calc(48px);
+      line-height: rem-calc(83px);
+      letter-spacing: 3%;
+      display: block;
+      width: 100%;
+    }
+    &__metric{
+      display: block;
+      width: 100%;
+    }
+  }
+  .section-left{
+    text-align: right;
+    background-image: linear-gradient($cornflowerblue, $lavenderblue);
+    .section{
+      &__content{
+        color: $white;
+        text-align: right;
+      }
+      &__image{
+        float: right;
+      }
+      &__number{
+        float: right;
+      }
+      &__metric{
+        float: right;
+      }
+    }
+
+  }
+  .section-right{
+    text-align: left;
+    background-image: linear-gradient($lighter-lavender, $lightest-lavender);
+    .section{
+      &__content{
+        color: $cornflowerblue;
+        text-align: left;
+      }
+      &__image{
+        float: left;
+      }
+      &__number{
+        float: left;
+      }
+      &__metric{
+        float: left;
       }
     }
   }

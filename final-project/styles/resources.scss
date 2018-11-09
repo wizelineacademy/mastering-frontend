@@ -3,14 +3,14 @@
 
 .resources {
   background-color: $background-primary-color;
-  padding: 0 rem-calc(100px);
+  padding: 0 rem-calc(100px) rem-calc(20px);
 
   @include landscape-breakpoint {
-    padding: 0 rem-calc(50px);
+    padding: 0 rem-calc(50px) rem-calc(20px);
   }
 
   @include tablet-breakpoint {
-    padding: 0 rem-calc(30px);
+    padding: 0 rem-calc(30px) rem-calc(20px);
   }
 
   &__header {

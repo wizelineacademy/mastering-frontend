@@ -202,7 +202,6 @@
         }
       }
 
-
       var url = "https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog";
       fetch(url)
         .then(function (data) {
@@ -210,7 +209,6 @@
         })
         .then(response => {
           buildResourceItems(response);
-          console.log(response)
           var carouselResources = new Carourel('.resources__container-item');
           carouselResources.init();
         })
@@ -222,7 +220,6 @@
 
       function buildResourceItems(data) {
         for(let i = 0; i < data.articles.length; i ++) {
-          console.log(data.articles.length, data.articles[i].title)
           let dataArt = data.articles[i];
 
           let baseElm = document.querySelector('.resources__container');

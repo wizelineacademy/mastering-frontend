@@ -1,0 +1,99 @@
+@import "_mixin.scss";
+@import "_color.scss";
+
+.newsletter {
+    height: rem-calc(350px);
+    background-color: #FCFDFF;
+
+    &__description {
+        width: 50%;
+        position: relative;
+        float: left;
+        height: 100%;
+
+        @include tablet-breakpoint {
+            width: 100%;
+            float: none;
+            height: 50%;
+        }
+
+        &--content {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 20%;
+
+            @include tablet-breakpoint {
+                text-align: center;
+            }
+
+            &-card {
+                &-title {
+                    color: #3D4F9F;
+                    font-size: rem-calc(20px);
+                    font-weight: bold;
+                    margin: rem-calc(20px) 0;
+                }
+
+                &-description {
+                    color: #8D96BD;
+                    font-size: rem-calc(15px);
+                }
+            }
+        }
+    }
+
+    &__form {
+        width: 50%;
+        position: relative;
+        float: right;
+        height: 100%;
+
+        @include tablet-breakpoint {
+            width: 100%;
+            float: none;
+            height: 50%;
+        }
+
+        &--content {
+            position: absolute;
+            top: 53%;
+            transform: translateY(-50%);
+
+            @include tablet-breakpoint {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 25%;
+                width: 100%;
+                text-align: center;
+            }
+
+            &-form {
+                &-input {
+                    background-color: #EFEFF7;
+                    height: rem-calc(43px);
+                    width: rem-calc(200px);
+                    border-radius: rem-calc(5px);
+                    border: 1px solid #ccc;
+                    padding: 0 rem-calc(23px);
+
+                    @include mobile-breakpoint {
+                        width: 70%;
+                    }
+                }
+
+                &-button {
+                    height: rem-calc(43px);
+                    width: rem-calc(130px);
+                    background-color: $background-btn-primary-color;
+                    border-radius: rem-calc(5px);
+                    color: white;
+
+                    @include mobile-breakpoint {
+                        margin: rem-calc(10px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -12,6 +12,8 @@ $color-secondary-light: #FFD7D7;
 $color-secondary-dark: #D43F3F;
 $color-normal: #E8ECF4;
 $color-normal-text: #7382A3;
+$color-normal-inverse-text: #A6B6DA;
+$color-normal-inverse-hover: #EEE;
 
 .button {
   align-items: center;
@@ -42,6 +44,16 @@ $color-normal-text: #7382A3;
     background-color: $color-normal;
     border: 1px solid transparent;
     color: $color-normal-text;
+  }
+
+  &--normal--inverse {
+    background-color: #FFF;
+    border: 1px solid transparent;
+    color: $color-normal-inverse-text;
+
+    &:hover {
+      background-color: $color-normal-inverse-hover;
+    }
   }
 
   &--primary {

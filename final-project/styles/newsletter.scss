@@ -59,13 +59,13 @@
             position: absolute;
             top: 53%;
             transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
 
             @include tablet-breakpoint {
                 left: 50%;
                 transform: translateX(-50%);
                 top: 25%;
-                width: 100%;
-                text-align: center;
             }
 
             &-form {

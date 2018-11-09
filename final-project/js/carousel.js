@@ -16,7 +16,9 @@ class Carourel {
     }
 
     swapItem() {
-        let dotItems = document.querySelectorAll(`.${this.dotKlass}`);
+        let item = document.querySelector(this.klass);
+        let parent = item.parentElement.parentElement;
+        let dotItems = parent.querySelectorAll(`.${this.dotKlass}`);
         let saveCurrend = this.current;
 
         if(this.current < (this.items.length - 1)){
@@ -71,10 +73,12 @@ class Carourel {
     }
 
     removeDots() {
-      let dotsDiv = document.querySelector('.customer__dots');
-      if(dotsDiv) {
-        dotsDiv.remove();
-      }
+        let item = document.querySelector(this.klass);
+        let parent = item.parentElement.parentElement;
+        let dotsDiv = parent.querySelector('.customer__dots');
+        if(dotsDiv) {
+            dotsDiv.remove();
+        }
     }
 
     isStarted() {

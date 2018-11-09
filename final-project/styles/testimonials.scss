@@ -40,11 +40,13 @@
 
     &__carrousel{
       margin-left: 10%;
+      display: flex;
 
       &__message{
         height: rem-calc(206px);
         width: rem-calc(423px);
         background-color: white;
+        
       
         &-img{
           position: absolute;
@@ -63,9 +65,7 @@
           padding: 15%;
           line-height: 1.4;
         }
-
       }
-
     }
   }
 
@@ -85,7 +85,8 @@
       &__carrousel{
         display: flex;
         position: relative;
-        transform: translateX(15%);
+        transform: translateX(25%);
+        width: fit-content;
 
         &__message{
           &-img{

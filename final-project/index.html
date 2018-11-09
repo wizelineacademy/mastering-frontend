@@ -18,9 +18,15 @@
   <script>
     window.onload = function() {
       populateBlog();
+      checkResize();
+      //alert("This website is adaptive, not responsive. I didnt have enough time to do it fully responsive, so it only looks good in desktop, laptop, ipad and iphoneX. Thanks for your understaing :(");
       window.setInterval(function(){
         moveBlogRight();
       }, 2000);
+    };
+
+    window.onresize = function(){
+      checkResize();
     };
   </script>
 
@@ -190,7 +196,7 @@
             atqui laudem an.</p>
         </div>
         <section class="testimonials__inner__carrousel">
-          <div class="testimonials__inner__carrousel__message">
+          <div class="testimonials__inner__carrousel__message" id="testimonial-1">
             <p class="testimonials__inner__carrousel__message-p">Quidam vocibus eum ne, erat consectetuer voluptatibus
               ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
             </p>

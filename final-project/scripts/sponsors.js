@@ -11,8 +11,10 @@ function moveSponsors(){
   document.getElementById(`sponsor-${currentSponsorIndex}`).style.display = "block";
 }
 
-if (screen.width <= 375) {
-  window.setInterval(function(){
-    moveSponsors();
-  }, 2000);
+function checkResize(){
+  if (screen.width <= 375) {
+    window.setInterval(function(){
+      moveSponsors();
+    }, 2000);
+  }
 }

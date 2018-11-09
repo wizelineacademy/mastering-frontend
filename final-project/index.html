@@ -182,7 +182,86 @@
         <div class="resources__header--subtitle">Our Resources</div>
         <div class="resources__header--title">Start reading our blog</div>
       </div>
+      <noscript>
+        <div class="resources__header">
+          <div class="resources__header--subtitle">Para una mejor experiencia porfavor habilita JavaScript!</div>
+        </div>    
+      </noscript>
       <div class="resources__container">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="quotes">
+      <div class="quotes__description">
+        <div class="quotes__description--content">
+          <div class="quotes__description--content-card">
+            <div class="quotes__description--content-card-testimonials">
+              Testimonials
+            </div>
+            <div class="quotes__description--content-card-title">
+              Customers's quotes
+            </div>
+            <div class="quotes__description--content-card-desc">
+              Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quotes__user">
+        <div class="quotes__user--content">
+          <noscript>
+            <div class="quotes__user--content">
+              <div class="quotes__user--content--noscript">Para una mejor experiencia porfavor habilita JavaScript!</div>
+            </div>    
+          </noscript>
+          <div class="quotes__user--content-carousel">
+            <div class="quotes__user--content-carousel-card">
+              <div class="quotes__user--content-carousel-card-container">
+                <div class="quotes__user--content-carousel-card-container-description">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                    Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                </div>
+                <div class="quotes__user--content-carousel-card-container-image">
+                  <img src="https://via.placeholder.com/50x50/F8D1B4"></img>
+                </div>
+              </div>
+            </div>
+            <div class="quotes__user--content-carousel-card">
+              <div class="quotes__user--content-carousel-card-container">
+                <div class="quotes__user--content-carousel-card-container-description">
+                    Erat consectetuer voluptatibus ut nam, Quidam vocibus eum ne, e
+                    Vero tractatos ius an, in mel diceret persecuti.
+                </div>
+                <div class="quotes__user--content-carousel-card-container-image">
+                  <img src="https://via.placeholder.com/50x50/676F95"></img>
+                </div>
+              </div>
+            </div>
+            <div class="quotes__user--content-carousel-card">
+              <div class="quotes__user--content-carousel-card-container">
+                <div class="quotes__user--content-carousel-card-container-description">
+                    Vero tractatos ius an, in mel diceret persecuti., quidam vocibus eum ne.
+                    Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                </div>
+                <div class="quotes__user--content-carousel-card-container-image">
+                  <img src="https://via.placeholder.com/50x50/F8D1B4"></img>
+                </div>
+              </div>
+            </div>
+            <div class="quotes__user--content-carousel-card">
+              <div class="quotes__user--content-carousel-card-container">
+                <div class="quotes__user--content-carousel-card-container-description">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                    Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                </div>
+                <div class="quotes__user--content-carousel-card-container-image">
+                  <img src="https://via.placeholder.com/50x50/676F95"></img>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -202,6 +281,9 @@
         }
       }
 
+      var quotesCarousel = new Carourel('.quotes__user--content-carousel-card');
+      quotesCarousel.init();
+
       var url = "https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog";
       fetch(url)
         .then(function (data) {
@@ -212,8 +294,6 @@
           var carouselResources = new Carourel('.resources__container-item');
           carouselResources.init();
         })
-        
-        
         .catch(function (error) {
           console.log('error', error);
         });

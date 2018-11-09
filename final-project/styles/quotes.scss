@@ -1,0 +1,171 @@
+@import '_mixin.scss';
+@import '_color.scss';
+
+.quotes {
+    background-color: #EAF0FF;
+    height: rem-calc(480px);
+
+    @include mobile-breakpoint {
+        display: none;
+    }
+
+    @include tablet-breakpoint {
+        height: rem-calc(530px);
+    }
+
+    &__description {
+        display: inline-block;
+        width: 50%;
+
+
+        @include tablet-breakpoint {
+            height: rem-calc(200px);
+            display: block;
+            width: 100%;
+        }
+
+        &--content {
+            position: relative;
+            height: 100%;
+
+            &-card{
+                width: 80%;
+                position: absolute;
+                margin: 10%;
+                top: 50%;
+                transform: translateY(30%);
+
+                @include tablet-breakpoint {
+                    top: 0;
+                    transform: none;
+                    margin: 0;
+                    padding: rem-calc(50px) 0 0 rem-calc(50px);
+                }
+
+                &-testimonials {
+                    font-size: rem-calc(12px);
+                    color: #3D4F9F;
+                    font-family: Quicksand, sans-serif;
+                    margin: rem-calc(24px) 0;
+                    text-transform: uppercase;
+
+                    @include tablet-breakpoint {
+                        font-size: rem-calc(10px);
+                        margin: 0;
+                    }
+                }
+
+                &-title {
+                    font-size: rem-calc(35px);
+                    color: #3D4F9F;
+                    width: 85%;
+                    font-family: Quicksand, sans-serif;
+                    min-height: rem-calc(49px);
+                    margin: rem-calc(30px) 0;
+                    
+                    @include tablet-breakpoint {
+                        font-size: rem-calc(30px);
+                        margin: rem-calc(20px) 0;
+                    }
+                }
+
+                &-desc {
+                    font-size: rem-calc(12px);
+                    color: #A4ABC8;
+                    font-family: Quicksand, sans-serif;
+                    width: 85%;
+                    min-height: rem-calc(49px);
+                }
+            }
+        }
+    }
+
+  &__user {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    float: right;
+
+    @include tablet-breakpoint {
+        float: none;
+        display: block;
+        width: 100%;
+        height: rem-calc(280px);
+    }
+
+    &--content {
+      position: relative;
+      height: 100%;
+
+      &--noscript {
+          color: #3D4F9F;
+          font-size: rem-calc(20px);
+          margin-top: 45%;
+      }
+
+      & .customer__dots {
+        text-align: center;
+        margin: rem-calc(40px) 0;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include tablet-breakpoint {
+            margin: rem-calc(70px) 0;
+        }
+        
+    
+        &-dot {
+          height: rem-calc(12px);
+          width: rem-calc(12px);
+          background-color: #D1D6E3;
+          border-radius: 50%;
+          display: inline-block;
+          margin: 0 rem-calc(3px);
+        }
+    
+        & .active {
+          background-color: #5283FF;
+        }
+      }
+
+      &-carousel {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &-card {
+            text-align: center;
+            background-color: white;
+            padding: rem-calc(40px) rem-calc(30px) rem-calc(70px);
+            font-size: rem-calc(15px);
+            color: #676F95;
+            border-radius: rem-calc(4px);
+            display: none;
+
+            &-container {
+                &-image {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 85%;
+                    img{
+                        border-radius: rem-calc(20px);
+                    }
+                }
+            }
+
+            & .current {
+                display: block;
+            }
+        }
+
+        & .current {
+            display: block;
+        }
+      }
+    }
+  }
+}

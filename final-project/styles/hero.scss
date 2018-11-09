@@ -21,7 +21,7 @@
     position: absolute;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    max-width: 600px;
+    max-width: rem-calc(600px);
     left: 0;
     right: 0;
     margin: auto;

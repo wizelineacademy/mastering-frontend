@@ -132,6 +132,10 @@ p{
     color: $lightsteelblue;
     background-color: transparent;
   }
+  &--no-border{
+    color: $lightsteelblue;
+    background-color: transparent;
+  }
 }
 
 .header, .footer {
@@ -421,6 +425,98 @@ p{
       &__metric{
         float: left;
       }
+    }
+  }
+}
+.blog{
+  clear: both;
+  background-color: $ghostwhite;
+  min-height: 681px;
+  text-align: center;
+  padding: 42px;
+  &__subtext{
+    margin-top: rem-calc(62px);
+  }
+  &__title{
+    margin-top: rem-calc(20px);
+    font-size: rem-calc(24px);
+    line-height: rem-calc(30px);
+    color: $darkslateblue;
+  }
+  .blog-slider{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: rem-calc(92px);
+    &__control{
+      background-image: url('../reference/assets/arrow-blog.png');
+      height: 20px;
+      width: 28px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      &--right{
+        transform:scaleX(-1);
+      }
+    }
+    &__main{
+      background-color: $white;
+      padding: rem-calc(64px) rem-calc(33px);
+      width: calc(100% - 160px);
+    }
+    &__indicator{
+      width: 100vw;
+      height: 20px;
+      margin-top: 90px;
+    }
+  }
+  .indicator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__dot{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      margin: 0 6px;
+      cursor: pointer;
+      &--active{
+        background-color: $cornflowerblue;
+      }
+      &--inactive{
+        background-color: $lavender;
+      }
+    }
+  }
+  .blog-slide{
+    display: flex;
+    justify-content: space-evenly;
+    &__image{
+      max-width: 50%;
+    }
+    &__content{
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    &__title{
+      text-align: left;
+      font-size: rem-calc(36px);
+      color: $darkslateblue;
+    }
+    &__article{
+      text-align: justify;
+      margin-top: rem-calc(20px);
+      line-height: rem-calc(27px);
+      font-size: rem-calc(14px);
+      color: $darkgrey;
+    }
+    &__cta_buttons{
+      margin-top: rem-calc(20px);
+      text-align: left;
     }
   }
 }

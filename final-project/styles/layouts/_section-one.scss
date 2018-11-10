@@ -9,4 +9,12 @@
         padding-top: 10rem; 
         text-align: center;
     }
+
+    &__text {
+        display: none;
+
+        @include respond(tab-port) {
+            display: block;
+        }
+    }
 }

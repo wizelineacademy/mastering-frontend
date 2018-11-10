@@ -1,6 +1,7 @@
 .section-four {
     height: 88.5rem;
     background-color: #FFFFFF;
+    position: relative;
 
     &__title {
         padding-top: 7.4rem;
@@ -8,6 +9,10 @@
     }
 
     &__btns {
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
         text-align: center;
 
         .or {

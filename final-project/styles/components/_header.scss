@@ -5,9 +5,35 @@
     justify-content: space-between;
     height: 8rem;
     background-color: #FFFFFF;
-    padding: 0 2rem;
+    padding-left: 2rem;
+    padding-right: 4rem;
 
     &__nav {
         font-size: 3rem;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: none;
+        justify-content: space-between;
+        width: calc(100% - 40rem);
+
+        @include respond(tab-port) {
+            display: flex;
+        }
+        &--item {
+
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @include respond(tab-port) {
+            display: block;
+        }
     }
 }

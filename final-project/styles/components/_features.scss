@@ -5,9 +5,15 @@
     grid-column-gap: 2.3rem;
     margin-top: 7.1rem;
     justify-content: center;
-
+    @include respond(tab-port) {
+        grid-template-columns: 14rem 14rem 14rem 14rem;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 50%;
+    }
     &__item {
         width: 14rem;
+        height: 25.4em;
     }
 
     &__icon {
@@ -18,6 +24,7 @@
         border-radius: 50%;
         left: 50%;
         transform: translate(-50%);
+        margin-bottom: 3.3rem;
     }
 
     &__img {

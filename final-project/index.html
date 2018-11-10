@@ -6,28 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:100,200,300,400,500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
 
 <body>
+
   <header class="header">
     <div class="logo"></div>
     <div class="header__nav">
       <i class="fas fa-bars"></i>
     </div>
+    <div class="header__menu text--one text--light text--font12 text--wide text--grey5">
+      <div class="header__menu--item">Home</div>
+      <div class="header__menu--item">Blog</div>
+      <div class="header__menu--item">features</div>
+      <div class="header__menu--item">Pricing</div>
+      <div class="header__menu--item">Documentation</div>
+    </div>
+    <a href="#" class="btn btn__four header__btn">Get started</a>
   </header>
+
   <main class="main">
+
     <section class="section-one">
-      <div class="section-one__header">
-        <h1 class="main-header">
-          <span class="main-header--small color-blue margin-btm-small"> plan your life </span>
-          <span class="main-header__big main-header__big--light color-blue"> Increase your </span>
-          <span class="main-header__big main-header__big--bold color-blue"> productivity </span>
-        </h1>
+      <h1 class="section-one__header">
+        <div class="text--two text--center text--light text--navy text--font10 text--wider margin-btm35"> PLAN YOUR LIFE </div>
+        <div class="text--one text--font48 text--center text--navy margin-btm28">
+          <span class="text--lighter"> Increase your </span>
+          <span class="text--light"> productivity </span>
+        </div>
+      </h1>
+      <div class="section-one__text text--two text--grey1 text--tall29 text--font15 text--narrow margin-left170 margin-right170 text--center">
+        Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu.
+        Et vel modus congue vituperata.
       </div>
       <div class="section-one__play-btn">
         <div class="play-btn">
@@ -42,6 +58,18 @@
           <li class="customers__item">
             <img src="./reference/assets/customers/bitbucket.png" />
           </li>
+          <li class="customers__item">
+            <img src="./reference/assets/customers/apple-watch.png" />
+          </li>
+          <li class="customers__item">
+            <img src="./reference/assets/customers/facebook.png" />
+          </li>
+          <li class="customers__item customers__item--selected">
+            <img src="./reference/assets/customers/atlassian.png" />
+          </li>
+          <li class="customers__item">
+            <img src="./reference/assets/customers/audi.png" />
+          </li>
         </ul>
         <div class="selection">
           <span class="selection__item selection__item--one"></span>
@@ -53,11 +81,13 @@
 
     <section class="section-three">
       <div class="section-three__text">
-        <span class="main-header--small color-blue margin-btm-small"> desktop and mobile app </span>
-        <span class="main-header__big main-header__big--bold color-blue"> plan </span>
-        <span class="main-header__big main-header__big--light color-blue"> and </span>
-        <span class="main-header__big main-header__big--bold color-blue"> manage </span>
-        <div class="text--one" style="margin-top: 3rem;">
+        <div class="text--two text--light text--navy text--font10 text--wider margin-btm20"> DESKTOP AND MOBILE APP </div>
+        <div class="text--one text--navy text--font36 margin-btm8">
+          <span class="text--light"> Plan </span>
+          <span class="text--lighter"> and </span>
+          <span class="text--light"> manage </span>
+        </div>
+        <div class="text--two text--grey1 text--tall29 text--font15 text--narrow section-three__paragraph">
           Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu.
           Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat.
         </div>
@@ -74,39 +104,55 @@
 
     <section class="section-four">
       <div class="section-four__title">
-        <span class="main-header--small margin-btm-small"> about us </span>
-        <span class="main-header__big main-header__big--bold small-font color-blue"> Read about our app </span>
+        <div class="text--two text--light text--font10 text--wider text--navy text--center margin-btm20"> ABOUT US</div>
+        <div class="text--one text--light text--font24 text--center text--navy"> Read about our app </div>
       </div>
       <div class="feature">
-        <div class="features__item feature__item--one">
+        <div class="feature__item">
           <div class="feature__icon">
             <img class="feature__img" src="./reference/assets/icons/home.png" />
           </div>
-          <span class="feature__title"> Overview </span>
-          <div class="feature__text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.</div>
+          <div class="text--three text--bolder text--tall25 text--font14 text--center text--blue margin-btm25">
+            Overview
+          </div>
+          <div class="text--three text--center text--tall19 text--font11 text--grey2 text--bold">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+          </div>
         </div>
-        <div class="feature__item feature__item--one">
+        <div class="feature__item">
           <div class="feature__icon">
             <img class="feature__img" src="./reference/assets/icons/folder.png" />
           </div>
-          <span class="feature__title"> Files </span>
-          <div class="feature__text">No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.</div>
+          <div class="text--three text--bolder text--tall25 text--font14 text--center text--blue margin-btm25">
+            Files
+          </div>
+          <div class="text--three text--center text--tall19 text--font11 text--grey2 text--bold">
+            No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.
+          </div>
         </div>
-        <div class="feature__item features__item--two">
+        <div class="feature__item">
           <div class="feature__icon">
             <img class="feature__img" src="./reference/assets/icons/chat.png" />
           </div>
-          <span class="feature__title"> Meeting chats </span>
-          <div class="feature__text">Vim ne tacimates neglegentur. Erat diceret omittam at est.</div>
+          <div class="text--three text--bolder text--tall25 text--font14 text--center text--blue margin-btm25">
+            Meeting chats
+          </div>
+
+          <div class="text--three text--center text--tall19 text--font11 text--grey2 text--bold">
+            Vim ne tacimates neglegentur. Erat diceret omittam at est.
+          </div>
         </div>
-        <div class="feature__item features__item--three">
+        <div class="feature__item">
           <div class="feature__icon">
             <img class="feature__img" src="./reference/assets/icons/upload.png" />
           </div>
-          <span class="feature__title"> Save events </span>
-          <div class="feature__text">Nisl idque mel ea, nominati voluptatum.</div>
+          <div class="text--three text--bolder text--tall25 text--font14 text--center text--blue margin-btm25">
+            Save events
+          </div>
+          <div class="text--three text--center text--tall19 text--font11 text--grey2 text--bold">
+            Nisl idque mel ea, nominati voluptatum.
+          </div>
         </div>
-        <div class="features__item features__item--four"></div>
       </div>
       <div class="section-four__btns">
         <a href="#" class="btn btn__three">Read more</a>
@@ -130,57 +176,53 @@
 
     <section class="section-six">
       <div class="section-six__title">
-        <span class="main-header--small color-blue margin-btm-small"> our resources </span>
-        <span class="main-header__big main-header__big--bold small-font color-blue"> Start reading our blog </span>
+        <div class="text--two text--light text--font10 text--wider text--navy text--center margin-btm20"> OUR RESOURCES </div>
+        <div class="text--one text--light text--font24 text--navy text--center"> Start reading our blog </div>
       </div>
       <div class="section-six__blog">
         <div class="blog">
           <img src="https://via.placeholder.com/407x267/E7B4F8" class="blog__img">
-          <div class="blog__title">
-            <span class="main-header__big main-header__big--light color-blue"> How to start planning </span>
-          </div>
-          <div class="blog__text text--one">
-            Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-            persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore
-            ...
-          </div>
+          <div class="text--one text--font36 text--navy"> How to start planning </div>
+          <div class="text--two text--tall27 text--font14 text--narrow text--navy text--grey1">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in
+            mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos
+            ut decore ...</div>
           <div class="section-six__btn">
             <a href="#" class="btn btn__five">Read now</a>
           </div>
         </div>
       </div>
       <div class="selection blog__selection">
-        <span class="selection__item selection__item--one"></span>
-        <span class="selection__item selection__item--two"></span>
-        <span class="selection__item selection__item--three"></span>
+        <span class="selection__item selection__item--selected"></span>
+        <span class="selection__item"></span>
+        <span class="selection__item"></span>
       </div>
     </section>
 
     <section class="section-seven">
       <div class="section-seven__title">
-        <span class="main-header--small color-blue margin-btm-small"> customer help </span>
-        <span class="main-header__big main-header__big--bold small-font color-blue"> Frequently asked questions </span>
+        <div class="text--two text--light text--font10 text--wider text--navy text--center margin-btm20"> CUSTOMER HELP </div>
+        <div class="text--one text--light text--font24 text--navy text--center"> Frequently asked questions </div>
       </div>
       <ul class="faq">
         <li class="faq__item">
           <div class="faq__item--title">
             <i class="fas fa-angle-down faq__item--title-arrow"></i>
-            <div class="faq__item--title-text">Reque insolens in vel?</div>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Reque insolens in vel?</div>
           </div>
         </li>
         <li class="faq__item">
           <div class="faq__item--title">
             <i class="fas fa-angle-down faq__item--title-arrow"></i>
-            <div class="faq__item--title-text">Vis rebum error graecis ea, id sit postea accusamus?</div>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Vis rebum error graecis ea, id sit postea accusamus?</div>
           </div>
         </li>
         <li class="faq__item faq__selected">
           <div class="faq__item--title">
             <i class="fas fa-angle-up faq__item--title-arrow--up"></i>
-            <div class="faq__item--title-text">Lorem repudiandae ne nec?</div>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Lorem repudiandae ne nec?</div>
           </div>
           <div class="faq__item--content">
-            <div class="faq__item--content-text">
+            <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center margin-right24 margin-left24">
               Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
               persecuti.
             </div>
@@ -189,28 +231,28 @@
         </li>
         <li class="faq__item">
           <div class="faq__item--title">
-            <i class="fas fa-angle-down faq__item--title-arrow"></i>
-            <div class="faq__item--title-text">Ad dicit numquam vel. Et eos iudico feugait percipitur?</div>
+            <i class="fas fa-angle-down faq__item--title-arrow "></i>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Ad dicit numquam vel. Et eos iudico feugait percipitur?</div>
           </div>
         </li>
         <li class="faq__item">
           <div class="faq__item--title">
             <i class="fas fa-angle-down faq__item--title-arrow"></i>
-            <div class="faq__item--title-text">Sea no dico percipitur. Fierent constituam definitiones id eum?</div>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Sea no dico percipitur. Fierent constituam definitiones id eum?</div>
           </div>
         </li>
       </ul>
     </section>
 
     <section class="section-eight">
-      <span class="main-header--small color-white margin-btm-small"> plan your life </span>
-      <span class="main-header__big main-header__big--light color-white medium-font"> Get </span>
-      <span class="main-header__big main-header__big--bold color-white medium-font"> started </span>
-      <span class="main-header__big main-header__big--light color-white medium-font"> now </span>
-      <div class="blog__text text--one color-white">
-        Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-        persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...
+      <div class="text--two text--center text--light text--white text--font10 text--wider margin-btm20"> PLAN YOUR LIFE </div>
+      <div class="text--one text--font36 text--center text--white margin-btm20">
+        <span class="text--lighter"> Get </span>
+        <span class="text--light"> started </span>
+        <span class="text--lighter"> now </span>
       </div>
+      <div class="text--two text--font15 text--tall29 text--narrow text--white text--center"> Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est
+        cu. Et vel modus congue vituperata. </div>
 
       <div class="section-eight__btns">
         <a href="#" class="btn btn__six">View pricing </a>
@@ -219,8 +261,9 @@
     </section>
 
     <section class="section-nine">
-      <span class="title__one">Sign up for newsletter</span>
-      <div class="text__two mrgntp__two">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</div>
+      <div class="text--one text--bolder text--font18 text--navy margin-btm20"> Sign up for newsletter </div>
+
+      <div class="text--two text--tall27 text--font14 text--narrow text--grey1"> Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum. </div>
       <div class="section-nine__form">
         <input type="text" class="section-nine__form-email" placeholder="Email address">
         <a href="#" class="btn btn__eight">Save me</a>

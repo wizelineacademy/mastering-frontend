@@ -82,9 +82,8 @@
 
     &__description {
       color: #A4ABC8;
-      font-family: 'Open Sans', Arial, sans-serif;
+      @mixin font opensans, bold;
       font-size: var(--description-font-size);
-      font-weight: 600;
       letter-spacing: calc(var(--description-font-size) * var(--description-letter-spacing) / 100);
       margin-top: var(--description-margin-top);
     }

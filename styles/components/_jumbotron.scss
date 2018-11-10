@@ -39,9 +39,8 @@
     text-align: center;
    
     &__title {
-      font-family: 'Roboto', sans-serif;
+      @mixin font roboto;
       font-size: 1rem;
-      font-weight: 400;
       line-height: 1;
       letter-spacing: .5rem;
       text-transform: uppercase;
@@ -50,8 +49,7 @@
     &__heading {
       margin-top: 2rem;
       font-size: 4.8rem;
-      font-family: 'Quicksand', sans-serif;
-      font-weight: 300;
+      @mixin font quicksand, light;
       line-height: 1;
       
       strong {
@@ -62,8 +60,7 @@
     &__description {
       margin-top: 3rem;
       display: var(--description-display);
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
+      @mixin font roboto, light;
       line-height: 1.63;
       letter-spacing: .08rem;
       font-size: 1.5rem;

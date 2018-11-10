@@ -6,6 +6,10 @@
   @if $family == quicksand {
     font-family: 'Quicksand', sans-serif;
   }
+
+  @if $family == opensans {
+    font-family: 'Open Sans', sans-serif;
+  }
   
   @if $type == light {
     font-weight: 300;
@@ -15,6 +19,9 @@
   }
   @if $type == medium {
     font-weight: 500;
+  }
+  @if $type == semibold {
+    font-weight: 600;
   }
   @if $type == bold {
     font-weight: 700;

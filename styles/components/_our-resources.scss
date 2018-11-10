@@ -10,9 +10,15 @@
   --slides-width: 100%;
   --post-description-font-size: 1.4rem;
   --post-description-letter-spacing: 3;
+  --post-description-margin-top: 1.6rem;
   --post-inner-padding: 3rem 1rem 2.3rem 1rem;
-  --post-buttons-margin-top: 1.1rem;
+  --post-content-margin-top: .9rem;
+  --actions-margin-top: 1.1rem;
+  --actions-width: 100%;
+  --button-width: 100%;
   --bookmark-display: none;
+  --arrows-display: none;
+  --dots-margin-top: 3rem;
 
   @media (--respond-to-tablet) {
     --bookmark-display: flex;
@@ -25,6 +31,8 @@
   @media (--respond-to-big-desktop) {
 
   }
+
+  background-color: #F5F8FF;
 
   &__inner {
     padding-top: var(--inner-padding-top);
@@ -55,6 +63,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    align-items: center;
 
     &__slides {
       display: flex;
@@ -70,6 +79,8 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          outline: 1px solid #D8E3FE;
+          outline-offset: -1px;
         }
 
         &__img {
@@ -77,6 +88,7 @@
         }
 
         &__content {
+          margin-top: var(--post-content-margin-top);
 
           &__title {
             color: #3D4F9F;
@@ -85,7 +97,8 @@
           }
 
           &__description {
-            color: #3D4F9F;
+            margin-top: var(--post-description-margin-top);
+            color: #8D96BD;
             font-size: var(--post-description-font-size);
             line-height: 1.63;
             @mixin font roboto;
@@ -95,11 +108,15 @@
 
         &__actions {
           display: flex;
+          width: var(--actions-width);
+          margin-top: var(--actions-margin-top);
 
           &__btn {
             display: flex;
             justify-content: center;
             align-items: center;
+            width: var(--button-width);
+            height: 3.4rem;
 
             &--read-more {
               background-color: #D2E1FF;
@@ -118,6 +135,7 @@
     }
 
     &__arrows {
+      display: var(--arrows-display);
 
       &--left {
 
@@ -130,11 +148,21 @@
     }
 
     &__dots {
+      display: flex;
+      margin-top: var(--dots-margin-top);
+
+      &__dot + &__dot {
+        margin-left: 1.2rem;
+      }
 
       &__dot {
-
+        background-color: #D1D6E3;
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        
         &--active {
-
+          background-color: #5283FF;
         }
       }
     }

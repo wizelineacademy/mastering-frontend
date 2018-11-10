@@ -4,6 +4,7 @@
 $black: #000;
 $indianred: #D43F3F;
 $nav-text-color: #697CA6;
+$darkerslateblue: #495274;
 $darkslateblue: #3D4F9F;
 $primary-color: #2a3fbb;
 $brightroyalblue: #4074F8;
@@ -561,6 +562,77 @@ p{
   .slider{
     .indicator{
       width: calc(100% - 75px);
+    }
+  }
+}
+
+.faq{
+  padding: rem-calc(140px) rem-calc(240px);
+  &__subtext{
+    margin-top: rem-calc(35px);
+    text-align: center;
+  }
+  &__title{
+    text-align: center;
+    margin-top: rem-calc(24px);
+    font-size: rem-calc(24px);
+    font-weight: 500;
+  }
+  &__container{
+    margin-top: rem-calc(68px);
+  }
+  .question_answer{
+    display: block;
+    &__item[open] summary{
+      border-bottom: none;
+      color: $darkerslateblue;
+      &:after{
+        background-image: url("../reference/assets/icons/arrow-up.svg");
+      }
+    }
+    &__item[open] .question_answer__answer{
+      border-bottom: solid 1px $light-lavender;
+    }
+    &__question{
+      font-family: $quicksand;
+      font-weight: bold;
+      line-height: rem-calc(19px);
+      font-size: rem-calc(15px);
+      letter-spacing: 0.03em;
+      color: $darkgrey;
+      padding: 17px;
+      border-bottom: solid 1px $light-lavender;
+      &::-webkit-details-marker {
+        display: none
+      }
+      &:after{
+        background-position: center rem-calc(8px);
+        background-repeat: no-repeat;
+        content: ".";
+        color: transparent;
+        float: left;
+        font-size: 1.5em;
+        margin: rem-calc(-5px) rem-calc(10px) 0 0;
+        text-align: center;
+        width: rem-calc(17px);
+        display: block;
+        background-image: url("../reference/assets/icons/arrow-down.svg");
+      }
+    }
+    &__answer{
+      min-height: rem-calc(100px);
+      padding: rem-calc(16px);
+      line-height: rem-calc(27px);
+      font-size: rem-calc(14px);
+      letter-spacing: 0.03em;
+      display: block;
+      border-bottom: none;
+    }
+    &__button{
+      text-align: center;
+    }
+    &__body{
+      padding: 0 rem-calc(30px);
     }
   }
 }

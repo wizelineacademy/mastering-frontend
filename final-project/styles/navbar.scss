@@ -37,7 +37,7 @@ button { border:none; }
     }
     
     @include tablet-breakpoint {
-      display: none;
+      //display: none;
       
       &--social {
         display: none;

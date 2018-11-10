@@ -56,13 +56,14 @@
         background-color: transparent;
         border: #A0B4FF 1px solid;
         color: white;
-
       }
-
-
     }
+  }
 
-
+  @media only screen and (max-width: rem-calc(712px)){
+    &__inner{
+      width: 100%;
+    }
   }
 
   @include laptop-view{
@@ -70,9 +71,22 @@
   }
 
   @include mobile-view{
-
     &__inner{
       width: 95%;
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(305px)){
+
+    &__inner{
+      height: rem-calc(370px);
+    }
+
+    .subhero__inner__buttons-b1{
+      width: 100%;
+    }
+    .subhero__inner__buttons-b2{
+      width: 100%;
     }
   }
 

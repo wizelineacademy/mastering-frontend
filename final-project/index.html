@@ -19,7 +19,6 @@
     window.onload = function() {
       populateBlog();
       checkResize();
-      alert("This website is adaptive, not responsive. I didnt have enough time to do it fully responsive, so it only looks good in desktop, laptop, ipad and iphoneX. Thanks for your understaing :(");
       window.setInterval(function(){
         moveBlogRight();
       }, 2000);
@@ -29,6 +28,12 @@
       checkResize();
     };
   </script>
+
+  <noscript>
+    <div style="border: 1px solid purple; padding: 10px">
+      <span style="color:red">"For full functionality of this site it is necessary to enable JavaScript."</span>
+    </div>
+  </noscript>
 
 </head>
 
@@ -86,6 +91,7 @@
         <li class='sponsors__list__logo' id="sponsor-1"><img class='sponsors__list__logo-img' src="./reference/assets/customers/bitbucket.png"></li>
         <li class='sponsors__list__logo' id="sponsor-2"><img class='sponsors__list__logo-img' src="./reference/assets/customers/apple-watch.png"></li>
         <li class='sponsors__list__logo' id="sponsor-3"><img class='sponsors__list__logo-img' src="./reference/assets/customers/facebook.png"></li>
+        <li class='line-break'></li>
         <li class='sponsors__list__logo' id="sponsor-4"><img class='sponsors__list__logo-img' src="./reference/assets/customers/atlassian.png"></li>
         <li class='sponsors__list__logo' id="sponsor-5"><img class='sponsors__list__logo-img' src="./reference/assets/customers/audi.png"></li>
       </ul>
@@ -146,7 +152,6 @@
         </ul>
         <div class="about-us__inner-container_bt">
           <button class="about-us__inner-container_bt-b1">Read more</button>
-          <p class="about-us__inner-container_bt-p"> - or - </p>
           <button class="about-us__inner-container_bt-b2">Get Started</button>
         </div>
       </div>
@@ -189,12 +194,16 @@
 
     <section class="testimonials">
       <div class="testimonials__inner">
+
         <div class="testimonials__inner__static">
-          <h1 class="testimonials__inner__static-h1">Testiomnials</h1>
-          <h2 class="testimonials__inner__static-h2">Customer's quotes</h2>
-          <p class="testimonials__inner__static-p">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
-            atqui laudem an.</p>
+          <div class="testimonials__inner__static__inner">
+            <h1 class="testimonials__inner__static-h1">Testiomnials</h1>
+            <h2 class="testimonials__inner__static-h2">Customer's quotes</h2>
+            <p class="testimonials__inner__static-p">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
+              atqui laudem an.</p>
+          </div>
         </div>
+
         <section class="testimonials__inner__carrousel">
           <div class="testimonials__inner__carrousel__message" id="testimonial-1">
             <p class="testimonials__inner__carrousel__message-p">Quidam vocibus eum ne, erat consectetuer voluptatibus
@@ -356,6 +365,7 @@
 
 
   <script src="./dist/bundle.js"></script>
+
 </body>
 
 </html>

@@ -82,6 +82,13 @@
     }
   }
 
+
+  @media only screen and (max-width: rem-calc(600px)){
+    &__inner{
+      width: 100%;
+    }
+  }
+
   @include mobile-view{
     &__inner{
       width: 100%;

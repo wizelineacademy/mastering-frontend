@@ -12,6 +12,10 @@
     "leftArrow carrousel rightArrow"
     ". dots .";  
 
+    @media only screen and (max-width: rem-calc(1000px)){
+      grid-template-columns: 10% 80% 10%;
+    }
+
     &__titles{
       grid-area: titles;
       @include centerer;
@@ -38,13 +42,13 @@
       grid-area: leftArrow;
 
       &__arrow{
-        @include vertical-align;
-        @include horizontal-align;
         height: rem-calc(20px);
         width: rem-calc(30px);
         background: transparent url("/reference/assets/arrow-blog.png") no-repeat center center;
-        transform: translateX(rem-calc(30px));
         cursor: pointer;
+        float: right;
+        padding-top: 350px;
+        padding-right: 30px;
       }
     }
 
@@ -52,12 +56,15 @@
       grid-area: rightArrow;
 
       &__arrow{
-        @include vertical-align;
         height: rem-calc(20px);
         width: rem-calc(30px);
         background: transparent url("/reference/assets/arrow-blog.png") no-repeat center center;
         transform: translateX(rem-calc(50px)) scaleX(-1) scaleY(-1); 
-                cursor: pointer;
+        cursor: pointer;
+        float: left;
+        padding-top: 350px;
+        padding-left: 30px;
+        transform: translateX(rem-calc(0px)) scaleX(-1) scaleY(-1);         
       }
     }
 
@@ -87,6 +94,7 @@
               grid-area: img;
               height: 100%;
               margin-right: 100px;
+              max-width: 100%;
 
             }
             &__title{
@@ -94,7 +102,7 @@
               font-family: $font-family__main;
               color: $font-color__main;
               font-size: rem-calc(25px);
-              padding-top: rem-calc(20px);
+              overflow: hidden;
 
             }
             &__entry{
@@ -103,6 +111,7 @@
               color: $font-color__secondary;
               font-size: rem-calc(12px);
               line-height: 1.7;
+              overflow: hidden;
             }
             &__buttons{
               grid-area: buttons;
@@ -116,20 +125,18 @@
                 background-color: #D2E1FF;
                 color: #3A79FF;
                 cursor: pointer;
+                margin-right: rem-calc(10px);
               }
 
               &-b2{
-                width: rem-calc(210px);
+                width: fit-content;
                 height: rem-calc(43px);
                 background-color: transparent;
                 color: #A6B6DA;
               }
-
             }
         }
       }
-
-
     }
 
     &__dots{
@@ -183,11 +190,12 @@
             }
   
             &__title{
-              padding-bottom: 10%;
+              padding-bottom: 17%;
               font-size: rem-calc(20px);
+              padding-top: 5%;
             }
             &__entry{
-              padding-top: 3%;
+              padding-top: 5%;
               font-size: rem-calc(14px);
             }
         }

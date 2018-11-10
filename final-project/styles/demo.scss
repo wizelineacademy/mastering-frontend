@@ -17,7 +17,7 @@
     height: fit-content;
     width: 29%;
     position:absolute;
-    transform: translate(rem-calc(175px), rem-calc(-175px));
+    left: 10%;
 
     &-h1{
       font-size: rem-calc(10px);
@@ -71,6 +71,8 @@
     padding: 0;
     align-content: flex-end;
     img{
+      max-height: rem-calc(1100px);
+      max-width: rem-calc(1500px);
       position: absolute;
       width: 60%;
       top: 10%;
@@ -132,5 +134,76 @@
     }
 
   }
+
+
+  @media only screen and (max-width: rem-calc(900px)){
+    padding-top: 0%;
+    height: rem-calc(500px);
+    &__text-area{
+      width: 40%;
+      left: 5%;
+    
+    }
+
+
+  }
+
+  @media only screen and (max-width: rem-calc(780px)){
+    height: rem-calc(600px);
+    padding-top: 0%;
+    &__text-area{
+      left: 0;
+      width: 100%;
+      top: 10%;
+
+      &-button1{
+        transform: translateY(650%);
+      }
+      &-button2{
+        transform: translateY(650%);
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: rem-calc(500px)){
+    height: rem-calc(700px);
+  }
+
+  @media only screen and (max-width: rem-calc(425px)){
+    height: rem-calc(700px);
+    &__img-area{
+      img{
+        top: 52%;
+      }
+    }
+    &__text-area{
+      &-button1{
+        transform: translateY(500%);
+      }
+      &-button2{
+        transform: translateY(500%);
+      }
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(360px)){
+    padding: 4%;
+    &__text-area{
+      &-button1{
+        transform: translateY(600%);
+      }
+      &-button2{
+        transform: translateY(600%);
+      }
+    }
+  }
+
+
+
+
+
+
+  
 
 }

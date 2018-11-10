@@ -11,8 +11,9 @@
     color: white;
 
     &__inner{
-      @include vertical-align;
-      transform: translate(125%, -50%);
+      float: right;
+      padding-right: rem-calc(65px);
+      padding-top: rem-calc(65px);
       width: rem-calc(260px);
       height: rem-calc(210px);
       text-align: right;
@@ -39,10 +40,12 @@
     color: #5E80FF;
 
     &__inner{
-      @include vertical-align;
-      transform: translate(25%, -50%);
+      float: left;
+      padding-left: rem-calc(65px);
+      padding-top: rem-calc(65px);
       width: rem-calc(260px);
       height: rem-calc(210px);
+      text-align: left;
 
       &-icon{
         width: rem-calc(55px);
@@ -61,27 +64,28 @@
 
   }
 
-  @include tablet-view{
-    &__productivity__inner{
-      transform: translate(20%, -50%);
+  @media only screen and (max-width: rem-calc(660px)){
+    flex-flow: wrap;
+    height: rem-calc(684px);
+    &__productivity{
+      width: 100%;
+    }
+    &__users{
+      width: 100%;
     }
   }
 
-  @include mobile-view{
-    flex-flow: wrap;
-    height: rem-calc(684px);
-
+  @media only screen and (max-width: rem-calc(360px)){
     &__productivity{
-      width: 100%;
       &__inner{
-        transform: translate(35%, -50%);
+        padding-right: rem-calc(15px);
+        padding-top: rem-calc(60px);
       }
     }
-
     &__users{
-      width: 100%;
       &__inner{
-        transform: translate(10%, -40%);
+        padding-left: rem-calc(15px);
+        padding-top: rem-calc(60px);
       }
     }
   }

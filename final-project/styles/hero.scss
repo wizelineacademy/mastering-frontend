@@ -62,4 +62,18 @@
       background: white url("/reference/assets/icons/polygon.png") no-repeat center center;
     }
   }
+
+  @media only screen and (max-width: rem-calc(600px)){
+    background-size: auto;
+    &__inner-content{
+      width: 100%;
+      &-p{
+        padding-bottom: 5%;
+      }
+      &-button{
+        position:relative;
+        transform: translate(0);
+      }
+    }
+  }
 }

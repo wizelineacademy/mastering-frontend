@@ -12,6 +12,9 @@
     margin: 0;
     padding: 0;
     background: url("/reference/assets/clouds.png") no-repeat center center;
+    background-size: auto;
+    top: 46%;
+    left: 50%;
     align-content: center;
     text-align: center;
     font-family: $font-family__secondary;
@@ -24,6 +27,12 @@
       ". h2 h2 h2 h2 ."
       ". ul ul ul ul ."
       ". . bt bt . .";      
+
+
+    @media only screen and (max-width: rem-calc(1210px)){
+      width: 100%;
+      background-size: contain;
+    }
 
       &_h1{
         grid-area: h1;
@@ -255,10 +264,33 @@
               "l3 . l4";
           }
           &_bt-p{
-            transform: translate(rem-calc(155px), rem-calc(13px));
+            transform: translate(rem-calc(120px), rem-calc(13px));
+            margin-left: 10%;
+            margin-right: 10%;
           }
       }
-    
   }
 
+  @media only screen and (max-width: rem-calc(460px)){
+    &__inner-container{
+      grid-template-areas: 
+        "h1 h1 h1 h1"
+        "h2 h2 h2 h2"
+        "ul ul ul ul"
+        "bt bt bt bt";  
+        &_bt{
+          &-b1{
+            left: 10%;
+          }
+          &-p{
+            position: fixed;
+            left: 7%;
+            top: 95%;
+          }
+          &-b2{
+            right: 10%;
+          }
+        }
+    }
+  }
 }

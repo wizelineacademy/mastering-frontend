@@ -7,15 +7,11 @@
   padding-top: 10%;
 
   @include mobile-view{
-
     height: rem-calc(350px);
-
     .header{
       &__nav--mobile{
         display: none;
       }
-
-
       &__button{
         display: block;
         position: absolute;
@@ -33,6 +29,21 @@
         text-align: center;
         grid-gap: 20%;
       }
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(360px)){
+    .header__nav-list{
+      transform: translate(-75%);
+    }
+  }
+  @media only screen and (max-width: rem-calc(320px)){
+    .header__nav-list{
+      transform: translate(-63%);
+    }
+    .header__button{
+      transform: translate(130%, 450%);
+
     }
   }
 }

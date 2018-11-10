@@ -4,6 +4,7 @@
 $black: #000;
 $indianred: #D43F3F;
 $nav-text-color: #697CA6;
+$dimgray: #565F82;
 $darkerslateblue: #495274;
 $darkslateblue: #3D4F9F;
 $primary-color: #2a3fbb;
@@ -17,6 +18,7 @@ $darkgrey: #8D96BD;
 $lightsteelblue: #ADB4D2;
 $lightgray: #D1D1E4;
 $lightestgray: #E8ECF4;
+$powderblue: #C7D3FF;
 $lavender: #D2E1FF;
 $light-lavender: #D8E3FE;
 $lighter-lavender: #E9EFFF;
@@ -138,6 +140,16 @@ p{
   &--no-border{
     color: $lightsteelblue;
     background-color: transparent;
+  }
+  &--white{
+    background-color: $white;
+    border: solid 1px $white;
+    color: $dimgray;
+  }
+  &--gray{
+    background-color: transparent;
+    border: solid 1px $powderblue;
+    color: $powderblue;
   }
 }
 
@@ -633,6 +645,70 @@ p{
     }
     &__body{
       padding: 0 rem-calc(30px);
+    }
+  }
+}
+.get-started{
+  text-align: center;
+  background-image: url("../reference/assets/blue-clouds-bg.png");
+  padding: rem-calc(92px);
+  &__subtext{
+    color: $white;
+  }
+  &__title{
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: rem-calc(48px);
+    color: $white;
+    margin-top: rem-calc(16px);
+  }
+  &__text{
+    line-height: rem-calc(29px);
+    font-size: rem-calc(15px);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $white;
+  }
+  &__cta_buttons{
+    margin-top: rem-calc(28px);
+    & .btn{
+      margin: 0 -2px;
+    }
+  }
+}
+.newsletter{
+  padding: rem-calc(118px) rem-calc(68px);
+  height: 100px;
+  &__title{
+    font-weight: bold;
+    font-size: rem-calc(18px);
+    text-align: center;
+    color: $darkslateblue;
+  }
+  &__text{
+    margin-top: rem-calc(18px);
+    line-height: rem-calc(27px);
+    font-size: rem-calc(14px);
+    letter-spacing: 0.03em;
+    color: $darkgrey;
+  }
+  .form{
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    &__input{
+      border-radius: 5px;
+      padding: rem-calc(23px);
+      font-size: rem-calc(13px);
+      background-color: #EFEFF7;
+      border: none;
+      width: rem-calc(253px);
+    }
+    &__submit{
+      border-radius: 5px;
+      padding: rem-calc(23px);
+      font-size: rem-calc(13px);
     }
   }
 }

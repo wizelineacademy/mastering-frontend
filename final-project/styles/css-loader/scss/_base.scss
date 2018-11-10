@@ -1,0 +1,10 @@
+$loader-height:100px !default;
+$loader-width:100px !default;
+$loader-color:#2a3fbb !default;
+$loader-duration:2.0s ;
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}

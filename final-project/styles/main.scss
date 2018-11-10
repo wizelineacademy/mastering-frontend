@@ -65,28 +65,23 @@ h1, h2, h3{
 p{
   color: $darkgrey;
 }
+noscript{
+  display: block;
+  & .title{
+    font-size: rem-calc(37px);
+  }
+}
 
-.column-1, .column-2, .column-3, .column-4, .column-5, .column-6, .column-7, .column-8, .column-9, .column-10, .column-11, .column-12 {
+.hidden{
+  display: none;
+}
+
+.column-3, .column-5, .column-6, .column-12 {
   float: left;
   min-height: 1px;
 }
 .column-12 {
   width: 100%;
-}
-.column-11 {
-  width: 91.66666667%;
-}
-.column-10 {
-  width: 83.33333333%;
-}
-.column-9 {
-  width: 75%;
-}
-.column-8 {
-  width: 66.66666667%;
-}
-.column-7 {
-  width: 58.33333333%;
 }
 .column-6 {
   width: 50%;
@@ -94,17 +89,8 @@ p{
 .column-5 {
   width: 41.66666667%;
 }
-.column-4 {
-  width: 33.33333333%;
-}
 .column-3 {
   width: 25%;
-}
-.column-2 {
-  width: 16.66666667%;
-}
-.column-1 {
-  width: 8.33333333%;
 }
 
 .btn{
@@ -113,6 +99,7 @@ p{
   font-size: rem-calc(13px);
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
   &:hover{
     box-shadow: 1px 1px $darkslateblue;
   }
@@ -518,7 +505,7 @@ p{
         padding: 0 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
       }
       &__title{
         text-align: left;

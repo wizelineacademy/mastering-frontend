@@ -6,6 +6,10 @@
 <path d="M19.7544 16H12.0877H9.19945H2V5.94956V2H12.0877L13.7018 5.16129H19.7544V6.96774M19.7544 16L25 6.96774H19.7544M19.7544 16V6.96774" stroke="#4074F8" stroke-width="2.5" />
 </symbol><symbol viewBox="0 0 18 21" fill="none" id="about-overview">
 <path d="M2 7.87273V19H6.42105L9 17L11.5789 19H16V7.87273L9 2L2 7.87273Z" stroke="#4074F8" stroke-width="2.5" />
+</symbol><symbol viewBox="0 0 27 19" fill="none" id="arrow-left">
+<path d="M25 9.5L2 9.5M2 9.5L9.81132 17M2 9.5L9.81132 2" stroke="#A8B4E5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</symbol><symbol viewBox="0 0 27 19" fill="none" id="arrow-right">
+<path d="M2 9.5H25M25 9.5L17.1887 2M25 9.5L17.1887 17" stroke="#A8B4E5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
 </symbol><symbol viewBox="0 0 117 25" id="customer-apple-watch">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2126 6.51992C13.1534 6.37223 11.4065 7.63687 10.4329 7.63687C9.44383 7.63687 7.9192 6.55176 6.30258 6.58006C4.18049 6.61189 2.22325 7.77925 1.12942 9.6258C-1.07555 13.3428 0.566561 18.8488 2.71415 21.8627C3.76427 23.3378 5.01658 24.9969 6.66234 24.9368C8.24708 24.8757 8.84545 23.9401 10.7599 23.9401C12.6734 23.9401 13.2135 24.9368 14.8884 24.9049C16.5925 24.8757 17.6735 23.4033 18.7155 21.9202C19.9222 20.2107 20.4186 18.5561 20.4477 18.4659C20.4095 18.4535 17.1243 17.2269 17.0916 13.5524C17.0624 10.481 19.6745 9.00321 19.7938 8.93157C18.3102 6.81176 16.0196 6.57829 15.2126 6.51992ZM97.5088 18.5172V18.8426C97.5088 22.0502 95.0925 24.92 90.2436 24.92C85.4083 24.92 82.534 21.9724 82.534 16.821V14.6693C82.534 9.57097 85.422 6.53142 90.2564 6.53142C94.7956 6.53142 97.5088 9.31008 97.5088 12.7786V12.9607H93.8685C93.8685 11.2008 92.7136 9.63553 90.2828 9.63553C87.6907 9.63553 86.3874 11.3176 86.3874 14.6693V16.821C86.3874 20.2116 87.678 21.7902 90.3092 21.7902C92.9286 21.7902 93.8685 20.3549 93.8685 18.5172H97.5088ZM31.3087 19.5342H31.3624L34.6266 6.81883H38.481L41.7579 19.5342H41.8116L44.8481 6.81883H48.9038L43.8135 24.621H39.9582L36.5875 12.4522H36.5201L33.1484 24.621H29.3214L24.2174 6.81883H28.274L31.3087 19.5342ZM105.352 13.9654H112.846V6.81883H116.661V24.621H112.846V17.0306H105.352V24.621H101.552V6.81883H105.352V13.9654ZM80.0758 6.81883V9.89641H74.6103V24.621H70.8224V9.89641H65.3696V6.81883H80.0758ZM59.5398 6.81883L65.4361 24.6202H61.3659L60.0589 20.1338H54.26L52.9321 24.6202H49.1315L55.0415 6.81883H59.5398ZM59.2638 17.3958L57.2036 10.3271H57.1636L55.0715 17.3958H59.2638ZM13.8583 4.62473C12.9785 5.6046 11.5932 6.35012 10.2335 6.24842C10.0404 4.85467 10.7508 3.40077 11.5595 2.49165C12.4621 1.46756 13.984 0.700816 15.2427 0.653061C15.4048 2.07335 14.8155 3.50424 13.9412 4.52834L13.9002 4.57698L13.8583 4.62473Z" fill="D6DAE5" />
 </symbol><symbol viewBox="0 0 117 25" id="customer-atlassian">
@@ -24,8 +28,40 @@
 </g>
 </symbol><symbol viewBox="0 0 9 17" id="facebook">
 <path d="M5.65597 17V9.24548H8.22501L8.60969 6.2234H5.65597V4.294C5.65597 3.41904 5.89578 2.82278 7.13417 2.82278L8.71368 2.82208V0.119112C8.44051 0.0822826 7.5029 -1.65981e-08 6.41206 -1.65981e-08C4.13475 -1.65981e-08 2.57564 1.40836 2.57564 3.9947V6.2234H-2.3404e-08V9.24548H2.57564V17H5.65597Z" />
+</symbol><symbol viewBox="0 0 105 105" fill="#fff" id="loader-grid">
+    <circle cx="12.5" cy="12.5" r="12.5">
+        <animate attributeName="fill-opacity" begin="0s" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="12.5" cy="52.5" r="12.5" fill-opacity=".5">
+        <animate attributeName="fill-opacity" begin="100ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="52.5" cy="12.5" r="12.5">
+        <animate attributeName="fill-opacity" begin="300ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="52.5" cy="52.5" r="12.5">
+        <animate attributeName="fill-opacity" begin="600ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="92.5" cy="12.5" r="12.5">
+        <animate attributeName="fill-opacity" begin="800ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="92.5" cy="52.5" r="12.5">
+        <animate attributeName="fill-opacity" begin="400ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="12.5" cy="92.5" r="12.5">
+        <animate attributeName="fill-opacity" begin="700ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="52.5" cy="92.5" r="12.5">
+        <animate attributeName="fill-opacity" begin="500ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="92.5" cy="92.5" r="12.5">
+        <animate attributeName="fill-opacity" begin="200ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite"></animate>
+    </circle>
 </symbol><symbol viewBox="0 0 26 26" id="logo">
-<circle cx="13" cy="13" r="13" fill="#5E81FE" />
+<circle cx="13" cy="13" r="13" fill="#5E81FE"></circle>
+</symbol><symbol viewBox="0 0 44 46" id="magnifying-glass">
+<ellipse cx="21.6687" cy="23" rx="21.5681" ry="22.3784" fill="white" />
+<path d="M24.2861 21.9762C24.2861 24.0978 22.6376 25.7542 20.6811 25.7542C18.7246 25.7542 17.0762 24.0978 17.0762 21.9762C17.0762 19.8546 18.7246 18.1982 20.6811 18.1982C22.6376 18.1982 24.2861 19.8546 24.2861 21.9762Z" stroke="#A7AAC6" stroke-width="2" />
+<path d="M23.9707 25.3889L27.26 28.8017" stroke="#A7AAC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 </symbol><symbol viewBox="0 0 17 14" id="medium">
 <path d="M17.0004 2.10651H16.3474C16.105 2.10651 15.7621 2.45072 15.7621 2.67109V10.6583C15.7621 10.8789 16.105 11.1796 16.3474 11.1796H17.0004V13.0755H11.0842V11.1796H12.3225V2.78361H12.2618L9.37024 13.0755H7.13153L4.27725 2.78361H4.20502V11.1796H5.44328V13.0755H0.490234V11.1796H1.12447C1.38566 11.1796 1.72849 10.8789 1.72849 10.6583V2.67109C1.72849 2.45072 1.38566 2.10651 1.12447 2.10651H0.490234V0.210635H6.68379L8.71725 7.65872H8.77319L10.8255 0.210635H17.0004V2.10651Z" />
 </symbol><symbol viewBox="0 0 53 53" id="menu">

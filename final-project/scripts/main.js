@@ -14,7 +14,7 @@ function bookmark(title, url) {
     window.sidebar.addPanel(title, url, "");
   }
   else if(window.opera && window.print) { // opera
-    var elem = document.createElement('a');
+    let elem = document.createElement('a');
     elem.setAttribute('href', url);
     elem.setAttribute('title', title);
     elem.setAttribute('rel','sidebar');
@@ -28,11 +28,46 @@ function bookmark(title, url) {
 
 const setLoader = ({visible}) => {
   const loaderContainer = document.querySelector('.blog .loader-container');
+  const mainSlide = document.getElementById('main_slide');
   if (visible) {
     loaderContainer.classList.remove("hidden");
+    mainSlide.classList.add("hidden");
   } else{
     loaderContainer.classList.add('hidden');
+    mainSlide.classList.remove('hidden');
   }
+};
+
+const getImages = (article) => {
+  const pictureContainer = document.createElement('picture');
+  const viewPorts = [
+    {
+      viewport: 'desktop',
+      mediaQuery: '(min-width: 1024px)',
+    },
+    {
+      viewport: 'tablet',
+      mediaQuery: '(min-width: 768px)',
+    },
+    {
+      viewport: 'mobile',
+      mediaQuery: '(min-width: 481px)',
+    },
+    {
+      viewport: 'mobile2x',
+      mediaQuery: '(min-width: 320px)',
+    },
+  ];
+  viewPorts.forEach((viewPort) => {
+    const source = document.createElement('source');
+    source.srcset = article.images[viewPort.viewport];
+    source.media = viewPort.mediaQuery;
+    pictureContainer.appendChild(source);
+  });
+  const defaultImage = document.createElement('img');
+  defaultImage.src = article.images.desktop;
+  pictureContainer.appendChild(defaultImage);
+  return pictureContainer;
 };
 
 const renderArticle = (article) => {
@@ -41,10 +76,16 @@ const renderArticle = (article) => {
   const articleText = document.querySelector('.blog .slide__article');
   const readButton = document.querySelector('.slide .btn--secondary');
   const bookmarkButton = document.querySelector('.slide .bookmark');
+  const imageContainer = document.querySelector('.slide .slide__image');
   bookmarkButton.removeEventListener('click', () => bookmark(article.title, article.url));
   title.innerHTML = article.title;
   articleText.innerHTML = article.description;
   readButton.href = article.url;
+
+  imageContainer.innerHTML = '';
+  const pictureContainer = getImages(article);
+  imageContainer.appendChild(pictureContainer);
+
   bookmarkButton.addEventListener('click', () => bookmark(article.title, article.url))
   updateSlideIndicators();
 };
@@ -61,6 +102,26 @@ const updateSlideIndicators = () => {
   });
 };
 
+const previousArticle = () => {
+  setLoader({visible: true});
+  if(currentArticleIndex === 0){
+    currentArticleIndex = articles.length - 1;
+  } else {
+    currentArticleIndex -= 1;
+  }
+  renderArticle(articles[currentArticleIndex]);
+};
+
+const nextArticle = () => {
+  setLoader({visible: true});
+  if(currentArticleIndex === articles.length - 1){
+    currentArticleIndex = 0;
+  } else {
+    currentArticleIndex += 1;
+  }
+  renderArticle(articles[currentArticleIndex]);
+};
+
 window.addEventListener('load', async () => {
   setLoader({visible: true});
   const posts = await fetch(apiUrl);
@@ -75,9 +136,13 @@ window.addEventListener('load', async () => {
         currentArticleIndex = i;
         renderArticle(articles[currentArticleIndex]);
       });
-      slideIndicators.push(indicator)
+      slideIndicators.push(indicator);
       document.querySelector('.blog .indicator').appendChild(indicator);
     }
-    updateSlideIndicators()
+    updateSlideIndicators();
+    const leftArrow = document.querySelector('.slider__control--left');
+    const rightArrow = document.querySelector('.slider__control--right');
+    leftArrow.addEventListener('click', previousArticle);
+    rightArrow.addEventListener('click', nextArticle);
   });
 }, false );

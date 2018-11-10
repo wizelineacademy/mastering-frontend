@@ -73,7 +73,7 @@ noscript{
 }
 
 .hidden{
-  display: none;
+  display: none !important;
 }
 
 .column-3, .column-5, .column-6, .column-12 {

@@ -2,24 +2,14 @@
 
 // test for scss variables
 $primary-color: #2a3fbb;
-
-* {
-padding: 0;
-margin: 0;
-font-family: Quicksand;
-font-variant:100; 
-}
-
-h1 {
-  color: $primary-color;
-}
+$alter-section-color:#F5F8FF;
+$nav-text-color: #697CA6;
+$header__logo-size: 26px;
+$header__text-color:#3D4F9F;
 
 @function rem-calc($size) {
   @return $size / 16px * 1rem;
 }
-
-$nav-text-color: #697CA6;
-$header__logo-size: 26px;
 
 @mixin tablet-breakpoint {
   @media only screen and (min-width: rem-calc(768px)) {
@@ -36,12 +26,65 @@ $header__logo-size: 26px;
 * {
   padding: 0;
   margin: 0;
+  padding: 0;
+  margin: 0;
+  font-family: Quicksand;
+  font-variant:100;
+}
+
+h1 {
+  color: $primary-color;
+  font-weight: 200;
+
+}
+
+header{
+  display:flex;
+  flex-direction: column;
+  h1{
+    text-align: center;
+    font-size: rem-calc(48px);
+    font-weight: 300;
+    color: $header__text-color;
+  }
+  h2{
+    text-align: center;
+    font-size: rem-calc(36px);
+    font-weight: 500;
+    color: $header__text-color;
+  }
+  h3{
+    text-align: center;
+    font-size: rem-calc(28px);
+    font-weight:500;
+    color: $header__text-color;
+  }
+  span{
+    font-family: Roboto;
+    font-weight:500;
+    color: $header__text-color;
+    font-size: rem-calc(10px);
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+p{
+  font-family: Roboto;
+  font-weight:400;
+  color:#8D96BD;
+  font-size: rem-calc(15px);
+  text-align: center;
+}
+
+.blog{
+  background-color: $alter-section-color;
 }
 
 button { border:none; } 
 
 .header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   font-family: 'Quicksand', sans-serif;
   padding: rem-calc(18px) rem-calc(20px);
@@ -108,7 +151,7 @@ button { border:none; }
 
 .main {
   border-top: #D8E3FE solid 1px;
-  max-width: 320px;
+  max-width: rem-calc(320px);
   margin:0 auto;
   @include tablet-breakpoint {
     max-width: 768px;
@@ -117,6 +160,7 @@ button { border:none; }
     max-width: 1024px;
   }
 }
+
 .header__menu-container{
   max-width: 320px;
   margin:0 auto;
@@ -130,19 +174,50 @@ button { border:none; }
 
 .hero-banner{
   min-height: 570px;
-  background-image: url('/reference/assets/hero.png')
+  background-image: url('/reference/assets/hero.png');
+  &__info{
+    padding: 35px 0 0 0;
+    h1{
+      margin:0 20px;
+    }
+    p{
+      display: none;
+    }
+    span{
+      margin:0 0 35px 0;
+    }
+    &__play-button{
+      display: flex;
+      height: 52px;
+      width: 52px;
+      background-color: white;
+      border-radius: 50%;
+      margin-top: 62px;
+      img{
+        margin: auto;
+        filter:brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%);
+      }
+    }
+    footer{
+      display: flex;
+      justify-content: center;
+
+    }
+  }
 }
 
 .customers{
   display: flex;
   justify-content: space-around;
+  flex-flow: column;
   &__list{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    margin-top:60px;
     &__item{
-      display: flex;
-      flex-direction: row;
+      display: none;
       text-indent: -999px;
       &__bitbucket{
         width: 117px;
@@ -169,12 +244,45 @@ button { border:none; }
         height: 29px;
         background-image: url('/reference/assets/customers/audi.png')
       }
-     }
+      &--active{
+        display: inline;
+      }
+    }
   }
+}
+
+.page-controller{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 45px 136px 80px 136px;
+}
+
+.page-controller__indicator {
+  border: 1px solid white;
+  border-radius: 50%;
+  height:8px;
+  width:8px;
+  background-color: #D1D6E3;
+}
+
+.page-controller__indicator--active{
+  background-color: #5283FF;
+}
+
+.planning{
+  background-color: $alter-section-color;
+}
+.responsive-image {
+  width: 100%;
+  height: auto;
 }
 .statistics{
   display: flex;
   &__part{
     width: 50%;
+    background-color: #6888ff;
+    &--alter{
+      background-color: $alter-section-color;
+    }
   }
 }

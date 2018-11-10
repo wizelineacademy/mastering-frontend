@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700|Quicksand:300,400,500,700|Roboto:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700|Quicksand:300,500,700|Roboto:200,400,500" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
@@ -47,7 +47,7 @@
   </header>
   <main class="main">
     <section class="hero-banner">
-      <div>
+      <div class="hero-banner__info">
         <header>
             <span>
               Plan your life
@@ -60,32 +60,34 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, commodi provident? Voluptatibus, at sed, delectus suscipit explicabo iure ipsum doloremque commodi itaque dignissimos quas quo. Obcaecati doloribus eos rem sint!
         </p>
         <footer>
-          <div>
-            <button>play button</button>
+          <div class="hero-banner__info__play-button">
+            <img src="/reference/assets/icons/video-play.png" alt="">
           </div>
         </footer>
       </div>
-      <picture>
-        <source srcset=""
-                media="(min-width: 800px)">
-        <img src="">
-      </picture>
     </section>
     <section class="customers">
       <ul class="customers__list">
-        <li class="customers__list__item customers__list__item__bitbucket">bitbucket</li>
+        <li class="customers__list__item customers__list__item__bitbucket customers__list__item--active">bitbucket</li>
         <li class="customers__list__item customers__list__item__apple-watch">apple watch</li>
         <li class="customers__list__item customers__list__item__facebook">facebook</li>
         <li class="customers__list__item customers__list__item__atlassian">atlassian</li>
         <li class="customers__list__item customers__list__item__audi">audi</li>
       </ul>
+      <div class="page-controller" >
+        <span class="page-controller__indicator page-controller__indicator--active" onclick="currentCustomer(1)"></span>
+        <span class="page-controller__indicator " onclick="currentCustomer(2)"></span>
+        <span class="page-controller__indicator " onclick="currentCustomer(3)"></span>
+        <span class="page-controller__indicator " onclick="currentCustomer(4)"></span>
+        <span class="page-controller__indicator " onclick="currentCustomer(5)"></span>
+      </div>
     </section>
     <section class="planning">
       <div>
-        <span>
-          Desktop and mobile app
-        </span>
         <header>
+          <span>
+              Desktop and mobile app
+          </span>
           <h1>
             <b>Plan</b> and <b>manage</b>
           </h1>
@@ -95,7 +97,7 @@
         </p>
       </div>
       <picture>
-          <img src="/reference/assets/plan-manage.png" alt="plan and manage" style="width:auto;">
+          <img src="/reference/assets/plan-manage.png" alt="plan and manage" class="responsive-image">
       </picture>
       <div>
         <button> 
@@ -177,7 +179,7 @@
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam atque.
         </p>
       </div>
-      <div class="statistics__part">
+      <div class="statistics__part statistics__part--alter">
         <header>
           <span>
               <img src="/reference/assets/icons/people.png" alt="upload">
@@ -192,7 +194,9 @@
     <section class="blog">
       <header>
         <span>Our resources</span>
-        <h1>start reading our blog</h1>
+        <h3>
+          Start reading our blog
+        </h3>
       </header>
       <div>
         <!--
@@ -200,7 +204,7 @@
         -->
         <article>
           <picture>
-              <img src="/reference/assets/sample-blog-entry.png" alt="upload">
+              <img src="/reference/assets/sample-blog-entry.png" alt="upload" class="responsive-image">
           </picture>
           <header>
             <h1>How start planning</h1>
@@ -225,9 +229,9 @@
       <div>
         <header>
           <span>testimonials</span>
-          <h1>
+          <h2>
             customer's quotes
-          </h1>
+          </h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam corporis similique autem sequi nostrum necessitatibus, ducimus dolor excepturi amet. Ratione iure fugit distinctio laborum! Eaque cum sequi possimus perspiciatis porro.
           </p>
@@ -259,9 +263,9 @@
         <span>
           customer help
         </span>
-        <h1>
+        <h3>
           frequently asked questions
-        </h1>
+        </h3>
       </header>
       <div>
          <!--
@@ -290,9 +294,9 @@
         <span>
           plan your life
         </span>
-        <h1>
-          get <b>started</b> now
-        </h1>
+        <h2>
+          Get <b>started</b> now
+        </h2>
       </header>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis doloremque est fuga sit at tenetur ipsum, tempore perferendis, delectus sapiente, dolorum atque distinctio obcaecati sed porro. Omnis architecto eius nemo?

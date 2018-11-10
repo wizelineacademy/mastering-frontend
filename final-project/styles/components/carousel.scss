@@ -41,6 +41,10 @@ $color-dot-active: #5283FF;
       background-color: #FFF;
       opacity: 0.75;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .button__nav--left {
@@ -119,7 +123,7 @@ $color-dot-active: #5283FF;
       background-color: $color-dot;
       border-radius: 50%;
       height: rem-calc(8px);
-      margin: 0 rem-calc(12px);
+      margin: 0 rem-calc(12px) 0 0;
       width: rem-calc(8px);
 
       &--active {

@@ -347,32 +347,42 @@
       </div><!-- /.testimonials__content -->
 
       <div class="testimonials__quotes">
-
+        
         <div class="testimonials__quotes__slides">
           
-          <div class="testimonials__quotes__slides__slide">
-            <p class="testimonials__quotes__slides__slide__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
-            <img src="" alt="" class="testimonials__quotes__slides__slide__img">
+          <div class="testimonials__quotes__slides__slide testimonials__quotes__slides__slide--active">
+            <div class="testimonials__quotes__slides__slide__card">
+              <p class="testimonials__quotes__slides__slide__card__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+              <div class="testimonials__quotes__slides__slide__card__profile">
+                <img src="img/testimonials/testimonial-1.jpg" alt="Leo" class="testimonials__quotes__slides__slide__card__profile__img">
+              </div>
+            </div><!-- /.testimonials__quotes__slides__slide__card -->
           </div><!-- /.testimonials__quotes__slides__slide -->
-
+          
           <div class="testimonials__quotes__slides__slide">
-            <p class="testimonials__quotes__slides__slide__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
-            <img src="" alt="" class="testimonials__quotes__slides__slide__img">
+            <div class="testimonials__quotes__slides__slide__card">
+              <p class="testimonials__quotes__slides__slide__card__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+              <div class="testimonials__quotes__slides__slide__card__profile">
+                <img src="img/testimonials/testimonial-2.jpg" alt="Ginna" class="testimonials__quotes__slides__slide__card__profile__img">
+              </div>
+            </div><!-- /.testimonials__quotes__slides__slide__card -->
           </div><!-- /.testimonials__quotes__slides__slide -->
-
+          
           <div class="testimonials__quotes__slides__slide">
-            <p class="testimonials__quotes__slides__slide__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
-            <img src="" alt="" class="testimonials__quotes__slides__slide__img">
+            <div class="testimonials__quotes__slides__slide__card">
+              <p class="testimonials__quotes__slides__slide__card__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+              <div class="testimonials__quotes__slides__slide__card__profile">
+                <img src="img/testimonials/testimonial-3.jpg" alt="Adam" class="testimonials__quotes__slides__slide__card__profile__img">
+              </div>
+            </div><!-- /.testimonials__quotes__slides__slide__card -->
           </div><!-- /.testimonials__quotes__slides__slide -->
 
         </div><!-- /.testimonials__quotes__slides -->
 
         <div class="testimonials__quotes__dots">
-          <span class="testimonials__quotes__dots__dot testimonials__quotes__dots__dot--active"></span>
-          <span class="testimonials__quotes__dots__dot"></span>
-          <span class="testimonials__quotes__dots__dot"></span>
-          <span class="testimonials__quotes__dots__dot"></span>
-          <span class="testimonials__quotes__dots__dot"></span>
+          <span class="testimonials__quotes__dots__dot testimonials__quotes__dots__dot--active">dot 1</span>
+          <span class="testimonials__quotes__dots__dot">dot 2</span>
+          <span class="testimonials__quotes__dots__dot">dot 3</span>
         </div><!-- /.testimonials__quotes__dots -->
 
       </div><!-- /.testimonials__quotes -->
@@ -388,57 +398,114 @@
 
         <div class="faq__questions">
           
-          <div class="faq__question">
-            <input type="radio" name="faq" id="question-1" class="faq__question__trigger">
-            
-            <label for="question-1" class="faq__question__label">
-              <h3 class="faq__question__title">Reque insolens in vel?</h3>
-            </label><!-- /.faq__question__label -->
-            
-            <div class="faq__question__content">
-              <p class="faq__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
-              <a href="#go-to-documentation" class="faq__question__content__link">Go to documentation</a>
-            </div><!-- /.faq__question__content -->
-          </div><!-- /.faq__question -->
+          <div class="faq__questions__question">
+            <div class="faq__questions__question__inner">
 
-          <div class="faq__question">
-            <input type="radio" name="faq" id="question-2" class="faq__question__trigger">
-            
-            <label for="question-2" class="faq__question__label">
-              <h3 class="faq__question__title">Vis rebum error graecis ea, id sit postea accusamus?</h3>
-            </label><!-- /.faq__question__label -->
-            
-            <div class="faq__question__content">
-              <p class="faq__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
-              <a href="#go-to-documentation" class="faq__question__content__link">Go to documentation</a>
-            </div><!-- /.faq__question__content -->
-          </div><!-- /.faq__question -->
+              <input type="radio" name="faq" id="question-1" class="faq__questions__question__trigger" checked>
+          
+              <label for="question-1" class="faq__questions__question__label">
+                <span class="faq__questions__question__label__arrow">
+                    <svg class="faq__questions__question__label__arrow__up">
+                      <use href="#up-arrow"></use>
+                    </svg>
+                    
+                    <svg class="faq__questions__question__label__arrow__down">
+                      <use href="#down-arrow"></use>
+                    </svg>
+                  </span>
+                
+                <h3 class="faq__questions__question__label__title">Reque insolens in vel?</h3>
+              </label><!-- /.faq__questions__question__label -->
+              
+              <div class="faq__questions__question__content">
+                <p class="faq__questions__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                <a href="#go-to-documentation" class="faq__questions__question__content__link">Go to documentation</a>
+              </div><!-- /.faq__questions__question__content -->
 
-          <div class="faq__question">
-            <input type="radio" name="faq" id="question-3" class="faq__question__trigger">
-            
-            <label for="question-3" class="faq__question__label">
-              <h3 class="faq__question__title">Vis rebum error graecis ea, id sit postea accusamus?</h3>
-            </label><!-- /.faq__question__label -->
-            
-            <div class="faq__question__content">
-              <p class="faq__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
-              <a href="#go-to-documentation" class="faq__question__content__link">Go to documentation</a>
-            </div><!-- /.faq__question__content -->
-          </div><!-- /.faq__question -->
+            </div><!-- /.faq__questions__question__inner -->
+          </div><!-- /.faq__questions__question -->
 
-          <div class="faq__question">
-            <input type="radio" name="faq" id="question-4" class="faq__question__trigger">
-            
-            <label for="question-4" class="faq__question__label">
-              <h3 class="faq__question__title">Vis rebum error graecis ea, id sit postea accusamus?</h3>
-            </label><!-- /.faq__question__label -->
-            
-            <div class="faq__question__content">
-              <p class="faq__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
-              <a href="#go-to-documentation" class="faq__question__content__link">Go to documentation</a>
-            </div><!-- /.faq__question__content -->
-          </div><!-- /.faq__question -->
+          <div class="faq__questions__question">
+            <div class="faq__questions__question__inner">
+
+              <input type="radio" name="faq" id="question-2" class="faq__questions__question__trigger">
+              
+              <label for="question-2" class="faq__questions__question__label">
+                <span class="faq__questions__question__label__arrow">
+                  <svg class="faq__questions__question__label__arrow__up">
+                    <use href="#up-arrow"></use>
+                  </svg>
+
+                  <svg class="faq__questions__question__label__arrow__down">
+                    <use href="#down-arrow"></use>
+                  </svg>
+                </span>
+
+                <h3 class="faq__questions__question__label__title">Vis rebum error graecis ea, id sit postea accusamus?</h3>
+              </label><!-- /.faq__questions__question__label -->
+              
+              <div class="faq__questions__question__content">
+                <p class="faq__questions__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                <a href="#go-to-documentation" class="faq__questions__question__content__link">Go to documentation</a>
+              </div><!-- /.faq__questions__question__content -->
+
+            </div><!-- /.faq__questions__question__inner -->
+          </div><!-- /.faq__questions__question -->
+
+          <div class="faq__questions__question">
+            <div class="faq__questions__question__inner">
+
+              <input type="radio" name="faq" id="question-3" class="faq__questions__question__trigger">
+              
+              <label for="question-3" class="faq__questions__question__label">
+                <span class="faq__questions__question__label__arrow">
+                  <svg class="faq__questions__question__label__arrow__up">
+                    <use href="#up-arrow"></use>
+                  </svg>
+                  
+                  <svg class="faq__questions__question__label__arrow__down">
+                    <use href="#down-arrow"></use>
+                  </svg>
+                </span>
+
+                <h3 class="faq__questions__question__label__title">Vis rebum error graecis ea, id sit postea accusamus?</h3>
+              </label><!-- /.faq__questions__question__label -->
+              
+              <div class="faq__questions__question__content">
+                <p class="faq__questions__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                <a href="#go-to-documentation" class="faq__questions__question__content__link">Go to documentation</a>
+              </div><!-- /.faq__questions__question__content -->
+
+            </div><!-- /.faq__questions__question__inner -->
+          </div><!-- /.faq__questions__question -->
+
+          <div class="faq__questions__question">
+            <div class="faq__questions__question__inner">
+
+              <input type="radio" name="faq" id="question-4" class="faq__questions__question__trigger">
+              
+              <label for="question-4" class="faq__questions__question__label">
+                <span class="faq__questions__question__label__arrow">
+                  <svg class="faq__questions__question__label__arrow__up">
+                    <use href="#up-arrow"></use>
+                  </svg>
+                  
+                  <svg class="faq__questions__question__label__arrow__down">
+                    <use href="#down-arrow"></use>
+                  </svg>
+                </span>
+
+                <h3 class="faq__questions__question__label__title">Vis rebum error graecis ea, id sit postea accusamus?</h3>
+              </label><!-- /.faq__questions__question__label -->
+              
+              <div class="faq__questions__question__content">
+                <p class="faq__questions__question__content__description">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                <a href="#go-to-documentation" class="faq__questions__question__content__link">Go to documentation</a>
+              </div><!-- /.faq__questions__question__content -->
+
+            </div><!-- /.faq__questions__question__inner -->
+          </div><!-- /.faq__questions__question -->
 
         </div><!-- /.faq__questions -->
 

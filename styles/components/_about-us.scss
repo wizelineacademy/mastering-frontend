@@ -45,10 +45,10 @@
   
   &__inner {
     position: relative;
-    padding-top: var(--inner-padding-top);
-    padding-bottom: var(--inner-padding-bottom);
     padding-left: var(--inner-side-padding);
     padding-right: var(--inner-side-padding);
+    padding-bottom: var(--inner-padding-bottom);
+    padding-top: var(--inner-padding-top);
     display: flex;
     flex-direction: column;
     justify-content: center;

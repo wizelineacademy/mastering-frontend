@@ -4,6 +4,10 @@
         height: 34.2rem;
         position: relative;
 
+        @include respond(tab-port) {
+            width: 50%;
+        }
+
         &__img {
             width: 6.5rem;
             position: absolute;

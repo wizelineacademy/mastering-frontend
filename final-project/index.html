@@ -71,7 +71,7 @@
             <img src="./reference/assets/customers/audi.png" />
           </li>
         </ul>
-        <div class="selection">
+        <div class="selection selection--customers">
           <span class="selection__item selection__item--one"></span>
           <span class="selection__item selection__item--two"></span>
           <span class="selection__item selection__item--three"></span>
@@ -162,15 +162,17 @@
     </section>
 
     <section class="section-five">
-      <div class="stats-percentage">
-        <img src="./reference/assets/icons/speedmeter.png" alt="speed" class="stats-percentage__img">
-        <div class="stats-percentage__num"> 89% </div>
-        <div class="stats-percentage__text">Customers who have increased their productivity</div>
-      </div>
-      <div class="stats-num">
-        <img src="./reference/assets/icons/people.png" alt="peope" class="stats-num__img">
-        <div class="stats-num__num"> 3123 </div>
-        <div class="stats-num__text">Users who have used our application</div>
+      <div class="section-five__stats">
+        <div class="stats-percentage">
+          <img src="./reference/assets/icons/speedmeter.png" alt="speed" class="stats-percentage__img">
+          <div class="stats-percentage__num"> 89% </div>
+          <div class="stats-percentage__text">Customers who have increased their productivity</div>
+        </div>
+        <div class="stats-num">
+          <img src="./reference/assets/icons/people.png" alt="peope" class="stats-num__img">
+          <div class="stats-num__num"> 3123 </div>
+          <div class="stats-num__text">Users who have used our application</div>
+        </div>
       </div>
     </section>
 
@@ -191,10 +193,33 @@
           </div>
         </div>
       </div>
-      <div class="selection blog__selection">
+      <div class="selection selection--blog">
         <span class="selection__item selection__item--selected"></span>
         <span class="selection__item"></span>
         <span class="selection__item"></span>
+      </div>
+    </section>
+
+    <section class="section-ten">
+      <div class="section-ten__title">
+        <div class="text--two text--light text--font10 text--wider text--navy margin-btm20"> TESTIMONIALS </div>
+        <div class="text--one text--light text--font24 text--navy"> Customers's quotes </div>
+      </div>
+      <div class="text--three text--tall23 text--font12 text--grey4 text--bold text--narrow">
+        Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.
+      </div>
+      <div class="text--two text--tall25 text--font14 text--narrow text--grey6 section-ten__text">
+        Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+        persecuti.
+        <img class="section-ten__text--img" src="./reference/assets/icons/Ellipse 2.1.png" />
+      </div>
+      <div class="selection selection--quotes">
+        <span class="selection__item selection__item"></span>
+        <span class="selection__item selection__item"></span>
+        <span class="selection__item selection__item--selected"></span>
+        <span class="selection__item selection__item"></span>
+        <span class="selection__item selection__item"></span>
+        <span class="selection__item selection__item"></span>
       </div>
     </section>
 
@@ -222,7 +247,7 @@
             <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Lorem repudiandae ne nec?</div>
           </div>
           <div class="faq__item--content">
-            <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center margin-right24 margin-left24">
+            <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
               Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
               persecuti.
             </div>
@@ -261,9 +286,9 @@
     </section>
 
     <section class="section-nine">
-      <div class="text--one text--bolder text--font18 text--navy margin-btm20"> Sign up for newsletter </div>
+      <div class="text--one text--bolder text--font18 text--navy margin-btm20 section-nine__text"> Sign up for newsletter </div>
 
-      <div class="text--two text--tall27 text--font14 text--narrow text--grey1"> Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum. </div>
+      <div class="text--two text--tall27 text--font14 text--narrow text--grey1 section-nine__text"> Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum. </div>
       <div class="section-nine__form">
         <input type="text" class="section-nine__form-email" placeholder="Email address">
         <a href="#" class="btn btn__eight">Save me</a>
@@ -273,6 +298,7 @@
   <footer class="footer">
     <div class="footer__logo logo"></div>
     <nav class="menu">
+      <div class="menu__logo logo"></div>
       <div class="menu__item">home</div>
       <div class="menu__item">blog</div>
       <div class="menu__item">features</div>

@@ -1,3 +1,9 @@
 .section-five {
-    height: 68.4rem;
+    position: relative;
+
+    &__stats {
+    @include respond(tab-port) {
+        display: flex;
+    }
+}
 }

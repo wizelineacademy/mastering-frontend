@@ -3,6 +3,10 @@
     height: 44.7rem;
     text-align: center;
     padding: 10rem 1rem 1rem 1rem;
+    @include respond(tab-port) {
+        background: url("/reference/assets/blue-clouds-bg.png");
+        background-size: cover;
+    }
 
     &__btns {
         margin-top: 10rem;

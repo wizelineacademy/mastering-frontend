@@ -3,6 +3,12 @@
     background-color: #FFFFFF;
     position: relative;
 
+    @include respond(tab-port) {
+        height: 78.5rem;
+        background-image: url("/reference/assets/clouds.png");
+        background-size: cover;
+    }
+
     &__title {
         padding-top: 7.4rem;
         text-align: center;
@@ -14,6 +20,7 @@
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
+        width: 100%;
 
         .or {
             font-family: Open Sans;

@@ -41,23 +41,28 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            height: 22rem;
+            // height: 22rem;
 
+            @include respond(tab-port) {
+                flex-direction: row;
+                margin-right: 5rem;
+            }
             &-text {
-                width: 22rem;
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: 100;
-                line-height: 27px;
-                font-size: 14px;
-                letter-spacing: 0.03em;
-                color: #8D96BD;
+                // width: 22rem;
+                margin-left: 2.4rem;
+                margin-right: 2.4rem;
+                @include respond(tab-port) {
+                    width: 50rem;
+                    margin-left: 7rem;
+                    margin-right: 4rem;
+                }
             }
         }
     }
 
     &__selected {
-        height: 31rem;
+        height: auto;
+        padding-bottom: 3rem;
             .faq__item--title {
                 &-text {
             color: #495274;

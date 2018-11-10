@@ -1,0 +1,129 @@
+@import "./variables";
+
+.newsletter{
+  height: rem-calc(332px);
+  border: $border__style;
+  position: relative;
+  background-color: #FCFDFF;
+
+  &__inner{
+    @include centerer;
+    height: rem-calc(95px);
+    width: rem-calc(887px);
+    display: flex;
+    font-family: $font-family__main;
+
+    &__text{
+      width: rem-calc(330px);
+
+      &-h1{
+        font-size: rem-calc(18px);
+        color: #3D4F9F;
+        margin-bottom: rem-calc(18px);
+      }
+
+      &-p{
+        font-size: rem-calc(14px);
+        color: #8D96BD;
+        font-family: $font-family__secondary;
+        line-height: 2;
+      }
+    } 
+
+    &__form{
+      display: flex;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      &-email{
+        @include vertical-align;
+        width: rem-calc(269px);
+        height: rem-calc(50px);
+        background-color: #EFEFF7;
+        border-radius: 5px;
+        margin-right: rem-calc(14px);
+        padding-left: 23px;
+        font-family: $font-family__main;
+        font-size: rem-calc(13px);
+        font-weight: $font-weight-bold;
+        border: none;
+      }
+
+      &-submit{
+        @include vertical-align;
+        width: rem-calc(174px);
+        height: rem-calc(50px);
+        background-color: #4D6CE1;
+        border-radius: 5px;
+        font-family: $font-family__main;
+        font-size: rem-calc(13px);
+        color: white;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(887px)){
+    &__inner{
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(750px)){
+    &__inner{
+      display: flex;
+      flex-wrap: wrap;
+      &__text{
+        width: 100%;
+      }
+      &__form{
+        width: 100%;
+        transform: translateY(rem-calc(90px));
+      }
+    }
+  }
+
+  @include tablet-view{
+    &__inner{
+      width: 90%;
+      &__form{
+        &-email{
+          width: rem-calc(150px);
+        }
+      }
+    }
+  }
+
+  @include mobile-view{
+    &__inner{
+      width: 90%;
+      display: flex;
+      flex-flow: wrap;
+      height: 80%;
+
+      &__text{
+        width: 100%;
+      }
+      &__form{
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        &-email{
+          width: 100%;
+          margin: 0;
+          margin-bottom: 5%;
+        }
+        &-submit{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(375px)){
+    .newsletter__inner__form{
+      transform: translateX(0);
+    }
+  }
+}

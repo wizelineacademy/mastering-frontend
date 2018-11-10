@@ -1,0 +1,209 @@
+@import "./variables";
+
+
+.demoapp{
+  height: rem-calc(776px);
+  border: $border__style;
+  position: relative;
+  display: flex;
+  padding: rem-calc(48px);
+  grid-gap: rem-calc(55px);
+  background-color: $background-color-demo-container;
+
+  &__text-area{
+    @include vertical-align;
+    color: $font-color__main;
+    font-family: $font-family__secondary;
+    height: fit-content;
+    width: 29%;
+    position:absolute;
+    left: 10%;
+
+    &-h1{
+      font-size: rem-calc(10px);
+      text-transform: uppercase;
+    }
+
+    &-h2{
+      font-family: $font-family__main;
+      font-size: rem-calc(40px);
+      font-weight: $font-weight-light;
+      margin-top: rem-calc(20px);
+      margin-bottom: rem-calc(20px);
+      &__bold{
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    &-p{
+      color: $font-color__secondary;
+      font-size: rem-calc(15px);
+      line-height: rem-calc(28px);
+      margin-bottom: rem-calc(47px);
+    }
+    
+
+    &-button1{
+      font-family: $font-family__main;
+      font-weight: $font-weight-bold;
+      color: white;
+      border: $border__style;    
+      margin: 0; 
+      width: rem-calc(130px);
+      height: rem-calc(43px);
+      background-color: $background-color-demo-button;
+    }
+
+    &-button2{
+      font-family: $font-family__main;
+      font-weight: $font-weight-bold;
+      color: $font-color-button-off;
+      background-color: transparent;
+      margin: 0;
+      border: $border__style;     
+      width: rem-calc(130px);
+      height: rem-calc(43px);
+    }
+  }
+
+  &__img-area{
+    margin: 0;
+    padding: 0;
+    align-content: flex-end;
+    img{
+      max-height: rem-calc(1100px);
+      max-width: rem-calc(1500px);
+      position: absolute;
+      width: 60%;
+      top: 10%;
+      right: 0;
+      bottom: 0;
+
+      @include laptop-view{
+        top: 20%;
+      }
+    }
+  }
+
+  @include tablet-view{
+    height: rem-calc(600px);
+    &__text-area{
+      width: 60%;
+      transform: translate(0);
+      top: 10%;
+      position: relative;
+
+      &-button1{
+        transform: translateY(550%);
+      }
+      &-button2{
+        transform: translateY(550%);
+      }
+    }
+    &__img-area{
+      img{
+        top: 45%;
+        left: 25%;
+        width: 75%;
+      }
+    }
+  }
+
+  @include mobile-view{
+    padding-top: 0;
+    &__text-area{
+      width: 100%;
+      top: 5%;
+      &-h2{
+        font-size: rem-calc(34px);
+      }
+
+      &-button1{
+        transform: translateY(450%);
+      }
+      &-button2{
+        transform: translateY(450%);
+      }
+    }
+    &__img-area{
+      img{
+        left: -5%;
+        top: 52%;
+        width: 100%;
+      }
+    }
+
+  }
+
+
+  @media only screen and (max-width: rem-calc(900px)){
+    padding-top: 0%;
+    height: rem-calc(500px);
+    &__text-area{
+      width: 40%;
+      left: 5%;
+    
+    }
+
+
+  }
+
+  @media only screen and (max-width: rem-calc(780px)){
+    height: rem-calc(600px);
+    padding-top: 0%;
+    &__text-area{
+      left: 0;
+      width: 100%;
+      top: 10%;
+
+      &-button1{
+        transform: translateY(650%);
+      }
+      &-button2{
+        transform: translateY(650%);
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: rem-calc(500px)){
+    height: rem-calc(700px);
+  }
+
+  @media only screen and (max-width: rem-calc(425px)){
+    height: rem-calc(700px);
+    &__img-area{
+      img{
+        top: 52%;
+      }
+    }
+    &__text-area{
+      &-button1{
+        transform: translateY(500%);
+      }
+      &-button2{
+        transform: translateY(500%);
+      }
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(360px)){
+    padding: 4%;
+    &__text-area{
+      &-button1{
+        transform: translateY(600%);
+      }
+      &-button2{
+        transform: translateY(600%);
+      }
+    }
+  }
+
+
+
+
+
+
+  
+
+}

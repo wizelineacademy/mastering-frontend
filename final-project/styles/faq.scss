@@ -1,0 +1,113 @@
+@import "./variables";
+
+.faq{
+  height: rem-calc(700px);
+  position: relative;
+  border: $border__style;
+
+  &__inner{
+    @include centerer;
+    width: rem-calc(614px);
+    height: fit-content;
+
+    &-h1{
+      font-size: rem-calc(10px);
+      text-transform: uppercase;
+      font-family: $font-family__secondary;
+      color: $font-color__main;
+      text-align: center;
+    }
+
+    &-h2{
+      font-family: $font-family__main;
+      font-size: rem-calc(24px);
+      font-weight: $font-weight-light;
+      margin-top: rem-calc(20px);
+      margin-bottom: rem-calc(20px);
+      color: $font-color__main;
+      text-align: center;
+    }
+
+    &-ul{
+      list-style: none;
+      color: #8E96B7;
+      font-family: $font-family__main;
+
+      &-li{
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        border-bottom: $border__style;
+        cursor: pointer;
+
+        &__question{
+          padding-left: rem-calc(10px);
+          padding-top: rem-calc(20px);
+          display: flex;
+          height: rem-calc(40px);
+
+          &__icon{
+            width: rem-calc(17px);
+            height: rem-calc(17px);
+            margin-right: rem-calc(10px);
+          }
+        }
+
+        &__answer{
+          height: fit-content;
+          width: auto;
+          font-family: $font-family__main;
+          display: none;
+
+          &__text{
+            width: 55%;
+            margin-top: rem-calc(16px);
+            margin-left: rem-calc(60px);
+            margin-bottom: rem-calc(16px);
+            font-size: rem-calc(12px);
+            line-height: 2;
+          }
+
+          &__button{
+            width: rem-calc(193px);
+            height: rem-calc(43px);
+            background-color: #E8ECF4;
+            position: absolute;
+            right: 0;
+            top: 55%;
+            color: #7382A3;
+          }
+        }
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: rem-calc(600px)){
+    &__inner{
+      width: 100%;
+    }
+  }
+
+  @include mobile-view{
+    &__inner{
+      width: 100%;
+      &-ul-li{
+        padding-top: 0%;
+        padding-bottom: 5%;
+
+        &__answer__text{
+          width: 100%;
+          margin-left: 5%;
+          margin-top: 0%;
+          margin-bottom: 20%;
+        }
+
+        &__answer__button{
+          top:70%;
+          left: 25%;
+        }
+      }
+    }
+  }
+}

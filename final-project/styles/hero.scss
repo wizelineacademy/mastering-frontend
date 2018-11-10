@@ -1,0 +1,79 @@
+@import "./variables";
+
+.hero{
+  height: rem-calc(565px);
+  border: $border__style;
+  position: relative;
+  background-color: lightgrey;
+  background: url("/reference/assets/hero.png") no-repeat center center;
+  background-size: 100%;
+
+  @include laptop-view{
+    background-size: auto;
+  }
+
+  &__inner-content{
+    @include centerer;
+    transform: translate(-50%, -75%);
+    height: rem-calc(266px);
+    width: rem-calc(583px);
+    font-family: $font-family__secondary;
+    color: $font-color__main;
+    text-align: center;
+
+    @include mobile-view{
+      width: 100%;
+    }
+
+    &-h1{
+      font-size: rem-calc(10px);
+      text-transform: uppercase;
+    }
+    
+    &-h2{
+      font-family: $font-family__main;
+      font-size: rem-calc(48px);
+      font-weight: $font-weight-light;
+      margin-top: rem-calc(20px);
+      margin-bottom: rem-calc(20px);
+      &__bold{
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    &-p{
+      color: $font-color__secondary;
+      font-size: rem-calc(15px);
+      margin-left: rem-calc(70px);
+      margin-right: rem-calc(70px);
+      line-height: rem-calc(28px);
+      @include mobile-view{
+        display: none;
+      }
+    }
+
+    &-button{
+      height: rem-calc(52px);
+      width: rem-calc(52px);
+      border-radius: 100%;
+      position:absolute;
+      bottom:0;
+      transform: translateX(-50%);
+      background: white url("/reference/assets/icons/polygon.png") no-repeat center center;
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(600px)){
+    background-size: auto;
+    &__inner-content{
+      width: 100%;
+      &-p{
+        padding-bottom: 5%;
+      }
+      &-button{
+        position:relative;
+        transform: translate(0);
+      }
+    }
+  }
+}

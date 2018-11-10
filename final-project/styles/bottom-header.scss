@@ -1,0 +1,65 @@
+@import "./variables";
+
+
+.bottom-header {
+  height: rem-calc(200px);
+  position: relative;
+  padding-top: 10%;
+
+  @include mobile-view{
+    height: rem-calc(350px);
+    .header{
+      &__nav--mobile{
+        display: none;
+      }
+      &__button{
+        display: block;
+        position: absolute;
+        transform: translate(150%, 450%);
+      }
+
+      &__nav--main{
+        display: block;
+      }
+
+      &__nav-list{
+        display: grid;
+        transform: translate(-87%);
+        flex-flow: wrap;
+        text-align: center;
+        grid-gap: 20%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(360px)){
+    .header__nav-list{
+      transform: translate(-75%);
+    }
+  }
+  @media only screen and (max-width: rem-calc(320px)){
+    .header__nav-list{
+      transform: translate(-63%);
+    }
+    .header__button{
+      transform: translate(130%, 450%);
+
+    }
+  }
+}
+
+.copyright{
+  font-size: rem-calc(14px);
+  color: #AEB8D0;
+  font-family: $font-family__secondary;
+  line-height: 2;
+  padding-left: 24%;
+
+  @include mobile-view{
+    position: absolute;
+    bottom: 5%;
+  }
+
+  
+}
+

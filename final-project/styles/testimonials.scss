@@ -1,0 +1,134 @@
+@import "./variables";
+
+.testimonials{
+  height: rem-calc(479px);
+  border: $border__style;
+  background-color: #EAF0FF;
+
+  &__inner{
+    @include vertical-align;
+    height: rem-calc(260px);
+    display: flex;
+
+    &__static{
+      width: 50%;
+      font-family: $font-family__secondary;
+      color: $font-color__main;
+
+      &__inner{
+        @include vertical-align;
+        float: right;
+        width: rem-calc(333px);
+        height: fit-content;
+      }
+
+      &-h1{
+        font-size: rem-calc(10px);
+        text-transform: uppercase;
+        padding-bottom: rem-calc(20px);
+      }
+      
+      &-h2{
+        font-family: $font-family__main;
+        font-size: rem-calc(36px);
+        font-weight: $font-weight-bold;
+        padding-bottom: rem-calc(20px);
+      }
+
+      &-p{
+        font-size: rem-calc(12px);
+        color: #A4ABC8;
+      }
+
+    }
+
+    &__carrousel{
+      width: 50%;
+      margin-left: 10%;
+      display: flex;
+
+      &__message{
+        height: rem-calc(206px);
+        width: rem-calc(423px);
+        background-color: white;
+        
+      
+        &-img{
+          position: relative;
+          border-radius: 50%;
+          transform: translate(rem-calc(180px), rem-calc(-35px));
+
+        }
+
+        &-p{
+          color: #676F95;
+          font-family: $font-family__secondary;
+          font-size: rem-calc(15px);
+          padding: 15%;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(850px)){
+
+    &__inner{
+      display: block;
+      height: 100%;
+      width: 100%;
+
+      &__static{
+        width: 90%;
+        padding-left: 10%;
+        padding-bottom: 5%;
+        padding-top: 5%;
+
+        &__inner{
+          transform: translate(0,0);
+          float: none;
+        }
+      }
+
+      &__carrousel{
+        display: flex;
+        position: relative;
+        width: fit-content;
+        transform: translateX(30%);
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: rem-calc(720px)){
+    &__inner__carrousel{
+      transform: translateX(15%);
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(600px)){
+    &__inner__carrousel{
+      transform: translateX(0);
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(490px)){
+    &__inner__carrousel{
+      margin: 3%;
+      &__message{
+        width: 100%;
+
+      }
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(414px)){
+    .testimonials__inner__carrousel__message-img{
+      transform: translate(rem-calc(155px), rem-calc(-35px));
+    }
+  }
+
+  @include mobile-view{
+    display: none;
+  }
+}

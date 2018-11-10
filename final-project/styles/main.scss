@@ -1,13 +1,12 @@
 // This should be imported by the main.js file
 
 // test for scss variables
-$primary-color: #2a3fbb;
 
+$primary-color: #2a3fbb;
 * {
   padding: 0;
   margin: 0;
 }
-
-h1 {
-  color: $primary-color;
+button { 
+  border:none;
 }

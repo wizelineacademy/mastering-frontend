@@ -1,0 +1,93 @@
+@import './variables';
+
+.metrics{
+  height: rem-calc(343px);
+  display: flex;
+  font-family: $font-family__main;
+
+  &__productivity{
+    width: 50%;
+    background-color: #6888FF;
+    color: white;
+
+    &__inner{
+      float: right;
+      padding-right: rem-calc(65px);
+      padding-top: rem-calc(65px);
+      width: rem-calc(260px);
+      height: rem-calc(210px);
+      text-align: right;
+
+      &-icon{
+        width: rem-calc(55px);
+        margin-bottom: rem-calc(24px);
+      }
+
+      &-score{
+        font-size: rem-calc(48px);
+      }
+
+      &-text{
+        font-size: rem-calc(18px);
+      }
+    }
+
+  }
+
+  &__users{
+    width: 50%;
+    background-color: #E9EFFF;
+    color: #5E80FF;
+
+    &__inner{
+      float: left;
+      padding-left: rem-calc(65px);
+      padding-top: rem-calc(65px);
+      width: rem-calc(260px);
+      height: rem-calc(210px);
+      text-align: left;
+
+      &-icon{
+        width: rem-calc(55px);
+        margin-bottom: rem-calc(24px);
+      }
+
+      &-score{
+        font-size: rem-calc(48px);
+      }
+
+      &-text{
+        font-size: rem-calc(18px);
+      }
+
+    }
+
+  }
+
+  @media only screen and (max-width: rem-calc(660px)){
+    flex-flow: wrap;
+    height: rem-calc(684px);
+    &__productivity{
+      width: 100%;
+    }
+    &__users{
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: rem-calc(360px)){
+    &__productivity{
+      &__inner{
+        padding-right: rem-calc(15px);
+        padding-top: rem-calc(60px);
+      }
+    }
+    &__users{
+      &__inner{
+        padding-left: rem-calc(15px);
+        padding-top: rem-calc(60px);
+      }
+    }
+  }
+
+}

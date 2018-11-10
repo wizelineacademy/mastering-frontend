@@ -1,0 +1,84 @@
+////////////// CONSTS ////////////////
+$nav-text-color: #697CA6;
+$logo__color: #5E81FE;
+$button__background-color: #D2E1FF;
+$button_text-color: #3A79FF;
+$border__style: #D8E3FE solid 1px;
+$header__logo-size: 26px;
+$font-color__main: #3D4F9F;
+$font-color__secondary: #8D96BD;
+$background-color-demo-button: #4C85FF;
+$background-color-demo-container: #F5F8FF;
+$font-color-button-off: #ADB4D2;
+$background-color-icons: #F1F5FF;
+$font-color-icons: #4074F8;
+$font-family__main: 'Quicksand', sans-serif;
+$font-family__secondary: 'Roboto', sans-serif;
+$font-family__opensans: 'Open Sans', sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+////////////// CONSTS ////////////////
+
+
+////////////// FUNCTIONS ////////////////
+@function rem-calc($size) {
+  @return $size / 16px * 1rem;
+}
+////////////// FUNCTIONS ////////////////
+
+////////////// MIXINS ////////////////
+@mixin tablet-breakpoint {
+  @media only screen and (min-width: rem-calc(768px)) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint {
+  @media only screen and (min-width: rem-calc(992px)) {
+    @content;
+  }
+}
+
+@mixin laptop-view{
+  @media only screen and (max-width: rem-calc(1440px)){
+    @content;
+  }
+}
+
+@mixin tablet-view{
+  @media only screen and (max-width: rem-calc(768px)){
+    @content;
+  }
+}
+
+@mixin mobile-view{
+  @media only screen and (max-width: rem-calc(375px)){
+    @content;
+  }
+}
+
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@mixin horizontal-align {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+////////////// MIXINS ////////////////

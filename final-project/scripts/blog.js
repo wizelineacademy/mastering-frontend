@@ -11,9 +11,13 @@ async function getBlogItems() {
 function createBlogItem(data, index) {
   const  itemId = index;
   const { images, title, description, url } = data;
+  let image;
+  if (screen.width > 768) image = images.desktop;
+  else if (screen.width > 400) image = images.tablet;
+  else image = images.mobile;
   const template = `
   <div class="blog__carrousel__inner__item" id="blog-item-${itemId}">
-    <img class="blog__carrousel__inner__item__img" src="${images.desktop}">
+    <img class="blog__carrousel__inner__item__img" src="${image}">
     <p class="blog__carrousel__inner__item__title">${title}</p>
     <p class="blog__carrousel__inner__item__entry">${description}</p>
     <div class="blog__carrousel__inner__item__buttons">

@@ -484,13 +484,13 @@
   background-color: #F5F8FF;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
 .blog .blog-text {
   font-family: 'Quicksand', sans-serif;
   color: #3D4F9F;
-  margin-top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -508,9 +508,41 @@
   font-size: 2rem;
 }
 
+.blog .carousel-container {
+  width: 100%;
+  height: 46%;
+  display: flex;
+  justify-content: center;
+}
+
+.blog .carousel-container .btn-prev, .btn-next {
+  background-color: transparent;
+  color: #ADB4D2;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-self: center;
+}
+
+.blog .carousel-container .btn-prev {
+  background-image: url("../reference/assets/arrow-blog.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 2rem;
+  margin-right: 5%;
+}
+
+.blog .carousel-container .btn-next {
+  background-image: url("../reference/assets/arrow-blog.png");
+  background-position: center;
+  transform: rotate(180deg);
+  background-repeat: no-repeat;
+  margin-left: 5%;
+}
+
 .blog .carousel {
   width: 67%;
-  height: 46%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -578,10 +610,21 @@
   margin-left: 5%;
 }
 
+.blog .carousel-indicators {
+  width: 9%;
+}
+
 .blog .carousel-indicators .indicator-list {
   list-style: none;
-  width: 60%;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog .carousel-indicators .indicator-list li {
+  background-color: #D1D6E3;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.8rem;
 }
 
 .quotes {

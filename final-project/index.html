@@ -67,19 +67,19 @@
   <section>
     <div class="customer">
       <div class="customer__container">
-        <div class="customer__container-image">
+        <div class="customer__container-image item">
           <img src="../reference/assets/customers/bitbucket.png"></img>
         </div>
-        <div class="customer__container-image">
+        <div class="customer__container-image item">
           <img src="../reference/assets/customers/apple-watch.png"></img>
         </div>
-        <div class="customer__container-image">
+        <div class="customer__container-image item">
           <img src="../reference/assets/customers/facebook.png"></img>
         </div>
-        <div class="customer__container-image">
+        <div class="customer__container-image item">
           <img src="../reference/assets/customers/atlassian.png"></img>
         </div>
-        <div class="customer__container-image">
+        <div class="customer__container-image item">
           <img src="../reference/assets/customers/audi.png"></img>
         </div>
       </div>
@@ -221,7 +221,7 @@
             </div>    
           </noscript>
           <div class="quotes__user--content-carousel">
-            <div class="quotes__user--content-carousel-card">
+            <div class="quotes__user--content-carousel-card item">
               <div class="quotes__user--content-carousel-card-container">
                 <div class="quotes__user--content-carousel-card-container-description">
                     Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
@@ -232,7 +232,7 @@
                 </div>
               </div>
             </div>
-            <div class="quotes__user--content-carousel-card">
+            <div class="quotes__user--content-carousel-card item">
               <div class="quotes__user--content-carousel-card-container">
                 <div class="quotes__user--content-carousel-card-container-description">
                     Erat consectetuer voluptatibus ut nam, Quidam vocibus eum ne, e
@@ -243,7 +243,7 @@
                 </div>
               </div>
             </div>
-            <div class="quotes__user--content-carousel-card">
+            <div class="quotes__user--content-carousel-card item">
               <div class="quotes__user--content-carousel-card-container">
                 <div class="quotes__user--content-carousel-card-container-description">
                     Vero tractatos ius an, in mel diceret persecuti., quidam vocibus eum ne.
@@ -254,7 +254,7 @@
                 </div>
               </div>
             </div>
-            <div class="quotes__user--content-carousel-card">
+            <div class="quotes__user--content-carousel-card item">
               <div class="quotes__user--content-carousel-card-container">
                 <div class="quotes__user--content-carousel-card-container-description">
                     Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
@@ -456,7 +456,7 @@
         }
       }
     window.onload = function () {
-      var carousel = new Carourel('.customer__container-image');
+      var carousel = new Carourel({klass: '.customer__container-image', prefix: 'customer'});
       window.addEventListener("resize", onResizeCustomers);
       function onResizeCustomers() {
         var wh = window.innerWidth;
@@ -468,7 +468,7 @@
         }
       }
 
-      var quotesCarousel = new Carourel('.quotes__user--content-carousel-card');
+      var quotesCarousel = new Carourel({klass: '.quotes__user--content-carousel-card', prefix: 'quotes'});
       quotesCarousel.init();
 
       var url = "https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog";
@@ -478,7 +478,7 @@
         })
         .then(response => {
           buildResourceItems(response);
-          var carouselResources = new Carourel('.resources__container-item');
+          var carouselResources = new Carourel({klass: '.resources__container-item', prefix: 'resources'});
           carouselResources.init();
         })
         .catch(function (error) {
@@ -492,7 +492,7 @@
           let baseElm = document.querySelector('.resources__container');
 
           let itemElm = document.createElement('div');
-          itemElm.className = 'resources__container-item';
+          itemElm.className = 'resources__container-item item';
 
           let contentElm = document.createElement('div');
           contentElm.className = 'resources__container-item-content';

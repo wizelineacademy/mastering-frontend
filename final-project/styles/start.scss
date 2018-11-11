@@ -77,4 +77,22 @@
             }
         }
     }
+
+    & .customer__dots {
+        text-align: center;
+        margin: rem-calc(40px) 0;
+    
+        &-dot {
+          height: 12px;
+          width: 12px;
+          background-color: #D1D6E3;
+          border-radius: 50%;
+          display: inline-block;
+          margin: 0 3px;
+        }
+    
+        & .active {
+          background-color: #5283FF;
+        }
+      }
 }

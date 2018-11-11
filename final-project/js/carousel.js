@@ -1,11 +1,12 @@
 class Carourel {
-    constructor(klass) {
-        this.klass = klass;
-        this.items = document.querySelectorAll(klass);
+    constructor(config) {
+        this.klass = config.klass;
+        this.items = document.querySelectorAll(config.klass);
+        this.prefix = config.prefix || 'carousel';
         this.pause = 3000;
         this.current = 0;
         this.interval = null;
-        this.dotKlass = 'customer__dots-dot';
+        this.dotKlass = `${this.prefix}__dots-dot`;
         this.working = false;
         this.swapItem = this.swapItem.bind(this);
         this.init = this.init.bind(this);
@@ -13,6 +14,9 @@ class Carourel {
         this.createDots = this.createDots.bind(this);
         this.isStarted = this.isStarted.bind(this);
         this.removeDots = this.removeDots.bind(this);
+        this.dotClick = this.dotClick.bind(this);
+        this.repaintDots = this.repaintDots.bind(this);
+        this.repaintSlider = this.repaintSlider.bind(this);
     }
 
     swapItem() {
@@ -59,10 +63,12 @@ class Carourel {
     createDots() {
         this.removeDots();
         let dotContainer = document.createElement("div");
-        dotContainer.classList.add('customer__dots');
+        dotContainer.classList.add(`${this.prefix}__dots`);
 
         for(let i = 0; i< this.items.length; i++){
-            let dot = document.createElement("span");
+            let dot = document.createElement("div");
+            dot.dataset.index = `${i}`;
+            dot.addEventListener('click', this.dotClick);
             dot.classList.add(this.dotKlass);
             dotContainer.appendChild(dot);
         }
@@ -72,10 +78,45 @@ class Carourel {
         parent.appendChild(dotContainer);
     }
 
+    dotClick(ev) {
+        let el = ev.target;
+        let index = el.getAttribute('data-index');
+
+        clearInterval(this.interval)
+
+        this.current = parseInt(index);
+        this.repaintDots();
+        this.repaintSlider();
+        this.interval = setInterval(this.swapItem, this.pause);
+    }
+
+    repaintSlider(){
+        let item = document.querySelector(this.klass);
+        let container = item.parentElement;
+        
+        let active = container.querySelector('.current');
+        active.classList.remove('current');
+
+        let slider = container.querySelectorAll('.item');
+        slider[this.current].classList.add('current');
+    }
+
+    repaintDots(){
+        let item = document.querySelector(this.klass);
+        item = item.parentElement.parentElement;
+        let container = document.querySelector(`.${this.prefix}__dots`);
+        
+        let active = container.querySelector('.active');
+        active.classList.remove('active');
+
+        let dots = container.querySelectorAll(`.${this.prefix}__dots-dot`);
+        dots[this.current].classList.add('active');
+    }
+
     removeDots() {
         let item = document.querySelector(this.klass);
         let parent = item.parentElement.parentElement;
-        let dotsDiv = parent.querySelector('.customer__dots');
+        let dotsDiv = parent.querySelector(`.${this.prefix}__dots`);
         if(dotsDiv) {
             dotsDiv.remove();
         }

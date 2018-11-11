@@ -80,80 +80,59 @@
         }
     }
 
-  &__user {
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-    float: right;
-
-    @include tablet-breakpoint {
-        float: none;
-        display: block;
-        width: 100%;
-        height: rem-calc(280px);
-    }
-
-    &--content {
-      position: relative;
-      height: 100%;
-
-      &--noscript {
-          color: #3D4F9F;
-          font-size: rem-calc(20px);
-          margin-top: 45%;
-      }
-
-      & .customer__dots {
-        text-align: center;
-        margin: rem-calc(40px) 0;
-        position: absolute;
-        top: 75%;
-        left: 50%;
-        transform: translateX(-50%);
+    &__user {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        float: right;
 
         @include tablet-breakpoint {
-            margin: rem-calc(70px) 0;
+            float: none;
+            display: block;
+            width: 100%;
+            height: rem-calc(280px);
         }
-        
-    
-        &-dot {
-          height: rem-calc(12px);
-          width: rem-calc(12px);
-          background-color: #D1D6E3;
-          border-radius: 50%;
-          display: inline-block;
-          margin: 0 rem-calc(3px);
-        }
-    
-        & .active {
-          background-color: #5283FF;
-        }
-      }
 
-      &-carousel {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        &--content {
+            position: relative;
+            height: 100%;
 
-        &-card {
-            text-align: center;
-            background-color: white;
-            padding: rem-calc(40px) rem-calc(30px) rem-calc(70px);
-            font-size: rem-calc(15px);
-            color: #676F95;
-            border-radius: rem-calc(4px);
-            display: none;
+            &--noscript {
+                color: #3D4F9F;
+                font-size: rem-calc(20px);
+                margin-top: 45%;
+            }
 
-            &-container {
-                &-image {
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    top: 85%;
-                    img{
-                        border-radius: rem-calc(20px);
+            &-carousel {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                &-card {
+                    text-align: center;
+                    background-color: white;
+                    padding: rem-calc(40px) rem-calc(30px) rem-calc(70px);
+                    font-size: rem-calc(15px);
+                    color: #676F95;
+                    border-radius: rem-calc(4px);
+                    display: none;
+
+                    &-container {
+                        &-image {
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            top: 85%;
+                            img{
+                                border-radius: rem-calc(20px);
+                            }
+                        }
                     }
+                }
+
+                & .current {
+                    display: block;
                 }
             }
 
@@ -161,11 +140,34 @@
                 display: block;
             }
         }
-
-        & .current {
-            display: block;
-        }
-      }
     }
-  }
+
+
+    &__dots {
+        text-align: center;
+        margin: rem-calc(40px) 0;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    
+        @include tablet-breakpoint {
+            margin: rem-calc(70px) 0;
+        }
+        
+    
+        &-dot {
+            height: rem-calc(12px);
+            width: rem-calc(12px);
+            background-color: #D1D6E3;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 rem-calc(3px);
+        }
+    
+        & .active {
+            background-color: #5283FF;
+        }
+    }
 }

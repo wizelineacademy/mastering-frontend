@@ -456,28 +456,6 @@
         }
       }
     window.onload = function () {
-
-
-      /*testing accordion
-      function showActive(el) {
-        console.log(el, 'aqui merengues');
-
-        let arrow = el.querySelector('.faq__container--list-item-title-arrow');
-        arrow.classList.remove('arrow-down');
-        arrow.classList.add('arrow-up');
-
-        let title = el.querySelector('.faq__container--list-item-title');
-        title.classList.add('active-title');
-      }
-
-
-      var elm = document.querySelectorAll('.faq__container--list-item');
-      elm[0].addEventListener('click', function(e){
-        //e.preventDefault();
-        showActive(e.target);
-      })
-      */
-
       var carousel = new Carourel('.customer__container-image');
       window.addEventListener("resize", onResizeCustomers);
       function onResizeCustomers() {

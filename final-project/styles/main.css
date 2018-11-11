@@ -599,11 +599,6 @@
   font-weight: bold;
 }
 
-.blog .carousel .carousel-content .btn-read:hover {
-  box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24), 0 15px 48px 0 rgba(0,0,0,0.19);
-  transition-duration: 0.4s;
-}
-
 .blog .carousel .carousel-content .btn-bookmark {
   background-color: transparent;
   color: #ADB4D2;
@@ -611,6 +606,11 @@
   border-radius: 3%;
   transition-duration: 0.4s;
   margin-left: 5%;
+}
+
+.blog .carousel .carousel-content .btn-read:hover, .btn-bookmark:hover {
+  box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24), 0 15px 48px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s;
 }
 
 .blog .carousel-indicators {
@@ -634,48 +634,14 @@
   background-color: #3A79FF;
 }
 
-.quotes {
-  width: 100%;
-  height: 30rem;
-  background-color: #E9EFFF;
-}
-
-.faq {
-  width: 100%;
-  height: 60.31rem;
-  background-color: white;
-}
-
-main.main-content {
-  top: 5rem;
-  width: 100%;
-}
-
-.customers {
-  height: 9.13rem;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-right: 2rem;
-}
-
-.get-started-section {
-  width: 100%;
-  height: 27.5rem;
-  background-color: #E9EFFF;
-}
-
-.newsletter {
-  width: 100%;
-  height: 24.5rem;
-  background-color: white;
-}
-
 .footer {
   width: 100%;
-  height: 17.9rem;
+  height: 15rem;
+  display: flex;
+}
+
+.footer .header-elem-2 {
+  align-items: center;
 }
 
 body {

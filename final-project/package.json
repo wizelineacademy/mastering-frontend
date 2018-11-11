@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "deploy": "firebase deploy"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

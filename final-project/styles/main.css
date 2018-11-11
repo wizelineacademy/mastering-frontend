@@ -554,8 +554,6 @@
   height: 80%;
   overflow: hidden;
   background-image: url("../reference/assets/blog/image_1.jpg");
-  background-image: url("../reference/assets/blog/image_2.jpg");
-  background-image: url("../reference/assets/blog/image_3.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;

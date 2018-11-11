@@ -29,6 +29,7 @@ $color-normal-inverse-hover: #EEE;
   min-width: rem-calc(130px);
   padding: 0 rem-calc(12px);
   opacity: 1;
+  text-decoration: none;
   transition: opacity 0.3s ease;
 
   &:hover {

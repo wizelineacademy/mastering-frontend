@@ -146,6 +146,15 @@
   align-items: center;
 }
 
+.customers {
+  height: 9.13rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .plan-and-manage {
   width: 100%;
   height: 48.5rem;

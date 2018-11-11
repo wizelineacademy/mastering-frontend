@@ -1,13 +1,70 @@
-// This should be imported by the main.js file
-
-// test for scss variables
-$primary-color: #2a3fbb;
-
 * {
   padding: 0;
   margin: 0;
 }
-
-h1 {
-  color: $primary-color;
+.header{
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  font-family: Quicksand,sans-serif;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  &__logo{
+    width: 26px;
+    height: 26px;
+    background-color: #5e81fe;
+    border-radius: 50%;
+  }
+  &__content{
+    height: 80%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  &__section{
+    width: 50%;
+    display: flex;
+  }
+  &__nav-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    width: 100%;
+    &__item{
+      text-decoration: none;
+      color: #697CA6;
+      &__selected, &:hover{
+        text-decoration: none;
+        color: #5E81FE;
+      }
+    }
+  }
+}
+.menu{
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+.social-media{
+  width: 70%;
+  margin-left: 30%;
+  align-items: center;
+  display: flex;
+}
+.button{
+  width: 113px;
+  justify-content: center;
+  height: 43px;
+  border-radius: 5px;
+  font-family: Quicksand,sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+}
+.button-blue{
+  background-color: #D2E1FF;
+  color: #3A79FF;
 }

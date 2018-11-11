@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body>
-  <h1>Hello world!</h1>
-  <script src="./dist/bundle.js"></script>
+  <header class="header">
+    <div class="header__content">
+      <div class="header__section">
+        <div class="header__logo"></div>
+        <nav class="menu">
+          <ul class="menu header__nav-list">
+            <li><a href="#" class="header__nav-list__item__selected">Home</a></li>
+            <li><a href="#" class="header__nav-list__item">Blog</a></li>
+            <li><a href="#" class="header__nav-list__item">Features</a></li>
+            <li><a href="#" class="header__nav-list__item">Pricing</a></li>
+            <li><a href="#" class="header__nav-list__item">Documentation</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__section">
+        <nav class="social-media">
+          <ul class="social-media header__nav-list">
+              <li><a href="#" class="header__nav-list__item"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#" class="header__nav-list__item"><i class="fab fa-telegram-plane"></i></a></li>
+              <li><a href="#" class="header__nav-list__item"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#" class="header__nav-list__item"><i class="fab fa-medium-m"></i></a></li>
+          </ul>
+        </nav>
+        <button href="#" class="button button-blue">Get Started</button>
+      </div>
+    </div>
+  </header>
 </body>
 </html>

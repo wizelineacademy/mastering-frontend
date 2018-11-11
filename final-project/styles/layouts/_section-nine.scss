@@ -3,10 +3,20 @@
     padding: 5rem 1rem 7rem;
     border-bottom: 1px solid #D8E3FE;
 
+    @include respond(tab-land) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     &__text {
         @include respond(tab-port) {
           margin-left: 20rem;
           max-width: 30rem;
+        }
+
+        @include respond(tab-land) {
+            margin-left: 0rem;
         }
     }
 

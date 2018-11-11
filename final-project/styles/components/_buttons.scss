@@ -86,6 +86,10 @@
         color: #3A79FF;
         background: #D2E1FF;
         border-radius: 2px;
+
+        @include respond(tab-land) {
+            padding: 1rem 2rem;
+        }
     }
 
     &__six {

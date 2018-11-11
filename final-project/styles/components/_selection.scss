@@ -19,6 +19,12 @@
         @include respond(tab-port) {
             display: flex;
         }
+
+        @include respond(tab-land) {
+            position: relative;
+            margin-top: 7rem;
+            bottom: 0;
+        }
     }
 
     &__item {

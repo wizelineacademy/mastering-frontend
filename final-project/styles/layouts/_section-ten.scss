@@ -25,6 +25,13 @@
         box-sizing: border-box;
         box-shadow: 0px 5px 50px #F3F5FA;
 
+        @include respond(tab-land) {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0%, 0%);
+        }
+
         &--img {
             position: absolute;
             left: 50%;

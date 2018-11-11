@@ -8,6 +8,15 @@
     padding-left: 2rem;
     padding-right: 4rem;
 
+    &__customers {
+        display: none;
+        @include respond(tab-land) {
+            display: flex;
+            width: 15%;
+            justify-content: space-between;
+        }
+    }
+
     &__nav {
         font-size: 3rem;
 
@@ -24,8 +33,9 @@
         @include respond(tab-port) {
             display: flex;
         }
-        &--item {
-
+        @include respond(tab-land) {
+            width: 40%;
+            margin-right: 15rem;
         }
     }
 

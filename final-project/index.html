@@ -10,6 +10,11 @@
 </head>
 
 <body>
+  <noscript>
+    <div class="resources__header">
+      <div class="resources__header--subtitle">Para una mejor experiencia porfavor habilita JavaScript!</div>
+    </div>    
+  </noscript>
   <header class="header">
     <div class="header__logo"></div>
     <nav class="header__nav  header__nav--main">
@@ -264,7 +269,91 @@
         </div>
       </div>
     </div>
-  </section> 
+  </section>
+  <section class="faq">
+    <div class="faq__container">
+      <h1 class="faq__container--subtitle">Customers help</h1>
+      <h2 class="faq__container--title">Frequently asked questions</h2>
+      <ul class="faq__container--list">
+        <li class="faq__container--list-item">
+          <div class="faq__container--list-item-title" onclick="showActive(this)">
+            <div class='faq__container--list-item-title-arrow arrow-down'></div>
+            <p class='faq__container--list-item-title-text'>Reque insolens in vel?</p>
+          </div>
+          <div class="faq__container--list-item-answer">
+            <p class="faq__container--list-item-answer-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+              ius an, in mel diceret persecuti.
+            </p>
+            <button class="faq__container--list-item-answer-button">
+              Go to documentation
+            </button>
+          </div>
+        </li>
+        <li class="faq__container--list-item">
+          <div class="faq__container--list-item-title" onclick="showActive(this)">
+            <div class='faq__container--list-item-title-arrow arrow-down'></div>
+            <p class='faq__container--list-item-title-text'>Vis rebum error graecis ea, id sit postea accusamus?</p>
+          </div>
+          <div class="faq__container--list-item-answer">
+            <p class="faq__container--list-item-answer-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+              ius an, in mel diceret persecuti.
+            </p>
+            <button class="faq__container--list-item-answer-button">
+              Go to documentation
+            </button>
+          </div>
+        </li>
+        <li class="faq__container--list-item">
+          <div class="faq__container--list-item-title" onclick="showActive(this)">
+            <div class='faq__container--list-item-title-arrow arrow-down'></div>
+            <p class='faq__container--list-item-title-text'>Lorem repudiandae ne nec?</p>
+          </div>
+          <div class="faq__container--list-item-answer">
+            <p class="faq__container--list-item-answer-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+              ius an, in mel diceret persecuti.
+            </p>
+            <button class="faq__container--list-item-answer-button">
+              Go to documentation
+            </button>
+          </div>
+        </li>
+        <li class="faq__container--list-item">
+          <div class="faq__container--list-item-title" onclick="showActive(this)">
+            <div class='faq__container--list-item-title-arrow arrow-down'></div>
+            <p class='faq__container--list-item-title-text'>Ad dicit numquam vel. Et eos iudico feugait percipitur?</p>
+          </div>
+          <div class="faq__container--list-item-answer">
+            <p class="faq__container--list-item-answer-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+              ius an, in mel diceret persecuti.
+            </p>
+            <button class="faq__container--list-item-answer-button">
+              Go to documentation
+            </button>
+          </div>
+        </li>
+        <li class="faq__container--list-item">
+          <div class="faq__container--list-item-title" onclick="showActive(this)">
+            <div class='faq__container--list-item-title-arrow arrow-down'></div>
+            <p class='faq__container--list-item-title-text'>Sea no dico percipitur. Fierent constituam definitiones id eum?</p>
+          </div>
+          <div class="faq__container--list-item-answer">
+            <p class="faq__container--list-item-answer-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+              ius an, in mel diceret persecuti.
+            </p>
+            <button class="faq__container--list-item-answer-button">
+              Go to documentation
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section>
     <div class="start">
       <div class="start__image"></div>
       <div class="start__content">
@@ -305,42 +394,90 @@
     </div>
   </section>
   <section>
-      <footer class="footer">
-          <div class="footer__logo"></div>
-          <nav class="footer__nav  footer__nav--main">
-            <ul class="footer__nav-list">
-              <li class="footer__nav-link footer__nav-link--current-page">Home</li>
-              <li class="footer__nav-link">Blog</li>
-              <li class="footer__nav-link">Features</li>
-              <li class="footer__nav-link">Pricing</li>
-              <li class="footer__nav-link">Documentation</li>
-            </ul>
-          </nav>
-      
-          <nav class="footer__nav footer__nav--social">
-            <ul class="footer__nav-list">
-              <li class="footer__nav-link">
-                <img src="../reference/assets/icons/facebook.png"></img>
-              </li>
-              <li class="footer__nav-link">
-                <img src="../reference/assets/icons/telegram.png"></img>
-              </li>
-              <li class="footer__nav-link">
-                <img src="../reference/assets/icons/twitter.png"></img>
-              </li>
-              <li class="footer__nav-link">
-                <img src="../reference/assets/icons/medium.png"></img>
-              </li>
-            </ul>
-          </nav>
-      
-          <button class="footer__button">Get Started</button>
-        </footer>
+    <footer class="footer">
+      <div class="footer__logo"></div>
+      <nav class="footer__nav  footer__nav--main">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-link footer__nav-link--current-page">Home</li>
+          <li class="footer__nav-link">Blog</li>
+          <li class="footer__nav-link">Features</li>
+          <li class="footer__nav-link">Pricing</li>
+          <li class="footer__nav-link">Documentation</li>
+        </ul>
+      </nav>
+  
+      <nav class="footer__nav footer__nav--social">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-link">
+            <img src="../reference/assets/icons/facebook.png"></img>
+          </li>
+          <li class="footer__nav-link">
+            <img src="../reference/assets/icons/telegram.png"></img>
+          </li>
+          <li class="footer__nav-link">
+            <img src="../reference/assets/icons/twitter.png"></img>
+          </li>
+          <li class="footer__nav-link">
+            <img src="../reference/assets/icons/medium.png"></img>
+          </li>
+        </ul>
+      </nav>
+  
+      <button class="footer__button">Get Started</button>
+    </footer>
   </section>
   <script src="./dist/bundle.js"></script>
   <script src="../js/carousel.js"></script>
   <script>
+    function showActive(ev) {
+      let el = ev.parentElement;
+        
+        let arrow = el.querySelector('.faq__container--list-item-title-arrow');
+        if(arrow.classList.contains('arrow-down')){
+          arrow.classList.remove('arrow-down');
+          arrow.classList.add('arrow-up');
+        }else{
+          arrow.classList.remove('arrow-up');
+          arrow.classList.add('arrow-down');
+        }
+        
+        let title = el.querySelector('.faq__container--list-item-title');
+        if(title.classList.contains('active-title')){
+          title.classList.remove('active-title');
+        }else{
+          title.classList.add('active-title');
+        }
+
+        let answer = el.querySelector('.faq__container--list-item-answer');
+        if(answer.classList.contains('active')){
+          answer.classList.remove('active');
+        }else{
+          answer.classList.add('active');
+        }
+      }
     window.onload = function () {
+
+
+      /*testing accordion
+      function showActive(el) {
+        console.log(el, 'aqui merengues');
+
+        let arrow = el.querySelector('.faq__container--list-item-title-arrow');
+        arrow.classList.remove('arrow-down');
+        arrow.classList.add('arrow-up');
+
+        let title = el.querySelector('.faq__container--list-item-title');
+        title.classList.add('active-title');
+      }
+
+
+      var elm = document.querySelectorAll('.faq__container--list-item');
+      elm[0].addEventListener('click', function(e){
+        //e.preventDefault();
+        showActive(e.target);
+      })
+      */
+
       var carousel = new Carourel('.customer__container-image');
       window.addEventListener("resize", onResizeCustomers);
       function onResizeCustomers() {

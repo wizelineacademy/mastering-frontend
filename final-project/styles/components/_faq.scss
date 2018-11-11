@@ -7,6 +7,7 @@
         height: 6rem;
         border-bottom: 1px solid #D8E3FE;
         position: relative;
+        cursor: pointer;
 
         &--title {
             display: flex;
@@ -17,12 +18,6 @@
                 font-size: 2rem;
                 color: #8E96B7;
                 margin-left: 2rem;
-
-                &--up {
-                    color:#495274;
-                    font-size: 2rem;
-                    margin-left: 2rem;
-                }
             }
 
             &-text {
@@ -38,7 +33,7 @@
         }
 
         &--content {
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
@@ -59,15 +54,23 @@
                 }
             }
         }
-    }
 
-    &__selected {
-        height: auto;
-        padding-bottom: 3rem;
+        &--selected {
+            height: auto;
+            padding-bottom: 3rem;
             .faq__item--title {
                 &-text {
-            color: #495274;
+                    color: #495274;
+                }
+
+                &-arrow {
+                    color:#495274;
+                }
+            }
+
+            .faq__item--content {
+                display: flex;
+            }
         }
-    }
     }
 }

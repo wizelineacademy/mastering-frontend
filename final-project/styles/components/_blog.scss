@@ -13,6 +13,14 @@
             margin-left: 6.5rem;
         }
     }
+
+    &__item {
+        display: none;
+
+        &--selected {
+            display: flex;
+        }
+    }
     &__btn {
         width: 26.1rem;
         position: absolute;
@@ -36,6 +44,7 @@
         @include respond(tab-land) {
             display: inline;
             position: absolute;
+            cursor: pointer;
             top: 50%;
             transform: translateY(-50%);
 

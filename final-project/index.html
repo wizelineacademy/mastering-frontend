@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./scripts/main.js"></script>
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
@@ -12,6 +13,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./dist/styles.css">
+
 </head>
 
 <body>
@@ -188,24 +190,68 @@
         <div class="text--one text--light text--font24 text--navy text--center"> Start reading our blog </div>
       </div>
       <div class="section-six__blog">
-        <img src="./reference/assets/arrow-blog.png" alt="arrow" class="blog__arrow blog__arrow--left">
+        <img src="./reference/assets/arrow-blog.png" alt="arrow" id="blogBackArrow" class="blog__arrow blog__arrow--left">
         <div class="blog">
-          <img src="https://via.placeholder.com/407x267/E7B4F8" class="blog__img">
-          <div class="blog__content">
-            <div class="text--one text--font36 text--navy"> How to start planning </div>
-            <div class="text--two text--tall27 text--font14 text--narrow text--navy text--grey1">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an,
-              in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro
-              at, eos ut decore ...</div>
-            <div class="section-six__btn">
-              <a href="#" class="btn btn__five">Read now</a>
-              <span class="section-six__tip">Add to your bookmarks</span>
+          <div class="blog__item blog__item--selected">
+            <img src="https://via.placeholder.com/407x267/E7B4F8" class="blog__img">
+            <div class="blog__content">
+              <div class="text--one text--font36 text--navy"> How to start planning </div>
+              <div class="text--two text--tall27 text--font14 text--narrow text--navy text--grey1">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an,
+                in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro
+                at, eos ut decore ...</div>
+              <div class="section-six__btn">
+                <a href="#" class="btn btn__five">Read now</a>
+                <span class="section-six__tip">Add to your bookmarks</span>
+              </div>
             </div>
           </div>
+
+          <div class="blog__item">
+            <img src="https://via.placeholder.com/407x267/E7B4F8" class="blog__img">
+            <div class="blog__content">
+              <div class="text--one text--font36 text--navy"> Saint Bernard gets on porcupine's bad side </div>
+              <div class="text--two text--tall27 text--font14 text--narrow text--navy text--grey1">A dog in New York who recently came face-to-face with a defensive porcupine was surrendered to a local animal
+                rescue so he could receive treatment.</div>
+              <div class="section-six__btn">
+                <a href="#" class="btn btn__five">Read now</a>
+                <span class="section-six__tip">Add to your bookmarks</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog__item">
+            <img src="https://via.placeholder.com/407x267/E7B4F8" class="blog__img">
+            <div class="blog__content">
+              <div class="text--one text--font36 text--navy">
+                Snow leopard cub undergoes eye surgery at Sacramento Zoo </div>
+              <div class="text--two text--tall27 text--font14 text--narrow text--navy text--grey1">A dog in New York who recently came face-to-face with a defensive porcupine was surrendered to a local animal
+                rescue so he could receive treatment.</div>
+              <div class="section-six__btn">
+                <a href="#" class="btn btn__five">Read now</a>
+                <span class="section-six__tip">Add to your bookmarks</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog__item">
+            <img src="https://via.placeholder.com/407x267/E7B4F8" class="blog__img">
+            <div class="blog__content">
+              <div class="text--one text--font36 text--navy"> last one goes eye surgery at Sacramento Zoo </div>
+              <div class="text--two text--tall27 text--font14 text--narrow text--navy text--grey1">Veterinarians from the Sacramento Zoo and specialists from U.C. Davis work to correct a congenital eye defect.</div>
+              <div class="section-six__btn">
+                <a href="#" class="btn btn__five">Read now</a>
+                <span class="section-six__tip">Add to your bookmarks</span>
+              </div>
+            </div>
+          </div>
+
+
         </div>
-        <img src="./reference/assets/Vector.png" alt="arrow" class="blog__arrow blog__arrow--right">
+        <img src="./reference/assets/Vector.png" alt="arrow" id="blogNextArrow" class="blog__arrow blog__arrow--right">
       </div>
       <div class="selection selection--blog">
         <span class="selection__item selection__item--selected"></span>
+        <span class="selection__item"></span>
         <span class="selection__item"></span>
         <span class="selection__item"></span>
       </div>
@@ -248,19 +294,33 @@
         <li class="faq__item">
           <div class="faq__item--title">
             <i class="fas fa-angle-down faq__item--title-arrow"></i>
-            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Reque insolens in vel?</div>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24 faq__item--title-text">Reque insolens in vel?</div>
           </div>
+          <div class="faq__item--content">
+              <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
+                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                persecuti.
+              </div>
+              <a href="#" class="btn btn__ten">Go to documentation</a>
+            </div>
         </li>
         <li class="faq__item">
           <div class="faq__item--title">
             <i class="fas fa-angle-down faq__item--title-arrow"></i>
-            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Vis rebum error graecis ea, id sit postea accusamus?</div>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24 faq__item--title-text">Vis rebum error graecis ea, id sit postea accusamus?</div>
+          </div>
+          <div class="faq__item--content">
+            <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+              persecuti.
+            </div>
+            <a href="#" class="btn btn__ten">Go to documentation</a>
           </div>
         </li>
-        <li class="faq__item faq__selected">
+        <li class="faq__item faq__item--selected">
           <div class="faq__item--title">
-            <i class="fas fa-angle-up faq__item--title-arrow--up"></i>
-            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Lorem repudiandae ne nec?</div>
+            <i class="fas fa-angle-up faq__item--title-arrow"></i>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24 faq__item--title-text">Lorem repudiandae ne nec?</div>
           </div>
           <div class="faq__item--content">
             <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
@@ -273,13 +333,27 @@
         <li class="faq__item">
           <div class="faq__item--title">
             <i class="fas fa-angle-down faq__item--title-arrow "></i>
-            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Ad dicit numquam vel. Et eos iudico feugait percipitur?</div>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24 faq__item--title-text">Ad dicit numquam vel. Et eos iudico feugait percipitur?</div>
+          </div>
+          <div class="faq__item--content">
+            <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+              persecuti.
+            </div>
+            <a href="#" class="btn btn__ten">Go to documentation</a>
           </div>
         </li>
         <li class="faq__item">
           <div class="faq__item--title">
             <i class="fas fa-angle-down faq__item--title-arrow"></i>
-            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24">Sea no dico percipitur. Fierent constituam definitiones id eum?</div>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24 faq__item--title-text">Sea no dico percipitur. Fierent constituam definitiones id eum?</div>
+          </div>
+          <div class="faq__item--content">
+            <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+              persecuti.
+            </div>
+            <a href="#" class="btn btn__ten">Go to documentation</a>
           </div>
         </li>
       </ul>
@@ -311,7 +385,9 @@
         <a href="#" class="btn btn__eight">Save me</a>
       </div>
     </section>
+
   </main>
+
   <footer class="footer">
     <div class="footer__logo logo"></div>
     <nav class="menu">

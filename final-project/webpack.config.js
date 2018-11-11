@@ -1,4 +1,5 @@
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require("path");
 
 module.exports = {
@@ -11,7 +12,13 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "styles.css"
-    })
+    }),
+    new CopyWebpackPlugin([
+      { 
+        from:"./reference/", 
+        ignore: ["viewports/**", "*.fig", "anotated.png"]
+      }
+    ])
   ],
   module: {
     rules: [

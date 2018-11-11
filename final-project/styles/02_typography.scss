@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Quicksand:300,400,500,700|Roboto:300,400,500,700');
+
+$font-quicksand : 'Quicksand', sans-serif;
+$font-roboto : 'Roboto', sans-serif;
+$font-opensans : 'Open Sans', sans-serif;
+
+%font-quicksand-light {
+  font-family: $font-quicksand;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%font-quicksand-regular {
+  font-family: $font-quicksand;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%font-quicksand-medium {
+  font-family: $font-quicksand;
+  font-weight: 500;
+  font-style: normal;
+}
+
+%font-quicksand-bold {
+  font-family: $font-quicksand;
+  font-weight: 700;
+  font-style: normal;
+}
+
+%font-roboto-light {
+  font-family: $font-roboto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%font-roboto-regular {
+  font-family: $font-roboto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%font-roboto-medium {
+  font-family: $font-roboto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+%font-roboto-bold {
+  font-family: $font-roboto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+%font-opensans-regular {
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%font-opensans-semi-bold {
+  font-family: $font-opensans;
+  font-weight: 600;
+  font-style: normal;
+}
+
+%font-opensans-bold {
+  font-family: $font-opensans;
+  font-weight: 700;
+  font-style: normal;
+}
+
+$header--font-family: 'Quicksand', sans-serif;

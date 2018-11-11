@@ -1,0 +1,133 @@
+/* Transform px to rem */
+@function rem-calc($size) {
+  @return $size / 16px * 1rem;
+}
+
+#no-js-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+noscript {
+  text-align: center;
+  @extend %font-roboto-bold;
+  color: brown;
+}
+
+body {
+  color: $font-color;
+  max-width: 1024px;
+  margin: auto;
+}
+
+h1 {
+  @extend %font-roboto-medium;
+  color: $primary-color;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 5rem 0 0;
+}
+
+h2 {
+  color: $primary-color;
+  @extend %font-quicksand-light;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0 1rem;
+}
+
+h3 {
+  color: #4074F8;
+  @extend %font-opensans-bold;
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 0 1rem;
+}
+
+h4 {
+  @extend %font-quicksand-regular;
+  font-size: 4rem;
+  margin: 1rem;
+}
+
+h5 {
+  @extend %font-quicksand-regular;
+  font-size: 2rem;
+  margin: 1rem;
+  color: #3D4F9F;
+}
+
+p {
+  @extend %font-quicksand-medium;
+    padding: 1rem 1rem;
+    line-height: 2;
+    font-size: 0.8rem;
+}
+
+em {
+  font-style: normal;
+  font-weight: 900;
+}
+
+fieldset {
+  border: 0;
+}
+
+input {
+  border: 0px;
+  background-color: lightgrey;
+  border-radius: 5px;
+}
+
+@mixin button($color, $bg-color) {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: $bg-color;
+  color: $color;
+  cursor: pointer;
+}
+
+@mixin circle($rad, $bg-color) {
+  width: rem-calc($rad);
+  height: rem-calc($rad);
+  background-color: $bg-color;
+  border-radius: 50%;
+}
+
+/*
+* Mobile first
+*/
+@mixin media($media) {
+
+  // tablets portrait, 768px and up
+  @if $media==sm {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  }
+
+  // tablets landscape, 992px and up
+  @else if $media==md {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  }
+
+  // desktops, 1200px and up
+  @else if $media==lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
+
+%select-none {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}

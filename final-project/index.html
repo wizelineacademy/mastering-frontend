@@ -1,14 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Dorota</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
+
 <body>
-  <h1>Hello world!</h1>
+  <div id="no-js-wrapper">
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </div>
+  <div id="page-loader" class="loader">Loading...</div>
+  <div id="body-layout" class="layout-wrapper layout-wrapper--loading">
+    <header class="header">
+      <div class="header__logo"></div>
+      <nav class="header__nav  header__nav--main">
+        <ul class="header__nav-list">
+          <li class="header__nav-link header__nav-link--current-page">Home</li>
+          <li class="header__nav-link">Blog</li>
+          <li class="header__nav-link">Features</li>
+          <li class="header__nav-link">Pricing</li>
+          <li class="header__nav-link">Documentation</li>
+        </ul>
+      </nav>
+
+      <nav class="header__nav header__nav--social">
+        <ul class="header__nav-list">
+          <li class="header__nav-link">
+            <i class="fab fa-facebook-f"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-twitter"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-telegram-plane"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-medium-m"></i>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="header__button">Get Started</button>
+
+      <div class="header__nav--mobile">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+    <main class="main">
+
+      <section class="main-home">
+        <h1>Play your life</h1>
+        <h2>Increase your <em>productivity</em></h2>
+        <div class="main-home__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident voluptatem
+          blanditiis dicta accusantium voluptas veniam ratione ex magnam nulla dolorem expedita incidunt, voluptate,
+          sapiente tempore reprehenderit earum delectus ipsa asperiores.</div>
+        <div class="main-home__play">
+          <i class="fas fa-play main-home__play-link"></i>
+        </div>
+      </section>
+
+      <section class="main-customers">
+        <ul class="main-customers-images">
+          <li class="main-customers-images__li main-customers-images__li--back"><i id="btn-previous-customer" class="fas fa-caret-left"></i></li>
+          <li id="customer-logo-1" class="main-customers-images__li main-customers-images__li--selected"><img src="/dist/assets/customers/bitbucket.png" /></li>
+          <li id="customer-logo-2" class="main-customers-images__li"><img src="/dist/assets/customers/apple-watch.png" /></li>
+          <li id="customer-logo-3" class="main-customers-images__li"><img src="/dist/assets/customers/facebook.png" /></li>
+          <li id="customer-logo-4" class="main-customers-images__li"><img src="/dist/assets/customers/atlassian.png" /></li>
+          <li id="customer-logo-5" class="main-customers-images__li"><img src="/dist/assets/customers/audi.png" /></li>
+          <li class="main-customers-images__li main-customers-images__li--fwrd"><i id="btn-next-customer" class="fas fa-caret-right"></i></li>
+        </ul>
+        <ul id="customers-carousel-dots" class="carousel main-customers-carousel">
+          <li id="carousel-logo-1" class="carousel__li carousel__li--selected"><i id="btn-carousel-01" class="fas fa-circle"></i></li>
+          <li id="carousel-logo-2" class="carousel__li"><i id="btn-carousel-02" class="fas fa-circle"></i></li>
+          <li id="carousel-logo-3" class="carousel__li"><i id="btn-carousel-03" class="fas fa-circle"></i></li>
+          <li id="carousel-logo-4" class="carousel__li"><i id="btn-carousel-04" class="fas fa-circle"></i></li>
+          <li id="carousel-logo-5" class="carousel__li"><i id="btn-carousel-05" class="fas fa-circle"></i></li>
+        </ul>
+      </section>
+
+      <section class="main-product">
+        <div class="main-product-wrapper">
+          <div class="main-product-wrapper-info">
+            <h1>Desktop And Mobile App</h1>
+            <h2><em>Plan</em> and <em>manage</em></h2>
+            <p class="main-product-wrapper-info__desc">Brute Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Quam non odio deserunt, cupiditate fugiat, beatae voluptas earum aliquam dolorem maxime hic reiciendis
+              neque quis unde illo repellendus atque ut magni.</p>
+          </div>
+          <div class="main-product-wrapper-img">
+            <img class="main-product-wrapper-img__img" src="/dist/assets/plan-manage.png" />
+          </div>
+        </div>
+        <div class="main-product-controls">
+          <button class="main-product-controls__button main-product-controls__button--video">View video <i class="fas fa-play main-home__play-link"></i></button>
+          <button class="main-product-controls__button">See features</button>
+        </div>
+      </section>
+
+      <section class="main-features">
+        <h1>About Us</h1>
+        <h2>Read about our app</h2>
+        <ul class="main-features-list">
+          <li class="main-features-list__li">
+            <div>
+              <i class="far fa-bookmark"></i>
+            </div>
+            <h3>Overview</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <hr />
+          </li>
+          <li class="main-features-list__li">
+            <div>
+              <i class="far fa-folder-open"></i>
+            </div>
+            <h3>Files</h3>
+            <p>Similique itaque necessitatibus voluptates numquam deleniti.</p>
+          </li>
+          <li>
+            <hr />
+          </li>
+          <li class="main-features-list__li">
+            <div>
+              <i class="far fa-folder-open"></i>
+            </div>
+            <h3>Meeting chats</h3>
+            <p>Ipsum dolor quis eveniet repellat quisquam earum quibusdam distinctio ex.</p>
+          </li>
+          <li>
+            <hr />
+          </li>
+          <li class="main-features-list__li">
+            <div>
+              <i class="far fa-folder-open"></i>
+            </div>
+            <h3>Save events</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+        </ul>
+        <div class="main-features-controls">
+          <button>Read more</button>
+          <ul>
+            <li>
+              <hr />
+            </li>
+            <p>OR</p>
+            <li>
+              <hr />
+            </li>
+          </ul>
+          <button>Get Started</button>
+        </div>
+      </section>
+
+      <section class="main-stats">
+        <div class="main-stats-productivity">
+          <img class="main-stats-productivity__img" src="/dist/assets/icons/speedmeter.png" />
+          <h4>89%</h4>
+          <p>Customers who have increased their productivity</p>
+        </div>
+        <div class="main-stats-users">
+          <img class="main-stats-productivity__img" src="/dist/assets/icons/people.png" />
+          <h4>3123</h4>
+          <p>Users who have used our application</p>
+        </div>
+      </section>
+
+      <section class="main-blog">
+        <h1>Our Resources</h1>
+        <h2>Start reading our blog</h2>
+        <div class="main-blog-carousel">
+          <i class="fas fa-chevron-left"></i>
+          <ul id="main-blog-articles" class="main-blog-carousel-slides">
+            <li id="blog-article-1" class="main-blog-carousel-slides__slide main-blog-carousel-slides__slide--visible">
+              <img src="/dist/assets/working.jpeg" />
+              <article>
+                <h1>How to start planning</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsum impedit fuga ab a facilis sit
+                  autem dolorum perferendis debitis? Reprehenderit nulla placeat ducimus expedita inventore eveniet,
+                  eligendi neque nam...</p>
+                <div class="main-blog-controls">
+                  <button>Read now</button>
+                  <span><a>Add to your bookmarks</a></span>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <ul id="main-blog-carousel" class="carousel">
+          <li class="carousel__li"><i id="carousel-blog-1" class="fas fa-circle carousel__li--selected"></i></li>
+        </ul>
+      </section>
+
+      <!--TODO TESTIMONIALS-->
+
+      <section class="main-faq">
+        <h1>Customer Help</h1>
+        <h2>Frequently asked questions</h2>
+        <ul class="main-faq-list">
+          <li class="main-faq-list__li">
+            <article>
+              <header>
+                <i id="test" class="fas fa-chevron-down"></i>
+                <h1>Reque isolens in vel?</h1>
+              </header>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi minima sequi reprehenderit quam
+                officia dolores illum temporibus tenetur alias a consequatur nihil iure consequuntur, at iste
+                veritatis, ab sed totam!</p>
+            </article>
+            <button>Go to Documentation</button>
+          </li>
+          <li class="main-faq-list__li main-faq-list__li--selected">
+            <article>
+              <header>
+                <i class="fas fa-chevron-down"></i>
+                <h1>Vis rebum error graecis ea, id sit postea accusamus?</h1>
+              </header>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ipsam dolore natus nisi sed. Illo aperiam
+                repudiandae quibusdam, sint repellendus inventore culpa sit aliquam deserunt temporibus voluptatum
+                vitae aliquid et?</p>
+            </article>
+            <button>Go to Documentation</button>
+          </li>
+          <li class="main-faq-list__li">
+            <article>
+              <header>
+                <i class="fas fa-chevron-down"></i>
+                <h1>Ad dicit numquam vle. Et eso inudic fawaguat perfacitpiut?</h1>
+              </header>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nemo qui enim earum officia voluptas
+                quod, numquam totam, id molestiae atque possimus vitae accusantium doloribus temporibus veritatis optio
+                illo ipsam!</p>
+            </article>
+            <button>Go to Documentation</button>
+          </li>
+          <li class="main-faq-list__li">
+            <article>
+              <header>
+                <i class="fas fa-chevron-down"></i>
+                <h1>Sea no dico perciupitur. Fierent constatiuam definitions id emu?</h1>
+              </header>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nemo qui enim earum officia voluptas
+                quod, numquam totam, id molestiae atque possimus vitae accusantium doloribus temporibus veritatis optio
+                illo ipsam!</p>
+            </article>
+            <button>Go to Documentation</button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-start">
+        <h1>Plan your life</h1>
+        <h2>Get <em>started</em> now</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae optio exercitationem odit temporibus, cum
+          porro consectetur alias aliquid? Quae natus error eligendi reprehenderit earum fuga, quis architecto autem
+          vitae dolores.</p>
+        <div class="main-product-controls">
+          <button class="main-product-controls__button main-product-controls__button--pricing">View pricing</button>
+          <button class="main-product-controls__button main-product-controls__button--doc">Read documentation</button>
+        </div>
+      </section>
+
+      <section class="main-newsletter">
+        <article>
+          <h1>Sing up for newsletter</h1>
+          <p>
+            Lorem ipsum dolor. Eius adipisci facilis dolor impedit cumque atque voluptate minima autem similique earum,
+            laboriosam.
+          </p>
+        </article>
+        <fieldset>
+          <input type="text" placeholder="Email address" />
+          <button>Save me</button>
+        </fieldset>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo"></div>
+      <nav class="footer__nav  footer__nav--main">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-link footer__nav-link--current-page">Home</li>
+          <li class="footer__nav-link">Blog</li>
+          <li class="footer__nav-link">Features</li>
+          <li class="footer__nav-link">Pricing</li>
+          <li class="footer__nav-link">Documentation</li>
+        </ul>
+      </nav>
+
+      <nav class="footer__nav footer__nav--social">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-link">
+            <i class="fab fa-facebook-f"></i>
+          </li>
+          <li class="footer__nav-link">
+            <i class="fab fa-twitter"></i>
+          </li>
+          <li class="footer__nav-link">
+            <i class="fab fa-telegram-plane"></i>
+          </li>
+          <li class="footer__nav-link">
+            <i class="fab fa-medium-m"></i>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="footer__button">Get Started</button>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script src="./dist/bundle.js"></script>
 </body>
+
 </html>

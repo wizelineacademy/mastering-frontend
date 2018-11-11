@@ -18,5 +18,9 @@
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.1"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "copy-webpack-plugin": "^4.5.4"
+  }
 }

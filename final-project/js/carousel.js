@@ -8,6 +8,7 @@ class Carourel {
         this.interval = null;
         this.dotKlass = `${this.prefix}__dots-dot`;
         this.working = false;
+        this.withArrows = config.withArrows || false;
         this.swapItem = this.swapItem.bind(this);
         this.init = this.init.bind(this);
         this.stopInterval = this.stopInterval.bind(this);
@@ -17,6 +18,8 @@ class Carourel {
         this.dotClick = this.dotClick.bind(this);
         this.repaintDots = this.repaintDots.bind(this);
         this.repaintSlider = this.repaintSlider.bind(this);
+        this.arrowLeftClick = this.arrowLeftClick.bind(this);
+        this.arrowRightClick = this.arrowRightClick.bind(this);
     }
 
     swapItem() {
@@ -54,6 +57,7 @@ class Carourel {
     init() {
         this.working = true;
         this.createDots();
+        this.createArrows();
         let dotItems = document.querySelectorAll(`.${this.dotKlass}`);
         dotItems[this.current].classList.add('active');
         this.items[this.current].classList.add('current');
@@ -76,6 +80,45 @@ class Carourel {
         let item = document.querySelector(this.klass);
         let parent = item.parentElement.parentElement;
         parent.appendChild(dotContainer);
+    }
+
+    createArrows() {
+        if(this.withArrows) {
+            let arrowLeft = document.createElement("div")
+            arrowLeft.classList.add(`${this.prefix}__arrow-left`);
+            arrowLeft.textContent = '<-';
+            arrowLeft.addEventListener('click', this.arrowLeftClick);
+
+            let arrowRight = document.createElement("div")
+            arrowRight.classList.add(`${this.prefix}__arrow-right`);
+            arrowRight.textContent = '->';
+            arrowRight.addEventListener('click', this.arrowRightClick);
+
+            let item = document.querySelector(this.klass);
+            let parent = item.parentElement.parentElement;
+            parent.appendChild(arrowLeft);
+            parent.appendChild(arrowRight);
+        }
+    }
+
+    arrowLeftClick() {
+        clearInterval(this.interval);
+        let items = document.querySelectorAll(this.klass);
+        this.current = (this.current === 0) ? (items.length - 1) : this.current - 1;
+
+        this.repaintDots();
+        this.repaintSlider();
+        this.interval = setInterval(this.swapItem, this.pause);
+    }
+
+    arrowRightClick(){
+        clearInterval(this.interval);
+        let items = document.querySelectorAll(this.klass);
+        this.current = (this.current === (items.length - 1)) ? 0 : this.current + 1;
+
+        this.repaintDots();
+        this.repaintSlider();
+        this.interval = setInterval(this.swapItem, this.pause);
     }
 
     dotClick(ev) {

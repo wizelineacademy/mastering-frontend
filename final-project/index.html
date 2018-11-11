@@ -500,7 +500,7 @@
         })
         .then(response => {
           buildResourceItems(response);
-          var carouselResources = new Carourel({klass: '.resources__container-item', prefix: 'resources'});
+          var carouselResources = new Carourel({klass: '.resources__container-item', prefix: 'resources', withArrows: true});
           carouselResources.init();
         })
         .catch(function (error) {

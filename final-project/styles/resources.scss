@@ -4,6 +4,7 @@
 .resources {
   background-color: $background-primary-color;
   padding: 0 rem-calc(100px) rem-calc(20px);
+  position: relative;
 
   @include landscape-breakpoint {
     padding: 0 rem-calc(50px) rem-calc(20px);
@@ -195,4 +196,34 @@
       background-color: #5283FF;
     }
   }
+
+  &__arrow-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50px;
+    cursor: pointer;
+    background-image: url(../reference/assets/arrow-blog.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 30px;
+    color: transparent;
+  }
+
+  &__arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+    cursor: pointer;
+    background-image: url(../reference/assets/arrow-blog.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 30px;
+    transform: rotate(180deg);
+    color: transparent;
+  }
+
 }

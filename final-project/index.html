@@ -5,10 +5,299 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body>
-  <h1>Hello world!</h1>
+
+  <header>
+    <nav class="nav">
+      <ul class="nav__list nav__list-start">
+        <div class="round-blue-icon"></div>
+        <li class="nav__item bold nav__item--active"><a href="#">Home</a></li>
+        <li class="nav__item bold"><a href="#">Blog</a></li>
+        <li class="nav__item bold"><a href="#">Features</a></li>
+        <li class="nav__item bold"><a href="#">Pricing</a></li>
+        <li class="nav__item bold"><a href="#">Documentation</a></li>
+      </ul>
+      <ul class="nav__list nav__list-end">
+        <li class="nav__item"><a href="#"><img src="reference/assets/icons/facebook.png" alt="facebook-icon"></a></li>
+        <li class="nav__item"><a href="#"><img src="reference/assets/icons/telegram.png" alt="telegram-icon"></a></li>
+        <li class="nav__item"><a href="#"><img src="reference/assets/icons/twitter.png" alt="twitter-icon"></a></li>
+        <li class="nav__item"><a href="#"><img src="reference/assets/icons/medium.png" alt="medium-icon"></a></li>
+        <button class="btn nav__btn bold">Get started</button>
+      </ul>
+    </nav>
+    <nav class="nav__hamburger">
+      <div class="round-blue-icon"></div>
+      <div>
+        <div class="nav__hamburger__ingridient"></div>
+        <div class="nav__hamburger__ingridient"></div>
+        <div class="nav__hamburger__ingridient"></div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img class="hero__image" src="reference/assets/hero.png" alt="hero-background">
+    <div class="hero__container">
+      <p class="uppercase hero__small-text">plan your life</p>
+      <h1 class="hero__title">Increase your <span class="bold">productivity</span></h1>
+      <div class="hero__text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quia ipsum tempore ratione porro ex, 
+          illum laborum aperiam minima doloremque eum? Unde fuga illum quam nisi nulla iure veniam perferendis!</p>
+      </div>
+      <div class="hero__btn">
+        <img src="reference/assets/icons/video-play.png" alt="play button">
+      </div>
+    </div>
+  </section>
+
+  <section class="clients">
+    <ul class="clients__list">
+      <li class="clients__list__item"><img src="reference/assets/customers/bitbucket.png" alt="bitbucket-logo"></li>
+      <li class="clients__list__item"><img src="reference/assets/customers/apple-watch.png" alt="apple-watch-logo"></li>
+      <li class="clients__list__item"><img src="reference/assets/customers/facebook.png" alt="facebook-logo"></li>
+      <li class="clients__list__item"><img src="reference/assets/customers/atlassian.png" alt="atlassian-logo"></li>
+      <li class="clients__list__item"><img src="reference/assets/customers/audi.png" alt="audi-logo"></li>
+    </ul>
+  </section>
+
+  <section class="plan">
+    <div class="plan__half">
+      <p class="uppercase">desktop and mobile app</p>
+      <h1 class="plan__title"><span class="bold">Plan</span> and <span class="bold">manage</span></h1>
+      <p class="plan__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, reprehenderit cupiditate? Eaque nam corrupti 
+        voluptate. Ipsa alias corporis aut unde. Quos pariatur cum qui ab voluptates aliquid magni voluptatum blanditiis 
+        voluptatem! Totam fugiat quasi dolorum!</p>
+      <div class="plan__btn-container">
+        <button class="plan__btn plan__btn--active bold">View video <img src="reference/assets/icons/video-play.png" alt="play button"></button>
+        <button class="plan__btn plan__btn--light bold">See features</button>
+      </div>
+    </div>
+    <div class="plan__image">
+      <img class="plan-image" src="reference/assets/illustration.png" alt="plan-image">
+    </div>
+    <div class="plan__btn-container--sm">
+      <button class="plan__btn plan__btn--active bold">View video <img src="reference/assets/icons/video-play.png" alt="play button"></button>
+      <button class="plan__btn plan__btn--light bold">See features</button>
+    </div>
+  </section>
+
+  <section class="about">
+    <p class="uppercase">about us</p>
+    <h2 class="about__title">Read about our app</h2>
+    <div class="about__content">
+      <div class="about__content__item">
+        <div class="about__round"><img src="reference/assets/icons/home.png" alt="home-icon"></div>
+        <h3 class="about__content__subtitle">Overview</h3>
+        <p class="about__content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iure perspiciatis</p>
+      </div>
+      <div class="about__content__item">
+        <div class="about__round"><img src="reference/assets/icons/folder.png" alt="folder-icon"></div>
+        <h3 class="about__content__subtitle">Files</h3>
+        <p class="about__content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iure perspiciatis molestiae p</p>
+      </div>
+      <div class="about__content__item">
+        <div class="about__round"><img src="reference/assets/icons/chat.png" alt="chat-icon"></div>
+        <h3 class="about__content__subtitle">Meeting chats</h3>
+        <p class="about__content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iure perspiciatis molestiae provident! Odio</p>
+      </div>
+      <div class="about__content__item">
+        <div class="about__round"><img src="reference/assets/icons/upload.png" alt="upload-icon"></div>
+        <h3 class="about__content__subtitle">Save events</h3>
+        <p class="about__content__description">Lorem ipsum dolor sit amet consectetur</p>
+      </div>
+    </div>
+    <div class="about__btn-container"> 
+      <button class="btn about__btn about__btn--red bold">Read more</button>
+      OR
+      <button class="btn about__btn about__btn--blue bold">Get started</button>
+    </div>
+  </section>
+
+  <section class="data">
+    <div class="data__half data__half--blue">
+      <div class="data__content data__content--end">
+        <img src="reference/assets/icons/speedmeter.png" alt="productivity-icon">
+        <span class="data__number data__number--end">89%</span>
+        <p class="data__description data__description--end">Customers who have increased their productivity</p>
+      </div>
+    </div>
+    <div class="data__half data__half--light">
+      <div class="data__content data__content--start">
+        <img src="reference/assets/icons/people.png" alt="people-icon">
+        <span class="data__number data__number--start">3123</span>
+        <p class="data__description data__description--start">Users who have used our application</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog">
+    <p class="uppercase">our resources</p>
+    <h2 class="blog__title">Start reading our blog</h2>
+    <noscript>
+      <h2 class="blog__title">Enable javascript to see this section correctly</h2>
+    </noscript>
+    <div class="blog__carousel">
+      <div class="carousel">  
+        <div class="loader-container arc-rotate-double">
+          <div class="loader">
+            <div class="arc-1"></div>
+            <div class="arc-2"></div>
+          </div>
+        </div>
+          
+      </div>
+      <div class="blog__arrow blog__arrow--left"><img src="reference/assets/arrow-blog.png" alt="left-arrow"></div>
+      <div class="blog__arrow blog__arrow--right"><img class="blog__arrow--right--rotate" src="reference/assets/arrow-blog.png" alt="right-arrow"></div>
+      <div class="blog__pagination">
+        <ul class="blog__pagination__bar">
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="customers">
+    <div class="customers__content customers__content--left">
+      <div class="customers__content__container">
+        <p class="uppercase">testimonials</p>
+        <h2 class="customers__title">Customer's quotes</h2>
+        <div class="customers__description">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aliquam saepe sint magnam totam!</p>
+        </div>
+      </div>
+    </div>
+    <div class="customers__content customers__content--right">
+      <div class="customers__carousel">
+        
+        <div class="customers__card">
+            Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+        </div>
+        <div class="customers__image"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <p class="uppercase">customer help</p>
+    <h2 class="faq__title">Frequently asked questions</h2>
+    <div class="faq__container">
+      <ul class="faq__list">
+        <li class="faq__list__item">
+          <div class="faq__list__item__title">
+            <img class="faq__arrow" src="reference/assets/down-arrow.png" alt="open-answer">
+            <p class="faq__list__item__question">Reque insolens in vel?</p>
+          </div>
+          
+          <div class="faq__list__item__answer">
+            <p class="faq__list__item__answer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam mollitia culpa vel, maxime consequatur voluptatem.</p>
+            <button class="btn faq__list__item__answer__btn">Go to documentation</button>
+          </div>
+        </li>
+        <li class="faq__list__item">
+          <div class="faq__list__item__title">
+            <img class="faq__arrow" src="reference/assets/down-arrow.png" alt="open-answer">
+            <p class="faq__list__item__question">Vis rebum error graecis ea, id sit postea accusamus?</p>
+          </div>
+          
+          <div class="faq__list__item__answer">
+            <p class="faq__list__item__answer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam mollitia culpa vel, maxime consequatur voluptatem.</p>
+            <button class="btn faq__list__item__answer__btn">Go to documentation</button>
+          </div>
+        </li>
+        <li class="faq__list__item">
+          <div class="faq__list__item__title">
+            <img class="faq__arrow" src="reference/assets/down-arrow.png" alt="open-answer">
+            <p class="faq__list__item__question">Lorem repudiandae ne nec?</p>
+          </div>
+          
+          <div class="faq__list__item__answer">
+            <p class="faq__list__item__answer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam mollitia culpa vel, maxime consequatur voluptatem.</p>
+            <button class="btn faq__list__item__answer__btn">Go to documentation</button>
+          </div>
+        </li>
+        <li class="faq__list__item">
+          <div class="faq__list__item__title">
+            <img class="faq__arrow" src="reference/assets/down-arrow.png" alt="open-answer">
+            <p class="faq__list__item__question">Ad dicit numquam vel. Et eos iudico feugait percipitur?</p>
+          </div>
+          
+           <div class="faq__list__item__answer">
+            <p class="faq__list__item__answer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam mollitia culpa vel, maxime consequatur voluptatem.</p>
+            <button class="btn faq__list__item__answer__btn">Go to documentation</button>
+          </div>
+        </li>
+        <li class="faq__list__item">
+          <div class="faq__list__item__title">
+            <img class="faq__arrow" src="reference/assets/down-arrow.png" alt="open-answer">
+            <p class="faq__list__item__question">Sea no dico percipitur. Fierent constituam definitiones id eum?</p>
+          </div>
+          
+          <div class="faq__list__item__answer">
+            <p class="faq__list__item__answer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam mollitia culpa vel, maxime consequatur voluptatem.</p>
+            <button class="btn faq__list__item__answer__btn">Go to documentation</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="bg-clouds-blue">
+    <img class="bg-clouds-blue__image" src="reference/assets/blue-clouds-bg.png" alt="blue-clouds-background">
+    <div class="plan-life">
+      <p class="uppercase plan-life__desc">plan your life</p>
+      <h2 class="plan-life__title">Get <span class="plan-life__title--bold">started</span> now</h2>
+      <p class="plan-life__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus culpa rerum debitis error qui?</p>
+      <div class="plan-life__buttons">
+        <button class="plan-life__buttons--active">View pricing</button>
+        <button class="plan-life__buttons--light">Read documentation</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="newsletter">
+    <div class="newsletter__half newsletter__half--left">
+      <div class="newsletter__info">
+        <h2 class="newsletter__title">Sign up for newsletter</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus deleniti corporis quia excepturi laudantium.</p>
+      </div>
+    </div>
+    <div class="newsletter__half newsletter__half--right">
+      <input class="newsletter__input" type="text" placeholder="Email address">
+      <button class="newsletter__btn">Save me</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+      <nav class="nav nav__bottom"> 
+        <ul class="nav__list nav__list-start">
+          <div class="round-blue-icon"></div>
+          <li class="nav__item bold nav__item--active"><a href="#">Home</a></li>
+          <li class="nav__item bold"><a href="#">Blog</a></li>
+          <li class="nav__item bold"><a href="#">Features</a></li>
+          <li class="nav__item bold"><a href="#">Pricing</a></li>
+          <li class="nav__item bold"><a href="#">Documentation</a></li>
+        </ul>
+        <ul class="nav__list nav__list-end">
+          <li class="nav__item"><a href="#"><img src="reference/assets/icons/facebook.png" alt="facebook-icon"></a></li>
+          <li class="nav__item"><a href="#"><img src="reference/assets/icons/telegram.png" alt="telegram-icon"></a></li>
+          <li class="nav__item"><a href="#"><img src="reference/assets/icons/twitter.png" alt="twitter-icon"></a></li>
+          <li class="nav__item"><a href="#"><img src="reference/assets/icons/medium.png" alt="medium-icon"></a></li>
+          <button class="btn nav__btn bold">Get started</button>
+        </ul>
+      </nav>
+      <nav class="nav__hamburger">
+        <div class="round-blue-icon"></div>
+        <div>
+          <div class="nav__hamburger__ingridient"></div>
+          <div class="nav__hamburger__ingridient"></div>
+          <div class="nav__hamburger__ingridient"></div>
+        </div>
+      </nav>
+      <p class="footer__copyright"> Copyright <span class="c-icon"></span> 2018 By Random Site</p>
+  </footer>
+
   <script src="./dist/bundle.js"></script>
 </body>
 </html>

@@ -87,7 +87,6 @@ class Slider {
 
   prevSlide () {
     this.action = 'prev';
-    clearInterval(this.slideshow);
     this.addEndAnimationListener();
     this.$slidesContainer.classList.add('animate');
     this.$slidesContainer.classList.add('move-left');
@@ -95,7 +94,6 @@ class Slider {
 
   nextSlide () {
     this.action = 'next';
-    clearInterval(this.slideshow);
     this.addEndAnimationListener();
     this.$slidesContainer.classList.add('animate');
     this.$slidesContainer.classList.add('move-right');
@@ -119,17 +117,20 @@ class Slider {
 
     this.$prevButton.addEventListener('click', e => {
       e.preventDefault();
+      clearInterval(this.slideshow);
       this.prevSlide();
     });
 
     this.$nextButton.addEventListener('click', e => {
       e.preventDefault();
+      clearInterval(this.slideshow);
       this.nextSlide();
     });
 
     this.$slidesContainer.addEventListener('touchstart', e => {
       e.preventDefault();
       const touch = e.touches.item(0);
+      clearInterval(this.slideshow);
       this.touchStart = touch.clientX;
     });
 

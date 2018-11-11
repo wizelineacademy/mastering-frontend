@@ -8,28 +8,51 @@
   --posts-margin-top: 4rem;
   --posts-width: 29rem;
   --slides-width: 100%;
+  --post-image-width: auto;
+  --slide-inner-flex-direction: column;
   --post-description-font-size: 1.4rem;
   --post-description-letter-spacing: 3;
   --post-description-margin-top: 1.6rem;
   --post-inner-padding: 3rem 1rem 2.3rem 1rem;
   --post-content-margin-top: .9rem;
+  --post-content-margin-left: 0;
   --actions-margin-top: 1.1rem;
   --actions-width: 100%;
   --button-width: 100%;
+  --read-more-flex-basis: auto;
   --bookmark-display: none;
-  --arrows-display: none;
   --dots-margin-top: 3rem;
+  --bookmark-margin-left: 3.6rem;
+  --arrows-display: none;
 
   @media (--respond-to-tablet) {
     --bookmark-display: flex;
+    --posts-width: 69.1rem;
+    --post-inner-padding: 3rem 2.5rem 2.3rem 2.3rem;
+    --actions-margin-top: 2.4rem;
+    --post-content-margin-top: 2.5rem;
+    --read-more-flex-basis: 17.8rem;
   }
 
   @media (--respond-to-desktop) {
-
+    --slides-width: 92.6rem;
+    --posts-width: 99.4rem;
+    --posts-margin-top: 9.2rem;
+    --slide-inner-flex-direction: row;
+    --post-inner-padding: 6.3rem 2.9rem 6.4rem 3.4rem;
+    --post-content-margin-left: 6.4rem;
+    --post-image-width: 39.3rem;
+    --read-more-flex-basis: 10.9rem;
+    --bookmark-margin-left: 7rem;
+    --arrows-display: flex;
   }
 
   @media (--respond-to-big-desktop) {
-
+    --posts-width: 115.4rem;
+    --slides-width: 95.8rem;
+    --bookmark-margin-left: 2.3rem;
+    --read-more-flex-basis: 11.3rem;
+    --post-image-width: 40.7rem;
   }
 
   background-color: #F5F8FF;
@@ -40,6 +63,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   &__title {
@@ -69,6 +93,7 @@
       display: flex;
       width: var(--slides-width);
       overflow: hidden;
+      z-index: 1000;
 
       &__slide {
         flex: 0 0 100%;
@@ -77,18 +102,23 @@
           padding: var(--post-inner-padding);
           background-color: #fff;
           display: flex;
-          flex-direction: column;
+          flex-direction: var(--slide-inner-flex-direction);
           align-items: center;
           outline: 1px solid #D8E3FE;
           outline-offset: -1px;
         }
 
         &__img {
+          
+          img {
+            width: var(--post-image-width);
 
+          }
         }
 
         &__content {
           margin-top: var(--post-content-margin-top);
+          margin-left: var(--post-content-margin-left);
 
           &__title {
             color: #3D4F9F;
@@ -104,45 +134,70 @@
             @mixin font roboto;
             letter-spacing: calc(var(--post-description-font-size) * var(--post-description-letter-spacing) / 100);
           }
-        }
 
-        &__actions {
-          display: flex;
-          width: var(--actions-width);
-          margin-top: var(--actions-margin-top);
-
-          &__btn {
+          &__actions {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: var(--button-width);
-            height: 3.4rem;
-
-            &--read-more {
-              background-color: #D2E1FF;
-              color: #3A79FF;
-              @mixin font quicksand, bold;
-              font-size: 1.3rem;
-            }
+            width: var(--actions-width);
+            margin-top: var(--actions-margin-top);
   
-            &--bookmark {
-              display: var(--bookmark-display);
+            &__btn {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: var(--button-width);
+              height: 3.4rem;
+  
+              &--read-more {
+                background-color: #D2E1FF;
+                color: #3A79FF;
+                @mixin font quicksand, bold;
+                font-size: 1.3rem;
+                flex-basis: var(--read-more-flex-basis);
+                flex-shrink: 0;
+              }
+    
+              &--bookmark {
+                display: var(--bookmark-display);
+                color: #A6B6DA;
+                @mixin font quicksand, bold;
+                font-size: 1.3rem;
+                margin-left: var(--bookmark-margin-left);
+              }
             }
           }
         }
+
 
       }
     }
 
     &__arrows {
       display: var(--arrows-display);
-
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 900;
+      
       &--left {
-
+        
       }
-
+      
       &--right {
+        
+      }
+      
+      &__arrow {
+        width: 2.3rem;
+        height: 1.5rem;
+        cursor: pointer;
 
+        svg {
+          width: 100%;
+          height: 100%;
+        }
       }
 
     }

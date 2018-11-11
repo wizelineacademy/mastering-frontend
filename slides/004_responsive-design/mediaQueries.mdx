@@ -1,0 +1,124 @@
+import { Notes } from "mdx-deck";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import { WSlideMain, WSlide3 as WFullPage, WSlide4 as WSection, WSlideThankyou } from "../src/wizeline-theme/slides";
+import { WAnimateListBlack, WStaticBlack } from "../src/wizeline-theme/layouts";
+import Codepen from "../src/components/Codepen";
+
+<WFullPage title="Media Queries" />
+
+---
+
+export default WAnimateListBlack
+
+## Media Queries Syntax
+
+* `<link>`
+*   ```html
+    <link type="text/css" rel="stylesheet" href="style.css" media="MEDIA_QUERIES">
+    ```
+* `<style>`
+*    ```html
+    <style type="text/css" media="MEDIA_QUERIES">...</style>
+    ```
+* `@import`
+*    ```css
+    @import url(style.css) MEDIA_QUERIES;
+    ```
+* `@media`
+*    ```css
+    @media MEDIA_QUERIES {...}
+    ```
+
+<Notes>
+Media Queries can help you make your design responsive.
+There are several ways to declare media queries.
+>> With the `link` element >> you can include a stylesheet and apply it only if the media query is `true`.
+>> You can also add a media query to the `style` element >>.
+>> Using the _at-rule_ `@import` >> you can import a stylesheet into your CSS only if the media query is valid.
+>> Finally you can use the at-rule `@media`>> to wrap the rules you want to apply.
+All these formats require (1) the styles or rules to apply and (2) the media queries when to apply the rules.
+</Notes>
+---
+
+export default WAnimateListBlack
+
+## Media Types
+
+* `all`
+* All media types.
+* `print`
+* Printed documents and print preview.
+* `screen`
+* Visual screens such as monitors.
+* `speech`
+* Screen readers.
+
+<Notes>
+Media queries have two parts the media types and the media features.
+The media types ...
+_Show example of print_.
+</Notes>
+---
+
+export default WStaticBlack
+
+## Media Features
+
+```html
+@media only screen and (color) rel="stylesheet">
+```
+
+|         |          |
+| ------- | -------- |
+| `width` | `height` |
+| `aspect-ratio` | `orientation` |
+| `color` | `hover`  |
+
+<Notes>
+... of the viewport
+Width-to-height ratio
+Pixel density of the output device
+Bits per color.
+Is hovering allowed?
+> Media features describe specific characteristics of the user agent, output device, or environment. Media feature expressions test for their presence or value, and are entirely optional. Each media feature expression must be surrounded by parentheses.
+</Notes>
+---
+
+export default WAnimateListBlack
+
+## Composing Media Queries
+
+* Intersection `@media screen and (max-width: 12450px)`
+* Union `@media screen, print`
+* Difference `@media not screen and (max-width: 12450px)`
+* Compatibility `@media only screen`
+
+<Notes>
+Same as with the selectors, you can combine media queries.
+>> To create a more restrictive MQ, use `and`.
+>> To list alternatives, use the comma.
+>> The `not` keyword negates a _complete_ media query.
+>> The `only` keyword is used to prevent old browsers from applying the MQ styles
+if they don't support media features. You need to add a media type.
+For the older browsers this would be a media type `only screen`.
+</Notes>
+---
+
+<Codepen url="https://codepen.io/isa-bel/pen/pxKEVe"/>
+
+<Notes>
+_Leave presenters mode_
+</Notes>
+
+---
+
+<WFullPage title="Questions?" />
+
+---
+
+export default WStaticBlack
+
+## References
+
+* [Media Queries Level 4](https://www.w3.org/TR/mediaqueries-4/)
+* [Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)

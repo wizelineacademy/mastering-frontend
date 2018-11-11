@@ -1,0 +1,77 @@
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Notes, Appear } from 'mdx-deck'
+
+import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
+import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
+
+import Counter from '../src/components/Counter'
+import Codepen from '../src/components/Codepen'
+
+
+<WSlide3
+  title="Events"
+/>
+
+---
+
+### Events
+#### are things that happen in the DOM,
+#### and JS can subscribe to them
+
+---
+
+# Example
+<Codepen url="https://codepen.io/ederdiaz/pen/zmVVJx" />
+
+## Let's replace `onclick`
+
+---
+## Recap
+- element.addEventListener('event', callback)
+- element.removeEventListener('event', callback)
+---
+
+# Exercise
+<Codepen url="https://codepen.io/ederdiaz/pen/GwKKZL" />
+
+## Events and styles
+
+---
+
+## Event propagation
+<Appear>
+  <h3>Bubbling</h3>
+  <h3>Capturing</h3>
+</Appear>
+
+---
+
+![](./images/bubbles.png)
+
+---
+
+<Codepen url="https://codepen.io/ederdiaz/pen/rQBBov" />
+
+---
+
+# Event Delegation
+<Appear>
+  <h3>Let the parent decide!</h3>
+</Appear>
+
+---
+
+<Codepen url="https://codepen.io/ederdiaz/pen/dQbyNP"/>
+
+---
+
+### In summary
+<Appear>
+  <h3>Use events instead of properties like <code>onclick</code></h3>
+  <h3>Use event delegation when dealing with dynamic elements</h3>
+  <h3>Be careful with propagation!</h3>
+</Appear>
+
+---
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">Events list</a>

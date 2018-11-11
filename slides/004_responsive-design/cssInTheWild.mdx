@@ -1,0 +1,202 @@
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Notes, Image, Appear } from 'mdx-deck'
+
+import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
+import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
+
+import ImageGrid from '../src/components/ImageGrid'
+import Codepen from '../src/components/Codepen'
+
+
+<WSlide3
+  title="🦁 CSS in the Wild 🐯"
+/>
+
+---
+
+<Image src="./images/css-wordcloud.svg" />
+
+---
+
+# That's just one side of things
+
+---
+
+# Reality
+
+<ImageGrid
+  images={[
+    './images/less_logo.png',
+    './images/styled_components.png',
+    './images/css_modules.png',
+    './images/sass.png',
+  ]}
+/>
+
+<Notes>
+  You'll start to encounter problems like:
+  Code reuse
+  Architecture for style files
+</Notes>
+
+---
+
+# So what can we do?
+
+<ul>
+  <Appear>
+    <li>Use a CSS framework and/or methodologies</li>
+  </Appear>
+</ul>
+
+---
+
+# Frameworks
+
+(picture of Bootstrap, bulma, iota, ...)
+
+<Notes>
+  There are a lot of CSS frameworks, most of them
+  are written in a preprocessor language like SASS or LESS,
+  and also expose a options for configurating the output CSS.
+</Notes>
+
+---
+
+# Is it a good idea to use a CSS Framework?
+
+<Notes>
+  Maybe you'll think stuff like:
+
+  It'll just make my bundle size bigger! Nooo
+  CSS is soo easy, I'll just roll out my own grid
+
+  Ask: If you were making a new frontend app, would you use
+  a JS framework/library? (react or vue)
+
+  So why not doing the same with CSS? frameworks have lots of
+  problems we'll face solved out of the box, like making a grid
+  or buttons for example
+</Notes>
+
+---
+
+# Some CSS Frameworks
+
+* http://getbootstrap.com/
+* https://bulma.io/
+* https://tailwindcss.com/
+
+---
+
+# Tips on using CSS frameworks
+
+---
+
+## Dont just include the minified CSS
+
+<Notes>
+  Including the Minified CSS is like using lodash and importing everything
+  You're just making your bundle bigger and not using the whole package.
+</Notes>
+
+---
+
+## Include only the modules you need
+
+<Notes>
+  More often than not, there's a configuration option for what you're
+  working on, so be sure to check them all!
+</Notes>
+
+---
+
+## Always check the configuration options twice
+
+<Notes>
+  This is similar to the first point, don't waste space. Also, you could
+  spend some time implementing/overriding something the framework already
+  does for you trough configuration.
+</Notes>
+
+---
+
+# CSS Methodologies
+
+<ImageGrid
+  images={[
+    './images/itcss.png',
+    './images/smacss.jpg',
+    './images/oocss.jpg',
+    './images/bem.jpeg',
+  ]}
+/>
+
+<Notes>
+  Showcase examples of some methodologies, and then mention
+  we'll be focusing on using the BEM naming convention.
+</Notes>
+
+---
+
+# BEM
+
+## http://getbem.com/introduction/
+
+<Notes>
+  BEM is a complete methodology, but we'll be focusing on the
+  naming convention. Why BEM? BEM is one of the most widely used naming
+  conventions.
+</Notes>
+
+---
+
+```scss
+.block-name {}
+.block-name__element-name {}
+.block-name__element-name--modifier-name {}
+.block-name--modifier-name {}
+```
+
+---
+
+# Sites using BEM
+
+## https://slack.com/
+## http://www.jetbrains.com/
+
+---
+
+```
+const Card = ({ img, text }) => {
+  return (
+    <div className="card">
+      <img className="card__image" src={img} />
+      <p className="card__text">{text}</p>
+    </div>
+  );
+}
+```
+
+<Notes>
+  If you are using React or Vue, then your component is the block.
+  Each tag in your component is an element.
+</Notes>
+
+---
+
+<WSlide3
+  title="Questions ?"
+/>
+
+---
+
+# Quick Intro to SCSS
+* Variables
+* Functions
+* Mixins
+* Nesting
+
+---
+
+# https://www.sassmeister.com/

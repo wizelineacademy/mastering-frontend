@@ -1,0 +1,90 @@
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Notes, Appear } from 'mdx-deck'
+
+import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
+import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
+
+import Codepen from '../src/components/Codepen'
+
+
+<WSlide3 title="Units" />
+
+<Notes>
+  Let's talk about units.
+  We've been using a bunch of different units in all 3 CSS classes we've had,
+  and also there's been some discussion about what units are best.
+  So first let's look at the different units that exist.
+</Notes>
+---
+
+## Absolute and Relative
+<Notes>
+  There are two types of units, the absolute and relative.
+</Notes>
+---
+
+## Absolute
+
+- `cm`	centimeters
+- `mm`	millimeters
+- `in`	inches
+- `px`  pixels *
+- `pt`	points (1`pt` = 1/72 of 1`in`)
+- `pc`  picas (1`pc` = 12 `pt`)
+
+<small>*pixels are a 2x2px square in high density displays</small>
+
+<Notes>
+  A length expressed in any of these will appear as exactly that size.
+  The most common usage of these is when the target media is print, except for pixels.
+  Although pixels where designed for screens, their usage nowadays is limited,
+  because screen sizes vary so much.
+</Notes>
+
+---
+## Relative
+
+- `em`	  Relative to the font-size of the element
+- `rem`	  Relative to font-size of the root element
+- `%`     Relative to the parent element
+
+<Notes>
+</Notes>
+---
+## Relative
+
+- `vw`	  Relative to 1% of the width of the viewport
+- `vh`	  Relative to 1% of the height of the viewport
+- `vmin`	Relative to 1% of viewport's smaller dimension
+- `vmax`	Relative to 1% of viewport's larger dimension *
+
+<small>*not available in IE11</small>
+
+<Notes>
+</Notes>
+
+---
+
+# There is no unit "better" than others
+## they all have their use cases
+
+---
+
+<WSlide3
+  title="Units for Layouts"
+/>
+
+---
+
+<Codepen url="https://codepen.io/ederdiaz/pen/rqrmqQ" />
+
+---
+
+<WSlide3
+  title="Units for Text and Other Props"
+/>
+
+---
+
+<Codepen url="https://codepen.io/ederdiaz/pen/oaMzBE" />
+

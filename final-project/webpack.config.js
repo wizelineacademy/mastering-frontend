@@ -1,5 +1,6 @@
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var path = require("path");
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   entry: "./scripts/main.js",
@@ -11,6 +12,24 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "styles.css"
+    }),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      proxy: 'http://localhost:8080/',
+      files: [{
+        match: [
+          '**/*.html'
+        ],
+        fn: function(event, file) {
+          if (event === "change") {
+            const bs = require('browser-sync').get('bs-webpack-plugin');
+            bs.reload();
+          }
+        }
+      }]
+    }, {
+      reload: false
     })
   ],
   module: {

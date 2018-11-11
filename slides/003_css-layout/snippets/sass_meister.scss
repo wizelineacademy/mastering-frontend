@@ -1,0 +1,97 @@
+//  Variables!
+// $header-background-color: #1337AF;
+
+// .header {
+//   color: $header-background-color;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Functions!
+// $zindex: (
+//   modal     : 9000,
+//   overlay   : 8000,
+//   dropdown  : 7000,
+//   header    : 6000,
+//   footer    : 5000
+// );
+
+// @function z-map($layer) {
+//   @return map-get($zindex, $layer);
+// }
+
+// .header {
+//   z-index: z-map('header');
+// }
+
+
+
+
+
+
+
+
+// Mixins!
+// @mixin center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// @mixin tablet_breakpoint {
+//   @media only screen and (min-width: 768px) {
+//     @content;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Nesting!
+
+// <div class="card">
+//   <p class="text"></p>
+// </div>
+
+// .card {
+//   width: 200px;
+// }
+
+// .card .text {
+//   color: black;
+// }

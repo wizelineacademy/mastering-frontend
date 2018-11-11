@@ -1,0 +1,69 @@
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { Notes, Appear } from 'mdx-deck'
+
+import {WSlideMain, WSlide2, WSlide3, WSlide4, WSlide5, WSlideThankyou} from "../src/wizeline-theme/slides"
+import {WLayout1, WLayout2} from '../src/wizeline-theme/layouts'
+
+import Counter from '../src/components/Counter'
+import Codepen from '../src/components/Codepen'
+
+
+<WSlideMain
+  subtitle=""
+  title="How To Debug Anything"
+/>
+
+---
+<div>
+<p>"If you want to deploy high quality software that performs,</p>
+<p>you should expect to fix bugs at every level"</p>
+<p>- James Golick</p>
+reference (https://www.youtube.com/watch?v=VV7b7fs4VI8)
+</div>
+
+---
+# Does your code work? 
+<div>
+<Appear>
+<p>Probably not.</p>
+<p>The libraries you're using probably don't work either. </p>
+<p>If you're lucky, the OS does, but even then you'll probably find something wrong if you look hard enough.</p>
+</Appear>
+</div>
+<Notes>
+I want to let everyone know that as engineers we will always run in to
+bugs, the larger/ complex the system the more prone to bugs it will be
+</Notes>
+
+---
+# Steps to Debug Anything
+<ol>
+<Appear>
+<li>find the failure(work backwords)</li> 
+<li>find the cause</li>
+<li>find the offender</li>
+<li>prove your hypotesis</li>
+<li>fix issue</li>
+</Appear>
+</ol>
+
+---
+# Rules to Debug Anything
+<ol>
+<Appear>
+<li>Forget everything you know</li>
+<li>Get a third party opinion(tools)</li>
+<li>Locate the correct source code</li>
+<li>Identify a hard coded string to grep for / identify a hook</li>
+<li>Stare at the code until it make sense</li>
+<li>fix whatever is broken</li>
+</Appear>
+</ol>
+<Notes>
+1 if you dont know anything you need help ->
+2 you need tools that can give you informaiton to know what is actually happening ->
+3 tools will help you locate easier said than done
+4 if you dont have a starting point you will not find anything
+5 hardest part 
+6 have a beer! and fix whatever is broken
+</Notes>

@@ -1,0 +1,680 @@
+export { default as theme } from "../src/wizeline-theme";
+import { Notes } from "mdx-deck";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import { WAgenda, WSlideMain, WSlide3 as WFullPage, WSlide4 as WSection, WSlideThankyou } from "../src/wizeline-theme/slides";
+import { WAnimateListBlack, WStaticBlack, WStaticRed } from "../src/wizeline-theme/layouts";
+import Codepen from "../src/components/Codepen";
+
+<WSlideMain
+  subtitle=""
+  title="CSS Fundamentals"
+/>
+
+<Notes>
+The purpose of this session is to familiarize yourself with the fundamentals of CSS.
+</Notes>
+
+---
+
+<WAgenda
+  title="Agenda"
+  subtitle="CSS Fundamentals"
+  content={[
+    "CSS Introduction",
+    "Selectors",
+    "Cascading and Inheritance",
+    "Box Model",
+    "References"
+  ]}
+/>
+
+<Notes>
+This is the agenda for this presentation.
+First, I'll talk about CSS fundamentals, so that we are in the same page.
+Today we will only cover till here.
+Then I'll talk about Cascading and Inheritance, then about Selectors
+and Specificity, and then about the Box Model.
+Finally I'll give you some references from which you can learn more about CSS 💖.
+Between every section there would be time for questions, in case you have any.
+</Notes>
+
+---
+
+<WSection title="CSS Introduction" />
+
+---
+
+export default WAnimateListBlack
+
+## Introduction to CSS
+
+
+* Cascading Style Sheets
+
+* First released in 1996
+
+* Declarative language
+
+<Notes>
+>> CSS means "Cascading Style Sheets", we wil talk about what is cascading later on.
+>> It was first release in 1996, the same year as Java btw, more than 20 years ago.
+>> Is a declarative language, that means that you describe what you want to achieve, not how.
+I can say "I want the background to be red", and I don't care how the browser does that internally. >>
+</Notes>
+
+---
+
+export default WStaticRed
+
+## Introduction to CSS
+
+* Cascading Style Sheets
+
+* First released in 1996
+
+* Declarative language
+
+---
+
+export default WStaticBlack
+
+## CSS Rule Syntax
+
+<CodeSurfer
+  code={require("!raw-loader!./snippets/rule-components.css")}
+  lang="css"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { tokens: { 1: [0] }, notes: "Selector" },
+    { tokens: { 1: [2] }, lines: [2,3,4,5], notes: "Declaration block" },
+    { lines: [2], notes: "Declaration" },
+    { tokens: { 2: [1] }, notes: "Property" },
+    { tokens: { 2: [4] }, notes: "Value" }
+  ]}
+/>
+
+<Notes>
+CSS most basic construct, is the CSS _rule_ or _ruleset_. This is one example of it.
+I'll name its parts so that we all know how to call them.
+>> All CSS rules have a _selector_ that indicate to which elements to apply the rule.
+>> Then other part of a rule is the _declaration block_ that says what style to apply to the selected elements.
+>> The declaration block has several _declarations_.
+>> Each declaration has a _property_, followed by a colon, >> and a _value_, followed by a semicolon.
+There are other CSS statements, such as the _at-rules_, but they'll be introduced later on.
+</Notes>
+
+---
+
+<WFullPage title="Questions?" />
+
+---
+
+<WSection title="Selectors" />
+
+---
+
+export default WAnimateListBlack
+
+## Selectors
+
+<CodeSurfer
+  code={require("!raw-loader!./snippets/button.html")}
+  lang="html"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { tokens: { 1: [1] } },
+    { tokens: { 1: [3,4,5,6,7] } },
+    { tokens: { 1: [9,10,11,12,13] } },
+    { tokens: { 1: [15,16,17,18,19] } },
+    { lines: [2] },
+    { lines: [1,2,3,4] },
+    { lines: [1,2,3,4] }
+  ]}
+/>
+
+* Element type `button`
+* ID `#save-changes`
+* CSS class `.main`
+* Attribute `[type=primary]`
+* Pseudo-elements `::before`
+* Pseudo-classes `:hover`
+* Universal `*`
+
+<Notes>
+Selectors define a set of elements to which to apply the styling.
+In CSS there are a lot of different ways to select elements.
+For example, if we had this element, to select it we could use
+>> its type `button`, >> its ID `save-changes-btn`, >> its class `main-button.
+There are also other selectors for pseudo elements, >> like the before. This is not an element in the HTML, but acts like one.
+And finally there are also the pseudo-classes >> like the `hover`, `last-child`, etc.
+These selectors can be combined to modify the set of selected elements.
+</Notes>
+
+---
+
+export default WAnimateListBlack
+
+## Combining Selectors
+
+* JavaScript
+    ```js
+    if (elem.type === 'h1') {
+        elem.color = 'red';
+    }
+    ```
+* CSS
+    ```css
+    h1 {
+      color: red;
+    }
+    ```
+
+<Notes>
+Combining selectors is similar to set operations, but we can also relate them to boolean operations in conditionals.
+>> An `if` like this would translate to this CSS rule. >>
+</Notes>
+
+---
+
+export default WAnimateListBlack
+
+## Combining Selectors
+#### Intersection
+
+* JavaScript
+    ```js
+    if (elem.type === 'h1' && elem.class === 'title') {
+        elem.color = 'red';
+    }
+    ```
+* CSS
+    ```css
+    h1.title {
+      color: red;
+    }
+    ```
+
+<Notes>
+For intersection, we want to reduce the set of elements selected.
+>> For JavaScript this would be an `&&` >> in CSS you put the selectors together with no spaces.
+This selector will apply to all `h1` with the class `title.
+</Notes>
+---
+
+export default WAnimateListBlack
+
+## Combining Selectors
+#### Union
+* JavaScript
+    ```js
+    if (elem.type === 'h1' || elem.type === 'h2') {
+        elem.color = 'red';
+    }
+    ```
+* CSS
+    ```css
+    h1, h2 {
+      color: red;
+    }
+    ```
+
+<Notes>
+For a union, we want to select elements that meet both criteria.
+>> For JavaScript this would be an `||` >> in CSS you use a comma.
+This selector will apply to all `h1` and all `h2`.
+</Notes>
+---
+
+export default WAnimateListBlack
+
+## Combining Selectors
+#### Difference
+* JavaScript
+    ```js
+    if (elem.type !== 'h2') {
+        elem.color = 'red';
+    }
+    ```
+* CSS
+    ```css
+    :not(h2) {
+      color: red;
+    }
+    ```
+
+<Notes>
+For the difference, we want to select elements that don't meet the criteria.
+>> For JavaScript this would be a `!` >> and in CSS you use a the pseudo-class `:not`.
+This selector will apply to all elements not `h2`s.
+</Notes>
+---
+
+<WFullPage title="Questions?" />
+
+---
+
+export default WStaticBlack
+
+## Combinators and Pseudo-classes
+
+<CodeSurfer
+  code={require("!raw-loader!./snippets/combinators.html")}
+  lang="markup"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { lines: [4,6], notes: "Adjacent elements: span + a" },
+    { lines: [4,6,7,8,9], notes: "Sibling elements: span ~ a" },
+    { lines: [3], notes: "Direct child: section > span" },
+    { lines: [3,5], notes: "Descendant: section span" },
+    { lines: [2,5], notes: "section :first-child" },
+    { lines: [5,7,8,9], notes: "section :last-child" },
+    { lines: [4,6], notes: "section :nth-child(3)" },
+    { lines: [2,3,5], notes: "section :first-of-type" },
+    { lines: [3,5,7,8,9], notes: "section :last-of-type" }
+  ]}
+/>
+
+<Notes>
+Combinators help us select elements based on their relation to other nodes. >>
+The plus sign is for direct siblings, >> the tilde for any _next_ sibling.
+>> The greater-than sign is for direct children, and the space for descendants.
+There are also some pseudo-classes to select element based on the DOM order.
+>> The first-child or >> last-child select the first or last node.
+>> To select an element in an specific position, use the nth-child pseudo-class.
+>> The first-of-type or >> the last-of-type, select the first or last per each type.
+</Notes>
+
+---
+
+export default WStaticBlack
+
+## Combinators and Pseudo-classes
+
+<CodeSurfer
+  code={require("!raw-loader!./snippets/combinators-tree.txt")}
+  lang="markup"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { tokens: { 5: [9,10,11] }, notes: "Adjacent elements: span + a" },
+    { tokens: { 5: [9,10,11,  13,14,15] }, notes: "Sibling elements: span ~ a" },
+    { tokens: { 5: [5,6,7] }, notes: "Direct child: section > span" },
+    { tokens: { 5: [5,6,7], 7: [1,2,3] }, notes: "Descendant: section span" },
+    { tokens: { 5: [1,2,3], 7: [1,2,3] }, notes: "section :first-child" },
+    { tokens: { 5: [13,14,15], 7: [1,2,3] }, notes: "section :last-child" },
+    { tokens: { 5: [9,10,11] }, notes: "section :nth-child(3)" },
+    { tokens: { 5: [1,2,3,  5,6,7], 7: [1,2,3] }, notes: "section :first-of-type" },
+    { tokens: { 5: [5,6,7,  13,14,15], 7: [1,2,3] }, notes: "section :last-of-type" }
+  ]}
+/>
+
+<Notes>
+You can also think of the HTML as a tree. This is how each of the previous
+combinators and pseudo-classes are selected. Here is easier to notice that there
+are no lookahead selectors. This means that you cannot select a parent node via its children,
+nor you cannot select an element via its next sibling. _show in the tree_
+</Notes>
+---
+
+<Codepen url="https://codepen.io/isa-bel/pen/zmPYBL"/>
+
+<Notes>
+_Leave presenters mode_
+</Notes>
+
+---
+
+<WFullPage title="Questions?" />
+
+---
+
+<WSlideMain
+  subtitle=""
+  title="CSS Fundamentals"
+  subtitle="Part 2"
+/>
+
+---
+
+export default WStaticBlack
+
+## Selectors Recap
+
+* Element type `button`
+* ID `#save-changes`
+* CSS class `.main`
+* Attribute `[type=primary]`
+* Pseudo-elements `::before`
+* Pseudo-classes `:hover`
+
+CSS cheatsheet: [https://devhints.io/css](https://devhints.io/css)
+
+<Notes>
+During this session we will create styles for a night-mode for GitHub.
+_open https://github.com/wizelineacademy/mastering-frontend_
+</Notes>
+---
+
+<WSection title="Cascading and" title2="Inheritance" />
+
+---
+
+export default WStaticBlack
+
+## The Cascade
+
+> Whether you write _custom CSS_ or use a _framework_,
+pick _original selectors_ every time or build a _component-based system_,
+use _CSS_ as intended or inject it all inline via _CSS-in-JS_ —
+… in every case, you are relying on the cascade. [...]
+
+> — [Jen Simmons, Designer Advocate at Mozilla](https://twitter.com/jensimmons/status/1039166001013825536)
+
+<Notes>
+I would like to start with this quote by Jen Simmons.
+She is a Designer Advocate at Mozilla and creates a lot of CSS related content, especially of the new CSS features.
+_read the quote_
+An incomplete understanding of the cascade can get you into trouble _very_ quickly.
+Understanding it will help you write maintainable CSS, with less `!important`s.
+</Notes>
+
+---
+
+export default WAnimateListBlack
+
+## The Cascade
+
+
+* Determines which styles to apply to an element.
+
+* Which style “wins” and gets applied.
+
+* Similar to OOP inheritance concept.
+
+<Notes>
+The cascade is the mechanism that controls which rules are applied to an element.
+Is close to the OOP concept of inheritance.
+</Notes>
+
+---
+
+export default WStaticBlack
+
+## OOP Inheritance
+
+![inheritance](./images/inheritance.png)
+
+<Notes>
+This is an example of inheritance. If the parent declares a property, the children can inherit it or override it.
+The problem comes with multiple inheritance.
+</Notes>
+
+---
+
+export default WStaticBlack
+
+## The Diamond Problem
+
+![deadly diamond of death](./images/diamond.png)
+
+<Notes>
+Occurs when a child has two or more parents that share an ancestor.
+Which of the implementations of `cookingMethod` will `cronut` have?
+Java solves this problem by disabling multiple inheritance.
+CSS solves it using three parameters.
+</Notes>
+
+---
+
+export default WAnimateListBlack
+
+## Cascade Tiebreakers
+
+To decide which style to apply, the cascade uses:
+
+1. Importance
+
+2. Specificity
+
+3. Source order
+
+<Notes>
+CSS uses three attributes to break the tie:
+_importance_: >> If the rule uses the `!important` keyword.
+_specificity_: >> How specific the selectors of the rule are.
+and _order_: >> The order of declaration.
+</Notes>
+
+---
+
+export default WAnimateListBlack
+
+## Importance and Order
+
+* Importance: Declarations followed by the `!important` keyword.
+*    ```
+    color: red !important;
+    ```
+* Order: The order of stylesheets, rules, and declarations.
+*    ```
+    color: red;
+    color: black;
+    ```
+* What will happen here?
+    ```
+    color: red !important;
+    color: black;
+    ```
+
+<Notes>
+The important declaration breaks the normal flow of the cascade.
+You want your declarations not to depend on the declaration order.
+_Show examples for importance and order_.
+</Notes>
+
+---
+
+<WFullPage title="Questions?" />
+
+---
+
+export default WAnimateListBlack
+
+## Specificity
+
+* Each selector has a value of this form `a:b:c:d`
+* `1:0:0:0` Inline styles
+    ```
+    <div style="color: red;">
+    ```
+* `0:1:0:0` IDs
+    ```
+    #root
+    ```
+* `0:0:1:0` Class, attribute, or pseudo-class
+    ```
+    .class [attr] :first-of-type
+    ```
+* `0:0:0:1` Element or pseudo-element
+    ```
+    div ::before
+    ```
+
+<Notes>
+Specificity is one of the most complex topics in CSS.
+Specificity is defined by a four layered value. The first value comes from
+the inline styles. The next value is the number of IDs the selector has.
+Then we have the number of classes, attributes, or pseudo-classes.
+And finally the number of elements or pseudo-elements.
+There is no way that several classes beat a single id selector.
+To have maintainable CSS, you should try to keep the specificity low.
+</Notes>
+
+---
+
+<WFullPage title="Questions?" />
+
+---
+
+export default WAnimateListBlack
+
+## CSS Inheritance
+
+* What happens when no value is assigned?
+* Some properties inherit the value from its direct parent, `color`.
+* Not all properties are inherited, `border`.
+* Use the `inherit` keyword to override other rules.
+* For non-inherited properties, use `initial` to reset them.
+
+<Notes>
+> "In CSS, inheritance controls what happens when no value is specified for a property on an element."
+Inheritance also helps us keep the CSS DRY.
+</Notes>
+
+---
+
+<WFullPage title="Questions?" />
+
+---
+
+<WSection title="Box Model" />
+---
+
+export default WStaticBlack
+
+## Box Model
+
+Each HTML element can be represented by a rectangle, or box.
+
+![inheritance](./images/box-model.png)
+
+<Notes>
+Recap, all the previous topics referred to the selector part of a CSS rule.
+Now we will start introducing some properties to make CSS declarations.
+The first properties we will introduce are `width`, `height`, `padding`, `border`, and `margin`.
+These properties define the _box model_.
+Margin affects other content interacting with the box.
+Padding is the inner space.
+</Notes>
+
+---
+
+export default WAnimateListBlack
+
+## Margin and Padding Shorthand
+
+* One value  `□`
+    ```
+    margin: 5px;
+    ```
+* Two values  `+`
+    ```
+    margin: 0 5px;
+    ```
+* Three values  `÷`
+    ```
+    margin: 1px 0 3px;
+    ```
+* Four values  `◇`
+    ```
+    margin: 1px 2px 3px 4px;
+    ```
+
+<Notes>
+1 value assigns to all edges the same value.
+2 values assigns the first value to the top-bottom and the second one to the left-right.
+3 values, the first value is for top, the second for left-right, and the last for bottom.
+4 values lists the values clockwise, top, right, bottom, left.
+From CSS & CSS3 by Robin Nixon.
+</Notes>
+---
+
+export default WAnimateListBlack
+
+## Border Shorthand
+
+* Borders have style, color, and width.
+* Set all at the same time.
+    ```
+    border: 1px solid black;
+    ```
+* Use separated declarations.
+    ```
+    border-width: 1px;
+    border-style: dashed;
+    border-color: pink;
+    ```
+* They use the same shorthands as `margin`.
+    ```
+    border-style: dashed groove double dotted;
+    ```
+
+---
+
+export default WAnimateListBlack
+
+## Display
+
+* Take the whole width.
+    ```
+    display: block;
+    ```
+* Inline element with no height nor width.
+    ```
+    display: inline;
+    ```
+* Inline element with height and width.
+    ```
+    display: inline-block;
+    ```
+* Others.
+    ```
+    display: none;
+    display: flex;
+    ```
+---
+
+<Codepen url="https://codepen.io/ederdiaz/pen/JmjQEN"/>
+
+<Notes>
+_Leave presenters mode_
+Note that the margins are not displayed twice, this is known as "Margin collapsing".
+Margin collapsing only happens vertically. If you have two block elements with
+`margin: 4px 0;`, the vertical space between them would be only 4px.
+</Notes>
+
+---
+
+<WSection title="References" />
+
+---
+
+export default WStaticBlack
+
+## References
+
+* [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
+* [It’s all about CSS](https://docs.google.com/presentation/d/1ACGbX716lTDQFiJ4w1jjL0eBivpe3QzM_0xFHIrpIp4/edit)
+* [What the Heck Is CSS Specificity?](https://designshack.net/articles/css/what-the-heck-is-css-specificity/)
+* [CSS Diner - Where we feast on CSS Selectors!](https://flukeout.github.io/)
+* [How CSS works: Understanding the cascade](https://blog.logrocket.com/how-css-works-understanding-the-cascade-d181cd89a4d8)
+* [BATIFICITY](http://batificity.com/)
+* [CSS Specificity Wars](https://stuffandnonsense.co.uk/archives/images/css-specificity-wars.png)
+* [CSS Dig](https://www.cssdig.com/)
+
+---
+
+export default WStaticBlack
+
+## Other Interesting References
+
+* [Inside a super fast CSS engine: Quantum CSS (aka Stylo)](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/)
+* [Resilient CSS: 7-part Series](https://www.youtube.com/watch?v=u00FY9vADfQ&list=PLbSquHt1VCf1kpv9WRGMCA9_Nn4vCLZ9Y)
+* [Strategies for Keeping CSS Specificity Low](https://css-tricks.com/strategies-keeping-css-specificity-low/)
+
+---
+
+<WSlideThankyou/>

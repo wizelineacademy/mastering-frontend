@@ -164,6 +164,7 @@
                 @mixin font quicksand, bold;
                 font-size: 1.3rem;
                 margin-left: var(--bookmark-margin-left);
+                border: none;
               }
             }
           }

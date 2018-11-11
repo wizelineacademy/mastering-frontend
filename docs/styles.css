@@ -482,6 +482,7 @@ button {
     display: var(--mobile-display);
     width: 4.3rem;
     height: 4.3rem;
+    border: none;
   }
 
 .header__nav {
@@ -1352,6 +1353,7 @@ button {
       justify-content: center;
       align-items: center;
       font-size: var(--btn-font-size);
+      border: none;
 
     }
 
@@ -2441,6 +2443,7 @@ button {
     font-weight: 700;
                 font-size: 1.3rem;
                 margin-left: var(--bookmark-margin-left);
+                border: none;
               }
 
 .our-resources__posts__arrows {

@@ -42,7 +42,7 @@
     "autoprefixer": "^9.3.1",
     "babel-loader": "^8.0.2",
     "copy-webpack-plugin": "^4.5.4",
-    "css-loader": "^0.28.11",
+    "css-loader": "^1.0.1",
     "cssnano": "^4.1.7",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.4",
@@ -63,5 +63,10 @@
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.1"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "css-progress-loader": "https://github.com/fareco/css-loader",
+    "es6-promise": "^4.2.5",
+    "isomorphic-fetch": "^2.2.1"
+  }
 }

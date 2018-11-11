@@ -1,10 +1,17 @@
 .loader {
-  border: 1.6rem solid #f3f3f3;
-  border-top: 1.6rem solid #3498db;
-  border-radius: 50%;
-  width: 12rem;
-  height: 12rem;
-  animation: spin 2s linear infinite;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  &__spinner {
+    border: 1.6rem solid #f3f3f3;
+    border-top: 1.6rem solid #3498db;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    animation: spin 2s linear infinite;
+  }
 }
 
 @keyframes spin {

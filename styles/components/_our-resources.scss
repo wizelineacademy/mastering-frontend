@@ -97,6 +97,8 @@
 
       &__slide {
         flex: 0 0 100%;
+        transition: transform .4s ease-in-out;
+        // transform: translateX(0);
 
         &__inner {
           padding: var(--post-inner-padding);
@@ -167,7 +169,6 @@
           }
         }
 
-
       }
     }
 
@@ -206,17 +207,17 @@
       display: flex;
       margin-top: var(--dots-margin-top);
 
-      &__dot + &__dot {
+      .dot + .dot {
         margin-left: 1.2rem;
       }
 
-      &__dot {
+      .dot {
         background-color: #D1D6E3;
         width: .8rem;
         height: .8rem;
         border-radius: 50%;
         
-        &--active {
+        &.active {
           background-color: #5283FF;
         }
       }

@@ -5,7 +5,11 @@ var CopyWebpackPlugin = require("copy-webpack-plugin");
 var path = require("path");
 
 module.exports = {
-  entry: "./scripts/main.js",
+  entry: [
+    "es6-promise",
+    "isomorphic-fetch",
+    "./scripts/main.js"
+  ],
   output: {
     path: path.resolve(__dirname, "docs"),
     filename: "bundle.js"

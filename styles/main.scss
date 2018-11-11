@@ -7,6 +7,7 @@
 
 // Vendors
 @import 'vendor/_normalize.scss';
+// @import '../node_modules/css-progress-loader/css/index.css';
 
 // Base stuff
 @import 'base/_base.scss';
@@ -33,3 +34,4 @@
 @import 'components/_testimonials.scss';
 @import 'components/_our-resources.scss';
 @import 'components/_loader.scss';
+@import 'components/_noscript.scss';

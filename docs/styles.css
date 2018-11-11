@@ -423,6 +423,10 @@ svg {
   display: none;
 }
 
+button {
+  border: none;
+}
+
 .hidden {
   display: none;
 }

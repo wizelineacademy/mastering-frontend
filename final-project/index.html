@@ -275,7 +275,7 @@
       <h1 class="faq__container--subtitle">Customers help</h1>
       <h2 class="faq__container--title">Frequently asked questions</h2>
       <ul class="faq__container--list">
-        <li class="faq__container--list-item">
+        <li class="faq__container--list-item" data-index="0">
           <div class="faq__container--list-item-title" onclick="showActive(this)">
             <div class='faq__container--list-item-title-arrow arrow-down'></div>
             <p class='faq__container--list-item-title-text'>Reque insolens in vel?</p>
@@ -290,7 +290,7 @@
             </button>
           </div>
         </li>
-        <li class="faq__container--list-item">
+        <li class="faq__container--list-item" data-index="1">
           <div class="faq__container--list-item-title" onclick="showActive(this)">
             <div class='faq__container--list-item-title-arrow arrow-down'></div>
             <p class='faq__container--list-item-title-text'>Vis rebum error graecis ea, id sit postea accusamus?</p>
@@ -305,7 +305,7 @@
             </button>
           </div>
         </li>
-        <li class="faq__container--list-item">
+        <li class="faq__container--list-item" data-index="2">
           <div class="faq__container--list-item-title" onclick="showActive(this)">
             <div class='faq__container--list-item-title-arrow arrow-down'></div>
             <p class='faq__container--list-item-title-text'>Lorem repudiandae ne nec?</p>
@@ -320,7 +320,7 @@
             </button>
           </div>
         </li>
-        <li class="faq__container--list-item">
+        <li class="faq__container--list-item" data-index="3">
           <div class="faq__container--list-item-title" onclick="showActive(this)">
             <div class='faq__container--list-item-title-arrow arrow-down'></div>
             <p class='faq__container--list-item-title-text'>Ad dicit numquam vel. Et eos iudico feugait percipitur?</p>
@@ -335,7 +335,7 @@
             </button>
           </div>
         </li>
-        <li class="faq__container--list-item">
+        <li class="faq__container--list-item" data-index="4">
           <div class="faq__container--list-item-title" onclick="showActive(this)">
             <div class='faq__container--list-item-title-arrow arrow-down'></div>
             <p class='faq__container--list-item-title-text'>Sea no dico percipitur. Fierent constituam definitiones id eum?</p>
@@ -430,7 +430,28 @@
   <script src="../js/carousel.js"></script>
   <script>
     function showActive(ev) {
+      let container = ev.parentElement.parentElement;
       let el = ev.parentElement;
+      let indexElm = ev.parentElement.getAttribute('data-index');
+      let listItems = container.querySelectorAll('.faq__container--list-item');
+      for(let i = 0; i< listItems.length; i++){
+        if(i === parseInt(indexElm)) continue;
+        let arrow = listItems[i].querySelector('.faq__container--list-item-title-arrow');
+        if(arrow.classList.contains('arrow-up')){
+          arrow.classList.remove('arrow-up');
+          arrow.classList.add('arrow-down');
+        }
+        
+        let title = listItems[i].querySelector('.faq__container--list-item-title');
+        if(title.classList.contains('active-title')){
+          title.classList.remove('active-title');
+        }
+
+        let answer = listItems[i].querySelector('.faq__container--list-item-answer');
+        if(answer.classList.contains('active-faq')){
+          answer.classList.remove('active-faq');
+        }
+      }
         
         let arrow = el.querySelector('.faq__container--list-item-title-arrow');
         if(arrow.classList.contains('arrow-down')){
@@ -454,10 +475,11 @@
         }else{
           answer.classList.add('active-faq');
         }
-      }
+    }
     window.onload = function () {
       var carousel = new Carourel({klass: '.customer__container-image', prefix: 'customer'});
       window.addEventListener("resize", onResizeCustomers);
+      onResizeCustomers();
       function onResizeCustomers() {
         var wh = window.innerWidth;
 

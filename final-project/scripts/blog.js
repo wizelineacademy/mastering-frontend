@@ -7,10 +7,10 @@ class Blog {
     this.sliderContainer = $('#blog-slider');
   }
 
-  static createSlides(posts) {
-    return posts.map(({description, images, title, url}) => (
+  createSlides(posts) {
+    return posts.map(({description, images, title, url}, index) => (
       `
-        <li class="slide">
+        <li class="slide" data-id="${index}">
           <div class="card">
             <picture class="card__image">
               <source media="(min-width: 1440px)" srcset="${images.desktop}">
@@ -38,8 +38,7 @@ class Blog {
 
   async init() {
     const posts = await api.retrieveBlogPosts();
-    console.log(posts);
-    const slides = Blog.createSlides(posts);
+    const slides = this.createSlides(posts);
     const slider = new Slider(this.sliderContainer, slides);
     slider.init();
   }

@@ -85,7 +85,19 @@ $color-dot-active: #5283FF;
     height: 100%;
     list-style: none;
     margin-left: -100%;
-    width: 410%;
+    width: 400%;
+
+    &.animate {
+      transition: margin 0.3s ease-in-out;
+    }
+
+    &.move-left {
+      margin-left: 0;
+    }
+
+    &.move-right {
+      margin-left: -200%;
+    }
   }
 
   .slide {

@@ -1,9 +1,9 @@
 /* Utils */
 
-export const $ = (selector) => {
-  return document.querySelector(selector);
+export const $ = (selector, context = document) => {
+  return context.querySelector(selector);
 };
 
-export const $$ = (selector) => {
-  return document.querySelectorAll(selector);
+export const $$ = (selector, context = document) => {
+  return context.querySelectorAll(selector);
 };

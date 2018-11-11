@@ -91,7 +91,7 @@
   width: 100%;
   height: 35.6rem;
   background-image: url("../reference/assets/hero.png");
-  background-repeat: no-repeat;
+  background-repeat: round;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -599,6 +599,11 @@
   font-weight: bold;
 }
 
+.blog .carousel .carousel-content .btn-read:hover {
+  box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24), 0 15px 48px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s;
+}
+
 .blog .carousel .carousel-content .btn-bookmark {
   background-color: transparent;
   color: #ADB4D2;
@@ -623,6 +628,10 @@
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 0.8rem;
+}
+
+.blog .carousel-indicators .indicator-list li.active {
+  background-color: #3A79FF;
 }
 
 .quotes {

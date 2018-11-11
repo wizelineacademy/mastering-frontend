@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mastering Frontend</title>
+  <title>Eduardo Lopez - Mastering Frontend</title>
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700|Roboto:400,500,700|Open+Sans:400,600" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="./dist/styles.css">
@@ -212,56 +212,12 @@
           <div class="blog__container">
             <p class="section__title">OUR RESOURCES</p>
             <h1 class="blog__title">Start reading our blog</h1>
-            <div class="carousel">
-              <div class="carousel__container">
-                <button class="button__nav button__nav--left">
-                  <img src="/assets/images/arrow-left.svg" alt="previous button" />
-                </button>
-                <section class="cards__viewport">
-                  <ul class="cards__container">
-                    <li class="slide">
-                      <div class="card">
-                        <picture class="card__image">
-                          <source media="(min-width: 1440px)" srcset="https://via.placeholder.com/407x267/F8D1B4">
-                          <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/407x267/F8D1B4">
-                          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/643x267/F8D1B4">
-                          <img src="https://via.placeholder.com/270x184/F8D1B4" alt="article image">
-                        </picture>
-                        <article class="card__article">
-                          <h1 class="card__title">How to start planning</h1>
-                          <p class="text">
-                            Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos,
-                            vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea.
-                            Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...
-                          </p>
-                          <div class="card__buttons">
-                            <button class="button button--primary-light">
-                              Read now
-                            </button>
-                            <button class="button button--normal--inverse">
-                              Add your bookmarks
-                            </button>
-                          </div>
-                        </article>
-                      </div>
-                    </li>
-                    <li class="slide">
-                        <div class="card"></div>
-                    </li>
-                    <li class="slide">
-                        <div class="card"></div>
-                    </li>
-                  </ul>
-                </section>
-                <button class="button__nav button__nav--right">
-                  <img src="/assets/images/arrow-right.svg" alt="next button" />
-                </button>
-              </div>
-              <ul class="dots__container">
-                <li class="dot dot--active"></li>
-                <li class="dot"></li>
-                <li class="dot"></li>
-              </ul>
+            <div id="blog-slider" class="carousel__wrapper">
+              <div class="loader">
+                  <span class="loader__item"></span>
+                  <span class="loader__item"></span>
+                  <span class="loader__item"></span>
+                </div>
             </div>
           </div>
         </section>

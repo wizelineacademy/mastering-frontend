@@ -638,6 +638,8 @@
   width: 100%;
   height: 15rem;
   display: flex;
+  color: #697CA6;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .footer .header-elem-2 {

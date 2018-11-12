@@ -1,0 +1,42 @@
+$loader-height: 100px;
+$loader-width: 100px;
+$loader-color: #8d96bd;
+$loader-duration: 1s;
+
+.wave-spread {
+  .loader {
+    width: $loader-height;
+    height: $loader-height;
+
+    > div {
+      float: left;
+      margin: 40% 2% 0 0;
+      width: 4%;
+      height: 16%;
+      background-color: $loader-color;
+      animation: wave $loader-duration cubic-bezier(0.85, 0.25, 0.37, 0.85)
+        infinite;
+    }
+    .line-1 {
+      margin-left: 30%;
+    }
+    .line-1,
+    .line-5 {
+      animation-delay: 0.4s;
+    }
+    .line-2,
+    .line-4 {
+      animation-delay: 0.2s;
+    }
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(2);
+  }
+}

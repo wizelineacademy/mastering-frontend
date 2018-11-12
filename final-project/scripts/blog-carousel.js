@@ -35,12 +35,14 @@ export class BlogCarousel {
 
     carouselHostEl.classList.add("carousel");
 
-    carouselHostEl.appendChild(carouselInnerEl);
-    carouselHostEl.appendChild(this.carouselIndicatorsEl);
-
     // Fetch blog entries and create <article> elements
+    carouselHostEl.classList.add("wave-spread");
     const entries = await this.getBlogEntries();
     entries.forEach(this.addArticle.bind(this));
+    carouselHostEl.classList.remove("wave-spread");
+
+    carouselHostEl.appendChild(carouselInnerEl);
+    carouselHostEl.appendChild(this.carouselIndicatorsEl);
 
     this.addEventListeners();
   }
@@ -59,7 +61,11 @@ export class BlogCarousel {
     const response = await fetch(
       "https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog"
     );
-    return (await response.json()).articles;
+
+    // Simulate a long request to get the loader displayed
+    return new Promise(resolve =>
+      setTimeout(async () => resolve((await response.json()).articles), 3000)
+    );
   }
 
   addArticle(article, index) {

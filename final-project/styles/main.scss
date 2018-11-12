@@ -1,9 +1,14 @@
+//@import "../reference/assets/fonticons/css/fontello.css";
+//@import "../reference/assets/fontawesome/scss/fontawesome";
+
 $blue1-color: #3D4F9F;
 $blue2-color: #3A79FF;
 $blue3-color: #5E81FE;
 $blue4-color: #697CA6;
-$blue5-color: #D2E1FF;
+$blue5-color: #8D96BD;
+$blue6-color: #D2E1FF;
 $gray1-color: #D6DAE5;
+$gray2-color: #F5F8FF;
 $border-color: #D8E3FE;
 
 @function pxToRem($px) {
@@ -44,7 +49,7 @@ html {
   width: 100%;
   z-index: 1;
 
-  & + .section{
+  & + .section {
     margin-top: pxToRem(80);
   }
 
@@ -95,7 +100,7 @@ html {
 
   &__button {
     all: unset;
-    background-color: $blue5-color;
+    background-color: $blue6-color;
     border-radius: 2px;
     color: $blue2-color;
     cursor: pointer;
@@ -140,6 +145,7 @@ html {
   }
 
   &__description {
+    color: $blue5-color;
     font-size: pxToRem(15);
     max-width: pxToRem(500);
 
@@ -168,7 +174,7 @@ html {
   justify-content: space-evenly;
   padding: pxToRem(50) 0;
 
-  svg {
+  &__logo {
     cursor: pointer;
     fill: $gray1-color;
     height: pxToRem(30);
@@ -177,5 +183,86 @@ html {
     &:hover {
       fill: $blue3-color;
     }
+  }
+}
+
+.plan {
+  background-color: $gray2-color;
+
+  &__main-container {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: pxToRem(776);
+    margin: 0 auto;
+    max-width: pxToRem(1100);
+    padding: 0 pxToRem(10);
+  }
+
+  &__text-container {
+    color: $blue1-color;
+    max-width: pxToRem(450);
+  }
+
+  &__label {
+    font-size: pxToRem(10);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    font-size: pxToRem(36);
+    font-weight: normal;
+    margin: pxToRem(27) 0;
+  }
+
+  &__description {
+    color: $blue5-color;
+  }
+
+  &__image-container {
+    flex-grow: 1;
+    height: pxToRem(350);
+    margin-left: auto;
+    max-height: 75vw;
+    max-width: pxToRem(600);
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__buttons-container {
+    display: flex;
+    width: 100%;
+  }
+
+  &__video-button {
+    all: unset;
+    background: #4C85FF;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 5px 15px rgba(188, 199, 255, 0.75);
+    color: white;
+    cursor: pointer;
+    font-size: pxToRem(13);
+    padding: pxToRem(12) pxToRem(25);
+    display: inline-block;
+
+    .fas {
+      font-size: pxToRem(8);
+      margin-left: 5px;
+    }
+  }
+
+  &__features-button {
+    all: unset;
+    border-radius: 0 2px 2px 0;
+    border: 1px solid #D1D1E4;
+    color: #ADB4D2;
+    cursor: pointer;
+    display: inline-block;
+    font-size: pxToRem(13);
+    padding: pxToRem(12) pxToRem(25);
   }
 }

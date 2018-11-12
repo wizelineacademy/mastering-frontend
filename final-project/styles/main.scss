@@ -1,3 +1,5 @@
+@import "spinner";
+
 $blue1-color: #3D4F9F;
 $blue2-color: #3A79FF;
 $blue3-color: #5E81FE;
@@ -25,8 +27,18 @@ $border-color: #D8E3FE;
   }
 }
 
+@mixin mediaMobileSmall {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
 html {
   font-family: 'Quicksand', sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 * {
@@ -385,3 +397,142 @@ html {
     width: 16px;
   }
 }
+
+.blog {
+  background: #F5F8FF;
+  padding: pxToRem(100) pxToRem(20);
+  position: relative;
+  width: 100%;
+
+  &.hidden {
+    display: none;
+  }
+
+  &__label {
+    color: $blue1-color;
+    font-size: pxToRem(10);
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    color: $blue1-color;
+    font-size: pxToRem(24);
+    font-weight: 500;
+    margin: pxToRem(20) 0;
+    text-align: center;
+  }
+
+  &__post-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__post {
+    background: white;
+    border: 1px solid #D8E3FE;
+    box-shadow: 0 15px 50px #EFF4FF;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 pxToRem(10);
+    max-width: pxToRem(1000);
+    padding: pxToRem(30);
+    width: 100%;
+
+    @include mediaMobile {
+      display: block;
+    }
+  }
+
+  &__post-image {
+    width: 45%;
+
+    @include mediaMobile {
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      height: pxToRem(300);
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__post-content {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+    @include mediaMobile {
+      width: 100%;
+    }
+  }
+
+  &__post-header {
+    color: #3D4F9F;
+    font-size: pxToRem(36);
+    font-weight: normal;
+    margin-bottom: pxToRem(20);
+  }
+
+  &__post-description {
+    color: #8D96BD;
+    font-size: pxToRem(14);
+    margin-bottom: auto;
+  }
+
+  &__post-read-button {
+    all: unset;
+    background: #D2E1FF;
+    border-radius: 2px;
+    color: #3A79FF;
+    cursor: pointer;
+    font-size: pxToRem(13);
+    font-weight: bold;
+    margin-top: pxToRem(20);
+    padding: pxToRem(12);
+    text-align: center;
+    text-decoration: none;
+    width: pxToRem(110);
+
+    @include mediaMobileSmall {
+      width: 100%;
+    }
+  }
+
+  &__arrow {
+    cursor: pointer;
+
+    @include mediaTablet {
+      display: none;
+    }
+
+    &.left {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: pxToRem(50);
+  }
+
+  &__indicator {
+    background: #D1D6E3;
+    border-radius: 50%;
+    cursor: pointer;
+    height: pxToRem(8);
+    margin: 0 pxToRem(6);
+    width: pxToRem(8);
+
+    &.selected {
+      background: $blue2-color;
+    }
+  }
+}
+

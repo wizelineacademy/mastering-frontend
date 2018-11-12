@@ -124,3 +124,8 @@ function openArticle() {
     '_blank'
   )
 }
+
+function changeArticle(articleNumber) {
+  articleIndex = articleNumber
+  setBlogContent()
+}

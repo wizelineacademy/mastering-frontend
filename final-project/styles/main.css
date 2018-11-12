@@ -651,6 +651,26 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+.footer .footer-elem-1 {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.footer .footer-elem-1 .copyright {
+  align-self: first baseline;
+  margin-left: 16%;
+  margin-top: 5%;
+}
+
+.footer .footer-elem-1 .elem-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .footer .header-elem-2 {
   align-items: center;
 }

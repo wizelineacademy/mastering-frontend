@@ -3,6 +3,7 @@
 // test for scss variables
 $primary-color: #2a3fbb;
 $alter-section-color:#F5F8FF;
+$action-button-color:#D2E1FF;
 $nav-text-color: #697CA6;
 $header__logo-size: 26px;
 $header__text-color:#3D4F9F;
@@ -31,6 +32,8 @@ $header__text-color:#3D4F9F;
   font-family: Quicksand;
   font-variant:100;
 }
+
+button { border:none; } 
 
 h1 {
   color: $primary-color;
@@ -77,10 +80,188 @@ p{
 }
 
 .blog{
+  display: flex;
+  flex-direction: column;
   background-color: $alter-section-color;
+  padding: 0 rem-calc(14px);
+  &__content__article{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #D8E3FE;
+    padding: rem-calc(14px);
+    background-color: white;
+    &__actions{
+      &__read{
+        background-color: $action-button-color;
+        width: 100%;
+        height: rem-calc(34px);
+        color:#3A79FF;
+        margin: rem-calc(14px) 0 rem-calc(25px); 
+      }
+      &__bookmark{
+        display: none;
+        @include tablet-breakpoint {
+          display: inline;
+        }
+        @include desktop-breakpoint {
+          display: inline;
+        }
+      }
+    }
+  }
+  span{
+    margin: rem-calc(60px) 0 rem-calc(30px);
+  }
+  h3{
+    margin-bottom: rem-calc(45px);
+  }
+  &__content{
+    h1{
+      text-align: left;
+    }
+    p{
+      text-align: justify;
+    }
+  }
+  .page-controller{
+    margin: 30px 126px 105px 126px;
+  }
+}
+.circle{
+  display: flex;
+  border-radius: 50%;
+  img{
+    margin: auto;
+  }
 }
 
-button { border:none; } 
+.customers{
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+  &__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top:60px;
+    &__item{
+      display: none;
+      text-indent: -999px;
+      &__bitbucket{
+        width: 117px;
+        height: 29px;
+        background-image: url('/reference/assets/customers/bitbucket.png')
+      }
+      &__apple-watch{
+        width: 117px;
+        height: 25px;
+        background-image: url('/reference/assets/customers/apple-watch.png')
+      }
+      &__facebook{
+        width: 117px;
+        height: 23px;
+        background-image: url('/reference/assets/customers/facebook.png')
+      }
+      &__atlassian{
+        width: 117px;
+        height: 25px;
+        background-image: url('/reference/assets/customers/atlassian.png')
+      }
+      &__audi{
+        width: 117px;
+        height: 29px;
+        background-image: url('/reference/assets/customers/audi.png')
+      }
+      &--active{
+        display: inline;
+      }
+      &:hover{
+        filter:brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%);
+      }
+    }
+  }
+}
+
+.faq{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 0 rem-calc(14px) rem-calc(10px);
+  &__content{
+    &__item{
+      display: flex;
+      flex-direction: column;
+      &__question{
+        display: flex;
+        &__button{
+          margin-right: 10px;
+        }
+        &__text{
+          color:#8E96B7;
+        }
+      }
+      &__answer{
+        display:none;
+      }
+      &__documentation{
+        display:none;
+      }
+      &--active{
+        display: flex;
+      }
+    }
+    
+  }
+  h3{
+    margin-bottom: rem-calc(45px);
+  }
+  span{
+    margin: rem-calc(45px) 0 rem-calc(30px);
+  }
+}
+
+.get-started{
+  display: flex;
+  flex-direction: column;
+  background-color: #6888FF;
+  padding: 0 rem-calc(14px);
+  &__actions{
+    margin: 0 rem-calc(14px) rem-calc(30px);
+    display: flex;
+    &__pricing{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px 0 0 2px;
+      background-color: white;
+      color: #565F82;
+    }
+    &__documentation{
+      background-color: transparent;
+      border: #D1D1E4 solid 1px;
+      border-radius: 0 2px 2px 0;
+      color: #C7D3FF;
+    }
+  }
+  button{
+    height: rem-calc(43px);
+    width: 50%;
+  }
+  h1{
+    color: white;
+    margin: rem-calc(15px) 0 ; 
+    font-size: rem-calc(36px);
+  } 
+  p{
+    color: white;
+    margin: rem-calc(15px) 0 ; 
+  } 
+  span{
+    color: white;
+    margin: rem-calc(70px) 0 rem-calc(25px); 
+  }
+}
 
 .header {
   display: flex;
@@ -137,7 +318,7 @@ button { border:none; }
   }
 
   &__button {
-    background-color: #D2E1FF;
+    background-color: $action-button-color;
     font-family: 'Quicksand', sans-serif;
     color: #3A79FF;
     padding: rem-calc(13px);
@@ -150,7 +331,6 @@ button { border:none; }
 }
 
 .main {
-  border-top: #D8E3FE solid 1px;
   max-width: rem-calc(320px);
   margin:0 auto;
   @include tablet-breakpoint {
@@ -158,6 +338,44 @@ button { border:none; }
   }
   @include desktop-breakpoint {
     max-width: 1024px;
+  }
+}
+
+.newsletter{
+  display: float;
+  flex-direction: column;
+  margin:rem-calc(50px) rem-calc(14px) rem-calc(35px);
+  &__form{
+    display: float;
+    flex-direction: column;
+    form{
+      display: float;
+      flex-direction: column;
+    }
+    input{
+      width:100%;
+      background-color: #EFEFF7;
+      border: none;
+      height: rem-calc(60px);
+    }
+    button{
+      width: 100%;
+      height: rem-calc(60px);
+      background-color: #4D6CE1;
+      color: white;
+      font-size: rem-calc(13px);
+      font-weight: 700;
+      border-radius: 2px;
+      margin-top: rem-calc(10px);
+    }
+  }
+  h2{
+    font-size: rem-calc(18px);
+    text-align: left;
+  }
+  p{
+    margin: rem-calc(10px) 0;
+    text-align: left;
   }
 }
 
@@ -187,14 +405,12 @@ button { border:none; }
       margin:0 0 35px 0;
     }
     &__play-button{
-      display: flex;
       height: 52px;
       width: 52px;
       background-color: white;
-      border-radius: 50%;
       margin-top: 62px;
+      box-shadow:0 10px 50px #d8e3fe;
       img{
-        margin: auto;
         filter:brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%);
       }
     }
@@ -206,71 +422,120 @@ button { border:none; }
   }
 }
 
-.customers{
-  display: flex;
-  justify-content: space-around;
-  flex-flow: column;
-  &__list{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-top:60px;
-    &__item{
-      display: none;
-      text-indent: -999px;
-      &__bitbucket{
-        width: 117px;
-        height: 29px;
-        background-image: url('/reference/assets/customers/bitbucket.png')
-      }
-      &__apple-watch{
-        width: 117px;
-        height: 25px;
-        background-image: url('/reference/assets/customers/apple-watch.png')
-      }
-      &__facebook{
-        width: 117px;
-        height: 23px;
-        background-image: url('/reference/assets/customers/facebook.png')
-      }
-      &__atlassian{
-        width: 117px;
-        height: 25px;
-        background-image: url('/reference/assets/customers/atlassian.png')
-      }
-      &__audi{
-        width: 117px;
-        height: 29px;
-        background-image: url('/reference/assets/customers/audi.png')
-      }
-      &--active{
-        display: inline;
-      }
-    }
-  }
-}
-
 .page-controller{
   display: flex;
   justify-content: space-evenly;
   margin: 45px 136px 80px 136px;
+  height: 10px;
+  &__indicator {
+    border: 1px solid white;
+    border-radius: 50%;
+    height:8px;
+    width:8px;
+    background-color: #D1D6E3;
+  }
+  &__indicator--active{
+    background-color: #5283FF;
+  }
 }
 
-.page-controller__indicator {
-  border: 1px solid white;
-  border-radius: 50%;
-  height:8px;
-  width:8px;
-  background-color: #D1D6E3;
-}
-
-.page-controller__indicator--active{
-  background-color: #5283FF;
-}
 
 .planning{
+  display: flex;
+  flex-direction: column;
   background-color: $alter-section-color;
+  &__info{
+    padding-top:rem-calc(42px);
+    margin: 0 14px;
+    span{
+      margin-bottom: rem-calc(50px);
+    }
+    &__title{
+      margin-bottom: rem-calc(35px);
+    }
+  }
+  &__image img{
+    margin-top: rem-calc(45px);
+  }
+  &__buttons{
+    margin: 0 rem-calc(14px) rem-calc(30px);
+    display: flex;
+    &__play-video{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px 0 0 2px;
+      background-color: #4C85FF;
+      color: white;
+      img{
+        margin-left: rem-calc(22px);
+      }
+    }
+    &__see-features{
+      background-color: transparent;
+      border: #D1D1E4 solid 1px;
+      border-radius: 0 2px 2px 0;
+      color: #ADB4D2;
+    }
+    button{
+      height: rem-calc(52px);
+      width: 50%;
+    }
+  }
+}
+
+.read-about{
+  margin: 0 rem-calc(14px);
+  &__header{
+    margin-top: rem-calc(43px);
+    span{
+      margin-bottom: rem-calc(30px);
+    }
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    header{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: rem-calc(70px);
+      h6{
+        font-family: 'Open Sans';
+        font-weight: 700;
+        color: #4074F8;
+        font-size: rem-calc(14px);
+        margin: rem-calc(37px) 0;
+      }
+    }
+  }
+  &__controls{
+    display: flex;
+    justify-content: space-between;
+    margin: rem-calc(40px) 0;
+    &__more{
+      background-color: #FFD7D7;
+    }
+    &__started{
+      background-color: $action-button-color;
+    }
+  }
+  button{
+    width: rem-calc(113px);
+    height: rem-calc(40px);
+    border-radius: 2px;
+  }
+  .circle{
+    width: 69px;
+    height: 69px;
+    background-color: #F1F5FF;
+  }
 }
 .responsive-image {
   width: 100%;
@@ -278,11 +543,53 @@ button { border:none; }
 }
 .statistics{
   display: flex;
+  flex-direction: column;
   &__part{
-    width: 50%;
+    width: 100%;
     background-color: #6888ff;
-    &--alter{
-      background-color: $alter-section-color;
+    padding: rem-calc(60px) 0 rem-calc(70px) 0;
+    
+    h1,p,span{
+      text-align: right;
+      color: white;
+      margin: 0 rem-calc(14px) rem-calc(30px);
     }
+    
+    &--alter{
+      background-color: #e9efff;
+      h1,p,span{
+        text-align: left;
+        color: #5E80FF;
+        margin: 0 rem-calc(14px) rem-calc(30px);
+      }
+      
+    }
+    @include tablet-breakpoint {
+      width: 50%;
+    }
+    
+    @include desktop-breakpoint {
+      width: 50%;
+    }
+  }
+  @include tablet-breakpoint {
+    display: flex;
+  }
+  
+  @include desktop-breakpoint {
+    display: flex;
+  }
+}
+.testimonials{
+  display:none;
+  span{
+    margin: rem-calc(45px) 0 rem-calc(30px);
+  }
+  @include tablet-breakpoint {
+    display: flex;
+  }
+  
+  @include desktop-breakpoint {
+    display: flex;
   }
 }

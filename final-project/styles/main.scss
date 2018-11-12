@@ -2,6 +2,22 @@
   padding: 0;
   margin: 0;
 }
+.title{
+  font-family: Roboto,sans-serif;
+  font-size: .800rem;
+}
+.subtitle{
+  font-family: Quicksand,sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+}
+.paragraph{
+  font-family: Roboto,sans-serif;
+  font-size: 1rem;
+}
+.bold{
+  font-weight: 800;
+}
 .header{
   height: 80px;
   position: absolute;
@@ -36,6 +52,7 @@
     &__item{
       text-decoration: none;
       color: #697CA6;
+      cursor: pointer;
       &__selected, &:hover{
         text-decoration: none;
         color: #5E81FE;
@@ -68,15 +85,17 @@
   background-color: #D2E1FF;
   color: #3A79FF;
 }
+.main{
+  position: relative;
+  top: 80px;
+}
 .hero{
   height: 570px;
   background-image: url("/reference/assets/hero.png");
   background-position: 50%;
-  position: relative;
-  top: 80px;
   &__content{
     position: absolute;
-    top: 50%;
+    top: 270px;
     left: 50%;
     transform: translate(-50%,-50%);
     color: #3d4f9f;
@@ -101,19 +120,36 @@
     }
   }
 }
-.title{
-  font-family: Roboto,sans-serif;
-  font-size: .800rem;
+.customers{
+  &__content{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0;
+    &__item{
+      height: 30px;
+      width: 129px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      &:hover{
+        filter: invert(100%) sepia() saturate(2000%) brightness(400%) hue-rotate(200deg);
+      }
+    }
+  }
 }
-.subtitle{
-  font-family: Quicksand,sans-serif;
-  font-size: 3rem;
-  font-weight: 200;
+#bit-bucket{
+  background-image: url("/reference/assets/customers/bitbucket.png");
 }
-.paragraph{
-  font-family: Roboto,sans-serif;
-  font-size: 1rem;
+#apple-watch{
+  background-image: url("/reference/assets/customers/apple-watch.png");
 }
-.bold{
-  font-weight: 800;
+#facebook{
+  background-image: url("/reference/assets/customers/facebook.png");
+}
+#atlassian{
+  background-image: url("/reference/assets/customers/atlassian.png");
+}
+#audi{
+  background-image: url("/reference/assets/customers/audi.png");
 }

@@ -156,6 +156,7 @@ class Slider {
     const sliderContainer = this.createSliderContainer(this.slides, dots);
     this.$container.innerHTML = sliderContainer;
     this.$slidesContainer = $('.cards__container', this.$container);
+    this.$slidesContainer.style.width = `${sliderLength * 100}%`;
     this.addEventListeners();
     this.initSlideshow();
   }

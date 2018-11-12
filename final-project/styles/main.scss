@@ -4,7 +4,7 @@
 }
 .header{
   height: 80px;
-  position: fixed;
+  position: absolute;
   width: 100%;
   font-family: Quicksand,sans-serif;
   align-items: center;
@@ -67,4 +67,53 @@
 .button-blue{
   background-color: #D2E1FF;
   color: #3A79FF;
+}
+.hero{
+  height: 570px;
+  background-image: url("/reference/assets/hero.png");
+  background-position: 50%;
+  position: relative;
+  top: 80px;
+  &__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #3d4f9f;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    &__subtitle{
+      margin: 20px 0;
+    }
+    &__description{
+      margin: 0 35%;
+      color: #8D96BD;
+    }
+    &__button{
+      margin: 20px 0;
+      width: 52px;
+      height: 52px;
+      background-color: #FFF;
+      border-radius: 50%;
+      color: #5E81FF;
+      border: none;
+    }
+  }
+}
+.title{
+  font-family: Roboto,sans-serif;
+  font-size: .800rem;
+}
+.subtitle{
+  font-family: Quicksand,sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+}
+.paragraph{
+  font-family: Roboto,sans-serif;
+  font-size: 1rem;
+}
+.bold{
+  font-weight: 800;
 }

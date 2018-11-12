@@ -1,0 +1,71 @@
+@import "_mixin.scss";
+@import "_color.scss";
+
+button { border:none; } 
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Quicksand', sans-serif;
+  padding: rem-calc(18px) rem-calc(20px);
+  margin: 0 rem-calc(100px);
+
+  @include landscape-breakpoint {
+    margin: 0;
+  }
+
+  
+  &__logo {
+    width: rem-calc(26px);
+    height: rem-calc(26px);
+    margin-top: rem-calc(26px-18px);
+    background-color: #3A79FF;
+    border-radius: 50%;
+  }
+  
+  &__nav {
+    margin-top: rem-calc(32px-18px);
+    display: block;
+    
+    &--mobile {
+      margin-top: rem-calc(10px);
+      display: none;
+      
+      @include tablet-breakpoint {
+        display: block;
+      }
+    }
+    
+    @include tablet-breakpoint {
+      display: none;
+      
+      &--social {
+        display: none;
+      }
+    }
+  }
+  
+  &__nav-list {
+    display: flex;
+    list-style: none;
+  }
+  
+  &__nav-link {
+    font-size: rem-calc(12px);
+    margin: 0 rem-calc(20px);
+    display: inline-block;
+    color: $secondary-color;
+  }
+  
+  &__button {
+    background-color: $blue-bg-button;
+    font-family: 'Quicksand', sans-serif;
+    color: $blue-primary;
+    padding: rem-calc(13px);
+    display: block;
+    
+    @include tablet-breakpoint {
+      display: none;
+    }
+  }
+}

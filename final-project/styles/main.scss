@@ -1,13 +1,18 @@
 // This should be imported by the main.js file
-
-// test for scss variables
-$primary-color: #2a3fbb;
+@import "navbar.scss";
+@import "hero.scss";
+@import "customers.scss";
+@import "plan.scss";
+@import "about.scss";
+@import "metrics.scss";
+@import "resources.scss";
+@import "quotes.scss";
+@import "faq.scss";
+@import "start.scss";
+@import "newsletter.scss";
+@import "footer.scss";
 
 * {
   padding: 0;
   margin: 0;
-}
-
-h1 {
-  color: $primary-color;
 }

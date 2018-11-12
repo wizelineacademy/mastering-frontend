@@ -1,0 +1,92 @@
+@import '_mixin.scss';
+@import '_color.scss';
+
+.metrics {
+  &__customer {
+    display: inline-block;
+    width: 50%;
+    background-color: $background-btn-primary-color;
+
+    @include mobile-breakpoint {
+      display: block;
+      width: 100%;
+    }
+
+    &--content {
+      position: relative;
+      height: rem-calc(345px);
+
+      &-card{
+        width: 80%;
+        position: absolute;
+        bottom: 0;
+        text-align: right;
+        margin: 10%;
+
+        &-number {
+          font-size: rem-calc(45px);
+          color: white;
+          font-family: Quicksand, sans-serif;
+          margin: rem-calc(24px) 0;
+        }
+
+        &-text {
+          font-size: rem-calc(20px);
+          color: white;
+          font-family: Quicksand, sans-serif;
+          width: 70%;
+          float: right;
+          min-height: rem-calc(49px);
+
+          @include mobile-breakpoint {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  &__user {
+    display: inline-block;
+    width: 50%;
+    background-color: $background-primary-color;
+    float: right;
+
+    @include mobile-breakpoint {
+      display: block;
+      width: 100%;
+      float: none;
+    }
+
+    &--content {
+      position: relative;
+      height: rem-calc(345px);
+
+      &-card{
+        width: 80%;
+        position: absolute;
+        bottom: 0;
+        margin: 10%;
+
+        &-number {
+          font-size: rem-calc(45px);
+          color: $purple-text;
+          font-family: Quicksand, sans-serif;
+          margin: rem-calc(24px) 0;
+        }
+
+        &-text {
+          font-size: rem-calc(20px);
+          color: $purple-text;
+          font-family: Quicksand, sans-serif;
+          width: 70%;
+          min-height: rem-calc(49px);
+
+          @include mobile-breakpoint {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

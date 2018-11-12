@@ -1,0 +1,27 @@
+@function rem-calc($size) {
+  @return $size / 16px * 1rem;
+}
+
+@mixin mobile-breakpoint {
+  @media only screen and (max-width: rem-calc(415px)) {
+    @content;
+  }
+}
+
+@mixin tablet-breakpoint {
+  @media only screen and (max-width: rem-calc(768px)) {
+    @content;
+  }
+}
+
+@mixin landscape-breakpoint {
+  @media only screen and (max-width: rem-calc(1024px)) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint {
+  @media only screen and (max-width: rem-calc(1440px)) {
+    @content;
+  }
+}

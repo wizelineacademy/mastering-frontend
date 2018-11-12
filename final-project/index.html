@@ -1,14 +1,574 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Certification FE</title>
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
+
 <body>
-  <h1>Hello world!</h1>
+  <noscript>
+    <div class="resources__header">
+      <div class="resources__header--subtitle">Para una mejor experiencia porfavor habilita JavaScript!</div>
+    </div>    
+  </noscript>
+  <header class="header">
+    <div class="header__logo"></div>
+    <nav class="header__nav  header__nav--main">
+      <ul class="header__nav-list">
+        <li class="header__nav-link header__nav-link--current-page">Home</li>
+        <li class="header__nav-link">Blog</li>
+        <li class="header__nav-link">Features</li>
+        <li class="header__nav-link">Pricing</li>
+        <li class="header__nav-link">Documentation</li>
+      </ul>
+    </nav>
+
+    <nav class="header__nav header__nav--social">
+      <ul class="header__nav-list">
+        <li class="header__nav-link">
+          <img src="../reference/assets/icons/facebook.png"></img>
+        </li>
+        <li class="header__nav-link">
+          <img src="../reference/assets/icons/telegram.png"></img>
+        </li>
+        <li class="header__nav-link">
+          <img src="../reference/assets/icons/twitter.png"></img>
+        </li>
+        <li class="header__nav-link">
+          <img src="../reference/assets/icons/medium.png"></img>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header__button">Get Started</button>
+
+    <div class="header__nav--mobile">
+      <img src="../reference/assets/icons/bars.png"></img>
+    </div>
+  </header>
+  <main>
+    <div class="hero">
+      <div class="hero__image"></div>
+      <div class="hero__content">
+        <div class="hero__content-header">Plan Your Life</div>
+        <div class="hero__content-title">Increase your <span class="bold">productivity</span></div>
+        <div class="hero__content-description">
+          Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren
+          similique est cu. Et vel modus congue vituperata.
+        </div>
+        <img class="hero__content-icon-play" src="../reference/assets/icons/play-button.png"></img>
+      </div>
+    </div>
+  </main>
+  <section>
+    <div class="customer">
+      <div class="customer__container">
+        <div class="customer__container-image item">
+          <img src="../reference/assets/customers/bitbucket.png"></img>
+        </div>
+        <div class="customer__container-image item">
+          <img src="../reference/assets/customers/apple-watch.png"></img>
+        </div>
+        <div class="customer__container-image item">
+          <img src="../reference/assets/customers/facebook.png"></img>
+        </div>
+        <div class="customer__container-image item">
+          <img src="../reference/assets/customers/atlassian.png"></img>
+        </div>
+        <div class="customer__container-image item">
+          <img src="../reference/assets/customers/audi.png"></img>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="plan">
+      <div class="plan__content">
+        <div class="plan__content-description">
+          <div class="plan__content-description--subtitle">Desktop and Mobile APP</div>
+          <div class="plan__content-description--title">
+            <span class="bold">Plan</span> and <span class="bold">Manage<span></div>
+          <div class="plan__content-description--description">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren
+            similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum
+            an expetenda consequat.
+          </div>
+          <div class="plan__content-description--buttons">
+            <button class="play">View Video</button>
+            <button class="feature">See Features</button>
+          </div>
+        </div>
+        <img class="plan__content-image" src="../reference/assets/plan-manage.png"></img>
+        <div class="plan__content-buttons">
+          <button class="play">View Video</button>
+          <button class="feature">See Features</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="about">
+      <div class="about__image"></div>
+      <div class="about__container">
+        <div class="about__container--header">
+          <div class="about__container--header-subtitle">About us</div>
+          <div class="about__container--header-title">Read about our app</div>
+        </div>
+        <div class="about__container--overview">
+          <img src="../reference/assets/icons/overview.png"></img>
+          <div class="about__container--overview-title">Overview</div>
+          <div class="about__container--overview-description">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+          </div>
+        </div>
+        <div class="about__container--files">
+          <img src="../reference/assets/icons/files.png"></img>
+          <div class="about__container--files-title">Files</div>
+          <div class="about__container--files-description">
+            No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.
+          </div>
+        </div>
+        <div class="about__container--chats">
+          <img src="../reference/assets/icons/chats.png"></img>
+          <div class="about__container--chats-title">Meeting chats</div>
+          <div class="about__container--chats-description">
+            Vim ne tacimates neglegentur. Erat diceret omittam at est.
+          </div>
+        </div>
+        <div class="about__container--events">
+          <img src="../reference/assets/icons/events.png"></img>
+          <div class="about__container--events-title">Save events</div>
+          <div class="about__container--events-description">
+            Nisl idque mel ea, nominati voluptatum.
+          </div>
+        </div>
+        <div class="about__container--footer">
+          <button class="about__container--footer-read">Read More</button>
+          <span class="about__container--footer-divider">or</span>
+          <button class="about__container--footer-start">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="metrics">
+      <div class="metrics__customer">
+        <div class="metrics__customer--content">
+          <div class="metrics__customer--content-card">
+            <img src="../reference/assets/icons/customers-metric.png"></img>
+            <div class="metrics__customer--content-card-number">89%</div>
+            <div class="metrics__customer--content-card-text">
+              Customers who have increased their productivity
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="metrics__user">
+        <div class="metrics__user--content">
+          <div class="metrics__user--content-card">
+            <img src="../reference/assets/icons/users.png"></img>
+            <div class="metrics__user--content-card-number">1342</div>
+            <div class="metrics__user--content-card-text">
+              Users who have used our application
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="resources">
+      <div class="resources__header">
+        <div class="resources__header--subtitle">Our Resources</div>
+        <div class="resources__header--title">Start reading our blog</div>
+      </div>
+      <noscript>
+        <div class="resources__header">
+          <div class="resources__header--subtitle">Para una mejor experiencia porfavor habilita JavaScript!</div>
+        </div>    
+      </noscript>
+      <div class="resources__container">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="quotes">
+      <div class="quotes__description">
+        <div class="quotes__description--content">
+          <div class="quotes__description--content-card">
+            <div class="quotes__description--content-card-testimonials">
+              Testimonials
+            </div>
+            <div class="quotes__description--content-card-title">
+              Customers's quotes
+            </div>
+            <div class="quotes__description--content-card-desc">
+              Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quotes__user">
+        <div class="quotes__user--content">
+          <noscript>
+            <div class="quotes__user--content">
+              <div class="quotes__user--content--noscript">Para una mejor experiencia porfavor habilita JavaScript!</div>
+            </div>    
+          </noscript>
+          <div class="quotes__user--content-carousel">
+            <div class="quotes__user--content-carousel-card item">
+              <div class="quotes__user--content-carousel-card-container">
+                <div class="quotes__user--content-carousel-card-container-description">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                    Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                </div>
+                <div class="quotes__user--content-carousel-card-container-image">
+                  <img src="https://via.placeholder.com/50x50/F8D1B4"></img>
+                </div>
+              </div>
+            </div>
+            <div class="quotes__user--content-carousel-card item">
+              <div class="quotes__user--content-carousel-card-container">
+                <div class="quotes__user--content-carousel-card-container-description">
+                    Erat consectetuer voluptatibus ut nam, Quidam vocibus eum ne, e
+                    Vero tractatos ius an, in mel diceret persecuti.
+                </div>
+                <div class="quotes__user--content-carousel-card-container-image">
+                  <img src="https://via.placeholder.com/50x50/676F95"></img>
+                </div>
+              </div>
+            </div>
+            <div class="quotes__user--content-carousel-card item">
+              <div class="quotes__user--content-carousel-card-container">
+                <div class="quotes__user--content-carousel-card-container-description">
+                    Vero tractatos ius an, in mel diceret persecuti., quidam vocibus eum ne.
+                    Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                </div>
+                <div class="quotes__user--content-carousel-card-container-image">
+                  <img src="https://via.placeholder.com/50x50/F8D1B4"></img>
+                </div>
+              </div>
+            </div>
+            <div class="quotes__user--content-carousel-card item">
+              <div class="quotes__user--content-carousel-card-container">
+                <div class="quotes__user--content-carousel-card-container-description">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                    Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                </div>
+                <div class="quotes__user--content-carousel-card-container-image">
+                  <img src="https://via.placeholder.com/50x50/676F95"></img>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="faq">
+    <div class="faq__container">
+      <h1 class="faq__container--subtitle">Customers help</h1>
+      <h2 class="faq__container--title">Frequently asked questions</h2>
+      <ul class="faq__container--list">
+        <li class="faq__container--list-item" data-index="0">
+          <div class="faq__container--list-item-title" onclick="showActive(this)">
+            <div class='faq__container--list-item-title-arrow arrow-down'></div>
+            <p class='faq__container--list-item-title-text'>Reque insolens in vel?</p>
+          </div>
+          <div class="faq__container--list-item-answer">
+            <p class="faq__container--list-item-answer-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+              ius an, in mel diceret persecuti.
+            </p>
+            <button class="faq__container--list-item-answer-button">
+              Go to documentation
+            </button>
+          </div>
+        </li>
+        <li class="faq__container--list-item" data-index="1">
+          <div class="faq__container--list-item-title" onclick="showActive(this)">
+            <div class='faq__container--list-item-title-arrow arrow-down'></div>
+            <p class='faq__container--list-item-title-text'>Vis rebum error graecis ea, id sit postea accusamus?</p>
+          </div>
+          <div class="faq__container--list-item-answer">
+            <p class="faq__container--list-item-answer-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+              ius an, in mel diceret persecuti.
+            </p>
+            <button class="faq__container--list-item-answer-button">
+              Go to documentation
+            </button>
+          </div>
+        </li>
+        <li class="faq__container--list-item" data-index="2">
+          <div class="faq__container--list-item-title" onclick="showActive(this)">
+            <div class='faq__container--list-item-title-arrow arrow-down'></div>
+            <p class='faq__container--list-item-title-text'>Lorem repudiandae ne nec?</p>
+          </div>
+          <div class="faq__container--list-item-answer">
+            <p class="faq__container--list-item-answer-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+              ius an, in mel diceret persecuti.
+            </p>
+            <button class="faq__container--list-item-answer-button">
+              Go to documentation
+            </button>
+          </div>
+        </li>
+        <li class="faq__container--list-item" data-index="3">
+          <div class="faq__container--list-item-title" onclick="showActive(this)">
+            <div class='faq__container--list-item-title-arrow arrow-down'></div>
+            <p class='faq__container--list-item-title-text'>Ad dicit numquam vel. Et eos iudico feugait percipitur?</p>
+          </div>
+          <div class="faq__container--list-item-answer">
+            <p class="faq__container--list-item-answer-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+              ius an, in mel diceret persecuti.
+            </p>
+            <button class="faq__container--list-item-answer-button">
+              Go to documentation
+            </button>
+          </div>
+        </li>
+        <li class="faq__container--list-item" data-index="4">
+          <div class="faq__container--list-item-title" onclick="showActive(this)">
+            <div class='faq__container--list-item-title-arrow arrow-down'></div>
+            <p class='faq__container--list-item-title-text'>Sea no dico percipitur. Fierent constituam definitiones id eum?</p>
+          </div>
+          <div class="faq__container--list-item-answer">
+            <p class="faq__container--list-item-answer-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos
+              ius an, in mel diceret persecuti.
+            </p>
+            <button class="faq__container--list-item-answer-button">
+              Go to documentation
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div class="start">
+      <div class="start__image"></div>
+      <div class="start__content">
+          <div class="start__content-header">Plan Your Life</div>
+          <div class="start__content-title">Get <span class="bold">Started</span> now</div>
+          <div class="start__content-description">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+          </div>
+          <div class="start__content-buttons">
+              <button class="start__content-buttons--price">View Pricing</button>
+              <button class="start__content-buttons--documentation">Read Documentation</button>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section>
+    <div class="newsletter">
+      <div class="newsletter__description">
+        <div class="newsletter__description--content">
+          <div class="newsletter__description--content-card">
+            <div class="newsletter__description--content-card-title">
+                Sign up for newsletter
+            </div>
+            <div class="newsletter__description--content-card-description">
+              Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="newsletter__form">
+        <div class="newsletter__form--content">
+          <form class="newsletter__form--content-form" action="">
+            <input class="newsletter__form--content-form-input" placeholder="Email Address" />
+            <input class="newsletter__form--content-form-button" type="submit" value="Save Me" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <footer class="footer">
+      <div class="footer__logo"></div>
+      <nav class="footer__nav  footer__nav--main">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-link footer__nav-link--current-page">Home</li>
+          <li class="footer__nav-link">Blog</li>
+          <li class="footer__nav-link">Features</li>
+          <li class="footer__nav-link">Pricing</li>
+          <li class="footer__nav-link">Documentation</li>
+        </ul>
+      </nav>
+  
+      <nav class="footer__nav footer__nav--social">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-link">
+            <img src="../reference/assets/icons/facebook.png"></img>
+          </li>
+          <li class="footer__nav-link">
+            <img src="../reference/assets/icons/telegram.png"></img>
+          </li>
+          <li class="footer__nav-link">
+            <img src="../reference/assets/icons/twitter.png"></img>
+          </li>
+          <li class="footer__nav-link">
+            <img src="../reference/assets/icons/medium.png"></img>
+          </li>
+        </ul>
+      </nav>
+  
+      <button class="footer__button">Get Started</button>
+    </footer>
+  </section>
   <script src="./dist/bundle.js"></script>
+  <script src="../js/carousel.js"></script>
+  <script>
+    function showActive(ev) {
+      let container = ev.parentElement.parentElement;
+      let el = ev.parentElement;
+      let indexElm = ev.parentElement.getAttribute('data-index');
+      let listItems = container.querySelectorAll('.faq__container--list-item');
+      for(let i = 0; i< listItems.length; i++){
+        if(i === parseInt(indexElm)) continue;
+        let arrow = listItems[i].querySelector('.faq__container--list-item-title-arrow');
+        if(arrow.classList.contains('arrow-up')){
+          arrow.classList.remove('arrow-up');
+          arrow.classList.add('arrow-down');
+        }
+        
+        let title = listItems[i].querySelector('.faq__container--list-item-title');
+        if(title.classList.contains('active-title')){
+          title.classList.remove('active-title');
+        }
+
+        let answer = listItems[i].querySelector('.faq__container--list-item-answer');
+        if(answer.classList.contains('active-faq')){
+          answer.classList.remove('active-faq');
+        }
+      }
+        
+        let arrow = el.querySelector('.faq__container--list-item-title-arrow');
+        if(arrow.classList.contains('arrow-down')){
+          arrow.classList.remove('arrow-down');
+          arrow.classList.add('arrow-up');
+        }else{
+          arrow.classList.remove('arrow-up');
+          arrow.classList.add('arrow-down');
+        }
+        
+        let title = el.querySelector('.faq__container--list-item-title');
+        if(title.classList.contains('active-title')){
+          title.classList.remove('active-title');
+        }else{
+          title.classList.add('active-title');
+        }
+
+        let answer = el.querySelector('.faq__container--list-item-answer');
+        if(answer.classList.contains('active-faq')){
+          answer.classList.remove('active-faq');
+        }else{
+          answer.classList.add('active-faq');
+        }
+    }
+    window.onload = function () {
+      var carousel = new Carourel({klass: '.customer__container-image', prefix: 'customer'});
+      window.addEventListener("resize", onResizeCustomers);
+      onResizeCustomers();
+      function onResizeCustomers() {
+        var wh = window.innerWidth;
+
+        if (wh <= 415 && !carousel.isStarted()) {
+          carousel.init();
+        } else if (wh > 415 && carousel.isStarted) {
+          carousel.stopInterval();
+        }
+      }
+
+      var quotesCarousel = new Carourel({klass: '.quotes__user--content-carousel-card', prefix: 'quotes'});
+      quotesCarousel.init();
+
+      var url = "https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog";
+      fetch(url)
+        .then(function (data) {
+          return data.json();
+        })
+        .then(response => {
+          buildResourceItems(response);
+          var carouselResources = new Carourel({klass: '.resources__container-item', prefix: 'resources', withArrows: true});
+          carouselResources.init();
+        })
+        .catch(function (error) {
+          console.log('error', error);
+        });
+
+      function buildResourceItems(data) {
+        for(let i = 0; i < data.articles.length; i ++) {
+          let dataArt = data.articles[i];
+
+          let baseElm = document.querySelector('.resources__container');
+
+          let itemElm = document.createElement('div');
+          itemElm.className = 'resources__container-item item';
+
+          let contentElm = document.createElement('div');
+          contentElm.className = 'resources__container-item-content';
+
+          let imgElm = document.createElement('div');
+          imgElm.className = 'resources__container-item-content-image';
+          imgElm.style.backgroundImage = `url('${dataArt.images.desktop}')`;
+
+          let cardElm = document.createElement('div');
+          cardElm.className = 'resources__container-item-content-card';
+
+          let cardContElm = document.createElement('div');
+          cardContElm.className = 'resources__container-item-content-card-container';
+
+          let cardContTitle = document.createElement('div');
+          cardContTitle.className = 'resources__container-item-content-card-container-title';
+          let titleTxt = document.createTextNode(dataArt.title);
+          cardContTitle.appendChild(titleTxt);
+
+          let cardContDesc = document.createElement('div');
+          cardContDesc.className = 'resources__container-item-content-card-container-description';
+          let descTxt = document.createTextNode(dataArt.description);
+          cardContDesc.appendChild(descTxt);
+
+          let cardContActions = document.createElement('div');
+          cardContActions.className = 'resources__container-item-content-card-container-actions';
+
+          let btn = document.createElement("button");
+          let btnTxt = document.createTextNode("Read now");
+          btn.appendChild(btnTxt);
+
+          let p = document.createElement('p');
+          let pTxt = document.createTextNode("Add to your bookmarks");
+          p.appendChild(pTxt);
+
+          cardContActions.appendChild(btn);
+          cardContActions.appendChild(p);
+
+          cardContElm.appendChild(cardContTitle);
+          cardContElm.appendChild(cardContDesc);
+          cardContElm.appendChild(cardContActions);
+
+          cardElm.appendChild(cardContElm);
+
+          contentElm.appendChild(imgElm);
+          contentElm.appendChild(cardElm);
+
+          itemElm.appendChild(contentElm);
+
+          baseElm.appendChild(itemElm);
+        }
+      }
+    }
+  </script>
 </body>
+
 </html>

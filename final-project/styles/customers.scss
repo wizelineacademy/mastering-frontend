@@ -1,0 +1,41 @@
+@import "_mixin.scss";
+
+.customer {
+  &__container {
+    text-align: center;
+
+    &-image {
+      display: inline-block;
+      margin: rem-calc(35px) rem-calc(40px);
+
+      @include mobile-breakpoint {
+        display: none;
+      }
+    }
+
+    & .current {
+      @include mobile-breakpoint {
+        display: block;
+      }
+    }
+  }
+
+  &__dots {
+    text-align: center;
+    margin: rem-calc(40px) 0;
+    cursor: pointer;
+
+    &-dot {
+      height: 12px;
+      width: 12px;
+      background-color: #D1D6E3;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 3px;
+    }
+
+    & .active {
+      background-color: #5283FF;
+    }
+  }
+}

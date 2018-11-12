@@ -1,0 +1,145 @@
+@import "_mixin.scss";
+@import "_color.scss";
+
+.faq {
+    height: rem-calc(700px);
+    position: relative;
+    
+    &__container {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &--subtitle{
+            font-size: rem-calc(10px);
+            text-transform: uppercase;
+            color: $primary-color;
+            text-align: center;
+        }
+
+        &--title {
+            font-size: rem-calc(24px);
+            margin-top: rem-calc(20px);
+            margin-bottom: rem-calc(20px);
+            color: $primary-color;
+            text-align: center;
+        }
+
+        &--list {
+            list-style: none;
+            color: $secondary-color;
+
+            &-item {
+                width: 75%;
+                height: fit-content;
+                position: relative;
+                cursor: pointer;
+                left: 50%;
+                transform: translateX(-50%);
+                border-bottom: 1px solid $blue-bg-button;
+
+                @include tablet-breakpoint {
+                    width: 95%;
+                }
+
+                &-title{
+                    padding-left: rem-calc(10px);
+                    padding-top: rem-calc(20px);
+                    display: flex;
+                    height: rem-calc(40px);
+                    
+                    &__arrow{
+                        width: rem-calc(17px);
+                        height: rem-calc(17px);
+                        margin-right: rem-calc(10px);
+                    }
+                }
+
+                &-answer{
+                    height: fit-content;
+                    width: auto;
+                    display: none;
+
+                    @include mobile-breakpoint{
+                        margin: 0 rem-calc(300px);
+                    }
+
+                    @include mobile-breakpoint {
+                        margin: 0 rem-calc(30px) rem-calc(15px);
+                    }
+                     
+                    &-text{
+                        width: 55%;
+                        margin-top: rem-calc(16px);
+                        margin-left: rem-calc(60px);
+                        margin-bottom: rem-calc(16px);
+                        font-size: rem-calc(12px);
+                        line-height: 2;
+
+                        @include tablet-breakpoint {
+                            width: 50%;
+                        }
+
+                        @include mobile-breakpoint {
+                            width: 100%;
+                            display: block;
+                            margin: rem-calc(15px) 0;
+                        }
+                    }
+                    
+                    &-button{
+                        width: rem-calc(193px);
+                        height: rem-calc(43px);
+                        background-color: $blue-bg-button;
+                        position: absolute;
+                        right: 0;
+                        top: 55%;
+                        color: $purple-text;
+
+                        @include tablet-breakpoint {
+                            width: rem-calc(140px);
+                        }
+
+                        @include mobile-breakpoint {
+                            width: rem-calc(190px);
+                            display: block;
+                            margin: auto;
+                            position: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.arrow-down{
+    width: 0;
+    height: 0;
+    border-left: rem-calc(7px) solid transparent;
+    border-right: rem-calc(7px) solid transparent;
+    border-top: rem-calc(7px) solid #8E96B7;
+    margin: rem-calc(5px);
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: rem-calc(7px) solid transparent;
+    border-right: rem-calc(7px) solid transparent;
+    border-bottom: rem-calc(7px) solid #495274;
+    margin: rem-calc(5px);
+}
+
+.active-faq {
+    display: flex;
+
+    @include mobile-breakpoint{
+        display: block;
+    }
+}
+
+.active-title {
+    color: #495274;
+}

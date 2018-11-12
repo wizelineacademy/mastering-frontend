@@ -1,6 +1,3 @@
-//@import "../reference/assets/fonticons/css/fontello.css";
-//@import "../reference/assets/fontawesome/scss/fontawesome";
-
 $blue1-color: #3D4F9F;
 $blue2-color: #3A79FF;
 $blue3-color: #5E81FE;
@@ -246,8 +243,8 @@ html {
     color: white;
     cursor: pointer;
     font-size: pxToRem(13);
+    font-weight: bold;
     padding: pxToRem(12) pxToRem(25);
-    display: inline-block;
 
     .fas {
       font-size: pxToRem(8);
@@ -261,8 +258,130 @@ html {
     border: 1px solid #D1D1E4;
     color: #ADB4D2;
     cursor: pointer;
-    display: inline-block;
     font-size: pxToRem(13);
+    font-weight: 500;
     padding: pxToRem(12) pxToRem(25);
+  }
+}
+
+.about {
+  background: url("../reference/assets/clouds.svg") center / contain no-repeat;
+  padding: pxToRem(100) 0;
+  text-align: center;
+  width: 100%;
+
+  &__label {
+    color: $blue1-color;
+    font-size: pxToRem(10);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    color: $blue1-color;
+    font-size: pxToRem(24);
+    font-weight: 500;
+    margin: pxToRem(20) 0 pxToRem(100);
+  }
+
+  &__figures-container {
+    display: grid;
+    gap: pxToRem(100);
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 pxToRem(10);
+
+    @include mediaMobile {
+      gap: pxToRem(100) pxToRem(20);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__figure {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__figure + &__figure::before {
+    background: #DAE4FE;
+    content: '';
+    height: 1px;
+    left: -65px;
+    position: absolute;
+    top: 70%;
+    width: 30px;
+
+    @include mediaMobile {
+      display: none;
+    }
+  }
+
+  &__figure-image {
+    height: pxToRem(70);
+    width: pxToRem(70);
+  }
+
+  &__figure-header {
+    color: #4074F8;
+    font-size: pxToRem(14);
+    margin: pxToRem(24) 0;
+  }
+
+  &__figure-body {
+    color: #ADB3CB;
+    font-size: pxToRem(11);
+  }
+
+  &__buttons-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: pxToRem(50);
+    padding: 0 pxToRem(10);
+  }
+
+  &__read-more-button {
+    all: unset;
+    background: #FFD7D7;
+    border-radius: 2px;
+    color: #D43F3F;
+    cursor: pointer;
+    font-size: pxToRem(13);
+    font-weight: bold;
+    padding: pxToRem(12);
+    width: pxToRem(110);
+  }
+
+  &__get-started-button {
+    all: unset;
+    background: #D2E1FF;
+    border-radius: 2px;
+    color: #3A79FF;
+    cursor: pointer;
+    font-size: pxToRem(13);
+    font-weight: bold;
+    padding: pxToRem(12);
+    width: pxToRem(110);
+  }
+
+  &__buttons-separator {
+    align-items: center;
+    color: #ADB3CB;
+    display: flex;
+    flex-shrink: 10;
+    font-size: pxToRem(11);
+    font-weight: 600;
+    justify-content: space-evenly;
+    width: pxToRem(110);
+  }
+
+  &__buttons-separator-line {
+    background-color: #DAE4FE;
+    height: 1px;
+    margin: 0 2px;
+    width: 16px;
   }
 }

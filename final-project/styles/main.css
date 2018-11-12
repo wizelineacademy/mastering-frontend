@@ -696,3 +696,246 @@ a {
 .md-logos:hover #md-logo-hover {
   display: inline-block;
 }
+
+/* Tablet styles */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .hero {
+    background-repeat: no-repeat;
+  }
+
+  .hero .text-container {
+    margin-top: 5%;
+  }
+
+  .hero .play-button {
+    margin-top: 2%;
+  }
+
+  .plan-and-manage {
+    background-size: 66%;
+    background-position: right;
+  }
+
+  .blog .carousel-container .carousel .carousel-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .hero .play-button {
+    margin-top: 2%;
+  }
+
+  .plan-and-manage .text-container {
+    margin-top: 14%;
+    margin-left: 5%;
+  }
+
+  .plan-and-manage .text-container .plan-title {
+    font-size: 2.5rem;
+  }
+
+  .plan-and-manage .buttons {
+    margin-top: 3%;
+    margin-left: 6%;
+  }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .hero .play-button {
+    margin-top: 4%;
+  }
+
+  .plan-and-manage {
+    background-position: bottom right;
+    justify-content: space-around;
+  }
+
+  .plan-and-manage .text-container {
+    margin-left: 5%;
+    width: 60%;
+    text-align: left;
+    align-items: unset;
+  }
+
+  .plan-and-manage .text-container .plan-title {
+    font-size: 2.5rem;
+  }
+
+  .plan-and-manage .buttons {
+    margin-top: 3%;
+    margin-left: 6%;
+  }
+
+  .stats .stat-left .stat-content-left h1, .stat-right .stat-content-right h1 {
+    font-size: 2rem;
+  }
+
+  .blog .carousel-container {
+    height: 52%;
+  }
+
+  .blog .carousel-indicators {
+    width: 15%;
+  }
+}
+
+/* Mobile styles */
+
+@media only screen and (min-device-width: 360px) and (max-device-width : 667px), (min-device-width: 414px) and (max-device-width : 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+  .header .header-elem-2 {
+    display: none;
+  }
+
+  .header .header-elem-1 {
+    width: 100%;
+  }
+
+  .header .header-elem-1 .logo {
+    display: none;
+  }
+
+  .hero {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    justify-content: unset;
+  }
+
+  .hero .text-container {
+    margin-top: 13%;
+  }
+
+  .hero .text-container .hero-subtitle {
+    display: none;
+  }
+
+  .customers img {
+    display: none;
+  }
+
+  .customers {
+    background-image: url("../reference/assets/customers/bitbucket.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .plan-and-manage {
+    justify-content: space-between;
+    background-size: 120%;
+  }
+
+  .plan-and-manage .text-container {
+    width: 100%;
+    height: 60%;
+    text-align: left;
+    align-items: flex-start;
+    margin-left: 5%;
+    margin-top: 10%;
+    justify-content: unset;
+  }
+
+  .plan-and-manage .buttons {
+    margin-bottom: 10%;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .features {
+    background-image: none;
+  }
+
+  .features .content {
+    width: 90%;
+  }
+
+  .features .content .elements {
+    flex-wrap: wrap;  
+  }
+
+  .features .content .elements > div {
+    max-width: 45%;
+  }
+
+  .features .content .elements > .h-line {
+    display: none;
+  }
+
+  .features .content .buttons {
+    width: 100%;
+  }
+
+  .features .content .buttons > .h-line {
+    width: 1.5rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .stats .stat-left, .stats .stat-right {
+    width: 100%;
+  }
+
+  .stats .stat-left .stat-content-left, .stats .stat-right .stat-content-right {
+    width: 70%;
+  }
+
+  .blog {
+    justify-content: flex-start;
+  }
+
+  .blog .blog-text h3 {
+    margin-top: 4%;
+  }
+
+  .blog .carousel-container {
+    height: 70%;
+  }
+
+  .blog .carousel-container .btn-next, .blog .carousel-container .btn-prev {
+    display: none;
+  }
+
+  .blog .carousel-container .carousel {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .blog .carousel-container .carousel .carousel-images {
+    width: 95%;
+  }
+
+  .blog .carousel-container .carousel .carousel-content {
+    width: 90%;
+  }
+
+  .blog .carousel-container .carousel .carousel-content .buttons {
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+
+  .blog .carousel-container .carousel .carousel-content .btn-bookmark {
+    display: none;
+  }
+
+  .blog .carousel-container .carousel .carousel-content .btn-read {
+    width: 90%;
+  }
+
+  .blog .carousel-container .carousel .carousel-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .blog .carousel-indicators {
+    width: 48%;
+    align-self: flex-start;
+    margin-left: 20%;
+    margin-top: 10%;
+  }
+
+  .footer {
+    display: none;
+  }
+}

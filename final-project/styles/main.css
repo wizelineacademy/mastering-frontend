@@ -441,7 +441,7 @@
 }
 
 .stats .stat-left .stat-content-left img {
-  align-self: last baseline;
+  align-self: flex-end;
 }
 
 .stats .stat-left h1 {

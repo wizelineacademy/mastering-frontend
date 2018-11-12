@@ -4,11 +4,251 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="./dist/styles.css">
+  <title>Landing Page</title>  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700|Quicksand:300,400,500,700|Roboto:400,500" rel="stylesheet"> 
+  <link href="styles/main.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello world!</h1>
-  <script src="./dist/bundle.js"></script>
+  <header class="header">
+    <div class="header-elem-1">
+      <span class="logo"></span>
+      <nav class="nav-bar">
+        <a href="">Home</a>
+        <a href="">Blog</a>
+        <a href="">Features</a>
+        <a href="">Pricing</a>
+        <a href="">Documentation</a>
+      </nav>
+    </div>
+    <div class="header-elem-2">
+      <div class="social-icons"> 
+        <div class="fb-logos">
+          <img src="./reference/assets/icons/facebook.png" id="fb-logo">
+          <img src="./reference/assets/icons/facebook_blue.png" id="fb-logo-hover">
+        </div>
+        <div class="tl-logos">
+          <img src="./reference/assets/icons/telegram.png" id="tl-logo">
+          <img src="./reference/assets/icons/telegram_blue.png" id="tl-logo-hover">
+        </div>
+        <div class="tw-logos">
+          <img src="./reference/assets/icons/twitter.png" id="tw-logo">
+          <img src="./reference/assets/icons/twitter_blue.png" id="tw-logo-hover">
+        </div>
+        <div class="md-logos">
+          <img src="./reference/assets/icons/medium.png" id="md-logo">
+          <img src="./reference/assets/icons/medium_blue.png" id="md-logo-hover">
+        </div>        
+      </div>
+      <button>Get Started</button>
+    </div> 
+  </header>
+  
+  <noscript>
+    For full functionality of this page it is necessary to enable JavaScript. 
+    Here are the <a href="http://www.enable-javascript.com" target="_blank"> instructions how to enable JavaScript in your web browser</a>
+  </noscript>
+
+  <main class="main-content">
+    <div class="hero">
+      <div class="text-container">
+        <p class="hero-pre-title">          
+          PLAN YOUR LIFE
+        </p>
+        <h1 class="hero-title">
+          Increase your <span>productivity</span>
+        </h1>
+        <div class="hero-subtitle">
+          <h2>
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. 
+            Usu atqui laudem an, insolens gubergren similique est cu. 
+            Et vel modus congue vituperata.
+          </h2>
+        </div>        
+      </div>
+      <span class="play-button">
+        <img src="./reference/assets/icons/video-play_blue.png">
+      </span>
+    </div>
+    <div class="customers">
+      <img src="./reference/assets/customers/bitbucket.png">
+      <img src="./reference/assets/customers/apple-watch.png">
+      <img src="./reference/assets/customers/facebook.png">      
+      <img src="./reference/assets/customers/atlassian.png">
+      <img src="./reference/assets/customers/audi.png">
+    </div>
+    <div class="plan-and-manage">
+      <div class="text-container">
+        <p class="plan-pre-title">
+          DESKTOP AND MOBILE APP
+        </p>
+        <h1 class="plan-title">
+          <span>Plan</span> and <span>manage</span>
+        </h1>
+        <div class="plan-subtitle">
+          <h2>
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. 
+            Usu atqui laudem an, insolens gubergren similique est cu. 
+            Et vel modus congue vituperata. Solum patrioque no sea.
+            Mea ex malis mollis oporteat. Eum an expetenda consequat.
+          </h2>
+        </div>        
+      </div>
+      <div class="buttons">
+        <button class="video">View Video</button>
+        <button class="features-btn">See features</button>
+      </div>
+    </div>
+    <div class="features">
+      <div class="content">
+        <div class="title">
+          <p>ABOUT US</p>
+          <h1>Read about our app</h1>    
+        </div>
+        <div class="elements">
+          <div class="overview">
+            <span class="icon"></span>
+            <h3>Overview</h3>
+            <h4>
+              Brute laoreet efficiendi id his, 
+              ea illum nonumes luptatum pro.
+            </h4>
+          </div>
+          <span class="h-line"></span>
+          <div class="files">
+            <span class="icon"></span>
+            <h3>Files</h3>
+            <h4>
+              No vim nulla vitae intellegat.
+              Ei enim error ius, solet atomorum
+              conceptam ex has.
+            </h4>
+          </div>
+          <span class="h-line"></span>
+          <div class="meeting-chats">
+            <span class="icon"></span>
+            <h3>Meeting chats</h3>
+            <h4>
+              Vim ne tacimates neglegentur.
+              Erat diceret omittam at est.
+            </h4>
+          </div>
+          <span class="h-line"></span>
+          <div class="save-events">
+            <span class="icon"></span>
+            <h3>Save events</h3>
+            <h4>
+              Nisl idque mel ea,
+              nominati voluptatum.
+            </h4>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="read-more">Read more</button>
+          <span class="h-line"></span>
+          <h4>OR</h4>
+          <span class="h-line"></span>
+          <button class="get-started">Get Started</button>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat-left">
+        <div class="stat-content-left">          
+          <img src="./reference/assets/icons/speedmeter.png">
+          <h1>89%</h1>
+          <p>Customers who have increased their productivity</p>
+        </div>
+      </div>
+      <div class="stat-right">
+        <div class="stat-content-right">
+          <img src="./reference/assets/icons/people.png">
+          <h1>3123</h1>
+          <p>Users who have used our application</p>
+        </div>
+      </div>
+    </div>
+    <div class="blog">
+      <div class="blog-text">
+        <p>OUR RESOURCES</p>
+        <h3>Start reading our blog</h3>
+      </div>
+      <div class="carousel-container">
+        <button class="btn-prev" onclick="prevImg()">
+        </button>
+        <div class="carousel">    
+          <div class="carousel-images">
+          </div>
+          <div class="carousel-content">            
+            <h1>How to start planning</h1>
+            <h2>
+              Quidam vocibus eum ne, erat consectetuer 
+              voluptatibus ut nam. Eu usu vidit tractatos,
+              vero tractatos ius an, in mel diceret persecuti.
+              Natum petentium principles mei ea. Tota everti 
+              periculis vis ei, quas tibique pro at, eos ut decore...
+            </h2>
+            <div class="buttons">              
+              <button 
+              type="submit" 
+              value="" 
+              class="btn-read" 
+              onclick="openArticle()">                
+                Read Now
+              </button>
+              <button class="btn-bookmark">Ad to your bookmarks</button>
+            </div>          
+          </div>
+        </div>
+        <button class="btn-next" onclick="nextImg()">
+        </button>
+      </div>
+      <div class="carousel-indicators">
+        <ol class="indicator-list">
+          <li class="active" onclick="changeArticle(0)"></li>
+          <li onclick="changeArticle(1)"></li>
+          <li onclick="changeArticle(2)"></li>
+        </ol>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer-elem-1">
+      <div class="elem-content">
+        <span class="logo"></span>
+        <nav class="nav-bar">
+          <a href="">Home</a>
+          <a href="">Blog</a>
+          <a href="">Features</a>
+          <a href="">Pricing</a>
+          <a href="">Documentation</a>
+        </nav>
+      </div>
+      <p class="copyright">Copyright 2018 - Adrian Toscano</p>
+    </div>
+    <div class="header-elem-2">
+      <div class="social-icons">
+        <div class="fb-logos">
+          <img src="./reference/assets/icons/facebook.png" id="fb-logo">
+          <img src="./reference/assets/icons/facebook_blue.png" id="fb-logo-hover">
+        </div>
+        <div class="tl-logos">
+          <img src="./reference/assets/icons/telegram.png" id="tl-logo">
+          <img src="./reference/assets/icons/telegram_blue.png" id="tl-logo-hover">
+        </div>
+        <div class="tw-logos">
+          <img src="./reference/assets/icons/twitter.png" id="tw-logo">
+          <img src="./reference/assets/icons/twitter_blue.png" id="tw-logo-hover">
+        </div>
+        <div class="md-logos">
+          <img src="./reference/assets/icons/medium.png" id="md-logo">
+          <img src="./reference/assets/icons/medium_blue.png" id="md-logo-hover">
+        </div>        
+      </div>
+      <button>Get Started</button>
+    </div> 
+  </footer>
+
+  <script src="./scripts/main.js"></script>
 </body>
 </html>

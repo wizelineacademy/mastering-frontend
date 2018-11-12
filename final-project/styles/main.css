@@ -871,6 +871,7 @@ a {
 
   .features .content {
     width: 90%;
+    height: 80%;
   }
 
   .features .content .elements {
@@ -915,7 +916,7 @@ a {
   }
 
   .blog .carousel-container {
-    height: 70%;
+    height: 90%;
   }
 
   .blog .carousel-container .btn-next, .blog .carousel-container .btn-prev {
@@ -929,6 +930,7 @@ a {
 
   .blog .carousel-container .carousel .carousel-images {
     width: 95%;
+    height: 40%;
   }
 
   .blog .carousel-container .carousel .carousel-content {

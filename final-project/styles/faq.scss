@@ -1,0 +1,29 @@
+/* FAQ */
+.faq {
+  background-color: #FFF;
+
+  @include tablet-breakpoint {
+    min-height: rem-calc(851px);
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: rem-calc(43px) 0 0;
+    text-align: center;
+    width: 100%;
+
+    @include tablet-breakpoint {
+      padding: rem-calc(176px) rem-calc(16px) 0;
+    }
+  }
+
+  &__title {
+    color: $color-title;
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: $font-size-xl;
+    padding: rem-calc(16px) 0;
+  }
+}

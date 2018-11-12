@@ -1,0 +1,131 @@
+/* Quotes */
+.quotes {
+  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+  display: none;
+  min-height: rem-calc(480px);
+
+  @include tablet-breakpoint {
+    display: flex;
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include landscape-breakpoint {
+      flex-direction: row;
+    }
+  }
+
+  &__column {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+
+    @include landscape-breakpoint {
+      justify-content: flex-end;
+      width: 50%;
+    }
+  }
+
+  &__content {
+    margin: rem-calc(26px) rem-calc(26px) 0;
+
+    @include landscape-breakpoint {
+      margin: rem-calc(26px) rem-calc(100px) rem-calc(26px) rem-calc(26px);
+      max-width: rem-calc(333px);
+    }
+  }
+
+  &__title {
+    color: $color-title;
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: $font-size-2xl;
+    padding: rem-calc(30px) 0 rem-calc(16px);
+  }
+
+  .testimonials {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 25%;
+    width: 100%;
+
+    @include landscape-breakpoint {
+      padding-left: rem-calc(48px);
+    }
+
+    &__wrapper {
+      align-items: center;
+      display: flex;
+      width: 200%;
+    }
+  }
+
+  .testimonial {
+    align-items: center;
+    background: #FFF;
+    border: 1px solid #D8E3FE;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 50px #F3F5FA;
+    display: flex;
+    height: rem-calc(175px);
+    justify-content: center;
+    margin: rem-calc(20px) rem-calc(32px);
+    opacity: 0.45;
+    position: relative;
+    transition: opacity 0.2s ease;
+    width: rem-calc(423px);
+
+    &--active {
+      opacity: 1;
+    }
+
+    .text {
+      font-size: $font-size-sm;
+      line-height: rem-calc(25px);
+      max-width: 283px;
+    }
+
+    &__image {
+      border-radius: 50%;
+      bottom: 0;
+      height: 62px;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, 50%);
+      width: 62px;
+    }
+  }
+
+  .dots__container {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    margin-bottom: rem-calc(28px);
+    margin-top: rem-calc(58px);
+    margin-left: rem-calc(162px);
+    width: 100%;
+
+    @include landscape-breakpoint {
+      margin-bottom: 0;
+    }
+
+    .dot {
+      background-color: $color-dot;
+      border-radius: 50%;
+      height: rem-calc(8px);
+      margin: 0 rem-calc(12px) 0 0;
+      width: rem-calc(8px);
+
+      &--active {
+        background-color: $color-dot-active;
+      }
+    }
+  }
+}

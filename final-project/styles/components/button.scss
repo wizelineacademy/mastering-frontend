@@ -1,0 +1,97 @@
+/* Butons */
+
+$color-primary: #4C85FF;
+$color-primary-light: #D2E1FF;
+$color-primary-dark: #3A79FF;
+$color-primary-inverse: #565F82;
+$color-complementary: #ADB4D2;
+$color-complementary-inverse: #C7D3FF;
+$color-border-complementary: #D1D1E4;
+$color-border-complementary-inverse: #A0B4FF;
+$color-secondary-light: #FFD7D7;
+$color-secondary-dark: #D43F3F;
+$color-normal: #E8ECF4;
+$color-normal-text: #7382A3;
+$color-normal-inverse-text: #A6B6DA;
+$color-normal-inverse-hover: #EEE;
+
+.button {
+  align-items: center;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $font-primary;
+  font-size: rem-calc(13px);
+  font-weight: 500;
+  justify-content: center;
+  min-height: rem-calc(43px);
+  min-width: rem-calc(130px);
+  padding: 0 rem-calc(12px);
+  opacity: 1;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  > .fas {
+    font-size: rem-calc(7px);
+    padding-left: rem-calc(7px);
+  }
+
+  &--normal {
+    background-color: $color-normal;
+    border: 1px solid transparent;
+    color: $color-normal-text;
+  }
+
+  &--normal--inverse {
+    background-color: #FFF;
+    border: 1px solid transparent;
+    color: $color-normal-inverse-text;
+
+    &:hover {
+      background-color: $color-normal-inverse-hover;
+    }
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 15px $color-shadow;
+    color: $color-white;
+  }
+
+  &--primary-inverse {
+    background-color: $color-white;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 15px $color-shadow-inverse;
+    color: $color-primary-inverse;
+  }
+
+  &--complementary {
+    background-color: transparent;
+    border: 1px solid $color-border-complementary;
+    color: $color-complementary;
+  }
+
+  &--complementary-inverse {
+    background-color: transparent;
+    border: 1px solid $color-border-complementary-inverse;
+    color: $color-complementary-inverse;
+  }
+
+  &--primary-light {
+    background-color: $color-primary-light;
+    border: 1px solid transparent;
+    color: $color-primary-dark;
+  }
+
+  &--secondary-light {
+    background-color: $color-secondary-light;
+    border: 1px solid transparent;
+    color: $color-secondary-dark;
+  }
+}

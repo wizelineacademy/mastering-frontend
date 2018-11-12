@@ -1,0 +1,71 @@
+/* Customers */
+$color-default: #D6DAE5;
+$color-active: #5982E7;
+
+.customers {
+  background-color: #FFF;
+  min-height: rem-calc(146px);
+
+  &__image {
+    cursor: pointer;
+    height: 30px;
+    margin: rem-calc(38px);
+
+    &:hover {
+      filter: invert(0.5) sepia(0.58) saturate(5) brightness(0.9) hue-rotate(187deg);
+    }
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__wrapper {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+
+      @include tablet-breakpoint {
+        flex-wrap: wrap;
+        height: 100%;
+        overflow: initial;
+      }
+    }
+
+    &__item {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      @include tablet-breakpoint {
+        width: auto;
+      }
+    }
+  }
+
+  .dots__container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+
+    @include tablet-breakpoint {
+      display: none;
+    }
+
+    .dot {
+      background-color: $color-dot;
+      border-radius: 50%;
+      height: rem-calc(8px);
+      margin: 0 rem-calc(12px) 0 0;
+      width: rem-calc(8px);
+
+      &--active {
+        background-color: $color-dot-active;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+/* Navbar */
+
+$navbar-logo-color: #5E81FE;
+$navbar-logo-size: 26px;
+$navbar-text-color: #697CA6;
+
+.navbar {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: rem-calc(1206px);
+  padding: rem-calc(18px) rem-calc(20px);
+  width: 100%;
+
+  @include tablet-breakpoint {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__left,
+  &__right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include tablet-breakpoint {
+      flex-direction: row;
+      width: auto;
+    }
+  }
+
+  &__logo {
+    align-self: flex-start;
+    background-color: $navbar-logo-color;
+    border-radius: 50%;
+    height: rem-calc($navbar-logo-size);
+    width: rem-calc($navbar-logo-size);
+  }
+
+  &__nav--main {
+    margin: rem-calc(10px) 0 rem-calc(15px) 0;
+
+    @include tablet-breakpoint {
+      margin: 0 0 0 rem-calc(73px);
+    }
+  }
+
+  &__nav--social {
+    display: none;
+    margin-right: rem-calc(20px);
+
+    .navbar__nav-link {
+      font-size: $font-size-md;
+    }
+
+    @include landscape-breakpoint {
+      display: block;
+    }
+  }
+
+  &__nav-list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    @include tablet-breakpoint {
+      flex-direction: row;
+    }
+  }
+
+  &__nav-link {
+    color: $navbar-text-color;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $font-primary;
+    font-size: $font-size-xs;
+    font-weight: 500;
+    margin: rem-calc(10px) rem-calc(20px);
+
+    @include tablet-breakpoint {
+      margin: 0 rem-calc(20px);
+    }
+
+    &:hover,
+    &--current-page {
+      color: $color-link-active;
+    }
+  }
+
+  .button {
+    min-width: rem-calc(100px);
+  }
+}

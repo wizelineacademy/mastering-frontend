@@ -2,13 +2,427 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Eduardo Lopez - Mastering Frontend</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700|Roboto:400,500,700|Open+Sans:400,600" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body>
-  <h1>Hello world!</h1>
+    <div class="wrapper">
+      <header class="header">
+        <div class="navbar">
+          <div class="navbar__left">
+            <div class="navbar__logo"></div>
+            <nav class="navbar__nav--main">
+              <ul class="navbar__nav-list">
+                <li class="navbar__nav-link navbar__nav-link--current-page">Home</li>
+                <li class="navbar__nav-link">Blog</li>
+                <li class="navbar__nav-link">Features</li>
+                <li class="navbar__nav-link">Pricing</li>
+                <li class="navbar__nav-link">Documentation</li>
+              </ul>
+            </nav>
+          </div>
+          <div class="navbar__right">
+            <nav class="navbar__nav--social">
+              <ul class="navbar__nav-list">
+                <li class="navbar__nav-link">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-twitter"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-telegram-plane"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-medium-m"></i>
+                </li>
+              </ul>
+            </nav>
+            <button class="button button--primary-light">
+              Get started
+            </button>
+            <div class="navbar__nav--mobile">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section hero">
+          <div class="hero__container">
+            <p class="section__title">PLAN YOUR LIFE</p>
+            <h1 class="hero__title">Increase your <b class="hero__title--bold">productivity</b></h1>
+            <p class="text">
+              Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
+              <br />
+              atqui laudem an, insolens gubergren similique est cu. Et vel modus
+              <br />
+              congue vituperata.
+            </p>
+            <button class="button__play">
+                <i class="fas fa-play"></i>
+            </button>
+          </div>
+        </section>
+        <section class="section customers">
+          <div class="slider">
+            <div class="slider__wrapper">
+                <div class="slider__item">
+                    <img class="customers__image" src="/assets/images/bitbucket.svg" alt="bitbucket"/>
+                </div>
+                <div class="slider__item">
+                    <img class="customers__image" src="/assets/images/apple-watch.svg" alt="apple watch"/>
+                </div>
+                <div class="slider__item">
+                    <img class="customers__image" src="/assets/images/facebook.svg" alt="facebook"/>
+                </div>
+                <div class="slider__item">
+                    <img class="customers__image" src="/assets/images/atlassian.svg" alt="atlassian"/>
+                </div>
+                <div class="slider__item">
+                    <img class="customers__image" src="/assets/images/audi.svg" alt="audi"/>
+                </div>
+            </div>
+            <ul class="dots__container">
+              <li class="dot"></li>
+              <li class="dot"></li>
+              <li class="dot dot--active"></li>
+              <li class="dot"></li>
+              <li class="dot"></li>
+            </ul>
+          </div>
+        </section>
+        <section class="section plan-manage">
+          <div class="plan-manage__container">
+            <div class="plan-manage__content">
+              <p class="section__title">DESKTOP AND MOBILE APP</p>
+              <h1 class="plan-manage__title">
+                <b class="plan-manage__title--bold">plan</b>
+                and
+                <b class="plan-manage__title--bold">manage</b>
+              </h1>
+              <p class="text">
+                Brute laoreet efficiendi id his, ea illum nonumes luptatum
+                pro. Usu atqui laudem an, insolens gubergren similique
+                est cu. Et vel modus congue vituperata. Solum patrioque
+                no sea. Mea ex malis mollis oporteat. Eum an expetenda
+                consequat.
+              </p>
+            </div>
+            <div class="plan-manage__image">
+              <img src="/assets/images/plan-manage.png" alt="desktop and mobile" />
+            </div>
+            <div class="plan-manage__buttons">
+              <button class="button button--primary">
+                View video
+                <i class="fas fa-play"></i>
+              </button>
+              <button class="button button--complementary">
+                See features
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="section features">
+          <div class="features__container">
+            <p class="section__title">ABOUT US</p>
+            <h1 class="features__title">Read about our app</h1>
+            <ul class="features-list">
+              <li class="features-list__item">
+                <div class="features-list__icon">
+                  <img src="/assets/images/overview.svg" />
+                </div>
+                <h2 class="features-list__title">Overview</h2>
+                <p class="features-list__text">
+                  Brute laoreet efficiendi id his, ea illum nonumes luptatum pro
+                </p>
+              </li>
+              <li class="features-list__item--separator"></li>
+              <li class="features-list__item">
+                <div class="features-list__icon">
+                  <img src="/assets/images/files.svg" />
+                </div>
+                <h2 class="features-list__title">Files</h2>
+                <p class="features-list__text">
+                  No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.
+                </p>
+              </li>
+              <li class="features-list__item--separator"></li>
+              <li class="features-list__item">
+                <div class="features-list__icon">
+                  <img src="/assets/images/chats.svg" />
+                </div>
+                <h2 class="features-list__title">Meetings chats</h2>
+                <p class="features-list__text">
+                  Vim ne tacimates neglegentur. Erat diceret omittam at est.
+                </p>
+              </li>
+              <li class="features-list__item--separator"></li>
+              <li class="features-list__item">
+                <div class="features-list__icon">
+                  <img src="/assets/images/save.svg" />
+                </div>
+                <h2 class="features-list__title">Save events</h2>
+                <p class="features-list__text">
+                  Nisl idque mel ea, nominati voluptatum.
+                </p>
+              </li>
+            </ul>
+            <div class="features-buttons__container">
+              <button class="button button--secondary-light">
+                Read more
+              </button>
+              <hr class="separator separator--sm"/>
+              <p class="features__label">OR</p>
+              <hr class="separator separator--sm"/>
+              <button class="button button--primary-light">
+                Get started
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="section stats">
+          <div class="stats-productivity__container">
+            <img src="/assets/images/stats.svg" alt="Productivity" />
+            <h1 class="stats__title">89%</h1>
+            <p class="stats__text">
+              Customers who have
+              <br />
+              increased their productivity
+            </p>
+          </div>
+          <div class="stats-users__container">
+            <img src="/assets/images/people.svg" alt="Users" />
+            <h1 class="stats__title">3123</h1>
+            <p class="stats__text">
+              Users who have used our
+              <br />
+              application
+            </p>
+          </div>
+        </section>
+        <noscript>
+          <section class="section no-javascript">
+            <p class="text">
+              For full functionality of this site it is necessary to enable JavaScript.
+            </p>
+          </section>
+        </noscript>
+        <section class="section blog">
+          <div class="blog__container">
+            <p class="section__title">OUR RESOURCES</p>
+            <h1 class="blog__title">Start reading our blog</h1>
+            <div id="blog-slider" class="carousel__wrapper">
+              <div class="loader">
+                  <span class="loader__item"></span>
+                  <span class="loader__item"></span>
+                  <span class="loader__item"></span>
+                </div>
+            </div>
+          </div>
+        </section>
+        <section class="section quotes">
+          <div class="quotes__container">
+            <div class="quotes__column">
+              <div class="quotes__content">
+                <p class="section__title">TESTIMONIALS</p>
+                <h1 class="quotes__title">
+                  Customers's quotes
+                </h1>
+                <p class="text">
+                  Brute laoreet efficiendi id his, ea illum nonumes
+                  luptatum pro. Usu atqui laudem an.
+                </p>
+              </div>
+            </div>
+            <div class="quotes__column">
+              <div class="testimonials">
+                <div class="testimonials__wrapper">
+                  <div class="testimonial testimonial--active">
+                    <p class="text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <img class="testimonial__image" src="/assets/images/testimonial.png" />
+                  </div>
+                  <div class="testimonial">
+                    <p class="text">
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                      Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                      persecuti.
+                    </p>
+                    <img class="testimonial__image" src="/assets/images/testimonial.png" />
+                  </div>
+                </div>
+                <ul class="dots__container">
+                  <li class="dot"></li>
+                  <li class="dot"></li>
+                  <li class="dot dot--active"></li>
+                  <li class="dot"></li>
+                  <li class="dot"></li>
+                  <li class="dot"></li>
+                  <li class="dot"></li>
+                  <li class="dot"></li>
+                  <li class="dot"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section faq">
+          <div class="faq__container">
+            <p class="section__title">CUSTOMER HELP</p>
+            <h1 class="faq__title">Frequently asked questions</h1>
+            <ul class="collapsible-list">
+              <li class="collapsible-list__item">
+                <input class="collapsible-list__item-check" type="checkbox" id="list-item-1">
+                <label class="collapsible-list__item-label" for="list-item-1">
+                  <i class="fas fa-chevron-down"></i>
+                  Reque insolens in vel?
+                </label>
+                <div class="collapsible-list__item-content">
+                  <p class="text">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                  <button class="button button--normal">Go to documentation</button>
+                </div>
+              </li>
+              <li class="collapsible-list__item">
+                <input class="collapsible-list__item-check" type="checkbox" id="list-item-2">
+                <label class="collapsible-list__item-label" for="list-item-2">
+                  <i class="fas fa-chevron-down"></i>
+                  Vis rebum error graecis ea, id sit postea accusamus?
+                </label>
+                <div class="collapsible-list__item-content">
+                  <p class="text">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                  <button class="button button--normal">Go to documentation</button>
+                </div>
+              </li>
+              <li class="collapsible-list__item">
+                <input class="collapsible-list__item-check" type="checkbox" id="list-item-3">
+                <label class="collapsible-list__item-label" for="list-item-3">
+                  <i class="fas fa-chevron-down"></i>
+                  Lorem repudiandae ne nec?
+                </label>
+                <div class="collapsible-list__item-content">
+                  <p class="text">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                  <button class="button button--normal">Go to documentation</button>
+                </div>
+              </li>
+              <li class="collapsible-list__item">
+                <input class="collapsible-list__item-check" type="checkbox" id="list-item-4">
+                <label class="collapsible-list__item-label" for="list-item-4">
+                  <i class="fas fa-chevron-down"></i>
+                  Ad dicit numquam vel. Et eos iudico feugait percipitur?
+                </label>
+                <div class="collapsible-list__item-content">
+                  <p class="text">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                  <button class="button button--normal">Go to documentation</button>
+                </div>
+              </li>
+              <li class="collapsible-list__item">
+                <input class="collapsible-list__item-check" type="checkbox" id="list-item-5">
+                <label class="collapsible-list__item-label" for="list-item-5">
+                  <i class="fas fa-chevron-down"></i>
+                  Sea no dico percipitur. Fierent constituam definitiones id eum?
+                </label>
+                <div class="collapsible-list__item-content">
+                  <p class="text">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                  </p>
+                  <button class="button button--normal">Go to documentation</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section get-started">
+            <div class="get-started__container">
+              <p class="section__title">PLAN YOUR LIFE</p>
+              <h1 class="get-started__title">Get <b class="get-started__title--bold">started</b> now</h1>
+              <p class="text">
+                Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
+                atqui laudem an, insolens gubergren similique est cu. Et vel modus
+                congue vituperata.
+              </p>
+              <div class="get-started__buttons">
+                <button class="button button--primary-inverse">
+                  View pricing
+                </button>
+                <button class="button button--complementary-inverse">
+                  Read documentation
+                </button>
+              </div>
+            </div>
+        </section>
+        <section class="section news-letter">
+          <div class="news-letter__container">
+            <div class="news-letter__signup">
+              <h1 class="news-letter__title">Sign up for newsletter</h1>
+              <p class="text">
+                  Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.
+              </p>
+            </div>
+            <form class="news-letter__form">
+              <input class="input-field" type="text" placeholder="Email address" name="email-address" />
+              <button class="button button--primary">Save me</button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="navbar">
+          <div class="navbar__left">
+            <div class="navbar__logo"></div>
+            <nav class="navbar__nav--main">
+              <ul class="navbar__nav-list">
+                <li class="navbar__nav-link navbar__nav-link--current-page">Home</li>
+                <li class="navbar__nav-link">Blog</li>
+                <li class="navbar__nav-link">Features</li>
+                <li class="navbar__nav-link">Pricing</li>
+                <li class="navbar__nav-link">Documentation</li>
+              </ul>
+            </nav>
+          </div>
+          <div class="navbar__right">
+            <nav class="navbar__nav--social">
+              <ul class="navbar__nav-list">
+                <li class="navbar__nav-link">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-twitter"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-telegram-plane"></i>
+                </li>
+                <li class="navbar__nav-link">
+                  <i class="fab fa-medium-m"></i>
+                </li>
+              </ul>
+            </nav>
+            <button class="button button--primary-light">
+              Get started
+            </button>
+          </div>
+        </div>
+        <div class="navbar">
+            <p class="footer__text">Copyright © 2018 by Random site</p>
+        </div>
+      </footer>
+    </div>
+
   <script src="./dist/bundle.js"></script>
 </body>
 </html>

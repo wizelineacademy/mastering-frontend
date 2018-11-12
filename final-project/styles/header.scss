@@ -1,0 +1,56 @@
+/* Header*/
+
+.header {
+  align-items: center;
+  background-color: #FFF;
+  border-bottom: 1px solid $color-section;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: rem-calc(80px);
+  position: fixed;
+  width: 100%;
+  z-index: $z-index-header;
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__nav--mobile {
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      @include tablet-breakpoint {
+        display: none;
+      }
+    }
+
+    &__left,
+    &__right {
+      flex-direction: row;
+      width: auto;
+    }
+
+    &__nav--main {
+      display: none;
+
+      @include tablet-breakpoint {
+        display: block;
+      }
+    }
+
+    .button {
+      display: none;
+
+      @include tablet-breakpoint {
+        display: inline-flex;
+      }
+    }
+  }
+}

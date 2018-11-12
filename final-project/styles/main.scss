@@ -1,13 +1,146 @@
-// This should be imported by the main.js file
 
-// test for scss variables
-$primary-color: #2a3fbb;
+/* Functions */
+
+@function rem-calc($size) {
+  @return $size / 16px * 1rem;
+}
+
+/* Variables */
+
+$tablet-min-width: 768px;
+$landscape-min-width: 1024px;
+$desktop-min-width: 1440px;
+
+$font-size-2xs: rem-calc(10px);
+$font-size-xs: rem-calc(12px);
+$font-size-sm: rem-calc(14px);
+$font-size-md: rem-calc(16px);
+$font-size-lg: rem-calc(18px);
+$font-size-xl: rem-calc(24px);
+$font-size-2xl: rem-calc(36px);
+$font-size-3xl: rem-calc(48px);
+
+$font-primary: 'Quicksand', sans-serif;
+$font-secondary: 'Roboto', sans-serif;
+$font-complementary: 'Open Sans', sans-serif;
+
+$color-title: #3D4F9F;
+$color-text: #8D96BD;
+$color-link-active: #5E81FE;
+$color-play: #5E81FF;
+$color-section: #D8E3FE;
+$color-separator: #DAE4FE;
+$color-shadow: rgba(188, 199, 255, 0.75);
+$color-shadow-inverse: #6480E8;
+$color-white: #FFF;
+
+$z-index-header: 100;
+
+/* Mixins */
+
+@mixin tablet-breakpoint {
+  @media only screen and (min-width: rem-calc($tablet-min-width)) {
+    @content;
+  }
+}
+
+@mixin landscape-breakpoint {
+  @media only screen and (min-width: rem-calc($landscape-min-width)) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint {
+  @media only screen and (min-width: rem-calc($desktop-min-width)) {
+    @content;
+  }
+}
+
+/* Global*/
 
 * {
   padding: 0;
   margin: 0;
 }
 
-h1 {
-  color: $primary-color;
+html {
+  font-family: $font-primary;
 }
+
+button {
+  border:none;
+}
+
+.wrapper,
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  padding-top: rem-calc(80px);
+}
+
+.section {
+  display: flex;
+  border-top: 0;
+  border-bottom: 1px solid $color-section;
+
+  &__title {
+    color: $color-title;
+    font-family: $font-secondary;
+    font-size: $font-size-2xs;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &.no-javascript {
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+  }
+}
+
+/* Text */
+.text {
+  color: $color-text;
+  font-family: $font-secondary;
+  line-height: rem-calc(29px);
+  font-size: rem-calc(15px);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  padding: rem-calc(12px) 0;
+  letter-spacing: 0.03em;
+}
+
+.separator {
+  background-color: $color-separator;
+  border: 0;
+  height: 1px;
+
+  &--sm {
+    width: rem-calc(15px);
+  }
+}
+
+@import 'components/button.scss';
+@import 'components/input.scss';
+@import 'components/navbar.scss';
+@import 'components/carousel.scss';
+@import 'components/collapsible-list.scss';
+@import 'components/loader.scss';
+@import 'header.scss';
+@import 'hero.scss';
+@import 'customers.scss';
+@import 'plan-manage.scss';
+@import 'features.scss';
+@import 'stats.scss';
+@import 'blog.scss';
+@import 'quotes.scss';
+@import 'faq.scss';
+@import 'get-started.scss';
+@import 'news-letter.scss';
+@import 'footer.scss';

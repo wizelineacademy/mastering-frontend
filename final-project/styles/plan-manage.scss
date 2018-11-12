@@ -1,0 +1,99 @@
+/* Plan and Manage */
+.plan-manage {
+  align-items: center;
+  background-color: #F5F8FF;
+  display: flex;
+  justify-content: center;
+  min-height: rem-calc(776px);
+
+  &__content {
+    align-self: end;
+    margin: 0;
+    max-width: rem-calc(413px);
+    grid-area: plan-manage-content;
+
+    @include landscape-breakpoint {
+      margin-bottom: rem-calc(48px);
+      margin-left: rem-calc(48px);
+    }
+  }
+
+  &__title {
+    color: $color-title;
+    font-family: $font-primary;
+    font-weight: 300;
+    font-size: $font-size-2xl;
+    padding: rem-calc(16px) 0;
+
+    &--bold {
+      font-weight: 500;
+    }
+  }
+
+  &__image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    grid-area: plan-manage-image;
+
+    > img {
+      width: 100%;
+
+      @include landscape-breakpoint {
+        margin-bottom: rem-calc(-160px);
+        max-height: none;
+        max-width: none;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    grid-area: plan-manage-buttons;
+    height: rem-calc(52px);
+    justify-content: center;
+    margin-left: 0;
+
+    @include tablet-breakpoint {
+      height: rem-calc(43px);
+      justify-content: flex-start;
+    }
+
+    @include landscape-breakpoint {
+      margin-left: rem-calc(48px);
+    }
+
+    .button {
+      width: 149px;
+
+      @include tablet-breakpoint {
+        width: auto;
+      }
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto rem-calc(380px) auto;
+    grid-template-areas:
+      "plan-manage-content"
+      "plan-manage-image"
+      "plan-manage-buttons";
+    padding: rem-calc(16px);
+    width: 100%;
+
+    @include tablet-breakpoint {
+      max-width: rem-calc(680px);
+    }
+
+    @include landscape-breakpoint {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "plan-manage-content plan-manage-image"
+        "plan-manage-buttons plan-manage-image";
+      max-width: rem-calc(1300px);
+    }
+  }
+}

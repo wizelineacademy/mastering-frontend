@@ -1,0 +1,26 @@
+/* Footer */
+
+$color-footer-text: #AEB8D0;
+
+.footer {
+  align-items: center;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: rem-calc(287px);
+
+  &__text {
+    color: $color-footer-text;
+    display: flex;
+    font-family: $font-primary;
+    font-size: $font-size-xs;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+
+    @include tablet-breakpoint {
+      align-self: flex-start;
+      margin-left: rem-calc(119px);
+    }
+  }
+}

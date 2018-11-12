@@ -1,0 +1,20 @@
+/* Inputs */
+
+$color-input-background: #EFEFF7;
+$color-input-text: #7A85AD;
+
+.input-field {
+  background-color: $color-input-background;
+  border: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: $color-input-text;
+  font-family: $font-primary;
+  font-size: rem-calc(13px);
+  font-weight: 600;
+  padding: rem-calc(21px);
+
+  &::placeholder {
+    color: $color-input-text;
+  }
+}

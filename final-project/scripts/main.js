@@ -1,10 +1,22 @@
 import "../styles/main.scss";
+import Blog from './blog';
+import { $ } from './utils';
 
-// testing that `const` and arrow functions transpile correctly
-const before = "Hello -world!";
-const after = before
-  .split("")
-  .filter(char => char !== "-")
-  .join("");
-console.log({ before });
-console.log({ after });
+class App {
+  constructor() {
+    this.blogSection = $('.section.blog');
+    this.blog = new Blog();
+  }
+
+  init() {
+    const DELAY_MILLISECONDS_TO_INIT = 3000;
+    const blog = this.blog;
+    this.blogSection.style.display = 'flex';
+    setTimeout(() => blog.init(), DELAY_MILLISECONDS_TO_INIT);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const app = new App();
+  app.init();
+});

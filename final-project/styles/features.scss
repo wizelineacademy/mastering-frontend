@@ -1,0 +1,123 @@
+/* Features */
+
+$color-features: #F1F5FF;
+$color-list-title: #4074F8;
+$color-list-text: #ADB3CB;
+
+.features {
+  background-color: #FFF;
+  background-attachment: fixed;
+  background-image: url('/assets/images/clouds.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: rem-calc(885px);
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: rem-calc(42px);
+    text-align: center;
+    width: 100%;
+
+    @include tablet-breakpoint {
+      padding-top: rem-calc(171px);
+    }
+  }
+
+  &__title {
+    color: $color-title;
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: $font-size-xl;
+    padding: rem-calc(16px) 0;
+  }
+
+  &-list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    padding: rem-calc(43px) 0;
+
+    @include tablet-breakpoint {
+      padding: rem-calc(72px) 0;
+    }
+
+    &__item {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin: rem-calc(20px) 0;
+      min-height: rem-calc(254px);
+      text-align: center;
+      width: 50%;
+
+      @include tablet-breakpoint {
+        width: rem-calc(140px);
+      }
+
+      @include landscape-breakpoint {
+        margin: rem-calc(20px);
+      }
+
+      &--separator {
+        border-bottom: 1px solid #DAE4FE;
+        display: none;
+        width: rem-calc(29px);
+
+        @include tablet-breakpoint {
+          display: block;
+        }
+      }
+    }
+
+    &__icon {
+      align-items: center;
+      border-radius: 50%;
+      background-color: $color-features;
+      display: flex;
+      height: rem-calc(69px);
+      justify-content: center;
+      width: rem-calc(69px);
+    }
+
+    &__title {
+      color: $color-list-title;
+      font-family: $font-complementary;
+      font-size: $font-size-sm;
+      font-weight: 600;
+      line-height: rem-calc(25px);
+      margin: rem-calc(30px) 0;
+    }
+
+    &__text {
+      color: $color-list-text;
+      font-family: $font-complementary;
+      font-size: rem-calc(11px);
+      font-weight: 600;
+      line-height: rem-calc(19px);
+      max-width: rem-calc(140px);
+    }
+  }
+
+  &-buttons__container {
+    align-items: center;
+    display: flex;
+
+    > .separator {
+      margin: 0 rem-calc(16px);
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    color: $color-list-text;
+    font-family: $font-complementary;
+    font-weight: 600;
+    line-height: rem-calc(19px);
+    font-size: rem-calc(11px);
+  }
+}

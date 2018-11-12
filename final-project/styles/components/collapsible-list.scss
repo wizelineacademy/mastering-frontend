@@ -1,0 +1,104 @@
+/* Collapsible List */
+
+$color-border-item: #D8E3FE;
+$color-item-title: #8E96B7;
+$color-item-title-active: #495274;
+
+.collapsible-list {
+  margin: rem-calc(29px) 0 rem-calc(68px);
+  max-width: rem-calc(743px);
+  list-style: none;
+  width: 100%;
+
+  @include tablet-breakpoint {
+    margin: rem-calc(34px) 0 rem-calc(68px);
+  }
+
+  &__item {
+    border-bottom: 1px solid $color-border-item;
+
+    &-check[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      left: -9999px;
+
+      &:checked ~ .collapsible-list__item-content {
+        height: 100%;
+        max-height: 300px;
+        opacity: 1;
+        padding: 0 rem-calc(16px) rem-calc(16px);
+        transform: scaleY(1);
+      }
+
+      &:checked ~ .collapsible-list__item-label {
+        color: $color-item-title-active;
+
+        i {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    &-label {
+      align-items: center;
+      box-sizing: border-box;
+      color: $color-item-title;
+      cursor: pointer;
+      display: flex;
+      font-family: $font-primary;
+      font-size: rem-calc(15px);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      line-height: rem-calc(19px);
+      min-height: rem-calc(76px);
+      text-align: left;
+      transition: color 0.2s ease;
+
+      i {
+        font-size: rem-calc(18px);
+        margin: 0 rem-calc(20px);
+        transition: transform 0.2s ease;
+      }
+
+      &:hover {
+        color: $color-item-title-active;
+      }
+    }
+
+    &-content {
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: 0;
+      justify-content: space-between;
+      max-height: 0;
+      opacity: 0;
+      padding: 0;
+      transform: scaleY(0);
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+      width: 100%;
+
+      @include tablet-breakpoint {
+        flex-direction: row;
+      }
+    }
+
+    .text {
+      font-size: $font-size-sm;
+      margin-left: rem-calc(64px);
+      max-width: rem-calc(391px);
+      text-align: left;
+    }
+
+    .button {
+      height: rem-calc(43px);
+      margin: rem-calc(32px) 0 rem-calc(12px);;
+      min-width: rem-calc(195px);
+
+      @include tablet-breakpoint {
+        margin: 0;
+      }
+    }
+  }
+}

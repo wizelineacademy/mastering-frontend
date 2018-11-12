@@ -1,10 +1,5 @@
 import "../styles/main.scss";
+import { BlogCarousel } from "./blog-carousel";
 
-// testing that `const` and arrow functions transpile correctly
-const before = "Hello -world!";
-const after = before
-  .split("")
-  .filter(char => char !== "-")
-  .join("");
-console.log({ before });
-console.log({ after });
+const blogCarousel = new BlogCarousel();
+blogCarousel.init(document.querySelector(".resources__carousel"));

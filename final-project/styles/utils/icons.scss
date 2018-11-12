@@ -1,0 +1,74 @@
+.icon {
+  font-style: normal;
+
+  &--facebook {
+    @extend .icon;
+    content: url(/reference/assets/icons/facebook.png);
+  }
+  &--medium {
+    @extend .icon;
+    content: url(/reference/assets/icons/medium.png);
+  }
+  &--telegram {
+    @extend .icon;
+    content: url(/reference/assets/icons/telegram.png);
+  }
+  &--twitter {
+    @extend .icon;
+    content: url(/reference/assets/icons/twitter.png);
+  }
+  &--menu {
+    @extend .icon;
+    content: url(/reference/assets/icons/menu.png);
+  }
+
+  &--play {
+    @extend .icon;
+    content: url(/reference/assets/icons/video-play.png);
+  }
+
+  &--play-inverse {
+    @extend .icon;
+    content: url(/reference/assets/icons/video-play-inverse.png);
+  }
+
+  &--home {
+    @extend .icon;
+    content: url(/reference/assets/icons/home.png);
+  }
+
+  &--folder {
+    @extend .icon;
+    content: url(/reference/assets/icons/folder.png);
+  }
+
+  &--chat {
+    @extend .icon;
+    content: url(/reference/assets/icons/chat.png);
+  }
+
+  &--upload {
+    @extend .icon;
+    content: url(/reference/assets/icons/upload.png);
+  }
+
+  &--collapse {
+    @extend .icon;
+    content: url(/reference/assets/icons/collapse.png);
+  }
+
+  &--expand {
+    @extend .icon;
+    content: url(/reference/assets/icons/expand.png);
+  }
+
+  &--arrow-prev {
+    @extend .icon;
+    content: url(/reference/assets/icons/arrow-prev.png);
+  }
+
+  &--arrow-next {
+    @extend .icon;
+    content: url(/reference/assets/icons/arrow-next.png);
+  }
+}

@@ -1,13 +1,54 @@
 // This should be imported by the main.js file
 
-// test for scss variables
-$primary-color: #2a3fbb;
+// @import "~bootstrap/scss/bootstrap";
+
+@import "./utils/variables";
+@import "./utils/sizing";
+@import "./utils/breakpoints";
+@import "./utils/layout";
+@import "./utils/icons";
+@import "./components/buttons.scss";
+@import "./components/loader.scss";
+
+html {
+  font-family: "Quicksand", sans-serif;
+}
+
+.no-overflow-x {
+  overflow-x: hidden;
+}
+
+#jsDisabledAlert {
+  display: none;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  background-color: blanchedalmond;
+  z-index: 1000;
+}
 
 * {
   padding: 0;
   margin: 0;
 }
 
-h1 {
-  color: $primary-color;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+@import "./header";
+@import "./intro";
+@import "./customers";
+@import "./apps";
+@import "./about";
+@import "./stats";
+@import "./resources";
+@import "./testimonials";
+@import "./help";
+@import "./get-started";
+@import "./newsletter";
+@import "./footer";
+@import "./carousel";

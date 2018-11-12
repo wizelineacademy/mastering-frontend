@@ -1,0 +1,94 @@
+.testimonials {
+  $border: 1px solid #d8e3fe;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background: linear-gradient(180deg, #eaf0ff 0%, #f6f9ff 100%);
+  border-top: $border;
+  border-bottom: $border;
+
+  padding-top: rem-calc(64px);
+  padding-bottom: rem-calc(109px);
+
+  @include media-breakpoint-down(md) {
+    padding-top: rem-calc(26px);
+    padding-bottom: rem-calc(26px);
+  }
+
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    padding-left: rem-calc(20px);
+
+    @include media-breakpoint-up(xl) {
+      max-width: map-get($container-max-widths, xl);
+      padding-left: 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-left: rem-calc(50px);
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    img {
+      height: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+      img {
+        margin-left: rem-calc(60px);
+      }
+    }
+  }
+
+  &__info {
+    $info-width: rem-calc(333px);
+    width: $info-width;
+    min-width: $info-width;
+    margin-right: rem-calc(51px);
+    padding-top: rem-calc(64px);
+
+    @include media-breakpoint-down(md) {
+      padding-top: 0;
+      width: 100%;
+    }
+
+    &__title {
+      color: $section-title-color;
+      font-family: "Roboto", sans-serif;
+      font-size: rem-calc(10px);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      padding-bottom: rem-calc(14px);
+    }
+
+    &__highlight {
+      color: $section-highlight-color;
+      font-size: rem-calc(36px);
+      font-weight: 500;
+      margin-bottom: rem-calc(28px);
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__description {
+      color: $section-description-color;
+      font-family: "Roboto", sans-serif;
+      font-size: rem-calc(15px);
+      line-height: rem-calc(29px);
+    }
+  }
+}

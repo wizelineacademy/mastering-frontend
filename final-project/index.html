@@ -1,383 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="./dist/styles.css">
-</head>
+  <body>
+    <div>
+      <header class="header container">
+        <div class="header__logo"></div>
+        <nav class="header__nav  header__nav--main">
+          <ul class="header__nav-list">
+            <li class="header__nav-link header__nav-link--current-page">
+              Home
+            </li>
+            <li class="header__nav-link">Blog</li>
+            <li class="header__nav-link">Features</li>
+            <li class="header__nav-link">Pricing</li>
+            <li class="header__nav-link">Documentation</li>
+          </ul>
+        </nav>
 
-<body>
-  <div>
-    <header class="header container">
-      <div class="header__logo"></div>
-      <nav class="header__nav  header__nav--main">
-        <ul class="header__nav-list">
-          <li class="header__nav-link header__nav-link--current-page">Home</li>
-          <li class="header__nav-link">Blog</li>
-          <li class="header__nav-link">Features</li>
-          <li class="header__nav-link">Pricing</li>
-          <li class="header__nav-link">Documentation</li>
-        </ul>
-      </nav>
+        <nav class="header__nav header__nav--social">
+          <ul class="header__nav-list">
+            <li class="header__nav-link"><i class="icon--facebook"></i></li>
+            <li class="header__nav-link"><i class="icon--twitter"></i></li>
+            <li class="header__nav-link"><i class="icon--telegram"></i></li>
+            <li class="header__nav-link"><i class="icon--medium"></i></li>
+          </ul>
+        </nav>
 
-      <nav class="header__nav header__nav--social">
-        <ul class="header__nav-list">
-          <li class="header__nav-link">
-            <i class="icon--facebook"></i>
-          </li>
-          <li class="header__nav-link">
-            <i class="icon--twitter"></i>
-          </li>
-          <li class="header__nav-link">
-            <i class="icon--telegram"></i>
-          </li>
-          <li class="header__nav-link">
-            <i class="icon--medium"></i>
-          </li>
-        </ul>
-      </nav>
+        <button class="header__button">Get Started</button>
 
-      <button class="header__button">Get Started</button>
-
-      <div class="header__nav--mobile">
-        <i class="icon--menu"></i>
-      </div>
-    </header>
-    <main class="main">
-      <section class="intro">
-        <img class="intro__bkg-image" src="reference/assets/hero.png" alt="Card image">
-        <div class="intro__bkg-overlay">
-          <div class="intro__info">
-            <p class="intro__info__title">
-              PLAN YOUR LIFE
-            </p>
-            <p class="intro__info__highlight">
-              Increase your <span class="intro__info__highlight--emphasis">productivity</span>
-            </p>
-            <p class="intro__info__description">
-              Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
-              atqui laudem an, insolens gubergren similique est cu. Et vel modus
-              congue vituperata.
-            </p>
+        <div class="header__nav--mobile"><i class="icon--menu"></i></div>
+      </header>
+      <main class="main">
+        <section class="intro">
+          <img
+            class="intro__bkg-image"
+            src="reference/assets/hero.png"
+            alt="Card image"
+          />
+          <div class="intro__bkg-overlay">
+            <div class="intro__info">
+              <p class="intro__info__title">PLAN YOUR LIFE</p>
+              <p class="intro__info__highlight">
+                Increase your
+                <span class="intro__info__highlight--emphasis"
+                  >productivity</span
+                >
+              </p>
+              <p class="intro__info__description">
+                Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+                Usu atqui laudem an, insolens gubergren similique est cu. Et vel
+                modus congue vituperata.
+              </p>
+            </div>
+            <div class="play-button"><i class="icon--play"></i></div>
           </div>
-          <div class="play-button">
-            <i class="icon--play"></i>
+        </section>
+        <section class="customers">
+          <div class="customers__images">
+            <img src="reference/assets/customers/bitbucket.png" />
+            <img src="reference/assets/customers/apple-watch.png" />
+            <img src="reference/assets/customers/facebook.png" />
+            <img src="reference/assets/customers/atlassian.png" />
+            <img src="reference/assets/customers/audi.png" />
           </div>
-        </div>
-      </section>
-      <section class="customers">
-        <div class="customers__images">
-          <img src="reference/assets/customers/bitbucket.png">
-          <img src="reference/assets/customers/apple-watch.png">
-          <img src="reference/assets/customers/facebook.png">
-          <img src="reference/assets/customers/atlassian.png">
-          <img src="reference/assets/customers/audi.png">
-        </div>
-        <div class="customers__images--mobile">
-          <img src="reference/assets/customers/bitbucket.png">
-          <ol class="carousel-indicators">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-          </ol>
-        </div>
-      </section>
-      <section class="apps">
-        <div class="apps__container">
-          <div class="apps__info">
-            <p class="apps__info__title">
-              DESKTOP AND MOBILE APPS
-            </p>
-            <p class="apps__info__highlight">
-              <span class="apps__info__highlight--emphasis">Plan</span> and <span class="apps__info__highlight--emphasis">manage</span>
-            </p>
-            <p class="apps__info__description">
-              Brute laoreet efficiendi id his, ea illum nonumes luptatum
-              pro. Usu atqui laudem an, insolens gubergren similique
-              est cu. Et vel modus congue vituperata. Solum patrioque
-              no sea. Mea ex malis mollis oporteat. Eum an expetenda
-              consequat.
-            </p>
-            <div class="apps__button-group">
+          <div class="customers__images--mobile">
+            <img src="reference/assets/customers/bitbucket.png" />
+            <ol class="carousel__indicators">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </div>
+        </section>
+        <section class="apps">
+          <div class="apps__container">
+            <div class="apps__info">
+              <p class="apps__info__title">DESKTOP AND MOBILE APPS</p>
+              <p class="apps__info__highlight">
+                <span class="apps__info__highlight--emphasis">Plan</span> and
+                <span class="apps__info__highlight--emphasis">manage</span>
+              </p>
+              <p class="apps__info__description">
+                Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+                Usu atqui laudem an, insolens gubergren similique est cu. Et vel
+                modus congue vituperata. Solum patrioque no sea. Mea ex malis
+                mollis oporteat. Eum an expetenda consequat.
+              </p>
+              <div class="apps__button-group">
+                <a class="btn--primary-raised">
+                  View video <i class="icon--play-inverse"></i>
+                </a>
+                <a class="btn--default"> See features </a>
+              </div>
+            </div>
+            <div class="apps__image">
+              <img src="reference/assets/plan-manage.png" />
+            </div>
+            <div class="apps__button-group--mobile">
               <a class="btn--primary-raised">
                 View video <i class="icon--play-inverse"></i>
               </a>
-              <a class="btn--default">
-                See features
-              </a>
+              <a class="btn--default"> See features </a>
             </div>
           </div>
-          <div class="apps__image">
-            <img src="reference/assets/plan-manage.png">
-          </div>
-          <div class="apps__button-group--mobile">
-            <a class="btn--primary-raised">
-              View video <i class="icon--play-inverse"></i>
-            </a>
-            <a class="btn--default">
-              See features
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="about">
-        <img class="about__bkg-image" src="reference/assets/clouds-left.png" alt="Card image">
-        <img class="about__bkg-image" src="reference/assets/clouds-right.png" alt="Card image">
-        <div class="about__bkg-image-overlay">
-          <div class="about__info">
-            <p class="about__info__title">
-              ABOUT US
-            </p>
-            <p class="about__info__highlight">
-              Read about our app
-            </p>
-            <div class="about__info__features">
-              <div class="feature">
-                <div class="feature__icon">
-                  <i class="icon--home"></i>
+        </section>
+        <section class="about">
+          <img
+            class="about__bkg-image"
+            src="reference/assets/clouds-left.png"
+            alt="Card image"
+          />
+          <img
+            class="about__bkg-image"
+            src="reference/assets/clouds-right.png"
+            alt="Card image"
+          />
+          <div class="about__bkg-image-overlay">
+            <div class="about__info">
+              <p class="about__info__title">ABOUT US</p>
+              <p class="about__info__highlight">Read about our app</p>
+              <div class="about__info__features">
+                <div class="feature">
+                  <div class="feature__icon"><i class="icon--home"></i></div>
+                  <p class="feature__name">Overview</p>
+                  <p class="feature__description">
+                    Brute laoreet efficiendi id his, ea illum nonumes luptatum
+                    pro.
+                  </p>
                 </div>
-                <p class="feature__name">Overview</p>
-                <p class="feature__description">
-                  Brute laoreet efficiendi id
-                  his, ea illum nonumes
-                  luptatum pro.
-                </p>
-              </div>
-              <div class="feature-separator"></div>
-              <div class="feature">
-                <div class="feature__icon">
-                  <i class="icon--folder"></i>
+                <div class="feature-separator"></div>
+                <div class="feature">
+                  <div class="feature__icon"><i class="icon--folder"></i></div>
+                  <p class="feature__name">Files</p>
+                  <p class="feature__description">
+                    No vim nulla vitae intellegat. Ei enim error ius, solet
+                    atomorum conceptam ex has.
+                  </p>
                 </div>
-                <p class="feature__name">Files</p>
-                <p class="feature__description">
-                  No vim nulla vitae
-                  intellegat. Ei enim error
-                  ius, solet atomorum
-                  conceptam ex has.
-                </p>
-              </div>
-              <div class="feature-separator"></div>
-              <div class="feature">
-                <div class="feature__icon">
-                  <i class="icon--chat"></i>
+                <div class="feature-separator"></div>
+                <div class="feature">
+                  <div class="feature__icon"><i class="icon--chat"></i></div>
+                  <p class="feature__name">Meeting chats</p>
+                  <p class="feature__description">
+                    Vim ne tacimates neglegentur. Erat diceret omittam at est.
+                  </p>
                 </div>
-                <p class="feature__name">Meeting chats</p>
-                <p class="feature__description">
-                  Vim ne tacimates
-                  neglegentur. Erat diceret
-                  omittam at est.
-                </p>
-              </div>
-              <div class="feature-separator"></div>
-              <div class="feature">
-                <div class="feature__icon">
-                  <i class="icon--upload"></i>
+                <div class="feature-separator"></div>
+                <div class="feature">
+                  <div class="feature__icon"><i class="icon--upload"></i></div>
+                  <p class="feature__name">Save events</p>
+                  <p class="feature__description">
+                    Nisl idque mel ea, nominati voluptatum.
+                  </p>
                 </div>
-                <p class="feature__name">Save events</p>
-                <p class="feature__description">
-                  Nisl idque mel ea,
-                  nominati voluptatum.
-                </p>
+              </div>
+            </div>
+            <div class="about__button-group">
+              <a class="btn--secondary"> Read more </a>
+              <div class="about__button-group__separator"><span>OR</span></div>
+              <a class="btn--primary"> Get started </a>
+            </div>
+          </div>
+        </section>
+        <section class="stats">
+          <div class="stats__item">
+            <img
+              class="stats__item__image"
+              src="reference/assets/icons/speedmeter.png"
+            />
+            <p class="stats__item__value">89%</p>
+            <p class="stats__item__text">
+              Customers who have increased their productivity
+            </p>
+          </div>
+          <div class="stats__item">
+            <img
+              class="stats__item__image"
+              src="reference/assets/icons/people.png"
+            />
+            <p class="stats__item__value">3123</p>
+            <p class="stats__item__text">Users who have used our application</p>
+          </div>
+        </section>
+        <section class="resources">
+          <div class="resources__container">
+            <p class="resources__title">OUR RESOURCES</p>
+            <p class="resources__highlight">Start reading our blog</p>
+            <div class="resources__carousel"></div>
+          </div>
+        </section>
+        <section class="testimonials">
+          <div class="testimonials__container">
+            <div class="testimonials__info">
+              <p class="testimonials__info__title">TESTIMONIALS</p>
+              <p class="testimonials__info__highlight">Customers's quotes</p>
+              <p class="testimonials__info__description">
+                Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+                Usu atqui laudem an.
+              </p>
+            </div>
+            <div class="testimonials__image">
+              <img src="reference/assets/testimonials.png" />
+            </div>
+          </div>
+        </section>
+        <section class="help">
+          <p class="help__title">CUSTOMER HELP</p>
+          <p class="help__highlight">Frequently asked questions</p>
+          <div class="help__questions">
+            <div class="help__questions__item">
+              <i class="icon--expand"></i>
+              <div class="help__questions__item__question">
+                <span>Reque insolens in vel?</span>
+              </div>
+            </div>
+            <div class="help__questions__item">
+              <i class="icon--expand"></i>
+              <div class="help__questions__item__question">
+                <span
+                  >Vis rebum error graecis ea, id sit postea accusamus?</span
+                >
+              </div>
+            </div>
+            <div class="help__questions__item--expanded">
+              <div class="help__questions__item__expand__secttion">
+                <i class="icon--collapse"></i>
+                <div class="help__questions__item__question--answered">
+                  <p>Lorem repudiandae ne nec?</p>
+                  <p>
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut
+                    nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
+                    diceret persecuti.
+                  </p>
+                </div>
+              </div>
+              <a class="btn--info">Go to documentation</a>
+            </div>
+            <div class="help__questions__item">
+              <i class="icon--expand"></i>
+              <div class="help__questions__item__question">
+                <span
+                  >Ad dicit numquam vel. Et eos iudico feugait percipitur?</span
+                >
+              </div>
+            </div>
+            <div class="help__questions__item">
+              <i class="icon--expand"></i>
+              <div class="help__questions__item__question">
+                <span
+                  >Sea no dico percipitur. Fierent constituam definitiones id
+                  eum?</span
+                >
               </div>
             </div>
           </div>
-          <div class="about__button-group">
-            <a class="btn--secondary">
-              Read more
-            </a>
-            <div class="about__button-group__separator">
-              <span>OR</span>
+        </section>
+        <section class="getstarted">
+          <img
+            class="getstarted__bkg-image"
+            src="reference/assets/blue-clouds-bg.png"
+            alt="Card image"
+          />
+          <div class="getstarted__bkg-overlay">
+            <div class="getstarted__info">
+              <p class="getstarted__info__title">PLAN YOUR LIFE</p>
+              <p class="getstarted__info__highlight">
+                Get
+                <span class="getstarted__info__highlight--emphasis"
+                  >started</span
+                >
+                now
+              </p>
+              <p class="getstarted__info__description">
+                Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+                Usu atqui laudem an, insolens gubergren similique est cu. Et vel
+                modus congue vituperata.
+              </p>
             </div>
-            <a class="btn--primary">
-              Get started
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="stats">
-        <div class="stats__item">
-          <img class="stats__item__image" src="reference/assets/icons/speedmeter.png">
-          <p class="stats__item__value">89%</p>
-          <p class="stats__item__text">
-            Customers who have increased their productivity
-          </p>
-        </div>
-        <div class="stats__item">
-          <img class="stats__item__image" src="reference/assets/icons/people.png">
-          <p class="stats__item__value">3123</p>
-          <p class="stats__item__text">
-            Users who have used our application
-          </p>
-        </div>
-      </section>
-      <section class="resources">
-        <p class="resources__title">
-          OUR RESOURCES
-        </p>
-        <p class="resources__highlight">
-          Start reading our blog
-        </p>
-        <div class="resources__carousel">
-          <img src="https://via.placeholder.com/926x394/E7B4F8">
-        </div>
-      </section>
-      <section class="testimonials">
-        <div class="testimonials__container">
-          <div class="testimonials__info">
-            <p class="testimonials__info__title">
-              TESTIMONIALS
-            </p>
-            <p class="testimonials__info__highlight">
-              Customers's quotes
-            </p>
-            <p class="testimonials__info__description">
-              Brute laoreet efficiendi id his, ea illum nonumes
-              luptatum pro. Usu atqui laudem an.
-            </p>
-          </div>
-          <div class="testimonials__image">
-            <img src="reference/assets/testimonials.png">
-          </div>
-        </div>
-      </section>
-      <section class="help">
-        <p class="help__title">
-          CUSTOMER HELP
-        </p>
-        <p class="help__highlight">
-          Frequently asked questions
-        </p>
-        <div class="help__questions">
-          <div class="help__questions__item">
-            <i class="icon--expand"></i>
-            <div class="help__questions__item__question">
-              <span>Reque insolens in vel?</span>
+            <div class="getstarted__button-group">
+              <a class="btn--primary-inverse"> View pricing </a>
+              <a class="btn--default-inverse"> Read documentation </a>
             </div>
           </div>
-          <div class="help__questions__item">
-            <i class="icon--expand"></i>
-            <div class="help__questions__item__question">
-              <span>Vis rebum error graecis ea, id sit postea accusamus?</span>
+        </section>
+        <section class="newsletter">
+          <div class="newsletter__container">
+            <div class="newsletter__info">
+              <p class="newsletter__info__highlight">Sign up for newsletter</p>
+              <p class="newsletter__info__description">
+                Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu,
+                homero alterum.
+              </p>
             </div>
+            <form class="newsletter__form">
+              <input
+                class="newsletter__form__email"
+                placeholder="Email address"
+              />
+              <button class="newsletter__form__save-btn btn--primary-raised">
+                Save me
+              </button>
+            </form>
           </div>
-          <div class="help__questions__item--expanded">
-            <div class="help__questions__item__expand__secttion">
-              <i class="icon--collapse"></i>
-              <div class="help__questions__item__question--answered">
-                <p>Lorem repudiandae ne nec?</p>
-                <p>
-                  Quidam vocibus eum ne, erat
-                  consectetuer voluptatibus ut
-                  nam. Eu usu vidit tractatos, vero
-                  tractatos ius an, in mel diceret
-                  persecuti.
-                </p>
-              </div>
-            </div>
-            <a class="btn--info">Go to documentation</a>
-          </div>
-          <div class="help__questions__item">
-            <i class="icon--expand"></i>
-            <div class="help__questions__item__question">
-              <span>Ad dicit numquam vel. Et eos iudico feugait percipitur?</span>
-            </div>
-          </div>
-          <div class="help__questions__item">
-            <i class="icon--expand"></i>
-            <div class="help__questions__item__question">
-              <span>Sea no dico percipitur. Fierent constituam definitiones id eum?</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="getstarted">
-        <img class="getstarted__bkg-image" src="reference/assets/blue-clouds-bg.png" alt="Card image">
-        <div class="getstarted__bkg-overlay">
-          <div class="getstarted__info">
-            <p class="getstarted__info__title">
-              PLAN YOUR LIFE
-            </p>
-            <p class="getstarted__info__highlight">
-              Get <span class="getstarted__info__highlight--emphasis">started</span> now
-            </p>
-            <p class="getstarted__info__description">
-              Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
-              atqui laudem an, insolens gubergren similique est cu. Et vel modus
-              congue vituperata.
-            </p>
-          </div>
-          <div class="getstarted__button-group">
-            <a class="btn--primary-inverse">
-              View pricing
-            </a>
-            <a class="btn--default-inverse">
-              Read documentation
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="newsletter">
-        <div class="newsletter__container">
-          <div class="newsletter__info">
-            <p class="newsletter__info__highlight">
-              Sign up for newsletter
-            </p>
-            <p class="newsletter__info__description">
-              Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.
-            </p>
-          </div>
-          <form class="newsletter__form">
-            <input class="newsletter__form__email" placeholder="Email address">
-            <button class="newsletter__form__save-btn btn--primary-raised">Save me</button>
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer class="footer container">
-      <div class="footer__navs">
-        <div class="footer__logo"></div>
-        <nav class="footer__nav  footer__nav--main">
-          <ul class="footer__nav-list">
-            <li class="footer__nav-link footer__nav-link--current-page">Home</li>
-            <li class="footer__nav-link">Blog</li>
-            <li class="footer__nav-link">Features</li>
-            <li class="footer__nav-link">Pricing</li>
-            <li class="footer__nav-link">Documentation</li>
-          </ul>
-        </nav>
+        </section>
+      </main>
+      <footer class="footer container">
+        <div class="footer__navs">
+          <div class="footer__logo"></div>
+          <nav class="footer__nav  footer__nav--main">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-link footer__nav-link--current-page">
+                Home
+              </li>
+              <li class="footer__nav-link">Blog</li>
+              <li class="footer__nav-link">Features</li>
+              <li class="footer__nav-link">Pricing</li>
+              <li class="footer__nav-link">Documentation</li>
+            </ul>
+          </nav>
 
-        <nav class="footer__nav footer__nav--social">
-          <ul class="footer__nav-list">
-            <li class="footer__nav-link">
-              <i class="icon--facebook"></i>
-            </li>
-            <li class="footer__nav-link">
-              <i class="icon--twitter"></i>
-            </li>
-            <li class="footer__nav-link">
-              <i class="icon--telegram"></i>
-            </li>
-            <li class="footer__nav-link">
-              <i class="icon--medium"></i>
-            </li>
-          </ul>
-        </nav>
-        <div class="footer__button">
-          <button class="btn--primary">Get Started</button>
+          <nav class="footer__nav footer__nav--social">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-link"><i class="icon--facebook"></i></li>
+              <li class="footer__nav-link"><i class="icon--twitter"></i></li>
+              <li class="footer__nav-link"><i class="icon--telegram"></i></li>
+              <li class="footer__nav-link"><i class="icon--medium"></i></li>
+            </ul>
+          </nav>
+          <div class="footer__button">
+            <button class="btn--primary">Get Started</button>
+          </div>
         </div>
-      </div>
-      <p class="footer__copy-right">
-        Copyright © 2018 by Random site
-      </p>
-    </footer>
-  </div>
-  <script src="./dist/bundle.js"></script>
-</body>
-
+        <p class="footer__copy-right">Copyright © 2018 by Random site</p>
+      </footer>
+    </div>
+    <script src="./dist/bundle.js"></script>
+  </body>
 </html>

@@ -37,25 +37,4 @@
   }
 }
 
-.carousel-indicators {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  list-style: none;
 
-  li {
-    position: relative;
-    width: 8px;
-    height: 8px;
-    margin-right: 3px;
-    margin-left: 3px;
-    cursor: pointer;
-    background-color: #D1D6E3;
-    border-radius: 50%;
-  }
-
-  .active {
-    background-color: #5283FF;
-  }
-}

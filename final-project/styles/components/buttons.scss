@@ -10,6 +10,7 @@
   padding: rem-calc(13px) rem-calc(25px);
   white-space: nowrap;
   display: inline-block;
+  text-decoration: none;
 
   &--default {
     @extend .btn;
@@ -23,11 +24,11 @@
   &--default-inverse {
     @extend .btn;
     background: transparent;
-    border: 1px solid #A0B4FF;
+    border: 1px solid #a0b4ff;
     box-sizing: border-box;
     border-radius: 2px;
     font-weight: 500;
-    color: #C7D3FF;
+    color: #c7d3ff;
   }
 
   &--primary {
@@ -38,8 +39,8 @@
 
   &--primary-inverse {
     @extend .btn;
-    background: #FFFFFF;
-    color: #565F82;
+    background: #ffffff;
+    color: #565f82;
   }
 
   &--primary-raised {
@@ -65,8 +66,8 @@
 
   &--info {
     @extend .btn;
-    background-color: #E8ECF4;
-    color: #7382A3;
+    background-color: #e8ecf4;
+    color: #7382a3;
     font-weight: 500;
   }
 }

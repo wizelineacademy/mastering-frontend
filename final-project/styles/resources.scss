@@ -1,13 +1,25 @@
 .resources {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  position: relative;
   background-color: #f5f8ff;
-  padding-top: rem-calc(104px);
 
-  @include media-breakpoint-down(sm) {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 0 rem-calc(20px);
     padding-top: rem-calc(56px);
+    padding-bottom: rem-calc(104px);
+    max-width: rem-calc(994px);
+
+    @include media-breakpoint-up(md) {
+      padding-top: rem-calc(104px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: rem-calc(1154px);
+    }
   }
 
   &__title {
@@ -26,18 +38,13 @@
     line-height: normal;
     font-size: 24px;
     text-align: center;
-    margin-bottom: rem-calc(92px);
+    margin-bottom: rem-calc(40px);
 
-    @include media-breakpoint-down(sm) {
-      margin-bottom: rem-calc(40px);
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem-calc(92px);
     }
   }
 
   &__carousel {
-    padding-bottom: 104px;
-
-    img {
-      width: 100%;
-    }
   }
 }

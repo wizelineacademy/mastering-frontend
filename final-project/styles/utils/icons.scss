@@ -61,4 +61,14 @@
     @extend .icon;
     content: url(/reference/assets/icons/expand.png);
   }
+
+  &--arrow-prev {
+    @extend .icon;
+    content: url(/reference/assets/icons/arrow-prev.png);
+  }
+
+  &--arrow-next {
+    @extend .icon;
+    content: url(/reference/assets/icons/arrow-next.png);
+  }
 }

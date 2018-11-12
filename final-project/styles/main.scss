@@ -14,8 +14,18 @@ html {
   font-family: "Quicksand", sans-serif;
 }
 
-body > div {
+.no-overflow-x {
   overflow-x: hidden;
+}
+
+#jsDisabledAlert {
+  display: none;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  background-color: blanchedalmond;
+  z-index: 1000;
 }
 
 * {

@@ -24,7 +24,13 @@
   </head>
 
   <body>
-    <div>
+    <div id="jsDisabledAlert">
+      <p>
+        **For full functionality of this site it is necessary to enable
+        JavaScript.**
+      </p>
+    </div>
+    <div class="no-overflow-x">
       <header class="header container">
         <div class="header__logo"></div>
         <nav class="header__nav  header__nav--main">
@@ -364,6 +370,13 @@
         <p class="footer__copy-right">Copyright © 2018 by Random site</p>
       </footer>
     </div>
+    <noscript>
+      <style type="text/css">
+        #jsDisabledAlert {
+          display: block;
+        }
+      </style>
+    </noscript>
     <script src="./dist/bundle.js"></script>
   </body>
 </html>

@@ -71,6 +71,7 @@ header{
     text-align: center;
   }
 }
+
 p{
   font-family: Roboto;
   font-weight:400;
@@ -330,14 +331,60 @@ p{
   }
 }
 
-.main {
-  max-width: rem-calc(320px);
+.header__menu-container{
+  max-width: 320px;
   margin:0 auto;
   @include tablet-breakpoint {
     max-width: 768px;
   }
   @include desktop-breakpoint {
-    max-width: 1024px;
+    max-width: 1206px;
+  }
+}
+
+.hero-banner{
+  display: flex;
+  flex-direction: column;
+  min-height: 570px;
+  background-image: url('/reference/assets/hero.png');
+  background-position: center;
+  &__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0 0 0;
+    h1{
+      margin:0 20px 20px;
+    }
+    p{
+      display: none;
+      @include tablet-breakpoint {
+        display: flex;
+        width: 502px
+      }
+      @include desktop-breakpoint {
+        display: flex;
+        width: 502px;
+      }
+    }
+    span{
+      margin:0 0 35px 0;
+    }
+    &__play-button{
+      height: 52px;
+      width: 52px;
+      background-color: white;
+      margin-top: 62px;
+      box-shadow:0 10px 50px #d8e3fe;
+      img{
+        filter:brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%);
+      }
+    }
+    footer{
+      display: flex;
+      justify-content: center;
+
+    }
   }
 }
 
@@ -376,49 +423,6 @@ p{
   p{
     margin: rem-calc(10px) 0;
     text-align: left;
-  }
-}
-
-.header__menu-container{
-  max-width: 320px;
-  margin:0 auto;
-  @include tablet-breakpoint {
-    max-width: 768px;
-  }
-  @include desktop-breakpoint {
-    max-width: 1206px;
-  }
-}
-
-.hero-banner{
-  min-height: 570px;
-  background-image: url('/reference/assets/hero.png');
-  &__info{
-    padding: 35px 0 0 0;
-    h1{
-      margin:0 20px;
-    }
-    p{
-      display: none;
-    }
-    span{
-      margin:0 0 35px 0;
-    }
-    &__play-button{
-      height: 52px;
-      width: 52px;
-      background-color: white;
-      margin-top: 62px;
-      box-shadow:0 10px 50px #d8e3fe;
-      img{
-        filter:brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%);
-      }
-    }
-    footer{
-      display: flex;
-      justify-content: center;
-
-    }
   }
 }
 
@@ -580,6 +584,7 @@ p{
     display: flex;
   }
 }
+
 .testimonials{
   display:none;
   span{

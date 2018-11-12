@@ -3,6 +3,7 @@ import "../styles/main.scss";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+const blogPostContainerElement = $('.blog__post-container');
 const blogPostElement = $('.blog__post');
 const spinnerElement = $('.spinner');
 const indicatorsElement = $('.blog__indicators');
@@ -17,7 +18,7 @@ async function getBlogPosts() {
   ({ articles: blogPosts } = await res.json());
 
   spinnerElement.classList.add('hidden');
-  blogPostElement.classList.remove('hidden');
+  blogPostContainerElement.classList.remove('hidden');
 
   renderCarousel();
 }
@@ -28,7 +29,7 @@ function renderCarousel() {
   renderIndicators();
 
   clearTimeout(blogPostTimeout);
-  // blogPostTimeout = setTimeout(nextBlogPost, 5000);
+  blogPostTimeout = setTimeout(nextBlogPost, 5000);
 }
 
 function renderBlogPost() {
@@ -53,7 +54,7 @@ function renderBlogPost() {
 
 function renderIndicators() {
   indicatorsElement.innerHTML = blogPosts.map((_, i) => (
-    `<span class="blog__indicator ${i === currentBlogPost ? 'selected' : ''}"></span>`
+    `<button class="blog__indicator ${i === currentBlogPost ? 'selected' : ''}"></button>`
   )).join('');
 
   $$('.blog__indicator').forEach((indicator, i) => {

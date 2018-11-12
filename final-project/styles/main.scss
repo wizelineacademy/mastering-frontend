@@ -33,6 +33,12 @@ $border-color: #D8E3FE;
   }
 }
 
+@mixin removeButtonStyles {
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
 html {
   font-family: 'Quicksand', sans-serif;
 }
@@ -108,7 +114,7 @@ a {
   }
 
   &__button {
-    all: unset;
+    @include removeButtonStyles;
     background-color: $blue6-color;
     border-radius: 2px;
     color: $blue2-color;
@@ -164,12 +170,15 @@ a {
   }
 
   &__button {
-    all: unset;
+    @include removeButtonStyles;
+    align-items: center;
     background: white;
     border-radius: 50%;
     box-shadow: 0 10px 50px rgba(201, 209, 231, 0.6);
     cursor: pointer;
+    display: flex;
     height: 50px;
+    justify-content: center;
     margin-bottom: pxToRem(212);
     margin-top: pxToRem(19);
     width: 50px;
@@ -248,7 +257,7 @@ a {
   }
 
   &__video-button {
-    all: unset;
+    @include removeButtonStyles;
     background: #4C85FF;
     border-radius: 2px 0 0 2px;
     box-shadow: 0 5px 15px rgba(188, 199, 255, 0.75);
@@ -265,7 +274,7 @@ a {
   }
 
   &__features-button {
-    all: unset;
+    @include removeButtonStyles;
     border-radius: 0 2px 2px 0;
     border: 1px solid #D1D1E4;
     color: #ADB4D2;
@@ -356,7 +365,7 @@ a {
   }
 
   &__read-more-button {
-    all: unset;
+    @include removeButtonStyles;
     background: #FFD7D7;
     border-radius: 2px;
     color: #D43F3F;
@@ -368,7 +377,7 @@ a {
   }
 
   &__get-started-button {
-    all: unset;
+    @include removeButtonStyles;
     background: #D2E1FF;
     border-radius: 2px;
     color: #3A79FF;
@@ -428,6 +437,10 @@ a {
     align-items: center;
     display: flex;
     justify-content: space-evenly;
+
+    &.hidden {
+      display: none;
+    }
   }
 
   &__post {
@@ -486,7 +499,7 @@ a {
   }
 
   &__post-read-button {
-    all: unset;
+    @include removeButtonStyles;
     background: #D2E1FF;
     border-radius: 2px;
     color: #3A79FF;
@@ -505,6 +518,7 @@ a {
   }
 
   &__arrow {
+    @include removeButtonStyles;
     cursor: pointer;
 
     @include mediaTablet {
@@ -523,6 +537,7 @@ a {
   }
 
   &__indicator {
+    @include removeButtonStyles;
     background: #D1D6E3;
     border-radius: 50%;
     cursor: pointer;

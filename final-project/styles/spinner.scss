@@ -21,7 +21,9 @@
 
 .spinner {
   animation: rotate 1.8s linear infinite;
+  display: block;
   height: 50px;
+  margin: auto;
   width: 50px;
 
   &.hidden {

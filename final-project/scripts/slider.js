@@ -37,6 +37,31 @@ class Slider {
     `;
   }
 
+  updateDots(slideId) {
+    const dots = $$('.dot', this.$dotButtons);
+    dots.forEach(dot => {
+      const dotId = dot.getAttribute('data-id');
+      if (slideId === dotId) dot.classList.add('dot--active');
+      else dot.classList.remove('dot--active');
+    });
+  }
+
+  updateSlides() {
+    if (this.action === 'prev') {
+      const swapSlides = this.slides.pop();
+      this.slides.unshift(swapSlides);
+    } else if (this.action === 'next') {
+      const swapSlides = this.slides.shift();
+      this.slides.push(swapSlides);
+    }
+
+    this.action = null;
+    this.$slidesContainer.innerHTML = this.slides.join('');
+    const currentSlide = $$('.slide', this.$container)[1];
+    const currentSlideId = currentSlide.getAttribute('data-id');
+    this.updateDots(currentSlideId);
+  }
+
   createDots(length) {
     const numbers = [...Array(length).keys()];
     return numbers.map((number, i) => (
@@ -61,28 +86,7 @@ class Slider {
     this.$slidesContainer.classList.remove('animate');
     this.$slidesContainer.classList.remove('move-left');
     this.$slidesContainer.classList.remove('move-right');
-
-    if (this.action === 'prev') {
-      const swapSlides = this.slides.pop();
-      this.slides.unshift(swapSlides);
-    } else if (this.action === 'next') {
-      const swapSlides = this.slides.shift();
-      this.slides.push(swapSlides);
-    }
-
-    this.action = null;
-    this.$slidesContainer.innerHTML = this.slides.join('');
-    const currentSlide = $$('.slide', this.$container)[1];
-    const currentSlideId = currentSlide.getAttribute('data-id');
-    const dots = $$('.dot', this.$dotButtons);
-    dots.forEach(dot => {
-      const id = dot.getAttribute('data-id');
-      if (currentSlideId === id) {
-        dot.classList.add('dot--active');
-      } else {
-        dot.classList.remove('dot--active');
-      }
-    })
+    this.updateSlides();
   }
 
   prevSlide () {

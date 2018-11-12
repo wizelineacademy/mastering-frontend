@@ -209,6 +209,14 @@
     background-size: contain;
     width: 30px;
     color: transparent;
+
+    @include tablet-breakpoint {
+      display: none;
+    }
+
+    @include landscape-breakpoint {
+      left: 5px;
+    }
   }
 
   &__arrow-right {
@@ -224,6 +232,14 @@
     width: 30px;
     transform: rotate(180deg);
     color: transparent;
+
+    @include tablet-breakpoint {
+      display: none;
+    }
+    
+    @include landscape-breakpoint {
+      right: 5px;
+    }  
   }
 
 }

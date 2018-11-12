@@ -138,17 +138,23 @@ p{
 
 .customers{
   display: flex;
-  justify-content: space-around;
   flex-flow: column;
+  max-width: rem-calc(888px);
+  margin: 0 auto;
   &__list{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    margin-top:60px;
+    justify-content: space-evenly;
+    margin:0 0 rem-calc(50px);
     &__item{
       display: none;
-      text-indent: -999px;
+      @include tablet-breakpoint {
+        display: inline;
+        margin-top: rem-calc(50px);
+      }
+      text-indent: -9999px;
       &__bitbucket{
         width: 117px;
         height: 29px;
@@ -176,10 +182,19 @@ p{
       }
       &--active{
         display: inline;
+        margin-top: rem-calc(50px);
       }
       &:hover{
         filter:brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%);
       }
+    }
+    &__item + &__item{
+      margin-left: rem-calc(75px);
+    }
+  }
+  .page-controller{
+    @include tablet-breakpoint {
+      display: none;
     }
   }
 }
@@ -429,7 +444,6 @@ p{
 .page-controller{
   display: flex;
   justify-content: space-evenly;
-  margin: 45px 136px 80px 136px;
   height: 10px;
   &__indicator {
     border: 1px solid white;
@@ -442,7 +456,6 @@ p{
     background-color: #5283FF;
   }
 }
-
 
 .planning{
   display: flex;
@@ -552,13 +565,11 @@ p{
     width: 100%;
     background-color: #6888ff;
     padding: rem-calc(60px) 0 rem-calc(70px) 0;
-    
     h1,p,span{
       text-align: right;
       color: white;
       margin: 0 rem-calc(14px) rem-calc(30px);
     }
-    
     &--alter{
       background-color: #e9efff;
       h1,p,span{

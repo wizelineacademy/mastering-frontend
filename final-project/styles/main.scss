@@ -363,6 +363,7 @@ p{
   min-height: 570px;
   background-image: url('/reference/assets/hero.png');
   background-position: center;
+  background-repeat: no-repeat;
   &__info{
     display: flex;
     flex-direction: column;
@@ -442,15 +443,18 @@ p{
 }
 
 .page-controller{
-  display: flex;
-  justify-content: space-evenly;
+  display:flex;
   height: 10px;
+  margin:0 auto rem-calc(50px);
   &__indicator {
     border: 1px solid white;
     border-radius: 50%;
     height:8px;
     width:8px;
     background-color: #D1D6E3;
+  }
+  &__indicator + &__indicator{
+    margin-left:5px;
   }
   &__indicator--active{
     background-color: #5283FF;
@@ -554,10 +558,12 @@ p{
     background-color: #F1F5FF;
   }
 }
+
 .responsive-image {
   width: 100%;
   height: auto;
 }
+
 .statistics{
   display: flex;
   flex-direction: column;

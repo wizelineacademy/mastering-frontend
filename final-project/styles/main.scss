@@ -463,7 +463,7 @@ p{
 
 .planning{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   background-color: $alter-section-color;
   &__info{
     padding-top:rem-calc(42px);
@@ -474,13 +474,28 @@ p{
     &__title{
       margin-bottom: rem-calc(35px);
     }
+    @include tablet-breakpoint {
+      width: rem-calc(413px);
+    }
   }
   &__image img{
-    margin-top: rem-calc(45px);
+    display: flex;
+    margin: rem-calc(45px) auto 0;
+    width: 266px;
+    height: auto;
+    @include tablet-breakpoint {
+      width: 446px;
+      height: auto;
+    }
+    @include desktop-breakpoint {
+      width: 653px;
+      height: auto;
+    }
   }
   &__buttons{
     margin: 0 rem-calc(14px) rem-calc(30px);
     display: flex;
+    width:100%;
     &__play-video{
       display: flex;
       justify-content: center;
@@ -501,21 +516,33 @@ p{
     button{
       height: rem-calc(52px);
       width: 50%;
+      @include tablet-breakpoint {
+        width: rem-calc(130px);
+      }
     }
+  }
+  @include tablet-breakpoint {
+    padding:0  0 0 rem-calc(62px);
+  }
+  @include desktop-breakpoint {
+    padding:0 0 0 rem-calc(275px);
   }
 }
 
 .read-about{
+  display: flex;
+  flex-flow: column;
   margin: 0 rem-calc(14px);
   &__header{
-    margin-top: rem-calc(43px);
+    padding-top: rem-calc(43px);
     span{
       margin-bottom: rem-calc(30px);
     }
   }
   &__content{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
     header{
       width: 100%;
       display: flex;
@@ -527,6 +554,7 @@ p{
       flex-direction: column;
       align-items: center;
       margin-top: rem-calc(70px);
+      width: rem-calc(140px);
       h6{
         font-family: 'Open Sans';
         font-weight: 700;
@@ -535,11 +563,13 @@ p{
         margin: rem-calc(37px) 0;
       }
     }
+    @include tablet-breakpoint {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
   &__controls{
-    display: flex;
-    justify-content: space-between;
-    margin: rem-calc(40px) 0;
+    margin: rem-calc(40px) auto;
     &__more{
       background-color: #FFD7D7;
     }
@@ -559,14 +589,10 @@ p{
   }
 }
 
-.responsive-image {
-  width: 100%;
-  height: auto;
-}
-
 .statistics{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   &__part{
     width: 100%;
     background-color: #6888ff;

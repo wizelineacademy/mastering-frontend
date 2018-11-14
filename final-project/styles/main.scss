@@ -407,6 +407,39 @@ a {
   }
 }
 
+.stats {
+  display: flex;
+
+  @include mediaMobileSmall(){
+    display: block;
+  }
+
+  &__meter {
+    background: linear-gradient(208.93deg, #6888FF 12.77%, #5E80FF 73.11%);
+    color: white;
+    flex-grow: 1;
+    padding: pxToRem(40);
+    text-align: right;
+  }
+
+  &__users {
+    background: linear-gradient(130.53deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+    color: #5E80FF;
+    flex-grow: 1;
+    padding: pxToRem(40);
+  }
+
+  &__header {
+    font-size: pxToRem(48);
+    font-weight: normal;
+    margin: pxToRem(30) 0;
+  }
+
+  &__description {
+    font-size: pxToRem(18);
+  }
+}
+
 .blog {
   background: #F5F8FF;
   padding: pxToRem(100) pxToRem(20);

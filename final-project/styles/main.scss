@@ -160,15 +160,16 @@
   &__content{
     display: flex;
     height: 100%;
+    position: relative;
     &__section{
       width: 50%;
-      background-position: 50%;
+      background-position: 0 80%;
       background-size: contain;
       background-repeat: no-repeat;
     }
     &__text-container{
       margin-left: 30%;
-      margin-top: 20%;
+      margin-top: 30%;
     }
     &__subtitle{
       margin: 20px 0;
@@ -179,16 +180,20 @@
     &__buttons{
       height: 43px;
       width: 100%;
-      position: absolute;
       z-index: 20;
-      top: 75%;
+      top: 60%;
       padding-left: 15%;
+      position: absolute;
       &__button{
         height: 100%;
         width: 130px;
       }
     }
   }
+}
+.about{
+  height: 885px;
+  background-color: #FFF;
 }
 #bit-bucket{
   background-image: url("/reference/assets/customers/bitbucket.png");
@@ -207,5 +212,4 @@
 }
 #plan-manage-image{
   background-image: url("/reference/assets/plan-manage.png");
-
 }

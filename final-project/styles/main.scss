@@ -2,20 +2,26 @@
   @return $size / 16px * 1rem;
 }
 
-$nav-text-color: #697ca6;
-$header__logo-size: 26px;
-
 @mixin tablet-breakpoint {
-  @media only screen and (min-width: rem-calc(768px)) {
+  @media only screen and (max-width: rem-calc(768px)) {
     @content;
   }
 }
 
 @mixin desktop-breakpoint {
-  @media only screen and (min-width: rem-calc(992px)) {
+  @media only screen and (min-width: rem-calc(768px)) {
     @content;
   }
 }
+
+@mixin mobile-breakpoint {
+  @media only screen and (max-width: rem-calc(425px)) {
+    @content;
+  }
+}
+
+$nav-text-color: #697ca6;
+$header__logo-size: 26px;
 
 body{
   margin: 0;
@@ -26,68 +32,57 @@ button{
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
   font-family: 'Quicksand', sans-serif;
+  justify-content: space-between;
   padding: rem-calc(18px) rem-calc(20px);
-
-  &__logo {
-    width: rem-calc($header__logo-size);
-    height: rem-calc($header__logo-size);
-    margin-top: rem-calc(26px-18px);
-    background-color: #5e81fe;
-    border-radius: 50%;
-  }
-
-  &__nav {
-    margin-top: rem-calc(32px-18px);
-    display: none;
-
-    &--mobile {
-      margin-top: rem-calc(10px);
-
-      @include tablet-breakpoint {
-        display: none;
-      }
-    }
-
-    @include tablet-breakpoint {
-      display: block;
-
-      &--social {
-        display: none;
-      }
-    }
-
-    @include desktop-breakpoint {
-      &--social {
-        display: block;
-      }
-    }
-  }
-
-  &__nav-list {
-    display: flex;
-    list-style: none;
-  }
-
-  &__nav-link {
-    font-size: rem-calc(12px);
-    margin: 0 rem-calc(20px);
-    display: inline-block;
-    color: $nav-text-color;
-  }
 
   &__button {
     background-color: #d2e1ff;
-    font-family: 'Quicksand', sans-serif;
     color: #3a79ff;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
     padding: rem-calc(13px);
-    display: none;
+    @include mobile-breakpoint {
+      display: none;
+    }
+  }
 
-    @include tablet-breakpoint {
+  &__link {
+    color: $nav-text-color;
+    display: inline-block;
+    font-size: rem-calc(12px);
+    margin: 0 rem-calc(20px);
+  }
+
+  &__logo {
+    background-color: #5e81fe;
+    border-radius: 50%;
+    height: rem-calc($header__logo-size);
+    width: rem-calc($header__logo-size);
+  }
+
+  &__mobile {
+    display: none;
+    @include mobile-breakpoint {
       display: block;
+    }
+  }
+
+  &__nav {
+    &__main{
+      display: block;
+      @include mobile-breakpoint{
+        display: none;
+      }
+    }
+
+    &__social {
+      display: block;
+      @include tablet-breakpoint {
+        display: none;
+      }
     }
   }
 }
@@ -599,77 +594,6 @@ button{
     font-weight: bold;
     font-size: 13px;
     color: #FFFFFF;
-  }
-}
-
-.footer {
-
-  font-family: 'Quicksand', sans-serif;
-  padding: rem-calc(18px) rem-calc(20px);
-
-  &-buttons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__logo {
-    width: rem-calc($header__logo-size);
-    height: rem-calc($header__logo-size);
-    margin-top: rem-calc(26px-18px);
-    background-color: #5e81fe;
-    border-radius: 50%;
-  }
-
-  &__nav {
-    margin-top: rem-calc(32px-18px);
-    display: none;
-
-    &--mobile {
-      margin-top: rem-calc(10px);
-
-      @include tablet-breakpoint {
-        display: none;
-      }
-    }
-
-    @include tablet-breakpoint {
-      display: block;
-
-      &--social {
-        display: none;
-      }
-    }
-
-    @include desktop-breakpoint {
-      &--social {
-        display: block;
-      }
-    }
-  }
-
-  &__nav-list {
-    display: flex;
-    list-style: none;
-  }
-
-  &__nav-link {
-    font-size: rem-calc(12px);
-    margin: 0 rem-calc(20px);
-    display: inline-block;
-    color: $nav-text-color;
-  }
-
-  &__button {
-    background-color: #d2e1ff;
-    font-family: 'Quicksand', sans-serif;
-    color: #3a79ff;
-    padding: rem-calc(13px);
-    display: none;
-
-    @include tablet-breakpoint {
-      display: block;
-    }
   }
 }
 

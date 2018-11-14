@@ -1,14 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
   <link rel="stylesheet" href="./dist/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+  <title>FE: Academy Project</title>
 </head>
+
 <body>
-  <h1>Hello world!</h1>
-  <script src="./dist/bundle.js"></script>
+  <header class="header">
+    <div class="header__logo"></div>
+    <nav class="header__nav  header__nav--main">
+      <ul class="header__nav-list">
+        <li class="header__nav-link header__nav-link--current-page">Home</li>
+        <li class="header__nav-link">Blog</li>
+        <li class="header__nav-link">Features</li>
+        <li class="header__nav-link">Pricing</li>
+        <li class="header__nav-link">Documentation</li>
+      </ul>
+    </nav>
+
+    <nav class="header__nav header__nav--social">
+      <ul class="header__nav-list">
+        <li class="header__nav-link">
+          <i class="fab fa-facebook-f"></i>
+        </li>
+        <li class="header__nav-link">
+          <i class="fab fa-twitter"></i>
+        </li>
+        <li class="header__nav-link">
+          <i class="fab fa-telegram-plane"></i>
+        </li>
+        <li class="header__nav-link">
+          <i class="fab fa-medium-m"></i>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header__button">Get Started</button>
+
+    <div class="header__nav--mobile">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+  <main class="main">
+
+    <section class="section__one">
+      <h1 class="section__one-header">
+        PLAN YOUR LIFE
+      </h1>
+      <h2 class="section__one-subheader">
+        Increase your <strong>productivity</strong>
+      </h2>
+      <p class="section__one-text">
+        Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+        Usu atqui laudem an, insolens gubergren similique est cu.
+        Et vel modus congue vituperata.
+      </p>
+      <button class="section__one-button">
+        <i class="fas fa-play fa-lg"></i>
+      </button>
+    </section>
+
+    <section class="section__two">
+      <img class="section__two-image" src="./reference/assets/customers/bitbucket.png" />
+      <img class="section__two-image" src="./reference/assets/customers/apple-watch.png" />
+      <img class="section__two-image" src="./reference/assets/customers/facebook.png" />
+      <img class="section__two-image" src="./reference/assets/customers/atlassian.png" />
+      <img class="section__two-image" src="./reference/assets/customers/audi.png" />
+    </section>
+
+    <section class="section__three">
+      <div class="section__three-partOne">
+        <div>
+          <h1 class="section__three-header">
+            DESKTOP AND MOBILE APP
+          </h1>
+          <h2 class="section__three-subheader">
+            Plan and manage
+          </h2>
+          <p class="section__three-text">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+            Usu atqui laudem an, insolens gubergren similique est cu.
+            Et vel modus congue vituperata. Solum patrioque no sea.
+            Mea ex malis mollis oporteat. Eum an expetenda consequat.
+          </p>
+        </div>
+        <div>
+          <img src="./reference/assets/plan-manage.png">
+        </div>
+      </div>
+      <div class="section__three-buttonSection">
+        <button class="section__three-viewbutton">
+          View video
+          <i class="fas fa-play fa-xs"></i>
+        </button>
+        <button class="section__three-seebutton">See features</button>
+      </div>
+    </section>
+
+    <section class="section__four">
+      <h1 class="section__four-header">
+        ABOUT US
+      </h1>
+      <h2 class="section__four-subheader">
+        Read about our app
+      </h2>
+      <div class="section__four-items">
+        <div>
+          <button class="section__four-button">
+            <img src="./reference/assets/icons/home.png" />
+          </button>
+          <h3 class="section__four-itemHeader">
+            Overview
+          </h3>
+          <p class="section__four-itemText">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+          </p>
+        </div>
+        <div>
+          <button class="section__four-button">
+            <img src="./reference/assets/icons/folder.png" />
+          </button>
+          <h3 class="section__four-itemHeader">
+            Files
+          </h3>
+          <p class="section__four-itemText">
+            No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has. </p>
+        </div>
+        <div>
+          <button class="section__four-button">
+            <img src="./reference/assets/icons/chat.png" />
+          </button>
+          <h3 class="section__four-itemHeader">
+            Meeting chats
+          </h3>
+          <p class="section__four-itemText">
+            Vim ne tacimates neglegentur. Erat diceret omittam at est.
+          </p>
+        </div>
+        <div>
+          <button class="section__four-button">
+            <img src="./reference/assets/icons/upload.png" />
+          </button>
+          <h3 class="section__four-itemHeader">
+            Save events
+          </h3>
+          <p class="section__four-itemText">
+            Nisl idque mel ea, nominati voluptatum.
+          </p>
+        </div>
+      </div>
+      <div class="section__four-buttonSection">
+        <button class="section__four-buttonRead">Read more</button>
+        <p class="section__four-textButton"> - OR - </p>
+        <button class="section__four-buttonGet">Get started</button>
+      </div>
+    </section>
+
+    <section class="section__five">
+      <div class="section__five-left">
+        <img src="reference/assets/icons/speedmeter.png" />
+        <p class="section__five-header">
+          89%
+        </p>
+        <p class="section__five-text">
+          Customers who have increased their productivity
+        </p>
+      </div>
+      <div class="section__five-right">
+        <img src="reference/assets/icons/people.png" />
+        <p class="section__five-header">
+          3123
+        </p>
+        <p class="section__five-text">
+          Users who have used our application
+        </p>
+      </div>
+    </section>
+
+    <section class="section__six">
+      <h1 class="section__six-header">
+        OUR RESOURCES
+      </h1>
+      <h2 class="section__six-subheader">
+        Start reading our blog
+      </h2>
+    </section>
+
+    <section class="section__seven">
+      <div class="section__seven-firstPart">
+        <div class="section__seven-left">
+          <h1 class="section__seven-left-header">
+            TESTIMONIALS
+          </h1>
+          <h2 class="section__seven-left-subheader">
+            Customers's quotes
+          </h2>
+          <p class="section__seven-left-text">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+            Usu atqui laudem an.
+          </p>
+        </div>
+        <div class="section__seven-customerquotes">
+          <div class="section__seven-customerquotes-quotes">
+            <p class="section__seven-customerquotes-quotes-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+              Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+            </p>
+            <img class="section__seven-customerquotes-quotes-image" src="reference/assets/testimonial.png" />
+          </div>
+          <div class="section__seven-customerquotes-quotesinactive">
+            <p class="section__seven-customerquotes-quotes-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+              Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section__seven-dots">
+        <span class="dots"></span>
+      </div>
+    </section>
+
+    <section class="section__eight">
+      <h1 class="section__eight-header">
+        CUSTOMER HELP
+      </h1>
+      <h2 class="section__eight-subheader">
+        Frequently asked questions
+      </h2>
+      <div class="section__eight-question">
+        <i class="fas fa-angle-down fa-lg"></i>
+        <p class="section__eight-text">
+          Reque insolens in vel?
+        </p>
+      </div>
+      <div class="section__eight-question">
+        <i class="fas fa-angle-down fa-lg"></i>
+        <p class="section__eight-text">
+          Vis rebum error graecis ea, id sit postea accusamus?
+        </p>
+      </div>
+      <div class="section__eight-question">
+        <i class="fas fa-angle-down fa-lg"></i>
+        <p class="section__eight-text">
+          Lorem repudiandae ne nec?
+        </p>
+      </div>
+      <div class="section__eight-activeQuestion">
+        <i class="fas fa-angle-up fa-lg"></i>
+        <p class="section__eight-text">
+          Ad dicit numquam vel. Et eos iudico feugait percipitur?
+        </p>
+      </div>
+      <div class="section__eight-activeQuestion-body">
+          <p>
+            Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+            Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+          </p>
+          <button class="section__eight-activeQuestion-button">Go to documentation</button>
+      </div>
+      <div class="section__eight-question">
+        <i class="fas fa-angle-down fa-lg"></i>
+        <p class="section__eight-text">
+          Sea no dico percipitur. Fierent constituam definitiones id eum?
+        </p>
+      </div>
+    </section>
+
+    <section class="section__nine">
+      <h1 class="section__nine-header">
+        PLAN YOUR LIFE
+      </h1>
+      <h2 class="section__nine-subheader">
+        Get started now
+      </h2>
+      <p class="section__nine-text">
+        Brote laoreet efficiendi id his, ea illum nonumes luptatum pro.
+        Usu atqui laudem an, insolens gubergren similique est cu.
+        Et vel modus congue vituperata.
+      </p>
+      <div class="section__nine-buttons">
+        <button class="section__nine-viewButton">
+          View pricing
+        </button>
+        <button class="section__nine-readButton">
+          Read documentation
+        </button>
+      </div>
+    </section>
+
+    <section class="section__ten">
+      <div>
+        <h1 class="section__ten-header">
+          Sign up for newsletter
+        </h1>
+        <p class="section__ten-text">
+          Cu qui soleat partiendo urbanitas.
+          Eum aperiri indoctum eu, homero alterum.
+        </p>
+      </div>
+      <div>
+        <input
+          type="email"
+          placeholder="Email address"
+          class="section__ten-input">
+        <button class="section__ten-button">Save me</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-buttons">
+        <div class="footer__logo"></div>
+        <nav class="footer__nav  footer__nav--main">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-link footer__nav-link--current-page">Home</li>
+            <li class="footer__nav-link">Blog</li>
+            <li class="footer__nav-link">Features</li>
+            <li class="footer__nav-link">Pricing</li>
+            <li class="footer__nav-link">Documentation</li>
+          </ul>
+        </nav>
+      
+        <nav class="footer__nav footer__nav--social">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-link">
+              <i class="fab fa-facebook-f"></i>
+            </li>
+            <li class="footer__nav-link">
+              <i class="fab fa-twitter"></i>
+            </li>
+            <li class="footer__nav-link">
+              <i class="fab fa-telegram-plane"></i>
+            </li>
+            <li class="footer__nav-link">
+              <i class="fab fa-medium-m"></i>
+            </li>
+          </ul>
+        </nav>
+      
+        <button class="footer__button">Get Started</button>
+        
+        <div class="footer__nav--mobile">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+
+        <small>Copyright © 2018 by Random site</small>
+      </footer>
+
+  </main>
 </body>
+
 </html>

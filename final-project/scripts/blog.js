@@ -1,9 +1,11 @@
-
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const blogPostElement = $('.blog__post');
 const indicatorsElement = $('.blog__indicators');
+const imageElement = $('.blog__post-image');
+const headerElement = $('.blog__post-header');
+const descriptionElement = $('.blog__post-description');
+const linkElement = $('.blog__post-content a');
 
 let blogPosts = [];
 let currentBlogPost = 0;
@@ -15,46 +17,47 @@ async function getBlogPosts() {
 
   $('.spinner').classList.add('hidden');
   $('.blog__post-container').classList.remove('hidden');
-
+  createIndicators();
   renderCarousel();
 }
 
-
 function renderCarousel() {
-  renderBlogPost();
-  renderIndicators();
+  updateBlogPost();
+  updateIndicators();
 
   clearTimeout(blogPostTimeout);
   blogPostTimeout = setTimeout(nextBlogPost, 5000);
 }
 
-function renderBlogPost() {
+function updateBlogPost() {
   const post = blogPosts[currentBlogPost];
+  imageElement.children[0].srcset = post.images.desktop;
+  imageElement.children[1].srcset = post.images.tablet;
+  imageElement.children[2].srcset = post.images.mobile2x;
+  imageElement.children[3].src = post.images.mobile;
 
-  blogPostElement.innerHTML = `
-    <picture class="blog__post-image">
-      <source media="(min-width: 800px)" srcset="${post.images.desktop}">
-      <source media="(min-width: 600px)" srcset="${post.images.tablet}">
-      <source media="(min-width: 500px)" srcset="${post.images.mobile2x}">
-      <img src="${post.images.mobile}">
-    </picture>
-    <section class="blog__post-content">
-      <h2 class="blog__post-header">${post.title}</h2>
-      <p class="blog__post-description">${post.description}</p>
-      <a href="${post.url}">
-        <button class="blog__post-read-button">Read now</button>
-      </a>
-    </section>
-  `;
+  headerElement.innerText = post.title;
+  descriptionElement.innerText = post.description;
+  linkElement.href = post.url;
 }
 
-function renderIndicators() {
-  indicatorsElement.innerHTML = blogPosts.map((_, i) => (
-    `<button class="blog__indicator ${i === currentBlogPost ? 'selected' : ''}"></button>`
-  )).join('');
+function createIndicators() {
+  blogPosts.forEach((_,i)=>{
+    const indicator = document.createElement('button');
+    indicator.classList.add('blog__indicator');
+    indicator.addEventListener('click', () => goToBlogPost(i));
+    indicatorsElement.appendChild(indicator);
+  });
+}
 
+function updateIndicators() {
   $$('.blog__indicator').forEach((indicator, i) => {
-    indicator.addEventListener('click', () => goToBlogPost(i))
+    if(i === currentBlogPost) {
+      indicator.classList.add('selected');
+    }
+    else {
+      indicator.classList.remove('selected');
+    }
   });
 }
 

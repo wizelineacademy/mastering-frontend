@@ -5,15 +5,18 @@
 .title{
   font-family: Roboto,sans-serif;
   font-size: .800rem;
+  color: #3d4f9f;
 }
 .subtitle{
   font-family: Quicksand,sans-serif;
   font-size: 3rem;
   font-weight: 200;
+  color: #3d4f9f;
 }
 .paragraph{
   font-family: Roboto,sans-serif;
   font-size: 1rem;
+  line-height: 1.5em;
 }
 .bold{
   font-weight: 800;
@@ -80,10 +83,22 @@
   font-size: 13px;
   font-weight: bold;
   border: none;
+  cursor: pointer;
 }
-.button-blue{
+.button-blue-pale{
   background-color: #D2E1FF;
   color: #3A79FF;
+}
+.button-blue-navy{
+  background-color: #4C85FF;
+  color: #FFF;
+}
+.button-blue-pale-navy{
+  background-color: #F5F8FF;
+  color: #D1D1E4;
+  border-style: solid;
+  border-color: #D1D1E4;
+  border-width: thin;
 }
 .main{
   position: relative;
@@ -117,6 +132,7 @@
       border-radius: 50%;
       color: #5E81FF;
       border: none;
+      cursor: pointer;
     }
   }
 }
@@ -138,6 +154,42 @@
     }
   }
 }
+.plan-manage{
+  height: 776px;
+  background-color: #F5F8FF;
+  &__content{
+    display: flex;
+    height: 100%;
+    &__section{
+      width: 50%;
+      background-position: 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &__text-container{
+      margin-left: 30%;
+      margin-top: 20%;
+    }
+    &__subtitle{
+      margin: 20px 0;
+    }
+    &__description{
+      color: #8D96BD;
+    }
+    &__buttons{
+      height: 43px;
+      width: 100%;
+      position: absolute;
+      z-index: 20;
+      top: 75%;
+      padding-left: 15%;
+      &__button{
+        height: 100%;
+        width: 130px;
+      }
+    }
+  }
+}
 #bit-bucket{
   background-image: url("/reference/assets/customers/bitbucket.png");
 }
@@ -152,4 +204,8 @@
 }
 #audi{
   background-image: url("/reference/assets/customers/audi.png");
+}
+#plan-manage-image{
+  background-image: url("/reference/assets/plan-manage.png");
+
 }

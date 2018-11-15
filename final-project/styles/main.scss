@@ -64,10 +64,6 @@ a {
   width: 100%;
   z-index: 1;
 
-  & + .section {
-    margin-top: pxToRem(80);
-  }
-
   &__inner-container {
     align-items: center;
     display: flex;
@@ -130,8 +126,8 @@ a {
   }
 }
 
-.section + .section {
-  border-top: 1px solid $border-color;
+.section {
+  border-bottom: 1px solid $border-color;
 }
 
 .productivity {
@@ -670,5 +666,73 @@ a {
     margin-left: pxToRem(10);
     max-width: pxToRem(200);
     padding: 10px;
+  }
+}
+
+.bottom-bar {
+  background: white;
+  height: pxToRem(300);
+  padding: 0 pxToRem(20);
+  width: 100%;
+
+  &__inner-container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    margin: auto;
+    max-width: pxToRem(1200);
+  }
+
+  &__image {
+    margin-right: pxToRem(20);
+  }
+
+  &__link-group {
+    align-items: center;
+    display: flex;
+
+    &:first-of-type {
+      margin-right: auto;
+      @include mediaMobile {
+        display: none;
+      }
+    }
+
+    &:last-of-type {
+      @include mediaTablet {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: $blue4-color;
+    cursor: pointer;
+    fill: currentColor;
+    font-size: .75rem;
+    font-weight: 500;
+    padding: pxToRem(20);
+    text-shadow: 0 0 5px #E6E6E6;
+
+    &:hover {
+      color: $blue3-color;
+    }
+  }
+
+  &__button {
+    @include removeButtonStyles;
+    background-color: $blue6-color;
+    border-radius: 2px;
+    color: $blue2-color;
+    cursor: pointer;
+    font-size: .8rem;
+    font-weight: bold;
+    margin-left: pxToRem(20);
+    padding: pxToRem(13) pxToRem(16);
+
+    @include mediaMobile {
+      display: none;
+    }
   }
 }

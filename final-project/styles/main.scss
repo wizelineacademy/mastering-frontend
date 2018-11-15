@@ -31,6 +31,47 @@ button{
   border: none;
 }
 
+.dot{
+  background-color: #D1D6E3;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  margin: 0 rem-calc(15px);
+}
+
+.text__header{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: rem-calc(10px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3D4F9F;
+}
+
+.text__subheader{
+  font-family: 'Quicksand', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: rem-calc(48px);
+  text-align: center;
+  color: #3D4F9F;
+}
+
+.text__paragraph{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: rem-calc(29px);
+  font-size: rem-calc(15px);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #8D96BD;
+  width: 500px;
+}
+
 .header {
   align-items: center;
   display: flex;
@@ -87,39 +128,6 @@ button{
   }
 }
 
-.text__header{
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  font-size: rem-calc(10px);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #3D4F9F;
-}
-
-.text__subheader{
-  font-family: 'Quicksand', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  font-size: rem-calc(48px);
-  text-align: center;
-  color: #3D4F9F;
-}
-
-.text__paragraph{
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: rem-calc(29px);
-  font-size: rem-calc(15px);
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #8D96BD;
-  width: 500px;
-}
-
 .section__one {
   align-items: center;
   background-image: url('/reference/assets/hero.png');
@@ -150,12 +158,40 @@ button{
 
 .section__two{
   display: flex;
-  justify-content: space-around;
-  padding: 2% 15%;
+  padding: rem-calc(18px) rem-calc(20px);
+  flex-wrap: wrap;
 
-  &-image{
+  &__dots{
+    display: none;
+    width: 100%;
+    justify-content: center;
+    @include mobile-breakpoint{
+      display: flex;
+    }
+  }
+  
+  &__images{
+    display: flex;
+    justify-content: space-around;
+    padding: rem-calc(18px) rem-calc(20px);
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__image{
     width: auto;
     height: max-content;
+    padding: rem-calc(18px) rem-calc(35px);
+    flex-wrap: wrap;
+  }
+
+  @include mobile-breakpoint{
+    &__image{
+      display: none;
+    }
+    &__image:first-child{
+      display: block;
+    }
   }
 }
 
@@ -431,37 +467,6 @@ button{
   &-dots{
     padding: 50px 0;
     padding-left: 75%;
-
-    span {
-    position: relative;
-    background-color: #5283FF;
-    border-radius: 5px;
-    font-size: 0;
-    padding: 5px;
-    }
-
-    span:before {
-      position: absolute;
-      left: 20px;
-      top: 0;
-      content: '';
-
-      background-color: #D1D6E3;
-      border-radius: 5px;
-      font-size: 0;
-      padding: 5px;
-    }
-
-    span:after {
-      position: absolute;
-      left: 40px;
-      top: 0;
-      content: '';
-      background-color: #D1D6E3;
-      border-radius: 5px;
-      font-size: 0;    
-      padding: 5px;
-    }
   }
 }
 

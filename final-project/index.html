@@ -5,10 +5,430 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body>
-  <h1>Hello world!</h1>
+  <div id="container">
+    <!-- Header Section -->
+    <header class="main-container header">
+      <div class="sub-container header__content">
+        <div class="header__section">
+          <div class="header__logo"></div>
+          <div class="menu">
+            <ul class="menu__items-list">
+              <li><a href="#" class="menu__item--selected">Home</a></li>
+              <li><a href="#" class="menu__item">Blog</a></li>
+              <li><a href="#" class="menu__item">Features</a></li>
+              <li><a href="#" class="menu__item">Pricing</a></li>
+              <li><a href="#" class="menu__item">Documentation</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__section">
+          <div class="social-networks">
+              <a href="#" class="social-networks__item"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-networks__item"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#" class="social-networks__item"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-networks__item"><i class="fab fa-medium-m"></i></a>
+          </div>
+          <a href="#" class="button button--blue">Get Started</a>
+          <a id="menu-mobile-button" href="#">
+            <i class="fas fa-bars fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+  
+    <!-- Body -->
+    <div class="body">
+      <div class="main-container hero">
+        <div class="sub-container hero__content">
+          <h4>PLAN YOUR LIFE</h4>
+          <h2>Increase your <span>productivity</span></h2>
+          <p>
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu <br /> atqui laudem an, insolens gubergren similique est cu. Et vel modus <br/> congue vituperata.
+          </p>
+          <a href="#" class="hero__content__play-video"><i class="fas fa-play"></i></a>
+        </div>
+      </div>
+
+      <div class="main-container customers">
+        <div class="sub-container customers__content">
+          <div class="customers__slider">
+            <div class="customers__slider__slides">
+              <a href="#" id="bitbucket" class="customers__slider__slide"></a>
+              <a href="#" id="apple" class="customers__slider__slide"></a>
+              <a href="#" id="facebook" class="customers__slider__slide"></a>
+              <a href="#" id="atlassian" class="customers__slider__slide"></a>
+              <a href="#" id="audi" class="customers__slider__slide"></a>
+            </div>
+            <div class="customers__slider__controls">
+              <a href="#" class="customers__slider__dot customers__slider__dot--selected"></a>
+              <a href="#" class="customers__slider__dot"></a>
+              <a href="#" class="customers__slider__dot"></a>
+              <a href="#" class="customers__slider__dot"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container manage">
+        <div class="sub-container manage__content">
+          <div class="manage__section">
+            <section>
+              <h4>DESKTOP AND MOBILE APP</h4>
+              <h3><span>Plan</span> and <span>manage</span></h3>
+              <p>
+                Brute laoreet efficiendi id his, ea illum nonumes luptatum <br/>
+                pro. Usu atqui laudem an, insolens gubergren similique <br/>
+                est cu. Et vel modus congue vituperata. Solum patrioque <br/> 
+                no sea. Mea ex malis mollis oporteat. Eum an expetenda <br/>
+                consequat.
+              </p>
+              <div class="desktop">
+                <a href="#" class="button manage__video-button"><span>View video <i class="fas fa-play"></i></span></a>
+                <a href="#" class="button manage__features-button">See features</a>
+              </div>
+            </section>
+          </div>
+          <div class="manage__section">
+            <img src="./assets/plan-manage.png" alt="">
+          </div>
+          <div class="manage__section">
+            <a href="#" class="button manage__video-button"><span>View video <i class="fas fa-play"></i></span></a>
+            <a href="#" class="button manage__features-button">See features</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container about">
+        <div class="sub-container about__content">
+          <h4>ABOUT US</h4>
+          <h3>Read about our app</h3>
+          <section>
+            <div class="about__section">
+              <span class="about__section__icon"><i class="fas fa-home"></i></span>
+              <p class="about__section__title">Overview</p>
+              <p class="about__section__text">
+                Brute laoreet efficiendi id <br/>
+                his, ea illum nonumes <br/>
+                luptatum pro.
+              </p>
+            </div>
+            <div class="about__section__line"></div>
+            <div class="about__section">
+                <span class="about__section__icon"><i class="far fa-folder-open"></i></span>
+                <p class="about__section__title">Files</p>
+                <p class="about__section__text">
+                  No vim nulla vitae <br/> 
+                  intellegat. Ei enim error <br/> 
+                  ius, solet atomorum <br/>
+                  conceptam ex has.
+                </p>
+            </div>
+            <div class="about__section__line"></div>
+            <div class="about__section">
+                <span class="about__section__icon"><i class="far fa-comment-alt"></i></span>
+                <p class="about__section__title">Meeting chats</p>
+                <p class="about__section__text">
+                  Vim ne tacimates <br/>
+                  neglegentur. Erat diceret <br/> 
+                  omittam at est.
+                </p>
+            </div>
+            <div class="about__section__line"></div>
+            <div class="about__section">
+                <span class="about__section__icon"><i class="fas fa-upload"></i></span>
+                <p class="about__section__title">Save events</p>
+                <p class="about__section__text">
+                  Nisl idque mel ea, <br/>
+                  nominati voluptatum.
+                </p>
+            </div>
+          </section>
+          <div class="about__buttons">
+            <a href="#" class="button button--red">Read more</a>
+            <a href="#" class="button about__buttons__or">OR</a>
+            <a href="#" class="button button--blue">Get Started</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-container statistics">
+        <div id="customers" class="statistics__section">
+          <p class="statistics__section__icon">
+            <img src="./assets/speedmeter.png" alt="">
+          </p>
+          <p class="statistics__section__title">89%</p>
+          <p class="statistics__section__text">
+            Customers who have <br/>
+            increased their productivity
+          </p>
+        </div>
+        <div id="users" class="statistics__section">
+          <p class="statistics__section__icon">
+            <img src="./assets/people.png" alt="">
+          </p>
+          <p class="statistics__section__title">3123</p>
+          <p class="statistics__section__text">
+            Users who have used <br/>
+            our application
+          </p>
+        </div>
+      </div>
+      
+      <div class="main-container blog">
+        <div class="sub-container blog__content">
+          <h4>OUR RESOURCES</h4>
+          <h3>Start reading our blog</h3>
+          <div id="blog__pre-loader" class="pre-loader">
+            <p class="pre-loader__icon"><i class="fas fa-spinner fa-spin fa-5x"></i></p>
+            <p class="pre-loader__text">Loading...</p>
+          </div>
+          <div id="blog__slider" class="blog__slider blog__slider--hidden">
+            <section>
+              <a id="blog__slider__left-arrow" href="#" class="blog__slider__arrow">
+                <img src="/assets/left-arrow.png" alt="">
+              </a>
+              <div id="blog__slider__slides" class="blog__slider__slides">
+                <div class="blog__slider__slide blog__slider__slide--hidden">
+                  <div class="blog__slider__slide__section">
+                    <img src="./assets/slide1.png" alt="">
+                  </div>
+                  <div class="blog__slider__slide__section">
+                    <h2>How to start planning</h2>
+                    <p>
+                      Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br/> 
+                      nam. Eu usu vidit tractatos, vero tractatos ius an, in mel <br/>
+                      diceret persecuti. Natum petentium principes mei ea. Tota <br/>
+                      everti periculis vis ei, quas tibique pro at, eos ut decore ...<br/>
+                    </p>
+                    <div class="buttons">
+                        <a href="#" class="button button--blue">Read now</a>
+                        <span class="button">Add your bookmarks</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a id="blog__slider__right-arrow" href="#" class="blog__slider__arrow">
+                <img src="/assets/rigth-arrow.png" alt="">
+              </a>
+            </section>
+            <section>
+                <ul id="blog__slider__controls" class="blog__controls"></ul>
+            </section>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-container testimonials">
+        <div class="sub-container testimonials__content">
+          <div class="testimonials__section">
+            <div class="testimonials__section__text">
+              <h4>TESTIMONIALS</h4>
+              <h3>Customers's quotes</h3>
+              <p>
+                Brute laoreet efficiendi id his, ea illum nonumes <br/>
+                luptatum pro. Usu atqui laudem an.
+              </p>
+            </div>
+          </div>
+          <div class="testimonials__section">
+            <div class="testimonials__slider">
+              <div class="testimonials__slider__slides">
+                  <div class="testimonials__slider__slides__slide">
+                    <p>
+                        Quidam vocibus eum ne, erat consectetuer 
+                        voluptatibus ut nam. Eu usu vidit tractatos, 
+                        vero tractatos ius an, in mel diceret 
+                        persecuti.
+                    </p>
+                    <img src="/assets//testimonial.png" alt="">
+                  </div> 
+              </div>
+              <div class="testimonials__slider__controls">
+                <ul>
+                  <li><a href="#" class="selected"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-container faq">
+        <div class="sub-container faq__content">
+          <h4>Customer help</h4>
+          <h3>Frequently asked questions</h3>
+          <div id="faq__questions" class="faq__questions">
+            <div class="faq__questions__question">
+              <div class="faq__questions__question__header">
+                  <a href="#" class="faq__questions__question__toggle" data-question="1">
+                    <i class="fas fa-angle-down"></i>
+                    <span>Reque insolens in vel?</span>
+                  </a>
+              </div>
+              <div class="faq__questions__question__body">
+                <div class="text">
+                  Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br /> 
+                  nam. Eu usu vidit tractatos, vero tractatos ius an, in mel <br /> 
+                  diceret persecuti.
+                </div>
+                <div class="actions">
+                  <a href="#" class="button">Go to documentation</a>
+                </div>
+              </div>
+            </div>
+            <div class="faq__questions__question">
+              <div class="faq__questions__question__header">
+                <a href="#" class="faq__questions__question__toggle" data-question="2">
+                  <i class="fas fa-angle-down"></i>
+                  <span>Vis rebum error graecis ea, id sit postea accusamus?</span>
+                </a>
+              </div>
+              <div class="faq__questions__question__body">
+                <div class="text">
+                  Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br /> 
+                  nam. Eu usu vidit tractatos, vero tractatos ius an, in mel <br /> 
+                  diceret persecuti.
+                </div>
+                <div class="actions">
+                  <a href="#" class="button">Go to documentation</a>
+                </div>
+              </div>
+            </div>
+            <div class="faq__questions__question">
+              <div class="faq__questions__question__header">
+                <a href="#" class="faq__questions__question__toggle" data-question="3">
+                  <i class="fas fa-angle-down"></i>
+                  <span>Lorem repudiandae ne nec?</span>
+                </a>
+              </div>
+              <div class="faq__questions__question__body">
+                <div class="text">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br /> 
+                    nam. Eu usu vidit tractatos, vero tractatos ius an, in mel <br /> 
+                    diceret persecuti.
+                </div>
+                <div class="actions">
+                  <a href="#" class="button">Go to documentation</a>
+                </div>
+              </div>
+            </div>
+            <div class="faq__questions__question">
+              <div class="faq__questions__question__header">
+                <a href="#" class="faq__questions__question__toggle" data-question="4">
+                  <i class="fas fa-angle-down"></i>
+                  <span>Ad dicit numquam vel. Et eos iudico feugait percipitur?</span>
+                </a>
+              </div>
+              <div class="faq__questions__question__body">
+                <div class="text">
+                  Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br /> 
+                  nam. Eu usu vidit tractatos, vero tractatos ius an, in mel <br /> 
+                  diceret persecuti.
+                </div>
+                <div class="actions">
+                  <a href="#" class="button">Go to documentation</a>
+                </div>
+              </div>
+            </div>
+            <div class="faq__questions__question">
+              <div class="faq__questions__question__header">
+                <a href="#" class="faq__questions__question__toggle" data-question="5">
+                  <i class="fas fa-angle-down"></i>
+                  <span>Sea no dico percipitur. Fierent constituam definitiones id eum?</span>
+                </a>
+              </div>
+              <div class="faq__questions__question__body">
+                <div class="text">
+                  Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br /> 
+                  nam. Eu usu vidit tractatos, vero tractatos ius an, in mel <br /> 
+                  diceret persecuti.
+                </div>
+                <div class="actions">
+                  <a href="#" class="button">Go to documentation</a>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+      
+      <div class="main-container pricing">
+        <div class="sub-container pricing__content">
+          <h4>PLAN YOUR LIFE</h4>
+          <h2>Get <span>started</span> now</h2>
+          <p>
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens <br/> 
+            gubergren similique est cu. Et vel modus congue vituperata.
+          </p>
+          <div class="buttons">
+            <a href="#" id="button1" class="button">View pricing</a>
+            <a href="#" id="button2" class="button">Read documentation</a>  
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-container newsletter">
+        <div class="sub-container newsletter__content">
+          <div class="newsletter__text">
+            <h4>Sign up for newsletter</h4>
+            <p>
+              Cu qui soleat partiendo urbanitas. Eum aperiri <br/>
+              indoctum eu, homero alterum.
+            </p>
+          </div>  
+          <div class="newsletter__form">
+            <input type="text" placeholder="Email address">
+            <a href="#">Save me</a>
+          </div>  
+        </div> 
+      </div>
+
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="footer main-container">
+      <div class="footer__content sub-container">
+        <!-- Repeat the header section -->
+        <section>
+          <div class="footer__section">
+            <div class="header__logo"></div>
+            <div class="menu">
+              <ul class="menu__items-list">
+                <li><a href="#" class="menu__item--selected">Home</a></li>
+                <li><a href="#" class="menu__item">Blog</a></li>
+                <li><a href="#" class="menu__item">Features</a></li>
+                <li><a href="#" class="menu__item">Pricing</a></li>
+                <li><a href="#" class="menu__item">Documentation</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__section">
+            <div class="social-networks">
+                <a href="#" class="social-networks__item"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-networks__item"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" class="social-networks__item"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-networks__item"><i class="fab fa-medium-m"></i></a>
+            </div>
+            <a href="#" class="button button--blue"><span class="button__text">Get Started</span></a>
+          </div>
+        </section>
+        <!-- Copyright text -->
+        <section>
+          <p class="footer__text">Copyright &copy; 2018 by Random site</p>
+        </section>
+      </div>
+    </footer>
+  </div>
   <script src="./dist/bundle.js"></script>
+  <noscript>
+    <!-- Warning when JS is disabled -->
+    <i class="fas fa-exclamation-triangle"></i> <span>For full functionality of this site it is necessary to enable JavaScript.</span>
+  </noscript>
 </body>
 </html>

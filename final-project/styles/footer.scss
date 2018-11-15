@@ -1,0 +1,79 @@
+.footer {
+    height: 370px;
+    position: absolute;
+    bottom: 0;
+    border-top: solid 1px #D8E3FE;
+    &__content {
+        flex-direction: column;
+    }
+    &__section {
+        @include flex-container(100%);
+        flex-direction: column;
+        &:first-child {
+            justify-content: flex-start;
+        }
+        &:last-child {
+            justify-content: flex-end;
+        }
+    }
+    &__text {
+        font-family: $quicksand-font;
+        font-size: 12px;
+        font-weight: 500;
+        color: #AEB8D0;
+        margin-top: 30px;
+    }
+    section {
+        @include flex-container(100%);
+        flex-direction: column;
+    }
+    @include md {
+        &__section {
+            flex-direction: row;
+            &:first-child {
+                width: 80%;
+            }
+            &:last-child {
+                width: 20%;
+            }
+        }
+        section {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+    @include lg {
+        &__section {
+            @include flex-container(50%);
+            &:first-child {
+                width: 50%;
+            }
+            &:last-child {
+                width: 50%;
+            }
+        }
+        section {
+            justify-content: flex-start;
+        }
+    }
+    @include xl {
+        height: 287px;
+        &__section {
+            @include flex-container(50%);
+            flex-direction: row;
+            &:first-child {
+                width: 50%;
+            }
+            &:last-child {
+                width: 50%;
+            }
+        };
+        &__text {
+            margin-left: 50px;
+        };
+        section {
+            flex-direction: row;
+            justify-content: space-between;
+        };
+    }
+}

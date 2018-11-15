@@ -1,0 +1,121 @@
+@mixin line-decoration {
+  display: inline-block;
+  height: 1px;
+  content: " ";
+  text-shadow: none;
+  width: 15px;
+  background-color: #ADB3CB;
+}
+
+.about {
+  height: 800px;
+  @include bg-image('../assets/clouds.png');
+  background-position: top center;
+  align-items: flex-start;
+  &__content {
+    height: auto;
+    flex-direction: column;
+    margin-top: 40px;
+    h4 {
+      @include title-4
+    }
+    h3 {
+      @include title-3
+    }
+    section {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+  }
+
+  &__buttons {
+    @include flex-container(100%);
+    margin-top: 30px;
+    &__or {
+      font-family: $open-sans-font;
+      color: #ADB3CB;
+      font-weight: 600;
+      &::before{
+        @include line-decoration;
+        margin: 0px 15px 0px 0px;
+      }
+      &::after {
+        @include line-decoration;
+        margin: 0px 0px 0px 15px;
+      }
+    }
+  }
+  &__section {
+    @include flex-container(50%);
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px 0px;
+    &__icon {
+      width: 69px;
+      height: 69px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: #F1F5FF;
+      color: #4074F8;
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-family: $open-sans-font;
+      font-size: 14px;
+      font-weight: bold;
+      color: #4074F8;
+      margin-bottom: 20px;
+    }
+    &__text {
+      font-family: $open-sans-font;
+      font-size: 11px;
+      font-weight: 600;
+      color: #ADB3CB;
+      text-align: center;
+      line-height: 2;
+    }
+    &__line {
+      display: none;
+    }
+  }
+
+  @include md {
+    align-items: center;
+    &__content {
+      margin-top: 0px;
+      section {
+        flex-wrap: nowrap;
+      }
+    }
+    &__section {
+      &__line {
+        height: 254px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+          @include line-decoration;
+          width: 28px;
+          background-color: #DAE4FE;
+        }
+      }
+    }
+  }
+
+  @include xl {
+    align-items: center;
+    &__content {
+      margin-top: 0px;
+      section {
+        width: 90%;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        margin-top: 50px;
+      }
+    }
+  }
+}

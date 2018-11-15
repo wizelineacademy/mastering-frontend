@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/dist"
+    publicPath: "/dist/"
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -51,12 +51,22 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader // separates css from js
           },
           {
-            loader: "css-loader" // translates CSS into CommonJS
+            loader: "css-loader", options: {url: true} // translates CSS into CommonJS
           },
           {
             loader: "sass-loader" // compiles Sass to CSS
           }
         ]
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,  
+        use: [{
+            loader: 'url-loader',
+            options: { 
+                limit: 8000, // Convert images < 8kb to base64 strings
+                name: 'images/[hash]-[name].[ext]'
+            } 
+        }]
       }
     ]
   }

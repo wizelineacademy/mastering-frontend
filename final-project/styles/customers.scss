@@ -1,0 +1,113 @@
+@mixin desktop-styles {
+  height: 145px;
+  &__slider {
+    &__slides {
+      @include flex-container(100%);
+      justify-content: space-evenly;
+      margin-bottom: 0px;
+    }
+    &__slide {
+      display: block;
+      width: auto;
+      flex-grow: 1;
+      margin-bottom: 0px;
+    }
+    &__controls {
+      display: none;
+    }
+  }
+}
+
+.customers {
+  height: 145px;
+  &__content {
+    height: 100px;
+  }
+  &__slider {
+    @include flex-container(100%);
+    flex-direction: column;
+    &__slides {
+      margin-bottom: 30px;
+    }
+    &__slide {
+      width: 117px;
+      height: 29px;
+      display: none;
+      background-position: center;
+      background-repeat: no-repeat;
+      &:first-child {
+        display: block;
+      }
+    }
+    &__controls {
+      @include flex-container(100%);
+    }
+    &__dot {
+      @include slider-control-dot;
+    }
+  }
+
+  @include md {
+    height: 226px;
+    &__content {
+      height: 226px;
+    }
+    &__slider {
+      &__slides {
+        @include flex-container(100%);
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+      }
+      &__slide {
+        display: block;
+        width: 30%;
+        margin-bottom: 40px;
+      }
+      &__controls {
+        display: none;
+      }
+    }
+  }
+
+  @include lg {
+    @include desktop-styles;
+  }
+
+  @include xl {
+    @include desktop-styles;
+  }
+}
+
+#bitbucket {
+  background-image: url('../assets/bitbucket.svg');
+  &:hover {
+    background-image: url('../assets/bitbucket_hover.svg'); 
+  }
+}
+#apple {
+  background-image: url('../assets/apple-watch.svg');
+  &:hover {
+    background-image: url('../assets/apple-watch_hover.svg'); 
+  }
+}
+#facebook {
+  background-image: url('../assets/facebook.svg');
+  &:hover {
+    background-image: url('../assets/facebook_hover.svg'); 
+  }
+}
+#atlassian {
+  background-image: url('../assets/atlassian.svg');
+  &:hover {
+    background-image: url('../assets/atlassian_hover.svg'); 
+  }
+}
+
+#audi {
+  background-image: url('../assets/audi.svg');
+  &:hover {
+    background-image: url('../assets/audi_hover.svg');
+  }
+}

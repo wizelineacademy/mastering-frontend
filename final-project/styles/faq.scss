@@ -1,0 +1,108 @@
+.faq {
+    height: 900px;
+    &__content {
+        height: auto;
+        flex-direction: column;
+        h4 {
+            @include title-4;
+        }
+        h3 {
+            @include title-3;
+        }
+    }
+    &__questions {
+        width: 100%;
+        margin-top: 30px;
+        &__question {
+            display: flex;
+            flex-direction: column;
+            border-bottom: solid #8E96B7 1px;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+            transition: height 0.5s ease-out padding 0.3 linear;
+            &__header{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                height: 60px;
+                padding: 10px;
+                box-sizing: border-box;
+                a {
+                    width: 100%;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    font-family: $quicksand-font;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #8E96B7;
+                }
+                span {
+                    padding-left: 10px;
+                }
+                i {
+                    font-size: 18px;
+                    vertical-align: middle;
+                }
+            }
+            &__body{
+                width: 100%;
+                height: 225px;
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                box-sizing: border-box;
+                .text {
+                    @include text;
+                    text-align: justify;
+                    line-height: 1.5;
+                    margin-bottom: 40px;
+                }
+                a {
+                    width: 195px;
+                    background-color: #E8ECF4;
+                    color: #7382A3 !important;
+                    font-weight: 500;
+                }
+                .actions {
+                    @include flex-container(100%);
+                }
+            }
+            &--expanded {
+                height: 285px;
+                a {
+                    color: #495274;
+                }
+            }
+        }
+    }
+    @include xl {
+        &__questions {
+            width: 60%;
+            margin-top: 50px;
+            &__question {
+                height: 60px;
+                &__body {
+                    height: 95px;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    .text {
+                        width: 70%;
+                        margin-bottom: 0px;
+                    }
+                    .actions {
+                        width: 30%;
+                    }
+                }
+                &--expanded {
+                    height: 155px;
+                }
+            }
+        }
+    }
+}

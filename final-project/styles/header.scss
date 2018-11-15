@@ -18,6 +18,10 @@
     background-color: #5E81FE;
     border-radius: 50%;
   }
+
+  .menu {
+    display: none;
+  }
   
   .button {
     display: none;
@@ -35,6 +39,9 @@
   }
 
   @include md {
+    .menu {
+      display: flex;
+    }
     &__section {
       &:first-child {
         width: 80%;

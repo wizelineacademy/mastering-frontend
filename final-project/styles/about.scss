@@ -32,7 +32,7 @@
 
   &__buttons {
     @include flex-container(100%);
-    margin-top: 50px;
+    margin-top: 30px;
     &__or {
       font-family: $open-sans-font;
       color: #ADB3CB;
@@ -50,6 +50,7 @@
   &__section {
     @include flex-container(50%);
     flex-direction: column;
+    justify-content: flex-start;
     margin: 10px 0px;
     &__icon {
       width: 69px;
@@ -77,6 +78,9 @@
       text-align: center;
       line-height: 2;
     }
+    &__line {
+      display: none;
+    }
   }
 
   @include md {
@@ -87,6 +91,19 @@
         flex-wrap: nowrap;
       }
     }
+    &__section {
+      &__line {
+        height: 254px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+          @include line-decoration;
+          width: 28px;
+          background-color: #DAE4FE;
+        }
+      }
+    }
   }
 
   @include xl {
@@ -94,7 +111,7 @@
     &__content {
       margin-top: 0px;
       section {
-        width: 80%;
+        width: 90%;
         flex-wrap: nowrap;
         justify-content: space-evenly;
         margin-top: 50px;

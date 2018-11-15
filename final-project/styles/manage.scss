@@ -54,6 +54,7 @@ $titles-margin: 0px 0px 10px;
     }
     &:last-child{
       flex-direction: row;
+      margin-top: 30px;
     }
   }
   &__video-button{
@@ -92,6 +93,7 @@ $titles-margin: 0px 0px 10px;
       }
       &:last-child {
         justify-content: flex-start;
+        margin-top: 0px;
       } 
     }
   }

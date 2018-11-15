@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/dist"
+    publicPath: "/dist/"
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -51,7 +51,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader // separates css from js
           },
           {
-            loader: "css-loader" // translates CSS into CommonJS
+            loader: "css-loader", options: {url: true} // translates CSS into CommonJS
           },
           {
             loader: "sass-loader" // compiles Sass to CSS

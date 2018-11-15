@@ -9,7 +9,7 @@ $default-font-size: 13px;
 .menu {
   font-family: $quicksand-font;
   @include flex-container(100%);
-  display: none;
+  display: flex;
   margin: 20px 0px;
   ul {
     margin: 0;
@@ -37,7 +37,6 @@ $default-font-size: 13px;
   }
 
   @include md {
-    display: flex;
     ul {
       flex-direction: row;
       justify-content: space-evenly;
@@ -51,7 +50,6 @@ $default-font-size: 13px;
   }
 
   @include xl {
-    display: flex;
     ul {
       flex-direction: row;
       justify-content: space-evenly;

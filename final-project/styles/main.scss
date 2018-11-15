@@ -13,10 +13,17 @@
   font-weight: 200;
   color: #3d4f9f;
 }
+.subtitle-small{
+  font-family: Quicksand,sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #3d4f9f;
+}
 .paragraph{
   font-family: Roboto,sans-serif;
   font-size: 1rem;
-  line-height: 1.5em;
+  line-height: 1.8em;
+  color: #ADB3CB;
 }
 .bold{
   font-weight: 800;
@@ -100,6 +107,10 @@
   border-color: #D1D1E4;
   border-width: thin;
 }
+.button-red{
+  background-color: #FFD7D7;
+  color: #D43F3F;
+}
 .main{
   position: relative;
   top: 80px;
@@ -180,7 +191,7 @@
     &__buttons{
       height: 43px;
       width: 100%;
-      z-index: 20;
+      z-index: 2;
       top: 60%;
       padding-left: 15%;
       position: absolute;
@@ -194,6 +205,65 @@
 .about{
   height: 885px;
   background-color: #FFF;
+  &__content{
+    background-image: url("/reference/assets/clouds.png");
+    background-size: contain;
+    height: 70%;
+    width: 80%;
+    margin: 15% 10%;
+    &__header{
+      height: 30%;
+      text-align: center;
+      h1, h2{
+        margin: 20px 0;
+      }
+    }
+    &__options{
+      height: 40%;
+      &__content{
+        display: flex;
+        height: 100%;
+        position: relative;
+        justify-content: space-evenly;
+        &__features{
+          width: 15%;
+          height: 100%;
+          &__section{
+            position: relative;
+            width: 100%;
+            height: 33%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button{
+              height: 69px;
+              width: 69px;
+              border-radius: 50%;
+              background-position: 50%;
+              background-repeat: no-repeat;
+            }
+            p{
+              text-align: center;
+              font-size: 1rem;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    &__buttons{
+      height: 30%;
+      &__content{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        top:80%;
+        p{
+          line-height: 43px;
+        }
+      }
+    }
+  }
 }
 #bit-bucket{
   background-image: url("/reference/assets/customers/bitbucket.png");
@@ -212,4 +282,16 @@
 }
 #plan-manage-image{
   background-image: url("/reference/assets/plan-manage.png");
+}
+#home-icon{
+  background-image: url("/reference/assets/icons/home.png");
+}
+#folder-icon{
+  background-image: url("/reference/assets/icons/folder.png");
+}
+#chat-icon{
+  background-image: url("/reference/assets/icons/chat.png");
+}
+#upload-icon{
+  background-image: url("/reference/assets/icons/upload.png");
 }

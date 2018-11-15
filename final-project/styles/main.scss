@@ -100,12 +100,15 @@
   background-color: #4C85FF;
   color: #FFF;
 }
-.button-blue-pale-navy{
+.button-blue-pale-navy-bordered{
   background-color: #F5F8FF;
   color: #D1D1E4;
   border-style: solid;
   border-color: #D1D1E4;
   border-width: thin;
+}
+.button-blue-pale-navy{
+  background-color: #F1F5FF;
 }
 .button-red{
   background-color: #FFD7D7;
@@ -260,6 +263,8 @@
         top:80%;
         p{
           line-height: 43px;
+          letter-spacing: 5px;
+          text-align: center;
         }
       }
     }

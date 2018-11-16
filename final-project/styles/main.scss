@@ -48,6 +48,8 @@ button{
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #3D4F9F;
+  text-align: center;
+
 }
 
 .text__subheader{
@@ -173,7 +175,6 @@ button{
   &__images{
     display: flex;
     justify-content: space-around;
-    padding: rem-calc(18px) rem-calc(20px);
     flex-wrap: wrap;
     width: 100%;
   }
@@ -196,59 +197,48 @@ button{
 }
 
 .section__three{
+  align-items: center;
   background-color: #F5F8FF;
-  color: #3D4F9F;
-  font-weight: 500;
-  padding: 5% 15%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: rem-calc(80px) rem-calc(60px);
 
-  &-partOne{
-    display: flex;
-    justify-content: center;
-
+  &__section{
+    width: 50%;
+    @include tablet-breakpoint{
+      width: 100%
+    }
   }
 
-  &-header{
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
+  &__text{
+    text-align: left;
+    width: auto;
   }
 
-  &-subheader{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 36px;
+  &__image{
+    width: 100%
   }
 
-  &-text{
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    color: #8D96BD;
-  }
-
-  &-buttonSection{
-    display: flex;
-  }
-
-  &-viewbutton{
-    width: 130px;
-    height: 43px;
+  &__viewbutton{
     background: #4C85FF;
-    box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
     border-radius: 2px;
+    box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
     color: #fff;
     font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
     font-size: 13px;
+    font-weight: bold;
+    height: 43px;
   }
 
-  &-seebutton{
-    width: 130px;
-    color: #ADB4D2;
-    height: 43px;
+  &__seebutton{
     background: transparent;
     border-radius: 2px;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    font-size: 13px;
     border: 1px solid;
+    color: #ADB4D2;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 43px;
   }
 }
 

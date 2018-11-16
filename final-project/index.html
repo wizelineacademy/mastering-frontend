@@ -206,24 +206,28 @@
           we will have multiple items with this article as template
         -->
         <article class="blog__content__article">
-          <picture>
-              <img src="/reference/assets/sample-blog-entry.png" alt="upload" >
-          </picture>
-          <header>
-            <h1>How start planning</h1>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident consequatur quod numquam saepe maiores placeat libero, incidunt nisi unde adipisci dolor nobis nam pariatur quis earum laudantium reprehenderit praesentium.
-          </p>
-          <div class="blog__content__article__actions">
-            <button class="blog__content__article__actions__read" >Read Now</button>
-            <button class="blog__content__article__actions__bookmark" >Add to your bookmarks</button>
+          <div class="blog__content__article__image">
+            <picture>
+                <img src="/reference/assets/sample-blog-entry.png" alt="upload" >
+            </picture>
           </div>
+          <div class="blog__content__article__info">
+            <div  class="blog__content__article__data">
+              <header>
+                <h1>How start planning</h1>
+              </header>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident consequatur quod numquam saepe maiores placeat libero, incidunt nisi unde adipisci dolor nobis nam pariatur quis earum laudantium reprehenderit praesentium.
+              </p>
+            </div>
+            <div class="blog__content__article__actions">
+                <button class="blog__content__article__actions__read" >Read Now</button>
+                <button class="blog__content__article__actions__bookmark" >Add to your bookmarks</button>
+              </div>
+          </div>
+          
         </article>
       </div>
-      <!--
-        this will be a dot-page controller
-      -->
       <div class="page-controller" >
           <span class="page-controller__indicator page-controller__indicator--active" onclick="currentCustomer(1)"></span>
           <span class="page-controller__indicator " onclick="currentCustomer(2)"></span>
@@ -231,7 +235,7 @@
       </div>
     </section>
     <section class="testimonials">
-      <div>
+      <div class="testimonials__info">
         <header>
           <span>testimonials</span>
           <h2>
@@ -242,19 +246,19 @@
           </p>
         </header>
       </div>
-      <div>
-        <div>
-          <!--
-          we will have multiple items with this div as template
-          -->
-          <div>
+      <div class="testimonials__gallery">
+        <div class="testimonials__gallery__item">
+          <div class="testimonials__gallery__item__quote">
             <blockquote>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ut hic at, quos explicabo, dicta dolores numquam ratione minus deleniti minima dolore laboriosam nostrum vitae. Inventore natus quasi impedit a!
+              Necessitatibus ut hic at, quos explicabo, dicta dolores numquam ratione minus deleniti minima dolore laboriosam nostrum vitae. Inventore natus quasi impedit a!
             </blockquote>
-            <picture>
-                <img src="/reference/assets/an_user.png" alt="upload">
-            </picture>
           </div>
+          <div class="testimonials__gallery__item__photo">
+              <picture >
+                  <img src="/reference/assets/an_user.png" alt="Happy user photo">
+              </picture>
+          </div>
+         
         </div>
         <div class="page-controller" >
             <span class="page-controller__indicator page-controller__indicator--active" onclick="currentCustomer(1)"></span>

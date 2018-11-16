@@ -85,28 +85,65 @@ p{
   flex-direction: column;
   background-color: $alter-section-color;
   padding: 0 rem-calc(14px);
-  &__content__article{
+  &__content{
     display: flex;
-    flex-direction: column;
-    border: 1px solid #D8E3FE;
-    padding: rem-calc(14px);
-    background-color: white;
-    &__actions{
-      &__read{
-        background-color: $action-button-color;
+    justify-content: center;
+    &__article{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #D8E3FE;
+      padding: rem-calc(14px);
+      background-color: white;
+      &__image{
         width: 100%;
-        height: rem-calc(34px);
-        color:#3A79FF;
-        margin: rem-calc(14px) 0 rem-calc(25px); 
+        overflow: hidden;
+        background-color: $alter-section-color;
+        @include desktop-breakpoint {
+          width: 407px;
+          margin: rem-calc(40px);
+          flex-grow: 10;
+          flex-shrink: 0;
+        }
       }
-      &__bookmark{
-        display: none;
+      &__info{
+        display: flex;
+        flex-direction: column;
         @include tablet-breakpoint {
-          display: inline;
+          margin: rem-calc(16px) 0;
         }
         @include desktop-breakpoint {
-          display: inline;
+          margin: rem-calc(40px) rem-calc(16px) rem-calc(40px) 0 ;
         }
+      }
+      &__actions{
+        &__read{
+          background-color: $action-button-color;
+          width: 100%;
+          height: rem-calc(34px);
+          color:#3A79FF;
+          
+          
+          @include tablet-breakpoint {
+            width: rem-calc(178px);
+          }
+          @include desktop-breakpoint {
+            width: rem-calc(109px);
+          }
+        }
+        &__bookmark{
+          display: none;
+          @include tablet-breakpoint {
+            display: inline;
+          }
+          @include desktop-breakpoint {
+            display: inline;
+          }
+        }
+      }
+      @include desktop-breakpoint {
+        width: rem-calc(960px);
+        flex-direction: row;
       }
     }
   }
@@ -125,7 +162,7 @@ p{
     }
   }
   .page-controller{
-    margin: 30px 126px 105px 126px;
+    margin: rem-calc(48px) auto;
   }
 }
 .circle{
@@ -444,20 +481,22 @@ p{
 
 .page-controller{
   display:flex;
-  height: 10px;
-  margin:0 auto rem-calc(50px);
   &__indicator {
     border: 1px solid white;
     border-radius: 50%;
     height:8px;
     width:8px;
     background-color: #D1D6E3;
+    &--active{
+      background-color: #5283FF;
+    }
   }
   &__indicator + &__indicator{
     margin-left:5px;
   }
-  &__indicator--active{
-    background-color: #5283FF;
+  span{
+    padding: 0;
+    margin:0;
   }
 }
 
@@ -542,7 +581,7 @@ p{
   &__content{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     header{
       width: 100%;
       display: flex;
@@ -619,10 +658,10 @@ p{
       width: 50%;
     }
   }
+  
   @include tablet-breakpoint {
     display: flex;
   }
-  
   @include desktop-breakpoint {
     display: flex;
   }
@@ -630,14 +669,72 @@ p{
 
 .testimonials{
   display:none;
-  span{
-    margin: rem-calc(45px) 0 rem-calc(30px);
+  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+  padding: rem-calc(30px);
+  &__info{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    @include tablet-breakpoint {
+      width: 100%;
+    }
+    header{
+      span,h2,p{
+        text-align: center;
+        margin: 0 0 rem-calc(32px) 0 ;
+        @include desktop-breakpoint{
+          text-align: left;
+          margin: 0 0 rem-calc(13px) 0 ;
+        }
+      }
+    }
   }
+  &__gallery{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    @include tablet-breakpoint {
+      width: 100%;
+    }
+    &__item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__quote{
+        width: rem-calc(420px);
+        height: rem-calc(175px);
+        flex-shrink: 0;
+        background-color: white;
+        border: 1px solid #D8E3FE;
+        box-shadow:0 10px 50px #d8e3fe;
+        blockquote{
+          font-family: Roboto;
+          font-weight: 400;
+          margin: rem-calc(32px) rem-calc(64px);
+          text-align: center;
+          color: #676F95;
+        }
+      }
+      &__photo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        picture{
+          margin-top: -32px;
+        }
+      }
+    }
+    .page-controller{
+      margin: rem-calc(16px) auto;
+    }
+  }
+
   @include tablet-breakpoint {
     display: flex;
+    flex-direction: column;
   }
-  
   @include desktop-breakpoint {
     display: flex;
+    flex-direction: row;
   }
 }

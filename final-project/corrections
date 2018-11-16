@@ -1,0 +1,14 @@
+
+
+COMMENTS AND CORRECTIONS FOR THE PROJECT
+
+ [x] Change H2s, they're not a sub-title
+ [ ] Testimonials, make them quotes
+ [ ] Change caps to caps
+ [ ] Check for broken images and missing styles
+ [ ] Carousel's dots need to change with the images
+ [ ] Improve JS code by using classes
+ [ ] Classes like "blog__content" being shared with the CSS and the JS files is a bad practice.
+     Use one class only for the JS file
+ [ ] Complete from the blog to the top
+

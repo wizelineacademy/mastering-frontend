@@ -164,7 +164,7 @@ small {
   font-weight: 500;
   padding: 10px 0;
   width: 100%;
-  @include mobile-breakpoint{
+  @include mobile-breakpoint {
     text-align: center;
   }
 }
@@ -501,53 +501,65 @@ small {
 }
 
 .section__eight {
+  align-items: center;
   background-color: #fff;
-  height: 500px;
   color: #8e96b7;
+  display: flex;
+  flex-direction: column;
   font-weight: 500;
+  padding: rem-calc(30px) rem-calc(20px);
   text-align: center;
 
-  &-header {
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
-    color: #3d4f9f;
+  &__paragraph {
+    text-align: left;
+    padding-left: 20px;
   }
 
-  &-subheader {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 24px;
-    color: #3d4f9f;
-  }
-
-  &-text {
-    margin-left: 1%;
-    font-family: 'Quicksand', sans-serif;
-    line-height: 19px;
-    font-size: 15px;
-    color: #8e96b7;
-  }
-
-  &-question {
-    display: flex;
+  &__question {
     align-items: center;
     border-bottom: 1px solid #d8e3fe;
-  }
-  &-activeQuestion {
     display: flex;
-    align-items: center;
+    width: 80%;
 
-    &-body {
+    &__body {
+      align-items: center;
       border-bottom: 1px solid #d8e3fe;
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: space-around;
+      width: 80%;
     }
 
-    &-button {
-      width: 195px;
-      height: 43px;
+    &__button {
       background: #e8ecf4;
       border-radius: 2px;
+      height: 43px;
+      @include mobile-breakpoint{
+        margin-bottom: 40px;
+      }
+    }
+
+    @include mobile-breakpoint{
+      width: 100%;
+    }
+  }
+
+  &__active {
+    align-items: center;
+    border: none;
+    display: flex;
+    width: 80%;
+    @include mobile-breakpoint{
+      width: 100%;
+    }
+  }
+
+  &__text {
+    padding: 20px 0;
+    text-align: left;
+    width: 60%;
+    @include mobile-breakpoint{
+      width: auto;
     }
   }
 }
@@ -563,7 +575,6 @@ small {
   display: flex;
   flex-direction: column;
   padding: rem-calc(60px) rem-calc(20px);
-  width: 100%;
   text-align: center;
 
   &__header {
@@ -603,9 +614,9 @@ small {
     display: flex;
   }
 
-  &__text{
+  &__text {
     width: 610px;
-    @include mobile-breakpoint{
+    @include mobile-breakpoint {
       width: auto;
     }
   }
@@ -620,9 +631,9 @@ small {
   justify-content: center;
   padding: rem-calc(18px) rem-calc(20px);
 
-  &__left{
+  &__left {
     padding-right: 15px;
-    @include tablet-breakpoint{
+    @include tablet-breakpoint {
       align-items: center;
       display: flex;
       flex-direction: column;
@@ -630,25 +641,25 @@ small {
     }
   }
 
-  &__right{
+  &__right {
     padding-left: 15px;
-    @include tablet-breakpoint{
+    @include tablet-breakpoint {
       align-items: center;
       display: flex;
       justify-content: center;
       width: 100%;
     }
 
-    @include mobile-breakpoint{
+    @include mobile-breakpoint {
       align-items: center;
       display: flex;
-      flex-direction: column; 
+      flex-direction: column;
       justify-content: center;
     }
   }
 
   &__header {
-    color: #3D4F9F;
+    color: #3d4f9f;
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -660,7 +671,7 @@ small {
   &__text {
     text-align: left;
     width: 325px;
-    @include mobile-breakpoint{
+    @include mobile-breakpoint {
       width: 100%;
     }
   }

@@ -1,13 +1,510 @@
 // This should be imported by the main.js file
 
+// Font import
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,700|Quicksand:300,400,500,700|Roboto:300,400,500');
+
 // test for scss variables
-$primary-color: #2a3fbb;
+$primary-color: #3D4F9F;
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 h1 {
   color: $primary-color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  justify-content: center;
 }
+
+h1.white {
+  color: white;
+}
+
+p {
+  color: #8D96BD;
+  font-family: 'Roboto', sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 500;
+}
+
+section {
+  border-bottom: 1px solid #D8E3FE;
+}
+
+.carousel__icon {
+  font-size: 7px;
+}
+
+.carousel__icon > i {
+  color: #D1D6E3;
+  margin: 6px;
+}
+
+.carousel__icon > i:first-child {
+  color: #5283FF;
+}
+
+// ------------------------------------------
+//             Navigation Bar
+
+.nav-bar {
+  border-bottom: 1px solid #D8E3FE;
+}
+
+.nav-bar__content {
+  align-items: center;
+  border-bottom: unset;
+  display: flex;
+  height: 100px;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.nav-bar__content button {
+  background-color: transparent;
+  border: transparent;
+  color: #a6acc1;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 18px 21px;
+}
+
+.nav-bar__content > button {
+  background-color: #D2E1FF;
+  border-radius: 2px;
+  color: #3A79FF;
+  justify-self: flex-end;
+  margin-right: 20px;
+}
+
+.nav-bar__content button.active {
+  color: #5E81FE;
+}
+
+.nav-bar__content button.get-started {
+  height: 43px;
+  padding: 0;
+  width: 113px;
+}
+
+.social-icons {
+  margin: 0 25px;
+}
+
+.social-icons button {
+  margin: 0 15px;
+}
+
+.social-icons button.facebook{
+  background: transparent url('/reference/assets/icons/facebook.png') no-repeat center;
+  background-size: contain;
+  padding: 11px 4px;
+}
+
+.social-icons button.telegram{
+  background: transparent url('/reference/assets/icons/telegram.png') no-repeat center;
+  background-size: contain;
+  padding: 9px 8px;
+}
+
+.social-icons button.twitter{
+  background: transparent url('/reference/assets/icons/twitter.png') no-repeat center;
+  background-size: contain;
+  padding: 9px 8px;
+}
+
+.social-icons button.medium{
+  background: transparent url('/reference/assets/icons/medium.png') no-repeat center;
+  background-size: contain;
+  padding: 9px 8px;
+}
+
+.social-icons button:hover {
+  -webkit-filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(-180deg) saturate(500%) contrast(0.8);
+  filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(-180deg) saturate(500%) contrast(0.8);
+}
+
+.nav-bar__content nav:nth-child(2) {
+  flex-grow: 5;
+}
+
+.circle-logo {
+  background-color: #5E81FE;
+  border-radius: 50%;
+  height: 26px;
+  margin: 0 52px 0 20px;
+  width: 26px;
+}
+
+section.nav-bar__content a {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+section.nav-bar__content a {
+  color: #5E81FE;
+  display: none;
+}
+
+//           ! Navigation Bar
+// ------------------------------------------
+
+
+// ------------------------------------------
+//             PLAN YOUR LIFE
+
+.plan-your-life {
+  background: #EEF2FF url('/reference/assets/hero-image.png') no-repeat center;
+  height: 570px;
+}
+
+.plan-your-life_content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-top: 90px;
+  text-align: center;
+  width: 100%;
+}
+
+.plan-your-life_title {
+  color: $primary-color;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  margin: 25px 0;
+}
+
+.plan-your-life_text {
+  font-size: 15px;
+  line-height: 2;
+  max-width: 550px;
+  padding: 15px;
+}
+
+.plan-your-life_play {
+  background-color: #FFF;
+  border-radius: 50%;
+  box-shadow: 0 10px 50px #DBDBDB;
+  display: flex;
+  height: 52px;
+  margin: 10px;
+  width: 52px;
+}
+
+.plan-your-life_play i {
+  color: #5E81FF;
+  margin: auto;
+}
+
+.play-icon {
+  -webkit-filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(-180deg) saturate(500%) contrast(0.8);
+  filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(-180deg) saturate(500%) contrast(0.8);
+  height: 15px;
+  width: 15px;
+}
+
+//           ! PLAN YOUR LIFE
+// ------------------------------------------
+
+
+// ------------------------------------------
+//                 CUSTOMERS
+
+.customers {
+  min-height: 146px;
+}
+
+.customers__logos {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 146px;
+}
+
+.customers__logos img {
+  height: 25px;
+  padding: 28px 38px;
+}
+
+.customers__logos .carousel__icon {
+  display: none;
+}
+
+//               ! CUSTOMERS
+// ------------------------------------------
+
+// ------------------------------------------
+//                 PLAN AND MANAGE
+
+//               ! PLAN AND MANAGE
+// ------------------------------------------
+
+// ------------------------------------------
+//                 FEATURES
+
+//               ! FEATURES
+// ------------------------------------------
+
+// ------------------------------------------
+//                 STATS
+
+//               ! STATS
+// ------------------------------------------
+
+// ------------------------------------------
+//                 BLOG
+
+.blog {
+  background-color: #F5F8FF;
+  min-height: 864px;
+}
+
+.blog__content {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 94px 0 0 0;
+  text-align: center;
+}
+
+.blog__content h1 {
+  padding: 10px;
+}
+
+.blog__content .carousel__icon {
+  display: none;
+  padding-top: 50px;
+}
+
+.blog__title {
+  color: #3D4F9F;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px 0 46px;
+}
+
+.blog__carousel {
+  align-items: center;
+  display: none;
+  justify-content: space-evenly;
+  padding: 46px 0;
+}
+
+.carousel__box {
+  align-items: center;
+  background-color: #FFF;
+  display: flex;
+  max-width: 958px;
+  min-height: 394px;
+  width: 100%;
+  text-align: left;
+}
+
+.carousel__box > div {
+  float: left;
+  padding: 35px;
+}
+
+#blog_title {
+  color: #3D4F9F;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 36px;
+}
+
+#blog_description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 32px 0;
+}
+
+.blog__text > a{
+  background-color: #FFF;
+  border-radius: 2px;
+  color: #A6B6DA;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 4px;
+  padding: 13px 16px;
+  text-decoration: none;
+}
+
+#blog_url {
+  background-color: #D8E3FE;
+  color: #3A79FF;
+}
+
+#blog_img_tablet {
+  display: none;
+}
+#blog_img_mobile_2x {
+  display: none;
+}
+#blog_img_mobile {
+  display: none;
+}
+
+.blog__button {
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  color: #A8B4E5;
+  cursor:pointer;
+  height: 20px;
+  outline:0;
+  width: 20px;
+}
+
+#loading_blog > p{
+  font-size: 30px;
+}
+
+#loading_blog > img {
+  margin-top: 30px;
+  padding: 50px;
+  width: 100px;
+}
+
+//               ! BLOG
+// ------------------------------------------
+
+// ------------------------------------------
+//                 QUOTES
+
+//               ! QUOTES
+// ------------------------------------------
+
+// ------------------------------------------
+//                 FAQ
+
+//               ! FAQ
+// ------------------------------------------
+
+// ------------------------------------------
+//                 GET STARTED
+
+//               ! GET STARTED
+// ------------------------------------------
+
+// ------------------------------------------
+//                 NEWSLETTER
+
+//               ! NEWSLETTER
+// ------------------------------------------
+
+// ------------------------------------------
+//                 OTHER SECTION
+
+//               ! OTHER SECTION
+// ------------------------------------------
+
+// ------------------------------------------
+//             MEDIA QUERIES
+
+// TABLET LANDSCAPE
+@media screen and (max-width:1024px){
+  .blog__button,
+  .blog__text > a:not(#blog_url)
+  {
+    display: none;
+  }
+  .carousel__box {
+    margin: 0 42px;
+  }
+}
+
+@media screen and (max-width:940px){
+  .social-icons {
+    display: none;
+  }
+
+  #blog_img_desktop
+  {
+    display: none;
+  }
+
+  #blog_img_tablet {
+    display: unset;
+  }
+
+  .carousel__box {
+    flex-direction: column;
+  }
+}
+
+// TABLET PORTRAIT
+@media screen and (max-width:768px){
+
+  #blog_img_tablet
+  {
+    display: none;
+  }
+
+  #blog_img_mobile_2x {
+    display: unset;
+  }
+
+}
+
+@media screen and (max-width:700px){
+
+  header.nav-bar section.nav-bar__content nav,
+  button.get-started
+  {
+    display: none;
+  }
+  section.nav-bar__content a {
+    display: unset;
+  }
+}
+
+@media screen and (max-width:580px){
+  .customers__logos{
+    flex-direction: column;
+  }
+  .customers__logos > img{
+    display: none;
+  }
+
+  .customers__logos .carousel__icon,
+  .customers__logos img:first-child {
+    display: unset;
+  }
+}
+
+
+// MOBILE
+@media screen and (max-width:320px){
+
+  .plan-your-life_text
+  {
+    display: none;
+  }
+  section.nav-bar__content a {
+    display: unset;
+  }
+  .nav-bar,
+  .nav-bar__content,
+  .plan-your-life_content
+  {
+    width: 320px;
+  }
+}
+
+//           ! MEDIA QUERIES
+// ------------------------------------------

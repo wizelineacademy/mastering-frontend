@@ -606,49 +606,83 @@ small {
 }
 
 .section__ten {
-  height: 500px;
-  background-color: #fcfdff;
-  display: flex;
   align-items: center;
+  background-color: #fcfdff;
+  border-bottom: 1px solid #efeff7;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  padding: rem-calc(18px) rem-calc(20px);
 
-  &-header {
+  &__left{
+    padding-right: 15px;
+    @include tablet-breakpoint{
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__right{
+    padding-left: 15px;
+    @include tablet-breakpoint{
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @include mobile-breakpoint{
+      align-items: center;
+      display: flex;
+      flex-direction: column; 
+      justify-content: center;
+    }
+  }
+
+  &__header {
+    color: #3D4F9F;
     font-family: 'Quicksand', sans-serif;
+    font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    color: #3d4f9f;
+    font-size: rem-calc(18px);
+    line-height: normal;
+    text-align: left;
   }
 
-  &-text {
-    font-family: 'Roboto', sans-serif;
-    line-height: 27px;
-    font-size: 14px;
-    color: #8d96bd;
+  &__text {
+    text-align: left;
+    width: 325px;
+    @include mobile-breakpoint{
+      width: 100%;
+    }
   }
 
-  &-input {
-    width: 279px;
-    height: 40px;
+  &__input {
     background: #efeff7;
-    border-radius: 5px;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    font-size: 13px;
-    color: #7a85ad;
     border: none;
+    border-radius: 5px;
+    color: #7a85ad;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 40px;
     padding-left: 10px;
+    width: 200px;
   }
 
-  &-button {
-    width: 184px;
-    height: 40px;
+  &__button {
     background: #4d6ce1;
-    box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
     border-radius: 5px;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    font-size: 13px;
+    box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
     color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 40px;
+    margin: 10px 10px;
+    width: 150px;
   }
 }
 

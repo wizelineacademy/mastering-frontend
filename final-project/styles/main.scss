@@ -149,6 +149,26 @@ button {
   }
 }
 
+ul {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+small {
+  color: #aeb8d0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 0;
+  width: 100%;
+  @include mobile-breakpoint{
+    text-align: center;
+  }
+}
+
 .section__one {
   align-items: center;
   background-image: url('/reference/assets/hero.png');
@@ -335,7 +355,7 @@ button {
 .section__five {
   font-family: 'Quicksand', sans-serif;
 
-  &__sections{
+  &__sections {
     display: flex;
 
     &__left {
@@ -346,11 +366,11 @@ button {
       padding: rem-calc(55px) rem-calc(55px) rem-calc(55px) 0;
       width: 50%;
       text-align: right;
-      @include mobile-breakpoint{
+      @include mobile-breakpoint {
         width: 100%;
       }
     }
-  
+
     &__right {
       align-items: flex-start;
       background: linear-gradient(130.53deg, #e9efff 41.56%, #e0e9ff 81.53%);
@@ -358,16 +378,15 @@ button {
       flex-direction: column;
       padding: rem-calc(55px) 0 rem-calc(55px) rem-calc(55px);
       width: 50%;
-      @include mobile-breakpoint{
+      @include mobile-breakpoint {
         width: 100%;
       }
     }
 
-    @include mobile-breakpoint{
+    @include mobile-breakpoint {
       flex-wrap: wrap;
     }
   }
-
 
   &__header {
     font-size: rem-calc(48px);
@@ -379,6 +398,7 @@ button {
   }
 }
 
+//pendiente
 .section__six {
   background-color: #f5f8ff;
   text-align: center;
@@ -632,9 +652,64 @@ button {
   }
 }
 
-small {
+.footer {
+  align-items: center;
+  display: flex;
   font-family: 'Quicksand', sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  color: #aeb8d0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: rem-calc(18px) rem-calc(20px);
+
+  @include mobile-breakpoint {
+    justify-content: center;
+  }
+
+  &__button {
+    background-color: #d2e1ff;
+    color: #3a79ff;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    padding: rem-calc(13px);
+  }
+
+  &__link {
+    color: $nav-text-color;
+    display: inline-block;
+    font-size: rem-calc(12px);
+    margin: 0 rem-calc(20px);
+    @include mobile-breakpoint {
+      padding: 10px 0;
+    }
+  }
+
+  &__container {
+    &__logo {
+      background-color: #5e81fe;
+      border-radius: 50%;
+      height: rem-calc($header__logo-size);
+      width: rem-calc($header__logo-size);
+    }
+    @include mobile-breakpoint {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    &__main {
+      display: block;
+      @include mobile-breakpoint {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    &__social {
+      display: block;
+      @include tablet-breakpoint {
+        display: none;
+      }
+    }
+  }
 }

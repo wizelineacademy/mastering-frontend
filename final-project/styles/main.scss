@@ -172,7 +172,17 @@ p{
     margin: auto;
   }
 }
-
+.copyright{
+  &__footer{
+    display: flex;
+    justify-content: center;
+    margin: rem-calc(32px) 0;
+    span{
+      font-size: rem-calc(8px);
+      color: #8D96C0;
+    }
+  }
+}
 .customers{
   display: flex;
   flex-flow: column;
@@ -273,6 +283,18 @@ p{
   }
   span{
     margin: rem-calc(45px) 0 rem-calc(30px);
+  }
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
+  margin:0 auto;
+  @include tablet-breakpoint {
+    max-width: 768px;
+  }
+  @include desktop-breakpoint {
+    max-width: 1206px;
   }
 }
 

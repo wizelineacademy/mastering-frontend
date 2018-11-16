@@ -218,7 +218,7 @@ p{
         background-image: url('/reference/assets/customers/audi.png')
       }
       &--active{
-        display: inline;
+        display: inline-block;
         margin-top: rem-calc(50px);
       }
       &:hover{
@@ -230,6 +230,7 @@ p{
     }
   }
   .page-controller{
+    margin:0 auto rem-calc(32px);
     @include tablet-breakpoint {
       display: none;
     }
@@ -239,9 +240,11 @@ p{
 .faq{
   display: flex;
   flex-direction: column;
-  align-content: center;
-  margin: 0 rem-calc(14px) rem-calc(10px);
+  align-items: center;
+  margin: 0 rem-calc(16px) rem-calc(32px);
   &__content{
+    width: 100%;
+    max-width: rem-calc(743px);
     &__item{
       display: flex;
       flex-direction: column;
@@ -264,7 +267,6 @@ p{
         display: flex;
       }
     }
-    
   }
   h3{
     margin-bottom: rem-calc(45px);
@@ -277,20 +279,25 @@ p{
 .get-started{
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #6888FF;
-  padding: 0 rem-calc(14px);
+  padding:  0 rem-calc(16px) rem-calc(16px); 
   &__actions{
-    margin: 0 rem-calc(14px) rem-calc(30px);
+    margin: rem-calc(32px) 0;
     display: flex;
+    max-width: rem-calc(284px);
+    width: 100%;
     &__pricing{
       display: flex;
       justify-content: center;
+      flex-grow: 1;
       align-items: center;
       border-radius: 2px 0 0 2px;
       background-color: white;
       color: #565F82;
     }
     &__documentation{
+      flex-grow: 1;
       background-color: transparent;
       border: #D1D1E4 solid 1px;
       border-radius: 0 2px 2px 0;
@@ -299,7 +306,7 @@ p{
   }
   button{
     height: rem-calc(43px);
-    width: 50%;
+    //width: 50%;
   }
   h1{
     color: white;
@@ -442,32 +449,44 @@ p{
 }
 
 .newsletter{
-  display: float;
+  display: flex;
   flex-direction: column;
   margin:rem-calc(50px) rem-calc(14px) rem-calc(35px);
-  &__form{
-    display: float;
+  &__info{
+    display: flex;
     flex-direction: column;
+    max-width: rem-calc(330px);
+    margin: 0 rem-calc(16px) rem-calc(48px) 0;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    max-width: rem-calc(477px);
+    flex-grow: 1;
+    flex-shrink: 0;
     form{
-      display: float;
+      display: flex;
       flex-direction: column;
+      @include tablet-breakpoint {
+        flex-direction: row;
+      }
     }
     input{
-      width:100%;
+      flex-grow: 2;
       background-color: #EFEFF7;
       border: none;
       height: rem-calc(60px);
     }
     button{
-      width: 100%;
+      flex-grow: 1;
       height: rem-calc(60px);
       background-color: #4D6CE1;
       color: white;
       font-size: rem-calc(13px);
       font-weight: 700;
       border-radius: 2px;
-      margin-top: rem-calc(10px);
     }
+    
   }
   h2{
     font-size: rem-calc(18px);
@@ -476,6 +495,10 @@ p{
   p{
     margin: rem-calc(10px) 0;
     text-align: left;
+  }
+  @include tablet-breakpoint {
+    flex-direction: row;
+    justify-content: center;
   }
 }
 

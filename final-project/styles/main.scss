@@ -244,6 +244,7 @@
               border-radius: 50%;
               background-position: 50%;
               background-repeat: no-repeat;
+              margin-bottom: 50px;
             }
             p{
               text-align: center;
@@ -265,6 +266,65 @@
           line-height: 43px;
           letter-spacing: 5px;
           text-align: center;
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+.stats{
+  height: 343px;
+  display: flex;
+  position: relative;
+  &__section{
+    height: 100%;
+    width: 50%;
+    &__customers{
+      background-color: #6888FF;
+      height: 100%;
+      color: #FFF;
+      &__content{
+        width: 220px;
+        top: 15%;
+        right: 10%;
+        position: relative;
+        float: right;
+        img{
+          height: 66px;
+          width: 66px;
+          margin-left: 150px; 
+        }
+        p{
+          font-family: Quicksand,sans-serif;
+          margin: 30px 0;
+          text-align: right;
+        }
+        &__percentage{
+          font-size: 3rem;
+        }
+      }
+    }
+    &__users{
+      background-color: #E9EFFF;
+      height: 100%;
+      color: #5E80FF;
+      &__content{
+        width: 220px;
+        top: 15%;
+        left: 10%;
+        position: relative;
+        float: left;
+        img{
+          height: 66px;
+          width: 70px;
+        }
+        p{
+          font-family: Quicksand,sans-serif;
+          margin: 30px 0;
+          text-align: left;
+        }
+        &__percentage{
+          font-size: 3rem;
         }
       }
     }

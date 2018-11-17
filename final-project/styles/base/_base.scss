@@ -1,0 +1,32 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab-port {
+      @media only screen and (min-width: 48em) { @content };
+  }
+  @if $breakpoint == tab-land {
+      @media only screen and (min-width: 75em) { @content };
+  }
+  @if $breakpoint == desktop {
+      @media only screen and (min-width: 90em) { @content };   
+  }
+}
+
+:root {
+  font-size: 40%;
+  @include respond(tab-port) {
+    font-size: 53%;
+  }
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(desktop) {
+    font-size: 62.5%
+  }
+}

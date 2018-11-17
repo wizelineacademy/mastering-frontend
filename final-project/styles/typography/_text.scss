@@ -1,0 +1,157 @@
+.text {
+  &--one {
+    font-family: Quicksand;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: normal;
+  }
+
+  &--two {
+    font-family: Roboto;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+  }
+  &--three {
+    font-family: Open Sans;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+  }
+
+  &--font10 {
+    font-size: 1rem;
+  }
+
+  &--font11 {
+    font-size: 1.1rem;
+  }
+
+  &--font12 {
+    font-size: 1.2rem;
+  }
+
+  &--font14 {
+    font-size: 1.4rem;
+  }
+
+  &--font15 {
+    font-size: 1.5rem;
+  }
+
+  &--font18 {
+    font-size: 1.8rem;
+  }
+
+  &--font24 {
+    font-size: 2.4rem;
+  }
+
+  &--font36 {
+    font-size: 3.6rem;
+  }
+
+  &--font48 {
+    font-size: 4.8rem;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--lighter {
+    font-weight: 300;
+  }
+
+  &--light {
+    font-weight: 500;
+  }
+
+  &--bold {
+    font-weight: 600;
+  }
+
+  &--bolder {
+    font-weight: bold;
+  }
+
+  &--tall83 {
+    line-height: 8.3rem;
+  }
+
+  &--tall29 {
+    line-height: 2.9rem;
+  }
+
+  &--tall25 {
+    line-height: 2.5rem;
+  }
+  &--tall19 {
+    line-height: 1.9rem;
+  }
+
+  &--tall23 {
+    line-height: 2.3rem;
+  }
+
+  &--tall27 {
+    line-height: 2.7rem;
+  }
+
+  &--light-blue {
+    color: #5e80ff;
+  }
+  &--blue {
+    color: #4074f8;
+  }
+
+  &--navy {
+    color: #3d4f9f;
+  }
+
+  &--grey1 {
+    color: #8d96bd;
+  }
+
+  &--grey2 {
+    color: #adb3cb;
+  }
+  &--grey3 {
+    color: #8e96b7;
+  }
+
+  &--grey4 {
+    color: #A4ABC8;
+  }
+
+  &--grey4 {
+    color: #495274;
+  }
+
+  &--grey6 {
+    color: #676F95;
+  }
+
+  &--grey5 {
+    color: #697ca6;
+  }
+  &--white {
+    color: #ffffff;
+  }
+  &--wider {
+    letter-spacing: 0.1em;
+  }
+
+  &--wide {
+    letter-spacing: 0.05em;
+  }
+
+  &--narrow {
+    letter-spacing: 0.03em;
+  }
+}

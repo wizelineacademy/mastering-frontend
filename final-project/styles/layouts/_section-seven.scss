@@ -1,0 +1,12 @@
+.section-seven {
+
+    @include respond(desktop) {
+        padding: 0 30rem;
+        padding-bottom: 4rem;
+    }
+
+    &__title {
+        margin-top: 3rem;
+        text-align: center;
+    }
+}

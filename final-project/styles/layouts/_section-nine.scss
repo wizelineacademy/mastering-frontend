@@ -1,0 +1,57 @@
+.section-nine {
+    background-color: #FCFDFF;
+    padding: 5rem 1rem 7rem;
+    border-bottom: 1px solid #D8E3FE;
+
+    @include respond(tab-land) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__text {
+        @include respond(tab-port) {
+          margin-left: 20rem;
+          max-width: 55rem;
+        }
+
+        @include respond(tab-land) {
+            margin-left: 0rem;
+        }
+    }
+
+    &__form {
+        margin-top: 4.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+
+        @include respond(tab-port) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        &-email {
+            background: #EFEFF7;
+            border-radius: 5px;
+            padding: 2.3rem 2.1rem;
+            border: none;
+            margin-bottom: 2.4rem;
+
+            @include respond(tab-port) {
+                margin-right: 1.4rem;
+                width: 27rem;
+            }
+
+            &::-webkit-input-placeholder {
+                font-family: Quicksand;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                font-size: 1.3rem;
+                color: #7A85AD;
+            }
+        }
+    }
+}

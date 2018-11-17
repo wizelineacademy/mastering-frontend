@@ -1,0 +1,22 @@
+.copy-right {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #AEB8D0;
+    margin-top: 3.5rem;
+
+    @include respond(tab-port) {
+        position: absolute;
+        bottom: 7rem;
+        padding: 0 3.5rem;
+    }
+
+    @include respond(desktop) {
+        padding-left: 15rem;
+    }
+}

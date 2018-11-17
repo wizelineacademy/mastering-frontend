@@ -1,0 +1,57 @@
+.selection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5rem;
+
+    &--customers {
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &--quotes {
+        display: none;
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        @include respond(tab-port) {
+            display: flex;
+        }
+
+        @include respond(tab-land) {
+            position: relative;
+            margin-top: 7rem;
+            bottom: 0;
+        }
+    }
+
+    &__item {
+        background-color: #D1D6E3;
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &--selected {
+            background-color: #5E81FE;   
+        }
+    }
+
+    &--blog {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+
+        &--shown {
+            display: flex;
+        }
+    }
+}

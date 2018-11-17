@@ -1,0 +1,9 @@
+.section-five {
+    position: relative;
+
+    &__stats {
+    @include respond(tab-port) {
+        display: flex;
+    }
+}
+}

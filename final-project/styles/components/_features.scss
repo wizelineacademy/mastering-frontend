@@ -1,0 +1,61 @@
+.feature {
+    display: grid;
+    grid-template-columns: 14rem 14rem;
+    grid-row-gap: 7.8rem;
+    grid-column-gap: 2.3rem;
+    margin-top: 7.1rem;
+    justify-content: center;
+    @include respond(tab-port) {
+        grid-template-columns: 14rem 14rem 14rem 14rem;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 50%;
+    }
+    &__item {
+        width: 14rem;
+        height: 25.4em;
+    }
+
+    &__icon {
+        width: 6.9rem;
+        height: 6.9rem;
+        background-color: #F1F5FF; 
+        position: relative;
+        border-radius: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        margin-bottom: 3.3rem;
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__title {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2.5rem;
+        font-size: 1.4rem;
+        text-align: center;
+        margin-top: 3.3rem;
+        display: block;
+
+        color: #4074F8;
+    }
+
+    &__text {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 19px;
+        font-size: 11px;
+        text-align: center;
+        margin-top: 2rem;
+        color: #ADB3CB;
+    }
+}
+

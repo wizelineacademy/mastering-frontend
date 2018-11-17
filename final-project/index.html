@@ -1,14 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/faq.js"></script>
+  <script src="./scripts/blog.js"></script>
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="./dist/styles.css">
+
 </head>
+
 <body>
-  <h1>Hello world!</h1>
-  <script src="./dist/bundle.js"></script>
+
+  <header class="header">
+    <div class="logo"></div>
+    <div class="header__nav">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="header__menu text--one text--light text--font12 text--wide text--grey5">
+      <div class="header__menu--item">Home</div>
+      <div class="header__menu--item">Blog</div>
+      <div class="header__menu--item">features</div>
+      <div class="header__menu--item">Pricing</div>
+      <div class="header__menu--item">Documentation</div>
+    </div>
+    <div class="header__customers">
+      <img src="./reference/assets/icons/facebook.png" alt="facebook" class="header__custormers--item">
+      <img src="./reference/assets/icons/telegram.png" alt="telegram" class="header__custormers--item">
+      <img src="./reference/assets/icons/twitter.png" alt="twitter" class="header__custormers--item">
+      <img src="./reference/assets/icons/medium.png" alt="medium" class="header__custormers--item">
+    </div>
+    <a href="#" class="btn btn__four header__btn">Get started</a>
+  </header>
+
+  <main class="main">
+
+    <section class="section-one">
+      <h1 class="section-one__header">
+        <div class="text--two text--center text--light text--navy text--font10 text--wider margin-btm35"> PLAN YOUR LIFE </div>
+        <div class="text--one text--font48 text--center text--navy margin-btm28">
+          <span class="text--lighter"> Increase your </span>
+          <span class="text--light"> productivity </span>
+        </div>
+      </h1>
+      <div class="section-one__text text--two text--grey1 text--tall29 text--font15 text--narrow text--center">
+        Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu.
+        Et vel modus congue vituperata.
+      </div>
+      <div class="section-one__play-btn">
+        <div class="play-btn">
+          <span class="play-btn__polygon"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-two">
+      <div class="section-two__customers">
+        <ul class="customers">
+          <li class="customers__item">
+            <img src="./reference/assets/customers/bitbucket.png" />
+          </li>
+          <li class="customers__item">
+            <img src="./reference/assets/customers/apple-watch.png" />
+          </li>
+          <li class="customers__item">
+            <img src="./reference/assets/customers/facebook.png" />
+          </li>
+          <li class="customers__item customers__item--selected">
+            <img src="./reference/assets/customers/atlassian.png" />
+          </li>
+          <li class="customers__item">
+            <img src="./reference/assets/customers/audi.png" />
+          </li>
+        </ul>
+        <div class="selection selection--customers">
+          <span class="selection__item selection__item--one"></span>
+          <span class="selection__item selection__item--two"></span>
+          <span class="selection__item selection__item--three"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-three">
+      <div class="section-three__text">
+        <div class="text--two text--light text--navy text--font10 text--wider"> DESKTOP AND MOBILE APP </div>
+        <div class="text--one text--navy text--font36 margin-btm8">
+          <span class="text--light"> Plan </span>
+          <span class="text--lighter"> and </span>
+          <span class="text--light"> manage </span>
+        </div>
+        <div class="text--two text--grey1 text--tall29 text--font15 text--narrow section-three__paragraph">
+          Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu.
+          Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat.
+        </div>
+      </div>
+      <div class="section-three__plan">
+        <img class="section-three__plan--img" src="./reference/assets/plan-manage.png" />
+      </div>
+      <div class="section-three__btns">
+        <a href="#" class="btn btn__one">View video
+          <span class="polygon-btn" /> </a>
+        <a href="#" class="btn btn__two">See features </a>
+      </div>
+    </section>
+
+    <section class="section-four">
+      <div class="section-four__title">
+        <div class="text--two text--light text--font10 text--wider text--navy text--center margin-btm20"> ABOUT US</div>
+        <div class="text--one text--light text--font24 text--center text--navy"> Read about our app </div>
+      </div>
+      <div class="feature">
+        <div class="feature__item">
+          <div class="feature__icon">
+            <img class="feature__img" src="./reference/assets/icons/home.png" />
+          </div>
+          <div class="text--three text--bolder text--tall25 text--font14 text--center text--blue margin-btm25">
+            Overview
+          </div>
+          <div class="text--three text--center text--tall19 text--font11 text--grey2 text--bold">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+          </div>
+        </div>
+        <div class="feature__item">
+          <div class="feature__icon">
+            <img class="feature__img" src="./reference/assets/icons/folder.png" />
+          </div>
+          <div class="text--three text--bolder text--tall25 text--font14 text--center text--blue margin-btm25">
+            Files
+          </div>
+          <div class="text--three text--center text--tall19 text--font11 text--grey2 text--bold">
+            No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.
+          </div>
+        </div>
+        <div class="feature__item">
+          <div class="feature__icon">
+            <img class="feature__img" src="./reference/assets/icons/chat.png" />
+          </div>
+          <div class="text--three text--bolder text--tall25 text--font14 text--center text--blue margin-btm25">
+            Meeting chats
+          </div>
+
+          <div class="text--three text--center text--tall19 text--font11 text--grey2 text--bold">
+            Vim ne tacimates neglegentur. Erat diceret omittam at est.
+          </div>
+        </div>
+        <div class="feature__item">
+          <div class="feature__icon">
+            <img class="feature__img" src="./reference/assets/icons/upload.png" />
+          </div>
+          <div class="text--three text--bolder text--tall25 text--font14 text--center text--blue margin-btm25">
+            Save events
+          </div>
+          <div class="text--three text--center text--tall19 text--font11 text--grey2 text--bold">
+            Nisl idque mel ea, nominati voluptatum.
+          </div>
+        </div>
+      </div>
+      <div class="section-four__btns">
+        <a href="#" class="btn btn__three">Read more</a>
+        <span class="or"> or </span>
+        <a href="#" class="btn btn__four">Get started</a>
+      </div>
+    </section>
+
+    <section class="section-five">
+      <div class="section-five__stats">
+        <div class="stats-percentage">
+          <img src="./reference/assets/icons/speedmeter.png" alt="speed" class="stats-percentage__img">
+          <div class="stats-percentage__num"> 89% </div>
+          <div class="stats-percentage__text">Customers who have increased their productivity</div>
+        </div>
+        <div class="stats-num">
+          <img src="./reference/assets/icons/people.png" alt="peope" class="stats-num__img">
+          <div class="stats-num__num"> 3123 </div>
+          <div class="stats-num__text">Users who have used our application</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-six">
+      <div class="section-six__title">
+        <div class="text--two text--light text--font10 text--wider text--navy text--center margin-btm20"> OUR RESOURCES </div>
+        <div class="text--one text--light text--font24 text--navy text--center"> Start reading our blog </div>
+      </div>
+      <div class="section-six__spinner lds-dual-ring"></div>
+      <div class="selection selection--blog">
+        <span class="selection__item selection__item--selected"></span>
+      </div>
+    </section>
+
+    <section class="section-ten">
+      <div class="quotes">
+        <div class="quotes__text">
+          <div class="section-ten__title">
+            <div class="text--two text--light text--font10 text--wider text--navy margin-btm20"> TESTIMONIALS </div>
+            <div class="text--one text--light text--font24 text--navy"> Customers's quotes </div>
+          </div>
+          <div class="text--three text--tall23 text--font12 text--grey4 text--bold text--narrow">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.
+          </div>
+        </div>
+        <div class="quotes__value">
+          <div class="text--two text--tall25 text--font14 text--narrow text--grey6 section-ten__text">
+            Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+            persecuti.
+            <img class="section-ten__text--img" src="./reference/assets/icons/Ellipse 2.1.png" />
+          </div>
+          <div class="selection selection--quotes">
+            <span class="selection__item selection__item"></span>
+            <span class="selection__item selection__item"></span>
+            <span class="selection__item selection__item--selected"></span>
+            <span class="selection__item selection__item"></span>
+            <span class="selection__item selection__item"></span>
+            <span class="selection__item selection__item"></span>
+          </div>
+        </div>
+    </section>
+
+    <section class="section-seven">
+      <div class="section-seven__title">
+        <div class="text--two text--light text--font10 text--wider text--navy text--center margin-btm20"> CUSTOMER HELP </div>
+        <div class="text--one text--light text--font24 text--navy text--center"> Frequently asked questions </div>
+      </div>
+      <ul class="faq">
+        <li class="faq__item" onclick="faqClick(this);">
+          <div class="faq__item--title">
+            <i class="fas fa-angle-down faq__item--title-arrow"></i>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24 faq__item--title-text">Reque insolens in vel?</div>
+          </div>
+          <div class="faq__item--content">
+              <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
+                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                persecuti.
+              </div>
+              <a href="#" class="btn btn__ten">Go to documentation</a>
+            </div>
+        </li>
+        <li class="faq__item" onclick="faqClick(this);">
+          <div class="faq__item--title">
+            <i class="fas fa-angle-down faq__item--title-arrow"></i>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24 faq__item--title-text">Vis rebum error graecis ea, id sit postea accusamus?</div>
+          </div>
+          <div class="faq__item--content">
+            <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+              persecuti.
+            </div>
+            <a href="#" class="btn btn__ten">Go to documentation</a>
+          </div>
+        </li>
+        <li class="faq__item" onclick="faqClick(this);">
+          <div class="faq__item--title">
+            <i class="fas fa-angle-up faq__item--title-arrow"></i>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24 faq__item--title-text">Lorem repudiandae ne nec?</div>
+          </div>
+          <div class="faq__item--content">
+            <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+              persecuti.
+            </div>
+            <a href="#" class="btn btn__ten">Go to documentation</a>
+          </div>
+        </li>
+        <li class="faq__item" onclick="faqClick(this);">
+          <div class="faq__item--title">
+            <i class="fas fa-angle-down faq__item--title-arrow "></i>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24 faq__item--title-text">Ad dicit numquam vel. Et eos iudico feugait percipitur?</div>
+          </div>
+          <div class="faq__item--content">
+            <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+              persecuti.
+            </div>
+            <a href="#" class="btn btn__ten">Go to documentation</a>
+          </div>
+        </li>
+        <li class="faq__item" onclick="faqClick(this);">
+          <div class="faq__item--title">
+            <i class="fas fa-angle-down faq__item--title-arrow"></i>
+            <div class="text--one text--light text--font15 text--tall19 text--narrow text--grey3 margin-left24 faq__item--title-text">Sea no dico percipitur. Fierent constituam definitiones id eum?</div>
+          </div>
+          <div class="faq__item--content">
+            <div class="text--two text--font14 text--tall27 text--narrow text--grey1 text--center faq__item--content-text">
+              Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+              persecuti.
+            </div>
+            <a href="#" class="btn btn__ten">Go to documentation</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section-eight">
+      <div class="text--two text--center text--light text--white text--font10 text--wider margin-btm20"> PLAN YOUR LIFE </div>
+      <div class="text--one text--font36 text--center text--white margin-btm20">
+        <span class="text--lighter"> Get </span>
+        <span class="text--light"> started </span>
+        <span class="text--lighter"> now </span>
+      </div>
+      <div class="text--two text--font15 text--tall29 text--narrow text--white text--center"> Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est
+        cu. Et vel modus congue vituperata. </div>
+
+      <div class="section-eight__btns">
+        <a href="#" class="btn btn__six">View pricing </a>
+        <a href="#" class="btn btn__seven">Read documentation </a>
+      </div>
+    </section>
+
+    <section class="section-nine">
+      <div class="section-nine__text">
+        <div class="text--one text--bolder text--font18 text--navy margin-btm20 section-nine__text"> Sign up for newsletter </div>
+        <div class="text--two text--tall27 text--font14 text--narrow text--grey1 section-nine__text"> Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum. </div>
+      </div>
+      <div class="section-nine__form">
+        <input type="text" class="section-nine__form-email" placeholder="Email address">
+        <a href="#" class="btn btn__eight">Save me</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__logo logo"></div>
+    <nav class="menu">
+      <div class="menu__logo logo"></div>
+      <div class="menu__item">home</div>
+      <div class="menu__item">blog</div>
+      <div class="menu__item">features</div>
+      <div class="menu__item">pricing</div>
+      <div class="menu__item">documentation</div>
+      <div class="header__customers">
+        <img src="./reference/assets/icons/facebook.png" alt="facebook" class="header__custormers--item">
+        <img src="./reference/assets/icons/telegram.png" alt="telegram" class="header__custormers--item">
+        <img src="./reference/assets/icons/twitter.png" alt="twitter" class="header__custormers--item">
+        <img src="./reference/assets/icons/medium.png" alt="medium" class="header__custormers--item">
+      </div>
+      <a href="#" class="btn btn__nine">Get started</a>
+    </nav>
+    <div class="copy-right">Copyright © 2018 by Random site</div>
+  </footer>
 </body>
+
 </html>

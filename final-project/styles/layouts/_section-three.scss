@@ -1,0 +1,72 @@
+.section-three {
+    height: 80rem;
+    width: 100%;
+    background-color: #F5F8FF;
+    position: relative;
+    overflow: hidden;
+
+    &__text {
+        margin-left: 1.7rem;
+        margin-right: 1.7rem;
+        padding-top: 5rem;
+        margin-bottom: 2rem;
+
+        @include respond(tab-land) {
+            margin-top: 20rem;
+        }
+
+        @include respond(desktop) {
+            margin-left: 22rem;
+        }
+    }
+
+    &__plan {
+        margin-top: 4.5rem;
+        position: absolute;
+        left: 45%;
+        transform: translateX(-50%);
+
+        @include respond(tab-port) {
+            left: 55%;
+        }
+
+        @include respond(tab-land) {
+            top: 20rem;
+            left: 60%;
+        }
+
+        &--img {
+            width: 36.6rem;
+            @include respond(tab-port) {
+                width: 82rem;
+            }
+        }
+
+        @include respond(desktop) {
+            margin-left: 10rem;
+        }
+    }
+
+    &__btns {
+        margin-left: 3.3rem;
+        margin-bottom: 3.3rem;
+        position: absolute;
+        bottom: 3rem;
+
+        @include respond(tab-land) {
+            position: relative;
+            margin-top: 5rem;
+            bottom: 0;
+        }
+
+        @include respond(desktop) {
+            margin-left: 22rem;
+        }
+    }
+
+    &__paragraph {
+        @include respond(tab-port) {
+            width: 41rem;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.customers {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__item {
+        list-style: none;
+        margin: 1rem 6rem;
+
+        &--selected {
+            // background-color: #5982E7;
+        }
+    }
+}

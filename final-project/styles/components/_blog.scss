@@ -1,0 +1,60 @@
+.blog {
+
+    @include respond(tab-land) {
+        display: flex;
+    }
+
+    &__content {
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            margin-left: 6.5rem;
+        }
+    }
+
+    &__item {
+        display: none;
+
+        &--selected {
+            display: flex;
+        }
+    }
+    &__btn {
+        width: 26.1rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &__img {
+        height: 22rem;
+        box-shadow: 0px 1.5rem 10rem #E5EBF8;
+        border-radius: .5rem;
+    }
+
+    &__selection {
+        margin-top: 3rem;
+    }
+
+    &__arrow {
+        display: none;
+
+        @include respond(tab-land) {
+            display: inline;
+            position: absolute;
+            cursor: pointer;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &--left {
+                left: -5rem;
+            }
+
+            &--right {
+                right: -5rem;
+            }
+        }
+    }
+}

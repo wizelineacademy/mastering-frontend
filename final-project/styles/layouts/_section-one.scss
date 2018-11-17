@@ -1,0 +1,28 @@
+.section-one {
+    height: 57rem;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-image: url('/reference/assets/hero.png');
+
+    &__header {
+        padding-top: 10rem; 
+        text-align: center;
+    }
+
+    &__text {
+        display: none;
+        margin-left: 17rem;
+        margin-right: 17rem; 
+
+        @include respond(tab-port) {
+            display: block;
+        }
+
+        @include respond(tab-land) {
+            display: block;
+            margin-left: 45rem;
+            margin-right: 45rem; 
+        }
+    }
+}

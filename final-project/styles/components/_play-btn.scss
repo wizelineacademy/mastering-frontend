@@ -1,0 +1,22 @@
+.play-btn {
+    background-color: #FFFFFF;
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5rem;
+
+    &__polygon {
+        width: 1rem;
+        height: 1.1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: .2rem;
+        background-color: #5E81FF;
+        clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+}

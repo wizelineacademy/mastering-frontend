@@ -1,0 +1,59 @@
+.footer {
+    background: #FFFFFF;
+    height: 37rem;
+    position: relative;
+    @include respond(tab-port) {
+        height: 28rem;
+    }
+
+    @include respond(desktop) {
+        padding-left: 8rem;
+    }
+
+    &__logo {
+        margin-top: 2.7rem;
+        margin-left: 2.7rem;
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 25rem;
+
+        @include respond(tab-port) {
+            flex-direction: row;
+            padding: 0 3rem;
+            height: 100%;
+        }
+
+        @include respond(tab-land) {
+            margin-right: 15rem;
+        }
+
+
+        &__item {
+            font-family: Quicksand;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+            color: #697CA6;
+            text-shadow: 0px 0px 5px #E6E6E6;
+        }
+
+        &__logo {
+            display: none;
+            @include respond(tab-port) {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    align-items: center;
+    justify-content: space-between;
+    height: 8rem;
+    background-color: #FFFFFF;
+    padding-left: 2rem;
+    padding-right: 4rem;
+
+    &__customers {
+        display: none;
+        @include respond(tab-land) {
+            display: flex;
+            width: 15%;
+            justify-content: space-between;
+        }
+    }
+
+    &__nav {
+        font-size: 3rem;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: none;
+        justify-content: space-between;
+        width: calc(100% - 40rem);
+
+        @include respond(tab-port) {
+            display: flex;
+        }
+        @include respond(tab-land) {
+            width: 40%;
+            margin-right: 15rem;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @include respond(tab-port) {
+            display: block;
+        }
+    }
+}

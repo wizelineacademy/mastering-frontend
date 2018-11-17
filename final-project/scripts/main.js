@@ -14,11 +14,8 @@ console.log({ after });
 
 carrousel();
 function carrousel(){
-  let carrousel= document.querySelector('.carrousel');
-  let carrouselContent = carrousel.querySelector('.carrousel__content');
   loadCarrouselData();
-  let carrouselContentItems = carrouselContent.children;
-  console.log(carrouselContentItems );
+ 
 }
 function loadCarrouselData(){
   let oReq = new XMLHttpRequest();
@@ -35,6 +32,33 @@ function loadCarrouselData(){
 function generateCarrouselItem(items){
   let jsonItem = JSON.parse(items);
   jsonItem.articles.forEach(element => {
+    let htmlTemplate = `
+      <div class="blog__content__article__image">
+        <picture>
+            <img src="/reference/assets/sample-blog-entry.png" alt="upload" >
+        </picture>
+      </div>
+      <div class="blog__content__article__info">
+        <div  class="blog__content__article__data">
+          <header>
+            <h1>How start planning</h1>
+          </header>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident consequatur quod numquam saepe maiores placeat libero, incidunt nisi unde adipisci dolor nobis nam pariatur quis earum laudantium reprehenderit praesentium.
+          </p>
+        </div>
+        <div class="blog__content__article__actions">
+            <button class="blog__content__article__actions__read" >Read Now</button>
+            <button class="blog__content__article__actions__bookmark" >Add to your bookmarks</button>
+          </div>
+      </div>
+    `;
+    let carrousel= document.querySelector('.carrousel');
+    let carrouselContent = carrousel.querySelector('.carrousel__content');
+    let asNode =  document.createElement('article');
+    asNode.innerHTML =  htmlTemplate;
+    asNode.classList="blog__content__article carrousel__content__item";
+    carrouselContent.appendChild(asNode);
     console.log(element);
   });
 }

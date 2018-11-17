@@ -1,6 +1,13 @@
 .section-six {
     background-color: #F5F8FF;
     padding-bottom: 2rem;
+    position: relative;
+    min-height: 50rem;
+    display: none;
+
+    &--show {
+        display: block;
+    }
 
     @include respond(desktop) {
         padding: 0 10rem;
@@ -44,5 +51,12 @@
         text-align: center;
         color: #A6B6DA;
         margin-left: 2.2rem;
+    }
+
+    &__spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

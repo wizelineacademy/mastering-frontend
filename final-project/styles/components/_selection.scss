@@ -42,4 +42,16 @@
             background-color: #5E81FE;   
         }
     }
+
+    &--blog {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+
+        &--shown {
+            display: flex;
+        }
+    }
 }

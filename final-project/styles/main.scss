@@ -96,7 +96,7 @@
   display: flex;
 }
 .button{
-  width: 113px;
+  min-width: 113px;
   justify-content: center;
   height: 43px;
   border-radius: 5px;
@@ -132,6 +132,15 @@
   width: 211px;
   color: #A6B6DA;
   background-color: transparent;
+}
+.input-box{
+  height: 43px;
+  border-radius: 5px;
+  font-family: Quicksand,sans-serif;
+  font-size: 13px;
+  border: none;
+  background-color: #EFEFF7;
+  padding: 0 20px;
 }
 .main{
   position: relative;
@@ -411,6 +420,40 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+.newsletter{
+  height: 350px;
+  display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    &__description{
+      flex: auto;
+      width: 330px;
+      margin: 10px 5px;
+    }
+    &__form{
+      display: flex;
+      flex-wrap: wrap;
+      flex: auto;
+      input{
+        flex: auto;
+        width: 280px;
+        margin: 5px;
+      }
+      button{
+        flex: auto;
+        margin: 5px;
       }
     }
   }

@@ -21,12 +21,19 @@ $paragraph-text-color: #8D96BD;
     "hero hero"
     "customer customer"
     "planManage planManage"
-    "features features";
+    "features features"
+    "stats stats"
+    "blog blog"
+    "quote quote"
+    "faq faq"
+    "clouds clouds"
+    "newsletter newsletter"
+    "footer footer";
 }
 
 button { border:none; }
 
-.header {
+.header, .footer-section-content{
   display: flex;
   justify-content: space-between;
   font-family: 'Quicksand', sans-serif;
@@ -276,5 +283,281 @@ p {
     background-color: #D2E1FF;
     color: #3A79FF;
     margin-left: rem-calc(16px);
+  }
+}
+.stats-section{
+  grid-area: stats;
+  height: rem-calc(343px);
+  width: 100%;
+  &__customers{
+    width:50%;
+    height: 100%;
+    background-color: #6888FF;
+    display: inline-block;
+    position: relative;
+    h2, p {
+      color: #FFFFFF;
+      text-align: right;
+    }
+    h2 {
+      margin-top: rem-calc(30px);
+    }
+    img {
+      position: absolute;
+      right: 0px;
+      // float: right;
+    }
+    h2, p, img {
+      margin-right: 10%;
+      margin-top: 10%;
+    }
+  }
+  &__users{
+    width:50%;
+    height: 100%;
+    background-color: #E9EFFF;
+    display: inline-block;
+    position: absolute;
+    h2, p, img {
+      margin-left: 10%;
+      margin-top: 5%;
+    }
+    h2, p {
+      color: #5E80FF;
+    }
+    h2 {
+      margin-top: rem-calc(30px);
+    }
+  }
+  h2, p {
+    font-family: 'Quicksand', sans-serif;
+  }
+  h2 {
+    font-size: rem-calc(48px);
+    margin-bottom: rem-calc(30px);
+  }
+  p {
+    font-size: rem-calc(18px);
+  }
+}
+.blog-section {
+  grid-area: blog;
+  height: rem-calc(865px);
+  background-color: #F5F8FF;
+  width: 100%;
+  &__content-images {
+    width: 50%;
+  }
+  &__content-text {
+    width: 50%;
+    text-align: center;
+    h1 {
+      font-size: rem-calc(36px);
+      padding-top: rem-calc(63px);
+    }
+    p {
+      font-size: rem-calc(14px);
+      margin-top: rem-calc(32px);
+      margin-bottom: rem-calc(31px);
+    }
+    button {
+      font-family: 'Quicksand', sans-serif;
+      font-size: rem-calc(13px);
+      font-weight: bold;
+      padding: rem-calc(13px);
+      border-radius: 2px;
+    }
+    h2 {
+      display: inline-block;
+    }
+  }
+  &__btn-read {
+    background-color: #D2E1FF;
+    color: #3A79FF;
+    width: rem-calc(113px);
+    height: rem-calc(43px);
+  }
+  &__btn-bookmark {
+    background-color: #FFFFFF;
+    color: #A6B6DA;
+    width: rem-calc(211px);
+    height: rem-calc(43px);
+  }
+  &__title{
+    h2, h1 {
+      text-align: center;
+    }
+    h2 {
+      margin-top: rem-calc(104px);
+      margin-bottom: rem-calc(20px);
+    }
+    h1 {
+      margin-bottom: rem-calc(92px);
+    }
+  }
+  &__content {
+    background-color: #FFFFFF;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: rem-calc(394px);
+  }
+}
+.quotes-section {
+  grid-area: quote;
+  height: rem-calc(480px);
+  width: 100%;
+  background-color: #EAF0FF;
+  &__title {
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    margin: rem-calc(146px) 0 rem-calc(145px) rem-calc(276px);
+    h1 {
+      text-align: left;
+      margin-top: rem-calc(31px);
+      margin-bottom: rem-calc(14px);
+    }
+    p {
+      width: 50%;
+    }
+  }
+  &__examples {
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    &-rectangle {
+      width: rem-calc(423px);
+      height: rem-calc(175px);
+      background-color: white;
+      margin-top: rem-calc(109px);
+      position: relative;
+      p {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        padding-top: rem-calc(41px);
+      }
+    }
+    &-circle {
+      width: rem-calc(62px);
+      height: rem-calc(62px);
+      background-color: #D3D3D3;
+      border-radius: 50%;
+      margin-top: rem-calc(30px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.faq-section {
+  grid-area: faq;
+  height: rem-calc(965px);
+  &__content {
+    margin: rem-calc(176px) rem-calc(349px) rem-calc(174px) rem-calc(348px);
+    h1, h2 {
+      text-align: center;
+    }
+    h1 {
+      margin-top: rem-calc(20px);
+      margin-bottom: rem-calc(68px);
+    }
+  }
+  &__bullets {
+    list-style: none;
+    p {
+      color: #8E96B7;
+      font-family: 'Quicksand', sans-serif;
+      margin-bottom: rem-calc(32px);
+      margin-top: rem-calc(17px);
+      margin-left: rem-calc(24px);
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid #D8E3FE;
+    }
+  }
+  &__title-p, i {
+    display: inline-block;
+  }
+  &__inside-p {
+    p {
+      width: 50%;
+      display: inline-block;
+    }
+  }
+  &__btn-doc {
+    background-color: #E8ECF4;
+    font-family: 'Quicksand', sans-serif;
+    color: #7382A3;
+    padding: rem-calc(13px);
+    border-radius: 2px;
+  }
+}
+
+.clouds-section {
+  grid-area: clouds;
+  height: rem-calc(447px);
+}
+
+.newsletter-section {
+  grid-area: newsletter;
+  height: rem-calc(332px);
+  &__btn-email {
+    background-color: #EFEFF7;
+    font-family: 'Quicksand', sans-serif;
+    color: #7A85AD;
+    font-size: rem-calc(13px);
+    padding: rem-calc(13px);
+    border-radius: 2px;
+    width: rem-calc(279px);
+    height: rem-calc(59px);
+    text-align: left;
+  }
+  &__btn-save {
+    background-color: #4D6CE1;
+    font-family: 'Quicksand', sans-serif;
+    color: #FFFFFF;
+    padding: rem-calc(13px);
+    border-radius: 2px;
+    width: rem-calc(184px);
+    height: rem-calc(59px);
+  }
+  &__text {
+    display: inline-block;
+    margin: rem-calc(118px) rem-calc(80px) rem-calc(119px) rem-calc(276px);
+    p {
+      width: 70%;
+      margin-top: rem-calc(18px);
+    }
+  }
+}
+
+.footer-section {
+  grid-area: footer;
+  height: rem-calc(287px);
+  &__copyright {
+    font-family: 'Quicksand', sans-serif;
+    color: #AEB8D0;
+    font-size: rem-calc(12px);
+    margin-top: rem-calc(28px);
+    margin-left: rem-calc(216px);
+  }
+  &-content {
+    margin-top: rem-calc(93px);
+    &__social {
+      padding-right: 150px;
+    }
+    &__nav--social {
+      display: block;
+    }
+    &__social {
+      nav, button {
+        display: inline-block;
+      }
+    }
   }
 }

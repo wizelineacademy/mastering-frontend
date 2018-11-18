@@ -96,7 +96,7 @@
   display: flex;
 }
 .button{
-  min-width: 113px;
+  width: 113px;
   justify-content: center;
   height: 43px;
   border-radius: 5px;
@@ -105,6 +105,7 @@
   font-weight: bold;
   border: none;
   cursor: pointer;
+  color: #565F82;
 }
 .button-blue-pale{
   background-color: #D2E1FF;
@@ -114,8 +115,8 @@
   background-color: #4C85FF;
   color: #FFF;
 }
-.button-blue-pale-navy-bordered{
-  background-color: #F5F8FF;
+.button-transparent-bordered{
+  background-color: transparent;
   color: #D1D1E4;
   border-style: solid;
   border-color: #D1D1E4;
@@ -425,12 +426,38 @@
   }
 }
 
+.get-started{
+  height: 447px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__content{
+    height: 80%;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    .title, .subtitle, .paragraph{
+      color: #FFF;
+    }
+    &__buttons{
+      display: flex;
+      justify-content: center;
+      button{
+        margin: 10px;
+        width: 140px;
+      }
+    }
+  }
+}
+
 .newsletter{
   height: 350px;
   display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   &__content{
     display: flex;
     flex-wrap: wrap;
@@ -538,4 +565,7 @@
 }
 #upload-icon{
   background-image: url("/reference/assets/icons/upload.png");
+}
+#blue-clouds{
+  background-image: url("/reference/assets/blue-clouds-bg.png");
 }

@@ -42,6 +42,9 @@
     color: #5283FF;
   }
 }
+.border-bottom{
+  border-bottom: 1px solid #D8E3FE;
+}
 .header{
   height: 80px;
   position: absolute;
@@ -133,6 +136,11 @@
   width: 211px;
   color: #A6B6DA;
   background-color: transparent;
+}
+.button-faq{
+  background-color: #E8ECF4;
+  color: #7382A3;
+  min-width: 195px;
 }
 .input-box{
   height: 43px;
@@ -298,7 +306,7 @@
           line-height: 43px;
           letter-spacing: 5px;
           text-align: center;
-          margin: 0 20px;
+          margin: 0 5px;
         }
       }
     }
@@ -451,7 +459,57 @@
     }
   }
 }
-
+.faq{
+  height: 965px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  &__content{
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1, h2{
+      margin: 10px 0;
+    }
+  }
+}
+.questions-list{
+  list-style-type: none;
+  width: 70%;
+  margin: 5% 0;
+  &__item{
+    &__question{
+      display: flex;
+      margin: 10px 0;
+      text-align: left;
+      i{
+        font-size: 1.5rem;
+      }
+      p{
+        margin-left: 10px;
+      }    
+    }
+    &__answer{
+      display: flex;
+      text-align: left;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      p{
+        width: 400px;
+        margin: 10px 25px;
+        font-size: .8rem;
+      }
+      button{
+        margin: 10px 20px;
+      }
+    }
+  }
+}
 .newsletter{
   height: 350px;
   display: flex;
@@ -531,6 +589,7 @@
   }
 }
 .copyright{
+  margin: 20px 0;
   p{
     text-align: center;
   }

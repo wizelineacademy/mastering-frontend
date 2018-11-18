@@ -28,6 +28,20 @@
 .bold{
   font-weight: 800;
 }
+.carousel-index{
+  display: flex;
+  width: fit-content;
+  list-style: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  &__dot{
+    margin: 0 5px;
+    color: #D1D6E3;
+  }
+  &__dot-active{
+    color: #5283FF;
+  }
+}
 .header{
   height: 80px;
   position: absolute;
@@ -114,6 +128,11 @@
   background-color: #FFD7D7;
   color: #D43F3F;
 }
+.button-bookmarks{
+  width: 211px;
+  color: #A6B6DA;
+  background-color: transparent;
+}
 .main{
   position: relative;
   top: 80px;
@@ -154,13 +173,15 @@
   &__content{
     align-items: center;
     display: flex;
-    justify-content: space-evenly;
-    margin: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
     &__item{
       height: 30px;
       width: 129px;
       background-position: 50%;
       background-repeat: no-repeat;
+      margin: 20px 50px;
       cursor: pointer;
       &:hover{
         filter: invert(100%) sepia() saturate(2000%) brightness(400%) hue-rotate(200deg);
@@ -325,6 +346,67 @@
         }
         &__percentage{
           font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+.blog{
+  background-color:#F5F8FF;
+  height: 865px;
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    &__title{
+      text-align: center;
+    }
+    &__articles{
+      display: flex;
+      justify-content: space-evenly;
+      height: 394px;
+      &__arrow{
+        display: flex;
+        align-items: center;
+        color: #A8B4E5;
+        font-size: 20px;
+        button{
+          background-color:#F5F8FF;
+          border: none;
+          color: #A8B4E5;
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+      &__cards{
+        background-color: #FFF;
+        border: 1px solid #D8E3FE;
+        width: 950px;
+        margin: 0 20px;
+        &__content{
+          top: 50%;
+          transform: translateY(-50%);
+          position: relative;
+          display: flex;
+          // flex-wrap: wrap;
+          &__image{
+            width: 475px;
+            display: inline-flex;
+            justify-content: center;
+          }
+          &__description{
+            width: 475px;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h3 {
+              font-size: 2.5rem;
+            }
+            p{
+              max-height: 115px;
+            }
+          }
         }
       }
     }

@@ -313,18 +313,19 @@
   }
 }
 .stats{
-  height: 343px;
   display: flex;
-  position: relative;
+  flex-wrap: wrap;
   &__section{
-    height: 100%;
     width: 50%;
+    min-width: 350px;
+    flex: auto;
+    height: 343px;
     &__customers{
       background-color: #6888FF;
       height: 100%;
       color: #FFF;
       &__content{
-        width: 220px;
+        width: 210px;
         top: 15%;
         right: 10%;
         position: relative;

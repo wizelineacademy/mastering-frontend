@@ -249,6 +249,7 @@
         height: 100%;
         position: relative;
         justify-content: space-evenly;
+        // flex-wrap: wrap;
         &__features{
           width: 160px;
           height: 100%;
@@ -389,17 +390,19 @@
           transform: translateY(-50%);
           position: relative;
           display: flex;
-          // flex-wrap: wrap;
+          flex-wrap: wrap;
           &__image{
             width: 475px;
             display: inline-flex;
             justify-content: center;
+            flex: auto;
           }
           &__description{
             width: 475px;
             display: inline-flex;
             flex-direction: column;
             justify-content: space-between;
+            flex: auto;
             h3 {
               font-size: 2.5rem;
             }
@@ -412,6 +415,57 @@
     }
   }
 }
+
+.footer{
+  height: 80px;
+  // position: relative;
+  width: 100%;
+  font-family: Quicksand,sans-serif;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  &__logo{
+    width: 26px;
+    height: 26px;
+    background-color: #5e81fe;
+    border-radius: 50%;
+  }
+  &__content{
+    height: 80%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  &__section{
+    width: 50%;
+    display: flex;
+  }
+  &__nav-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    &__item{
+      text-decoration: none;
+      color: #697CA6;
+      cursor: pointer;
+      // flex: auto;
+      &__selected, &:hover{
+        text-decoration: none;
+        color: #5E81FE;
+      }
+    }
+  }
+}
+.copyright{
+  p{
+    text-align: center;
+  }
+}
+
 #bit-bucket{
   background-image: url("/reference/assets/customers/bitbucket.png");
 }

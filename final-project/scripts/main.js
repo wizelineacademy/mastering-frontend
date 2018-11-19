@@ -33,14 +33,13 @@ function generateCarrouselItem(items){
   let jsonItem = JSON.parse(items);
   activatePager(jsonItem.articles.length);
   jsonItem.articles.forEach(element => {
-    console.log(element);
     let htmlTemplate = `
       <div class="blog__content__article__image">
         <picture>
-            <source srcset="${element.images.tablet}"
-            media="(min-width: 768px)">
             <source srcset="${element.images.desktop}"
-            media="(min-width: 992px)">
+            media="(min-width:992px)">
+            <source srcset="${element.images.tablet}"
+            media="(min-width:768px)">
             <img src="${element.images.mobile}" alt="upload" >
         </picture>
       </div>
@@ -54,7 +53,7 @@ function generateCarrouselItem(items){
           </p>
         </div>
         <div class="blog__content__article__actions">
-            <button class="blog__content__article__actions__read" >Read Now</button>
+            <a href="${element.url}" target="_blank" class="blog__content__article__actions__read" > Read Now </a>
             <button class="blog__content__article__actions__bookmark" >Add to your bookmarks</button>
           </div>
       </div>
@@ -77,7 +76,6 @@ function updateProgress (oEvent) {
 }
 
 function transferComplete(evt) {
-  console.log("The transfer is complete.");
   let dataFromServer = this.responseText;
   generateCarrouselItem(dataFromServer);
 }
@@ -91,7 +89,6 @@ function transferCanceled(evt) {
 }
 
 function currentPage(page){
-  console.log(page.target.dataset.index);
   let pageNum = page.target.dataset.index;
   let carrousel = document.querySelector('.carrousel');
   let carrouselContent = carrousel.querySelector('.carrousel__content');
@@ -99,7 +96,8 @@ function currentPage(page){
   if (currentlyActive) {
     currentlyActive.classList.toggle('page-controller__indicator--active');
   }
-  carrouselContent.style.left= (988*pageNum)*-1 +'px';
+  let carrouselVisor = carrousel.querySelector('.carrousel__visor');
+  carrouselContent.style.left= (carrouselVisor.clientWidth*pageNum)*-1 +'px';
   page.target.classList.toggle('page-controller__indicator--active');
 }
 

@@ -92,30 +92,20 @@ p{
     transition: left 3s;
     &__article{
       width: 100%;
-      max-width: rem-calc(958px);
+      max-width: rem-calc(992px);
       display: flex;
       flex-direction: column;
-      flex-shrink: 0;
       border: 1px solid #D8E3FE;
-      padding: rem-calc(14px);
       background-color: white;
       &__image{
-        width: 100%;
-        overflow: hidden;
+        display: flex;
         background-color: $alter-section-color;
-        @include desktop-breakpoint {
-          width: 407px;
-          margin: rem-calc(40px);
-          flex-grow: 10;
-          flex-shrink: 0;
-        }
+        margin: rem-calc(16px);
       }
       &__info{
         display: flex;
         flex-direction: column;
-        @include tablet-breakpoint {
-          margin: rem-calc(16px) 0;
-        }
+        margin: rem-calc(16px) rem-calc(16px);
         @include desktop-breakpoint {
           margin: rem-calc(40px) rem-calc(16px) rem-calc(40px) 0 ;
         }
@@ -126,8 +116,6 @@ p{
           width: 100%;
           height: rem-calc(34px);
           color:#3A79FF;
-          
-          
           @include tablet-breakpoint {
             width: rem-calc(178px);
           }
@@ -146,17 +134,23 @@ p{
         }
       }
       @include desktop-breakpoint {
-        width: rem-calc(960px);
+        width: rem-calc(992px);
         flex-direction: row;
       }
     }
   }
   &__visor{
+    display: flex;
     width: 100%;
-    max-width: rem-calc(988px);
-    min-height: rem-calc(394px);
+    max-width: rem-calc(304px);
     margin: 0 auto;
     overflow: hidden;
+    @include tablet-breakpoint {
+      max-width: rem-calc(677px);
+    }
+    @include desktop-breakpoint {
+      max-width: rem-calc(994px);
+    }
   }
   span{
     margin: rem-calc(60px) 0 rem-calc(30px);
@@ -176,6 +170,7 @@ p{
     margin: rem-calc(48px) auto;
   }
 }
+
 .circle{
   display: flex;
   border-radius: 50%;

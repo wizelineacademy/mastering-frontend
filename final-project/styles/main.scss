@@ -17,6 +17,7 @@ h1 {
   font-size: 10px;
   font-weight: 500;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 h1.white {
@@ -38,6 +39,11 @@ section {
   border-bottom: 1px solid #D8E3FE;
 }
 
+button:hover,
+a:hover
+{
+  cursor: pointer;
+}
 .carousel__icon {
   font-size: 7px;
 }
@@ -128,9 +134,12 @@ section {
   padding: 9px 8px;
 }
 
-.social-icons button:hover {
+.social-icons button:hover,
+.customers__logos img:hover
+{
   -webkit-filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(-180deg) saturate(500%) contrast(0.8);
   filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(-180deg) saturate(500%) contrast(0.8);
+  cursor: pointer;
 }
 
 .nav-bar__content nav:nth-child(2) {
@@ -183,7 +192,7 @@ section.nav-bar__content a {
   font-family: 'Quicksand', sans-serif;
   font-size: 48px;
   font-weight: 300;
-  margin: 25px 0;
+  margin: 25px;
 }
 
 .plan-your-life_text {
@@ -251,6 +260,49 @@ section.nav-bar__content a {
 // ------------------------------------------
 //                 PLAN AND MANAGE
 
+.plan-and-manage {
+  background-color: #F5F8FF;
+  height: 776px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.plan-and-manage__content {
+  max-width: 413px;
+}
+
+.plan-and-manage__text {
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0.03em;
+}
+
+.plan-and-manage__title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 36px;
+  padding: 27px 0;
+  color: #3D4F9F;
+  font-weight: 300;
+}
+
+.plan-and-manage__title > strong {
+  font-weight: 400;
+}
+
+.plan-and-manage__img {
+  width: 50vw;
+  //padding: 50px;
+  //align-self: flex-end;
+}
+
+.plan-and-manage__buttons {
+  align-self: flex-start;
+  width: 100%;
+  padding-left: 10vw;
+}
+
 //               ! PLAN AND MANAGE
 // ------------------------------------------
 
@@ -272,6 +324,11 @@ section.nav-bar__content a {
 .blog {
   background-color: #F5F8FF;
   min-height: 864px;
+  position: relative;
+  display: flex;
+  //flex-flow: row wrap;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .blog__content {
@@ -279,15 +336,27 @@ section.nav-bar__content a {
   max-width: 1440px;
   padding: 94px 0 0 0;
   text-align: center;
+  //height: 100%;
+  //flex-shrink: 0;
+  width: 100%;
+  //flex-grow: 1;
 }
 
 .blog__content h1 {
   padding: 10px;
 }
 
-.blog__content .carousel__icon {
+.blog .carousel__icon {
+  //background-color: red;
   display: none;
-  padding-top: 50px;
+  //padding-top: 50px;
+  padding-bottom: 100px;
+  //position: absolute;
+  //left: 50%;
+  //bottom: 0;
+  //margin-left: -50%;
+  align-self: center;
+  //justify-self: flex-start;
 }
 
 .blog__title {
@@ -320,16 +389,25 @@ section.nav-bar__content a {
   padding: 35px;
 }
 
-#blog_title {
+.blog_title {
   color: #3D4F9F;
   font-family: 'Quicksand', sans-serif;
   font-size: 36px;
 }
 
-#blog_description {
+.blog_description {
   font-size: 14px;
   line-height: 1.6;
   margin: 32px 0;
+}
+
+.carousel__box > div.blog__text {
+  padding-bottom: 24px;
+}
+
+.blog__text > a.blog_url {
+  background-color: #D8E3FE;
+  color: #3A79FF;
 }
 
 .blog__text > a{
@@ -344,18 +422,13 @@ section.nav-bar__content a {
   text-decoration: none;
 }
 
-#blog_url {
-  background-color: #D8E3FE;
-  color: #3A79FF;
-}
-
-#blog_img_tablet {
+.blog_img_tablet {
   display: none;
 }
-#blog_img_mobile_2x {
+.blog_img_mobile_2x {
   display: none;
 }
-#blog_img_mobile {
+.blog_img_mobile {
   display: none;
 }
 
@@ -370,11 +443,11 @@ section.nav-bar__content a {
   width: 20px;
 }
 
-#loading_blog > p{
+.loading_blog > p{
   font-size: 30px;
 }
 
-#loading_blog > img {
+.loading_blog > img {
   margin-top: 30px;
   padding: 50px;
   width: 100px;
@@ -428,13 +501,12 @@ section.nav-bar__content a {
   }
 }
 
-@media screen and (max-width:940px){
+@media screen and (max-width:940px) {
   .social-icons {
     display: none;
   }
 
-  #blog_img_desktop
-  {
+  #blog_img_desktop {
     display: none;
   }
 
@@ -444,6 +516,10 @@ section.nav-bar__content a {
 
   .carousel__box {
     flex-direction: column;
+  }
+
+  .carousel__box .blog__text > a.blog_url {
+    text-align: center;
   }
 }
 
@@ -471,19 +547,29 @@ section.nav-bar__content a {
   section.nav-bar__content a {
     display: unset;
   }
+  .carousel__box > div {
+    padding: 24px;
+  }
 }
 
 @media screen and (max-width:580px){
   .customers__logos{
     flex-direction: column;
   }
-  .customers__logos > img{
+  .customers__logos > img,
+  #blog_img_mobile_2x
+  {
     display: none;
   }
 
   .customers__logos .carousel__icon,
-  .customers__logos img:first-child {
+  .customers__logos img:first-child,
+  #blog_img_mobile
+  {
     display: unset;
+  }
+  .carousel__box > div {
+    padding: 10px;
   }
 }
 
@@ -498,6 +584,8 @@ section.nav-bar__content a {
   section.nav-bar__content a {
     display: unset;
   }
+
+  section,
   .nav-bar,
   .nav-bar__content,
   .plan-your-life_content

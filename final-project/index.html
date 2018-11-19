@@ -47,7 +47,6 @@
     <div class="plan-your-life_content">
       <!--Plan your life-->
       <h1 class="small-title">PLAN YOUR LIFE</h1>
-      <hr>
       <p class="plan-your-life_title">Increase your <strong>productivity</strong></p>
       <p class="plan-your-life_text">
         Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
@@ -63,7 +62,6 @@
       </a>
     </div>
   </section>
-  <!--<hr>-->
   <section class="customers">
     <!--Customers-->
     <div class="customers__logos">
@@ -87,18 +85,22 @@
     </div>
   </section>
   <!--<hr>-->
-  <section>
+  <section class="plan-and-manage">
     <!--Plan and manage-->
-    <h1>DESKTOP AND MOBILE APP</h1>
-    <p>Plan and manage</p>
-    <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
-      Usu atqui laudem an, insolens gubergren similique est cu.
-      Et vel modus congue vitupereta. Solum patrioque no sea.
-      Mea ex malis mollis oporteat. Eum an expetenda consequat.
-    </p>
-    <button>View video</button>
-    <button>See features</button>
-    <img src=""> <!-- Planning image -->
+    <div class="plan-and-manage__content">
+      <h1>Desktop and mobile app</h1>
+      <p class="plan-and-manage__title"><strong>Plan</strong> and <strong>manage</strong></p>
+      <p class="plan-and-manage__text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+        Usu atqui laudem an, insolens gubergren similique est cu.
+        Et vel modus congue vitupereta. Solum patrioque no sea.
+        Mea ex malis mollis oporteat. Eum an expetenda consequat.
+      </p>
+    </div>
+    <img class="plan-and-manage__img" src="/reference/assets/plan-and-manage.png"> <!-- Planning image -->
+    <div class="plan-and-manage__buttons">
+      <button>View video</button>
+      <button>See features</button>
+    </div>
   </section>
   <!--<hr>-->
   <section>
@@ -161,40 +163,39 @@
         <img src="https://i.imgflip.com/dbxn8.jpg" />
         <p>For full functionality of this site it is necessary to enable JavaScript.</p>
       </noscript>
-      <div id="loading_blog">
+      <div id="loading_blog" class="loading_blog">
         <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/ab79a231234507.564a1d23814ef.gif" />
         <p>Loading content . . .</p>
       </div>
-      <div class="blog__carousel"><!-- Carousel -->
-        <button class="blog__button">
+      <div id="blog__carousel" class="blog__carousel"><!-- Carousel -->
+        <button id="blog__btn__prev" class="blog__button">
           <i class="fas fa-arrow-left fa-2x"></i>
         </button>
         <div class="carousel__box">
           <div class="blog__image">
-            <img id="blog_img_desktop" src="">
-            <img id="blog_img_tablet" src="">
-            <img id="blog_img_mobile_2x" src="">
-            <img id="blog_img_mobile" src="">
+            <img id="blog_img_desktop" class="blog_img_desktop" src="">
+            <img id="blog_img_tablet" class="blog_img_tablet" src="">
+            <img id="blog_img_mobile_2x" class="blog_img_mobile_2x" src="">
+            <img id="blog_img_mobile"  class="blog_img_mobile" src="">
           </div>
           <div class="blog__text">
-            <p id="blog_title">No text</p>
-            <p id="blog_description">No text</p>
-            <a id="blog_url" href="" target="_blank">Read now</a>
+            <p id="blog_title" class="blog_title">No text</p>
+            <p id="blog_description" class="blog_description">No text</p>
+            <a id="blog_url" class="blog_url" href="" target="_blank">Read now</a>
             <a href="">Add to your bookmarks</a>
           </div>
         </div>
-        <button class="blog__button">
+        <button id="blog__btn__next" class="blog__button">
           <i class="fas fa-arrow-right fa-2x"></i>
         </button>
 
       </div>
-      <div id="carousel_icons" class="carousel__icon">
-        <i class="fas fa-circle fa-xs"></i>
-        <i class="fas fa-circle fa-xs"></i>
-        <i class="fas fa-circle fa-xs"></i>
-        <i class="fas fa-circle fa-xs"></i>
-        <i class="fas fa-circle fa-xs"></i>
-      </div>
+    </div>
+    <div id="carousel_icons" class="carousel__icon">
+      <i class="fas fa-circle fa-xs _carousel__dot"></i>
+      <i class="fas fa-circle fa-xs _carousel__dot"></i>
+      <i class="fas fa-circle fa-xs _carousel__dot"></i>
+      <i class="fas fa-circle fa-xs _carousel__dot"></i>
     </div>
   </section><!-- /Our Resources -->
   <!--<hr>-->

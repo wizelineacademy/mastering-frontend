@@ -196,7 +196,7 @@
   }
 
   .get-started {
-    padding: 72px 20px 83px;
+    padding: 91px 40px 91px;
     background: linear-gradient(199.86deg, #6888ff 12.77%, #5e80ff 73.11%);
     color: white;
     text-align: center;
@@ -205,8 +205,8 @@
     }
 
     h2 {
-      padding-top: 18px;
-      padding-bottom: 19px;
+      padding-top: 28px;
+      padding-bottom: 28px;
       color: white;
     }
 
@@ -215,12 +215,15 @@
     }
 
     p {
-      padding-bottom: 25px;
+      padding-bottom: 28px;
     }
     &__buttons {
-      width: 100%;
+      width: 50%;
       display: flex;
-      align-items: center;
+      margin: auto;
+      //position: absolute;
+      //align-items: center;
+
 
       &-a {
         width: 50%;

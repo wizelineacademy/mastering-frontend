@@ -1,0 +1,253 @@
+@media screen and (max-width: 768px) {
+  .top-nav__left {
+    margin-right: auto;
+    background-color: white;
+    display: inline-block;
+  }
+
+  .top-nav__left a {
+    display: inline-block;
+  }
+  .top-nav__right {
+    display: none;
+  }
+
+  .productivity {
+    align-items: center;
+    background: url('/reference/assets/hero.png') center / cover;
+    display: flex;
+    flex-direction: column;
+    height: 582px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    h3 {
+      padding-top: 90px;
+    }
+
+    h1 {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    & i {
+      color: #5E81FF;
+      margin: auto;
+    }
+
+    &__details {
+      display: none;
+    }
+
+    &__content {
+
+    }
+
+    &__play {
+      background-color: #FFF;
+      border-radius: 50%;
+      box-shadow: 0 10px 50px #DBDBDB;
+      display: flex;
+      height: 52px;
+      width: 52px;
+      align-items: center;
+    }
+
+  }
+
+  .sites {
+    &__slides {
+      display: none;
+    }
+
+    &__icon {
+      color: gray;
+    }
+
+    &__icon > i:first-child {
+      color: #5283ff;
+    }
+  }
+
+  .plan {
+    background-color: #F5F8FF;
+    padding: 39px 15px 27px;
+
+    h2 {
+      padding-top: 35px;
+    }
+
+    p {
+      padding-top: 33px;
+    }
+
+    img {
+      padding-top: 68px;
+    }
+
+    &__buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      &-video {
+        width: 50%;
+        background-color: #4C85FF;
+        box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
+        border-radius: 2px;
+        font-weight: bold;
+      }
+      &-features {
+        width: 50%;
+        border: 1px solid #D1D1E4;
+        box-sizing: border-box;
+        border-radius: 2px;
+        color: #ADB4D2;
+      }
+    }
+  }
+
+  .about {
+    background-color: white;
+    //display: flex;
+    align-items: center;
+  }
+
+  .stats {
+    &__a {
+      padding: 66px 20px;
+      text-align: right;
+      background: linear-gradient(208.93deg, #6888FF 12.77%, #5E80FF 73.11%);
+      color: white;
+    }
+
+    &__b {
+      padding: 66px 20px;
+      text-align: left;
+      background: linear-gradient(130.53deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+      color: #5E80FF;
+    }
+
+    img {
+      width: 65px;
+      height: 66px;
+    }
+
+    &__number {
+      padding-top: 36px;
+      font-family: Quicksand, serif;
+      font-size: 48px;
+      letter-spacing: 0.03em;
+    }
+    &__p1 {
+      padding-top: 4%;
+    }
+
+  }
+
+  .resources {
+    background-color: #F5F8FF;
+    text-align: center;
+    padding: 43px 15px 68px;
+
+    h2 {
+      padding-top: 25px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .testimonials {
+    display: none;
+  }
+
+  .customer-help {
+    text-align: center;
+    background-color: white;
+    padding: 43px 15px 68px;
+
+    h2 {
+      padding-top: 25px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .get-started {
+    padding: 72px 20px 83px;
+    background: linear-gradient(199.86deg, #6888FF 12.77%, #5E80FF 73.11%);
+    color: white;
+    text-align: center;
+    img {
+      display: none;
+    }
+
+    h2 {
+      padding-top: 18px;
+      padding-bottom: 19px;
+      color: white;
+    }
+
+    h3 { color: white }
+
+    p {
+      padding-bottom: 25px;
+    }
+    &__buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      &-a {
+        width: 50%;
+        background-color: white;
+        color: black;
+      }
+      &-b {
+        width: 50%;
+        border-color: white;
+        color: #C7D3FF;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .sign-up {
+    background-color: #FCFDFF;
+    padding: 53px 15px 70px;
+    p {
+      font-family: Roboto, serif;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 27px;
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      color: #8D96BD;
+      padding-top: 18px;
+      padding-bottom: 42px;
+    }
+    input {
+      width: 100%;
+    }
+
+    &__inp {
+      background: #EFEFF7;
+      border-radius: 5px;
+      padding-bottom: 24px;
+    }
+
+    &__btn_s {
+      background: #4D6CE1;
+      box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
+      border-radius: 5px;
+      height: 59px;
+      color: white;
+    }
+  }
+
+  .footer {
+
+  }
+  .img-full {
+    width: 100%;
+  }
+}

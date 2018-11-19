@@ -1,14 +1,184 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="./dist/styles.css">
+    <!--http://kenwheeler.github.io/slick/-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leonardo Urzua - Frontend certification</title>
+    <link rel="stylesheet" href="./dist/styles.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello world!</h1>
-  <script src="./dist/bundle.js"></script>
+<header class="header">
+    <nav class="top-nav">
+        <span class="top-nav__left">
+            <span class="dot"></span>
+            <a class="top-nav__left__item active">Home</a>
+            <a class="top-nav__left__item">Blog</a>
+            <a class="top-nav__left__item">Features</a>
+            <a class="top-nav__left__item">Pricing</a>
+            <a class="top-nav__left__item">Documentation</a>
+        </span>
+        <span class="top-nav__right">
+            <a><img src="reference/assets/icons/facebook.png"></a>
+            <a><img src="reference/assets/icons/telegram.png"></a>
+            <a><img src="reference/assets/icons/twitter.png"></a>
+            <a><img src="reference/assets/icons/medium.png"></a>
+        </span>
+        <span class="">
+        <a>
+            <button>Get started</button>
+        </a>
+        </span>
+        <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+</header>
+<main>
+    <section class="productivity">
+        <h3>PLAN YOUR LIFE</h3>
+        <h1>Increase your <strong>productivity</strong></h1>
+
+        <p class="productivity__details">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
+            atqui laudem an, insolens gubergren similique est cu. Et vel modus
+            congue vituperata.
+        </p>
+        <a class="productivity__play">
+            <i class="fas fa-play fa-xs"></i>
+        </a>
+    </section>
+    <section class="sites">
+        <div class="sites_items">
+            <img class="sites__items--1" src="./reference/assets/customers/bitbucket.png">
+            <img class="sites__items--2 divide " src="./reference/assets/customers/apple-watch.png">
+            <img class="sites__items--3" src="./reference/assets/customers/facebook.png">
+            <img class="sites__items--4 divide" src="./reference/assets/customers/atlassian.png">
+            <img class="sites__items--5" src="./reference/assets/customers/audi.png">
+        </div>
+        <span class="sites__icon">
+            <i class="fas fa-circle fa-xs"></i>
+            <i class="fas fa-circle fa-xs"></i>
+            <i class="fas fa-circle fa-xs"></i>
+            <i class="fas fa-circle fa-xs"></i>
+            <i class="fas fa-circle fa-xs"></i>
+        </span>
+    </section>
+    <section class="plan">
+        <h3>DESKTOP AND MOBILE APP</h3>
+        <h2><strong>Plan</strong> and <strong>manage</strong></h2>
+        <p class="sub">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens
+            gubergren
+            similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum
+            an
+            expetenda consequat.</p>
+        <img src="reference/assets/plan-manage.png" alt="plan manage" class="img-full">
+        <span class="plan__buttons">
+            <button class="plan__buttons-video">View video</button>
+            <button class="plan__buttons-features">See features</button>
+        </span>
+    </section>
+    <!--<section class="about">-->
+        <!--<h3>ABOUT US</h3>-->
+        <!--<h2>Read about our app</h2>-->
+
+        <!--<span class="about__row">-->
+            <!--<div class="about__card">-->
+            <!--<img src="reference/assets/icons/home.png"/>-->
+        <!--<h2>Overview</h2>-->
+        <!--Brute laoreet efficiendi id his, ea illum nonumes luptatum pro-->
+                <!--</div>-->
+            <!--<div>-->
+            <!--<img src="reference/assets/icons/folder.png"/>-->
+        <!--<h2>Files</h2>-->
+        <!--No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.-->
+        <!--</div>-->
+        <!--</span>-->
+
+        <!--<span>-->
+        <!--<img src="reference/assets/icons/chat.png"/>-->
+        <!--<h2>Meetings chats</h2>-->
+        <!--Vim ne tacimates neglegentur. Erat diceret omittam at est.-->
+        <!--<div>-->
+            <!--<img src="reference/assets/icons/upload.png"/>-->
+        <!--</div>-->
+        <!--<h2>Save events</h2>-->
+        <!--Nisl idque mel ea, nominati voluptatum.-->
+        <!--</span>-->
+
+        <!--<span>-->
+        <!--<button>Read more</button>-->
+        <!--OR-->
+        <!--<button>Get started</button>-->
+        <!--</span>-->
+
+    <!--</section>-->
+    <section class="stats">
+        <div class="stats__a">
+            <img src="./reference/assets/icons/speedmeter.png">
+            <p class="stats__number">89%</p>
+            <p class="stats__p1 ">
+                Customers who have increased their productivity
+            </p>
+        </div>
+        <div class="stats__b">
+            <img src="./reference/assets/icons/people.png">
+            <p class="stats__number">3123</p>
+            <p class="stats__p1">
+                Users who have used out application
+            </p>
+        </div>
+    </section>
+    <section class="resources">
+        <h3>Our resources</h3>
+        <h2>Start reading our blog</h2>
+    </section>
+    <section class="testimonials">
+        TESTIMONIALS
+        Customers's quotes
+    </section>
+    <section class="customer-help">
+        <h3>Customer help</h3>
+        <h2>Frequently asked questions</h2>
+    </section>
+    <section class="get-started">
+        <img class="img-full" src="reference/assets/blue-clouds-bg.png">
+        <h3>Plan your life</h3>
+        <h2>Get <strong>started</strong> now</h2>
+        <p>
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren
+            similique est cu. Et vel modus congue vituperata
+        </p>
+        <span class="get-started__buttons">
+            <button class="get-started__buttons-a">View pricing</button>
+            <button class="get-started__buttons-b">Read documentation</button>
+        </span>
+    </section>
+    <section class="sign-up">
+        <h4>Sign up for newsletter</h4>
+        <p>Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</p>
+        <form>
+            <label>
+                <input class="sign-up__inp" type="text" value="" placeholder="Email address">
+            </label>
+            <br><br>
+            <input class="sign-up__btn_s" type="submit" value="Save me">
+        </form>
+    </section>
+</main>
+<footer class="footer">
+    <nav>
+        <a>Home</a>
+        <a>Blog</a>
+        <a>Features</a>
+        <a>Pricing</a>
+        <a>Documentation</a>
+    </nav>
+</footer>
+<script src="./dist/bundle.js"></script>
 </body>
 </html>

@@ -149,7 +149,6 @@ p {
 }
 .customers-section {
   grid-area: customer;
-  // height: rem-calc(146px);
   margin: rem-calc(58px) rem-calc(276px) rem-calc(58px) rem-calc(276px);
   display: flex;
   justify-content: space-around;
@@ -157,17 +156,23 @@ p {
 .plan-manage-section {
   grid-area: planManage;
   height: 776px;
-
+  border-top: 1px solid #DAE4FE;
+  border-bottom: 1px solid #DAE4FE;
+  background-color: #F5F8FF;
+  width: 100%;
   &__text-area {
-    width: rem-calc(413px);
+    width: 28%;
     height: rem-calc(352px);
-    // margin: rem-calc(208px) rem-calc(756px) rem-calc(216px) rem-calc(271px);
     position: relative;
-    left: 100px;
     display: inline-block;
+    margin-top: rem-calc(208px);
+    margin-left: rem-calc(271px);
   }
   &__image {
     position: absolute;
+    display: inline-block;
+    width: 50%;
+    margin-top: rem-calc(171px);
   }
   &__text-area h1 {
     margin-top: rem-calc(27px);
@@ -216,7 +221,6 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    // margin-top: rem-calc(20px);
   }
   &__items {
     display: flex;
@@ -291,30 +295,30 @@ p {
   width: 100%;
   &__customers{
     width:50%;
-    height: 100%;
+    height: rem-calc(343px);
     background-color: #6888FF;
     display: inline-block;
     position: relative;
+    h2 {
+      margin-top: 20%;
+      margin-bottom: 5%;
+    }
     h2, p {
       color: #FFFFFF;
       text-align: right;
     }
-    h2 {
-      margin-top: rem-calc(30px);
-    }
     img {
       position: absolute;
       right: 0px;
-      // float: right;
+      margin-top: 5%;
     }
-    h2, p, img {
+    h2, p, img{
       margin-right: 10%;
-      margin-top: 10%;
     }
   }
   &__users{
     width:50%;
-    height: 100%;
+    height: rem-calc(343px);
     background-color: #E9EFFF;
     display: inline-block;
     position: absolute;
@@ -334,7 +338,6 @@ p {
   }
   h2 {
     font-size: rem-calc(48px);
-    margin-bottom: rem-calc(30px);
   }
   p {
     font-size: rem-calc(18px);
@@ -397,6 +400,7 @@ p {
   }
   &__content {
     background-color: #FFFFFF;
+    border: 1px solid #DAE4FE;
     width: 70%;
     display: block;
     margin-left: auto;
@@ -428,6 +432,7 @@ p {
     display: inline-block;
     position: absolute;
     &-rectangle {
+      border: 1px solid #DAE4FE;
       width: rem-calc(423px);
       height: rem-calc(175px);
       background-color: white;
@@ -537,6 +542,7 @@ p {
 }
 
 .footer-section {
+  border-top: 1px solid #DAE4FE;
   grid-area: footer;
   height: rem-calc(287px);
   &__copyright {

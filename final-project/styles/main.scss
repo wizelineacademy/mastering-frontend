@@ -102,6 +102,12 @@
   align-items: center;
   display: flex;
 }
+.menu-footer{
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
 .carousel-index{
   display: flex;
   width: fit-content;
@@ -575,28 +581,30 @@
 }
 
 .footer{
-  height: 80px;
   width: 100%;
   font-family: Quicksand,sans-serif;
   align-items: center;
   display: flex;
   justify-content: center;
   &__logo{
+    width: 26px;
     min-width: 26px;
     min-height: 26px;
     background-color: #5e81fe;
     border-radius: 50%;
   }
   &__content{
-    height: 80%;
+    margin: 30px 0;
     width: 80%;
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
   }
   &__section{
-    width: 50%;
+    width: 300px;
     display: flex;
+    flex: auto;
   }
   &__nav-list{
     list-style-type: none;
@@ -604,8 +612,8 @@
     padding: 0;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 100%;
     &__item{
+      flex:auto;
       text-decoration: none;
       color: #697CA6;
       cursor: pointer;
@@ -668,6 +676,11 @@ and (max-width : 815px) {
  .social-media{
   display: none;
  }
+ .footer{
+    &__section{
+      justify-content: center;
+    }
+  }
  .menu{
    width: 400px;
  }
@@ -698,6 +711,28 @@ and (max-width : 415px) {
   }
   .hero__content__description{
       display: none;
+  }
+  .footer{
+    flex-direction: column;
+    &__section{
+      button{
+        width: 100%;
+      }
+    }
+    &__nav-list{
+      flex-direction: column;
+      justify-content: space-between;
+      height: 200px;
+      margin: 20px 0;
+      &__item{
+        margin: 50px 0;
+      }
+    }
+    &__logo{
+      position: absolute;
+      left: 10%;
+      margin-top: -20px;
+    }
   }
 }
 

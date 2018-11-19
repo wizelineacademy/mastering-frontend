@@ -1,0 +1,333 @@
+
+  .top-nav__left {
+    margin-right: auto;
+    background-color: orange;
+    display: inline-block;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .img-full {
+    width: 100%;
+  }
+
+  .top-nav__left a {
+    display: inline-block;
+  }
+  .top-nav__right {
+    display: none;
+  }
+
+  .productivity {
+    align-items: center;
+    background: url("/reference/assets/hero.png") center / cover;
+    display: flex;
+    flex-direction: column;
+    height: 582px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    h3 {
+      padding-top: 90px;
+    }
+
+    h1 {
+      padding-top: 40px;
+      padding-bottom: 28px;
+    }
+
+    & i {
+      color: #5e81ff;
+      margin: auto;
+    }
+
+    &__details {
+      display: block;
+      width: 502px;
+      height: 78px;
+      font-family: Roboto, serif;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 29px;
+      font-size: 15px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      padding-bottom: 19px;
+      color: #8D96BD;
+    }
+
+    &__content {
+    }
+
+    &__play {
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 10px 50px #dbdbdb;
+      display: flex;
+      height: 52px;
+      width: 52px;
+      align-items: center;
+    }
+  }
+
+  .sites {
+    padding: 58px 276px;
+    &__items {
+
+    }
+    .divide {
+      padding-right: 7%;
+      padding-left: 7%;
+    }
+
+    img {
+      width: 116px;
+      height: 29px;
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    &__icon > i:first-child {
+      color: #5283ff;
+    }
+  }
+
+  .plan {
+    background-color: #f5f8ff;
+    padding: 208px 50px 208px;
+
+    h2 {
+      padding-top: 35px;
+    }
+
+    p {
+      padding-top: 33px;
+      text-align: left;
+      width: 50%;
+      margin: 0;
+    }
+
+    img.img-full {
+      position: absolute;
+      box-shadow: 0px 100px 150px #F2F6FF;
+      float:right;
+      text-align: right;
+      width: 653px;
+      height: 436px;
+      left: 739px;
+      top: 967px;
+
+    }
+
+    &__buttons {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      padding-top: 47px;
+
+      &-video {
+        width: 50%;
+        background-color: #4c85ff;
+        box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
+        border-radius: 2px;
+        font-weight: bold;
+      }
+      &-features {
+        width: 50%;
+        border: 1px solid #d1d1e4;
+        box-sizing: border-box;
+        border-radius: 2px;
+        color: #adb4d2;
+      }
+    }
+  }
+
+  .about {
+    background-color: white;
+    //display: flex;
+    align-items: center;
+  }
+
+  .stats {
+    width: 100%;
+    &__a {
+      width: 35%;
+      display: inline-block;
+      overflow: auto;
+      padding: 66px 90px;
+      text-align: right;
+      background: linear-gradient(208.93deg, #6888FF 12.77%, #5E80FF 73.11%);
+      color: white;
+    }
+
+    &__b {
+      width: 35%;
+      display: inline-block;
+      //overflow: auto;
+      padding: 66px 90px;
+      text-align: left;
+      background: linear-gradient(130.53deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+      color: #5e80ff;
+    }
+
+    img {
+      width: 65px;
+      height: 66px;
+    }
+
+    &__number {
+      padding-top: 48px;
+      font-family: Quicksand, serif;
+      font-size: 48px;
+      letter-spacing: 0.03em;
+    }
+    &__p1 {
+      padding-top: 36px;
+    }
+  }
+
+  .resources {
+    background-color: #f5f8ff;
+    text-align: center;
+    padding: 103px 300px 92px;
+
+    h2 {
+      padding-top: 25px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .testimonials {
+    display: none;
+  }
+
+  .customer-help {
+    text-align: center;
+    background-color: white;
+    padding: 176px 30px 176px;
+
+    h2 {
+      padding-top: 25px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .get-started {
+    padding: 91px 40px 91px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    background-size: contain;
+    width: 100%;
+    height: auto;
+    background: url("/reference/assets/blue-clouds-bg.png") no-repeat 50% 50%;
+    background-size: cover;
+
+    img {
+      display: none;
+    }
+
+    h2 {
+      padding-top: 28px;
+      padding-bottom: 28px;
+      color: white;
+    }
+
+    h3 {
+      color: white;
+    }
+
+    p {
+      padding-left: 130px;
+      padding-right: 130px;
+      padding-bottom: 28px;
+    }
+    &__buttons {
+      width: 30%;
+      display: flex;
+      margin: auto;
+      //position: absolute;
+      //align-items: center;
+
+      &-a {
+        width: 50%;
+        background-color: white;
+        color: black;
+      }
+      &-b {
+        width: 50%;
+        border-color: white;
+        color: #c7d3ff;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .sign-up {
+    background-color: #fcfdff;
+    padding: 118px 140px 118px;
+    text-align: left;
+
+    br {
+      display: none;
+    }
+
+    h4 {
+      width: 50%;
+      text-align: left;
+    }
+
+    p {
+      font-family: Roboto, serif;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 27px;
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      color: #8d96bd;
+      padding-top: 18px;
+      padding-bottom: 42px;
+      width: 50%;
+      margin: 0;
+    }
+
+    &__inp {
+      //background: #efeff7;
+      //border-radius: 5px;
+      //padding-bottom: 24px;
+      //padding-right: 14px;
+      //width: 279px;
+      background: #efeff7;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__btn_s {
+      background: #4d6ce1;
+      box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
+      border-radius: 5px;
+      height: 59px;
+      color: white;
+      width: 184px;
+    }
+
+    &__form {
+      display: flex;
+      //width: 50%;
+      //margin: auto;
+
+      &__label {
+        background: #efeff7;
+        border-radius: 5px;
+        width: 279px;
+      }
+    }
+  }
+
+

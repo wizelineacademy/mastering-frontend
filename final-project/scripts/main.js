@@ -12,7 +12,5 @@ const after = before
 .split("")
 .filter(char => char !== "-")
 .join("");
-console.log({ before });
-console.log({ after });
 
 

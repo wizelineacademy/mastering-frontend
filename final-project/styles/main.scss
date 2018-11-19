@@ -367,19 +367,20 @@
 }
 .blog{
   background-color:#F5F8FF;
-  height: 865px;
   &__content{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 100%;
     &__title{
       text-align: center;
+      margin: 40px 0;
+      h1, h1{
+        margin: 10px 0;
+      }
     }
     &__articles{
       display: flex;
       justify-content: space-evenly;
-      height: 394px;
       &__arrow{
         display: flex;
         align-items: center;
@@ -396,8 +397,7 @@
       &__cards{
         background-color: #FFF;
         border: 1px solid #D8E3FE;
-        width: 950px;
-        margin: 0 20px;
+        width: 90%;
         &__content{
           top: 50%;
           transform: translateY(-50%);
@@ -405,26 +405,40 @@
           display: flex;
           flex-wrap: wrap;
           &__image{
-            width: 475px;
+            width: 50%;
+            min-width: 350px;
             display: inline-flex;
             justify-content: center;
             flex: auto;
+            margin: 10px 0;
+            img{
+              width: 90%;
+            }
           }
           &__description{
-            width: 475px;
+            width: 40%;
+            margin: 5% 5%;
             display: inline-flex;
             flex-direction: column;
             justify-content: space-between;
             flex: auto;
             h3 {
               font-size: 2.5rem;
+              margin-bottom: 20px;
             }
             p{
               max-height: 115px;
+              overflow: hidden;
+            }
+            &__buttons{
+              margin: 20px 0;
             }
           }
         }
       }
+    }
+    &__index{
+      margin: 40px 0;
     }
   }
 }
@@ -455,11 +469,11 @@
   }
 }
 .faq{
-  height: 965px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 50px 0;
   &__content{
     width: 80%;
     height: 80%;
@@ -541,7 +555,6 @@
 
 .footer{
   height: 80px;
-  // position: relative;
   width: 100%;
   font-family: Quicksand,sans-serif;
   align-items: center;
@@ -604,12 +617,6 @@
 }
 #audi{
   background-image: url("/reference/assets/customers/audi.png");
-}
-#plan-manage-image{
-  background-image: url("/reference/assets/plan-manage.png");
-  // min-width: 266px;
-  width: 100%;
-  min-height: 178px;
 }
 #home-icon{
   background-image: url("/reference/assets/icons/home.png");

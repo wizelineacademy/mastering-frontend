@@ -208,40 +208,36 @@
   }
 }
 .plan-manage{
-  height: 776px;
   background-color: #F5F8FF;
+  display: flex;
+  flex-direction: column;
   &__content{
     display: flex;
-    height: 100%;
-    position: relative;
+    flex-wrap: wrap;
+    margin: 10% 0;
     &__section{
-      width: 50%;
-      background-position: 0 80%;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    &__text-container{
-      margin-left: 30%;
-      margin-top: 30%;
-    }
-    &__subtitle{
-      margin: 20px 0;
-    }
-    &__description{
-      color: #8D96BD;
-    }
-    &__buttons{
-      height: 43px;
-      width: 100%;
-      z-index: 2;
-      top: 60%;
-      padding-left: 15%;
-      position: absolute;
-      &__button{
-        height: 100%;
-        width: 130px;
+      width: 650px;
+      flex: auto;
+      &__text-container{
+        margin: 0 10% 15% 10%;
+        .subtitle{
+          margin: 20px 0;
+        }
+      }
+      &__image{
+        text-align: right;
+        img{
+          width: 600px;
+          max-width: 70%;
+          margin-top: -60px;
+        }
       }
     }
+  }
+  &__buttons{
+    width: 100%;
+    position: relative;
+    padding-left: 10%;
   }
 }
 .about{
@@ -611,6 +607,9 @@
 }
 #plan-manage-image{
   background-image: url("/reference/assets/plan-manage.png");
+  // min-width: 266px;
+  width: 100%;
+  min-height: 178px;
 }
 #home-icon{
   background-image: url("/reference/assets/icons/home.png");

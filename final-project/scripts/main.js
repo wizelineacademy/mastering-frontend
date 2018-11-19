@@ -2,6 +2,7 @@ import "../styles/main.scss";
 import "../styles/top-nav.scss"
 import "../styles/mobile.scss"
 import "../styles/portrait.scss"
+import "../styles/landscape.scss"
 import './slides'
 
 // testing that `const` and arrow functions transpile correctly

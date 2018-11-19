@@ -241,7 +241,13 @@
 
   .sign-up {
     background-color: #fcfdff;
-    padding: 53px 15px 70px;
+    padding: 71px 140px 70px;
+    text-align: center;
+
+    br {
+      display: none;
+    }
+
     p {
       font-family: Roboto, serif;
       font-style: normal;
@@ -253,14 +259,17 @@
       padding-top: 18px;
       padding-bottom: 42px;
     }
-    input {
-      width: 100%;
-    }
 
     &__inp {
+      //background: #efeff7;
+      //border-radius: 5px;
+      //padding-bottom: 24px;
+      //padding-right: 14px;
+      //width: 279px;
       background: #efeff7;
-      border-radius: 5px;
-      padding-bottom: 24px;
+      height: 100%;
+      width: 100%;
+      text-align: center;
     }
 
     &__btn_s {
@@ -269,6 +278,19 @@
       border-radius: 5px;
       height: 59px;
       color: white;
+      width: 184px;
+    }
+
+    &__form {
+      display: flex;
+      width: 50%;
+      margin: auto;
+
+      &__label {
+        background: #efeff7;
+        border-radius: 5px;
+        width: 279px;
+      }
     }
   }
 

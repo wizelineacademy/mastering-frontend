@@ -15,7 +15,7 @@ console.log({ after });
 carrousel();
 function carrousel(){
   loadCarrouselData();
- 
+  
 }
 function loadCarrouselData(){
   let oReq = new XMLHttpRequest();
@@ -31,20 +31,26 @@ function loadCarrouselData(){
 
 function generateCarrouselItem(items){
   let jsonItem = JSON.parse(items);
+  activatePager(jsonItem.articles.length);
   jsonItem.articles.forEach(element => {
+    console.log(element);
     let htmlTemplate = `
       <div class="blog__content__article__image">
         <picture>
-            <img src="/reference/assets/sample-blog-entry.png" alt="upload" >
+            <source srcset="${element.images.tablet}"
+            media="(min-width: 768px)">
+            <source srcset="${element.images.desktop}"
+            media="(min-width: 992px)">
+            <img src="${element.images.mobile}" alt="upload" >
         </picture>
       </div>
       <div class="blog__content__article__info">
         <div  class="blog__content__article__data">
           <header>
-            <h1>How start planning</h1>
+            <h1>${element.title}</h1>
           </header>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident consequatur quod numquam saepe maiores placeat libero, incidunt nisi unde adipisci dolor nobis nam pariatur quis earum laudantium reprehenderit praesentium.
+            ${element.description}  
           </p>
         </div>
         <div class="blog__content__article__actions">
@@ -59,14 +65,12 @@ function generateCarrouselItem(items){
     asNode.innerHTML =  htmlTemplate;
     asNode.classList="blog__content__article carrousel__content__item";
     carrouselContent.appendChild(asNode);
-    console.log(element);
   });
 }
 
 function updateProgress (oEvent) {
   if (oEvent.lengthComputable) {
     var percentComplete = oEvent.loaded / oEvent.total * 100;
-    console.log(percentComplete);
   } else {
     // Unable to compute progress information since the total size is unknown
   }
@@ -84,4 +88,30 @@ function transferFailed(evt) {
 
 function transferCanceled(evt) {
   console.log("The transfer has been canceled by the user.");
+}
+
+function currentPage(page){
+  console.log(page.target.dataset.index);
+  let pageNum = page.target.dataset.index;
+  let carrousel = document.querySelector('.carrousel');
+  let carrouselContent = carrousel.querySelector('.carrousel__content');
+  let currentlyActive = carrousel.querySelector('.carrousel__controls .page-controller__indicator--active');
+  if (currentlyActive) {
+    currentlyActive.classList.toggle('page-controller__indicator--active');
+  }
+  carrouselContent.style.left= (988*pageNum)*-1 +'px';
+  page.target.classList.toggle('page-controller__indicator--active');
+}
+
+function activatePager(numPages){
+  let carrousel= document.querySelector('.carrousel');
+  let carrouselControls = carrousel.querySelector('.carrousel__controls');
+  for (let i = 0; i < numPages; i++) {
+    let pageNode =  document.createElement('span');
+    let addClass = i == 0 ? 'page-controller__indicator page-controller__indicator--active' : 'page-controller__indicator ';
+    pageNode.classList= addClass ;
+    pageNode.addEventListener("click", currentPage); 
+    pageNode.dataset.index = i;
+    carrouselControls.appendChild(pageNode);
+  }
 }

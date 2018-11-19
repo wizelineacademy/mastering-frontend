@@ -87,11 +87,15 @@ p{
   padding: 0 rem-calc(14px);
   &__content{
     display: flex;
-    justify-content: center;
+    left: 0;
+    position: relative;
+    transition: left 3s;
     &__article{
       width: 100%;
+      max-width: rem-calc(958px);
       display: flex;
       flex-direction: column;
+      flex-shrink: 0;
       border: 1px solid #D8E3FE;
       padding: rem-calc(14px);
       background-color: white;
@@ -146,6 +150,13 @@ p{
         flex-direction: row;
       }
     }
+  }
+  &__visor{
+    width: 100%;
+    max-width: rem-calc(988px);
+    min-height: rem-calc(394px);
+    margin: 0 auto;
+    overflow: hidden;
   }
   span{
     margin: rem-calc(60px) 0 rem-calc(30px);

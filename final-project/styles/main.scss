@@ -28,7 +28,8 @@ $paragraph-text-color: #8D96BD;
     "faq faq"
     "clouds clouds"
     "newsletter newsletter"
-    "footer footer";
+    "footer footer"
+    "test test";
 }
 
 button { border:none; }
@@ -96,22 +97,25 @@ button { border:none; }
 }
 
 .hero-section {
-  text-align: center;
   height: rem-calc(570px);
-  position: relative;
   grid-area: hero;
-  height: 570px;
-
+  position: relative;
   &__text-area {
-    position: absolute;
     top: rem-calc(92px);
-    left: rem-calc(229px);
+    left: 10%;
+    right:10%;
+    position: absolute;
+    text-align: center;
   }
-
   &__text-area h1 {
     margin-top: rem-calc(16px);
     margin-bottom: rem-calc(28px);
     font-size: rem-calc(48px);
+  }
+  &__text-area p {
+    min-width: rem-calc(450px);
+    width: 30%;
+    margin: 0 auto;
   }
   &__circle {
     width: rem-calc(52px);
@@ -127,6 +131,23 @@ button { border:none; }
     margin: rem-calc(21px) rem-calc(20px) rem-calc(20px) rem-calc(22px);
   }
 }
+//tablet
+@media only screen
+and (min-width: rem-calc(768px))
+and (max-width: rem-calc(1024px))
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+//MOBILE
+@media only screen
+and (min-width: rem-calc(320px))
+and (max-width: rem-calc(480px))
+and (-webkit-min-device-pixel-ratio: 2) {
+  .hero-section p{
+    display: none;
+  }
+}
+
 
 h1 {
   color: $headers-text-color;
@@ -506,6 +527,51 @@ p {
 .clouds-section {
   grid-area: clouds;
   height: rem-calc(447px);
+  position: relative;
+
+  &__text {
+    position: absolute;
+    text-align: center;
+    top: rem-calc(92px);
+    left: 10%;
+    right:10%;
+    h1, p, h2 {
+      color: #FFFFFF;
+    }
+    h1 {
+      margin-top: rem-calc(16px);
+      margin-bottom: rem-calc(28px);
+      font-size: rem-calc(48px);
+      min-width: rem-calc(358px);
+    }
+    p {
+      padding-bottom: rem-calc(28px);
+      min-width: rem-calc(288px);
+      width: 55%;
+      margin: 0 auto;
+    }
+  }
+  &__btn-pricing {
+    background-color: #FFFFFF;
+    font-family: 'Quicksand', sans-serif;
+    color: #565F82;
+    font-size: rem-calc(13px);
+    padding: rem-calc(13px);
+    border-radius: 2px;
+    width: rem-calc(130px);
+    height: rem-calc(43px);
+  }
+  &__btn-documentation {
+    border: 1px solid #A0B4FF;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    color: #C7D3FF;
+    font-size: rem-calc(13px);
+    padding: rem-calc(13px);
+    border-radius: 2px;
+    width: rem-calc(155px);
+    height: rem-calc(43px);
+  }
 }
 
 .newsletter-section {

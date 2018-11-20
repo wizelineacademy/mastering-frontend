@@ -1,13 +1,5 @@
 import "../styles/main.scss";
 
-// testing that `const` and arrow functions transpile correctly
-const before = "Hello -world!";
-const after = before
-  .split("")
-  .filter(char => char !== "-")
-  .join("");
-console.log({ before });
-console.log({ after });
 
 let articleNumber = 0;
 let prevArticle = 0;
@@ -108,6 +100,7 @@ async function setData() {
     console.log(error.message);
   }
 }
+
 
 (async () => {
   await setData();

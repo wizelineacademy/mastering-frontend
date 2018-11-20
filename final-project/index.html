@@ -11,7 +11,6 @@
 </head>
 
 <body>
-<!--<h1>Hello world!</h1>-->
 <script src="./dist/bundle.js"></script>
 
 <header class="nav-bar">
@@ -55,10 +54,6 @@
       </p>
       <a class="plan-your-life_play">
         <i class="fas fa-play fa-xs"></i>
-        <!--<img-->
-        <!--src="/reference/assets/icons/video-play.png"-->
-        <!--class="play-icon"-->
-        <!--/>-->
       </a>
     </div>
   </section>
@@ -84,7 +79,6 @@
       </div>
     </div>
   </section>
-  <!--<hr>-->
   <section class="plan-and-manage">
     <!--Plan and manage-->
     <div class="plan-and-manage__content">
@@ -95,62 +89,81 @@
         Et vel modus congue vitupereta. Solum patrioque no sea.
         Mea ex malis mollis oporteat. Eum an expetenda consequat.
       </p>
+      <div class="plan-and-manage__buttons">
+        <button>View video <i class="fas fa-play fa-xs"></i></button>
+        <button>See features</button>
+      </div>
     </div>
     <img class="plan-and-manage__img" src="/reference/assets/plan-and-manage.png"> <!-- Planning image -->
-    <div class="plan-and-manage__buttons">
-      <button>View video</button>
-      <button>See features</button>
-    </div>
   </section>
-  <!--<hr>-->
-  <section>
+  <section class="features__background">
     <!--About us-->
-    <h1>ABOUT US</h1>
-    <p>Read about our app</p>
-    <figure>
-      <img src="" alt="Overview">
-      Overview
-      <figcaption>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.</figcaption>
-    </figure>
-    <div><!--Line--></div>
-    <figure>
-      <img src="" alt="Files">
-      Files
-      <figcaption>No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.</figcaption>
-    </figure>
-    <div><!--Line--></div>
-    <figure>
-      <img src="" alt="Meeting chats">
-      Meeting chats
-      <figcaption>Vim ne tacimates neglegentur. Erat diceret omittam at est.</figcaption>
-    </figure>
-    <div><!--Line--></div>
-    <figure>
-      <img src="" alt="Save events">
-      Save events
-      <figcaption>Nisl idque mel ea, nominati voluptatum</figcaption>
-    </figure>
-    <button>Read more</button>
-    <div><!--Line--></div>
-    OR
-    <div><!--Line--></div>
-    <button>Get started</button>
-  </section>
-  <!--<hr>-->
-  <section>
-    <!--Productivity and have used-->
-    <div><!--Productivity-->
-      <img src="" alt="Productivity icon">
-      <p>89%</p>
-      <p>Customers who have increased their productivity</p>
+    <div class="features">
+      <h1>ABOUT US</h1>
+      <p>Read about our app</p>
+      <div class="features__cards">
+        <figure>
+          <div class="img__background">
+            <img src="/reference/assets/icons/home.png" alt="Overview">
+          </div>
+          <p>Overview</p>
+          <figcaption>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.</figcaption>
+        </figure>
+        <div class="features__line"><!--Line--></div>
+        <figure>
+          <div class="img__background">
+            <img src="/reference/assets/icons/folder.png" alt="Files">
+          </div>
+          <p>Files</p>
+          <figcaption>No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.</figcaption>
+        </figure>
+        <div class="features__line"><!--Line--></div>
+        <figure>
+          <div class="img__background">
+            <img src="/reference/assets/icons/chat.png" alt="Meeting chats">
+          </div>
+          <p>Meeting chats</p>
+          <figcaption>Vim ne tacimates neglegentur. Erat diceret omittam at est.</figcaption>
+        </figure>
+        <div class="features__line"><!--Line--></div>
+        <figure>
+          <div class="img__background">
+            <img src="/reference/assets/icons/upload.png" alt="Save events">
+          </div>
+          <p>Save events</p>
+          <figcaption>Nisl idque mel ea, nominati voluptatum</figcaption>
+        </figure>
+      </div>
+      <div class="features__buttons">
+        <button>Read more</button>
+        <div class="features__line sm"><!--Line--></div>
+        <p>OR</p>
+        <div class="features__line sm"><!--Line--></div>
+        <button>Get started</button>
+      </div>
     </div>
-    <div><!--Have used-->
-      <img src="" alt="Users icon">
-      <p>3123</p>
-      <p>Users who have used our application</p>
+    <div class="features__clouds">
+      <img src="/reference/assets/clouds-left.png">
+      <img src="/reference/assets/clouds-right.png">
     </div>
   </section>
-  <!--<hr>-->
+  <section class="stats">
+    <!--Stats-->
+    <div class="stats__productivity"><!--Productivity-->
+      <div class="stats__productivity__content">
+        <img src="/reference/assets/icons/speedmeter.png" alt="Productivity icon">
+        <p class="number">89%</p>
+        <p>Customers who have increased their productivity</p>
+      </div>
+    </div>
+    <div class="stats__users"><!--Have used-->
+      <div class="stats__users__content">
+        <img src="/reference/assets/icons/people.png" alt="Users icon">
+        <p class="number">3123</p>
+        <p>Users who have used our application</p>
+      </div>
+    </div>
+  </section>
   <section class="blog">
     <!--Blog-->
     <div class="blog__content">
@@ -198,7 +211,6 @@
       <i class="fas fa-circle fa-xs _carousel__dot"></i>
     </div>
   </section><!-- /Our Resources -->
-  <!--<hr>-->
   <section>
     <!--Customer quotes-->
     <h1>TESTIMONIALS</h1>
@@ -226,7 +238,6 @@
     <button>&bullet;</button><!-- Card selector 8-->
     <button>&bullet;</button><!-- Card selector 9-->
   </section>
-  <!--<hr>-->
   <section>
     <!--Customer help-->
     <h1>CUSTOMER HELP</h1>
@@ -252,7 +263,6 @@
       </div>
     </form>
   </section>
-  <!--<hr>-->
   <section>
     <!--Get started-->
     <h1>Plan your life</h1>
@@ -263,7 +273,6 @@
     <button>View pricing</button>
     <button>Read documentation</button>
   </section>
-  <!--<hr>-->
   <section>
     <!--Newsletter-->
     <h1>Sing up for newsletter</h1>
@@ -274,7 +283,6 @@
     </form>
   </section>
 </main>
-<!--<hr>-->
 <footer class="nav-bar">
   <section class="nav-bar__content">
     <div class="circle-logo"></div>

@@ -18,6 +18,7 @@ $paragraph-text-color: #8D96BD;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
+    "head head"
     "hero hero"
     "customer customer"
     "planManage planManage"
@@ -30,9 +31,14 @@ $paragraph-text-color: #8D96BD;
     "newsletter newsletter"
     "footer footer"
     "test test";
+  padding: 0;
 }
 
 button { border:none; }
+
+.header {
+  grid-area: head;
+}
 
 .header, .footer-section-content{
   display: flex;
@@ -100,12 +106,16 @@ button { border:none; }
   height: rem-calc(570px);
   grid-area: hero;
   position: relative;
+  background-image: url("/reference/assets/hero.png");
+  background-position: 50%;
+
   &__text-area {
     top: rem-calc(92px);
     left: 10%;
     right:10%;
     position: absolute;
     text-align: center;
+
   }
   &__text-area h1 {
     margin-top: rem-calc(16px);
@@ -136,7 +146,7 @@ button { border:none; }
 and (min-width: rem-calc(768px))
 and (max-width: rem-calc(1024px))
 and (-webkit-min-device-pixel-ratio: 1) {
-
+  width: 100%;
 }
 //MOBILE
 @media only screen
@@ -223,6 +233,8 @@ p {
   grid-area: features;
   height: rem-calc(885px);
   position: relative;
+  background-image: url("/reference/assets/clouds.png");
+  background-position: 50%;
   h1 {
     font-size: rem-calc(24px);
     margin-top: rem-calc(10px);
@@ -438,7 +450,8 @@ p {
     width: 50%;
     display: inline-block;
     position: relative;
-    margin: rem-calc(146px) 0 rem-calc(145px) rem-calc(276px);
+    margin: rem-calc(146px) 0 rem-calc(145px) 0;
+    left: 15%;
     h1 {
       text-align: left;
       margin-top: rem-calc(31px);
@@ -452,12 +465,12 @@ p {
     width: 50%;
     display: inline-block;
     position: absolute;
+    margin-top: rem-calc(109px);
     &-rectangle {
       border: 1px solid #DAE4FE;
       width: rem-calc(423px);
       height: rem-calc(175px);
       background-color: white;
-      margin-top: rem-calc(109px);
       position: relative;
       p {
         display: block;

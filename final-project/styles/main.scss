@@ -93,14 +93,7 @@ button { border:none; }
   display: none;
 }
 
-@media only screen and (min-width: rem-calc(768px)){
-  .header__nav--main, .header__button {
-    display: block;
-  }
-  .header__nav--mobile {
-    display: none;
-  }
-}
+
 
 .hero-section {
   height: rem-calc(570px);
@@ -112,12 +105,13 @@ button { border:none; }
   &__text-area {
     top: rem-calc(92px);
     left: 10%;
-    right:10%;
+    right: 10%;
     position: absolute;
     text-align: center;
 
   }
   &__text-area h1 {
+    min-width: rem-calc(293px);
     margin-top: rem-calc(16px);
     margin-bottom: rem-calc(28px);
     font-size: rem-calc(48px);
@@ -141,23 +135,6 @@ button { border:none; }
     margin: rem-calc(21px) rem-calc(20px) rem-calc(20px) rem-calc(22px);
   }
 }
-//tablet
-@media only screen
-and (min-width: rem-calc(768px))
-and (max-width: rem-calc(1024px))
-and (-webkit-min-device-pixel-ratio: 1) {
-  width: 100%;
-}
-//MOBILE
-@media only screen
-and (min-width: rem-calc(320px))
-and (max-width: rem-calc(480px))
-and (-webkit-min-device-pixel-ratio: 2) {
-  .hero-section p{
-    display: none;
-  }
-}
-
 
 h1 {
   color: $headers-text-color;
@@ -180,9 +157,11 @@ p {
 }
 .customers-section {
   grid-area: customer;
-  margin: rem-calc(58px) rem-calc(276px) rem-calc(58px) rem-calc(276px);
+  // margin: rem-calc(58px) rem-calc(276px) rem-calc(58px) rem-calc(276px);
   display: flex;
   justify-content: space-around;
+  margin: 5% 10% 5% 10%;
+  // height: rem-calc(146px);
 }
 .plan-manage-section {
   grid-area: planManage;
@@ -196,19 +175,29 @@ p {
     height: rem-calc(352px);
     position: relative;
     display: inline-block;
-    margin-top: rem-calc(208px);
-    margin-left: rem-calc(271px);
+    margin-top: 10%;
+    left: 10%;
+  }
+  &__buttons {
+    position: relative;
+    left: 10%;
+    width: 50%
   }
   &__image {
     position: absolute;
     display: inline-block;
     width: 50%;
     margin-top: rem-calc(171px);
+    right: 10%;
+    min-width: rem-calc(293px);
   }
   &__text-area h1 {
     margin-top: rem-calc(27px);
     margin-bottom: rem-calc(27px);
     font-size: rem-calc(36px);
+  }
+  &__text-area p {
+    min-width: rem-calc(293px);
   }
   &__btn-video {
     background-color: #4C85FF;
@@ -243,7 +232,7 @@ p {
   &__content {
     position: absolute;
     top: rem-calc(171px);
-    left: rem-calc(341px);
+    left: 25%;
     text-align: center
   }
   &__circle {
@@ -258,6 +247,7 @@ p {
   &__items {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     text-align: center;
     h3 {
       font-size: rem-calc(14px);
@@ -496,7 +486,9 @@ p {
   grid-area: faq;
   height: rem-calc(965px);
   &__content {
-    margin: rem-calc(176px) rem-calc(349px) rem-calc(174px) rem-calc(348px);
+    position: relative;
+    margin-top: 10%;
+    margin-left: 15%;
     h1, h2 {
       text-align: center;
     }
@@ -512,11 +504,17 @@ p {
       font-family: 'Quicksand', sans-serif;
       margin-bottom: rem-calc(32px);
       margin-top: rem-calc(17px);
-      margin-left: rem-calc(24px);
+      position: relative;
+      left: 3%;
     }
     hr {
       border: 0;
       border-top: 1px solid #D8E3FE;
+      width: 80%;
+    }
+    button {
+      position: relative;
+      left: 5%;
     }
   }
   &__title-p, i {
@@ -541,6 +539,8 @@ p {
   grid-area: clouds;
   height: rem-calc(447px);
   position: relative;
+  background-image: url("/reference/assets/blue-clouds-bg.png");
+  background-position: 50%;
 
   &__text {
     position: absolute;
@@ -555,7 +555,7 @@ p {
       margin-top: rem-calc(16px);
       margin-bottom: rem-calc(28px);
       font-size: rem-calc(48px);
-      min-width: rem-calc(358px);
+      min-width: rem-calc(284px);
     }
     p {
       padding-bottom: rem-calc(28px);
@@ -573,6 +573,7 @@ p {
     border-radius: 2px;
     width: rem-calc(130px);
     height: rem-calc(43px);
+    display: inline-block;
   }
   &__btn-documentation {
     border: 1px solid #A0B4FF;
@@ -584,6 +585,7 @@ p {
     border-radius: 2px;
     width: rem-calc(155px);
     height: rem-calc(43px);
+    display: inline-block;
   }
 }
 
@@ -611,12 +613,23 @@ p {
     height: rem-calc(59px);
   }
   &__text {
+    position: relative;
     display: inline-block;
-    margin: rem-calc(118px) rem-calc(80px) rem-calc(119px) rem-calc(276px);
+    margin-left: 15%;
+    margin-top: 8%;
     p {
       width: 70%;
       margin-top: rem-calc(18px);
     }
+    h1 {
+      font-size: rem-calc(18px);
+    }
+  }
+  &__buttons {
+    display: inline-block;
+    position: relative;
+    bottom: 15%;
+    margin-left: 10%;
   }
 }
 
@@ -643,6 +656,78 @@ p {
       nav, button {
         display: inline-block;
       }
+    }
+  }
+}
+
+
+@media only screen and (min-width: rem-calc(768px)){
+  .header__nav--main, .header__button {
+    display: block;
+  }
+  .header__nav--mobile {
+    display: none;
+  }
+}
+
+//tablet landscape
+@media only screen
+and (min-width: rem-calc(768px))
+and (max-width: rem-calc(1024px))
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+//tablet portrait
+@media only screen
+and (min-width: rem-calc(321px))
+and (max-width: rem-calc(768px))
+and (-webkit-min-device-pixel-ratio: 1) {
+  .customers-section {
+    flex-wrap: wrap;
+  }
+
+}
+//MOBILE
+@media only screen
+and (min-width: rem-calc(320px))
+and (max-width: rem-calc(320px))
+and (-webkit-min-device-pixel-ratio: 2) {
+  .hero-section p{
+    display: none;
+  }
+  .customers-section {
+    flex-wrap: wrap;
+  }
+  .plan-manage-section{
+      h1 {
+        min-width: rem-calc(293px);
+      }
+      &__image, &__text-area {
+        display: block;
+      }
+      &__image {
+        margin-top: rem-calc(45px);
+      }
+      &__buttons{
+        left: auto;
+      }
+      &__btn-feats, &__btn-video{
+        width: rem-calc(149px);
+      }
+  }
+  .quotes-section{
+    display: none;
+  }
+  //TODO
+  .footer-section-content {
+    display: flex;
+    flex-wrap: wrap;
+    &__social nav {
+      display: none;
+    }
+    &__nav-list {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 }

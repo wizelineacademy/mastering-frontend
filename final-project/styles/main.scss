@@ -125,6 +125,16 @@
 .border-bottom{
   border-bottom: 1px solid #D8E3FE;
 }
+.alert {
+  background-color: #da6b63; /* Red */
+  color: white;
+  position: fixed;
+  bottom: 0;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  font-family: Roboto,sans-serif;
+}
 // SECTIONS
 .header{
   height: 80px;

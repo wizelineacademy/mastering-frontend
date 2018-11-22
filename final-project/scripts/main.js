@@ -9,12 +9,13 @@ const after = before
 console.log({ before });
 console.log({ after });
 
-const Carrousel = (container,item,itemC,url) => {
+const Carrousel = (htmlSection,container,item,itemC,url) => {
 
   let selected = container 
-  let  theURL = url
+  let theURL = url
   let itemTag = item
   let itemClass = itemC
+  let section = htmlSection
 
   const loadCarrouselData = () => { 
     let oReq = new XMLHttpRequest();
@@ -53,31 +54,7 @@ const Carrousel = (container,item,itemC,url) => {
     let jsonItem = JSON.parse(items);
     activatePager(jsonItem.articles.length);
     jsonItem.articles.forEach(element => {
-      let htmlTemplate = `
-        <div class="blog__content__article__image">
-          <picture>
-              <source srcset="${element.images.desktop}"
-              media="(min-width:992px)">
-              <source srcset="${element.images.tablet}"
-              media="(min-width:768px)">
-              <img src="${element.images.mobile}" alt="upload" >
-          </picture>
-        </div>
-        <div class="blog__content__article__info">
-          <div  class="blog__content__article__data">
-            <header>
-              <h1>${element.title}</h1>
-            </header>
-            <p>
-              ${element.description}  
-            </p>
-          </div>
-          <div class="blog__content__article__actions">
-              <a href="${element.url}" target="_blank" class="blog__content__article__actions__read" > Read Now </a>
-              <button class="blog__content__article__actions__bookmark" >Add to your bookmarks</button>
-            </div>
-        </div>
-      `;
+      let htmlTemplate = htmlPart(section,element);
       let carrousel= selected;
       let carrouselContent = carrousel.querySelector('.carrousel__content');
       let asNode =  document.createElement(itemTag);
@@ -113,6 +90,52 @@ const Carrousel = (container,item,itemC,url) => {
     }
   }
 
+  const htmlPart = (section,element) => {
+    switch (section) {
+      case "blog":
+        return `
+        <div class="blog__content__article__image">
+          <picture>
+              <source srcset="${element.images.desktop}"
+              media="(min-width:992px)">
+              <source srcset="${element.images.tablet}"
+              media="(min-width:768px)">
+              <img src="${element.images.mobile}" alt="upload" >
+          </picture>
+        </div>
+        <div class="blog__content__article__info">
+          <div  class="blog__content__article__data">
+            <header>
+              <h1>${element.title}</h1>
+            </header>
+            <p>
+              ${element.description}  
+            </p>
+          </div>
+          <div class="blog__content__article__actions">
+              <a href="${element.url}" target="_blank" class="blog__content__article__actions__read" > Read Now </a>
+              <button class="blog__content__article__actions__bookmark" >Add to your bookmarks</button>
+            </div>
+        </div>
+      `
+      case "testimonial":
+        return `
+          <div class="testimonials__gallery__item__quote">
+            <blockquote>
+              ${element.quote}
+            </blockquote>
+          </div>
+          <div class="testimonials__gallery__item__photo">
+              <picture >
+                  <img src="${element.image}" alt="Happy user photo">
+              </picture>
+          </div>
+      `
+      default:
+        break;
+    }
+  }
+
   return {loadCarrouselData}
 
 }
@@ -120,9 +143,12 @@ const Carrousel = (container,item,itemC,url) => {
 let blogCarrouselElement = document.querySelector('.blog.carrousel');
 let itemTag = 'article';
 let itemTagClass = 'blog__content__article';
-let p = Carrousel(blogCarrouselElement,itemTag,itemTagClass,"https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog");
+let p = Carrousel('blog',blogCarrouselElement,itemTag,itemTagClass,"https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog");
 p.loadCarrouselData();
 
-// let customersCarrouselElement = document.querySelector('.testimonials__gallery.carrousel');
-// let q = Carrousel(customersCarrouselElement,"https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog");
-// q.loadCarrouselData();
+let testimonialClass = "testimonials__gallery__item"; 
+let testimonialTag = 'div'
+let testimonialCarrouselElement = document.querySelector('.testimonials__gallery.carrousel');
+let q = Carrousel('testimonial',testimonialCarrouselElement,testimonialTag,testimonialClass,"../data/testimonials.json");
+console.log(q);
+q.loadCarrouselData();

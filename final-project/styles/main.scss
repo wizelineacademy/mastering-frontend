@@ -747,6 +747,18 @@ p{
     @include tablet-breakpoint {
       width: 100%;
     }
+    &__visor{
+      max-width: rem-calc(422px);
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    &__content{
+      display: flex;
+      left: 0;
+      flex-direction: row;
+      position: relative;
+      transition: left 3s;
+    }
     &__item{
       display: flex;
       flex-direction: column;

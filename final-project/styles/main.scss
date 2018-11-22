@@ -108,7 +108,6 @@ button { border:none; }
     right: 10%;
     position: absolute;
     text-align: center;
-
   }
   &__text-area h1 {
     min-width: rem-calc(293px);
@@ -157,11 +156,9 @@ p {
 }
 .customers-section {
   grid-area: customer;
-  // margin: rem-calc(58px) rem-calc(276px) rem-calc(58px) rem-calc(276px);
   display: flex;
   justify-content: space-around;
   margin: 5% 10% 5% 10%;
-  // height: rem-calc(146px);
 }
 .plan-manage-section {
   grid-area: planManage;
@@ -192,9 +189,13 @@ p {
     min-width: rem-calc(293px);
   }
   &__text-area h1 {
+    min-width: rem-calc(293px);
     margin-top: rem-calc(27px);
     margin-bottom: rem-calc(27px);
     font-size: rem-calc(36px);
+  }
+  &__text-area h2 {
+    min-width: rem-calc(228px);
   }
   &__text-area p {
     min-width: rem-calc(293px);
@@ -226,14 +227,13 @@ p {
   background-position: 50%;
   h1 {
     font-size: rem-calc(24px);
-    margin-top: rem-calc(10px);
-    margin-bottom: rem-calc(92px);
+    margin-top: 2%;
+    margin-bottom: 10%;
   }
   &__content {
-    position: absolute;
-    top: rem-calc(171px);
-    left: 25%;
-    text-align: center
+    position: relative;
+    top: 15%;
+    text-align: center;
   }
   &__circle {
     width: rem-calc(69px);
@@ -267,16 +267,21 @@ p {
       border-top: 1px solid #DAE4FE;
       margin: 7.5em rem-calc(19px) 0 rem-calc(20px);
     }
+    p {
+      width: rem-calc(140px);
+      height: rem-calc(102px);
+      font-size: rem-calc(11px);
+      color: #ADB3CB;
+      font-family: 'Open Sans', sans-serif;
+    }
+    > div {
+      max-width: rem-calc(140px);
+      max-height: rem-calc(254px);
+    }
   }
-  p {
-    width: rem-calc(140px);
-    height: rem-calc(102px);
-    font-size: rem-calc(11px);
-    color: #ADB3CB;
-    font-family: 'Open Sans', sans-serif;
-  }
+
   &__buttons {
-    margin-top: rem-calc(92px);
+    margin-top: 10%;
     button {
       font-family: 'Quicksand', sans-serif;
       font-size: rem-calc(13px);
@@ -689,34 +694,80 @@ and (-webkit-min-device-pixel-ratio: 1) {
 }
 //MOBILE
 @media only screen
-and (min-width: rem-calc(320px))
-and (max-width: rem-calc(320px))
+and (max-width: rem-calc(400px))
 and (-webkit-min-device-pixel-ratio: 2) {
-  .hero-section p{
-    display: none;
+  .hero-section {
+    &__text-area {
+      left: 5%;
+    }
+    p {
+      display: none;
+    }
   }
   .customers-section {
     flex-wrap: wrap;
   }
   .plan-manage-section{
-      h1 {
-        min-width: rem-calc(293px);
-      }
       &__image, &__text-area {
         display: block;
       }
+      &__text-area {
+        left: 5%;
+      }
       &__image {
         margin-top: rem-calc(45px);
+        position: static;
       }
       &__buttons{
-        left: auto;
+        left: 0;
       }
-      &__btn-feats, &__btn-video{
+      &__btn-feats{
+        position: absolute;
+        display: inline-block;
+        width: rem-calc(149px);
+      }
+      &__btn-video{
+        position: relative;
+        display: inline-block;
         width: rem-calc(149px);
       }
   }
+  .features-section {
+    &__content {
+      left: 0;
+    }
+    &__items {
+      hr {
+        display: none;
+      }
+    }
+    &__buttons {
+      display: flex;
+      align-items: center;
+    }
+
+  }
+  .blog-section {
+    //TODO
+  }
+  .clouds-section {
+    //TODO
+  }
+  .newsletter-section {
+     &__text {
+       margin-bottom: 20%;
+     }
+     &__buttons button{
+       width: rem-calc(279px);
+     }
+  }
   .quotes-section{
     display: none;
+  }
+  .faq-section {
+    &__bullets p {
+      left: 0;
+    }
   }
   //TODO
   .footer-section-content {

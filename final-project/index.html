@@ -7,6 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="./dist/styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!-- <script type="text/javascript" src="../scripts/main.js"></script> -->
 <body>
   <div class="wrapper">
     <header class="header">
@@ -57,11 +58,18 @@
       </div>
     </div>
     <div class="customers-section">
-      <img src="../reference/assets/customers/bitbucket.png"></img>
-      <img src="../reference/assets/customers/apple-watch.png"></img>
-      <img src="../reference/assets/customers/facebook.png"></img>
-      <img src="../reference/assets/customers/atlassian.png"></img>
-      <img src="../reference/assets/customers/audi.png"></img>
+      <img class="customers-section__images" src="../reference/assets/customers/bitbucket.png"></img>
+      <img class="customers-section__images" src="../reference/assets/customers/apple-watch.png"></img>
+      <img class="customers-section__images" src="../reference/assets/customers/facebook.png"></img>
+      <img class="customers-section__images" src="../reference/assets/customers/atlassian.png"></img>
+      <img class="customers-section__images" src="../reference/assets/customers/audi.png"></img>
+      <div class="customers-section__slider">
+        <button class="customer-section__slider-btn" onclick="currentDiv(1)"></button>
+        <button class="customer-section__slider-btn" onclick="currentDiv(2)"></button>
+        <button class="customer-section__slider-btn" onclick="currentDiv(3)"></button>
+        <button class="customer-section__slider-btn" onclick="currentDiv(4)"></button>
+        <button class="customer-section__slider-btn" onclick="currentDiv(5)"></button>
+      </div>
     </div>
     <div class="plan-manage-section">
       <div class="plan-manage-section__text-area">
@@ -273,5 +281,39 @@
     </footer>
   </div>
   <script src="./dist/bundle.js"></script>
+  <script>
+  var slideIndex = 1;
+  var x = window.matchMedia("(max-width: 400px)");
+  screenWidthChange(x);
+  x.addListener(screenWidthChange);
+
+  function screenWidthChange(x) {
+    if (x.matches) {
+        showDivs(slideIndex);
+    }
+    else {
+      var x = document.getElementsByClassName("customers-section__images");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "block";
+      }
+    }
+  }
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("customers-section__images");
+    var buttons = document.getElementsByClassName("customer-section__slider-btn");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < buttons.length; i++) {
+      buttons[i].style.backgroundColor = "#D1D6E3";
+    }
+    x[slideIndex-1].style.display = "block";
+    buttons[slideIndex-1].style.backgroundColor = "#5283FF";
+  }
+  </script>
 </body>
 </html>

@@ -159,6 +159,18 @@ p {
   display: flex;
   justify-content: space-around;
   margin: 5% 10% 5% 10%;
+  &__slider {
+    display: none;
+    button {
+      width: rem-calc(8px);
+      height: rem-calc(8px);
+      background-color: #D1D6E3;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 .plan-manage-section {
   grid-area: planManage;
@@ -684,7 +696,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 }
 //tablet portrait
 @media only screen
-and (min-width: rem-calc(321px))
+and (min-width: rem-calc(401px))
 and (max-width: rem-calc(768px))
 and (-webkit-min-device-pixel-ratio: 1) {
   .customers-section {
@@ -705,7 +717,15 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
   }
   .customers-section {
-    flex-wrap: wrap;
+    position: relative;
+    display: block;
+    left: 25%;
+    &__slider {
+      position: relative;
+      top: 10%;
+      left: 10%;
+      display: block;
+    }
   }
   .plan-manage-section{
       &__image, &__text-area {

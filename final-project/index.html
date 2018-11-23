@@ -5,10 +5,358 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700|Quicksand:300,500,700|Roboto:200,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body>
-  <h1>Hello world!</h1>
+  <header class="header header__menu-container">
+    <div class="header__logo"></div>
+    <nav class="header__nav  header__nav--main">
+      <ul class="header__nav-list">
+        <li class="header__nav-link header__nav-link--current-page">Home</li>
+        <li class="header__nav-link">Blog</li>
+        <li class="header__nav-link">Features</li>
+        <li class="header__nav-link">Pricing</li>
+        <li class="header__nav-link">Documentation</li>
+      </ul>
+    </nav>
+  
+    <nav class="header__nav header__nav--social">
+      <ul class="header__nav-list">
+        <li class="header__nav-link">
+          <i class="fab fa-facebook-f"></i>
+        </li>
+        <li class="header__nav-link">
+          <i class="fab fa-twitter"></i>
+        </li>
+        <li class="header__nav-link">
+          <i class="fab fa-telegram-plane"></i>
+        </li>
+        <li class="header__nav-link">
+          <i class="fab fa-medium-m"></i>
+        </li>
+      </ul>
+    </nav>
+  
+    <button class="header__button">Get Started</button>
+    
+    <div class="header__nav--mobile">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero-banner">
+      <div class="hero-banner__info">
+        <header>
+            <span>
+              Plan your life
+            </span>
+            <h1>
+              Increase your <b>productivity</b>
+            </h1>
+        </header>
+        <p> 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, commodi provident? Voluptatibus, at sed, delectus suscipit explicabo iure ipsum doloremque commodi itaque dignissimos quas quo. Obcaecati doloribus eos rem sint!
+        </p>
+        <footer>
+          <div class="circle hero-banner__info__play-button">
+            <img src="/reference/assets/icons/video-play.png" alt="">
+          </div>
+        </footer>
+      </div>
+    </section>
+    <section class="customers carrousel">
+      <div class="customers__visor carrousel__visor">
+        <ul class="customers__list carrousel__content">
+         
+        </ul>
+      </div>  
+      <div class="page-controller carrousel__controls" >
+       
+      </div>
+    </section>
+    <section class="planning">
+      <div class="planning__info">
+        <header class="planning__info__title">
+          <span>
+              Desktop and mobile app
+          </span>
+          <h1>
+            <b>Plan</b> and <b>manage</b>
+          </h1>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illo molestiae quia voluptatem cum soluta omnis minus iure exercitationem veritatis? Tenetur enim quam iure cumque animi pariatur nulla maxime sunt?
+        </p>
+      </div>
+      <picture class="planning__image">
+          <img src="/reference/assets/plan-manage.png" alt="plan and manage" >
+      </picture>
+      <div class="planning__buttons">
+        <button class="planning__buttons__play-video"> 
+          play video 
+          <img src="/reference/assets/icons/video-play.png" alt="">
+        </button>
+        <button class="planning__buttons__see-features">
+          see features
+        </button>
+      </div>
+    </section>
+    <section class="read-about">
+      <header class="read-about__header">
+        <span>
+          about us
+        </span>
+        <h3>
+          Read about our app
+        </h3>
+      </header>
+      <div class="read-about__content">
+        <div class="read-about__content__item">
+          <header>
+            <div class="circle">
+                <img src="/reference/assets/icons/home.png" alt="home">
+            </div>
+            <h6>Overview</h6>
+          </header>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, temporibus. Esse debitis officiis voluptas ea sint magni aliquam ex molestias sed.
+          </p>
+        </div>
+        <div class="read-about__content__item">
+          <header>
+            <div class="circle">
+                <img src="/reference/assets/icons/folder.png" alt="folder">
+            </div>
+            <h6>Files</h6>
+          </header>
+          <p>
+            Illo nulla earum asperiores tempore. Provident corporis quod debitis nulla porro. Tempora qui aspernatur non assumenda? Odio dolores magnam nemo ut consequatur?
+          </p>
+        </div>
+        <div class="read-about__content__item">
+          <header>
+            <div class="circle">
+                <img src="/reference/assets/icons/chat.png" alt="chat">
+            </div>
+            <h6>Meeting chats</h6>
+          </header>
+          <p>
+            Provident ipsam rem minima pariatur architecto quo. Maiores tempore quasi assumenda. Quae laboriosam natus facere recusandae id sequi soluta voluptas enim tempore!
+          </p>
+        </div>
+        <div class="read-about__content__item">
+          <header>
+            <div class="circle">
+                <img src="/reference/assets/icons/upload.png" alt="upload">
+            </div>
+            <h6>Save events</h6>
+          </header>
+          <p>
+            Reiciendis veritatis dolore quos quisquam molestiae, dolor eius nobis, minima sed expedita quis ad consectetur inventore assumenda non alias odit sequi asperiores?     
+          </p>
+        </div>
+      </div>
+      <div class="read-about__controls">
+        <button class="read-about__controls__more">Read More</button>
+        <span>or</span>
+        <button class="read-about__controls__started" >Get Started</button>
+      </div>
+    </section>
+    <section class="statistics">
+      <div class="statistics__part">
+        <header>
+          <span>
+            <img src="/reference/assets/icons/speedmeter.png" alt="upload">
+          </span>
+          <h1>89%</h1>
+        </header>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam atque.
+        </p>
+      </div>
+      <div class="statistics__part statistics__part--alter">
+        <header>
+          <span>
+              <img src="/reference/assets/icons/people.png" alt="upload">
+          </span>
+          <h1>3123</h1>
+        </header>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam atque.
+        </p>
+      </div>
+    </section>
+    <section class="blog carrousel">
+      <header>
+        <span>Our resources</span>
+        <h3>
+          Start reading our blog
+        </h3>
+      </header>
+      <div class="blog__visor carrousel__visor">
+        <div class="blog__content carrousel__content">
+        <!--
+          we will have multiple items with an article template
+        -->
+        </div>
+      </div>
+      <div class="page-controller carrousel__controls" >
+           <!--
+          we will have multiple page indicators
+        -->
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="testimonials__info">
+        <header>
+          <span>testimonials</span>
+          <h2>
+            Customer's quotes
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam corporis similique autem sequi nostrum necessitatibus, ducimus dolor excepturi amet. Ratione iure fugit distinctio laborum! Eaque cum sequi possimus perspiciatis porro.
+          </p>
+        </header>
+      </div>
+      <div class="testimonials__gallery carrousel">
+        <div class="testimonials__gallery__visor carrousel__visor">
+          <div class="testimonials__gallery__content carrousel__content">
+           <!-- content for testimonials -->
+          </div>
+        </div>
+        <div class="page-controller carrousel__controls" >
+
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <header>
+        <span>
+          customer help
+        </span>
+        <h3>
+          Frequently asked questions
+        </h3>
+      </header>
+      <div class="faq__content">
+         <!--
+          we will have multiple items with this div as template
+        -->
+        <div class="faq__content__item">
+          <div class="faq__content__item__question">
+            <div class="faq__content__item__question__button">
+              <picture>
+                  <img src="/reference/assets/vector.png" alt="upload">
+              </picture>
+            </div>
+            <div class="faq__content__item__question__text"> 
+              Nemo totam provident officiis?
+            </div>
+          </div>
+          <div class="faq__content__item__answer">
+            answer
+          </div>
+          <div class="faq__content__item__documentation">
+            <a href="">Go to documentation</a>
+          </div>
+        </div>
+        <div class="faq__content__item">
+            <div class="faq__content__item__question">
+              <div class="faq__content__item__question__button">
+                <picture>
+                    <img src="/reference/assets/vector.png" alt="upload">
+                </picture>
+              </div>
+              <div class="faq__content__item__question__text"> 
+                Ipsum, optio?
+              </div>
+            </div>
+            <div class="faq__content__item__answer">
+              answer
+            </div>
+            <div class="faq__content__item__documentation">
+              <a href="">Go to documentation</a>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="get-started">
+      <header>
+        <span>
+          plan your life
+        </span>
+        <h1>
+          Get <b>started</b> now
+        </h1>
+      </header>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis doloremque est fuga sit at tenetur ipsum, tempore perferendis, delectus sapiente, dolorum atque distinctio obcaecati sed porro. Omnis architecto eius nemo?
+      </p>
+      <div class="get-started__actions">
+        <button class="get-started__actions__pricing">view pricing </button>
+        <button class="get-started__actions__documentation">read documentation</button>
+      </div>
+    </section>
+    <section class="newsletter">
+      <div class="newsletter__info">
+        <header>
+          <h2>
+            Sign up for newsletter
+          </h2>
+        </header>
+        <p>
+          Quas omnis ea est voluptate harum et aut doloremque sit accusantium quo consequuntur aperiam.
+        </p>
+      </div>
+      <div class="newsletter__form">
+        <form action="javascript:void()">
+          <input type="email" name="" id="" placeholder="Email Address">
+          <button>Save me</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+      <div class="header__logo"></div>
+      <nav class="header__nav  header__nav--main">
+        <ul class="header__nav-list">
+          <li class="header__nav-link header__nav-link--current-page">Home</li>
+          <li class="header__nav-link">Blog</li>
+          <li class="header__nav-link">Features</li>
+          <li class="header__nav-link">Pricing</li>
+          <li class="header__nav-link">Documentation</li>
+        </ul>
+      </nav>
+    
+      <nav class="header__nav header__nav--social">
+        <ul class="header__nav-list">
+          <li class="header__nav-link">
+            <i class="fab fa-facebook-f"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-twitter"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-telegram-plane"></i>
+          </li>
+          <li class="header__nav-link">
+            <i class="fab fa-medium-m"></i>
+          </li>
+        </ul>
+      </nav>
+    
+      <button class="header__button">Get Started</button>
+      
+      <div class="header__nav--mobile">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+  </footer>
+  <footer class="copyright__footer">
+      <span>copyright</span>
+  </footer>
   <script src="./dist/bundle.js"></script>
 </body>
 </html>

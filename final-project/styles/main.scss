@@ -197,14 +197,22 @@ p{
   &__list{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
-    margin:0 0 rem-calc(50px);
+    position: relative;
+    margin:rem-calc(50px) 0;
+    left: 0px;
+    @include tablet-breakpoint {
+      left: 0px;
+      flex-wrap: wrap;
+      position: static;
+      margin:0 0 rem-calc(50px);
+    }
     &__item{
-      display: none;
+      display: flex;
       @include tablet-breakpoint {
-        display: inline;
+        display: flex;
         margin-top: rem-calc(50px);
       }
       text-indent: -9999px;
@@ -237,12 +245,28 @@ p{
         display: inline-block;
         margin-top: rem-calc(50px);
       }
+      span{
+        display: block;
+      }
       &:hover{
         filter:brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%);
       }
     }
     &__item + &__item{
-      margin-left: rem-calc(75px);
+      margin-left: 0;
+      @include tablet-breakpoint {
+        margin-left: rem-calc(75px);
+      }
+      
+    }
+  }
+  &__visor{
+    display: inline-flex;
+    max-width: rem-calc(117px);
+    overflow: hidden;
+    margin: 0 auto;
+    @include tablet-breakpoint {
+      max-width: rem-calc(888px);
     }
   }
   .page-controller{

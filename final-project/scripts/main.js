@@ -131,6 +131,10 @@ const Carrousel = (htmlSection,container,item,itemC,url) => {
               </picture>
           </div>
       `
+      case "customer":
+        return `
+        <span class="customers__list__item__${element.name} ">${element.name}</span>
+      `
       default:
         break;
     }
@@ -140,15 +144,20 @@ const Carrousel = (htmlSection,container,item,itemC,url) => {
 
 }
 
+let customerClass = "customers__list__item"; 
+let customerTag = 'li'
+let customerCarrouselElement = document.querySelector('.customers.carrousel');
+let customerCarrousel = Carrousel('customer',customerCarrouselElement,customerTag,customerClass,"../data/customers.json");
+customerCarrousel.loadCarrouselData();
+
 let blogCarrouselElement = document.querySelector('.blog.carrousel');
 let itemTag = 'article';
 let itemTagClass = 'blog__content__article';
-let p = Carrousel('blog',blogCarrouselElement,itemTag,itemTagClass,"https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog");
-p.loadCarrouselData();
+let blogCarrousel = Carrousel('blog',blogCarrouselElement,itemTag,itemTagClass,"https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog");
+blogCarrousel.loadCarrouselData();
 
 let testimonialClass = "testimonials__gallery__item"; 
 let testimonialTag = 'div'
 let testimonialCarrouselElement = document.querySelector('.testimonials__gallery.carrousel');
-let q = Carrousel('testimonial',testimonialCarrouselElement,testimonialTag,testimonialClass,"../data/testimonials.json");
-console.log(q);
-q.loadCarrouselData();
+let testimonialsCarrousel = Carrousel('testimonial',testimonialCarrouselElement,testimonialTag,testimonialClass,"../data/testimonials.json");
+testimonialsCarrousel.loadCarrouselData();

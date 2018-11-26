@@ -263,8 +263,6 @@ p {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    // width: 60%;
-    // margin-left: 20%;
     text-align: center;
     h3 {
       font-size: rem-calc(14px);
@@ -486,6 +484,16 @@ p {
       display: inline-block;
       margin-left: auto;
       margin-right: 3%;
+    }
+  }
+  &__arrows {
+    width: 90%;
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 14%;
+    &-left {
+      transform: rotate(180deg);
+      padding-right: 85%;
     }
   }
 }
@@ -743,6 +751,11 @@ and (-webkit-min-device-pixel-ratio: 1) {
   .customers-section {
     flex-wrap: wrap;
   }
+  .blog-section {
+    &__arrows {
+      display: none;
+    }
+  }
 
 }
 //MOBILE
@@ -865,6 +878,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
     &__btn-read {
       width: 120%;
     }
+    &__arrows {
+      display: none;
+    }
   }
   .clouds-section {
     //TODO
@@ -885,7 +901,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
       left: 0;
     }
   }
-  //TODO
   .footer-section-content {
     display: flex;
     flex-wrap: wrap;

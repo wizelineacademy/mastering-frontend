@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./dist/styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <!-- <script type="text/javascript" src="../scripts/main.js"></script> -->
+  <!-- <script type="module">
+    import {currentDiv} from './scripts/main.js';
+  </script> -->
 <body>
   <div class="wrapper">
     <header class="header">
@@ -100,24 +103,24 @@
             </div>
             <h3>Overview</h3>
             <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.</p>
-            <hr class="features-section__line-a">
           </div>
+          <hr class="features-section__line-a">
           <div class="features-section__item-files">
             <div class="features-section__circle">
               <img src="../reference/assets/icons/folder.png"></img>
             </div>
             <h3>Files</h3>
             <p>No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.</p>
-            <hr class="features-section__line-a">
           </div>
+          <hr class="features-section__line-a">
           <div class="features-section__item-chat">
             <div class="features-section__circle">
               <img src="../reference/assets/icons/chat.png"></img>
             </div>
             <h3>Meeting chats</h3>
             <p>Vim ne tacimates neglegentur. Erat diceret omittam at est.</p>
-            <hr class="features-section__line-a">
           </div>
+          <hr class="features-section__line-a">
           <div class="features-section__item-upload">
             <div class="features-section__circle">
               <img src="../reference/assets/icons/upload.png"></img>
@@ -154,6 +157,11 @@
       </div>
       <div class="blog-section__content">
         <div class="blog-section__content-images">
+          <img class="blog-section__content-images-267"src="../reference/assets/placeholder267x267.png"></img>
+          <div class="blog-section__content-126x126-images">
+            <img class="blog-section__content-images-126" src="../reference/assets/placeholder126x126.png"></img>
+            <img class="blog-section__content-images-126" src="../reference/assets/placeholder126x126.png"></img>
+          </div>
         </div>
         <div class="blog-section__content-text">
           <h1>How to start planning</h1>
@@ -165,6 +173,11 @@
           <button class="blog-section__btn-read">Read now</button>
           <button class="blog-section__btn-bookmark">Add to your bookmarks</button>
         </div>
+      </div>
+      <div class="blog-section__slider">
+        <button class="blog-section__slider-btn"></button>
+        <button class="blog-section__slider-btn"></button>
+        <button class="blog-section__slider-btn"></button>
       </div>
     </div>
     <div class="quotes-section">
@@ -282,38 +295,38 @@
   </div>
   <script src="./dist/bundle.js"></script>
   <script>
-  var slideIndex = 1;
-  var x = window.matchMedia("(max-width: 400px)");
-  screenWidthChange(x);
-  x.addListener(screenWidthChange);
+    var slideIndex = 1;
+    var x = window.matchMedia("(max-width: 400px)");
+    screenWidthChange(x);
+    x.addListener(screenWidthChange);
 
-  function screenWidthChange(x) {
-    if (x.matches) {
-        showDivs(slideIndex);
-    }
-    else {
-      var x = document.getElementsByClassName("customers-section__images");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "block";
+    function screenWidthChange(x) {
+      if (x.matches) {
+          showDivs(slideIndex);
+      }
+      else {
+        var x = document.getElementsByClassName("customers-section__images");
+        for (var i = 0; i < x.length; i++) {
+          x[i].style.display = "block";
+        }
       }
     }
-  }
-  function currentDiv(n) {
-    showDivs(slideIndex = n);
-  }
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("customers-section__images");
-    var buttons = document.getElementsByClassName("customer-section__slider-btn");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
     }
-    for (i = 0; i < buttons.length; i++) {
-      buttons[i].style.backgroundColor = "#D1D6E3";
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("customers-section__images");
+      var buttons = document.getElementsByClassName("customer-section__slider-btn");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      for (i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = "#D1D6E3";
+      }
+      x[slideIndex-1].style.display = "block";
+      buttons[slideIndex-1].style.backgroundColor = "#5283FF";
     }
-    x[slideIndex-1].style.display = "block";
-    buttons[slideIndex-1].style.backgroundColor = "#5283FF";
-  }
   </script>
 </body>
 </html>

@@ -8,6 +8,15 @@ $nav-text-color: #697CA6;
 $header__logo-size: 26px;
 $headers-text-color: #3D4F9F;
 $paragraph-text-color: #8D96BD;
+$quicksand-font: 'Quicksand', sans-serif;
+$roboto-font: 'Roboto', sans-serif;
+$open-sans-font: 'Open Sans', sans-serif;
+$white-background-color: #FFFFFF;
+$lightBlue-background-color: #F5F8FF;
+$strongLightBlue-background-color: #E9EFFF;
+$strongBlue-background-color: #6888FF;
+$border-line-color: #DAE4FE;
+$lightBlue-button: #3A79FF;
 
 * {
   padding: 0;
@@ -43,7 +52,7 @@ button { border:none; }
 .header, .footer-section-content{
   display: flex;
   justify-content: space-between;
-  font-family: 'Quicksand', sans-serif;
+  font-family: $quicksand-font;
   padding: rem-calc(18px) rem-calc(20px);
 
   &__logo {
@@ -75,8 +84,8 @@ button { border:none; }
 
   &__button {
     background-color: #D2E1FF;
-    font-family: 'Quicksand', sans-serif;
-    color: #3A79FF;
+    font-family: $quicksand-font;
+    color: $lightBlue-button;
     padding: rem-calc(13px);
   }
 }
@@ -137,7 +146,7 @@ button { border:none; }
 
 h1 {
   color: $headers-text-color;
-  font-family: 'Quicksand', sans-serif;
+  font-family: $quicksand-font;
   font-weight: lighter;
   .bold-text{
     font-weight: bold;
@@ -145,13 +154,13 @@ h1 {
 }
 h2 {
   color: $headers-text-color;
-  font-family: 'Roboto', sans-serif;
+  font-family: $roboto-font;
   font-size: rem-calc(10px);
   font-weight: 500;
 }
 p {
   color: $paragraph-text-color;
-  font-family: 'Roboto', sans-serif;
+  font-family: $roboto-font;
   font-size: rem-calc(15px);
 }
 .customers-section {
@@ -175,9 +184,9 @@ p {
 .plan-manage-section {
   grid-area: planManage;
   height: 776px;
-  border-top: 1px solid #DAE4FE;
-  border-bottom: 1px solid #DAE4FE;
-  background-color: #F5F8FF;
+  border-top: 1px solid $border-line-color;
+  border-bottom: 1px solid $border-line-color;
+  background-color: $lightBlue-background-color;
   width: 100%;
   &__text-area {
     width: 28%;
@@ -192,7 +201,7 @@ p {
     left: 10%;
     width: 50%;
     button {
-      font-family: 'Quicksand', sans-serif;
+      font-family: $quicksand-font;
       padding: rem-calc(13px);
       border-radius: 2px;
       width: rem-calc(130px);
@@ -222,10 +231,10 @@ p {
   &__btn-video {
     background-color: #4C85FF;
     border: 1px solid #4C85FF;
-    color: #FFFFFF;
+    color: $white-background-color;
   }
   &__btn-feats {
-    background-color: #FFFFFF;
+    background-color: $white-background-color;
     border: 1px solid #D1D1E4;
     color: #D1D1E4;
   }
@@ -266,7 +275,7 @@ p {
     text-align: center;
     h3 {
       font-size: rem-calc(14px);
-      font-family: 'Open Sans', sans-serif;
+      font-family: $open-sans-font;
       color: #4074F8;
       font-weight: bold;
       margin-top: rem-calc(33px);
@@ -279,7 +288,7 @@ p {
       display: inline-block;
       width: 28px;
       border: 0;
-      border-top: 1px solid #DAE4FE;
+      border-top: 1px solid $border-line-color;
       margin: 7.5em rem-calc(19px) 0 rem-calc(20px);
     }
     p {
@@ -287,7 +296,7 @@ p {
       height: rem-calc(102px);
       font-size: rem-calc(11px);
       color: #ADB3CB;
-      font-family: 'Open Sans', sans-serif;
+      font-family: $open-sans-font;
     }
     > div {
       max-width: rem-calc(140px);
@@ -299,7 +308,7 @@ p {
   &__buttons {
     margin-top: 10%;
     button {
-      font-family: 'Quicksand', sans-serif;
+      font-family: $quicksand-font;
       font-size: rem-calc(13px);
       font-weight: bold;
       padding: rem-calc(13px);
@@ -319,7 +328,7 @@ p {
       width: 15px;
       margin-bottom: 0.5em;
       border: 0;
-      border-top: 1px solid #DAE4FE;
+      border-top: 1px solid $border-line-color;
     }
   }
   &__btn-read {
@@ -329,7 +338,7 @@ p {
   }
   &__btn-start {
     background-color: #D2E1FF;
-    color: #3A79FF;
+    color: $lightBlue-button;
     margin-left: rem-calc(16px);
   }
 }
@@ -340,7 +349,7 @@ p {
   &__customers{
     width:50%;
     height: rem-calc(343px);
-    background-color: #6888FF;
+    background-color: $strongBlue-background-color;
     display: inline-block;
     position: relative;
     h2 {
@@ -348,7 +357,7 @@ p {
       margin-bottom: 5%;
     }
     h2, p {
-      color: #FFFFFF;
+      color: $white-background-color;
       text-align: right;
     }
     img {
@@ -363,7 +372,7 @@ p {
   &__users{
     width:50%;
     height: rem-calc(343px);
-    background-color: #E9EFFF;
+    background-color: $strongLightBlue-background-color;
     display: inline-block;
     position: absolute;
     h2, p, img {
@@ -378,7 +387,7 @@ p {
     }
   }
   h2, p {
-    font-family: 'Quicksand', sans-serif;
+    font-family: $quicksand-font;
   }
   h2 {
     font-size: rem-calc(48px);
@@ -390,10 +399,10 @@ p {
 .blog-section {
   grid-area: blog;
   height: rem-calc(865px);
-  background-color: #F5F8FF;
+  background-color: $lightBlue-background-color;
   &__content {
-    background-color: #FFFFFF;
-    border: 1px solid #DAE4FE;
+    background-color: $white-background-color;
+    border: 1px solid $border-line-color;
     width: 66%;
     display: block;
     margin-left: auto;
@@ -437,7 +446,7 @@ p {
       text-align: justify;
     }
     button {
-      font-family: 'Quicksand', sans-serif;
+      font-family: $quicksand-font;
       font-size: rem-calc(13px);
       font-weight: bold;
       padding: rem-calc(13px);
@@ -450,12 +459,12 @@ p {
   }
   &__btn-read {
     background-color: #D2E1FF;
-    color: #3A79FF;
+    color: $lightBlue-button;
     width: rem-calc(113px);
     height: rem-calc(43px);
   }
   &__btn-bookmark {
-    background-color: #FFFFFF;
+    background-color: $white-background-color;
     color: #A6B6DA;
     width: rem-calc(211px);
     height: rem-calc(43px);
@@ -523,7 +532,7 @@ p {
     position: absolute;
     margin-top: rem-calc(109px);
     &-rectangle {
-      border: 1px solid #DAE4FE;
+      border: 1px solid $border-line-color;
       width: rem-calc(423px);
       height: rem-calc(175px);
       background-color: white;
@@ -567,7 +576,7 @@ p {
     list-style: none;
     p {
       color: #8E96B7;
-      font-family: 'Quicksand', sans-serif;
+      font-family: $quicksand-font;
       margin-bottom: rem-calc(32px);
       margin-top: rem-calc(17px);
       position: relative;
@@ -594,7 +603,7 @@ p {
   }
   &__btn-doc {
     background-color: #E8ECF4;
-    font-family: 'Quicksand', sans-serif;
+    font-family: $quicksand-font;
     color: #7382A3;
     padding: rem-calc(13px);
     border-radius: 2px;
@@ -615,7 +624,7 @@ p {
     left: 10%;
     right:10%;
     h1, p, h2 {
-      color: #FFFFFF;
+      color: $white-background-color;
     }
     h1 {
       margin-top: rem-calc(16px);
@@ -631,8 +640,8 @@ p {
     }
   }
   &__btn-pricing {
-    background-color: #FFFFFF;
-    font-family: 'Quicksand', sans-serif;
+    background-color: $white-background-color;
+    font-family: $quicksand-font;
     color: #565F82;
     font-size: rem-calc(13px);
     padding: rem-calc(13px);
@@ -644,7 +653,7 @@ p {
   &__btn-documentation {
     border: 1px solid #A0B4FF;
     background-color: transparent;
-    font-family: 'Quicksand', sans-serif;
+    font-family: $quicksand-font;
     color: #C7D3FF;
     font-size: rem-calc(13px);
     padding: rem-calc(13px);
@@ -660,7 +669,7 @@ p {
   height: rem-calc(332px);
   &__btn-email {
     background-color: #EFEFF7;
-    font-family: 'Quicksand', sans-serif;
+    font-family: $quicksand-font;
     color: #7A85AD;
     font-size: rem-calc(13px);
     padding: rem-calc(13px);
@@ -671,8 +680,8 @@ p {
   }
   &__btn-save {
     background-color: #4D6CE1;
-    font-family: 'Quicksand', sans-serif;
-    color: #FFFFFF;
+    font-family: $quicksand-font;
+    color: $white-background-color;
     padding: rem-calc(13px);
     border-radius: 2px;
     width: rem-calc(184px);
@@ -700,11 +709,11 @@ p {
 }
 
 .footer-section {
-  border-top: 1px solid #DAE4FE;
+  border-top: 1px solid $border-line-color;
   grid-area: footer;
   height: rem-calc(287px);
   &__copyright {
-    font-family: 'Quicksand', sans-serif;
+    font-family: $quicksand-font;
     color: #AEB8D0;
     font-size: rem-calc(12px);
     margin-top: rem-calc(28px);

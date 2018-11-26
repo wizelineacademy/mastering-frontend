@@ -6,8 +6,6 @@ const after = before
   .split("")
   .filter(char => char !== "-")
   .join("");
-console.log({ before });
-console.log({ after });
 
 var buttonsParent = document.querySelector(".customers-section__slider");
 buttonsParent.addEventListener("click", updateCurrentCustomer, false);

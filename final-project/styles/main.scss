@@ -132,7 +132,7 @@ button { border:none; }
   &__circle {
     width: rem-calc(52px);
     height: rem-calc(52px);
-    background-color: #5E81FF;
+    background-color: #FFFFFF;
     border-radius: 50%;
     display: block;
     margin-left: auto;
@@ -141,6 +141,7 @@ button { border:none; }
   }
   &__play-button {
     margin: rem-calc(21px) rem-calc(20px) rem-calc(20px) rem-calc(22px);
+    filter: brightness(50%) sepia(100) saturate(80) hue-rotate(240deg);
   }
 }
 
@@ -179,6 +180,9 @@ p {
       margin-left: auto;
       margin-right: auto;
     }
+  }
+  img:hover  {
+    filter: hue-rotate(360deg) saturate(400%);
   }
 }
 .plan-manage-section {

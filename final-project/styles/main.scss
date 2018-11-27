@@ -102,7 +102,13 @@ button { border:none; }
   display: none;
 }
 
-
+.alert {
+  text-align: center;
+  font-family: $roboto-font;
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
 
 .hero-section {
   height: rem-calc(570px);

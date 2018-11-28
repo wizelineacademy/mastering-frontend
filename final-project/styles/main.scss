@@ -419,23 +419,11 @@ p {
     margin-right: auto;
     height: 46%;
   }
-  &__content-images {
-    width: 50%;
+  &__content-image {
     display: inline-block;
     position: relative;
     margin-left: 5%;
     margin-top: 7%;
-  }
-  &__content-126x126-images {
-    position: absolute;
-    display: inline-block;
-    margin-left: 5%;
-    img {
-      width: 68%;
-    }
-    img:first-child {
-      margin-bottom: 5%;
-    }
   }
   &__content-text {
     max-width: rem-calc(408px);
@@ -510,7 +498,14 @@ p {
     position: absolute;
     margin-left: 10%;
     margin-top: 14%;
-    &-left {
+    button {
+      width: 60px;
+      height: 20px;
+      background-image: url("/reference/assets/arrow-blog.png");
+      background-repeat: no-repeat;
+      background-color: transparent
+    }
+    &-right {
       transform: rotate(180deg);
       padding-right: 85%;
     }
@@ -869,20 +864,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
       display: block;
       width: 70%;
     }
-
-    &__content-images {
-      width: 100%;
-      height: 35%;
-    }
-    &__content-images-267 {
-      width: 60%;
-      height: 85%;
-    }
-    &__content-images-126{
-      height: 40%;
-    }
-    &__content-126x126-images {
-      height: 100%;
+    &__content-image {
+      width: 90%;
     }
     &__title {
       margin-top: 20%;

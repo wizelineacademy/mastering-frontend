@@ -17,9 +17,9 @@ function readBlogData() {
   fetch(url)
   .then(res => res.json())
   .then((out) => {
-    console.log('Checkout this JSON! ', Object.keys(out.articles).length);
     data = out;
     modifyBlogData(currentBlog);
+    sliderColorUpdate(currentBlog);
   })
   .catch(err => { throw err });
 }
@@ -34,27 +34,55 @@ function modifyBlogData(currentBlog) {
   readButton[0].addEventListener('click', function (event) {
     window.location.replace(data.articles[currentBlog].url);
   });
+  var image = document.getElementsByClassName("blog-section__content-image");
+  image[0].src = data.articles[currentBlog].images.desktop;
 }
+
+var arrowsBlogSlider = document.querySelector(".blog-section__arrows");
+arrowsBlogSlider.addEventListener("click", updateVisibleBlog, false);
 
 var buttonsBlogSlider = document.querySelector(".blog-section__slider");
 buttonsBlogSlider.addEventListener("click", updateVisibleBlog, false);
 
 function updateVisibleBlog(e) {
+    var length = Object.keys(data.articles).length;
     if (e.target !== e.currentTarget) {
-        var clickedBlog = e.target.id;
-        currentBlog = clickedBlog;
-        modifyBlogData(currentBlog);
+      var clickedBlog = e.target.id;
+      if(clickedBlog === 'right') {
+        currentBlog = currentBlog + 1;
+      }
+      else if(clickedBlog === 'left') {
+        currentBlog -= 1
+      }
+      else {
+        currentBlog = clickedBlog
+      }
+      if (currentBlog >= length) {
+        currentBlog = 0;
+      }
+      if (currentBlog < 0) {currentBlog = length-1}
+      sliderColorUpdate(currentBlog);
+      modifyBlogData(currentBlog);
     }
     e.stopPropagation();
 }
 
-var buttonsParent = document.querySelector(".customers-section__slider");
-buttonsParent.addEventListener("click", updateCurrentCustomer, false);
+function sliderColorUpdate(currentSlider) {
+  var buttons = document.getElementsByClassName("blog-section__slider-btn");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].style.backgroundColor = "#D1D6E3";
+  }
+  buttons[currentSlider].style.backgroundColor = "#5283FF";
 
-function updateCurrentCustomer(e) {
+}
+
+var buttonsParent = document.querySelector(".customers-section__slider");
+buttonsParent.addEventListener("click", updateCurrentSlide, false);
+
+function updateCurrentSlide(e) {
     if (e.target !== e.currentTarget) {
-        var clickedCustomer = e.target.id;
-        currentCustomer(clickedCustomer);
+      var clickedCustomer = e.target.id;
+      currentCustomer(clickedCustomer);
     }
     e.stopPropagation();
 }

@@ -7,6 +7,47 @@ const after = before
   .filter(char => char !== "-")
   .join("");
 
+var currentBlog = 0;
+var data;
+
+readBlogData();
+
+function readBlogData() {
+  let url = 'https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog';
+  fetch(url)
+  .then(res => res.json())
+  .then((out) => {
+    console.log('Checkout this JSON! ', Object.keys(out.articles).length);
+    data = out;
+    modifyBlogData(currentBlog);
+  })
+  .catch(err => { throw err });
+}
+
+function modifyBlogData(currentBlog) {
+  var textSection = document.getElementsByClassName('blog-section__content-text');
+  var titleText = textSection[0].getElementsByTagName('h1');
+  var paragraphText = textSection[0].getElementsByTagName('p');
+  titleText[0].innerHTML = data.articles[currentBlog].title;
+  paragraphText[0].innerHTML = data.articles[currentBlog].description;
+  var readButton = document.getElementsByClassName("blog-section__btn-read");
+  readButton[0].addEventListener('click', function (event) {
+    window.location.replace(data.articles[currentBlog].url);
+  });
+}
+
+var buttonsBlogSlider = document.querySelector(".blog-section__slider");
+buttonsBlogSlider.addEventListener("click", updateVisibleBlog, false);
+
+function updateVisibleBlog(e) {
+    if (e.target !== e.currentTarget) {
+        var clickedBlog = e.target.id;
+        currentBlog = clickedBlog;
+        modifyBlogData(currentBlog);
+    }
+    e.stopPropagation();
+}
+
 var buttonsParent = document.querySelector(".customers-section__slider");
 buttonsParent.addEventListener("click", updateCurrentCustomer, false);
 

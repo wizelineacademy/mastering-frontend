@@ -12,17 +12,19 @@ var blogData;
 var customerInDisplay = 1;
 
 readBlogData();
-addButtonListeners();
-initCustomerSection();
 
 function readBlogData() {
+  console.log('read blog data');
   let url = 'https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog';
   fetch(url)
   .then(res => res.json())
   .then((out) => {
     blogData = out;
     modifyBlogData(currentBlog);
-    sliderColorUpdate(currentBlog);
+    updateSliderColor(currentBlog);
+    addButtonListenersBlog();
+    addButtonListenersCustomer();
+    mediaQueries();
   })
   .catch(err => { throw err });
 }
@@ -41,7 +43,7 @@ function modifyBlogData(currentBlog) {
   image[0].src = blogData.articles[currentBlog].images.desktop;
 }
 
-function addButtonListeners() {
+function addButtonListenersBlog() {
   var arrowsBlogSlider = document.querySelector(".blog-section__arrows");
   arrowsBlogSlider.addEventListener("click", updateVisibleBlog, false);
   var buttonsBlogSlider = document.querySelector(".blog-section__slider");
@@ -49,21 +51,21 @@ function addButtonListeners() {
 }
 
 function updateVisibleBlog(e) {
-    var length = Object.keys(blogData.articles).length;
-    if (e.target !== e.currentTarget) {
-      var clickedBlog = e.target.id;
-      if(clickedBlog === 'right') currentBlog += 1;
-      else if(clickedBlog === 'left') currentBlog -= 1;
-      else currentBlog = clickedBlog;
-      if (currentBlog >= length) currentBlog = 0;
-      if (currentBlog < 0) currentBlog = length-1;
-      sliderColorUpdate(currentBlog);
-      modifyBlogData(currentBlog);
-    }
-    e.stopPropagation();
+  var length = Object.keys(blogData.articles).length;
+  if (e.target !== e.currentTarget) {
+    var clickedBlog = e.target.id;
+    if(clickedBlog === 'right') currentBlog += 1;
+    else if(clickedBlog === 'left') currentBlog -= 1;
+    else currentBlog = clickedBlog;
+    if (currentBlog >= length) currentBlog = 0;
+    if (currentBlog < 0) currentBlog = length-1;
+    updateSliderColor(currentBlog);
+    modifyBlogData(currentBlog);
+  }
+  e.stopPropagation();
 }
 
-function sliderColorUpdate(currentSlider) {
+function updateSliderColor(currentSlider) {
   var buttons = document.getElementsByClassName("blog-section__slider-btn");
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].style.backgroundColor = "#D1D6E3";
@@ -71,33 +73,71 @@ function sliderColorUpdate(currentSlider) {
   buttons[currentSlider].style.backgroundColor = "#5283FF";
 }
 
-function initCustomerSection(){
-  var x = window.matchMedia("(max-width: 400px)");
-  screenWidthChange(x);
-  x.addListener(screenWidthChange);
+function addButtonListenersCustomer(){
   var buttonsParent = document.querySelector(".customers-section__slider");
   buttonsParent.addEventListener("click", updateCurrentSlide, false);
 }
 
 function updateCurrentSlide(e) {
-    if (e.target !== e.currentTarget) {
-      var clickedCustomer = e.target.id;
-      currentCustomer(clickedCustomer);
-    }
-    e.stopPropagation();
+  if (e.target !== e.currentTarget) {
+    var clickedCustomer = e.target.id;
+    currentCustomer(clickedCustomer);
+  }
+  e.stopPropagation();
 }
 
-function screenWidthChange(x) {
-  if (x.matches) {
-      displayCustomer(customerInDisplay);
-  }
-  else {
+
+function mediaQueries() {
+  var mobile = window.matchMedia("(max-width: 400px)");
+  screenWidthChangeMobile(mobile);
+  mobile.addListener(screenWidthChangeMobile);
+
+  var tabletPortrait = window.matchMedia("(min-width: 401px) and (max-width: 768px)");
+  screenWidthChangeTabletPortrait(tabletPortrait);
+  tabletPortrait.addListener(screenWidthChangeTabletPortrait);
+
+  var tabletLandscape = window.matchMedia("(min-width: 769px) and (max-width: 1024px)");
+  screenWidthChangeTabletLandscape(tabletLandscape);
+  tabletLandscape.addListener(screenWidthChangeTabletLandscape);
+
+  var desktop = window.matchMedia("(min-width: 1025px)");
+  screenWidthChangeDesktop(desktop);
+  desktop.addListener(screenWidthChangeDesktop);
+}
+
+function screenWidthChangeDesktop(desktop){
+  if(desktop.matches){
     var x = document.getElementsByClassName("customers-section__images");
     for (var i = 0; i < x.length; i++) {
       x[i].style.display = "block";
     }
+    var image = document.getElementsByClassName("blog-section__content-image");
+    image[0].src = blogData.articles[currentBlog].images.desktop;
   }
 }
+
+function screenWidthChangeTabletLandscape(tabletLandscape){
+  if (tabletLandscape.matches) {
+    var image = document.getElementsByClassName("blog-section__content-image");
+    image[0].src = blogData.articles[currentBlog].images.tablet;
+  }
+}
+
+function screenWidthChangeTabletPortrait(tabletPortrait) {
+  if (tabletPortrait.matches) {
+    var image = document.getElementsByClassName("blog-section__content-image");
+    image[0].src = blogData.articles[currentBlog].images.mobile2x;
+  }
+}
+
+function screenWidthChangeMobile(mobile) {
+  if (mobile.matches) {
+    displayCustomer(customerInDisplay);
+    var image = document.getElementsByClassName("blog-section__content-image");
+    image[0].src = blogData.articles[currentBlog].images.mobile;
+  }
+}
+
 function currentCustomer(n) {
   displayCustomer(customerInDisplay = n);
 }

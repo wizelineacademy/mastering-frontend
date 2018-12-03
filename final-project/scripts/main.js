@@ -1,4 +1,17 @@
 import "../styles/main.scss";
+import "../styles/hero-section.scss";
+import "../styles/customer-section.scss";
+import "../styles/planManage-section.scss";
+import "../styles/features-section.scss";
+import "../styles/stats-section.scss";
+import "../styles/blog-section.scss";
+import "../styles/quotes-section.scss";
+import "../styles/faq-section.scss";
+import "../styles/clouds-section.scss";
+import "../styles/newsletter-section.scss";
+import "../styles/footer.scss";
+import "../styles/responsive.scss";
+
 
 // testing that `const` and arrow functions transpile correctly
 const before = "Hello -world!";
@@ -14,7 +27,6 @@ var customerInDisplay = 1;
 readBlogData();
 
 function readBlogData() {
-  console.log('read blog data');
   let url = 'https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog';
   fetch(url)
   .then(res => res.json())

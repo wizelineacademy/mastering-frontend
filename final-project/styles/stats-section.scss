@@ -1,0 +1,56 @@
+@import 'variables';
+
+.stats-section{
+  grid-area: stats;
+  height: rem-calc(343px);
+  width: 100%;
+  &__customers{
+    width:50%;
+    height: rem-calc(343px);
+    background-color: $strongBlue-background-color;
+    display: inline-block;
+    position: relative;
+    h2 {
+      margin-top: 20%;
+      margin-bottom: 5%;
+    }
+    h2, p {
+      color: $white-background-color;
+      text-align: right;
+    }
+    img {
+      position: absolute;
+      right: 0px;
+      margin-top: 5%;
+    }
+    h2, p, img{
+      margin-right: 10%;
+    }
+  }
+  &__users{
+    width:50%;
+    height: rem-calc(343px);
+    background-color: $strongLightBlue-background-color;
+    display: inline-block;
+    position: absolute;
+    h2, p, img {
+      margin-left: 10%;
+      margin-top: 5%;
+    }
+    h2, p {
+      color: #5E80FF;
+    }
+    h2 {
+      margin-top: rem-calc(30px);
+    }
+  }
+  h2, p {
+    font-family: $quicksand-font;
+  }
+  h2 {
+    font-size: rem-calc(48px);
+  }
+  p {
+    font-size: rem-calc(18px);
+  }
+}

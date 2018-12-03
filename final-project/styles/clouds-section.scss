@@ -1,0 +1,55 @@
+@import 'variables';
+
+.clouds-section {
+  grid-area: clouds;
+  height: rem-calc(447px);
+  position: relative;
+  background-image: url("/reference/assets/blue-clouds-bg.png");
+  background-position: 50%;
+
+  &__text {
+    position: absolute;
+    text-align: center;
+    top: rem-calc(92px);
+    left: 10%;
+    right:10%;
+    h1, p, h2 {
+      color: $white-background-color;
+    }
+    h1 {
+      margin-top: rem-calc(16px);
+      margin-bottom: rem-calc(28px);
+      font-size: rem-calc(48px);
+      min-width: rem-calc(284px);
+    }
+    p {
+      padding-bottom: rem-calc(28px);
+      min-width: rem-calc(288px);
+      width: 55%;
+      margin: 0 auto;
+    }
+  }
+  &__btn-pricing {
+    background-color: $white-background-color;
+    font-family: $quicksand-font;
+    color: #565F82;
+    font-size: rem-calc(13px);
+    padding: rem-calc(13px);
+    border-radius: 2px;
+    width: rem-calc(130px);
+    height: rem-calc(43px);
+    display: inline-block;
+  }
+  &__btn-documentation {
+    border: 1px solid #A0B4FF;
+    background-color: transparent;
+    font-family: $quicksand-font;
+    color: #C7D3FF;
+    font-size: rem-calc(13px);
+    padding: rem-calc(13px);
+    border-radius: 2px;
+    width: rem-calc(155px);
+    height: rem-calc(43px);
+    display: inline-block;
+  }
+}

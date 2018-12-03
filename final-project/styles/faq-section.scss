@@ -1,0 +1,54 @@
+@import 'variables';
+
+.faq-section {
+  grid-area: faq;
+  height: rem-calc(965px);
+  &__content {
+    position: relative;
+    margin-top: 10%;
+    margin-left: 15%;
+    h1, h2 {
+      text-align: center;
+    }
+    h1 {
+      margin-top: rem-calc(20px);
+      margin-bottom: rem-calc(68px);
+    }
+  }
+  &__bullets {
+    list-style: none;
+    p {
+      color: #8E96B7;
+      font-family: $quicksand-font;
+      margin-bottom: rem-calc(32px);
+      margin-top: rem-calc(17px);
+      position: relative;
+      left: 3%;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid #D8E3FE;
+      width: 80%;
+    }
+    button {
+      position: relative;
+      left: 5%;
+    }
+  }
+  &__title-p, i {
+    display: inline-block;
+  }
+  &__inside-p {
+    p {
+      width: 50%;
+      display: inline-block;
+    }
+  }
+  &__btn-doc {
+    background-color: #E8ECF4;
+    font-family: $quicksand-font;
+    color: #7382A3;
+    padding: rem-calc(13px);
+    border-radius: 2px;
+  }
+}

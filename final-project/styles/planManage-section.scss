@@ -17,8 +17,7 @@
   }
   &__buttons {
     position: relative;
-    left: 10%;
-    width: 50%;
+    padding-left: 10%;
     button {
       font-family: $quicksand-font;
       padding: rem-calc(13px);

@@ -11,10 +11,42 @@
 
 //tablet landscape
 @media only screen
-and (min-width: rem-calc(768px))
+and (min-width: rem-calc(769px))
 and (max-width: rem-calc(1024px))
 and (-webkit-min-device-pixel-ratio: 1) {
-
+  .quotes-section{
+    &__title {
+      display: block;
+      margin: 0;
+      left: 0%;
+    }
+    &__examples{
+      display: block;
+    }
+  }
+  .plan-manage-section{
+    &__buttons{
+      margin: 0;
+    }
+  }
+  .blog-section {
+    &__content {
+      width: 90%;
+      height: 50%;
+      &-image {
+        width: 45%;
+        height: 80%;
+      }
+      &-text {
+        right:7%;
+      }
+    }
+    &__arrows {
+      width: 112%;
+      margin-left: 2%;
+      margin-top: 20%;
+    }
+  }
 }
 //tablet portrait
 @media only screen
@@ -23,13 +55,58 @@ and (max-width: rem-calc(768px))
 and (-webkit-min-device-pixel-ratio: 1) {
   .customers-section {
     flex-wrap: wrap;
+    img {
+      flex-basis: 30%;
+    }
+    img:nth-child(4), img:nth-child(5){
+      margin-top: 10%;
+    }
   }
   .blog-section {
     &__arrows {
       display: none;
     }
+    &__content {
+      width: 80%;
+      height: 60%;
+      &-image {
+        width: 90%;
+        height: 50%;
+        display: block
+      }
+      &-text {
+        max-width: none;
+        width: 70%;
+        right: 15%;
+        h1 {
+          padding-top: 0%;
+        }
+        p {
+          margin-bottom: 1%;
+        }
+      }
+    }
   }
-
+  .quotes-section{
+    &__title {
+      display: block;
+      margin: 0;
+      left: 0%;
+    }
+    &__examples{
+      display: block;
+    }
+  }
+  .footer-section{
+    &-content {
+      &__social {
+        padding-right: 0%;
+      }
+      &__nav--social {
+        display: inline-block;
+      }
+    }
+  }
 }
 //MOBILE
 @media only screen
@@ -69,9 +146,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
       &__image {
         margin-top: rem-calc(45px);
         position: static;
-      }
-      &__buttons{
-        left: 10%;
       }
       &__btn-feats{
         position: absolute;
@@ -122,6 +196,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
     &__content-text {
       display: block;
       width: 70%;
+      h1 {
+        padding: 0;
+        font-size: 5vh;
+      }
     }
     &__content-image {
       width: 90%;

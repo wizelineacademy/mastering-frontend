@@ -1,0 +1,254 @@
+@import 'variables';
+
+@media only screen and (min-width: rem-calc(768px)){
+  .header__nav--main, .header__button {
+    display: block;
+  }
+  .header__nav--mobile {
+    display: none;
+  }
+}
+
+//tablet landscape
+@media only screen
+and (min-width: rem-calc(769px))
+and (max-width: rem-calc(1024px))
+and (-webkit-min-device-pixel-ratio: 1) {
+  .quotes-section{
+    &__title {
+      display: block;
+      margin: 0;
+      left: 0%;
+    }
+    &__examples{
+      display: block;
+    }
+  }
+  .plan-manage-section{
+    &__buttons{
+      margin: 0;
+    }
+  }
+  .blog-section {
+    &__content {
+      width: 90%;
+      height: 50%;
+      &-image {
+        width: 45%;
+        height: 80%;
+      }
+      &-text {
+        right:7%;
+      }
+    }
+    &__arrows {
+      width: 112%;
+      margin-left: 2%;
+      margin-top: 20%;
+    }
+  }
+}
+//tablet portrait
+@media only screen
+and (min-width: rem-calc(401px))
+and (max-width: rem-calc(768px))
+and (-webkit-min-device-pixel-ratio: 1) {
+  .customers-section {
+    flex-wrap: wrap;
+    img {
+      flex-basis: 30%;
+    }
+    img:nth-child(4), img:nth-child(5){
+      margin-top: 10%;
+    }
+  }
+  .blog-section {
+    &__arrows {
+      display: none;
+    }
+    &__content {
+      width: 80%;
+      height: 60%;
+      &-image {
+        width: 90%;
+        height: 50%;
+        display: block
+      }
+      &-text {
+        max-width: none;
+        width: 70%;
+        right: 15%;
+        h1 {
+          padding-top: 0%;
+        }
+        p {
+          margin-bottom: 1%;
+        }
+      }
+    }
+  }
+  .quotes-section{
+    &__title {
+      display: block;
+      margin: 0;
+      left: 0%;
+    }
+    &__examples{
+      display: block;
+    }
+  }
+  .footer-section{
+    &-content {
+      &__social {
+        padding-right: 0%;
+      }
+      &__nav--social {
+        display: inline-block;
+      }
+    }
+  }
+}
+//MOBILE
+@media only screen
+and (max-width: rem-calc(400px))
+and (-webkit-min-device-pixel-ratio: 2) {
+  .hero-section {
+    &__text-area {
+      left: 5%;
+    }
+    p {
+      display: none;
+    }
+  }
+  .customers-section {
+    position: relative;
+    display: block;
+    margin-left: 35%;
+    &__images {
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+    &__slider {
+      position: relative;
+      top: 10%;
+      left: 10%;
+      margin-bottom: 10%;
+      display: block;
+    }
+  }
+  .plan-manage-section{
+      &__image, &__text-area {
+        display: block;
+      }
+      &__text-area {
+        left: 5%;
+      }
+      &__image {
+        margin-top: rem-calc(45px);
+        position: static;
+      }
+      &__btn-feats{
+        position: absolute;
+        display: inline-block;
+        width: rem-calc(149px);
+      }
+      &__btn-video{
+        position: relative;
+        display: inline-block;
+        width: rem-calc(149px);
+      }
+  }
+  .features-section {
+    &__content {
+      left: 0;
+    }
+    &__items {
+      hr {
+        display: none;
+      }
+    }
+    &__buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  }
+  .stats-section {
+    height: rem-calc(747px);
+    &__customers {
+      display: block;
+      width: 100%;
+      h2 {
+        padding-top: 40%;
+      }
+    }
+    &__users {
+      width: 100%;
+    }
+  }
+  .blog-section {
+    &__content {
+      display: block;
+      width: 90%;
+      height: 70%;
+    }
+    &__content-text {
+      display: block;
+      width: 70%;
+      h1 {
+        padding: 0;
+        font-size: 5vh;
+      }
+    }
+    &__content-image {
+      width: 90%;
+    }
+    &__title {
+      margin-top: 20%;
+      margin-bottom: 20%;
+      h2 {
+        margin-bottom: 5%;
+      }
+    }
+    &__btn-bookmark {
+      display: none;
+    }
+    &__btn-read {
+      width: 120%;
+    }
+    &__arrows {
+      display: none;
+    }
+  }
+  .clouds-section {
+    //TODO
+  }
+  .newsletter-section {
+     &__text {
+       margin-bottom: 20%;
+     }
+     &__buttons button{
+       width: rem-calc(279px);
+     }
+  }
+  .quotes-section{
+    display: none;
+  }
+  .faq-section {
+    &__bullets p {
+      left: 0;
+    }
+  }
+  .footer-section-content {
+    display: flex;
+    flex-wrap: wrap;
+    &__social nav {
+      display: none;
+    }
+    &__nav-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

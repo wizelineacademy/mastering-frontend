@@ -1,0 +1,45 @@
+@import 'variables';
+
+.newsletter-section {
+  grid-area: newsletter;
+  height: rem-calc(332px);
+  &__btn-email {
+    background-color: #EFEFF7;
+    font-family: $quicksand-font;
+    color: #7A85AD;
+    font-size: rem-calc(13px);
+    padding: rem-calc(13px);
+    border-radius: 2px;
+    width: rem-calc(279px);
+    height: rem-calc(59px);
+    text-align: left;
+  }
+  &__btn-save {
+    background-color: #4D6CE1;
+    font-family: $quicksand-font;
+    color: $white-background-color;
+    padding: rem-calc(13px);
+    border-radius: 2px;
+    width: rem-calc(184px);
+    height: rem-calc(59px);
+  }
+  &__text {
+    position: relative;
+    display: inline-block;
+    margin-left: 15%;
+    margin-top: 8%;
+    p {
+      width: 70%;
+      margin-top: rem-calc(18px);
+    }
+    h1 {
+      font-size: rem-calc(18px);
+    }
+  }
+  &__buttons {
+    display: inline-block;
+    position: relative;
+    bottom: 15%;
+    margin-left: 10%;
+  }
+}

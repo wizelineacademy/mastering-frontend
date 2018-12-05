@@ -1,0 +1,107 @@
+@import 'variables';
+
+.blog-section {
+  grid-area: blog;
+  height: rem-calc(865px);
+  background-color: $lightBlue-background-color;
+  &__content {
+    background-color: $white-background-color;
+    border: 1px solid $border-line-color;
+    width: 66%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 46%;
+  }
+  &__content-image {
+    display: inline-block;
+    position: relative;
+    margin-left: 5%;
+    margin-top: 7%;
+  }
+  &__content-text {
+    max-width: rem-calc(408px);
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    right: 20%;
+    h1 {
+      font-size: rem-calc(36px);
+      padding-top: rem-calc(63px);
+      text-align: left;
+    }
+    p {
+      font-size: rem-calc(14px);
+      padding-top: rem-calc(32px);
+      margin-bottom: rem-calc(31px);
+      text-align: justify;
+    }
+    button {
+      font-family: $quicksand-font;
+      font-size: rem-calc(13px);
+      font-weight: bold;
+      padding: rem-calc(13px);
+      border-radius: 2px;
+      right: 10%;
+    }
+    h2 {
+      display: inline-block;
+    }
+  }
+  &__btn-read {
+    background-color: #D2E1FF;
+    color: $lightBlue-button;
+    width: rem-calc(113px);
+    height: rem-calc(43px);
+  }
+  &__btn-bookmark {
+    background-color: $white-background-color;
+    color: #A6B6DA;
+    width: rem-calc(211px);
+    height: rem-calc(43px);
+  }
+  &__title{
+    margin-top: 7%;
+    margin-bottom: 7%;
+    h2, h1 {
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 1%;
+    }
+    h1 {
+      font-size: rem-calc(24px);
+    }
+  }
+  &__slider {
+    margin-left: 47%;
+    margin-top: 5%;
+    button {
+      width: rem-calc(8px);
+      height: rem-calc(8px);
+      background-color: #D1D6E3;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: 3%;
+    }
+  }
+  &__arrows {
+    width: 90%;
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 14%;
+    button {
+      width: 20px;
+      height: 20px;
+      background-image: url("/reference/assets/arrow-blog.png");
+      background-repeat: no-repeat;
+      background-color: transparent
+    }
+    &-right {
+      transform: rotate(180deg);
+      padding-right: 85%;
+    }
+  }
+}

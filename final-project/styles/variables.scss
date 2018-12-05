@@ -1,0 +1,17 @@
+$nav-text-color: #697CA6;
+$header__logo-size: 26px;
+$headers-text-color: #3D4F9F;
+$paragraph-text-color: #8D96BD;
+$quicksand-font: 'Quicksand', sans-serif;
+$roboto-font: 'Roboto', sans-serif;
+$open-sans-font: 'Open Sans', sans-serif;
+$white-background-color: #FFFFFF;
+$lightBlue-background-color: #F5F8FF;
+$strongLightBlue-background-color: #E9EFFF;
+$strongBlue-background-color: #6888FF;
+$border-line-color: #DAE4FE;
+$lightBlue-button: #3A79FF;
+
+@function rem-calc($size) {
+  @return $size / 16px * 1rem;
+}

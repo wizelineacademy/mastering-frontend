@@ -1,0 +1,23 @@
+@import 'variables';
+
+.customers-section {
+  grid-area: customer;
+  display: flex;
+  justify-content: space-around;
+  margin: 5% 10% 5% 10%;
+  &__slider {
+    display: none;
+    button {
+      width: rem-calc(8px);
+      height: rem-calc(8px);
+      background-color: #D1D6E3;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  img:hover  {
+    filter: hue-rotate(360deg) saturate(400%);
+  }
+}

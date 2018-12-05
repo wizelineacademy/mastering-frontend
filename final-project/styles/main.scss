@@ -1,13 +1,115 @@
-// This should be imported by the main.js file
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto|Open+Sans');
+@import 'variables';
 
-// test for scss variables
-$primary-color: #2a3fbb;
 
 * {
   padding: 0;
   margin: 0;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "head head"
+    "hero hero"
+    "customer customer"
+    "planManage planManage"
+    "features features"
+    "stats stats"
+    "blog blog"
+    "quote quote"
+    "faq faq"
+    "clouds clouds"
+    "newsletter newsletter"
+    "footer footer"
+    "test test";
+  padding: 0;
+}
+
+button { border:none; }
+
+.header {
+  grid-area: head;
+}
+
+.header, .footer-section-content{
+  display: flex;
+  justify-content: space-between;
+  font-family: $quicksand-font;
+  padding: rem-calc(18px) rem-calc(20px);
+
+  &__logo {
+    width: rem-calc($header__logo-size);
+    height: rem-calc($header__logo-size);
+    margin-top: rem-calc(26px-18px);
+    background-color: #5E81FE;
+    border-radius: 50%;
+  }
+
+  &__nav {
+    margin-top: rem-calc(32px-18px);
+    &--mobile {
+      margin-top: rem-calc(10px);
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__nav-link {
+    font-size: rem-calc(12px);
+    margin: 0 1.25rem;
+    display: inline-block;
+    color: $nav-text-color;
+  }
+
+  &__button {
+    background-color: #D2E1FF;
+    font-family: $quicksand-font;
+    color: $lightBlue-button;
+    padding: rem-calc(13px);
+  }
+}
+
+.main {
+  border-top: #D8E3FE solid 1px;
+}
+
+// TODO create break-points
+.header__nav--main, .header__nav--social {
+  display: none;
+}
+.header__button{
+  display: none;
+}
+
+.alert {
+  text-align: center;
+  font-family: $roboto-font;
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
 h1 {
-  color: $primary-color;
+  color: $headers-text-color;
+  font-family: $quicksand-font;
+  font-weight: lighter;
+  .bold-text{
+    font-weight: bold;
+  }
+}
+h2 {
+  color: $headers-text-color;
+  font-family: $roboto-font;
+  font-size: rem-calc(10px);
+  font-weight: 500;
+}
+p {
+  color: $paragraph-text-color;
+  font-family: $roboto-font;
+  font-size: rem-calc(15px);
 }

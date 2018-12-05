@@ -1,0 +1,42 @@
+@import 'variables';
+
+.hero-section {
+  height: rem-calc(570px);
+  grid-area: hero;
+  position: relative;
+  background-image: url("/reference/assets/hero.png");
+  background-position: 50%;
+
+  &__text-area {
+    top: rem-calc(92px);
+    left: 10%;
+    right: 10%;
+    position: absolute;
+    text-align: center;
+  }
+  &__text-area h1 {
+    min-width: rem-calc(293px);
+    margin-top: rem-calc(16px);
+    margin-bottom: rem-calc(28px);
+    font-size: rem-calc(48px);
+  }
+  &__text-area p {
+    min-width: rem-calc(450px);
+    width: 30%;
+    margin: 0 auto;
+  }
+  &__circle {
+    width: rem-calc(52px);
+    height: rem-calc(52px);
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: rem-calc(20px);
+  }
+  &__play-button {
+    margin: rem-calc(21px) rem-calc(20px) rem-calc(20px) rem-calc(22px);
+    filter: brightness(50%) sepia(100) saturate(80) hue-rotate(240deg);
+  }
+}

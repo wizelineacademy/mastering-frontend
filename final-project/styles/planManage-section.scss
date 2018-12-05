@@ -1,0 +1,62 @@
+@import 'variables';
+
+.plan-manage-section {
+  grid-area: planManage;
+  height: 776px;
+  border-top: 1px solid $border-line-color;
+  border-bottom: 1px solid $border-line-color;
+  background-color: $lightBlue-background-color;
+  width: 100%;
+  &__text-area {
+    width: 28%;
+    height: rem-calc(352px);
+    position: relative;
+    display: inline-block;
+    margin-top: 10%;
+    left: 10%;
+  }
+  &__buttons {
+    position: relative;
+    padding-left: 10%;
+    button {
+      font-family: $quicksand-font;
+      padding: rem-calc(13px);
+      border-radius: 2px;
+      width: rem-calc(130px);
+      height: rem-calc(43px);
+    }
+  }
+  &__image {
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    margin-top: rem-calc(171px);
+    right: 10%;
+    min-width: rem-calc(293px);
+  }
+  &__text-area h1 {
+    min-width: rem-calc(293px);
+    margin-top: rem-calc(27px);
+    margin-bottom: rem-calc(27px);
+    font-size: rem-calc(36px);
+  }
+  &__text-area h2 {
+    min-width: rem-calc(228px);
+  }
+  &__text-area p {
+    min-width: rem-calc(293px);
+  }
+  &__btn-video {
+    background-color: #4C85FF;
+    border: 1px solid #4C85FF;
+    color: $white-background-color;
+  }
+  &__btn-feats {
+    background-color: $white-background-color;
+    border: 1px solid #D1D1E4;
+    color: #D1D1E4;
+  }
+  &__play-icon {
+    margin-left: rem-calc(2px);
+  }
+}

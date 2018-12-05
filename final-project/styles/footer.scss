@@ -1,0 +1,28 @@
+@import 'variables';
+
+.footer-section {
+  border-top: 1px solid $border-line-color;
+  grid-area: footer;
+  height: rem-calc(287px);
+  &__copyright {
+    font-family: $quicksand-font;
+    color: #AEB8D0;
+    font-size: rem-calc(12px);
+    margin-top: rem-calc(28px);
+    margin-left: rem-calc(216px);
+  }
+  &-content {
+    margin-top: rem-calc(93px);
+    &__social {
+      padding-right: 150px;
+    }
+    &__nav--social {
+      display: block;
+    }
+    &__social {
+      nav, button {
+        display: inline-block;
+      }
+    }
+  }
+}

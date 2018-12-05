@@ -1,0 +1,101 @@
+@import 'variables';
+
+.features-section {
+  grid-area: features;
+  height: rem-calc(885px);
+  position: relative;
+  background-image: url("/reference/assets/clouds.png");
+  background-position: 50%;
+  h1 {
+    font-size: rem-calc(24px);
+    margin-top: 2%;
+    margin-bottom: 10%;
+  }
+  &__content {
+    position: relative;
+    top: 15%;
+    text-align: center;
+  }
+  &__circle {
+    width: rem-calc(69px);
+    height: rem-calc(69px);
+    background-color: #F1F5FF;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    h3 {
+      font-size: rem-calc(14px);
+      font-family: $open-sans-font;
+      color: #4074F8;
+      font-weight: bold;
+      margin-top: rem-calc(33px);
+      margin-bottom: rem-calc(25px);
+    }
+    img {
+      margin: rem-calc(25px) rem-calc(25.75px) rem-calc(26.5px) rem-calc(25px);
+    }
+    hr {
+      display: inline-block;
+      width: 28px;
+      border: 0;
+      border-top: 1px solid $border-line-color;
+      margin: 7.5em rem-calc(19px) 0 rem-calc(20px);
+    }
+    p {
+      width: rem-calc(140px);
+      height: rem-calc(102px);
+      font-size: rem-calc(11px);
+      color: #ADB3CB;
+      font-family: $open-sans-font;
+    }
+    > div {
+      max-width: rem-calc(140px);
+      max-height: rem-calc(254px);
+      align-items: center;
+    }
+  }
+
+  &__buttons {
+    margin-top: 10%;
+    button {
+      font-family: $quicksand-font;
+      font-size: rem-calc(13px);
+      font-weight: bold;
+      padding: rem-calc(13px);
+      border-radius: 2px;
+      width: rem-calc(113px);
+      height: rem-calc(43px);
+    }
+    p {
+      display: inline-block;
+      width: rem-calc(16px);
+      height: rem-calc(20px);
+      margin-left: rem-calc(17px);
+      margin-right: rem-calc(16px);
+    }
+    hr {
+      display: inline-block;
+      width: 15px;
+      margin-bottom: 0.5em;
+      border: 0;
+      border-top: 1px solid $border-line-color;
+    }
+  }
+  &__btn-read {
+    background-color: #FFD7D7;
+    color: #D43F3F;
+    margin-right: rem-calc(16px);
+  }
+  &__btn-start {
+    background-color: #D2E1FF;
+    color: $lightBlue-button;
+    margin-left: rem-calc(16px);
+  }
+}

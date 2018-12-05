@@ -1,0 +1,52 @@
+@import 'variables';
+
+.quotes-section {
+  grid-area: quote;
+  height: rem-calc(480px);
+  width: 100%;
+  background-color: #EAF0FF;
+  &__title {
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    margin: rem-calc(146px) 0 rem-calc(145px) 0;
+    left: 15%;
+    h1 {
+      text-align: left;
+      margin-top: rem-calc(31px);
+      margin-bottom: rem-calc(14px);
+    }
+    p {
+      width: 50%;
+    }
+  }
+  &__examples {
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    margin-top: rem-calc(109px);
+    &-rectangle {
+      border: 1px solid $border-line-color;
+      width: rem-calc(423px);
+      height: rem-calc(175px);
+      background-color: white;
+      position: relative;
+      p {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        padding-top: rem-calc(41px);
+      }
+    }
+    &-circle {
+      width: rem-calc(62px);
+      height: rem-calc(62px);
+      background-color: #D3D3D3;
+      border-radius: 50%;
+      margin-top: rem-calc(30px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

@@ -1,10 +1,13 @@
 import "../styles/main.scss";
 
-// testing that `const` and arrow functions transpile correctly
-const before = "Hello -world!";
-const after = before
-  .split("")
-  .filter(char => char !== "-")
-  .join("");
-console.log({ before });
-console.log({ after });
+const articlesUrl = 'https://wt-4662f45b9eefda7172b747b28d23efdb-0.sandbox.auth0-extend.com/blog'; 
+
+getArticlesFromUrl();
+
+async function getArticlesFromUrl(){
+  fetch(articlesUrl)
+  .then(resp => resp.json()) // Transform the data into json
+  .then(function(data) {
+    console.log(data);
+  });
+}

@@ -1,14 +1,341 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Mastering FrontEnd</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body>
-  <h1>Hello world!</h1>
+  <header class="header">
+    <div class="header__content">
+      <section class="header__section">
+        <div class="header__logo"></div>
+        <nav class="menu">
+          <ul class="menu header__nav-list">
+            <li><a class="header__nav-list__item__selected">Home</a></li>
+            <li><a class="header__nav-list__item">Blog</a></li>
+            <li><a class="header__nav-list__item">Features</a></li>
+            <li><a class="header__nav-list__item">Pricing</a></li>
+            <li><a class="header__nav-list__item">Documentation</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="header__section">
+        <nav class="social-media">
+          <ul class="social-media header__nav-list">
+              <li><a href="#" class="header__nav-list__item"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#" class="header__nav-list__item"><i class="fab fa-telegram-plane"></i></a></li>
+              <li><a href="#" class="header__nav-list__item"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#" class="header__nav-list__item"><i class="fab fa-medium-m"></i></a></li>
+          </ul>
+        </nav>
+        <button href="#" class="button button-blue-pale button-menu">Get Started</button>
+      </section>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="title hero__content__title">PLAN YOUR LIFE</h1>
+        <h2 class="subtitle hero__content__subtitle">Increase your <span class="bold">productivity</span></h2>
+        <p class="paragraph hero__content__description">
+          Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+          Usu atqui laudem an, insolens gubergren similique est cu.
+          Et vel modus congue vituperata.
+        </p>
+        <button class="hero__content__button"><i class="fas fa-play"></i></button>
+      </div>
+    </section>
+
+    <!-- CUSTOMERS -->
+    <section class="customers">
+      <div class="customers__content">
+          <a id="bit-bucket" class="customers__content__item"></a>
+          <a id="apple-watch" class="customers__content__item"></a>
+          <a id="facebook" class="customers__content__item"></a>
+          <a id="atlassian" class="customers__content__item"></a>
+          <a id="audi" class="customers__content__item"></a>
+      </div>
+    </section>
+
+    <!-- PLAN AND MANAGE -->
+    <section class="plan-manage">
+      <div class="plan-manage__content">
+        <div class="plan-manage__content__section">
+          <div class="plan-manage__content__section__text-container">
+              <h1 class="title">DESKTOP AND MOBILE APP</h1>
+              <h2 class="subtitle"><span class="bold">Plan</span> and <span class="bold">manage</span></h2>
+              <p class="paragraph">
+                Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. 
+                Usu atqui laudem an, insolens gubergren similique est cu.
+                Et vel modus congue vituperata.
+                Solum patrioque no sea.
+                Mea ex malis mollis oporteat.
+                Eum an expetenda consequat.
+              </p>
+          </div>
+        </div>
+        <div class="plan-manage__content__section">
+          <div class="plan-manage__content__section__image">
+            <img src="/reference/assets/plan-manage.png">
+          </div>
+        </div>
+        <div class="plan-manage__buttons">
+            <button class="button-blue-navy button"> 
+              View video
+              <i class="fas fa-play"></i> 
+            </button>
+            <button class="button button-transparent-bordered">
+              See features
+            </button>
+          </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section class="about">
+      <div class="about__content">
+        <div class="about__content__header">
+          <h1 class="title">ABOUT US</h1>
+          <h2 class="subtitle-small bold">Read about our app</h2>
+        </div>
+        <div class="about__content__options">
+          <div class="about__content__options__content">
+
+            <div class="about__content__options__content__features">
+              <div class="about__content__options__content__features__section">
+                <button id="home-icon" class="rounded-button button-blue-pale-navy"></button>
+              </div>
+              <div class="about__content__options__content__features__section">
+                <p class="title">Overview</p>
+              </div>
+              <div class="about__content__options__content__features__section">
+                <p class="paragraph">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.</p>
+              </div>
+            </div>
+
+            <div class="about__content__options__content__features">
+              <div class="about__content__options__content__features__section">
+                <button id="folder-icon" class="rounded-button button-blue-pale-navy"></button>
+              </div>
+              <div class="about__content__options__content__features__section">
+                <p class="title">Files</p>
+              </div>
+              <div class="about__content__options__content__features__section">
+                <p class="paragraph">No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.</p>
+              </div>
+            </div>
+
+            <div class="about__content__options__content__features">
+              <div class="about__content__options__content__features__section">
+                <button id="chat-icon" class="rounded-button button-blue-pale-navy"></button>
+              </div>
+              <div class="about__content__options__content__features__section">
+                <p class="title">Meeting chats</p>
+              </div>
+              <div class="about__content__options__content__features__section">
+                <p class="paragraph">Vim ne tacimates neglegentur. Erat diceret omittam at est.</p>
+              </div>
+            </div>
+            
+            <div class="about__content__options__content__features">
+                <div class="about__content__options__content__features__section">
+                    <button id="upload-icon" class="rounded-button button-blue-pale-navy"></button>
+                  </div>
+                  <div class="about__content__options__content__features__section">
+                    <p class="title">Save events</p>
+                  </div>
+                  <div class="about__content__options__content__features__section">
+                    <p class="paragraph">Nisl idque mel ea, nominati voluptatum.</p>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="about__content__buttons">
+          <div class="about__content__buttons__content">
+            <button class="button button-red">Read more</button>
+            <p class="paragraph">— OR —</p>
+            <button class="button button-blue-pale">Get started</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stats__section">
+        <div class="stats__section__customers">
+          <div class="stats__section__customers__content">
+            <img src="/reference/assets/icons/speedmeter.png"/>
+            <p class="stats__section__customers__content__percentage">89%</p>
+            <p class="stats__section__customers__content__description">Customers who have increased their productivity</p>
+          </div>
+        </div>
+      </div>
+      <div class="stats__section">
+        <div class="stats__section__users">
+          <div class="stats__section__users__content">
+            <img src="/reference/assets/icons/people.png"/>
+            <p class="stats__section__users__content__percentage">3123</p>
+            <p class="stats__section__users__content__description">Users who have used our application</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="blog">
+      <div class="blog__content">
+        <div class="blog__content__title">
+          <h1 class="title">OUR RESOURCES</h1>
+          <h2 class="subtitle-small bold">Start reading our blog</h2>
+        </div>
+        <div class="blog__content__articles">
+          <div class="blog__content__articles__arrow">
+            <button><i id="past-article" class="fas fa-arrow-left"></i></button>
+          </div>
+          <div  class="blog__content__articles__cards">
+            <div id="blog_container" class="blog__content__articles__cards__content">
+            </div>
+          </div>
+          <div class="blog__content__articles__arrow">
+            <button><i id="next-article" class="fa fa-arrow-right"></i></button>
+          </div>
+        </div>
+        <div class="blog__content__index">
+          <ul id="dots" class="carousel-index">
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMENTS -->
+    <section class="comments">
+
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="faq__content">
+          <h1 class="title">CUSTOMER HELP</h1>
+          <h2 class="subtitle-small">Frequently asked questions</h2>
+          <ul class="questions-list">
+            <li class="questions-list__item border-bottom">
+              <div class="questions-list__item__question paragraph">
+                <i class="fas fa-angle-down"></i>
+                <p>Reque insolens in vel?</p>
+              </div>
+            </li>
+            <li class="questions-list__item border-bottom">
+              <div class="questions-list__item__question paragraph">
+                <i class="fas fa-angle-down"></i>
+                <p>Vis rebum error graecis ea, id sit postea accusamus?</p>
+              </div>
+            </li>
+            <li class="questions-list__item border-bottom">
+              <div class="questions-list__item__question paragraph">
+                <i class="fas fa-angle-up"></i>
+                <p>Lorem repudiandae ne nec?</p>
+              </div>
+              <div class="questions-list__item__answer">
+                <p class="paragraph">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                  Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                <button class="button button-faq">Go to documentation</button>
+              </div>
+            </li>
+            <li class="questions-list__item border-bottom">
+              <div class="questions-list__item__question paragraph">
+                <i class="fas fa-angle-down"></i>
+                <p>Ad dicit numquam vel. Et eos iudico feugait percipitur?</p>
+              </div>
+            </li>
+            <li class="questions-list__item border-bottom">
+              <div class="questions-list__item__question paragraph">
+                <i class="fas fa-angle-down"></i>
+                <p>Sea no dico percipitur. Fierent constituam definitiones id eum?</p>
+              </div>
+            </li>          
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    <!-- GET STARTED -->
+    <section class="get-started" id="blue-clouds">
+      <div class="get-started__content">
+        <h1 class="title">PLAN YOUR LIFE</h1>
+        <h2 class="subtitle">Get <span class="bold">started</span> now</h2>
+        <p class="paragraph">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
+        <div class="get-started__content__buttons">
+          <button class="button">View pricing</button>
+          <button class="button button-transparent-bordered">Read documentation</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter border-bottom">
+      <div class="newsletter__content">
+        <div class="newsletter__content__description">
+          <h1 class="subtitle-small">Sign up for newsletter</h1>
+          <p class="paragraph">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</p>
+        </div>
+        <div class="newsletter__content__form">
+          <input class="input-box" type="text" placeholder="Email address">
+          <button class="button button-blue-navy">Save me</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__content">
+          <section class="footer__section">
+            <nav class="menu-footer">        
+              <ul class="menu-footer footer__nav-list">
+                <li><div class="footer__logo"></div></li>
+                <li><a class="footer__nav-list__item__selected">Home</a></li>
+                <li><a class="footer__nav-list__item">Blog</a></li>
+                <li><a class="footer__nav-list__item">Features</a></li>
+                <li><a class="footer__nav-list__item">Pricing</a></li>
+                <li><a class="footer__nav-list__item">Documentation</a></li>
+              </ul>
+            </nav>
+          </section>
+          <section class="footer__section">
+            <nav class="social-media">
+              <ul class="social-media footer__nav-list">
+                  <li><a href="#" class="footer__nav-list__item"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#" class="footer__nav-list__item"><i class="fab fa-telegram-plane"></i></a></li>
+                  <li><a href="#" class="footer__nav-list__item"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="footer__nav-list__item"><i class="fab fa-medium-m"></i></a></li>
+              </ul>
+            </nav>
+            <button href="#" class="button button-blue-pale button-footer">Get Started</button>
+          </section>
+        </div>
+      </footer>
+      <div class="paragraph copyright">
+          <p>Copyright © by Daniela Pérez</p>
+      </div>
+  </main>
   <script src="./dist/bundle.js"></script>
 </body>
 </html>
+<noscript>
+  <style type="text/css">
+      .blog {display:none;}
+  </style>
+  <div class="alert">
+    To load the blog content you must enable JavaScript
+  </div>
+</noscript>

@@ -212,37 +212,22 @@
         Start reading our blog
       </h2>
       <div class="section__six__carousel">
-        <div class="section__six__arrow">
-          <i class="fas fa-arrow-left"></i>
-        </div>
-        <div class="section__six__section">
-          <img class="section__six__image" src="./reference/assets/plan-manage.png" />
-        </div>
-        <div class="section__six__section">
-          <h1 class="text__subheader section__six__text">
-            How to start planning
-          </h1>
-          <p class="text__paragraph section__six__text">
-            Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-            Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
-            Natum petentium principes mei ea.
-            Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...
-          </p>
-          <button class="section__six__buttonGet">
-            Read now
-          </button>
-          <button class="text__paragraph section__six__add">
-            Add to your bookmarks
+        <div class="section__six__carousel__arrow">
+          <button>
+            <i id="previous" class="fas fa-arrow-left"></i>
           </button>
         </div>
-        <div class="section__six__arrow">
-          <i class="fas fa-arrow-right"></i>
+        <div class="section__six__carousel__cards">
+          <div id="carousel_container" class="section__six__carousel__cards__content">
+          </div>
+        </div>
+        <div class="section__six__carousel__arrow">
+          <button>
+            <i id="next" class="fa fa-arrow-right"></i>
+          </button>
         </div>
       </div>
-      <div class="section__six__dots">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+      <div class="section__six__carousel__dots" id="dots">
       </div>
     </section>
 
@@ -399,9 +384,9 @@
     <button class="footer__button">
       Get Started
     </button>
-    <small>Copyright © 2018 by Random site</small>
+    <small>Copyright © 2018 by Miguel Contreras</small>
   </footer>
-
+  <script src="./dist/bundle.js"></script>
 </body>
 
 </html>

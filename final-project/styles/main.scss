@@ -54,6 +54,25 @@ small {
   height: 8px;
   width: 8px;
   margin: 0 rem-calc(15px);
+  cursor: pointer;
+}
+
+.carousel__dot {
+  background-color: #d1d6e3;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  margin: 0 rem-calc(15px);
+  cursor: pointer;
+}
+
+.activeDot {
+  background-color: red;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  margin: 0 rem-calc(15px);
+  cursor: pointer;
 }
 
 .separator__text {
@@ -408,69 +427,100 @@ small {
   @include mobile-breakpoint {
     padding: rem-calc(80px) rem-calc(10px);
   }
-
-  &__arrow {
-    @include tablet-breakpoint {
-      display: none;
-    }
+  
+  &__text{
+    width: auto;
+    text-align: left;
   }
 
-  &__carousel {
+  &__subheader{
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+  }
+
+  &__carousel{
+    display: flex;
     align-items: center;
-    background: #ffffff;
-    border: 1px solid #d8e3fe;
-    box-sizing: border-box;
-    box-shadow: 0px 15px 50px #eff4ff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2%;
-  }
-
-  &__dots {
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
     width: 100%;
-  }
+    &__arrow {
+      align-items: center;
+      height: 400px;
+      width: 10%;
+      display: flex;
+      justify-content: flex-start;
+      color: #a8b4e5;
+      font-size: 20px;
+      button {
+        background-color: transparent;
+        color: #a8b4e5;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      &:first-child{
+        justify-content: flex-end;
+      }
+    }
+    &__cards{
+      height: 400px;
+      display: flex;
+      width: 80%;
+      &__image{
+        margin: 5% 5%;
+      }
+      &__content {
+        display: flex;
+        flex-direction: row-reverse;
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #D8E3FE;
+        margin: 0 10px;
+        justify-content: center;
+        &__description {
+          width: 40%;
+          margin: 5% 5%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
 
-  &__section {
-    width: 48%;
-    @include tablet-breakpoint {
+          &__buttons {
+            &__readButton{
+              background: #d2e1ff;
+              border-radius: 2px;
+              color: #3a79ff;
+              font-family: 'Quicksand', sans-serif;
+              font-size: 13px;
+              font-weight: bold;
+              height: 43px;
+              margin-right: 30px;
+              width: 130px;
+            }
+            &__addButton{
+              background: transparent;
+              color: #adb4d2;
+              font-family: 'Quicksand', sans-serif;
+              font-size: 13px;
+              font-weight: bold;
+              height: 43px;
+            }
+          }
+        }
+      }
+    }
+    &__dots{
       width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
     }
   }
 
-  &__image {
-    width: 100%;
-  }
-
-  &__text {
-    text-align: left;
-    width: auto;
-  }
-
-  &__add {
-    background-color: transparent;
-    text-align: left;
-    @include mobile-breakpoint {
-      display: none;
-    }
-    width: auto;
-  }
-
-  &__buttonGet {
-    background: #d2e1ff;
-    border-radius: 2px;
-    color: #3a79ff;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    height: 43px;
-    @include mobile-breakpoint {
-      width: 100%;
-    }
-  }
 }
 
 .section__seven {

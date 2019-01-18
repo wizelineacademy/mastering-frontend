@@ -1,14 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
   <link rel="stylesheet" href="./dist/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|Roboto" rel="stylesheet">
+  <title>FE: Academy Project</title>
 </head>
+
 <body>
-  <h1>Hello world!</h1>
+
+  <header class="header">
+    <div class="header__logo"></div>
+    <nav class="header__nav__main">
+      <ul>
+        <li class="header__link">Home</li>
+        <li class="header__link">Blog</li>
+        <li class="header__link">Features</li>
+        <li class="header__link">Pricing</li>
+        <li class="header__link">Documentation</li>
+      </ul>
+    </nav>
+    <nav class="header__nav__social">
+      <ul>
+        <li class="header__link">
+          <i class="fab fa-facebook-f"></i>
+        </li>
+        <li class="header__link">
+          <i class="fab fa-twitter"></i>
+        </li>
+        <li class="header__link">
+          <i class="fab fa-telegram-plane"></i>
+        </li>
+        <li class="header__link">
+          <i class="fab fa-medium-m"></i>
+        </li>
+      </ul>
+    </nav>
+    <button class="header__button">
+      Get Started
+    </button>
+    <div class="header__mobile">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="section__one">
+      <h1 class="text__header">
+        PLAN YOUR LIFE
+      </h1>
+      <h2 class="text__subheader">
+        Increase your <strong>productivity</strong>
+      </h2>
+      <p class="text__paragraph section__one__text">
+        Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+        Usu atqui laudem an, insolens gubergren similique est cu.
+        Et vel modus congue vituperata.
+      </p>
+      <button class="section__one__button">
+        <i class="fas fa-play fa-lg"></i>
+      </button>
+    </section>
+
+    <section class="section__two">
+      <div class="section__two__images">
+        <img class="section__two__image" src="./reference/assets/customers/bitbucket.png" />
+        <img class="section__two__image" src="./reference/assets/customers/apple-watch.png" />
+        <img class="section__two__image" src="./reference/assets/customers/facebook.png" />
+        <img class="section__two__image" src="./reference/assets/customers/atlassian.png" />
+        <img class="section__two__image" src="./reference/assets/customers/audi.png" />
+      </div>
+      <div class="section__two__dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+
+    <section class="section__three">
+      <div class="section__three__section">
+        <h1 class="text__header section__three__text">
+          DESKTOP AND MOBILE APP
+        </h1>
+        <h2 class="text__subheader section__three__text">
+          <strong>Plan</strong> and <strong>manage</strong>
+        </h2>
+        <p class="text__paragraph section__three__text">
+          Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+          Usu atqui laudem an, insolens gubergren similique est cu.
+          Et vel modus congue vituperata. Solum patrioque no sea.
+          Mea ex malis mollis oporteat. Eum an expetenda consequat.
+        </p>
+      </div>
+      <div class="section__three__section">
+        <img class="section__three__image" src="./reference/assets/plan-manage.png">
+      </div>
+      <div class="section__three__section__buttons">
+        <button class="section__three__viewbutton">
+          View video
+          <i class="fas fa-play fa-xs"></i>
+        </button>
+        <button class="section__three__seebutton">
+          See features
+        </button>
+      </div>
+    </section>
+
+    <section class="section__four">
+      <h1 class="text__header">
+        ABOUT US
+      </h1>
+      <h2 class="text__subheader">
+        Read about our app
+      </h2>
+      <div class="section__four__items">
+        <div class="section__four__item">
+          <button class="section__four__button">
+            <img src="./reference/assets/icons/home.png" />
+          </button>
+          <h3 class="section__four__itemHeader">
+            Overview
+          </h3>
+          <p class="text__paragraph section__four__text">
+            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+          </p>
+        </div>
+        <hr class="separator__item" />
+        <div class="section__four__item">
+          <button class="section__four__button">
+            <img src="./reference/assets/icons/folder.png" />
+          </button>
+          <h3 class="section__four__itemHeader">
+            Files
+          </h3>
+          <p class="text__paragraph section__four__text">
+            No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has. </p>
+        </div>
+        <hr class="separator__item" />
+        <div class="section__four__item">
+          <button class="section__four__button">
+            <img src="./reference/assets/icons/chat.png" />
+          </button>
+          <h3 class="section__four__itemHeader">
+            Meeting chats
+          </h3>
+          <p class="text__paragraph section__four__text">
+            Vim ne tacimates neglegentur. Erat diceret omittam at est.
+          </p>
+        </div>
+        <hr class="separator__item" />
+        <div class="section__four__item">
+          <button class="section__four__button">
+            <img src="./reference/assets/icons/upload.png" />
+          </button>
+          <h3 class="section__four__itemHeader">
+            Save events
+          </h3>
+          <p class="text__paragraph section__four__text">
+            Nisl idque mel ea, nominati voluptatum.
+          </p>
+        </div>
+      </div>
+      <div class="section__four__buttonSection">
+        <button class="section__four__buttonRead">
+          Read more
+        </button>
+        <hr class="separator__text" />
+        <p class="text__paragraph section__four__text">
+          OR
+        </p>
+        <hr class="separator__text" />
+        <button class="section__four__buttonGet">
+          Get started
+        </button>
+      </div>
+    </section>
+
+    <section class="section__five">
+      <div class="section__five__sections">
+        <div class="section__five__sections__left">
+          <img src="reference/assets/icons/speedmeter.png" />
+          <p class="section__five__header">
+            89%
+          </p>
+          <p class="section__five__text">
+            Customers who have increased their productivity
+          </p>
+        </div>
+        <div class="section__five__sections__right">
+          <img src="reference/assets/icons/people.png" />
+          <p class="section__five__header">
+            3123
+          </p>
+          <p class="section__five__text">
+            Users who have used our application
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__six">
+      <h1 class="text__header">
+        OUR RESOURCES
+      </h1>
+      <h2 class="text__subheader">
+        Start reading our blog
+      </h2>
+      <div class="section__six__carousel">
+        <div class="section__six__carousel__arrow">
+          <button>
+            <i id="previous" class="fas fa-arrow-left"></i>
+          </button>
+        </div>
+        <div class="section__six__carousel__cards">
+          <div id="carousel_container" class="section__six__carousel__cards__content">
+          </div>
+        </div>
+        <div class="section__six__carousel__arrow">
+          <button>
+            <i id="next" class="fa fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="section__six__carousel__dots" id="dots">
+      </div>
+    </section>
+
+    <section class="section__seven">
+      <div class="section__seven__left">
+        <h1 class="text__header section__seven__text">
+          TESTIMONIALS
+        </h1>
+        <h2 class="text__subheader section__seven__header">
+          Customers's quotes
+        </h2>
+        <p class="text__paragraph section__seven__text">
+          Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+          Usu atqui laudem an.
+        </p>
+      </div>
+      <div class="section__seven__container">
+        <div class="section__seven__right">
+          <p class="section__seven__right__text">
+            Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+            Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+          </p>
+          <img class="section__seven__right__image" src="reference/assets/testimonial.png" />
+          <div class="section__seven__dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__eight">
+      <h1 class="text__header">
+        CUSTOMER HELP
+      </h1>
+      <h2 class="text__subheader">
+        Frequently asked questions
+      </h2>
+      <div class="section__eight__question">
+        <i class="fas fa-angle-down fa-lg"></i>
+        <p class="text__paragraph section__eight__paragraph">
+          Reque insolens in vel?
+        </p>
+      </div>
+      <div class="section__eight__question">
+        <i class="fas fa-angle-down fa-lg"></i>
+        <p class="text__paragraph section__eight__paragraph">
+          Vis rebum error graecis ea, id sit postea accusamus?
+        </p>
+      </div>
+      <div class="section__eight__question">
+        <i class="fas fa-angle-down fa-lg"></i>
+        <p class="text__paragraph section__eight__paragraph">
+          Lorem repudiandae ne nec?
+        </p>
+      </div>
+      <div class="section__eight__active">
+        <i class="fas fa-angle-up fa-lg"></i>
+        <p class="text__paragraph section__eight__paragraph">
+          Ad dicit numquam vel. Et eos iudico feugait percipitur?
+        </p>
+      </div>
+      <div class="section__eight__question__body">
+        <p class="section__eight__text">
+          Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+          Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+        </p>
+        <button class="section__eight__question__button">Go to documentation</button>
+      </div>
+      <div class="section__eight__question">
+        <i class="fas fa-angle-down fa-lg"></i>
+        <p class="text__paragraph section__eight__paragraph">
+          Sea no dico percipitur. Fierent constituam definitiones id eum?
+        </p>
+      </div>
+    </section>
+
+    <section class="section__nine">
+      <h1 class="section__nine__header">
+        PLAN YOUR LIFE
+      </h1>
+      <h2 class="section__nine__subheader">
+        Get <strong>started</strong> now
+      </h2>
+      <p class="section__nine__text">ß
+        Brote laoreet efficiendi id his, ea illum nonumes luptatum pro.
+        Usu atqui laudem an, insolens gubergren similique est cu.
+        Et vel modus congue vituperata.
+      </p>
+      <div class="section__nine__buttons">
+        <button class="section__nine__viewButton">
+          View pricing
+        </button>
+        <button class="section__nine__readButton">
+          Read documentation
+        </button>
+      </div>
+    </section>
+
+    <section class="section__ten">
+      <div class="section__ten__left">
+        <h1 class="section__ten__header">
+          Sign up for newsletter
+        </h1>
+        <p class="text__paragraph section__ten__text">
+          Cu qui soleat partiendo urbanitas.
+          Eum aperiri indoctum eu, homero alterum.
+        </p>
+      </div>
+      <div class="section__ten__right">
+        <input type="email" placeholder="Email address" class="section__ten__input">
+        <button class="section__ten__button">Save me</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__container__logo"></div>
+    </div>
+    <nav class="footer__nav__main">
+      <ul>
+        <li class="footer__link">Home</li>
+        <li class="footer__link">Blog</li>
+        <li class="footer__link">Features</li>
+        <li class="footer__link">Pricing</li>
+        <li class="footer__link">Documentation</li>
+      </ul>
+    </nav>
+    <nav class="footer__nav__social">
+      <ul class="footer__nav__list">
+        <li class="footer__link">
+          <i class="fab fa-facebook-f"></i>
+        </li>
+        <li class="footer__link">
+          <i class="fab fa-twitter"></i>
+        </li>
+        <li class="footer__link">
+          <i class="fab fa-telegram-plane"></i>
+        </li>
+        <li class="footer__link">
+          <i class="fab fa-medium-m"></i>
+        </li>
+      </ul>
+    </nav>
+    <button class="footer__button">
+      Get Started
+    </button>
+    <small>Copyright © 2018 by Miguel Contreras</small>
+  </footer>
   <script src="./dist/bundle.js"></script>
 </body>
+
 </html>

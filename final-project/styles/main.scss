@@ -1,13 +1,862 @@
-// This should be imported by the main.js file
+@function rem-calc($size) {
+  @return $size / 16px * 1rem;
+}
 
-// test for scss variables
-$primary-color: #2a3fbb;
+@mixin tablet-breakpoint {
+  @media only screen and (max-width: rem-calc(768px)) {
+    @content;
+  }
+}
 
-* {
-  padding: 0;
+@mixin desktop-breakpoint {
+  @media only screen and (min-width: rem-calc(768px)) {
+    @content;
+  }
+}
+
+@mixin mobile-breakpoint {
+  @media only screen and (max-width: rem-calc(425px)) {
+    @content;
+  }
+}
+
+body {
   margin: 0;
 }
 
-h1 {
-  color: $primary-color;
+button {
+  border: none;
+}
+
+ul {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+small {
+  color: #aeb8d0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 0;
+  width: 100%;
+  @include mobile-breakpoint {
+    text-align: center;
+  }
+}
+
+.dot {
+  background-color: #d1d6e3;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  margin: 0 rem-calc(15px);
+  cursor: pointer;
+}
+
+.carousel__dot {
+  background-color: #d1d6e3;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  margin: 0 rem-calc(15px);
+  cursor: pointer;
+}
+
+.activeDot {
+  background-color: red;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  margin: 0 rem-calc(15px);
+  cursor: pointer;
+}
+
+.separator__text {
+  background-color: #dae4fe;
+  border: 0;
+  height: 1px;
+  width: rem-calc(15px);
+  margin: 0 rem-calc(15px);
+}
+
+.separator__item {
+  background-color: #dae4fe;
+  border: 0;
+  height: 1px;
+  width: rem-calc(30px);
+  margin: 0 rem-calc(15px);
+  align-self: center;
+  @include mobile-breakpoint {
+    display: none;
+  }
+}
+
+.text__header {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: rem-calc(10px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3d4f9f;
+  text-align: center;
+}
+
+.text__subheader {
+  font-family: 'Quicksand', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: rem-calc(48px);
+  text-align: center;
+  color: #3d4f9f;
+}
+
+.text__paragraph {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: rem-calc(29px);
+  font-size: rem-calc(15px);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #8d96bd;
+  width: 500px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  font-family: 'Quicksand', sans-serif;
+  justify-content: space-between;
+  padding: rem-calc(18px) rem-calc(20px);
+
+  &__button {
+    background-color: #d2e1ff;
+    color: #3a79ff;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    padding: rem-calc(13px);
+    @include mobile-breakpoint {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: #697ca6;
+    display: inline-block;
+    font-size: rem-calc(12px);
+    margin: 0 rem-calc(20px);
+  }
+
+  &__logo {
+    background-color: #5e81fe;
+    border-radius: 50%;
+    height: rem-calc(26px);
+    width: rem-calc(26px);
+  }
+
+  &__mobile {
+    display: none;
+    @include mobile-breakpoint {
+      display: block;
+    }
+  }
+
+  &__nav {
+    &__main {
+      display: block;
+      @include mobile-breakpoint {
+        display: none;
+      }
+    }
+
+    &__social {
+      display: block;
+      @include tablet-breakpoint {
+        display: none;
+      }
+    }
+  }
+}
+
+.section__one {
+  align-items: center;
+  background-image: url('/reference/assets/hero.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 42rem;
+  justify-content: center;
+
+  &__button {
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
+    color: #5e81ff;
+    height: rem-calc(52px);
+    width: rem-calc(52px);
+  }
+
+  &__text {
+    display: block;
+    @include mobile-breakpoint {
+      display: none;
+    }
+  }
+}
+
+.section__two {
+  display: flex;
+  padding: rem-calc(18px) rem-calc(20px);
+  flex-wrap: wrap;
+
+  &__dots {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    @include mobile-breakpoint {
+      display: flex;
+    }
+  }
+
+  &__images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__image {
+    width: auto;
+    height: max-content;
+    padding: rem-calc(18px) rem-calc(35px);
+    flex-wrap: wrap;
+  }
+
+  @include mobile-breakpoint {
+    &__image {
+      display: none;
+    }
+    &__image:first-child {
+      display: block;
+    }
+  }
+}
+
+.section__three {
+  align-items: center;
+  background-color: #f5f8ff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: rem-calc(80px) rem-calc(60px);
+
+  &__section {
+    width: 50%;
+    @include tablet-breakpoint {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    text-align: left;
+    width: auto;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__viewbutton {
+    background: #4c85ff;
+    border-radius: 2px;
+    box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 43px;
+  }
+
+  &__seebutton {
+    background: transparent;
+    border-radius: 2px;
+    border: 1px solid;
+    color: #adb4d2;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 43px;
+  }
+}
+
+.section__four {
+  background-image: url('/reference/assets/clouds.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: rem-calc(80px) rem-calc(60px);
+
+  &__text {
+    font-size: rem-calc(11px);
+    width: auto;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: rem-calc(40px) 0;
+    width: 100%;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    @include mobile-breakpoint {
+      width: 50%;
+    }
+  }
+
+  &__button {
+    background-color: #f1f5ff;
+    border-radius: 50%;
+    height: rem-calc(69px);
+    width: rem-calc(69px);
+  }
+
+  &__itemHeader {
+    color: #4074f8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem-calc(14px);
+    font-weight: bold;
+  }
+
+  &__buttonRead {
+    background: #ffd7d7;
+    border-radius: 2px;
+    color: #d43f3f;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 43px;
+  }
+
+  &__buttonGet {
+    background: #d2e1ff;
+    border-radius: 2px;
+    color: #3a79ff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 43px;
+  }
+
+  &__buttonSection {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.section__five {
+  font-family: 'Quicksand', sans-serif;
+
+  &__sections {
+    display: flex;
+
+    &__left {
+      align-items: flex-end;
+      background: linear-gradient(208.93deg, #6888ff 12.77%, #5e80ff 73.11%);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      padding: rem-calc(55px) rem-calc(55px) rem-calc(55px) 0;
+      width: 50%;
+      text-align: right;
+      @include mobile-breakpoint {
+        width: 100%;
+      }
+    }
+
+    &__right {
+      align-items: flex-start;
+      background: linear-gradient(130.53deg, #e9efff 41.56%, #e0e9ff 81.53%);
+      color: #5e80ff;
+      display: flex;
+      flex-direction: column;
+      padding: rem-calc(55px) 0 rem-calc(55px) rem-calc(55px);
+      width: 50%;
+      @include mobile-breakpoint {
+        width: 100%;
+      }
+    }
+
+    @include mobile-breakpoint {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__header {
+    font-size: rem-calc(48px);
+    margin: rem-calc(20px) 0;
+  }
+
+  &__text {
+    font-size: rem-calc(18px);
+  }
+}
+
+.section__six {
+  align-items: center;
+  background-color: #f5f8ff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: rem-calc(80px) rem-calc(60px);
+
+  @include mobile-breakpoint {
+    padding: rem-calc(80px) rem-calc(10px);
+  }
+  
+  &__text{
+    width: auto;
+    text-align: left;
+  }
+
+  &__subheader{
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+  }
+
+  &__carousel{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    &__arrow {
+      align-items: center;
+      height: 400px;
+      width: 10%;
+      display: flex;
+      justify-content: flex-start;
+      color: #a8b4e5;
+      font-size: 20px;
+      button {
+        background-color: transparent;
+        color: #a8b4e5;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      &:first-child{
+        justify-content: flex-end;
+      }
+    }
+    &__cards{
+      height: 400px;
+      display: flex;
+      width: 80%;
+      &__image{
+        margin: 5% 5%;
+      }
+      &__content {
+        display: flex;
+        flex-direction: row-reverse;
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #D8E3FE;
+        margin: 0 10px;
+        justify-content: center;
+        &__description {
+          width: 40%;
+          margin: 5% 5%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &__buttons {
+            &__readButton{
+              background: #d2e1ff;
+              border-radius: 2px;
+              color: #3a79ff;
+              font-family: 'Quicksand', sans-serif;
+              font-size: 13px;
+              font-weight: bold;
+              height: 43px;
+              margin-right: 30px;
+              width: 130px;
+            }
+            &__addButton{
+              background: transparent;
+              color: #adb4d2;
+              font-family: 'Quicksand', sans-serif;
+              font-size: 13px;
+              font-weight: bold;
+              height: 43px;
+            }
+          }
+        }
+      }
+    }
+    &__dots{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+    }
+  }
+
+}
+
+.section__seven {
+  background: linear-gradient(180deg, #eaf0ff 0%, #f6f9ff 100%);
+  color: #3d4f9f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: rem-calc(80px) rem-calc(20px);
+
+  @include mobile-breakpoint {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+    @include tablet-breakpoint {
+      width: 100%;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    @include tablet-breakpoint {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    text-align: left;
+  }
+
+  &__header {
+    margin: 0;
+    text-align: left;
+  }
+
+  &__right {
+    background-color: #fff;
+    border: 1px solid #d8e3fe;
+    box-shadow: 0px 15px 50px #d4dcf1;
+    box-sizing: border-box;
+    height: 175.37px;
+    padding: 40px;
+    width: 423px;
+
+    &__text {
+      color: #676f95;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &__image {
+      left: 50%;
+      position: relative;
+      transform: translate(-50%, 0%);
+      width: 62px;
+      border-radius: 50%;
+    }
+  }
+
+  &__dots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+}
+
+.section__eight {
+  align-items: center;
+  background-color: #fff;
+  color: #8e96b7;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  padding: rem-calc(30px) rem-calc(20px);
+  text-align: center;
+
+  &__paragraph {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  &__question {
+    align-items: center;
+    border-bottom: 1px solid #d8e3fe;
+    display: flex;
+    width: 80%;
+
+    &__body {
+      align-items: center;
+      border-bottom: 1px solid #d8e3fe;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 80%;
+    }
+
+    &__button {
+      background: #e8ecf4;
+      border-radius: 2px;
+      height: 43px;
+      @include mobile-breakpoint {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include mobile-breakpoint {
+      width: 100%;
+    }
+  }
+
+  &__active {
+    align-items: center;
+    border: none;
+    display: flex;
+    width: 80%;
+    @include mobile-breakpoint {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    padding: 20px 0;
+    text-align: left;
+    width: 60%;
+    @include mobile-breakpoint {
+      width: auto;
+    }
+  }
+}
+
+.section__nine {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(199.86deg, #6888ff 12.77%, #5e80ff 73.11%);
+  background-image: url('/reference/assets/blue-clouds-bg.png');
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: rem-calc(60px) rem-calc(20px);
+  text-align: center;
+
+  &__header {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+  }
+
+  &__subheader {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+  }
+
+  &__viewButton {
+    background: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0px 5px 15px #6480e8;
+    color: #565f82;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    height: 43px;
+    width: 130px;
+  }
+
+  &__readButton {
+    background-color: transparent;
+    border: 1px solid;
+    color: #c7d3ff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__text {
+    width: 610px;
+    @include mobile-breakpoint {
+      width: auto;
+    }
+  }
+}
+
+.section__ten {
+  align-items: center;
+  background-color: #fcfdff;
+  border-bottom: 1px solid #efeff7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: rem-calc(18px) rem-calc(20px);
+
+  &__left {
+    padding-right: 15px;
+    @include tablet-breakpoint {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__right {
+    padding-left: 15px;
+    @include tablet-breakpoint {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @include mobile-breakpoint {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__header {
+    color: #3d4f9f;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem-calc(18px);
+    line-height: normal;
+    text-align: left;
+  }
+
+  &__text {
+    text-align: left;
+    width: 325px;
+    @include mobile-breakpoint {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    background: #efeff7;
+    border: none;
+    border-radius: 5px;
+    color: #7a85ad;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 40px;
+    padding-left: 10px;
+    width: 200px;
+  }
+
+  &__button {
+    background: #4d6ce1;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 40px;
+    margin: 10px 10px;
+    width: 150px;
+  }
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  font-family: 'Quicksand', sans-serif;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: rem-calc(18px) rem-calc(20px);
+
+  @include mobile-breakpoint {
+    justify-content: center;
+  }
+
+  &__button {
+    background-color: #d2e1ff;
+    color: #3a79ff;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    padding: rem-calc(13px);
+  }
+
+  &__link {
+    color: #697ca6;
+    display: inline-block;
+    font-size: rem-calc(12px);
+    margin: 0 rem-calc(20px);
+    @include mobile-breakpoint {
+      padding: 10px 0;
+    }
+  }
+
+  &__container {
+    &__logo {
+      background-color: #5e81fe;
+      border-radius: 50%;
+      height: rem-calc(26px);
+      width: rem-calc(26px);
+    }
+    @include mobile-breakpoint {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    &__main {
+      display: block;
+      @include mobile-breakpoint {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    &__social {
+      display: block;
+      @include tablet-breakpoint {
+        display: none;
+      }
+    }
+  }
 }
